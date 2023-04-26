@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="example example-like"><div class="para">How many binary strings of length 5 can have exactly 2 ones?</div> <div class="para logical">
+<div class="para">We can think of forming a binary string with 2 ones as a list of 5 places where we need to choose 2 places for the ones. Once we've done that, the other places must have 0's. Thus, we have five places and choose 2:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\binom{5}{2}=\frac{5!}{2!3!}=10.
+\end{equation*}
+</div>
+</div> <div class="para">How many binary strings of length 5 can have at most 2 ones?</div> <div class="para logical">
+<div class="para">Here we can count the strings with 2 ones, 1 one, and 0 ones. We add them since the strings with different numbers of ones are disjoint:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\binom{5}{2}+\binom{5}{1}+\binom{5}{0}=10+5+1=16.
+\end{equation*}
+</div>
+</div></article></body>
+</html>

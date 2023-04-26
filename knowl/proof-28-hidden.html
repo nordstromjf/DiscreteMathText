@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="hiddenproof"><div class="para">Let <span class="process-math">\(F_k=F_{k-1}+F_{k-2}, F_0=1, F_1=1\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Base Step: Let <span class="process-math">\(n=0\text{.}\)</span> Then <span class="process-math">\(F_0=1\text{.}\)</span> And</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{0+1}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{0+1}\biggr]
+=
+\frac{1}{\sqrt{5}}\biggl[\frac{2\sqrt{5}}{2}\biggr]=1
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Let <span class="process-math">\(n=1\text{.}\)</span> Then <span class="process-math">\(F_1=1\text{.}\)</span> And</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{1+1}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{1+1}\biggr]=
+\frac{1}{\sqrt{5}}\biggl[\frac{6+2\sqrt{5}}{4}-\frac{6-2\sqrt{5}}{4}\biggr]=1
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Induction Step: Assume</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F_i=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{i+1}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{i+1}\biggr], 0\leq i\leq k
+\end{equation*}
+</div>
+<div class="para">for some <span class="process-math">\(k\geq 0\)</span> (strong induction).</div>
+</div> <div class="para logical">
+<div class="para">Show</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F_{k+1}=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k+2}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k+2}\biggr].
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Proof of induction step: By the recursive definition of the sequence, <span class="process-math">\(F_{k+1}=F_{k}+F_{k-1}\text{.}\)</span> Thus,</div>
+<div class="displaymath process-math">
+\begin{align*}
+F_{k+1}&amp;=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k+1}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k+1}\biggr]+
+\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k}\biggr]\\
+&amp;=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k+1}+\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k}-
+\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k+1}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k}\biggr]\\
+&amp;=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k}\biggl(\frac{1+\sqrt{5}}{2}+1\biggr)-
+\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k}\biggl(\frac{1-\sqrt{5}}{2}+1\biggr)\biggr]\\
+&amp;=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k}\biggl(\frac{3+\sqrt{5}}{2}\biggr)-
+\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k}\biggl(\frac{3-\sqrt{5}}{2}\biggr)\biggr]\\
+&amp;=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k}\biggl(\frac{1+\sqrt{5}}{2}\biggr)^2-
+\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k}\biggl(\frac{1-\sqrt{5}}{2}\biggr)^2\biggr]\\
+&amp;=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k+2}-
+\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k+2}\biggr]
+\end{align*}
+</div>
+<div class="para">Therefore, by induction, <span class="process-math">\(F_n=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{n+1}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{n+1}\biggr]\text{.}\)</span>
+</div>
+</div></article></body>
+</html>
