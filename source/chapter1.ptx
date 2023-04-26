@@ -1,0 +1,18 @@
+
+<chapter xml:id="chapter1" xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title> Introduction to Mathematical Language</title>
+  <introduction>
+   
+    <p>
+      Throughout this course we will need to become more familiar with the language of mathematics. This includes mathematical statements using symbols, such as in an algebra class, but also includes statements about mathematics, such as definitions and theorems. Mathematics uses terminology in a very precise manner. Such precision is useful mathematically, but often obscurs conceptual understanding. In this course we will  work to bridge the gap between conceptual understanding and mathematical precision. 
+    </p>
+    
+    <P>
+      Each of the sections in this chapter introduce fundamental concepts for representing mathematical ideas. We will revisit all of the concepts in more detail later in the course. But it is helpful to begin the course with a framework for mathematical statements. 
+    </P>
+
+  </introduction>
+  <xi:include  href="./variables1-1.ptx" />
+  <xi:include  href="./lang_sets1-2.ptx" />
+  <xi:include  href="./lang_relations1-3.ptx" />
+</chapter>

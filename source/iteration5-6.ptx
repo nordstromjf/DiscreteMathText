@@ -1,0 +1,219 @@
+<section xml:id="iteration5-6">
+  <title>Solving Recurrence Relations by Iteration</title><idx>iteration</idx><idx><h>recurrence relation</h><h>iteration</h></idx>
+
+  <p>Given a sequence defined recursively, we want to be able to find an explicit formula for the sequence. In general, this can be difficult and can involve very sophisticated mathematical tools. We will learn one method, the <term>method of iteration</term>, just to get a taste for the ideas.</p>
+
+<assamblage xml:id="B_methoditeration">
+  <title>Method of Iteration</title><idx><h>iteration</h><h>method of</h></idx>
+
+  <p>To find an explicit formula for a recursive sequence using the methods of iteration:
+
+  <ol marker="1">
+    <li>Calculate several terms of the sequence, often without simplifying the terms.</li>
+    <li>See a pattern.</li>
+    <li>Guess an explicit formula for the pattern. Keep in mind your formula should just depend on <m>n</m>.</li>
+    <li>Prove your explicit formula using induction.</li>
+  </ol></p>
+</assamblage>
+
+  <example xml:id="E_arithmetic"><title>Finding an Explicit Formula</title><idx><h>explicit formula</h><h>by iteration</h></idx>
+  <p>Find the first five terms of the sequence given by <m>a_k=a_{k-1}+3, k\geq 1</m>, <m>a_0=4</m>.</p>
+<answer><m>a_0=4, a_1=7, a_2=10, a_3=13, a_4=16</m></answer>
+<p>It might be difficult to see a pattern, so we will calculate the terms without simplifying <em>at all</em>.</p>
+<md>
+  <mrow>a_0&amp; =4</mrow>
+  <mrow>a_1&amp; =4+3</mrow>
+  <mrow>a_2&amp; =(4+3)+3</mrow>
+  <mrow>a_3&amp; =((4+3)+3)+3</mrow>
+  <mrow>a_4&amp; =(((4+3)+3)+3)+3</mrow>
+</md>
+<p>Now it should be easier to see a pattern. It seems we have <m>a_n=4+3n</m>, which is an explicit formula.</p>
+<p>To prove this is the correct formula, we would assume <m>a_k=a_{k-1}+3</m> and prove <m>a_n=4+3n</m> by induction.</p>
+<proof>
+  <p>Let <m>a_k=a_{k-1}+3, a_0=4</m>. Prove <m>a_n=4+3n, n\geq 0</m></p>
+  <p>Base Step: Let <m>n=0</m>. Then <m>a_n=a_0=4</m>. And <m>4+3n=4+3(0)=4</m>. Thus, <m>a_n=4+3n</m> for <m>n=0</m>.</p>
+
+  <p>Induction Step: Assume <m>a_k=4+3k</m> for some <m>k\geq 0</m>.</p>
+  <p>Show <m>a_{k+1}=4+3(k+1)</m>.</p>
+  <p>Proof of induction step: By the recursive definition of the sequence, <m>a_{k+1}=a_{k}+3</m>. Thus, 
+  <md>
+    <mrow>a_{k+1}&amp;=a_k+3</mrow>
+    <mrow>&amp;=4+3k+3\ \ \text{ by induction assumption}</mrow>
+    <mrow>&amp;=4+3(k+1)</mrow>
+  </md>
+Therefore, by induction, <m>a_n=4+3n, n\geq 0</m>.</p>
+</proof></example>
+
+<definition xml:id="D_arithseq"><p>An <term>arithmetic sequence</term><idx>arthmetic sequence</idx><idx><h>sequence</h><h>arithmetic</h></idx> is given recursively by 
+<me>a_k=a_{k-1}+d</me>
+where <m>d</m> is constant.</p></definition>
+
+
+
+<activity><introduction><p>Generalize <xref ref="E_arithmetic"/> to find an explicit formula for an arithmetic sequence.</p></introduction>
+<task><p>Let <m>d=5, a_0=2</m>. Write out the first 6 terms of the arithmetic sequence. Can you find an explicit formula for the sequence (one that just depends on <m>n</m>)?</p></task>
+<task><p>Write out the first 6 terms of the sequence <em>without simplifying at all</em>. Now can you find an explicit formula?</p></task>
+<task><p>Using the same technique of writing out the terms without simplifying, find an explicit formula for the general form, <m>a_k=a_{k-1}+d</m>, of an arithmetic sequence.</p></task>
+
+</activity>
+
+
+
+<definition xml:id="D_geomseq"><p>A <term>geometric sequence</term><idx>geometric sequence</idx><idx><h>sequence</h><h>geometric</h></idx> is given recursively by 
+<me>a_k=ra_{k-1}</me>
+where <m>r</m> is constant.</p></definition>
+
+
+
+<activity><introduction><p>Use the method of iteration to find an explicit formula for a geometric sequence.</p></introduction>
+<task><p>Let <m>r=2, a_0=3</m>. Write out the first 6 terms of the geometric sequence. Can you find an explicit formula for the sequence (one that just depends on <m>n</m>)?</p></task>
+<task><p>Write out the first 6 terms of the sequence <em>without simplifying at all</em>. Now can you find an explicit formula?</p></task>
+<task><p>Using the same technique of writing out the terms without simplifying, find an explicit formula for the general form, <m>a_k=ra_{k-1}</m>, of a geometric sequence.</p></task>
+
+</activity>
+
+<assemblage xml:id="B_pfexplictformula">
+  <title>Proving a Recursive Sequence Satisfies an Explicit Formula</title><idx><h>explicit formula</h><h>proof</h></idx><idx><h>recurrence relation</h><h>proof of explicit formula</h></idx>
+<p>To prove a recursively defined sequence satisfies an explicit formula:
+<ul>
+  <li>Assume the recursive formula for the sequence.</li>
+  <li>Show, using an induction proof, that the explicit formula holds. You need to prove the base step for all initial terms. You will need to use the recurrence relation in the inductive step.</li>
+</ul>
+</p>
+</assemblage>
+
+<activity><statement><p>Prove if <m>a_0=2</m> and <m>a_k=a_{k-1}+5</m>, then <m>a_n=2+5n</m> for <m>n\geq 0</m> by induction.</p></statement><hint><p>You are assuming the recursive relationship holds. The statement you are proving by induction is that <m>a_n=2+5n</m> for <m>n\geq 0</m>.</p></hint></activity>
+
+<activity><statement><p>Prove if <m>a_k=ra_{k-1}</m>, then <m>a_n=a_0r^n</m> for <m>n\geq 0</m> by induction.</p></statement><hint><p>You are assuming the recursive relationship holds. The statement you are proving by induction is that <m>a_n=a_0r^n</m> for <m>n\geq 0</m>.</p></hint></activity>
+
+<p>As promised, in <xref ref="E_explicitfib" /> we will prove an explicit formula for the Fibonacci sequence. We will not derive it as that is beyond the scope of this course. But we can prove that it works using induction. Before working through the proof, it will be helpful to see the algebraic simplification in the next activity.</p>
+
+<activity><statement><p>Simplify <m>\Bigl(\frac{1+\sqrt{5}}{2}\Bigr)^2</m> and <m>\Bigl(\frac{1-\sqrt{5}}{2}\Bigr)^2</m>.</p></statement></activity>
+
+
+
+<example xml:id="E_explicitfib"><title>Proving Explicit Formula for the Fibonacci Sequence</title><idx><h>Fibonacci sequence</h><h>explicit formula</h></idx>
+  <p>Let <m>F_k=F_{k-1}+F_{k-2}, k\geq 1</m>, <m>F_0=1, F_1=1</m> be the Fibonacci sequence.</p>
+<p>Prove <m>F_n=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{n+1}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{n+1}\biggr]</m>.</p>
+<proof>
+  <p>Let <m>F_k=F_{k-1}+F_{k-2}, F_0=1, F_1=1</m>. </p>
+  <p>Base Step: Let <m>n=0</m>. Then <m>F_0=1</m>. And 
+  <me>
+    \frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{0+1}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{0+1}\biggr]
+    =
+    \frac{1}{\sqrt{5}}\biggl[\frac{2\sqrt{5}}{2}\biggr]=1</me></p>
+
+    <p>Let <m>n=1</m>. Then <m>F_1=1</m>. And 
+  <me>\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{1+1}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{1+1}\biggr]=
+    \frac{1}{\sqrt{5}}\biggl[\frac{6+2\sqrt{5}}{4}-\frac{6-2\sqrt{5}}{4}\biggr]=1</me></p>
+
+  <p>Induction Step: Assume <me>F_i=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{i+1}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{i+1}\biggr], 0\leq i\leq k</me> for some <m>k\geq 0</m> (strong induction).</p>
+  <p>Show <me>F_{k+1}=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k+2}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k+2}\biggr].</me></p>
+  <p>Proof of induction step: By the recursive definition of the sequence, <m>F_{k+1}=F_{k}+F_{k-1}</m>. Thus, 
+  <md>
+    <mrow>F_{k+1}&amp;=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k+1}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k+1}\biggr]+
+      \frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k}\biggr]</mrow>
+    <mrow>&amp;=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k+1}+\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k}-
+      \biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k+1}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k}\biggr]</mrow>
+      <mrow>&amp;=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k}\biggl(\frac{1+\sqrt{5}}{2}+1\biggr)-
+      \biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k}\biggl(\frac{1-\sqrt{5}}{2}+1\biggr)\biggr]</mrow>
+      <mrow>&amp;=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k}\biggl(\frac{3+\sqrt{5}}{2}\biggr)-
+      \biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k}\biggl(\frac{3-\sqrt{5}}{2}\biggr)\biggr]</mrow>
+      <mrow>&amp;=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k}\biggl(\frac{1+\sqrt{5}}{2}\biggr)^2-
+      \biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k}\biggl(\frac{1-\sqrt{5}}{2}\biggr)^2\biggr]</mrow>
+      <mrow>&amp;=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k+2}-
+      \biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k+2}\biggr]</mrow>
+  </md>
+Therefore, by induction, <m>F_n=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{n+1}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{n+1}\biggr]</m>.</p>
+</proof>
+<p>Note, the proof contains some algebraic steps that may not be obvious. But all of them can be checked. For example, it is easier to see that <m>\biggl(\frac{3+\sqrt{5}}{2}\biggr)=\biggl(\frac{1+\sqrt{5}}{2}\biggr)^2</m> by squaring the RHS and simplifying.</p>
+</example>
+
+<p>It can be confusing to remember when to use induction and when to use a LHS/RHS proof. The following summary gives guidelines for when to use each technique.</p>
+<assemblage xml:id="B_summaryrecursiveexplicit">
+  <title>Summary of Techniques for Sequences</title><idx><h>sequence</h><h>explicit formula proof</h></idx><idx><h>sequence</h><h>recursive formula proof</h></idx>
+  <p>If you are given a sequence where each term is just a formula for <m>n</m>:
+  <ul>
+    <li><p>You sequence is defined explicitly.</p></li>
+    <li><p>For example, <m>a_n=n^2+5</m>.</p></li>
+    <li><p>To prove a recurrence relation, use LHS/RHS proof.</p></li>
+    <li><p>You are assuming the explicit formula and proving the recurrence relation. Thus, use the explicit formula in your proof. Do not assume the recurrence relation.</p></li>
+  </ul></p>
+
+  <p>If you are given a sequence where each term is defined by previous terms:
+  <ul>
+    <li><p>You sequence is defined recursively.</p></li>
+    <li><p>For example, <m>a_n=3a_{n-1}+2a_{n-2}</m>.</p></li>
+    <li><p>To prove an explicit formula, use induction on the explicit formula.</p></li>
+    <li><p>You are assuming the recurrence formula and proving the explicit formula. Thus, use the recurrence formula in your proof, generally in the induction step. Your base step, assume statement, and show statement all involve the explicit formula.</p></li>
+  </ul></p>
+
+
+</assemblage>
+
+
+    <reading-questions>
+      <title>Check Your Understanding</title>
+
+      <exercise><statement><p>Find a recurrence relation for <m>3, 6, 12, 24, 48, \ldots</m>.</p></statement>
+      <answer><p><m>a_0=3, a_k=2a_{k-1}</m></p></answer></exercise>
+
+      <exercise><statement><p>Find an explicit formula for <m>3, 6, 12, 24, 48, \ldots</m>.</p></statement>
+      <answer><p><m>a_n=3\cdot 2^n, n\geq 0</m></p></answer></exercise>
+
+      <exercise><statement><p>Find a recurrence relation for <m>2, 6, 10, 14, 18, \ldots</m>.</p></statement>
+      <answer><p><m>a_0=2, a_k=a_{k-1}+4</m></p></answer></exercise>
+
+      <exercise><statement><p>Find an explicit formula for <m>2, 6, 10, 14, 18, \ldots</m>.</p></statement>
+      <answer><p><m>a_n=2+ 4n, n\geq 0</m></p></answer></exercise>
+
+      <exercise><statement><p>Simplify <m>\biggl(\frac{1-\sqrt{5}}{2}\biggr)^2</m>.</p></statement>
+      <answer><p><m>\biggl(\frac{1-\sqrt{5}}{2}\biggr)\biggl(\frac{1-\sqrt{5}}{2}\biggr)=\biggl(\frac{1-2\sqrt{5}+5}{4}\biggr)=\biggl(\frac{6-2\sqrt{5}}{4}\biggr)=\biggl(\frac{3-\sqrt{5}}{2}\biggr).</m></p></answer></exercise>
+
+    
+
+    </reading-questions>
+
+    <exercises>
+      <exercise xml:id="X_itform1"><statement><p>
+    Use iteration to conjecture an explicit formula for the sequence <me>a_0=1</me> <me>a_k=ka_{k-1}, k\geq1.</me>
+  </p></statement></exercise>
+      <exercise xml:id="X_itform2"><statement>
+        <p>
+    Use iteration to conjecture an explicit formula for the sequence <me>b_1=1</me> <me>b_k=3b_{k-1}+1, k\geq2.</me>
+  </p>
+      </statement><hint><p>
+    The formula for a geometric sum, <xref ref="Q_geosum"/>, might be helpful.
+  </p></hint></exercise>
+      <exercise xml:id="X_itform3"><statement><p>
+    Use iteration to conjecture an explicit formula for the sequence <me>r_0=3</me> <me>r_k=r_{k-1}+2k, k\geq1.</me>
+  </p></statement><hint><p>
+    The formula for the sum of the first <m>n</m> integers, <xref ref="Q_sumofn"/> might be helpful.
+  </p></hint></exercise>
+      <exercise><statement>
+        <p>
+    Suppose <m>d</m> is a fixed constant and <m>a_0, a_1, a_2,\ldots</m> is a sequence that satisfies the recurrence relation <m>a_k=a_{k-1}+d</m> for all integers <m>k\geq 1</m>. Use mathematical induction to prove that <m>a_n=a_0+nd</m> for all integers <m>n\geq 0</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Suppose <m>r</m> is a fixed constant and <m>a_0, a_1, a_2,\ldots</m> is a sequence that satisfies the recurrence relation <m>a_k=ra_{k-1}</m> for all integers <m>k\geq 1</m>. Use mathematical induction to prove that <m>a_n=a_0r^n</m> for all integers <m>n\geq 0</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement><p>
+    Use induction to prove your conjectured formula from <xref ref="X_itform1"/>.
+  </p></statement></exercise>
+      <exercise><statement>
+        <p>
+    Use induction to prove your conjectured formula from <xref ref="X_itform2"/>.
+  </p>
+      </statement></exercise>
+
+      <exercise><statement>
+        <p>
+    Use induction to prove your conjectured formula from <xref ref="X_itform3"/>.
+  </p>
+      </statement></exercise>
+    </exercises>
+
+</section>

@@ -1,0 +1,226 @@
+<section xml:id="rationals4-2">
+  <title>Rational Numbers</title><idx>rational number</idx>
+
+  <p>In this section we introduce the formal definition of a rational number and use it practice with the technique of direct proof.</p>
+
+<definition><statement><p>A real number, <m>r</m>, is <term>rational</term><idx>rational number</idx> if there exist <m>a, b\in \mathbb{Z}</m> such that <m>r=\frac{a}{b}</m> and <m>b\neq 0</m>. Notation: <m>\mathbb{Q}</m><notation><usage><m>\mathbb{Q}</m></usage><description>the set of ratioanl numbers</description></notation> is the set of rational numbers.</p></statement></definition>
+
+<definition><statement><p>A real number, <m>r</m>, that is not rational is <term>irrational</term><idx>irrational number</idx>. There is not a nice notation for the irrational numbers. We will use <m>\mathbb{R}\setminus\mathbb{Q}</m><notation><usage><m>\mathbb{R}\setminus\mathbb{Q}</m></usage><description>the set of irratioanl numbers</description></notation>, which is the set of real numbers <q>minus</q> the set of rationals.</p></statement></definition>
+
+<p>To determine if a given number is rational, we need to be able to find a way to write it as a fraction of integers. To prove a number is rational is really a type of existence proof--we need to show <m>a, b\in \mathbb{Z}</m> exist. To prove a number is not rational, we need to show there is no possible way to write it as a fraction of integers. Also, keep in mind that rational and irrational numbers first need to be real numbers. It is possible that a number that is not rational is not a real number, and thus, not irrational either.</p>
+
+<example xml:id="E_rationals"><title>Rational Numbers</title>
+<p>Is O is rational?</p>
+<answer>Yes: <m>0=0/1</m>.</answer>
+
+<p>Is 2 rational?</p>
+<answer>Yes: <m>2=2/1</m>.</answer>
+
+<p>Is <m>9/5</m> rational?</p>
+<answer>Yes: is already has the form of an integer over an integer.</answer>
+
+<p>Is <m>2/0</m> rational?</p>
+<answer>No: the denominator cannot be 0. In fact, <m>2/0</m> is not a number.</answer>
+
+</example>
+
+<p>You have seen some common examples of irrational numbers in previous courses: <m>\sqrt{2}, \pi, e</m>. It is, in fact, challenging to prove these are irrational. We will see the proof that <m>\sqrt{2}</m> is irrational later in this course.</p>
+
+<p>In your previous experience with rational and irrational numbers, you may have seen the property that rational numbers are ones with terminating or repeating decimal expansions, while irrational numbers have non-terminating and non-repeating decimal expansions. The next couple of examples explore this property.</p>
+
+<example xml:id="E_termdecimal"><title><m>0.2345</m> is Rational</title>
+<p>Show <m>0.2345</m> is a rational number.</p>
+<p>We need to find <m>a, b\in \mathbb{Z}</m> such that <m>0.2345=\frac{a}{b}</m> and <m>b\neq 0</m>. We can use what we know about decimals: for example, <m>0.1=1/10; 0.01=1/100;</m> etc. Thus, <m>0.2345=2345/10000</m>. Letting <m>a=2345, b=10000</m>, we can see that <m>a, b\in \mathbb{Z}, b\neq 0</m>.</p>
+</example>
+
+<example xml:id="E_repeatdecimal"><title><m>0.\overline{123}</m> is Rational</title>
+<p>Show the repeating decimal <m>0.\overline{123}</m> is a rational number.</p>
+<p>We need to find <m>a, b\in \mathbb{Z}</m> such that <m>0.\overline{123}=\frac{a}{b}</m> and <m>b\neq 0</m>. This one is trickier than the last example and requires a new technique. First, let <m>x=0.\overline{123}=0.123123\ldots</m>. Then multiply both sides of <m>x=0.123123\ldots</m> by 1000, so that <m>1000x=123.123123\ldots</m>. We chose 1000 in order to get one set of the repeated digits in front of the decimal point. Now we subtract the two equations from each other:
+<md>
+ <mrow>123.123123\ldots&amp;=1000x</mrow>
+ <mrow> -(0.123123\ldots&amp;=x)</mrow>
+</md>
+Resulting in <m>123=999x</m>. Now we just solve for <m>x</m>: <m>x=123/999</m>.</p>
+<p>Letting <m>a=123, b=999</m>, we can see that <m>a, b\in \mathbb{Z}, b\neq 0</m>.</p>
+</example>
+
+<activity><introduction><p>Prove the following numbers, <m>x</m>, are rational by finding integers, <m>a</m> and <m>b</m> so that <m>x=\frac{a}{b}</m>.</p></introduction>
+<task><m>x=12.345</m></task>
+<task><m>x=12.\overline{3}</m></task>
+<task><m>x=1.2\overline{34}</m></task>
+</activity>
+
+
+<p>The next theorem gives us an example of how to prove more general statements with rational numbers.</p>
+
+<theorem xml:id="T_sumofrationals"><statement><p>The sum of two rational numbers is rational.</p></statement></theorem>
+<proof>
+  <p>Let <m>r, s</m> be rational. Show <m>r+s</m> is rational.</p>
+  <p>Since <m>r</m> is rational, it can be written as <m>\frac{a}{b}</m> for some <m>a, b\in \mathbb{Z}, b\neq 0</m>. Similarly, since <m>s</m> is rational, it can be written as <m>\frac{p}{q}</m> for some <m>p, q\in \mathbb{Z}, q\neq 0</m>. (Note, we need to use different letters since <m>r</m> and <m>s</m> are not necessarily the same.) Now, 
+  <me>r+s=\frac{a}{b}+\frac{p}{q}.</me>
+  Finding a common denominator,
+  <me>r+s=\frac{aq+bp}{pq}.</me>
+</p>
+<p>Then <m>aq+pb, pq \in \mathbb{Z}</m> and, since <m>p, q\neq 0, pq\neq 0</m>. Therefore, <m>r+s</m> is rational.</p>
+</proof>
+
+<p>Once we have proven a theorem, we can use it to prove additional statements. Note, a <term>corollary</term> is just a theorem that follows almost directly from a previous theorem.</p>
+
+<corollary><statement><p>The double of a rational number is rational.</p></statement></corollary>
+<proof><p>Let <m>r</m> be a rational number. We want to show <m>2r</m> is rational. But <m>2r=r+r</m>. By <xref ref="T_sumofrationals"/>, <m>r+r</m> is rational.</p></proof>
+
+<activity><introduction><p>Let <m>r, s</m> be rational numbers.</p></introduction>
+<task><p>Prove <m>r/2</m> is rational.</p></task>
+<task><p>Prove <m>5r-2s</m> is rational.</p></task>
+<task><p>Prove or disprove <m>\frac{1}{r}</m> is rational.</p></task>
+
+</activity>
+
+    <reading-questions>
+      <title>Check Your Understanding</title>
+      
+      <exercise><statement><p>True or false: <m>-9</m> is rational.</p></statement>
+      <answer>True.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>-\frac{6}{13}</m> is rational.</p></statement>
+      <answer>True.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>0.\overline{3}</m> is rational.</p></statement>
+      <answer>True.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>\frac{6}{0}</m> is rational.</p></statement>
+      <answer>False.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>\frac{6}{0}</m> is irrational.</p></statement>
+      <answer>False. Not a real number.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>14.5467</m> is rational.</p></statement>
+      <answer>True.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>49.1122\overline{45}</m> is rational.</p></statement>
+      <answer>True.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>0.\overline{9}</m> is rational.</p></statement>
+      <answer>True.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>\sqrt{3}</m> is rational.</p></statement>
+      <answer>False. But hard to prove right now.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>\sqrt{4}</m> is rational.</p></statement>
+      <answer>True. <m>\sqrt{4}=2.</m></answer></exercise>
+
+      
+
+    </reading-questions>
+
+    <exercises>
+      <exercise><statement>
+        <p>
+    Prove the following numbers are rational by writing them as a ratio of two integers.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    <m>\frac{3}{7}+\frac{5}{9}</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>351.549249249\ldots</m>
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    The <term>zero product property</term> says that if a product of two real numbers is 0 then one of the numbers must be zero.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Write this property formally using quantifiers and variables.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Write the contrapositive of your answer in (a).
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Write an informal version (without symbols and variables) of your answer to part (b).
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Prove every integer is a rational number.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Find the mistakes in the following <q>proof.</q>
+  </p>
+
+  <p>
+    <term>Theorem:</term> The sum of any two rational numbers is rational.
+  </p>
+
+  <p>
+    <term><q>Proof</q>:</term> Suppose <m>r</m> and <m>s</m> are rational numbers. If <m>r+s</m> is rational, then by definition of rational <m>r+s=a/b</m> for integers <m>a</m> and <m>b</m> with <m>b\neq0</m>. Since <m>r</m> and <m>s</m> are rational, <m>r=i/j</m> and <m>s=m/n</m> for integers <m>i, j, m</m> and <m>n</m> with <m>j\neq 0</m> and <m>n\neq 0</m>. Thus <me>r+s=\frac{i}{j}+\frac{m}{n}=\frac{a}{b},</me> which is the quotient of two integers with nonzero denominator. Thus, it is rational.
+  </p>
+      </statement></exercise>
+      <exercise><statement><p>
+    Consider the statement: The square of any rational number is a rational number.
+  </p>
+
+  <ol amrker="a">
+    <li>
+      <p>
+    Write the statement formally using a quantifier and a variable.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Determine whether the statement is true or false and justify your answer.
+  </p>
+    </li>
+
+  </ol></statement></exercise>
+      <exercise><statement>
+        <p>
+    Determine if the following statements are true or false. For <em>true</em> statements provide a proof. For <em>false</em> statements provide a counterexample <em>and</em> determine if a small change would make the statement true. If so, correct the statement and provide a proof of the new statement.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    The quotient of any two rational numbers is a rational number.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    If <m>r</m> and <m>s</m> are rational numbers then <m>\frac{r+s}{2}</m> is a rational number.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Suppose <m>a</m>, <m>b</m>, <m>c</m>, and <m>d</m> are integers and <m>a\neq c</m>. Suppose also that <m>x</m> is a real number that satisfies the equation <me>\frac{ax+b}{cx+d}=1.</me> Must <m>x</m> be rational? If so, express <m>x</m> as a ratio of two integers. Is the condition <m>a\neq c</m> important? 
+  </p>
+      </statement><hint><p>Solve for <m>x</m>.</p></hint></exercise>
+    </exercises>
+
+</section>

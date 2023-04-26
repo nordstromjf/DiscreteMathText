@@ -1,0 +1,183 @@
+<section xml:id="lang_relations1-3">
+  <title>Introduction to Relations and Functions</title>
+
+  <p>We are familiar with the idea of a function from previous math courses. In this class we want to understand functions as an important mathematical tool to relate objects to each other. We are used to functions from the real numbers to the real numbers in calculus. All math courses use functions in some way, often relating other mathematical objects, such as vectors in vector calculus, matrices in linear algebra, complex numbers in complex analysis, or strings of characters in computer science. </p>
+
+  <p>A function really describes a relationship, so we will start with the more general mathematical concept of a relation.</p>
+  <definition><statement> <p>A <term>relation</term><idx>relation</idx>, <m>R</m>, from a set <m>A</m> to a set <m>B</m> is a subset of <m>A\times B</m>.</p></statement></definition>
+
+  <p>We can describe a relation as a subset, <m>(a, b)\in R</m> or in the form <m>aRb</m><notation><usage><m>aRb</m></usage><description><m>a</m> is related to <m>b</m></description></notation>, which means <q><m>a</m> is related to <m>b</m>.</q></p>
+  <!--<p><m>(a, b)\notin R</m> if and only if <m>a\mkern-1mu\not\mathrel{\mkern0.0mu{R}}\mkern1mu b</m>.</p>-->
+
+  <p>It is important to note that a relation is just a set. As long as the first coordinate comes from <m>A</m> and the second from <m>B</m>, we have a relation.  The notation <m>aRb</m> is a convenient way to describe whether two elements are related. In this case, we are thinking of <m>R</m> as a symbol representing the relationship, rather than as a set.</p>
+
+
+  <example xml:id="E_relation1"><title>Example of a relation</title>
+    <p>Let <m>A=\{1, 2, 3\}, B=\{2, 3, 4\}</m>. Let <m>R=\{(1, 4), (3, 2)\}</m>. Then <m>R</m> is a subset of <m>A\times B</m>. Thus, it is a relation.</p>
+    <p>Since <m>(1, 4)\in R</m>, <m>1R4</m> is true.</p>
+    <p>Since <m>(2, 3)\notin R</m>, <m>2R3</m> is false. Note, since <m>R</m> consists of ordered pairs, the order matters.</p>
+  </example>
+
+  <example xml:id="E_fam_relation"><title>A Familiar Relation</title>
+    <p>There are lots of familiar relations in math. For example, <m>\geq</m> is a relation.</p>
+    <p>Let <m>A=\{1, 2, 3\}, B=\{2, 3, 4\}</m>. Find <m>R</m> from <m>A</m> to <m>B</m> if</p>
+    <p><m>aRb</m> is given by <m>a\geq b</m>.</p>
+    <p><answer><m>R=\{(2, 2), (3, 2), (3, 3)\}</m></answer></p>
+  </example>
+
+  <p>If <m>R</m> is a relation from <m>A</m> to <m>B</m>, then <m>A</m> is the <term>domain</term> <idx><h>domain</h><h>relation</h></idx><idx><h>relation</h><h>domain</h></idx> of the relation, and <m>B</m> is the <term>codomain</term><idx><h>codomain</h><h>relation</h></idx><idx><h>relation</h><h>codomain</h></idx> of the relation.</p>
+
+  <p>An <term>arrow diagram</term> for a relation is a picture of the two sets with an arrow from <m>a</m> to <m>b</m> if <m>aRb</m>.</p>
+<figure xml:id="arrowdiag1">
+  <caption> Arrow diagram for the relation <m>R=\{(2, 2), (2, 3), (3, 4)\}</m>.</caption>
+  <image width="10%" xml:id="arrowgeq">
+    <latex-image>
+  \begin{tikzpicture}[node distance = 1cm, thick]% 
+        \node (1) {1};
+        \node (2) [below=of 1] {2};
+        \node (3) [below=of 2] {3};
+        \node (4) [right=of 1] {2};
+         \node (5) [right=of 2] {3};
+          \node (6) [right=of 3] {4};
+          \node (7) [above=of 1]{$A$};
+          \node(8)[above=of 4]{$B$};
+        \draw[->] (2) to (4);
+        \draw[->] (2) to (5);
+        \draw[->] (3) to (6);
+    \end{tikzpicture}
+
+</latex-image></image>
+</figure>
+
+<definition><statement> <p>A <term>function</term><idx>function</idx>, <m>f</m>, from a set <m>A</m> to a set <m>B</m>, <m>f:\mathbb{R}\rightarrow\mathbb{R}</m>,  is a mapping such that for every <m>a\in A</m> there is a unique <m>b\in B</m> with <m>f(a)=b</m>.</p></statement></definition>
+
+<example xml:id="E_func1"><title>Example of a function</title>
+    <p>Let <m>A=\mathbb{R}, B=\mathbb{R}</m>. Let <m>f(x)=x+2</m>. Then <m>f:\mathbb{R}\rightarrow\mathbb{R}</m>. We can check that it is a function: if we choose an <m>x\in A</m>, we can see that there is a corresponding real number <m>x+2</m>, which always exists. We can also see that for any <m>x\in A</m>, there is only one possible number as output.</p>
+  </example>
+
+<p>A function is really a relation with some additional properties. First, for each <m>a</m> in <m>A</m>, a corresponding <m>b</m> must exist. Second, <m>b</m> must be unique. In other words, every <m>a</m> must map somewhere and each <m>a</m> can only map to one <m>b</m>.</p>
+
+<p>Since a function is a relation, we can use relation notation to represent a function. Often we use <m>F</m> for the relation. In particular, <m>f(x)=y</m> if and only if <m>(x, y)\in F</m>.</p>
+
+<example xml:id="E_funcasrel"><title>Example of a function as a relation</title>
+    <p>Let <m>A=\mathbb{R}, B=\mathbb{R}</m>. Let <m>f(x)=x+2</m>. Then <m>F</m> is a subset of <m>\mathbb{R}\times \mathbb{R}</m>, thus it is a relation. Give 3 examples of ordered pairs in <m>F</m>.</p>
+    <p><answer>There are lots of examples, <m>(1, 3), (-2, 0), (5/2, 9/2)</m> are a few.</answer></p>
+  </example>
+
+  <example xml:id="E_equasrel"><title>Example of an equation as a relation</title>
+    <p>Let <m>A=\mathbb{R}, B=\mathbb{R}</m>. Let <m>(x, y)\in R</m> if and only if <m>x^2=y^2</m>. Then <m>R</m> is a subset of <m>\mathbb{R}\times \mathbb{R}</m>, thus it is a relation. Give 3 examples of ordered pairs in <m>R</m>.</p>
+    <p><answer>There are lots of examples, <m>(2, 2), (-5, 5), (2, -2)</m> are a few.</answer></p>
+    <p>Note, this relation is not a function since if <m>x=2</m>, we can have <m>y=2</m> or <m>y=-2</m>. Thus <m>y</m> is not unique for a given <m>x</m>.</p>
+  </example>
+
+  <activity><introduction><p>Let <m>A=\{1, 2, 3, 4, 5\}</m> and <m>B=\{0, 2, 4\}</m>. Let <m>R</m> be the relation from <m>A</m> to <m>B</m> where <m>(x, y)\in R</m> if <m>x=y</m>.</p></introduction>
+  <task><p> List the elements of <m>R</m>.</p></task>
+  <task><p>Draw the arrow diagram for <m>R</m>.</p></task>
+  <task><p>Is the relation <m>R</m> a function? Why or why not?</p></task>
+
+  </activity>
+
+  <activity><introduction><p>Let <m>A=\{1, 2, 3, 4, 5\}</m> and <m>B=\{0, 2, 4\}</m>. Let <m>S</m> be the relation from <m>A</m> to <m>B</m> where <m>(x, y)\in S</m> if <m>x-y</m> is positive.</p></introduction>
+  <task><p> List the elements of <m>S</m>.</p></task>
+  <task><p>Draw the arrow diagram for <m>S</m>.</p></task>
+  <task><p>Is the relation <m>S</m> a function? Why or why not?</p></task>
+
+  </activity>
+
+  <activity><statement>The <term>successor</term><idx>successor function</idx> function is given by <m>g(n)=n+1</m>. Let the domain be <m>A=\{1, 2, 3, 4, 5\}</m>. Give the ordered pairs for <m>g</m>.</statement></activity>
+
+  <activity><statement>Let <m>U</m> be the relation from <m>\mathbb{R}</m> to <m>\mathbb{R}</m> given by <m>(x, y)\in U</m> if <m>x^2+y^2=1</m>. Is <m>U</m> a function? Draw the set <m>U</m> in the Cartesian plane.</statement>
+<hint>Keep in mind that relations are just sets of ordered pairs, so we can graph them in the <m>xy</m>-plane.</hint></activity>
+
+
+
+    <reading-questions>
+      <title>Check Your Understanding</title>
+      <p>Let <m>A=\{2, 4, 6\}, B=\{3, 4, 5\}</m>.</p>
+      <exercise><statement><p>True or False: <m>\{(2, 2), (3, 3), (4, 4)\}</m> is a relation from <m>A</m> to <m>B</m>.</p></statement>
+      <answer>False</answer></exercise>
+
+      <exercise><statement><p>True or False: <m>\{(2, 2), (4, 4), (6, 6)\}</m> is a relation from <m>A</m> to <m>A</m>.</p></statement>
+      <answer>True</answer></exercise>
+
+      <exercise><statement><p>True or False: <m>\{(2, 3), (4, 3), (6, 3)\}</m> is a relation from <m>A</m> to <m>B</m>.</p></statement>
+      <answer>True</answer></exercise>
+
+      <exercise><statement><p>True or False: <m>\{(2, 3), (2, 4), (2, 5)\}</m> is a relation from <m>A</m> to <m>B</m>.</p></statement>
+      <answer>True</answer></exercise>
+
+      <exercise><statement><p>True or False: <m>\{(4, 3), (2, 5)\}</m> is a relation from <m>A</m> to <m>B</m>.</p></statement>
+      <answer>True</answer></exercise>
+
+   
+      <exercise><statement><p>True or False: <m>\{(2, 2), (3, 3), (4, 4)\}</m> is a function from <m>A</m> to <m>B</m>.</p></statement>
+      <answer>False</answer></exercise>
+
+      <exercise><statement><p>True or False: <m>\{(2, 2), (4, 4), (6, 6)\}</m> is a function from <m>A</m> to <m>A</m>.</p></statement>
+      <answer>True</answer></exercise>
+
+      <exercise><statement><p>True or False: <m>\{(2, 3), (4, 3), (6, 3)\}</m> is a function from <m>A</m> to <m>B</m>.</p></statement>
+      <answer>True</answer></exercise>
+
+      <exercise><statement><p>True or False: <m>\{(2, 3), (2, 4), (2, 5)\}</m> is a function from <m>A</m> to <m>B</m>.</p></statement>
+      <answer>False</answer></exercise>
+
+      <exercise><statement><p>True or False: <m>\{(4, 3), (2, 5)\}</m> is a function from <m>A</m> to <m>B</m>.</p></statement>
+      <answer>False</answer></exercise>
+
+    </reading-questions>
+
+    <exercises>
+      <exercise>
+        <statement>
+          <p>Let <m>A=\{2, 3, 4\}</m> and <m>B=\{4, 6, 8\}</m> and let <m>R</m> be the relation from <m>A</m> to <m>B</m> where 
+<me>(x, y)\in R \textrm{ if } \frac{y}{x} \textrm{ is an integer.}</me> </p>
+
+<ol marker="a">
+<li><p>Is <m>4\ R\ 6</m> ? Is <m>4\ R\ 8</m> ? Is <m>(3, 8) \in R</m> ? Is <m>(3, 6)\in R</m> ?</p></li>
+<li><p>Write <m>R</m> as a set of ordered pairs.</p></li>
+<li><p>Write the domain and codomain of <m>R</m>.</p></li>
+<li><p>Draw an arrow diagram for <m>R</m>.</p></li></ol>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>Let <m>C=\{-2, 0, 2\}</m> and <m>D=\{4, 6, 8\}</m> and let <m>S</m> be the relation from <m>C</m> to <m>D</m> where 
+<me>(x, y)\in S \textrm{ if } \frac{x-y}{4} \textrm{ is an integer.}</me> </p>
+
+<ol marker="a">
+<li><p>Is <m>2\ S\ 6</m> ? Is <m>2\ S\ 8</m> ? Is <m>(0, 6) \in S</m> ? Is <m>(2, 4)\in S</m> ?</p></li>
+<li><p>Write <m>S</m> as a set of ordered pairs.</p></li>
+<li><p>Write the domain and codomain of <m>S</m>.</p></li>
+<li><p>Draw an arrow diagram for <m>S</m>.</p></li></ol>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>Let <m>T</m> be the relation from <m>\mathbb{R}</m> to <m>\mathbb{R}</m> where  
+<me>(x, y)\in T \textrm{ if } y=x^2.</me> </p>
+
+<ol marker="a">
+<li><p>Is <m>-3\ T\ 9</m> ? Is <m>9\ T\ -3</m> ? Is <m>(2, 4) \in T</m> ? Is <m>(4, 2)\in T</m> ?</p></li>
+<li><p>Draw the graph of <m>T</m> in the Cartesian plane.</p></li>
+</ol>
+        </statement>
+      </exercise>
+
+      <exercise><statement><p>Let <m>H</m> be the relation from <m>\mathbb{R}</m> to <m>\mathbb{R}</m> where 
+      <me>(x, y)\in H \textrm{ if } y^2-x^2=1.</me></p>
+      <p>Is <m>H</m> a function? Explain your answer.</p></statement></exercise>
+
+      <exercise><statement><p>Let <m>A=\{-1, 0, 1\}</m> and <m>B=\{w, x, y, z\}</m> and let <m>F</m> be the function <m>F: A\rightarrow B</m> given by the set <m>F=\{(-1, y), (0, w), (1, y)\}</m>. </p>
+        <ol marker="a">
+          <li><p>Write the domain and codomain of <m>F</m>.</p></li>
+          <li><p>Explain why <m>F</m> is a function.</p></li>
+          <li><p> Find <m>F(-1), F(0),</m> and <m>F(1)</m>.</p></li>
+        </ol>
+    </statement></exercise>
+
+    </exercises>
+
+</section>

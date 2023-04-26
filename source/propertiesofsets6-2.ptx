@@ -1,0 +1,267 @@
+<section xml:id="propertiesofsets6-2">
+  <title>Properties of Sets</title><idx><h>set</h><h>properties</h></idx>
+
+  <p>Now that we have defined operations on sets such as union and intersection, we can look at various properties of these operations. In the last section we saw that intersection involves an <q>and</q> statement, while union involves an <q>or.</q> As we work with these properties we will be able to see connections between properties of sets and the logical connectives we saw in <xref ref="chapter2"/>.</p>
+
+<p>One of our goals in this section is to learn how to prove properties such as the following subset relations.</p>
+
+<assemblage xml:id="B_ssrelations"><idx><h>subset</h><h>properties</h></idx>
+  <title>Subset Relations</title>
+    <p><ol marker="1">
+      <li><m>A\cap B\subseteq A</m>; <m>A\cap B\subseteq B</m>.</li>
+      <li><m>A\subseteq A\cup B</m>; <m>B\subseteq A\cup B</m>.</li>
+      <li><title>Transitivity</title> If <m>A\subseteq B</m> and  <m>B\subseteq C</m> then <m>A\subseteq C</m>.</li>
+    </ol></p>
+  </assemblage>
+
+  
+
+  <p>Recall from <xref ref="D_subset"/>, we can think of the statement <m>X\subseteq Y</m> as the conditional statement, if <m>x\in X</m> then <m>x\in Y</m>.</p>
+
+<assemblage xml:id="B_pfsubset">
+  <title>Proving Subset</title><idx><h>subset</h><h>proof technique</h></idx>
+  <p>To prove <m>X\subseteq Y</m>:
+<ul>
+  <li>Assume <m>x\in X</m>.</li>
+  <li>Show <m>x\in Y</m>.</li>
+</ul>
+</p>
+</assemblage>
+
+<p>Based in their definitions from <xref ref="sets6-1"/>, we can translate other sets into logical statements, as well. These translations are how we will prove properites of sets using elements.</p>
+
+<assemblage xml:id="B_tranlationsforsets">
+  <title>Translating Set Statements to Logical Statements</title>
+<p><ul>
+  <li><m>x \in X\cup Y</m> if and only if <m>x\in X</m> or <m>x\in Y</m></li>
+  <li><m>x \in X\cap Y</m> if and only if <m>x\in X</m> and <m>x\in Y</m></li>
+  <li><m>x \in X-Y</m> if and only if <m>x\in X</m> and <m>x\notin Y</m></li>
+  <li><m>x \in X^C</m> if and only if <m>x\notin X</m></li>
+  <li><m>(x, y) \in X\times Y</m> if and only if <m>x\in X</m> and <m>y\in Y</m></li>
+</ul>
+
+</p>
+</assemblage>
+
+<example xml:id="E_subsetprop"><title>Proving a Subset Property</title>
+<p>
+  Prove <m>A\cap B\subseteq A</m>.
+</p>
+<proof>
+  <p>
+    Let <m>x\in A\cap B</m>. Then <m>x\in A</m> and <m>x\in B</m>. Thus, <m>x\in A</m>.
+  </p>
+  <p>Therefore, <m>A\cap B\subseteq A</m>.</p>
+</proof>
+</example>
+
+<activity><statement><p>Prove <m>A\cap B\subseteq B</m>. Be sure to write what you want to assume and what you want to  show.</p></statement></activity>
+
+<activity><statement><p>Prove <m>B\subseteq A\cup B</m>. Be sure to write what you want to assume and what you want to  show.</p></statement></activity>
+
+<activity><statement><p>Prove if <m>A\subseteq B</m> and <m>B\subseteq C</m> then <m>A\subseteq C</m>. Be sure to write what you want to assume and what you want to  show.</p></statement></activity>
+
+
+<assemblage xml:id="B_pfsetequality">
+  <title>Proving Set Equality</title><idx><h>set</h><h>proof of equality</h></idx>
+
+<p>To prove <m>X=Y</m> show 
+<ol marker="1">
+  <li><m>X\subseteq Y</m>, ie, show if <m>x \in X</m> then <m>x \in Y</m>, and </li>
+  <li><m>Y\subseteq X</m>, ie, show if <m>x \in Y</m> then <m>x \in X</m>.</li>
+</ol></p>
+</assemblage>
+
+<example xml:id="E_DeMorgans"><title>Proving Two Sets are Equal</title>
+<p>
+  Prove <m>A\cup(B\cap C)=(A\cup B)\cap (A\cup C)</m>.
+</p>
+<proof>
+  <p>
+    <m>(\subseteq)</m>: Let <m>x\in A\cup(B\cap C)</m>. Then <m>x\in A</m> or <m>x\in B\cap C</m>.
+  </p>
+  <p>Case 1: <m>x\in A</m>. Then <m>x\in A\cup B</m> by the second subset relation. Similarly, <m>x\in A\cup C</m>. Thus, <m>x\in A\cup B</m> and <m>x\in A\cup C</m>.</p>
+  <p>Therefore, <m>x\in (A\cup B) \cap (A\cup C)</m>.</p>
+  <p>Case 2: <m>x\in B\cap C</m>. Then <m>x\in B</m>  and <m>x\in C</m>. Then <m>x\in A\cup B</m> and <m>x\in A\cup C</m> by the second subset relation. Thus, <m>x\in A\cup B</m> and <m>x\in A\cup C</m>.</p>
+  <p>Therefore, <m>x\in (A\cup B) \cap (A\cup C)</m>.</p>
+
+  <p>
+    <m>(\supseteq)</m>: Let <m>x\in (A\cup B)\cap (A\cup C)</m>. Then <m>x\in A\cup B</m> and <m>x\in A\cup C</m>.
+  </p>
+  <p>Case 1: <m>x\in A</m>. Then <m>x\in A\cup (B\cap C)</m> by the second subset relation (since we can do the union with <em>any</em> set). </p>
+  <p>Case 2: <m>x\notin A</m>. Since <m>x\in A\cup B</m>  by assumption, <m>x\in A</m> or <m>x\in B</m>. Since <m>x\notin A</m>, <m>x\in B</m>.</p>
+  <p> Similarly,  since <m>x\in A\cup C</m>, and <m>x\notin A</m>, <m>x\in C</m>. Thus, <m>x\in B\cap C</m>.</p>
+  <p>Therefore, <m>x\in A\cup (B\cap C)</m> (again by the second subset relation).</p>
+</proof>
+</example>
+
+<p>The proofs in <xref ref="E_subsetprop"/> and <xref ref="E_DeMorgans"/> are called <term>element arguments.</term> This type of proof uses elements and the definitions of sets and subsets. You start with <m>x</m> being an element of the set of interest, use what you know about the set to then get <m>x</m> as an element of another set. This technique generalizes to sets in all different mathematical contexts. </p>
+
+<p>The next theorem shows that the empty set is a subset of every set.</p>
+  <theorem xml:id="T_emptyset"><statement><p>For all sets <m>A</m>, <m>\emptyset\subseteq A</m>.</p></statement></theorem>
+  <proof><p>By contradiction, assume there exists a set <m>A</m> such that <m>\emptyset\nsubseteq A</m>.</p>
+<p>This means there exists <m>x\in \emptyset</m> such that <m>x\notin A</m>. But we cannot have <m>x\in \emptyset</m>. Hence, we have a contradiction. Therefore, <m>\emptyset\subseteq A</m>.</p>
+</proof>
+
+<p>There are many times in mathematics that we need to prove that a set is empty. We might need do do this if we need sets to be disjoint, or if we need to prove that there are no elements with a particular property. The common method for proving a set is empty is to use contradiction. Note, usually if we want to prove <m>A=B</m>, we show both subsets (<m>A\subseteq B</m>, <m>B\subseteq A</m>), but we just showed <m>\emptyset\subseteq A</m>, always. So we just need to show <m>A\subseteq \emptyset</m>. We do this by contradiction. </p>
+
+<assemblage xml:id="B_pfempty">
+  <title>Proving a Set is Empty</title><idx><h>empty set</h><h>proof</h></idx>
+<p>To show <m>A=\emptyset</m>: 
+<ul>
+  <li>Assume <m>x\in A</m>.</li>
+  <li>Reach a contradiction.</li>
+</ul></p>
+</assemblage>
+
+<example xml:id="E_provesetisempty"><title>Proving a Set is Empty</title>
+<p>
+  Prove <m>U^{C}=\emptyset</m>, where <m>U</m> is the universal set.
+  <proof>
+    <p>Let <m>x\in U^{C}</m>. Then <m>x\notin U</m>. But since <m>U</m> contains everything, <m>x\in U</m>, which is a contradiction. Therefore, <m>U^{C}=\emptyset</m>.</p>
+  </proof>
+</p></example>
+
+<activity><statement><p>Prove <m>A\cap A^C=\emptyset</m>. Be sure to write what you want to assume and what you want to show.</p></statement></activity>
+
+<activity><statement><p>Prove if <m>A\subseteq B</m> then <m>A\cup C\subseteq B\cup C</m>. Note, you need to show <m>A\cup C\subseteq B\cup C</m>. So how do you show a subset? What set should you assume  <m>x</m> is in?</p></statement></activity>
+
+<assemblage xml:id="L_SetIdent">
+<title>Summary of Set Identities</title><idx><h>set</h><h>identities</h></idx>
+
+<p>Let <m>U</m> be the universal set, and <m>A, B</m>, and <m>C</m> subsets of the universal set.
+<ol marker="1">
+<li> <title>Commutative Laws</title> <m>A\cup B=B\cup A; \ \ A\cap B=B\cap A</m></li>
+<li> <title>Associative Laws</title> <m>(A\cup B)\cup C=A\cup(B\cup C);\ \ (A\cap B)\cap C=A\cap(B\cap C)</m></li>
+<li> <title>Distributive Laws</title> <m>A\cup(B\cap C)=(A\cup B)\cap (A\cup C);</m> <m>A\cap(B\cup C)=(A\cap B)\cup (A\cap C)</m></li>
+<li> <title>Identity Laws</title> <m>A\cup \emptyset=A;\ \ A\cap U=A</m></li>
+<li> <title>Complement Laws</title> <m>A\cup A^C=U;\ \ A\cap A^C=\emptyset</m></li>
+<li> <title>Double Complement Law</title> <m>(A^C)^C=A</m></li>
+<li> <title>Idempotent Laws</title> <m>A\cup A=A;\ \ A\cap A=A</m></li>
+<li> <title>Universal Bound Laws</title> <m>A\cup U=U;\ \ A\cap \emptyset=\emptyset</m></li>
+<li> <title>DeMorgan's Laws</title> <m>(A\cup B)^C=A^C\cap B^C;\ \ (A\cap B)^C=A^C\cup B^C</m></li>
+<li> <title>Absorption Laws</title> <m>A\cup(A\cap B)=A;\ \ A\cap(A\cup B)=A</m></li>
+<li> <title>Complements</title> <m>U^C=\emptyset;\ \ \emptyset^C=U</m></li>
+<li> <title>Set Difference Law</title> <m>A-B=A\cap B^C</m></li>
+
+</ol></p>
+</assemblage>
+
+
+    <reading-questions>
+      <title>Check Your Understanding</title>
+
+      <p>Let <m>A, B, C</m> be sets and <m>U</m> be the universal set.</p>
+      
+      <exercise><statement><p>True or false: <m>A\cap C=C\cap A</m>.</p></statement>
+      <answer>True</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>A\cap(B\cup C)=(A\cap B)\cup (A\cap C)</m>.</p></statement>
+      <answer>True</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>A\cap(B\cup C)=(A\cap B)\cup C</m>.</p></statement>
+      <answer>False</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>A\cup \emptyset=\emptyset</m>.</p></statement>
+      <answer>False</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>(A\cup B)^C=A^C\cup B^C</m>.</p></statement>
+      <answer>False</answer></exercise>
+      
+      <exercise><statement><p>True or false:  <m>B-A=A-B</m>.</p></statement>
+      <answer><p>False</p></answer></exercise>
+
+      <exercise><statement><p>True or false:  <m>\emptyset\subseteq U</m>.</p></statement>
+      <answer><p>True</p></answer></exercise>
+
+      <exercise><statement><p>True or false:  <m>A\subseteq A\cup(B\cap C)</m>.</p></statement>
+      <answer><p>True</p></answer></exercise>
+
+      <exercise><statement><p>True or false:  <m>B\subseteq A\cup(B\cap C)</m>.</p></statement>
+      <answer><p>False</p></answer></exercise>
+    
+
+    </reading-questions>
+
+    <exercises>
+      <exercise><statement><p>Fill in the blanks.</p>
+        <ol marker="a">
+    <li>
+      <p>
+    To say that an element is in <m>A\cap(B\cup C)</m> means that it is in ___ and in ___.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    To say that an element is in <m>(A\cap B)\cup C</m> means that it is in ___ or in ___.
+    </p>
+    </li>
+
+    <li>
+      <p>
+    To say that an element is in <m>A-(B\cap C)</m> means that it is in ___ and not in ___.
+     </p>
+    </li></ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Illustrate the distributive laws by drawing the Venn diagrams for the given sets.</p>
+    <ol marker="a">
+     <li><p><m>A\cup (B\cap C)</m> and <m>(A\cup B)\cap (A\cup C)</m></p></li>
+     <li><p><m>A\cap (B\cup C)</m> and  <m>(A\cap B)\cup (A\cap C)</m></p></li>
+   </ol>
+
+      </statement></exercise>
+      <exercise><statement>
+         <p>
+    Illustrate DeMorgan's laws by drawing the Venn diagrams for the given sets.</p>
+    <ol marker="a">
+     <li><p><m>(A\cup B)^C</m> and <m>(A^C\cap B^C)</m></p></li>
+     <li><p><m>(A\cap B)^C</m> and  <m>(A^C\cup B^C)</m></p></li>
+   </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Use an element argument to prove for all sets <m>A</m> and <m>B</m>, <m>(A\cap B)^C=(A^C\cup B^C)</m>. Be sure to write what you want to assume and what you want to show.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Use an element argument to prove for all sets <m>A</m> and <m>B</m>, <m>(A\cap B)\cup(A\cap B^C)=A</m>. Be sure to write what you want to assume and what you want to show.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Use an element argument to prove for all sets <m>A</m>, <m>B</m>, and <m>C</m>, if <m>A\subseteq B</m> then <m>(A\cap C)\subseteq (B\cap C)</m>. Be sure to write what you want to assume and what you want to show.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+         <p>
+    Use an element argument to prove for all sets <m>A</m>, <m>B</m>, and <m>C</m>, if <m>A\subseteq B</m> then <m>(A\cup C)\subseteq (B\cup C)</m>. Be sure to write what you want to assume and what you want to show.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Use an element argument to prove for all sets <m>A</m> and <m>B</m>, if <m>A\subseteq B</m> then <m>B^C\subseteq A^C</m>. Be sure to write what you want to assume and what you want to show.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Use an element argument to prove for all sets <m>A</m> and <m>B</m>, <m>(A\cap B)\cap (A\cap B^C)=\emptyset</m>. 
+  </p>
+      </statement><hint>Proving a set is the empty set often involves a proof by contradiction.</hint></exercise>
+      <exercise><statement>
+        <p>
+    Use an element argument to prove for all sets <m>A</m> and <m>B</m>, if <m>A\subseteq B</m> then <m>A\cap B^C=\emptyset</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Use an element argument to prove for all sets <m>A</m>, <m>B</m>, and <m>C</m>, if <m>A\subseteq B</m> and <m>B\cap C=\emptyset</m> then <m>A\cap C=\emptyset</m>.
+  </p>
+      </statement></exercise>
+
+    </exercises>
+
+</section>

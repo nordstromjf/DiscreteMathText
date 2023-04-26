@@ -1,0 +1,398 @@
+<section xml:id="quantifiersI3-1">
+  <title>Quantifiers</title><idx>quantifier</idx>
+
+  <p>We want to be able to use variables in statements. For example, <m>x+3/2=4</m> is not a statement since it has no truth value. However, if we say, <q>there exists <m>x</m> such that <m>x+3/2=4</m></q> or <q>for all <m>x</m>, <m>x+3/2=4</m>,</q> and we know what set <m>x</m> belongs to, then we can decide whether these statements are true or false. </p>
+
+
+  <definition><statement> <p>The <term>domain</term><idx><h>domain</h><h>for a quantified statement</h></idx> for a quantified statement is the set of possible values for a variable in a quantified statement.</p></statement></definition>
+
+  <p>In order to determine whether a statement is true of false, we first need to know the domain.</p>
+
+  <example xml:id="E_domainqexist1"><title>Domain and Existential Statements</title>
+    <p>Let <m>D=\mathbb{Z}</m>. Determine whether the statement <q>there exists <m>x\in D</m> such that <m>x+3/2=4</m></q> is true or false.</p>
+    <answer><p>Since <m>x=5/2</m> is the only value satisfying the equation, but <m>x\notin \mathbb{Z}</m>, the statement is false.</p></answer>
+
+    <p>Let <m>D=\mathbb{R}</m>. Determine whether the statement <q>there exists <m>x\in D</m> such that <m>x+3/2=4</m></q> is true or false.</p>
+    <answer><p>Since <m>x=5/2</m> is the only value satisfying the equation, and <m>x\in \mathbb{R}</m>, the statement is true.</p></answer>
+
+    <p>Let <m>D=\{5/2\}</m>. Determine whether the statement <q>there exists <m>x\in D</m> such that <m>x+3/2=4</m></q> is true or false.</p>
+    <answer><p>Since <m>x=5/2</m> is the only value satisfying the equation, and <m>x\in D</m>, the statement is true.</p></answer>
+  </example>
+
+  <example xml:id="E_domainquniversal1"><title>Domain and Universal Statements</title>
+    <p>Let <m>D=\mathbb{Z}</m>. Determine whether the statement <q>for all <m>x\in D</m>, <m>x+3/2=4</m></q> is true or false.</p>
+    <answer><p>Since <m>x=5/2</m> is the only value satisfying the equation, certainly every integer does not satisfy the equation. The statement is false.</p></answer>
+
+    <p>Let <m>D=\mathbb{R}</m>. Determine whether the statement <q>for all <m>x\in D</m>, <m>x+3/2=4</m></q> is true or false.</p>
+    <answer><p>Since <m>x=5/2</m> is the only value satisfying the equation, certainly every real number does not satisfy the equation. The statement is false.</p></answer>
+
+    <p>Let <m>D=\{5/2\}</m>. Determine whether the statement <q>for all <m>x\in D</m>, <m>x+3/2=4</m></q> is true or false.</p>
+    <answer><p>Since <m>x=5/2</m> satisfies the equation, and is the only value in <m>D</m>, the statement is true.</p></answer>
+  </example>
+
+  <p>We want to be able to work with generic statements, like <m>p</m> and <m>q</m>, but also with variables. Instead of <m>p</m> we will use <m>P(x)</m>. An expression, <m>P(x)</m>, represents some property or expression about <m>x</m>. We call <m>P(x)</m> the <term>predicate</term><idx>predicate</idx>.</p>
+
+  <p>In our above examples, <m>P(x)</m> is <m>x+3/2=4</m>.</p>
+
+  <p>Our properties don't just need to be mathematical, though. For example we could have a predicate such as <m>P(x)</m> is <q><m>x</m> is a math major.</q> In this case our domain could be the set of students at Linfield or the set of students in Discrete Math.</p>
+
+  <p>One goal with quantified statements is to be able to for which values in the domain they are true.</p>
+
+  <definition><statement> <p>The <term>truth set</term><idx><h>truth set</h><h>for a predicate</h></idx> for a predicate, <m>P(x)</m>, is the set of values for <m>x</m> that make <m>P(x)</m> true.</p></statement></definition>
+
+  <example xml:id="E_truthsets"><title>Finding Truth Sets</title>
+    <p>Find the  truth set for <m>P(x)</m> given by <m>x+3/2=4</m>.</p>
+    <answer><p>Since <m>x=5/2</m> is the only value satisfying the equation, the tuth set is <m>\{5/2\}</m>.</p></answer>
+    <p>Find the  truth set for <m>P(x)</m> given by <m>x</m> is even.</p>
+    <answer><p>The truth set is the set of all even numbers.</p></answer>
+  </example>
+
+<assemblage xml:id="B_quantifiers">
+  <title>Quantifiers</title>
+  <p><ul>
+    <li><title>Universal quantifier</title><idx><h>universal</h><h>quantifier</h></idx><idx><h>quantifier</h><h>universal</h></idx> <m>\forall</m><notation><usage><m>\forall</m></usage><description>for all; universal quantifier</description></notation>, read as <q>for all</q> or  <q>for every.</q> </li>
+    <li><title>Existential quantifier</title><idx><h>existential</h><h>quantifier</h></idx><idx><h>quantifier</h><h>existential</h></idx> <m>\exists</m><notation><usage><m>\exists</m></usage><description>there exists; existential quantifier</description></notation>, read as <q>there exists</q> or  <q>for some.</q> </li>
+  </ul>
+  </p>
+</assemblage>
+  
+  
+  <definition xml:id="D_univstatement"><statement><p>A <term>universal statement</term><idx><h>statement</h><h>universal</h></idx> has the form <m>\forall x\in D, P(x)</m>.</p></statement></definition>
+
+  
+
+  <p>To show a universal statement is <alert>true</alert>, you need to show all values in <m>D</m> make <m>P(x)</m> true. If your set is small, you can do this just by showing <m>P(x)</m> is true for each <m>x</m> (method of exhaustion). If <m>D</m> is infinite, however, we will need more general techniques.</p>
+  <p>To show a universal statement is <alert>false</alert>, you just need to find one value in <m>D</m> which makes <m>P(x)</m> false (counterexample).</p>
+
+  <activity><statement><p>Let <m>D=\{2, 3, 4, 5\}</m>. Show the following statement is true: <m>\forall x\in {D}, x^2>2</m>.</p></statement></activity>
+  <activity><statement><p>Let <m>D=\{2, 3, 4, 5\}</m>. Show the following statement is false: <m>\forall x\in D, x^2 &lt; 20</m>.</p></statement></activity>
+
+  <definition xml:id="D_existstatement"><statement><p>An <term>existential statement</term><idx><h>statement</h><h>existential</h></idx> has the form <m>\exists x\in D, P(x)</m>.</p></statement></definition>
+  
+  <p>To show an existential statement is <alert>true</alert>, you just need to find one value in <m>D</m> which makes <m>P(x)</m> true.</p>
+  <p>To show an existential statement is <alert>false</alert>, you need to show all values in <m>D</m> make <m>P(x)</m> false, or no values make it true. If your set is small, you can do this just by showing <m>P(x)</m> is false for each <m>x</m>. If <m>D</m> is infinite, however, we will need more general techniques.</p>
+
+  <activity><statement><p>Show the following statement is true: <m>\exists x\in \mathbb{R}, 2x^2+1=5</m>.</p></statement></activity>
+  <activity><statement><p>Show the following statement is false: <m>\exists x\in \mathbb{Z}, 3x+5=6</m>.</p></statement></activity>
+  
+  
+  <example xml:id="E_translating"><title>Translating Statements</title>
+    <p>Translate the statement using quantifiers and variables, <q>All positive real numbers have square roots greater than zero.</q></p>
+    <answer><m>\forall x\in \mathbb{R}^+, \sqrt{x}>0.</m></answer>
+
+    <p>Translate the statement using quantifiers and variables, <q>Nobody's perfect.</q></p>
+    <answer><p><m>\forall x\in \{\textrm{people}\}, x</m> is not perfect.</p></answer>
+  </example>
+
+  <activity><statement><p>Write the following statement formally using quantifiers and variables: Every differentiable function is continuous.</p></statement></activity>
+
+  
+
+  <p>Recall universal conditional statements from <xref ref="variables1-1"/>. </p>
+
+  <definition xml:id="D_univcondstate"><statement><p>A <term>universal conditional statement</term><idx>universal conditional</idx><idx><h>statement</h><h>universal conditional</h></idx> has the form  <m>\forall x\in D</m>, if <m>P(x)</m> then <m>Q(x)</m>. In symbols, we can write a universal conditional as <m>\forall x\in D, P(x)\rightarrow Q(x).</m> </p></statement></definition>
+
+  <example xml:id="E_univcond"><title>Universal Conditional Statement</title>
+    <p>Translate the statement using quantifiers and variables, <q>If an integer is even then it is divisible by 2.</q></p>
+    <answer><p>Let <m>P(x)</m> be <q><m>x</m> is even</q> and <m>Q(x)</m> be <q><m>x</m> is divisible by 2.</q> <m>\forall x\in \mathbb{Z}, P(x)\rightarrow Q(x)</m>.</p></answer>
+  </example>
+
+  <activity><statement><p>Write the following statement formally as a universal conditional: Every differentiable function is continuous.</p></statement></activity>
+
+  <activity><introduction><p>Write the following statements formally using quantifiers and variables.</p></introduction>
+<task><p>Some even integers are negative.</p></task>
+<task><p>Everyone makes mistakes.</p></task>
+<task><p>Someone will get an A.</p></task>
+</activity>
+
+
+    <reading-questions>
+      <title>Check Your Understanding</title>
+      <p>Let <m>D=\mathbb{Z}</m>. Let <m>P(x)</m> be <q><m>x^2</m> is even.</q> Determine whether each of the following statements are true or false.</p>
+      <exercise><statement><p><m>\forall x\in D, P(x).</m></p></statement>
+      <answer>False. It is not true that every square is even. For example, <m>3^2=9</m> is odd.</answer></exercise>
+
+      <exercise><statement><p><m>\exists x\in D, P(x).</m></p></statement>
+      <answer>True. For example, <m>2^2=4</m> is even.</answer></exercise>
+
+      <exercise><statement><p><m>\forall x\in D, \sim P(x).</m></p></statement>
+      <answer>False. It is not true that every square is not even.</answer></exercise>
+
+      <exercise><statement><p><m>\exists x\in D, \sim P(x).</m></p></statement>
+      <answer>True. There exists a square which is not even.</answer></exercise>
+
+      <exercise><statement><p><m>\sim(\forall x\in D, P(x)).</m></p></statement>
+      <answer>True. This is the negation of (1), so must be true.</answer></exercise>
+
+      
+
+    </reading-questions>
+
+    <exercises>
+      <exercise><statement><p>Let <m>P(x)</m> be the predicate <q><m>x&gt;1/x</m>.</q></p>
+      <ol marker="a">
+        <li><p>Write <m>P(2), P(1/2), P(-1), P(-1/2)</m>, and <m>P(-8)</m>. Indicate which of these is true and which is false.</p></li>
+        <li>
+      <p>
+    Let the domain be the set <m>\mathbb{R}</m>. Find the truth set of <m>P(x)</m>.</p>
+    </li>
+
+    <li>
+      <p>
+    Let the domain be the set <m>\mathbb{R}^+</m> of all positive real numbers. Find the truth set of <m>P(x)</m>.
+  </p>
+    </li>
+      </ol>
+
+    </statement></exercise>
+
+    <exercise><statement><p>
+    Let <m>Q(x, y)</m> be the predicate <q>If <m>x&lt;y</m> then <m>x^2&lt;y^2</m></q> with domain for both <m>x</m> and <m>y</m> being <m>\mathbb{R}</m>.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Explain why <m>Q(x, y)</m> is false if <m>x=-4</m> and <m>y=2</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Give values different from those in part (a) for which <m>Q(x, y)</m> is false.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Explain why <m>Q(x, y)</m> is true if <m>x=2</m> and <m>y=4</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Give values different from those in part (c) for which <m>Q(x, y)</m> is true.
+  </p>
+    </li>
+
+  </ol></statement></exercise>
+
+  <exercise><statement><p>
+    Give a counter example to show the following statement is false.
+  </p>
+
+  <p>
+    <me>\forall a \in \mathbb{Z}, (a-1)/a \text{ is not an integer.}</me>
+  </p></statement></exercise>
+  <exercise><statement><p>
+    Give a counter example to show the following statement is false.
+  </p>
+
+  <p>
+    <me>\forall a \text{ real numbers } x \text{ and } y, \sqrt{x+y}=\sqrt{x}+\sqrt{y}.</me>
+  </p></statement></exercise>
+  <exercise><statement>
+    <p>
+     Which of the following are equivalent ways of expressing the statement <me>\exists x\in \mathbb{R} \text{ such that } x^2=2?</me>
+  </p>
+
+  <ol marker="a">
+     <li>
+      <p>
+    There is at least one real number whose square is 2.
+  </p>
+    </li>
+    <li>
+      <p>
+    The square of each real number is 2.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Some real numbers have square 2.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    The number <m>x</m> has square 2, for some real number <m>x</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    If <m>x</m> is a real number, then <m>x^2=2</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Some real number has square 2.
+  </p>
+    </li>
+</ol>
+  </statement></exercise>
+  <exercise><statement>
+    <p>
+    Which of the following are equivalent ways of expressing the statement
+    <me>\forall n\in \mathbb{Z} \text{ if } n^2 \text{ is even then } n \text{ is even}?</me>
+  </p>
+
+  <ol marker="a">
+     <li>
+      <p>
+    If the square of an integer is even, then that integer is even
+  </p>
+    </li>
+    <li>
+      <p>
+    All integers have even squares and are even.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Given any integer whose square is even, that integer is itself even.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    For all integers, there are some whose square is even.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Any integer with an even square is even.
+  </p>
+    </li>
+
+   
+
+    <li>
+      <p>
+    All even integers have even squares.
+  </p>
+    </li>
+
+  </ol>
+  </statement></exercise>
+  <exercise><statement>
+    <p>
+    Rewrite the following statements using the form <q><m>\forall</m>____<m>x</m>,____.</q>
+  </p>
+  <ol marker="a">
+    <li>
+      <p>
+    Every real number is positive, negative, or zero.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    No irrational numbers are integers.
+  </p>
+    </li>
+
+  </ol>
+  </statement></exercise>
+  <exercise><statement><p>
+    Let <m>D</m> be the set of all students at Linfield University, and let <m>M(s)</m> be <q><m>s</m> is a math major,</q> let <m>C(s)</m> be <q><m>s</m> is a computer science major,</q> and let <m>P(s)</m> be <q><m>s</m> is a physics major.</q> Express each of the following statements using quantifiers, variables, and the predicates <m>M(s), C(s), P(s)</m>.
+  </p>
+  <ol>
+    <li>
+      <p>
+    There is a physics major who is a math major.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Every computer science major is a math major.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    No computer science majors are physics majors.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Some computer science majors are also math majors.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Some computer science majors are physics majors and some are not.
+  </p>
+    </li>
+
+  </ol></statement></exercise>
+  <exercise><statement><p>
+    Let <m>\mathbb{R}</m> be the domain of the predicate variable <m>x</m>. Which of the following are true and which are false? Give counter examples for the statements that are false.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    If <m>x&gt;2</m> then <m>x&gt;1</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    If <m>x&gt;2</m> then <m>x^2&gt;4</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    If <m>x^2&gt;4</m> then <m>x&gt;2</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    If <m>x^2&gt;4</m> then <m>|x|&gt;2</m>.
+  </p>
+    </li>
+
+  </ol></statement></exercise>
+  <exercise><statement><p>
+    Let the domain of <m>x</m> be the set <m>D</m> of objects discussed in mathematics courses, and let Real(<m>x</m>) be <q><m>x</m> is a real number,</q> Pos(<m>x</m>) be <q><m>x</m> is a positive real number,</q> Neg(<m>x</m>) be <q><m>x</m> is a negative real number,</q> and Int(<m>x</m>) be <q><m>x</m> is an integer.</q> Rewrite each statement without using quantifiers or variables. Indicate which statements are true and which are false. 
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Pos(0)
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\forall x</m>, Real(<m>x</m>) <m>\wedge</m> Neg(<m>x</m>) <m>\rightarrow</m> Pos(<m>-x</m>).
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\forall x</m>, Int(<m>x</m>) <m>\rightarrow</m> Real(<m>x</m>).
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\exists x</m> such that Real(<m>x</m>) <m>\wedge</m> <m>\sim</m>Int(<m>x</m>).
+  </p>
+    </li>
+
+  </ol></statement></exercise>
+    </exercises>
+
+</section>

@@ -1,0 +1,175 @@
+<section xml:id="pigeonhole9-4">
+  <title>Pigeonhole Principle</title><idx>pigeonhole principle</idx>
+
+  <p>In this section we look at a method of counting that uses a correspondence between two sets. We can think of one set as a set of objects and the other as a set of boxes. The name of the principle comes from thinking of a set of letters and pigeonholes, which is what they used to call rows of letterboxes. Though it is also fun to think about correspondences between pigeons and pigeonholes.</p>
+
+  <theorem xml:id="T_pigeonhole"><title>Pigeonhole Principle</title><idx>pigeonhole principle</idx><statement><p>A function from one fnite set to a smaller finite set cannot be one-to-one. There must be at least two elements in the domain that have the same image in the codomain.</p></statement></theorem>
+
+  <p>The Pigeonhole Principle really just says that if there are more objects (pigeons) than boxes (pigeonholes) then there must be at least one box with more than one object.</p>
+
+  <p>When working with pigeonhole problems
+    <ul>
+      <li>identify the objects (pigeons)</li>
+      <li>identify the boxes (pigeonholes)</li>
+      <li>show the number of objects is bigger than the number of boxes.</li>
+    </ul></p>
+
+    <p>Beware:
+      <ul>
+        <li>You can still have a box with no objects.</li>
+        <li>You do not know which box has more than one object.</li>
+        <li>A box could have all the objects.</li>
+        <li>You do not know how many objects are in any particular box.</li>
+      </ul></p>
+
+  <example xml:id="E_socks"><title>Counting Socks</title>
+    <p>In a drawer with 5 pairs of red socks and 5 pairs of blue socks, how many socks do you need to randomly pull out of the drawer to be certain that you have a pair?</p>
+    <p>Note, there are 10 socks of each color.</p>
+    <answer><p>3 socks, since the first two might be different colors. If that happens the third sock must match one of the first two.</p></answer>
+    <p>In this example, the socks are the objects and the colors are the boxes.</p>
+    <p>Now, what if you need to make sure you have a red pair?</p>
+    <answer>12 socks.</answer>
+    
+  </example>
+
+
+
+  <p>It is important to note that pigeonhole problems are not about probability. We want to know when we are guaranteed to have a pair of socks, not when it is likely that we have a pair.</p>
+
+  <activity><statement><p>In a group of 10 people, must 2 be born in the same month? What is the most people that can be born in the same month? </p></statement></activity>
+
+  <activity><statement><p>In a group of 13 people, must at least 2 be born in the same month? Must at least one person be born in January?</p></statement></activity>
+
+  <example xml:id="E_pigeonholesums"><title>Finding Sums of Integers</title>
+    <p>Let <m>A=\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\}</m>. How many integers do you need to choose from <m>A</m> to guarantee that 2 numbers will sum to 11?</p>
+    <p>Since we are looking for sums of 11, our boxes can be pairs of numbers that sum to 11: <m>\{1, 10\}, \{2, 9\}, \{3, 8\}, \{4, 7\}, \{5, 6\}</m>. Then our objects are the numbers themselves. We need the number of numbers to be greater than the number of boxes, which is 5. Thus, if we choose 6 numbers from <m>A</m>, we are guaranteed to have 2 from the same subset. This means with 6 numbers we must have two numbers that sum to 11.</p></example>
+
+    <activity><statement><p>Let <m>A=\{1, 2, 3, 4, 5, 6, 7, 8\}</m>. If 5 integers are selected from <m>A</m>, must at least one pair have a sum of 9? If 4 integers are selected from <m>A</m>, must at least one pair have a sum of 9?</p></statement></activity>
+
+    <activity><statement><p>How many integers from 0 to 60 must you choose in order to get at least one that is odd? How many integers from 0 to 60 must you choose in order to get at least one that is even? </p></statement></activity>
+
+  <p>We can generalize the Pigeonhole Principle. If we have enough objects, we can guarantee more than two objects in one box.</p>
+
+  <theorem xml:id="T_genpigeonhole"><title>Generalized Pigeonhole Principle</title><idx><h>pigeonhole principle</h><h>generalized</h></idx><statement><p>If there are <m>n</m> objects mapped to <m>m</m> boxes, and for some <m>k</m>, we have  <m>n>km</m>, then at least one box contains <m>k+1</m> or more objects.</p></statement></theorem>
+
+  <example xml:id="E_genpigeon"><title>Generalized Pigeonhole</title>
+    <p>Suppose you have 23 books that are placed in 4 boxes.</p>
+    <p>Must at least one box contain at least one book?</p>
+      <answer>Yes</answer>
+      <p>Must at least one box contain at least two books?</p>
+      <answer>Yes</answer>
+
+      <p>Must at least one box contain at least six books?</p>
+      <answer>Yes</answer>
+
+      <p>Must at least one box contain at least seven books?</p>
+      <answer>No</answer>
+
+      <p>What is the most books that can be in a box?</p>
+      <answer>23</answer>
+
+      <p>What is the fewest books that can be in a box?</p>
+      <answer>0</answer>
+  </example>
+
+  <activity><statement><p>If you have 8 books and want to place them in 3 boxes, must at least one box have 4 books? Must at least one box have 3 books? </p></statement></activity>
+
+  <activity><statement><p>In a group of 2000 people, must 5 have the same birthday?</p></statement></activity>
+
+
+  <theorem xml:id="T_ontooneiffonto"><statement><p>Let <m>X, Y</m> be finite sets with the same number of elements. Suppose <m>f</m> is a function from <m>X</m> to <m>Y</m>. Then <m>f</m> is one-to-one if and only if <m>f</m> is onto.</p></statement></theorem>
+
+  <p>The Pigeonhole Principle can be used to prove the theorem, but it is more technical than we need. If you try a few examples of functions from a set of <m>n</m> elements to another set of <m>n</m> elements, you can probably convince yourself that a one-to-one function must be onto and vice versa.</p>
+
+  
+
+
+    <reading-questions>
+      <title>Check Your Understanding</title>
+    
+      <exercise><statement><p>What is the fewest number of digits you need to randomly select from <m>A=\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}</m> to guarantee you have either two even or two odd numbers?</p></statement>
+      <answer>3</answer></exercise>
+
+      <exercise><statement><p>What is the fewest number of digits you need to randomly select from <m>A=\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}</m> to guarantee you have two even numbers?</p></statement>
+      <answer>7</answer></exercise>
+
+      <exercise><statement><p>What is the fewest number of digits you need to randomly select from <m>A=\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}</m> to guarantee you have a sum of 9?</p></statement>
+      <answer>6</answer></exercise>
+
+      <exercise><statement><p>What is the fewest number of digits you need to randomly select from <m>A=\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}</m> to guarantee you have two with the same remainder when divided by 3?</p></statement>
+      <answer>4</answer></exercise>
+
+      <exercise><statement><p>If you randomly select 4 digits from <m>A=\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}</m> are you guaranteed to have two with remainder 0 when divided by 3?</p></statement>
+      <answer>No</answer></exercise>
+
+      
+    </reading-questions>
+    <exercises>
+      <exercise><statement>
+        <p>Consider a standard deck of 52 cards.</p>
+        <ol marker="a">
+    <li>
+      <p>
+    If 13 cards are selected from he deck, must at least 2 be of the same denomination?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    If 20 cards are selected from the deck, must at least 2 be of the same denomination?
+  </p>
+    </li>
+    <li>
+      <p>
+    How many cards must you pick from the deck to be sure of getting at least 1 red card?
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    A small town has only 500 residents. Must there be 2 residents who have the same birthday?
+  </p>
+      </statement></exercise>
+      <exercise><statement><p>
+    Given any set of four integers, must there be at least two that have the same remainder when divided by 3? Why?
+  </p></statement></exercise>
+      <exercise><statement>
+        <p>
+    Given any set of three integers, must there be at least two that have the same remainder when divided by 3? Why?
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>S=\{3, 4, 5, 6, 7, 8, 9, 10, 11, 12\}</m>. If six integers are selected from <m>S</m>, must at least one pair have a sum of 15? Why?
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    If <m>n+1</m> integers are chosen from the set <m>\{1, 2, 3,\ldots 2n\}</m>, where <m>n</m> is a positive integer, must at least one of them be even? Why?
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Suppose six pairs of similar-looking boots are thrown together in a pile. How many individual boots must you pick to be sure of getting a matched pair? Why?
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    How many integers from 1 to 100 must you choose in order to be sure to get at least one that is divisible by 5?
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    How many integers must you pick in order to be sure that at least two of them have the same remainder when divided by 15?
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    In a group of 30 people, must at least 3 have been born in the same month? Why?
+  </p>
+      </statement></exercise>
+    </exercises>
+
+</section>

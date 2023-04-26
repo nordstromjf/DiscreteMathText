@@ -1,0 +1,215 @@
+<section xml:id="probability9-1">
+  <title>Probability</title><idx>probability</idx>
+
+  <p>Let <m>S</m> be a set of possible outcomes, called a <term>sample space</term>. Let <m>E</m> be a subset of <m>S</m> with some property. We call <m>E</m> an <term>event</term>.</p>
+
+  <p>The <term>probability</term> of event <m>E</m>, <m>P(E)</m>, is the number of outcomes in <m>E</m> divided by the total number of outcomes in <m>S</m>.</p>
+
+  <p>Let <m>N(E)</m> be the number of elements in <m>E</m>. Similarly, <m>N(S)</m>, is the number of outcomes in <m>S</m>.</p>
+
+  <p>In notation, <m>P(E)=\frac{N(E)}{N(S)}</m>.</p>
+
+  <example xml:id="E_probcards"><title>Finding Probability of an Event</title>
+    <p>A standard deck of playing cards has 52 cards. Each card has a suit and a value. The deck has four suits: hearts, diamonds, spades, clubs. Each suit has 13 values: Ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, King. The spades and clubs are called <q>black</q> cards, the hearts and diamonds are called <q>red</q> cards.</p>
+
+    <p>Find the probability you randomly choose a club from the deck.</p>
+    <p>Note, <m>E</m> is the set of clubs, <m>S</m> is the set of cards.</p>
+    <answer><m>P(E)=\frac{13}{52}=\frac{1}{4}</m></answer>
+
+    <p>Find the probability you randomly choose a red card from the deck.</p>
+    <p>Note, <m>E</m> is the set of hearts and diamonds, <m>S</m> is the set of cards.</p>
+    <answer><m>P(E)=\frac{26}{52}=\frac{1}{2}</m></answer>
+
+    <p>Find the probability you randomly choose a 2 from the deck.</p>
+    <p>Note, <m>E</m> is the set of 2's, <m>S</m> is the set of cards.</p>
+    <answer><m>P(E)=\frac{4}{52}=\frac{1}{13}</m></answer>
+</example>
+
+<activity><introduction><p>Suppose you toss a fair coin two times.</p></introduction>
+<task><p>List all the possible outcomes.</p></task>
+<task><p>What is the probability that you get exactly 2 heads?</p></task>
+<task><p>What is the probability that you get exactly 1 head?</p></task></activity>
+
+<p>In order to calculate a probability, we need to be able to count <term>equally-likely</term> events. Just because there are, say, 3 outcomes, that doesn't mean all the outcomes are equally-likely. For example, the Linfied football team could win, lose, or tie a game. Given the team's winning streak, the three outcomes are not equally-likely. They have a much higher probability of winning than just 1/3.</p>
+
+<p>Thus, the focus for the rest of the chapter will be on counting events. Once we can count outcomes, it is straight-forward to find the probability.</p>
+
+<p>Before moving on, though, we will state a few useful facts about probabilities.</p>
+<p>
+  <ul>
+    <li><m>P(E)</m> is always a number between 0 and 1. The probability can be 0.5. It cannot be 50%</li>
+    <li><m>P(E)=0</m> means the event is not possible.</li>
+    <li><m>P(E)=1</m> means the event always happens.</li>
+  </ul>
+</p>
+
+
+
+    <reading-questions>
+      <title>Check Your Understanding</title>
+      
+
+      <exercise><statement><p>In a standard deck of cards, find the probability of randomly drawing an Ace.</p></statement>
+      <answer><m>\frac{4}{52}</m></answer></exercise>
+
+       <exercise><statement><p>In a standard deck of cards, find the probability of randomly drawing a face card (Jack, Queen, King).</p></statement>
+      <answer><m>\frac{12}{52}</m></answer></exercise>
+
+       <exercise><statement><p>In a standard deck of cards, find the probability of randomly drawing an even numbered card.</p></statement>
+      <answer><m>\frac{20}{52}</m></answer></exercise>
+
+       <exercise><statement><p>An urn contains 3 red balls, 2 green balls, 4 multicolored balls. Find the probability of drawing a green ball.</p></statement>
+      <answer><m>\frac{2}{9}</m></answer></exercise>
+
+      <exercise><statement><p>An urn contains 3 red balls, 2 green balls, 4 multicolored balls. Find the probability of drawing a solid colored ball.</p></statement>
+      <answer><m>\frac{5}{9}</m></answer></exercise>
+
+    </reading-questions>
+
+     <exercises>
+      <exercise><statement><p>
+    Assume the sample space is a standard deck of 52 cards. Suppose you choose a random card from the deck.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    List all the possible outcomes of the card being red and not a face card.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Calculate the probability of the event in (a).
+  </p>
+    </li>
+
+  </ol></statement></exercise>
+      <exercise><statement>
+        <p>
+    Assume the sample space is a standard deck of 52 cards. Suppose you choose a random card from the deck.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    List all the possible outcomes of the card being black and having an even number on it.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Calculate the probability of the event in (a).
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Assume the sample space is the possible rolls of a pair of dice, one blue die and one red die.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    List all the possible outcomes where the sum of the numbers showing face up is 8.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Calculate the probability of the event in (a).
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Assume the sample space is the possible rolls of a pair of dice, one blue die and one red die.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    List all the possible outcomes where the sum of the numbers showing face up is at most 6.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Calculate the probability of the event in (a).
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Suppose a coin is tossed four times and the side showing face up on each toss is noted. Suppose also that heads and tails are equally-likely for the coin.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    List the 16 elements in the sample space as sequences of heads and tails.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    List the set of outcomes and the probability for the event of exactly one toss resulting in a head.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    List the set of outcomes and the probability for the event that at least two tosses result in a head.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    List the set of outcomes and the probability for the event that no toss results in a head.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Suppose that on a true/false exam you have no idea about the answers to three questions. You choose your answers randomly and therefore have a 50-50 chance of being correct on any one question. For example, let <m>CCW</m> indicate that you were correct on the first two questions but wrong on the third.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    List all the elements of the sample space as the possible sequences of <m>C</m> and <m>W</m> for the three questions.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    List the set of outcomes and the probability for the event that exactly one answer is correct.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    List the set of outcomes and the probability for the event that at least two answers are correct.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    List the set of outcomes and the probability for the event that no answers are correct.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+
+    </exercises>
+
+</section>

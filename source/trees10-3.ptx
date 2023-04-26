@@ -1,0 +1,395 @@
+<section xml:id="trees10-3">
+  <title>Trees</title><idx>tree</idx><idx><h>graph</h><h>tree</h></idx>
+
+  <p>In this section we look at a special type of graph called a tree. Trees are useful in many applications, such as probability trees or decision trees.</p>
+
+  
+  <definition xml:id="D_circuitfree"><statement><p>A graph is <term>circuit-free</term><idx>circuit-free graph</idx><idx><h>graph</h><h>circuit-free</h></idx> if it has no nontrivial circuits.</p></statement></definition>
+
+  <definition xml:id="D_tree"><statement><p>A graph is a <term>tree</term><idx>tree</idx> if it is connected and circuit-free.</p></statement></definition>
+
+  <p>The <term>trivial tree</term> is just a single vertex. While the <term>empty tree</term> has no vertices (and, hence, no edges).</p>
+
+  <definition xml:id="D_forest"><statement><p>A graph is a <term>forest</term><idx>forest</idx> if it is circuit-free. We can think of a forest as a collection of trees.</p></statement></definition>
+
+<example xml:id="E_trees"><title>Trees and Not Trees</title>
+  <!--images of trees/not trees-->
+  <figure xml:id="F_trees">
+  <caption>Examples of trees</caption>
+  <image width="90%" xml:id="treegraphs">
+    <latex-image>
+\begin{tikzpicture}
+%examples of trees
+%tree
+\node[main node](1){};
+\node[main node](2)[above right=1.0cm of 1]{};
+\node[main node](3)[below right=1.0cm of 1]{};
+\node[main node](4)[below=1.0cm of 1]{};
+\node[main node](5)[left=1.0cm of 1]{};
+\node[main node](6)[above right=0.5cm of 2]{};
+\node[main node](7)[below right=0.5cm of 2]{};
+\node[main node](8)[above right=0.5cm of 3]{};
+\node[main node](9)[below right=0.5cm of 3]{};
+\node[main node](10)[below right=0.5cm of 4]{};
+\node[main node](11)[below left=0.5cm of 4]{};
+\node[main node](12)[above left=0.5cm of 5]{};
+\node[main node](13)[below left=0.5cm of 5]{};
+
+\path[draw, thick](1) edge node{} (2);
+\path[draw, thick](1) edge node{} (3);
+\path[draw, thick](1) edge node{} (4);
+\path[draw, thick](1) edge node{} (5);
+\path[draw, thick](2) edge node{} (6);
+\path[draw, thick](2) edge node{} (7);
+\path[draw, thick](3) edge node{} (8);
+\path[draw, thick](3) edge node{} (9);
+\path[draw, thick](4) edge node{} (10);
+\path[draw, thick](4) edge node{} (11);
+\path[draw, thick](5) edge node{} (12);
+\path[draw, thick](5) edge node{} (13);
+
+%path
+\node[main node](14)[right=2.50cm of 1]{};
+\node[main node](15)[right=1.0cm of 14]{};
+\node[main node](16)[right=1.0cm of 15]{};
+\node[main node](17)[right=1.0cm of 16]{};
+
+
+\path[draw, thick](14) edge node{} (15);
+\path[draw, thick](15) edge node{} (16);
+\path[draw, thick](16) edge node{} (17);
+
+%trivial tree
+\node[main node](18)[right=2.0cm of 17]{};
+\end{tikzpicture}
+
+
+</latex-image></image>
+</figure>
+
+<figure xml:id="F_nottrees">
+  <caption>Examples of graphs that are not trees</caption>
+  <image width="90%" xml:id="nottreegraphs">
+    <latex-image>
+\begin{tikzpicture}
+\tikzset{every loop/.style={min distance=15mm,looseness=80}}
+%examples of not-trees
+%tree
+\node[main node](1){};
+\node[main node](2)[above right=1.0cm of 1]{};
+\node[main node](3)[below right=1.0cm of 1]{};
+\node[main node](4)[below=1.0cm of 1]{};
+\node[main node](5)[left=1.0cm of 1]{};
+\node[main node](6)[above right=0.5cm of 2]{};
+\node[main node](7)[below right=0.5cm of 2]{};
+\node[main node](8)[above right=0.5cm of 3]{};
+\node[main node](9)[below right=0.5cm of 3]{};
+\node[main node](10)[below right=0.5cm of 4]{};
+\node[main node](11)[below left=0.5cm of 4]{};
+\node[main node](12)[above left=0.5cm of 5]{};
+\node[main node](13)[below left=0.5cm of 5]{};
+
+\path[draw, thick](1) edge node{} (2);
+\path[draw, thick](1) edge node{} (3);
+\path[draw, thick](1) edge node{} (4);
+\path[draw, thick](1) edge node{} (5);
+\path[draw, thick](2) edge node{} (6);
+\path[draw, thick](2) edge node{} (7);
+\path[draw, thick](3) edge node{} (8);
+\path[draw, thick](3) edge node{} (9);
+\path[draw, thick](4) edge node{} (10);
+\path[draw, thick](4) edge node{} (11);
+\path[draw, thick](5) edge node{} (12);
+\path[draw, thick](5) edge node{} (13);
+\path[draw, thick](4) edge node{} (5);
+
+%path
+\node[main node](14)[right=2.50cm of 1]{};
+\node[main node](15)[right=1.0cm of 14]{};
+\node[main node](16)[right=1.0cm of 15]{};
+\node[main node](17)[right=1.0cm of 16]{};
+
+
+\path[draw, thick](14) edge node{} (15);
+\path[draw, thick](15) edge [bend right] node{} (16);
+\path[draw, thick](15) edge [bend left] node{} (16);
+\path[draw, thick](16) edge node{} (17);
+
+%loop
+\node[main node](18)[right=2.0cm of 17]{};
+\path[draw, thick](18) edge [loop above]  node{} (18);
+\end{tikzpicture}
+
+
+</latex-image></image>
+</figure>
+</example>
+
+  <definition xml:id="D_leaf"><statement><p>A <term>terminal vertex</term><idx>terminal vertex</idx> or <term>leaf</term><idx>leaf</idx> is a vertex of degree 1. Vertices of degree greater than 1 are <term>internal</term><idx>internal vertex</idx> or <term>branch</term><idx>branch vertex</idx><idx><h>vertex</h><h>branch</h></idx> vertices.</p></statement></definition>
+
+  <p>We now define some special types of trees, and related terms.</p>
+    
+      <p>A <term>rooted tree</term> has one vertex, <m>r</m>, designated as the <term>root</term><idx>rooted tree</idx><idx><h>tree</h><h>rooted</h></idx>. 
+      <ul>
+      <li>The <term>level</term><idx><h>level</h><h>of vertex</h></idx><idx><h>vertex</h><h>level</h></idx> of a vertex, <m>v</m>, is the number of edges from <m>v</m> to the root, <m>r</m>. </li>
+      <li>The <term>height</term><idx><h>height</h><h>of a tree</h></idx><idx><h>tree</h><h>height</h></idx> of a tree is the maximum level of the tree.</li>
+      <li>Let <m>v</m> be a vertex in a rooted tree. Then the <term>children</term><idx><h>child</h><h>of a vertex</h></idx><idx><h>vertex</h><h>child</h></idx> of <m>v</m> are the vertices adjacent to <m>v</m>, one level below <m>v</m> (think of the root at the top of the tree, with each successive level below the previous one). </li>
+      
+      <li>The <term>parent</term><idx><h>parent</h><h>of a vertex</h></idx><idx><h>vertex</h><h>parent</h></idx> of a vertex <m>v</m> is the adjacent vertex one level up from <m>v</m>.</li>
+      <li>The <term>siblings</term><idx><h>sibling</h><h>of a vertex</h></idx><idx><h>vertex</h><h>sibling</h></idx> of a vertex <m>v</m> are the vertices with the same parent as <m>v</m>.</li>
+      <li>The <term>ancestors</term><idx><h>ancestor</h><h>of a vertex</h></idx><idx><h>vertex</h><h>ancestor</h></idx> of a vertex <m>v</m> are the vertices on the path from <m>v</m> to <m>r</m>, not including <m>v</m>.</li>
+      <li>The <term>descendants</term><idx><h>descendant</h><h>of a vertex</h></idx><idx><h>vertex</h><h>descendant</h></idx> of a vertex <m>v</m> are the vertices on the subtree taking <m>v</m> as the root, not including <m>v</m>.</li>
+    </ul></p>
+
+    <example xml:id="E_rootedtree"><title>Rooted Tree</title>
+  <!--images of trees/not trees-->
+  <figure xml:id="F_rootedtree">
+  <caption>A rooted tree</caption>
+  <image width="40%" xml:id="rootedtreegraph">
+    <latex-image>
+\begin{tikzpicture}
+%rooted tree
+\node[main node](1)[label=above:$r$]{};
+\node[main node](2)[below left=1.5cm of 1]{};
+\node[main node](3)[below=1.25cm of 1]{};
+\node[main node](4)[label=right:$p$][below right=1.5cm of 1]{};
+\node[main node](5)[below left=1.3cm and 0.6cm of 2]{};
+\node[main node](6)[below right=1.3cm  and 0.6cm of 2]{};
+\node[main node](7)[below=1.0cm of 5]{};
+\node[main node](8)[label=right:$v$][below left=1.3cm and 0.6cm of 4]{};
+\node[main node](9)[label=right:$s$][below right=1.3cm and 0.6cm of 4]{};
+\node[main node](10)[label=left:$c_1$][below left=1.0cm and 0.3cm of 8]{};
+\node[main node](11)[label=left:$c_2$][below right=1.0cm and 0.3cm of 8]{};
+\node[main node](12)[below left=1.0cm and 0.3cm of 9]{};
+\node[main node](13)[below right=1.0cm and 0.3cm of 9]{};
+\node[main node](14)[label=right:$d$][below=0.7cm of 10]{};
+
+
+\path[draw, thick](1) edge node {}(2);
+\path[draw, thick](1) edge node {}(3);
+\path[draw, thick](1) edge node {}(4);
+\path[draw, thick](2) edge node {}(5);
+\path[draw, thick](2) edge node {}(6);
+\path[draw, thick](5) edge node {}(7);
+\path[draw, thick](4) edge node {}(8);
+\path[draw, thick](4) edge node {}(9);
+\path[draw, thick](8) edge node {}(10);
+\path[draw, thick](8) edge node {}(11);
+\path[draw, thick](9) edge node {}(12);
+\path[draw, thick](9) edge node {}(13);
+\path[draw, thick](10) edge node {}(14);
+
+
+\end{tikzpicture}
+
+
+</latex-image></image>
+</figure>
+<p>In the example, let <m>r</m> be the root of the tree.</p>
+<p>Then <m>v</m> is at level 2, <m>d</m> is at level 4, and <m>r</m> is at level 0.</p>
+<p>The height of the tree is 4.</p>
+<p>The children of <m>v</m> are <m>c_1</m> and <m>c_2</m>.</p>
+<p>The only sibling of <m>v</m> is <m>s</m>; the parent of <m>v</m> is <m>p</m>.</p>
+<p>The ancestors of <m>v</m> are <m>p</m> and <m>r</m>. The descendants of <m>v</m> are <m>c_1, c_2, d</m>.</p>
+
+</example>
+    <!--figure of rooted tree-->
+
+    <p>A <term>binary tree</term><idx>binary tree</idx> is a rooted tree in which each vertex has at most two children.</p>
+    <p>A <term>full binary tree</term><idx><h>binary tree</h><h>full</h></idx> is a rooted tree in which each branch vertex has exactly two children and all leaves are at the same height.</p>
+
+    <example xml:id="E_fullbinarytree"><title>Full Binary Tree</title>
+  <!--images of trees/not trees-->
+  <figure xml:id="F_fullbintree">
+  <caption>A full binary tree of height 3</caption>
+  <image width="40%" xml:id="fullbintreegraph">
+    <latex-image>
+\begin{tikzpicture}
+%full binary tree height 3
+\node[main node](1){};
+\node[main node](2)[below left=1.3cm and 1.1cm of 1]{};
+\node[main node](3)[below right=1.3cm and1.1cm of 1]{};
+\node[main node](4)[below left=1.3cm and 0.6cm of 2]{};
+\node[main node](5)[below right=1.3cm  and 0.5cm of 2]{};
+\node[main node](6)[below left=1.3cm and 0.5cm of 3]{};
+\node[main node](7)[below right=1.3cm and 0.5cm of 3]{};
+\node[main node](8)[below left=1.0cm and 0.3cm of 4]{};
+\node[main node](9)[below right=1.0cm and 0.3cm of 4]{};
+\node[main node](10)[below left=1.0cm and 0.3cm of 5]{};
+\node[main node](11)[below right=1.0cm and 0.3cm of 5]{};
+\node[main node](12)[below left=1.0cm and 0.3cm of 6]{};
+\node[main node](13)[below right=1.0cm and 0.3cm of 6]{};
+\node[main node](14)[below left=1.0cm and 0.3cm of 7]{};
+\node[main node](15)[below right=1.0cm and 0.3cm of 7]{};
+
+
+
+\path[draw, thick](1) edge node {}(2);
+\path[draw, thick](1) edge node {}(3);
+\path[draw, thick](2) edge node {}(4);
+\path[draw, thick](2) edge node {}(5);
+\path[draw, thick](3) edge node {}(6);
+\path[draw, thick](3) edge node {}(7);
+\path[draw, thick](4) edge node {}(8);
+\path[draw, thick](4) edge node {}(9);
+\path[draw, thick](5) edge node {}(10);
+\path[draw, thick](5) edge node {}(11);
+\path[draw, thick](6) edge node {}(12);
+\path[draw, thick](6) edge node {}(13);
+\path[draw, thick](7) edge node {}(14);
+\path[draw, thick](7) edge node {}(15);
+
+
+
+\end{tikzpicture}
+
+
+
+</latex-image></image>
+</figure>
+
+
+
+
+</example>
+<activity><statement><p>Draw the full binary tree of height 4. How many leaves does it have?</p></statement></activity>
+
+<activity><introduction><p>In this activity we will explore the relationship between the number of edges and the number of vertices in a tree.</p></introduction>
+<task><p>Draw a forest with 10 vertices that is <em>not</em> a tree.</p></task>
+<task><p>Draw three different trees, each with 10 vertices.</p></task>
+<task><p>How many edges does each graph in (b) have? Check with other students on the class. How many edges do their graphs have?</p></task>
+<task><p>Draw a tree with 5 vertices and one with 12 vertices. How many edges do they have?</p></task>
+<task><p>Can you draw a tree with 5 vertices with 7 edges? What about 5 edges? What is the most number of edges you can have? What is the fewest?</p></task>
+<task><p>Form a conjecture about how many edges a tree with 10 vertices has. What about a tree with 5 vertices?</p></task></activity>
+
+    <!--full binary tree of heighth 3-->
+   <!-- <p>Try drawing several examples of trees with 5 vertices. How many edges do you have? Can you draw a tree with 5 vertices with 7 edges? What about 5 edges? What is the most number of edges you can have? What is the fewest?</p>-->
+
+  <p>After experimenting you should be able to conjecture that a tree with 10 vertices has 9 edges, and a tree with 5 vertices must have 4 edges. This relationship is true in general.</p>
+
+    <theorem xml:id="T_numberofedgesinatree"><statement><p>For any positive integer, <m>n</m>, any tree with <m>n</m> vertices has <m>n-1</m> edges.</p></statement></theorem>
+
+    <activity><introduction><p>In this activity we explore graphs with <m>n</m> edges and <m>n-1</m> edges more generally.</p></introduction>
+    <task><p>Draw a graph with 7 vertices and 6 edges that is <em>not</em> a tree. </p></task>
+    <task><p>Draw a connected graph with 7 vertices and 6 edges that is <em>not</em> a tree. </p></task>
+    <task><p>Draw a graph with 7 vertices and 6 edges that is not connected and is <em>not</em> a tree.</p></task>
+    <task><p>Do you think any of the tasks in (a), (b), and (c) are impossible?</p></task>
+    <task><p>Form a conjecture about graphs with <m>n</m> vertices and <m>n-1</m> edges.</p></task></activity>
+
+    <!--<p>Now try drawing several graphs with 5 vertices and 4 edges. Can you draw one that is not a tree? Can you draw a connected graph with 5 vertices and 4 edges that is not tree? Can you draw a graph with 5 vertices and 4 edges that is not connected and is not a tree?</p>-->
+
+    <p>We should be able to see that it is not possible to draw a connected graph with 7 vertices and 6 edges that is not a tree. This leads to the next theorem.</p>
+
+    <theorem xml:id="T_connectedtree"><statement><p>For any positive integer <m>n</m>, if a graph, <m>G</m>, is connected with <m>n</m> vertices and <m>n-1</m> edges, then <m>G</m> is a tree.</p></statement></theorem>
+  
+  
+    
+  
+
+    <reading-questions>
+      <title>Check Your Understanding</title>
+
+
+      <exercise><statement><p>For which values of <m>n</m> is the complete graph <m>K_n</m> a tree?</p></statement>
+      <answer>Just <m>n=1, 2</m>.</answer></exercise>
+
+      <exercise><statement><p>True or false: In a rooted tree, a vertex can have more than one parent.</p></statement>
+      <answer>False.</answer></exercise>
+
+      <exercise><statement><p>True or false: In a rooted tree, a vertex can have 0 parents.</p></statement>
+      <answer>True, the root has 0 parents.</answer></exercise>
+
+      <exercise><statement><p>In the rooted tree in <xref ref="F_rootedtree"/>, how many children does <m>r</m> have?</p></statement>
+      <answer>3</answer></exercise>
+
+      <exercise><statement><p>In the rooted tree in <xref ref="F_rootedtree"/>, how many descendants does <m>p</m> have?</p></statement>
+      <answer>7</answer></exercise>
+
+      <exercise><statement><p>In the rooted tree in <xref ref="F_rootedtree"/>, what is the level of <m>p</m>?</p></statement>
+      <answer>1</answer></exercise>
+
+      <exercise><statement><p>How many leaves does the full binary tree of height 4 have?</p></statement>
+      <answer>16</answer></exercise>
+
+      <exercise><statement><p>True or false: There exists a tree with 7 vertices and 9 edges.</p></statement>
+      <answer>False.</answer></exercise>
+
+      <exercise><statement><p>True or false: There exists a tree with 7 vertices and 5 edges.</p></statement>
+      <answer>False.</answer></exercise>
+      
+      <exercise><statement><p>True or false: There exists a forest with 7 vertices and 5 edges.</p></statement>
+      <answer>True.</answer></exercise>
+
+      <exercise><statement><p>True or false: If a graph has 8 vertices and 7 edges it must be a tree.</p></statement>
+      <answer>False.</answer></exercise>
+
+      <exercise><statement><p>True or false: If a connected graph has 8 vertices and 7 edges it must be a tree.</p></statement>
+      <answer>True.</answer></exercise>
+
+      <exercise><statement><p>True or false: There exists a tree with 8 vertices and 2 leaves.</p></statement>
+      <answer>True.</answer></exercise>
+
+      <exercise><statement><p>True or false: There exists a tree with 8 vertices and 7 leaves.</p></statement>
+      <answer>True.</answer></exercise>
+
+
+    </reading-questions>
+
+    <exercises>
+      <exercise><statement><p>
+    What is the total degree of a tree with <m>n</m> vertices? Why?
+  </p></statement></exercise>
+      <exercise><statement><p> Consider the following lemma.</p>
+    <lemma><statement><p> Any tree with more than one vertex has at least one vertex of degree 1.
+  </p></statement></lemma>
+
+  <p>
+    This is a useful lemma for proving statements about trees. However, if the tree has infinitely many vertices and edges, then the lemma is false. Give an example of an infinite tree that has no vertex of degree 1.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    For each of the following, either draw a graph with the given properties or explain why no such graph exists.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Tree, nine vertices, nine edges.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Graph, connected, nine vertices, nine edges.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Tree, five vertices, total degree 8
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Graph, six vertices, five edges, not a tree.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Graph, connected, ten vertices, nine edges, has a circuit.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Suppose a connected graph has twelve vertices and 11 edges. Must this graph have a vertex of degree 1? Explain your answer.
+  </p>
+      </statement></exercise>
+    </exercises>
+
+</section>

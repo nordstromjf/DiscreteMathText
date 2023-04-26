@@ -1,0 +1,220 @@
+
+<section xml:id="lang_sets1-2">
+  <title>Introduction to Sets</title>
+
+  <p>Sets <idx>set</idx> are collections of objects. They may be collections of mathematical objects, such as numbers or functions. They may be collections of any other type of object such as students in a class or times of day. We can even have sets of sets! </p>
+
+  <p>We will usually use capital letters for sets, such as <m>S</m> or <m>A</m>. If we want to talk about elements in a set <m>S</m>, we use the notation <m>x\in S</m><notation><usage><m>x\in S</m></usage><description><m>x</m> is an element of <m>S</m></description></notation>. We read this notatation as <q><m>x</m> is in <m>S</m></q> or <q><m>x</m> is an element of <m>S</m>.</q> If <m>x</m> is <em>not</em> in <m>S</m>, then we use the notation <m>x\notin S</m><notation><usage><m>x\notin S</m></usage><description><m>x</m> is not an element of <m>S</m></description></notation>.</p>
+
+  <p>If we want to list the specific elements of a set, we use curly brackets, <m>\{\}</m>, around the elements of the set. We can also do this with a description of the elements in the set.</p>
+  <example xml:id="E_roster">
+    <title>Set roster notation<idx>set roster notation</idx></title>
+    <p><m>S=\{1, 2, 3, 4, 5\}</m>. This is the set whose elements are 1, 2, 3, 4, 5.</p>
+    <p><m>A=\{x\in S : x \text{ is odd}\}</m>. This describes the odd numbers in <m>S</m>, so 1, 3, 5.</p>
+    <p><m>A=\{x\in \text{reals} : 1\leq x\leq 5\}</m>. This describes the real numbers between 1 and 5 (which there are too many to list).</p>
+  </example>
+
+  <p>In general, if we use <m>P(x)</m> to describe a property of <m>x</m>, we use the notation
+  <me>\{x\in S : P(x)\}</me>
+  and read the statement as <q><m>x</m> in <m>S</m> such that <m>x</m> has property <m>P</m>.</q><notation><usage><m>\{x\in S : P(x)\}</m></usage><description><m>x</m> in <m>S</m> such that <m>x</m> has property <m>P</m></description></notation></p>
+
+  <activity><introduction><p>Let <m>S=\{1, 2, 3, 4, 5\}</m>. List the elements in each of the following sets.</p></introduction>
+  <task><p><m>\{x\in S : 2 &lt;x\leq 5\}</m></p></task>
+  <task><p><m>\{x\in S: x \mbox{ is prime}\}</m></p></task>
+  <task><p><m>\{1/x: x \in S\}</m></p></task>
+</activity>
+
+<definition xml:id="D_sset"><statement>
+<p>A <term>subset</term><idx>subset</idx>, <m>A</m>, of a set <m>S</m> is a set of elements that are also in <m>S</m>. We use the notation <m>A\subseteq S</m>.<notation><usage><m>A\subseteq S</m></usage><description><m>A</m> is a subset of <m>S</m></description></notation></p>
+</statement></definition>
+
+<p>If <m>A</m> is not a subset of <m>S</m>, then we use the notation <m>A\nsubseteq S</m><notation><usage><m>A\nsubseteq S</m></usage><description><m>A</m> is not a subset of <m>S</m></description></notation>. Note, some books use <m>A\subset S</m> as the notation for subset.</p>
+
+<example xml:id="E_subsetnotation">
+  <title>Subset Notation</title>
+  <p>We can see that <m>\{1, 3\}\subseteq \{1, 2, 3, 4, 5\}</m> since every element of <m>\{1, 3\}</m> is also in <m>\{1, 2, 3, 4, 5\}</m>. However, <m>\{0, 1, 2, 3\}\nsubseteq \{1, 2, 3, 4, 5\}</m> since <m>0\notin \{1, 2, 3, 4, 5\}</m>.</p>
+</example>
+
+<p>It is important to understand the difference between subset, <m>\subseteq</m>, and element, <m>\in</m>. For example, if <m>S=\{1, 2, 3, 4, 5\}</m>, then <m>1\in S</m>, but <m>1\nsubseteq S</m>. This is because 1 is an element, not a set. Similarly, <m>\{1\}\subseteq S</m>, but <m>\{1\}\notin S</m>. This is because <m>\{1\}</m> is a set, not an element. In general, when working with sets, you should identify the elements of the set. Then sets of those elements are subsets. The curly brackets are our way of saying <q>set.</q></p>
+
+<p>The distinction between elements and sets really gets fuzzy when we want to think about sets of sets.</p>
+
+<example>
+  <title>Example of a set with elements that are sets<idx>sets of sets</idx></title>
+  <p>Let <m>S=\{1, \{2, 3, 4\}, \{3\}, \{5\}, 6, 7\}</m></p>
+  <p>The six elements are <m>1, \{2, 3, 4\}, \{3\}, \{5\}, 6, 7.</m> The following are examples of elements and subsets. In each of the examples, pay close attention to how the brackets are being used.
+<ul>
+  <li><m>1\in S</m></li>
+  <li><m>\{3\}\in S</m></li>
+  <li><m>\{2, 3, 4\}\in S</m></li>
+  <li><m>\{\{3\}\}\subseteq S</m></li>
+  <li><m>\{1,\{3\}\}\subseteq S</m></li>
+</ul>
+  </p>
+
+  <p>It will also be useful to look at examples that are not elements or subsets.</p>
+<ul>
+  <li><m>3\notin S</m>, 3 is not one of the six elements.</li>
+  <li><m>\{6\}\notin S</m>, <m>\{6\}</m> is not one of the six elements.</li>
+  <li><m>\{4\}\notin S</m>, <m>\{4\}</m> is not one of the six elements.</li>
+  <li><m>1\nsubseteq S</m>, 1 is not a set.</li>
+  <li><m>\{4\}\nsubseteq S</m>, since 4 is not an element, <m>\{4\}</m> is not a subset.</li>
+  <li><m>\{\{6\}\}\nsubseteq S</m>,  since <m>\{6\}</m> is not an element, <m>\{\{6\}\}</m> is not a subset.</li>
+  <li><m>\{1,\{2, 3\}\}\nsubseteq S</m>, since <m>\{2, 3\}</m> is not an element, <m>\{1,\{2, 3\}\}</m> is not a subset.</li>
+</ul>
+ 
+  <p>In each of the nonexamples of elements, the object listed is not one of the six elements. In each of the nonexamples of subsets, the set is not a set of elements. </p>
+</example>
+
+<activity>
+  <introduction><p>Determine if each of the following is true or false. If it is false, what small change in notation would make it true? Make sure you are able to distinguish between <em>elements</em> of a set and <em>subsets</em> of a set.</p></introduction>
+  <task><p><m>5\in \mathbb{Q}</m></p></task>
+  <task><p><m>\{2\} \in \mathbb{Z}</m></p></task>
+  <task><p><m>\{-1, -2, -3\}\subseteq \mathbb{Z}</m></p></task>
+  <task><p><m>0\subseteq \{0, 2, 4\}</m></p></task>
+  <task><p><m>\{0\}\subseteq \{0, 2, 4\}</m></p></task>
+</activity>
+
+<activity><introduction><p>When you have a set with elements that are sets you need to be really careful about the notation. For example, let <m>S=\{1, 2, \{3, 4\}, \{5\}\}</m>. In this set, two of the <em>elements</em> are <em>sets</em>. Determine if the following are true or false for the set <m>S</m>.</p></introduction>
+<task><p><m>2\in S</m></p></task>
+<task><p><m>3\in S</m></p></task>
+<task><p><m>5\in S</m></p></task>
+<task><p><m>\{1, 2\}\subseteq S</m></p></task>
+<task><p><m>\{3, 4\}\subseteq S</m></p></task>
+<task><p><m>\{1, \{5\}\}\subseteq S</m></p></task>
+<task><p><m>\{\{3, 4\}\}\subseteq S</m></p></task>
+<hint><p>Three of the statements are false.</p></hint>
+</activity>
+
+<definition xml:id="D_propersset">
+<statement><p>If <m>A\subseteq B</m> and <m>A\neq B</m>, then we say <m>A</m> is a <term>proper</term> <idx>proper subset</idx><idx><h>subset</h><h>proper</h></idx> subset of <m>B</m>.</p></statement></definition>
+
+<p>There are some special subsets that we will use throughout the course and, in fact, the rest of your mathematical career.</p>
+
+<p><ul>
+  <title>Notation for special sets of numbers</title>
+  <li><m>\mathbb{R}</m><notation><usage><m>\mathbb{R}</m></usage><description>the set of real numbers</description></notation>, the set of real numbers<idx>real number</idx>. These are all the numbers your are familiar with from Calculus: whole numbers, positives, negatives, fractions, decimals, square roots, <m>e</m>, <m>\pi</m>, etc.</li>
+  <li><m>\mathbb{Z}</m><notation><usage><m>\mathbb{Z}</m></usage><description>the set of integers</description></notation>, the set integers<idx>integer</idx>. These are all the whole numbers: positive, negative, and zero.</li>
+  <li><m>\mathbb{Q}</m><notation><usage><m>\mathbb{Q}</m></usage><description>the set of rational numbers</description></notation>, the set rational numbers<idx>rational number</idx>. These are all the whole numbers and fractions: positive, negative, and zero. We will revisit this set in more detail later.</li>
+  <li><m>\mathbb{N}</m><notation><usage><m>\mathbb{N}</m></usage><description>the set of natural numbers</description></notation>, the set of natural numbers<idx>natural number</idx>. These are all the positive whole numbers. Some books include zero, some do not. Since this can be confusing, we will avoid this notation in this class (but you might see it in future classes). Instead, we will use one of the next two notations, which more clearly denote inclusion of zero, or not.</li>
+  <li><m>\mathbb{Z}^+</m><notation><usage><m>\mathbb{Z}^+</m></usage><description>the set of positive integers</description></notation>, the set of positive integers. These are all the positive whole numbers. This set does NOT include zero.</li>
+  <li><m>\mathbb{Z}^{nonneg}</m><notation><usage><m>\mathbb{Z}^{nonneg}</m></usage><description>the set of nonnegative integers</description></notation>, the set of nonnegative integers. These are the whole numbers that are not negative. This set DOES include zero.</li>
+  <li><m>\mathbb{R}^+</m><notation><usage><m>\mathbb{R}^+</m></usage><description>the set of positive real numbers</description></notation>, the set of positive real numbers. </li>
+  <li><m>\mathbb{R}^{nonneg}</m><notation><usage><m>\mathbb{R}^{nonneg}</m></usage><description>the set of nonnegative real numbers</description></notation>, the set of nonnegative real numbers. These are the real numbers that are not negative.</li>
+
+</ul></p>
+
+<activity><statement><p>Based on the notations above, what would be a good notation for the set of integers less than zero?</p></statement></activity>
+<activity><statement><p>Which of the following sets do NOT contain zero: <m>\mathbb{Q}, \mathbb{Z}, \mathbb{R}, \mathbb{R}^+, \mathbb{R}^{nonneg}</m>?</p></statement></activity>
+
+
+<p>We now define a new set.</p>
+
+
+
+<definition xml:id="D_prodofsets"><statement>
+<p>The <term>Cartesian product</term><idx>product of sets</idx><idx>Cartesian product</idx> of two sets <m>A</m> and <m>B</m> is the set of ordered pairs, where the first coordinate comes from set <m>A</m> and the second coordinate comes from set <m>B</m>. We use the notation
+
+<me>A\times B=\{(a, b) : a\in A, b\in B\}.</me>
+<notation><usage><m>A\times B</m></usage><description>the product of <m>A</m> and <m>B</m>; <m>\{(a, b) : a\in A, b\in B\}</m></description></notation></p>
+
+</statement></definition>
+
+<example><title>Cartesian Product of Sets</title><p>Let <m>A=\{2, 4\}, B=\{0, 1\}</m>. Then <m>A\times B=\{(2, 0), (4, 0), (2, 1), (4, 1)\}</m>.</p></example>
+
+<example><title>Cartesian Product of the Real Numbers</title><p>When plotting points in a plane, you use the Cartesian product <m>\mathbb{R}\times \mathbb{R}=\{(x, y) : x\in \mathbb{R}, y\in \mathbb{R}\}</m>. It is common to use the notation <m>\mathbb{R}^2</m> for this set of ordered pairs.</p></example>
+
+<activity>
+  <introduction><p>Let <m>A=\{1, 2, 3\}</m> and <m>B=\{4, 5\}</m>.</p></introduction>
+  <task><p>List all the elements of <m>A\times B</m>. Make sure your elements are ordered pairs.</p></task>
+  <task><p>List all the elements of <m>B\times B</m>.</p></task>
+  <task><p>Does <m>A\times B= B\times A</m>?</p></task>
+</activity>
+
+<reading-questions>
+      <title>Check Your Understanding</title>
+      <p>Let <m>A=\{2, 4, 6, 8, 10\}</m>.</p>
+      <exercise><statement><p>True or False: <m>4\in A</m>.</p></statement>
+      <answer>True</answer></exercise>
+
+      <exercise><statement><p>True or False: <m>0\notin A</m>.</p></statement>
+      <answer>True</answer></exercise>
+
+      <exercise><statement><p>True or False: <m>\{4\}\in A</m>.</p></statement>
+      <answer>False</answer></exercise>
+
+      <exercise><statement><p>True or False: <m>\{2, 4\}\in A</m>.</p></statement>
+      <answer>False</answer></exercise>
+
+       <exercise><statement><p>True or False: <m>\{2, 4\}\subseteq A</m>.</p></statement>
+      <answer>True</answer></exercise>
+
+       <exercise><statement><p>True or False: <m>\{2, 3, 4\}\subseteq A</m>.</p></statement>
+      <answer>False</answer></exercise>
+
+      <exercise><statement><p>True or False: <m>\{0, 2, 6\}\nsubseteq A</m>.</p></statement>
+      <answer>True</answer></exercise>
+
+      <exercise><statement><p>True or False: <m>\{2, 4, 6, 8, 10\}\subseteq A</m>.</p></statement>
+      <answer>True</answer></exercise>
+
+      <exercise><statement><p>True or False: <m>6\in A\times A</m>.</p></statement>
+      <answer>False</answer></exercise>
+
+      <exercise><statement><p>True or False: <m>(2, 4)\in A\times A</m>.</p></statement>
+      <answer>True</answer></exercise>
+
+      <exercise><statement><p>True or False: <m>\{2, 4\}\subseteq A\times A</m>.</p></statement>
+      <answer>False</answer></exercise>
+
+      <exercise><statement><p>True or False: <m>\{(2, 2), (4, 6), (10, 4)\}\subseteq A\times A</m>.</p></statement>
+      <answer>True</answer></exercise>
+
+    </reading-questions>
+
+    <exercises>
+      <title>Exercises</title>
+
+      <exercise><statement><p>Explain in your own words why <m>2</m> does not equal <m>\{2\}</m>.</p></statement></exercise>
+      <exercise><statement><p>How many elements are in the set <m>\{1, 2, 3, 1, 2, 1\}</m>?</p></statement></exercise>
+      <exercise><statement><p>How many elements are in the set <m>\{1, \{1\}, \{1, \{1\}\}\}</m>?</p></statement></exercise>
+      <exercise><statement><p>Use set-roster notation to list the elements in each of the following sets.</p>
+        <ol marker="a">
+          <li><p><m>S=\{n\in \mathbb{Z}: n=(-1)^k, \text{ for some integer } k\}</m></p></li>
+          <li><p><m>T=\{m\in \mathbb{Z}: m=1+(-1)^k, \text{ for some integer } k\}</m></p></li>
+          <li><p><m>U=\{r\in \mathbb{Z}: 2\leq r\leq -2\}</m></p></li>
+          <li><p><m>V=\{s\in \mathbb{Z}: s>2 \text{ or } s\leq 3\}</m></p></li>
+        </ol>
+    </statement></exercise>
+    <exercise><statement><p>Determine whether the following statements are true or false.</p>
+      <ol marker="a">
+        <li><p><m>3\in \{1, 2, 3\}</m></p></li>
+        <li><p><m>1\subseteq \{1, 2, 3\}</m></p></li>
+        <li><p><m>\{2\}\in \{1, 2, 3\}</m></p></li>
+        <li><p><m>\{3\}\in \{\{1\}, \{2\}, \{3\}\}</m></p></li>
+        <li><p><m>1\in \{1\}</m></p></li>
+        <li><p><m>\{2\}\subseteq \{\{1\}, \{2\}, \{3\}\}</m></p></li>
+        <li><p><m>\{1\}\subseteq \{1, 2, 3\}</m></p></li>
+        <li><p><m>1\in  \{\{1\}, \{2\}, \{3\}\}</m></p></li>
+        <li><p><m>\{1\}\subseteq \{1, \{2\}\}</m></p></li>
+        <li><p><m>\{1\}\subseteq \{1\}</m></p></li>
+      </ol>
+
+  </statement></exercise>
+
+  <exercise><statement><p>
+    Let <m>A=\{w, x, y, z\}</m>, <m>B=\{a, b\}</m>, <m>S=\{2, 4, 6\}</m>, <m>T=\{1, 3, 5\}</m>. Use set-roster notation to write each of the following sets. Indicate the number of elements in each set.
+  </p>
+    <ol marker="a">
+      <li><p><m>A\times B</m></p></li>
+      <li><p><m>B\times A</m></p></li>
+      <li><p><m>B\times B</m></p></li>
+      <li><p><m>S\times T</m></p></li>
+      <li><p><m>T\times S</m></p></li>
+      <li><p><m>S\times S</m></p></li>
+    </ol>
+  
+  </statement></exercise>
+    </exercises>
+
+</section>

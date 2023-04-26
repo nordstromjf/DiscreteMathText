@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <docinfo>
+    <macros>
+      \newcommand{\MyTikzmark}[2]{
+     \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
+\newcommand{\DrawVLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.3ex, #1] (#2.north) -- (#3.south);
+  \end{tikzpicture}
+}
+\newcommand{\DrawHLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.2em, #1] (#2.west) -- (#3.east);
+  \end{tikzpicture}
+}
+    </macros>
+
+    <latex-image-preamble>
+
+\usepackage{tikz}
+\usepackage{amssymb,amsmath,centernot}
+\usetikzlibrary{positioning,matrix,arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri}
+\usetikzlibrary{shapes,decorations,shadows,fadings}
+\usetikzlibrary{arrows.meta,calc,decorations.markings,math}
+\tikzset{main node/.style={circle,draw,fill=black,minimum size=.1cm,inner sep=0pt},
+            }
+
+\usepackage{pgfplots}
+
+</latex-image-preamble>
+  </docinfo>
+
+  <book xml:id="DiscreteMath">
+    <title>Discrete Mathematics</title>
+    <subtitle>An Active Approach to Mathematical Reasoning</subtitle>
+
+    <frontmatter xml:id="frontmatter">
+      <titlepage>
+        <author>
+          <personname>Jennifer Firkins Nordstrom</personname>
+          <department>Department of Mathematics and Computer Science</department>
+          <institution>
+            <line>Linfield University</line>
+            <line>McMinnville, OR</line></institution>
+          <email>jfirkins@linfield.edu</email>
+        </author>
+        <date>
+          <today />
+        </date>
+      </titlepage>
+
+      <colophon>
+
+        <!--<website>
+          <name>
+            <c>example.org</c>
+          </name>
+          <address>https://example.org</address>
+        </website>-->
+
+        <copyright>
+            <year>2023</year>
+            <holder>Jennifer Firkins Nordstrom</holder>
+            <minilicense>Creative Commons Attribution-ShareAlike 4.0 International License</minilicense>
+            <shortlicense>This work is licensed under a <url  href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</url>.</shortlicense>
+        </copyright>
+
+        <p>The images in this text were designed and created by the author using TikZ.</p>
+
+      </colophon>
+
+      <preface>
+<p>
+This text is meant to provide the basics for a Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques. </p>
+
+
+<paragraphs xml:id="Course_Goals">
+  <title>Course Goals</title>
+
+<ul>
+  <li> <p>To introduce the student to the basic discrete mathematical structures and the theory and techniques associated with these structures.</p></li>
+  <li> <p>To continue the student's growth in the use of mathematical language and the use of logic.</p></li>
+  <li> <p>To improve the student's ability to write precise, valid, mathematical arguments.</p></li>
+  <li> <p>To increase the student's confidence in working through mathematical challenges.</p></li>
+  <li> <p>To continue the growth of the student's abilities in the appreciation and use of abstract reasoning.</p></li>
+  <li> <p>To improve the student's problem-solving abilities.</p></li>
+  <li> <p>To increase the student's mathematical maturity.</p></li>
+</ul>
+</paragraphs>
+<!--<paragraphs xml:id="Format">
+  <title>Course Format</title>
+
+<p>The material is presented in a discovery format, requiring students to make conjectures frequently. Each section is structured as a class activity. Any introduction material can be read by the students, and the numbered problems or questions are to be out in class and as homework, depending on how far a particular student progresses through the section. Most sections require students to attempt to solve the problem <em>before</em> they have been provided much framework. The sections then build the necessary tools to solve the problem or understand the key ideas. Being able to compare their original solutions and ideas to the more sophisticated mathematical ones helps build their mathematical intuition and helps them to understand the power of using mathematics in situations where their intuition falls short.</p>
+</paragraphs>
+<paragraphs xml:id="Use">
+  <title>Suggestions for Use</title>
+
+<p>
+This text is primarily for use in a college-level quantitative reasoning course. It can also be used for an introductory course in game theory for the social sciences. It approaches the subject matter through an inquiry-based format.  Most of the topics can be introduced by providing the students with the activity to work through during class, followed by a discussion. Almost all of the activities are intended to work through the concepts without additional lecture or introduction. 
+Students with even a rudimentary background in algebra will find the material accessible. Any necessary mathematical background can be introduced as needed. </p>
+</paragraphs>-->
+</preface>
+
+    </frontmatter>
+
+<xi:include href="./chapter1.ptx" />
+
+<xi:include href="./chapter2.ptx" />
+
+<xi:include href="./chapter3.ptx" />
+
+<xi:include href="./chapter4.ptx" />
+
+<xi:include href="./chapter5.ptx" />
+
+<xi:include href="./chapter6.ptx" />
+
+<xi:include href="./chapter7.ptx" />
+
+
+<xi:include href="./chapter8.ptx" />
+
+<xi:include href="./chapter9.ptx" />
+
+<xi:include href="./chapter10.ptx" />
+
+<backmatter>
+  <references>
+        <title>References</title>
+
+            <biblio type="raw" xml:id="biblio-gardner-GBE">Susanna S. Epp, <title>Discrete Mathematics, an Introduction to Mathematical Reasoning</title>, Cengage Learning, 2011.
+            </biblio>           
+
+    </references>
+<appendix><title>Notation</title>
+<notation-list/>
+</appendix>
+<index>
+<title>Index</title>
+<index-list />
+</index>
+
+
+      <colophon>
+        <p> This book was authored in <pretext />. </p>
+      </colophon>
+
+    </backmatter>
+
+  </book>
+</pretext>

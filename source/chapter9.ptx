@@ -1,0 +1,23 @@
+<chapter xml:id="chapter9" xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Probability and Counting</title>
+  <introduction>
+   
+    <p>
+     In this chapter we look at ways to count. This is an area of math called combinatorics. We define permutations and combinations of sets. Ultimately, we prove the Binomial Theorem, which is an important result for many areas of math, including combinatorics, probability, and number theory.
+    </p>
+
+  
+    
+
+  </introduction>
+  <xi:include  href="probability9-1.ptx" />
+  <xi:include  href="multrule9-2.ptx" />
+  <xi:include  href="additionrule9-3.ptx" />
+  <xi:include  href="pigeonhole9-4.ptx" />
+  <xi:include  href="combinations9-5.ptx" />
+  <xi:include  href="binomial9-6.ptx" />
+
+  
+  
+  
+</chapter>

@@ -1,0 +1,172 @@
+<section xml:id="recursion5-5">
+  <title>Defining Sequences Recursively</title><idx><h>sequence</h><h>recursive</h></idx>
+
+  <p>We've seen sequences defined explicitly, such as <m>a_n=n^2</m>. Another common way to generate a sequence is by giving a rule for how to generate the next term from the previous term. For example,  <m>a_n=a_{n-1}+2</m> where <m>a_1=1</m>. Such sequences are called <term>recursively defined</term> sequences<idx>recursively defined sequence</idx>.</p>
+
+  <example xml:id="E_explicitseq"><title>Explicitly Defined Sequences</title><idx>explicit sequence</idx><idx><h>sequence</h><h>explicit</h></idx>
+  <p>Find the first five terms of the sequence given by <m>a_n=n^2, n\geq 0</m>.</p>
+<answer><m>a_0=0, a_1=1, a_2=4, a_3=9, a_4=16</m></answer>
+<p>Find the first five terms of the sequence given by <m>a_n=\frac{1}{n}, n\geq 1</m>.</p>
+<answer><m>a_1=1, a_2=1/2, a_3=1/3, a_4=1/4, a_5=1/5</m></answer></example>
+
+<activity><statement><p>Write out the first 6 terms of the sequence <m>a_n=2^n, n\geq 0</m>.</p></statement></activity>
+
+<example xml:id="E_recursiveseq"><title>Recursively Defined Sequences</title>
+<p>Find the first five terms of the sequence given by <m>a_n=a_{n-1}+2, a_1=1</m>.</p>
+<answer><m>a_1=1, a_2=3, a_3=5, a_4=7, a_5=9</m></answer>
+<p>Find the first five terms of the sequence given by <m>a_n=a_{n-1}+2, a_1=0</m>.</p>
+<answer><m>a_1=0, a_2=2, a_3=4, a_4=6, a_5=8</m></answer>
+<p>Find the first five terms of the sequence given by <m>a_n=a_{n-1}+5a_{n-2}, a_0=1, a_1=1</m>.</p>
+<answer><m>a_0=1, a_1=1, a_2=6, a_3=11, a_4=41</m></answer></example>
+
+<activity><statement><p>Write out the first 6 terms of the sequence <m>a_n=a_{n-1}+2a_{n-2}, a_0=1, a_1=1</m>.</p></statement></activity>
+
+<p>Although both types of sequences use an equation to find <m>a_n</m>, the recursive sequence also needs to define the first few terms. If we change the <term>initial</term> terms, we get a different sequence. The formula used to generate the recursive sequence is called a <term>recurrence relation</term><idx>recurrence relation</idx>, while the first term (or terms) is called the <term>initial condition(s)</term>.</p>
+
+<p>An advantage of an explicitly defined sequence is that it is easy to find any particular term. For example, it would be easy to calculate <m>a_{500}</m> in <xref ref="E_explicitseq"/>. In order to find <m>a_{500}</m> in <xref ref="E_recursiveseq"/>, we would need to know <m>a_{499}</m>, and all the terms before that. So we would need to have generated the sequence up to that point to calculate a specific term.</p>
+
+<p>Recursive sequences have the advantage that they can be faster (or computationally simpler) to calculate, especially if you need to generate many terms of the sequence. Computers are good at generating recursive sequences. It also may be the case that we can easily define a recursive sequence in which it is difficult, or even impossible, to express with an explicit formula.</p>
+
+<example xml:id="E_fibonaccidef"><title>The Fibonacci Sequence</title><idx>Fibonacci sequence</idx><idx><h>sequence</h><h>Fibonacci</h></idx>
+<p>The Fibonacci sequence is defined recursively by
+<me>F_1=1, F_2=1, F_k=F_{k-1}+F_{k-2}.</me>
+Give the first 6 terms of the Fibonacci sequence.</p>
+<answer><m>1, 1, 2, 3, 5, 8</m></answer></example>
+
+<activity><statement><p>Write out the 7th, 8th, and 9th terms of the Fibonacci sequence.</p></statement></activity>
+
+<p>The Fibonacci sequence is a good example of a recursively defined sequence where it is difficult to find an explicit formula. An explicit formula for the Fibonacci sequence does exist, we will see it in the next section and in <xref ref="EC_Fibexplicit"/>, but it requires much more sophisticated mathematics to find it than anything we will see in this course. If you are interested, though, this is the sort of thing you would see if you take a combinatorics course. When we do see the formula, it should be clear that it is computationally <em>much</em> harder to work with than the recursive definiton (which is why you rarely see it when working with the Fibonacci sequence).</p>
+
+<activity><introduction><p>We would like to explore the connection between recursive and explicit sequences.</p></introduction>
+<task><p>Write out the first 6 terms of <m>a_n=\frac{(-1)^n}{n!}, n\geq 0</m>. Is this an explicitly or recursively defined sequence?</p></task>
+<task><p>Consider the recurrence relationship <m>a_k=\frac{-a_{k-1}}{k}, k\geq1</m>. Write out several terms of the sequence for a couple different choices of initial terms.</p></task>
+<task><p>How do the sequences in (a) and (b) compare? </p></task></activity>
+
+<p>We want to be able to show the relationship between the recursive definition and the explicit definition for a sequence. In this section we will look at proving an explicit sequence satisfies a given recurrence relation. Since, in general, explict formulas contain more information than a recurrence relation, we can use simpler proof techniques to show an explicit sequence satisfies a recurrence relation.</p>
+
+<assemblage xml:id="B_pfrecurrencerelation">
+  <title>Proving a Sequence Satisfies a Recurrence Relation</title><idx><h>recurrence relation</h><h>proof</h></idx>
+<p>To prove an explicity defined sequence satisfies a recurrence relation:
+<ul>
+  <li>Assume the explicit formula for the sequence.</li>
+  <li>Show, using a LHS/RHS proof, that the recurrence relation holds.</li>
+</ul>
+
+
+This is always a direct proof. Do not use induction. We will see induction in the next section.</p>
+</assemblage>
+
+
+ <example xml:id="E_showrecurrence"><title>Proving a Recurrence Relation for an Explicit Sequence</title>
+<p>Let <m>a_n=3n+1, n\geq 0</m>. Show this sequence satisfies the recurrence relation <m>a_k=a_{k-1}+3</m>, for <m>k\geq 1</m>.</p>
+
+<proof>
+  <p>Assume <m>a_n=3n+1</m> for all <m>n\geq 0</m>. Show this sequence statisfies the recurrence relation <m>a_k=a_{k-1}+3</m>.</p>
+  <p>LHS: <m>a_{k}=3k+1</m>,  since we know that <m>a_k</m> satisfies the explicit formula.</p>
+  <p>RHS: <m>a_{k-1}+3=(3(k-1)+1)+3</m>,  since we know that <m>a_{k-1}</m> satisfies the explicit formula.</p>
+  <p>Simplifying, we get <m>a_{k-1}+3=3k-3+1+3=3k+1</m>.</p>
+  <p>Thus, the LHS=RHS, hence <m>a_k=a_{k-1}+3</m>.</p>
+</proof>
+</example>
+
+<activity><statement><p>Prove <m>a_n=\frac{(-1)^n}{n!}, n\geq 0</m> satisfies the recurrence relationship <m>a_k=\frac{-a_{k-1}}{k}, k\geq1</m>, by assuming the sequence is given by  <m>a_n=\frac{(-1)^n}{n!}, n\geq 0</m>, and showing <m>a_k=\frac{-a_{k-1}}{k}</m>. </p></statement></activity>
+
+<p>To show an explicitly defined sequence satisfies a recurrence relationship always assume the explicit formula and show the recursive one. This can almost always be done with a direct proof.</p>
+
+<p>We can use the recurrence relation for the Fibonacci numbers to prove additional properties.</p>
+
+<activity><statement><p>For the Fibonacci sequence, prove <m>{F_k}^2-{F_{k-1}}^2=F_kF_{k+1}-F_{k+1}F_{k-1}</m> for all <m>k\geq 1</m>. </p></statement><hint><p>Pick whichever side of the equation looks easier to start with. Do some algebra and, where appropriate, use the recursive definition for <m>F_k</m>. If you get stuck, try working with the other side of the equation.</p></hint></activity>
+
+
+    <reading-questions>
+      <title>Check Your Understanding</title>
+
+      <exercise><statement><p>Find the first 4 terms of the sequence: <m>a_n=5a_{n-1}-4, a_1=2</m>.</p></statement>
+      <answer><p>2, 6, 26, 126</p></answer></exercise>
+
+      <exercise><statement><p>Find the first 4 terms of the sequence: <m>a_n=\frac{a_{n-1}}{a_{n-2}}, a_{0}=1, a_1=2</m>.</p></statement>
+      <answer><p>1, 2, 2, 1</p></answer></exercise>
+
+     <exercise><statement><p>Find the first 4 terms of the sequence: <m>a_n=n^2+n, n\geq 1</m>.</p></statement>
+      <answer><p>2, 6, 12, 20</p></answer></exercise>
+
+      <exercise><statement><p>Find the first 4 terms of the sequence: <m>a_n=n+a_{n-1}, a_1=1</m>.</p></statement>
+      <answer><p>1, 3, 6, 10</p></answer></exercise>
+
+      
+
+      <exercise><statement><p>Determine if the following sequence is explicitly defined or recursively defined: <m>a_n=5a_{n-1}-4, a_1=2</m>.</p></statement>
+      <answer><p>Recursively defined.</p></answer></exercise>
+
+      <exercise><statement><p>Determine if the following sequence is explicitly defined or recursively defined: <m>a_n=\frac{a_{n-1}}{a_{n-2}}, a_{0}=1, a_1=2</m>.</p></statement>
+      <answer><p>Recursively defined.</p></answer></exercise>
+
+      <exercise><statement><p>Determine if the following sequence is explicitly defined or recursively defined: <m>a_n=n^2+n, n\geq 1</m>.</p></statement>
+      <answer><p>Explicitly defined.</p></answer></exercise>
+
+      <exercise><statement><p>Determine if the following sequence is explicitly defined or recursively defined: <m>a_n=n+a_{n-1}, a_1=1</m>.</p></statement>
+      <answer><p>Recursively defined.</p></answer></exercise>
+
+      <exercise><statement><p>Let <m>a_n=2n+1, n\geq 0</m>. Show this sequence satisfies the recurrence relation <m>a_k=a_{k-1}+2</m>.</p></statement>
+      <answer><p>LHS: <m>a_k=2k+1</m>. RHS: <m>a_{k-1}+2=2(k-1)+1+2=2k+1</m>.</p></answer></exercise>
+
+      <exercise><statement><p>Let <m>a_n=2n, n\geq 0</m>. Show this sequence satisfies the recurrence relation <m>a_k=a_{k-1}+2</m>.</p></statement>
+      <answer><p>LHS: <m>a_k=2k</m>. RHS: <m>a_{k-1}+2=2(k-1)+2=2k</m>.</p></answer></exercise>
+
+      <exercise><statement><p>Let <m>a_n=2n+d, n\geq 0</m>. Show this sequence satisfies the recurrence relation <m>a_k=a_{k-1}+2</m>.</p></statement>
+      <answer><p>LHS: <m>a_k=2k+d</m>. RHS: <m>a_{k-1}+2=2(k-1)+d+2=2k+d</m>.</p></answer></exercise>
+
+      
+
+
+
+    
+
+    </reading-questions>
+
+    <exercises>
+      <exercise><statement>
+        <p>
+    Find the first 4 terms of the sequence defined by
+ 
+    <me>a_1=1</me> <me>a_k=a_{k-1}+3k, k\geq2.</me>
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Find the first 4 terms of the sequence defined by
+  
+    <me>b_0=-1, b_1=2</me> <me>b_k=b_{k-1}+2b_{k-2}, k\geq2.</me>
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>a_0, a_1, a_2,  \ldots</m> be the sequence defined by the formula <m>a_n=3n+1</m>, for all integers <m>n\geq 0</m>. Show that this sequence satisfies the recurrence relation <m>a_k=a_{k-1}+3</m> for all integers <m>k\geq1</m>.
+  </p>
+
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>b_0, b_1, b_2,  \ldots</m> be the sequence defined by the formula <m>b_n=4^n</m>, for all integers <m>n\geq 0</m>. Show that this sequence satisfies the recurrence relation <m>b_k=4b_{k-1}</m> for all integers <m>k\geq1</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>c_0, c_1, c_2,  \ldots</m> be the sequence defined by the formula <m>c_n=2+n</m>, for all integers <m>n\geq 0</m>. Show that this sequence satisfies the recurrence relation <me>c_k=2c_{k-1}-c_{k-2}.</me>
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>F_0, F_1, F_2, \ldots</m> be the Fibonacci sequence. Prove that 
+    <me>F_k=3F_{k-3}+2F_{k-4}</me> for all integers <m>k\geq 4</m>.
+  </p>
+      </statement></exercise>
+      <exercise xml:id="EC_Fibexplicit"><statement>
+        <p>
+    It turns out that the Fibonacci sequence satisfies the following explicit formula: 
+    <me>F_n=\frac{1}{\sqrt{5}}\Biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{n+1}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{n+1}\Biggr].</me> Verify that the sequence defined by this explicit formula satisfies the Fibonacci recurrence relation <m>F_{k}=F_{k-1}+F_{k-2}</m> for all integers <m>k\geq 2</m>.
+  </p>
+      </statement></exercise>
+    </exercises>
+
+</section>

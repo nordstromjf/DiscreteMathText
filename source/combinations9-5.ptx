@@ -1,0 +1,390 @@
+<section xml:id="combinations9-5">
+  <title>Combinations</title><idx>combination</idx>
+
+  <p>In this section we look at how to count subsets of a set and define the mathematical concept of a combination.</p>
+
+  <definition xml:id="D_combination"><statement><p>Let <m>n, r</m> be nonnegative integers with <m>r\leq n</m>. An <term><m>r</m>-combination</term><idx>combination</idx> of a set of <m>n</m> elements is the number of subsets of size <m>r</m> that can be chosen from a set of <m>n</m> elements. We denote it <m>\binom{n}{r}</m>, which is read <q><m>n</m> choose <m>r</m>.</q><notation><usage><m>\binom{n}{r}</m></usage><description><m>n</m> choose <m>r</m></description></notation></p></statement></definition>
+
+  <p>Other common notation are <m>C(n, r)</m>, or <m>nCr</m>. We will use <m>\binom{n}{r}</m> notation, which we first saw in <xref ref="sequences5-1" />. For example, <m>\binom{5}{4}</m> is the number of subsets of size 4 chosen from a set of 5 elements.</p>
+
+  <p>Since order does not matter in a set, the order in which we choose elements of a set does not matter. Recall, when counting permutations, the order in which we chose our elements did matter. We can use what we know about permutations, though, to count combinations.</p>
+
+  <p>We can calculate combinations by first finding all the <m>r</m>-permuatations of a set, then dividing by all the possible orderings of that subset: <m>\frac{P(n, r)}{r!}</m>. This can be rewritten to be the standard formula for calculating combinations:<me>\binom{n}{r}=\frac{n!}{r!(n-r)!}</me>.</p>
+
+  <p>Note, since <m>0!=1</m>,  <m>\binom{n}{0}=1</m> and <m>\binom{0}{0}=1</m>. This also makes sense with the definition, as there is only one set with 0 elements, the empty set.</p>
+
+  <activity><statement><p>Calculate <m>{6 \choose 2}</m> and <m>{6 \choose 4}</m>.</p></statement></activity>
+
+  <activity><statement><p>Calculate <m>{4 \choose 0}</m> and <m>{4 \choose 4}</m>.</p></statement></activity>
+
+
+
+  <example xml:id="E_combvperm"><title>Combinations versus Permutations</title>
+    <p>Suppose you want to choose a group of 3 students in a class of 15 for a group project. How many ways can you choose the group?</p>
+    <p>We use combinations: <m>\binom{15}{3}</m>. It does not matter if a member was chosen first, second, or third, they would still be a member of the group. Thus, there are <m>\frac{15!}{3!12!}=455</m> ways to choose a group of 3.</p>
+
+    <p>Now suppose you want to choose a group of 3 students in a class of 15 for a group project, but the first student chosen will be the note-taker, the second will be the presenter, the third will manage the discussion. How many ways can you choose the group?</p>
+    <p>We use permutations: <m>P(15, 3)</m>. Now it <em>does</em> matter if a member was chosen first, second, or third, as each member has a different role. Thus, there are <m>\frac{15!}{12!}=2730</m> ways to choose a group of 3 where the members' roles are defined.</p>
+    
+    
+  </example>
+
+  <p>In deciding whether to use combinations or permutations, you need to decide whether order matters. For combinations, order doesn't matter; think about choosing subsets. For permuations, order does matter; think about choosing ordered lists.</p>
+
+  <p>Recall, a binary string is just a list of 0s and 1s</p>
+
+  <example xml:id="E_binstrings"><title>Binary Strings</title><p>How many binary strings of length 5 can have exactly 2 ones?</p>
+  <p>We can think of forming a binary string with 2 ones as a list of 5 places where we need to choose 2 places for the ones. Once we've done that, the other places must have 0's. Thus, we have five places and choose 2: <me>\binom{5}{2}=\frac{5!}{2!3!}=10.</me></p>
+  <p>How many binary strings of length 5 can have at most 2 ones?</p>
+  <p>Here we can count the strings with 2 ones, 1 one, and 0 ones. We add them since the strings with different numbers of ones are disjoint: <me>\binom{5}{2}+\binom{5}{1}+\binom{5}{0}=10+5+1=16.</me></p>
+  </example>
+
+  <activity><statement><p>How many binary strings of length 7 have exactly 3 ones? </p></statement><hint><p>Think of this as a list of 7 digits. How many ways are there to place the ones? </p></hint></activity>
+
+  <activity><statement><p>How many binary strings of length 7 have at most 2 ones? </p></statement><hint><p>First count how many have 0 ones, then 1 one, then 2 ones. Should you use the addition rule or multiplication rule to find the total number?</p></hint></activity>
+
+  <example xml:id="E_reorderletters"><title>Rearranging Letters</title><p>How many ways are there to order the letters in the word <q>letter</q>?</p>
+  <p>We can think of the string of letters as 6 places where we can choose to put letters. First we can choose the place to put the <q>l</q>: we have 6 places, we need to choose 1: <m>\binom{6}{1}.</m></p>
+  <p>Next we choose the places to put the two <q>e</q>s: we now only have 5 places (since one has the l), we need to choose 2: <m>\binom{5}{2}.</m></p>
+  <p>We continue in this way, with 3 places to put the two <q>t</q>s: <m>\binom{3}{2}</m>, and one remaining place to put the <q>r</q>: <m>\binom{1}{1}</m>.</p>
+  <p>Since placing each letter is a process (we don't have a complete string until we have placed all the letters), we need to use the multiplication rule: <me>\binom{6}{1}\cdot \binom{5}{2}\cdot \binom{3}{2}\cdot \binom{1}{1}=6\cdot 10\cdot 3\cdot 1=180.</me></p>
+  </example>
+
+  <p>There is another way to calculate the previous example.</p>
+
+  <example xml:id="E_altreorderletters"><title>Alternate Rearranging Letters</title><p>How many ways are there to order the letters in the word <q>letter</q>?</p>
+  <p>We can think of the string of letters as 6 places where we can choose to put letters. First we can think of all the letters as distinct. Then we have 6 letters to choose for the first place, 5 for the second, 4 for the third, etc. Thus we have <m>6!</m> ways to place 6 distinct letters.</p>
+  <p>But the letters are not distinct, so we need to divide by the number of ways we over-counted. For each permutation we just counted, switching the two <q>e</q>s gives us the same word, so we need to divide by the number of ways to rearrange the two <q>e</q>s: <m>2!.</m> Similarly, we need to divide by equivalent arrangements of the two <q>t</q>s: <m>2!</m>.</p>
+
+  <p>Putting this together we have <me>\frac{6!}{2!2!}=180.</me></p>
+  </example>
+
+  <activity><statement><p>How many ways are there to order the letters in <q>book</q>? </p></statement><hint><p>First place all the <q>b</q>s--how many ways can you do this? Then count how many ways to place all the <q>o</q>s, then all the <q>k</q>s.</p></hint></activity>
+
+  <activity><statement><p>How many ways are there to order the letters in <q>infinity</q>? </p></statement></activity>
+
+  
+  <example xml:id="E_committees"><title>Forming Committees</title>
+    <p>A class has 13 students. How many ways can a group of 7 be chosen?</p>
+    <answer><m>\binom{13}{7}</m></answer>
+    <p>Suppose in this class of 13 there are 7 juniors and 6 seniors.</p>
+
+    <p><ul>
+    <li><p>How many groups of 7 can be chosen that contain 4 juniors and 3 seniors?</p>
+    <answer><p><m>\binom{7}{4}\cdot \binom{6}{3}</m>, first choose the juniors then the seniors.</p></answer></li>
+
+    <li><p>How many groups of 7 can be chosen so that there is at least one senior?</p>
+    <answer><p><m>\binom{13}{7}- \binom{7}{7}</m>, all the possible groups minus the groups with no seniors.</p></answer></li>
+
+    <li><p>How many groups of 7 can be chosen so that there are at most 3 juniors?</p>
+    <answer><p><m>\binom{7}{1}\cdot \binom{6}{6}+\binom{7}{2}\cdot \binom{6}{5}+\binom{7}{3}\cdot \binom{6}{4}</m>, count the groups of one junior and 6 seniors, two juniors and 5 seniors, three juniors and 4 seniors. Note, there are no groups with no juniors.</p></answer></li>
+
+    <li><p>How many groups of 7 can be chosen if two people refuse to work together?</p>
+    <p>Call the two people A and B.</p>
+    <p>Find the number of groups with A and not B: <m>\binom{11}{6}</m>. Note, we only need to choose 6 out of 11 since we know A is in the group and B is not, so we just need to choose the other 6 members.</p>
+    <p>Similarly, find the number of groups with B and not A: <m>\binom{11}{6}</m>.</p>
+    <p>Now, find the number of groups with neither A nor B: <m>\binom{11}{7}</m>. Note, we need to choose 7 out of 11 since we know A and B cannot be chosen.</p>
+
+    <p>Since the sets of each type of group (with A, with B, with neither) are disjoint, we use the addition rule:
+    <me>\binom{11}{6}+\binom{11}{6}+ \binom{11}{7}.</me> </p></li>
+  </ul></p>
+
+    
+  </example>
+
+  
+
+
+    <reading-questions>
+      <title>Check Your Understanding</title>
+      
+
+       <exercise><statement><p>Calculate the number of 4-combinations of a set with 6 elements.</p></statement>
+      <answer><m>\frac{6!}{4!2!}=15</m></answer></exercise>
+
+       <exercise><statement><p>Calculate <m>\binom{7}{4}</m>.</p></statement>
+      <answer><m>\frac{7!}{4!3!}=35</m></answer></exercise>
+
+      <exercise><statement><p>Calculate <m>\binom{7}{2}</m>.</p></statement>
+      <answer><m>21</m></answer></exercise>
+
+      <exercise><statement><p>Calculate <m>\binom{7}{1}</m>.</p></statement>
+      <answer><m>7</m></answer></exercise>
+
+      <exercise><statement><p>Calculate <m>\binom{7}{7}</m>.</p></statement>
+      <answer><m>1</m></answer></exercise>
+      <exercise><statement><p>Calculate <m>\binom{7}{0}</m>.</p></statement>
+      <answer><m>1</m></answer></exercise>
+
+      <exercise><statement><p>Find the number of binary strings of length 7 with 4 zeros.</p></statement>
+      <answer><m>\binom{7}{4}</m></answer></exercise>
+
+      <exercise><statement><p>Find the number of binary strings of length 7 with at most 2 zeros.</p></statement>
+      <answer><m>\binom{7}{0}+\binom{7}{1}+\binom{7}{2}</m></answer></exercise>
+
+      <exercise><statement><p>Find the number of strings that can be formed from the letters in the word <q>calculate</q>.</p></statement>
+      <answer><m>\binom{9}{2}\cdot\binom{7}{2}\cdot\binom{5}{2}\cdot\binom{3}{1}\cdot\binom{2}{1}\cdot\binom{1}{1}</m> or <m>\frac{9!}{2!2!2!}</m></answer></exercise>
+
+      
+
+    </reading-questions>
+
+    <exercises>
+      <exercise><statement>
+        <p>
+    Calculate
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    <m>{6 \choose 0}</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>{6 \choose 1}</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>{6\choose 2}</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>{6\choose 3}</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>{6\choose 4}</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>{6\choose 5}</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>{6\choose 6}</m>
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    A student council consists of 15 students.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    In how many ways can a committee of 6 be selected from the membership of the council?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Two council members have the same major and are not permitted to serve together on a committee. How many ways can a committee of 6 be selected from the membership of the council?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Two council members always insist on serving together on a committee. If they can’t serve together, they won’t serve at all. How many ways can a committee of 6 be selected from the membership of the council?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Suppose the council contains 8 seniors and 7 juniors.
+  </p>
+
+  <p><ol marker="i">
+    <li>
+      <p>
+    How many committees of six contain three seniors and three juniors?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    How many committees of six contain at least one junior?
+  </p>
+    </li>
+
+  </ol></p>
+    </li>
+
+    <li>
+      <p>
+    Suppose the council consists of three freshmen, four sophomores, three juniors, and five seniors. How many committees of eight contain two from each class?
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    An instructor gives an exam with fourteen questions. Students are allowed to choose any ten questions to answer.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    How many different choices of ten questions are there?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Suppose six questions require proof and eight do not.
+  </p>
+
+  <p><ol marker="i">
+    <li>
+      <p>
+    How many groups of ten questions contain four that require proof and six that do not?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    How many groups of ten questions contain fat least one that requires proof?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    How many groups of ten questions contain at most three that require proof?
+  </p>
+    </li>
+
+  </ol></p>
+    </li>
+
+    <li>
+      <p>
+    Suppose the exam instructions specify that at most one of the questions 1 and 2 may be included among the ten. How many different choices of the ten questions are there?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Suppose the exam instructions specify that either questions 1 and 2 are to be included among the ten or neither is to be included. How many different choices of ten questions are there?
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    A coin is tossed ten times. in each case the outcome (H or T) is recorded.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    What is the total number of possible outcomes of the coin tossing experiment?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    In how many of the possible outcomes are exactly five heads obtained?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    In how many of the possible outcomes are at least eight heads obtained?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    In how many of the possible outcomes is at least one head obtained?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    In how many of the possible outcomes is at most one head obtained?
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    A binary or bit string consists of just 0’s and 1’s. A bit string of length 16 is called a 16-bit string.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    How many 16-bit strings contain exactly seven 1’s?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    How many 16-bit strings contain at least thirteen 1’s?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    How many 16-bit strings contain at least one 1?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    How many 16-bit strings contain at most one 1?
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>Consider the word <m>NINETEENTH</m></p>
+        <ol marker="a">
+    <li>
+      <p>
+    How many distinguishable ways are there to order the letters in the word <m>NINETEENTH</m>?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    How many distinguishable ways are there to order the letters in the word <m>NINETEENTH</m> if it must begin with <m>I</m> and end with <m>E</m>?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    How many distinguishable ways are there to order the letters in the word <m>NINETEENTH</m> if the letters <m>HI</m> must be next to each other in order?
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    In Morse code, symbols are represented by variable-length sequences of dots and dashes. For example, <m>A=\cdot -, 1=\cdot - - - -, ?=\cdot \cdot - - \cdot \cdot</m>. How many different symbols can be represented by sequences of seven or fewer dots and dashes?
+  </p>
+      </statement></exercise>
+
+    </exercises>
+
+</section>

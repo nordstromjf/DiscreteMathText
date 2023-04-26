@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Divisibility</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Discrete Mathematics">
+<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
+<p class="byline">Jennifer Firkins Nordstrom</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="rationals4-2.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter4.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="cases4-4.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \newcommand{\MyTikzmark}[2]{
+     \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
+\newcommand{\DrawVLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.3ex, #1] (#2.north) -- (#3.south);
+  \end{tikzpicture}
+}
+\newcommand{\DrawHLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.2em, #1] (#2.west) -- (#3.east);
+  \end{tikzpicture}
+}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li><div class="toc-item"><a href="preface-1.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter1.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to Mathematical Language</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="variables1-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Variables and Statements</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="variables1-1.html#reading-questions-1" class="internal"><span class="codenumber">1.1</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="variables1-1.html#exercises-1" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="lang_sets1-2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Introduction to Sets</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="lang_sets1-2.html#reading-questions-2" class="internal"><span class="codenumber">1.2</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="lang_sets1-2.html#exercises-2" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="lang_relations1-3.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Introduction to Relations and Functions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="lang_relations1-3.html#reading-questions-3" class="internal"><span class="codenumber">1.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="lang_relations1-3.html#exercises-3" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter2.html" class="internal"><span class="codenumber">2</span> <span class="title">Logic</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="logical_form2-1.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Truth-Tables and Logical Equivalence</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="logical_form2-1.html#reading-questions-4" class="internal"><span class="codenumber">2.1</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="logical_form2-1.html#exercises-4" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="conditional2-2.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Conditional Statements</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="conditional2-2.html#reading-questions-5" class="internal"><span class="codenumber">2.2</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="conditional2-2.html#exercises-5" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="arguments2-3.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Valid and Invalid Arguments</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="arguments2-3.html#reading-questions-6" class="internal"><span class="codenumber">2.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="arguments2-3.html#exercises-6" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter3.html" class="internal"><span class="codenumber">3</span> <span class="title">Logic with Quantifiers</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="quantifiersI3-1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Quantifiers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="quantifiersI3-1.html#reading-questions-7" class="internal"><span class="codenumber">3.1</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="quantifiersI3-1.html#exercises-7" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="negquant3-2.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Negating Quantified Statements</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="negquant3-2.html#reading-questions-8" class="internal"><span class="codenumber">3.2</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="negquant3-2.html#exercises-8" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="multiplequant3-3.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Statements with Multiple Quantifiers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="multiplequant3-3.html#reading-questions-9" class="internal"><span class="codenumber">3.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="multiplequant3-3.html#exercises-9" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="argumentsquant3-4.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Arguments with Quantifiers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="argumentsquant3-4.html#reading-questions-10" class="internal"><span class="codenumber">3.4</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="argumentsquant3-4.html#exercises-10" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter4.html" class="internal"><span class="codenumber">4</span> <span class="title">Proof Techniques</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="directproof4-1.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Direct Proof and Counterexample</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="directproof4-1.html#reading-questions-11" class="internal"><span class="codenumber">4.1</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="directproof4-1.html#exercises-11" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="rationals4-2.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Rational Numbers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="rationals4-2.html#reading-questions-12" class="internal"><span class="codenumber">4.2</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="rationals4-2.html#exercises-12" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="divisibility4-3.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Divisibility</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="divisibility4-3.html#reading-questions-13" class="internal"><span class="codenumber">4.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="divisibility4-3.html#exercises-13" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="cases4-4.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Proof by Cases</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="cases4-4.html#reading-questions-14" class="internal"><span class="codenumber">4.4</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="cases4-4.html#exercises-14" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="contradiction4-5.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Proof by Contradiction and Contrapositive</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="contradiction4-5.html#reading-questions-15" class="internal"><span class="codenumber">4.5</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="contradiction4-5.html#exercises-15" class="internal"><span class="codenumber">4.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="morecontradiction4-6.html" class="internal"><span class="codenumber">4.6</span> <span class="title">More Proof by Contradiction and Contrapositive</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="morecontradiction4-6.html#reading-questions-16" class="internal"><span class="codenumber">4.6</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="morecontradiction4-6.html#exercises-16" class="internal"><span class="codenumber">4.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter5.html" class="internal"><span class="codenumber">5</span> <span class="title">Sequences and Mathematical Induction</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sequences5-1.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Sequences</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sequences5-1.html#reading-questions-17" class="internal"><span class="codenumber">5.1</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="sequences5-1.html#exercises-17" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="induction5-2.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Mathematical Induction</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="induction5-2.html#reading-questions-18" class="internal"><span class="codenumber">5.2</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="induction5-2.html#exercises-18" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="moreinduction5-3.html" class="internal"><span class="codenumber">5.3</span> <span class="title">More Mathematical Induction</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="moreinduction5-3.html#reading-questions-19" class="internal"><span class="codenumber">5.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="moreinduction5-3.html#exercises-19" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="stronginduction5-4.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Strong Induction</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="stronginduction5-4.html#reading-questions-20" class="internal"><span class="codenumber">5.4</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="stronginduction5-4.html#exercises-20" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="recursion5-5.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Defining Sequences Recursively</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="recursion5-5.html#reading-questions-21" class="internal"><span class="codenumber">5.5</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="recursion5-5.html#exercises-21" class="internal"><span class="codenumber">5.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="iteration5-6.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Solving Recurrence Relations by Iteration</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="iteration5-6.html#reading-questions-22" class="internal"><span class="codenumber">5.6</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="iteration5-6.html#exercises-22" class="internal"><span class="codenumber">5.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter6.html" class="internal"><span class="codenumber">6</span> <span class="title">Set Theory</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sets6-1.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Set Theory</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sets6-1.html#reading-questions-23" class="internal"><span class="codenumber">6.1</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="sets6-1.html#exercises-23" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="propertiesofsets6-2.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Properties of Sets</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="propertiesofsets6-2.html#reading-questions-24" class="internal"><span class="codenumber">6.2</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="propertiesofsets6-2.html#exercises-24" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="algebraicsets6-3.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Algebraic Proofs and Counterexamples</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="algebraicsets6-3.html#reading-questions-25" class="internal"><span class="codenumber">6.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="algebraicsets6-3.html#exercises-25" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter7.html" class="internal"><span class="codenumber">7</span> <span class="title">Functions</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="functions7-1.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Functions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="functions7-1.html#reading-questions-26" class="internal"><span class="codenumber">7.1</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="functions7-1.html#exercises-26" class="internal"><span class="codenumber">7.1</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="onetooneonto7-2.html" class="internal"><span class="codenumber">7.2</span> <span class="title">One-to-One, Onto, Inverse Functions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="onetooneonto7-2.html#reading-questions-27" class="internal"><span class="codenumber">7.2</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="onetooneonto7-2.html#exercises-27" class="internal"><span class="codenumber">7.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter8.html" class="internal"><span class="codenumber">8</span> <span class="title">Relations</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="relations8-1.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Relations on Sets</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="relations8-1.html#reading-questions-28" class="internal"><span class="codenumber">8.1</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="relations8-1.html#exercises-28" class="internal"><span class="codenumber">8.1</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="rstrelations8-2.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Reflexive, Symmetric, Transitive Properties</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="rstrelations8-2.html#reading-questions-29" class="internal"><span class="codenumber">8.2</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="rstrelations8-2.html#exercises-29" class="internal"><span class="codenumber">8.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="equivalencerelations8-3.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Equivalence Relations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="equivalencerelations8-3.html#reading-questions-30" class="internal"><span class="codenumber">8.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="equivalencerelations8-3.html#exercises-30" class="internal"><span class="codenumber">8.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="modarith8-4.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Modular Arithmetic</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="modarith8-4.html#reading-questions-31" class="internal"><span class="codenumber">8.4</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="modarith8-4.html#exercises-31" class="internal"><span class="codenumber">8.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter9.html" class="internal"><span class="codenumber">9</span> <span class="title">Probability and Counting</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="probability9-1.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Probability</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="probability9-1.html#reading-questions-32" class="internal"><span class="codenumber">9.1</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="probability9-1.html#exercises-32" class="internal"><span class="codenumber">9.1</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="multrule9-2.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Multiplication Rule</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="multrule9-2.html#reading-questions-33" class="internal"><span class="codenumber">9.2</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="multrule9-2.html#exercises-33" class="internal"><span class="codenumber">9.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="additionrule9-3.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Addition Rule</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="additionrule9-3.html#reading-questions-34" class="internal"><span class="codenumber">9.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="additionrule9-3.html#exercises-34" class="internal"><span class="codenumber">9.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="pigeonhole9-4.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Pigeonhole Principle</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="pigeonhole9-4.html#reading-questions-35" class="internal"><span class="codenumber">9.4</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="pigeonhole9-4.html#exercises-35" class="internal"><span class="codenumber">9.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="combinations9-5.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Combinations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="combinations9-5.html#reading-questions-36" class="internal"><span class="codenumber">9.5</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="combinations9-5.html#exercises-36" class="internal"><span class="codenumber">9.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="binomial9-6.html" class="internal"><span class="codenumber">9.6</span> <span class="title">Binomial Theorem</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="binomial9-6.html#reading-questions-37" class="internal"><span class="codenumber">9.6</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="binomial9-6.html#exercises-37" class="internal"><span class="codenumber">9.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter10.html" class="internal"><span class="codenumber">10</span> <span class="title">Graph Theory</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="graphs10-1.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphs</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="graphs10-1.html#reading-questions-38" class="internal"><span class="codenumber">10.1</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="graphs10-1.html#exercises-38" class="internal"><span class="codenumber">10.1</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="pathscircuits10-2.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Paths and Circuits</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="pathscircuits10-2.html#reading-questions-39" class="internal"><span class="codenumber">10.2</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="pathscircuits10-2.html#exercises-39" class="internal"><span class="codenumber">10.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="trees10-3.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Trees</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="trees10-3.html#reading-questions-40" class="internal"><span class="codenumber">10.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li><div class="toc-item"><a href="trees10-3.html#exercises-40" class="internal"><span class="codenumber">10.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="references-1.html" class="internal"><span class="title">References</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-1.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+<li><div class="toc-item"><a href="colophon-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="divisibility4-3"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.3</span> <span class="title">Divisibility</span>
+</h2>
+<div class="para" id="p-862">In this section we introduce the idea of divisibility for integers. It is important to understand that this concept involves only integers and is not the same thing as division. Divisibility is a property while division is an operation.</div>
+<article class="definition definition-like" id="definition-26"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.3.1</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-863">Let <span class="process-math">\(n, d\in \mathbb{Z}\text{.}\)</span> Then <span class="process-math">\(n\)</span> is <dfn class="terminology">divisible</dfn> by <span class="process-math">\(d\)</span> if <span class="process-math">\(n=dk\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span>
+</div></article><div class="para logical" id="p-864">
+<div class="para">If <span class="process-math">\(n=dk\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\)</span> we can also say</div>
+<ul class="disc">
+<li id="li-254"><div class="para" id="p-derived-li-254">
+<span class="process-math">\(n\)</span> is a <dfn class="terminology">multiple</dfn> of <span class="process-math">\(d\text{;}\)</span>
+</div></li>
+<li id="li-255"><div class="para" id="p-derived-li-255">
+<span class="process-math">\(d\)</span> is a <dfn class="terminology">factor</dfn> of <span class="process-math">\(n\text{;}\)</span>
+</div></li>
+<li id="li-256"><div class="para" id="p-derived-li-256">
+<span class="process-math">\(d\)</span> is a <dfn class="terminology">divisor</dfn> of <span class="process-math">\(n\text{;}\)</span>
+</div></li>
+<li id="li-257"><div class="para" id="p-derived-li-257">
+<span class="process-math">\(d\)</span> <dfn class="terminology">divides</dfn> <span class="process-math">\(n\text{.}\)</span>
+</div></li>
+</ul>
+</div>
+<div class="para" id="p-865">We use the notation <span class="process-math">\(d\mid n\)</span>, read “<span class="process-math">\(d\)</span> divides <span class="process-math">\(n\text{.}\)</span>”</div>
+<div class="para" id="p-866">
+<em class="alert">Warning:</em> <span class="process-math">\(d\mid n\)</span> is a relationship between two integers. It is a statement that is either true or false. It does <em class="emphasis">not</em> equal a number. It is <em class="emphasis">not</em> the same thing as a fraction. It is not an equation, but it can be translated to the equation <span class="process-math">\(n=dk\)</span> for some integer <span class="process-math">\(k\text{.}\)</span>
+</div>
+<div class="para logical" id="p-867">
+<div class="para">It is important to look at the special case when <span class="process-math">\(n\)</span> or <span class="process-math">\(d\)</span> is 0.</div>
+<ul class="disc">
+<li id="li-258"><div class="para" id="p-derived-li-258">
+<span class="process-math">\(0\mid n\)</span> is always false.</div></li>
+<li id="li-259"><div class="para" id="p-derived-li-259">
+<span class="process-math">\(d\mid 0\)</span> is true if <span class="process-math">\(d\neq 0\text{.}\)</span>
+</div></li>
+<li id="li-260"><div class="para" id="p-derived-li-260">Thus, <span class="process-math">\(0\mid 0\)</span> is false, even though, technically, one could write <span class="process-math">\(0=0\cdot k\text{.}\)</span>
+</div></li>
+</ul>
+</div>
+<article class="example example-like" id="E_divides"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_divides"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Finding Divisors.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_divides"><article class="example example-like"> <div class="para" id="p-868">Find the divisors of 6.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-122" id="answer-122"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-122"><div class="answer solution-like">1, 2, 3, 6, -1, -2, -3, -6</div></div> <div class="para" id="p-869">Find the divisors of 5.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-123" id="answer-123"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-123"><div class="answer solution-like">1, 5, -1, -5</div></div> <div class="para" id="p-870">Find the divisors of 1.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-124" id="answer-124"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-124"><div class="answer solution-like">1, -1</div></div></article></div>
+<div class="para" id="p-871">If <span class="process-math">\(d\)</span> does not divide <span class="process-math">\(n\text{,}\)</span> then for every <span class="process-math">\(k\in \mathbb{Z}, n\neq dk\text{.}\)</span> This can be difficult to show in general, but if <span class="process-math">\(n\)</span> and <span class="process-math">\(d\)</span> are specific integers, you could show <span class="process-math">\(\frac{n}{d}\)</span> is not an integer. This is the <em class="emphasis">only</em> time a fraction can show up in proofs about divibilty.</div>
+<div class="para" id="p-872">We use the notation <span class="process-math">\(d\nmid n\)</span> for <span class="process-math">\(d\)</span> does not divide <span class="process-math">\(n\text{.}\)</span>
+</div>
+<article class="example example-like" id="E_TFdivides"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_TFdivides"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Determining Divisibility.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_TFdivides"><article class="example example-like"> <div class="para" id="p-873">True or false: <span class="process-math">\(8\mid 24\text{.}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-125" id="answer-125"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-125"><div class="answer solution-like">True, <span class="process-math">\(24=8(3)\text{.}\)</span>
+</div></div> <div class="para" id="p-874">True or false: <span class="process-math">\(8\mid 4\text{.}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-126" id="answer-126"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-126"><div class="answer solution-like">False, <span class="process-math">\(4=8(k)\)</span> has no integer solutions since <span class="process-math">\(k=1/2\text{.}\)</span>
+</div></div> <div class="para" id="p-875">True or false: <span class="process-math">\(8\mid 10\text{.}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-127" id="answer-127"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-127"><div class="answer solution-like">False, <span class="process-math">\(10=8(k)\)</span> has no integer solutions since <span class="process-math">\(k=5/4\text{.}\)</span>
+</div></div> <div class="para" id="p-876">True or false: <span class="process-math">\(8\mid -8\text{.}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-128" id="answer-128"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-128"><div class="answer solution-like">True, <span class="process-math">\(-8=8(-1)\text{.}\)</span>
+</div></div> <div class="para" id="p-877">True or false: <span class="process-math">\(-2\mid 8\text{.}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-129" id="answer-129"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-129"><div class="answer solution-like">True, <span class="process-math">\(8=-2(-4)\text{.}\)</span>
+</div></div> <div class="para" id="p-878">True or false: <span class="process-math">\(1\mid 4\text{.}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-130" id="answer-130"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-130"><div class="answer solution-like">True, <span class="process-math">\(4=1(4)\text{.}\)</span>
+</div></div> <div class="para" id="p-879">True or false: <span class="process-math">\(8\mid 0\text{.}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-131" id="answer-131"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-131"><div class="answer solution-like">True, <span class="process-math">\(0=8(0)\text{.}\)</span>
+</div></div> <div class="para" id="p-880">True or false: <span class="process-math">\(4\mid 1\text{.}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-132" id="answer-132"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">8</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-132"><div class="answer solution-like">False, <span class="process-math">\(1=4(k)\)</span> has no integer solutions since <span class="process-math">\(k=1/4\text{.}\)</span>
+</div></div> <div class="para" id="p-881">True or false: <span class="process-math">\(0\mid 8\text{.}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-133" id="answer-133"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">9</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-133"><div class="answer solution-like">False, <span class="process-math">\(8=0(k)\)</span> has no integer solutions.</div></div></article></div>
+<article class="activity project-like" id="activity-62"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.1</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="introduction-32"><div class="para" id="p-882">Determine if the following divisibility statements are true or false, and justify your answer.</div></div>
+<article class="task exercise-like" id="task-93"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<span class="process-math">\(3\mid 10\)</span></article><article class="task exercise-like" id="task-94"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<span class="process-math">\(3\mid 0\)</span></article><article class="task exercise-like" id="task-95"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<span class="process-math">\(3\mid 36\)</span></article><article class="task exercise-like" id="task-96"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<span class="process-math">\(12\mid 4\)</span></article><article class="task exercise-like" id="task-97"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<span class="process-math">\(0\mid 4\)</span></article></article><div class="para" id="p-883">Now, let's use the definition of divisibility to prove a more general theorem.</div>
+<article class="theorem theorem-like" id="T_transdivides"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.4</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-884">For all integers, <span class="process-math">\(a, b, c\text{,}\)</span> if  <span class="process-math">\(a\mid b\)</span> and <span class="process-math">\(b\mid c\text{,}\)</span> then <span class="process-math">\(a\mid c\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-8"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-8"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-8"><article class="hiddenproof"><div class="para" id="p-885">Let <span class="process-math">\(a, b, c\in \mathbb{Z}\text{.}\)</span> Assume <span class="process-math">\(a\mid b\)</span> and <span class="process-math">\(b\mid c\text{.}\)</span> Then by definition, <span class="process-math">\(b=ak\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\)</span> and <span class="process-math">\(c=bj\)</span> for some <span class="process-math">\(j\in \mathbb{Z}\text{.}\)</span> Substituting the first equation into the second, <span class="process-math">\(c=(ak)j=a(kj)\text{.}\)</span> Since <span class="process-math">\(kj\in\mathbb{Z}\text{,}\)</span> <span class="process-math">\(a\mid c\text{.}\)</span>
+</div></article></div>
+<article class="activity project-like" id="activity-63"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.2</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-886">Prove if 15 divides <span class="process-math">\(n\text{,}\)</span> then 5 divides <span class="process-math">\(n\text{.}\)</span>
+</div></article><article class="activity project-like" id="activity-64"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.3</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-887">Prove or disprove if 6 divides <span class="process-math">\(n\text{,}\)</span> then 12 divides <span class="process-math">\(n\text{.}\)</span>
+</div></article><article class="activity project-like" id="activity-65"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.4</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-888">Prove if <span class="process-math">\(d\mid n\)</span> and <span class="process-math">\(d\mid m\text{,}\)</span> then <span class="process-math">\(d\mid (n+m)\text{.}\)</span>
+</div></article><div class="para" id="p-889">Now that we have the concept of divisibility, we can look at some bigger mathematical theorems involving divisibility by primes.</div>
+<article class="theorem theorem-like" id="T_divbyprime"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.5</span><span class="period">.</span>
+</h3>Any integer <span class="process-math">\(n&gt;1\)</span> is divisible by a prime.</article><article class="hiddenproof" id="proof-9"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-9"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-9"><article class="hiddenproof"><div class="para" id="p-890">We will divide this proof into two cases, where <span class="process-math">\(n\)</span> is prime and where <span class="process-math">\(n\)</span> is composite.</div> <div class="para" id="p-891">Case 1: <span class="process-math">\(n\)</span> is prime. We can see that <span class="process-math">\(n\mid n\text{.}\)</span> Since <span class="process-math">\(\text{}\)</span> is prime, <span class="process-math">\(n\)</span> is divisible by a prime.</div> <div class="para" id="p-892">Case 2: <span class="process-math">\(n\)</span> is composite. Then <span class="process-math">\(n=r_0s_0\)</span> where <span class="process-math">\(1&lt; r_0 &lt; n\text{,}\)</span> and <span class="process-math">\(r_0, s_0\in \mathbb{Z}\text{.}\)</span> If <span class="process-math">\(r_0\)</span> is prime, then <span class="process-math">\(n\)</span> is divisible by a prime.</div> <div class="para" id="p-893">If <span class="process-math">\(r_0\)</span> is not prime, then <span class="process-math">\(r_0=r_1s_1\)</span> where <span class="process-math">\(1&lt; r_1 &lt; r_0\text{,}\)</span> and <span class="process-math">\(r_1, s_1\in \mathbb{Z}\text{.}\)</span> If <span class="process-math">\(r_1\)</span> is prime, then <span class="process-math">\(n=r_1s_1s_0\)</span> and <span class="process-math">\(n\)</span> is divisible by a prime.</div> <div class="para" id="p-894">Similarly, if <span class="process-math">\(r_1\)</span> is not prime, then <span class="process-math">\(r_1=r_2s_2\)</span> where <span class="process-math">\(1&lt; r_2 &lt; r_1 &lt; r_0\text{,}\)</span> and <span class="process-math">\(r_2, s_2\in \mathbb{Z}\text{,}\)</span> etc.</div> <div class="para" id="p-895">We can keep applying this process to get <span class="process-math">\(n=r_ks_k\cdots s_0\)</span> with <span class="process-math">\(1&lt; r_k &lt;\cdots&lt; r_1 &lt; r_0\text{,}\)</span> and <span class="process-math">\(r_k, s_k\in \mathbb{Z}\text{.}\)</span>
+</div> <div class="para" id="p-896">If at any point <span class="process-math">\(r_k\)</span> is prime, then we are done, as we have found a prime divisor of <span class="process-math">\(n\text{.}\)</span> We know that there cannot be infinitely many non-prime <span class="process-math">\(r_k\)</span> since there are only finitely many integers between 1 and <span class="process-math">\(n\text{.}\)</span> Thus, the process must terminate with a prime divisor of <span class="process-math">\(n\text{.}\)</span> Hence, every integer is divisible by a prime.</div></article></div>
+<div class="para" id="p-897">We now state a big theorem in discrete mathematics, but leave the proof for later. This theorem is more commonly called the Fundamental Theorem of Arthmetic.</div>
+<article class="theorem theorem-like" id="T_FTofArith"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Unique Factorization Theorem.</span>
+</h3>
+<div class="para" id="p-898">Given any integer <span class="process-math">\(n&gt;1\)</span> there exists a positive integer <span class="process-math">\(k\text{,}\)</span> distinct primes <span class="process-math">\(p_1, p_2, \ldots, p_k\text{,}\)</span> and positive integers <span class="process-math">\(e_1, e_2, \ldots e_k\text{,}\)</span> such that <span class="process-math">\(n=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}\text{.}\)</span> This factorization of <span class="process-math">\(n\)</span> into powers of primes is unique except for the order of the factors.</div></article><div class="para" id="p-899">The decomposition into powers of primes, <span class="process-math">\(n=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}\text{,}\)</span> is called the <dfn class="terminology">standard form</dfn> of the prime factorization.</div>
+<article class="definition definition-like" id="D_factorial"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.3.7</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-900">Let <span class="process-math">\(n\)</span> be an integer <span class="process-math">\(n\geq 1\text{.}\)</span> Then the <dfn class="terminology">factorial</dfn> of <span class="process-math">\(n\)</span> is given by <span class="process-math">\(n!=(n)(n-1)(n-2)\cdots(2)(1)\text{.}\)</span>
+</div></article><div class="para" id="p-901">For example, <span class="process-math">\(5!=5(4)(3)(2)(1)=120\text{.}\)</span>
+</div>
+<article class="example example-like" id="E_primefactorization"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_primefactorization"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Prime Factorization.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_primefactorization"><article class="example example-like"> <div class="para" id="p-902">Find the prime factorization of 252 in standard form.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-134" id="answer-134"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-134"><div class="answer solution-like"><span class="process-math">\(252=(2^2)(3^2)(7)\text{.}\)</span></div></div> <div class="para" id="p-903">Find the prime factorization of 17 in standard form.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-135" id="answer-135"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-135"><div class="answer solution-like">
+<span class="process-math">\(17\text{,}\)</span> since it is prime.</div></div> <div class="para" id="p-904">Find the prime factorization of 195 in standard form.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-136" id="answer-136"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-136"><div class="answer solution-like"><span class="process-math">\(195=(3)(5)(13)\text{.}\)</span></div></div> <div class="para" id="p-905">Find the prime factorization of <span class="process-math">\(8!\)</span> in standard form.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-137" id="answer-137"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-137"><div class="answer solution-like"><div class="displaymath process-math" id="md-4">
+\begin{align*}
+8!=(8)(7)(6)(5)(4)(3)(2)(1)\\
+&amp;=(2^3)(7)(2\cdot 3)(5)(2^2)(3)(2)\\
+&amp;=(2^7)(3^3)(5)(7)\text{.}
+\end{align*}
+</div></div></div></article></div>
+<article class="activity project-like" id="activity-66"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.5</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-906">Give the prime factorization of 600 in standard form.</div></article><article class="activity project-like" id="activity-67"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.6</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-907">Give the prime factorization of <span class="process-math">\(9!\)</span> (9 factorial). Is 10 a factor of <span class="process-math">\(9!\text{?}\)</span> Is <span class="process-math">\(10^2\text{?}\)</span>
+</div></article><div class="para" id="p-908">
+<a href="" class="xref" data-knowl="./knowl/T_FTofArith.html" title="Theorem 4.3.6: Unique Factorization Theorem">Theorem 4.3.6</a> is more powerful than it may seem. Although you have probably found prime factorizations before, you may not have thought much about the fact that they are unique. Consider the statement <span class="process-math">\(3\mid 2^{101}\text{.}\)</span> Is this true or false? Well, since <span class="process-math">\(2^{101}\)</span> is a prime factorization, the only prime divisor it has is 2. Thus, <span class="process-math">\(3\mid 2^{101}\)</span> is false. If you have the prime factorization of an integer, then you know exactly which primes (and which powers of primes) divide the integer.</div>
+<article class="activity project-like" id="activity-68"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.7</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="introduction-33"><div class="para" id="p-909">Determine if the follwing are true or false. Give a reason for your answer.</div></div>
+<article class="task exercise-like" id="task-98"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="p-910">5 divides <span class="process-math">\(3^{600}\text{.}\)</span>
+</div></article><article class="task exercise-like" id="task-99"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-911">6 divides <span class="process-math">\(3^{600}\text{.}\)</span>
+</div></article><article class="task exercise-like" id="task-100"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-912">9 divides <span class="process-math">\(3^{600}\text{.}\)</span>
+</div></article><article class="task exercise-like" id="task-101"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="p-913">300 divides <span class="process-math">\(3^{600}\text{.}\)</span>
+</div></article></article><section class="reading-questions" id="reading-questions-13"><h3 class="heading hide-type">
+<span class="type">Reading Questions</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-167"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-914">True or false: <span class="process-math">\(6\mid 24\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-138" id="answer-138"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-138"><div class="answer solution-like">True.</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-168"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-915">True or false: <span class="process-math">\(1\mid 9\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-139" id="answer-139"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-139"><div class="answer solution-like">True.</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-169"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-916">True or false: <span class="process-math">\(0\mid 9\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-140" id="answer-140"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-140"><div class="answer solution-like">False.</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-170"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="p-917">True or false: <span class="process-math">\(6\mid 3\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-141" id="answer-141"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-141"><div class="answer solution-like">False.</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-171"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="p-918">True or false: <span class="process-math">\(6\mid 6\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-142" id="answer-142"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-142"><div class="answer solution-like">True.</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-172"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="p-919">True or false: <span class="process-math">\(6\mid -30\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-143" id="answer-143"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-143"><div class="answer solution-like">True.</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-173"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="p-920">True or false: <span class="process-math">\(6\mid 0\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-144" id="answer-144"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-144"><div class="answer solution-like">True.</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-174"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para" id="p-921">True or false: <span class="process-math">\(6\mid 21\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-145" id="answer-145"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-145"><div class="answer solution-like">False.</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-175"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="para" id="p-922">True or false: <span class="process-math">\(5\mid 3^{56}\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-146" id="answer-146"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-146"><div class="answer solution-like">False.</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-176"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="para" id="p-923">True or false: <span class="process-math">\(6\mid 3^{10}2^{5}5^{9}\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-147" id="answer-147"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-147"><div class="answer solution-like">True.</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-177"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="para" id="p-924">Give the prime factorization for <span class="process-math">\(7!\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-148" id="answer-148"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-148"><div class="answer solution-like"><span class="process-math">\(7!=(7)(6)(5)(4)(3)(2)(1)=(7)(2\cdot 3)(5)(2\cdot 2)(3)(2)(1)=(2^4)(3^2)(5)(7)\text{.}\)</span></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-178"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<div class="para" id="p-925">True or false: <span class="process-math">\(10\mid 7!\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-149" id="answer-149"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-149"><div class="answer solution-like">True.</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-179"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
+<div class="para" id="p-926">True or false: <span class="process-math">\(100\mid 7!\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-150" id="answer-150"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-150"><div class="answer solution-like">False, <span class="process-math">\(100=2^25^2\text{,}\)</span> so <span class="process-math">\(7!\)</span> would need a factor of <span class="process-math">\(5^2\text{.}\)</span>
+</div></div>
+</div></article></section><section class="exercises" id="exercises-13"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-180"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-927">Determine if the following statements are true or false. Justify your answer.</div> <ol class="lower-alpha">
+<li id="li-261"><div class="para" id="p-928"><span class="process-math">\(\displaystyle 5\mid 0\)</span></div></li>
+<li id="li-262"><div class="para" id="p-929">
+<span class="process-math">\(-3\)</span> is a factor of 66</div></li>
+<li id="li-263"><div class="para" id="p-930"><span class="process-math">\(\displaystyle 13\mid 73\)</span></div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-181"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-931">Let <span class="process-math">\(n\in \mathbb{Z}\text{.}\)</span> Determine if the following statements are true or false. Justify your answer.</div> <ol class="lower-alpha">
+<li id="li-264"><div class="para" id="p-932">3 divides <span class="process-math">\((3n+1)(3n+2)(3n+3)\text{.}\)</span>
+</div></li>
+<li id="li-265"><div class="para" id="p-933">
+<span class="process-math">\(6n(2n+10)\)</span> is divisible by 4.</div></li>
+<li id="li-266"><div class="para" id="p-934">100 divides <span class="process-math">\((5n)^2(8n+24).\)</span>
+</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-182"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-935">Show that the following statement is false: For all integers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> if <span class="process-math">\(3\mid (a+b)\)</span> then <span class="process-math">\(3\mid (a-b)\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-183"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para logical" id="p-936">
+<div class="para">Recall that the standard factored form of an integer is a product of powers of a prime, as in <a href="" class="xref" data-knowl="./knowl/T_FTofArith.html" title="Theorem 4.3.6: Unique Factorization Theorem">Theorem 4.3.6</a>.</div>
+<ol class="lower-alpha">
+<li id="li-267"><div class="para" id="p-937">Write <span class="process-math">\(6!\)</span> in standard factored form.</div></li>
+<li id="li-268"><div class="para" id="p-938">Write <span class="process-math">\(20!\)</span> in standard factored form.</div></li>
+<li id="li-269"><div class="para" id="p-939">Without computing the value of <span class="process-math">\((20!)^2\)</span> determine how many zeros are at the end of this number when written in decimal form. Justify your answer.</div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-5" id="hint-5"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-5"><div class="hint solution-like"><div class="para" id="p-940">For (c), What prime factors correspond to zeros at the end of a number?</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-184"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="p-941">Prove, using the definition of divisibility, for all integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\text{,}\)</span> if <span class="process-math">\(a\mid b\)</span> and <span class="process-math">\(a\mid c\)</span> then <span class="process-math">\(a\mid (b+c)\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-185"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="p-942">Prove or disprove: The product of any two even integers is a multiple of 4.</div></article><article class="exercise exercise-like" id="exercise-186"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="p-943">Prove or disprove: For all integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\text{,}\)</span> if <span class="process-math">\(ab\mid c\)</span> then <span class="process-math">\(a\mid c\)</span> and <span class="process-math">\(b\mid c\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-187"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para" id="p-944">Prove or disprove: For all integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\text{,}\)</span> if <span class="process-math">\(a\mid bc\)</span> then <span class="process-math">\(a\mid b\)</span> or <span class="process-math">\(a\mid c\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-188"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="para" id="p-945">Prove or disprove: For all integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\text{,}\)</span> if <span class="process-math">\(a\)</span> is a factor of <span class="process-math">\(c\)</span> then <span class="process-math">\(ab\)</span> is a factor of <span class="process-math">\(c\text{.}\)</span>
+</div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="rationals4-2.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="cases4-4.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

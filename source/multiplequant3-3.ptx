@@ -1,0 +1,306 @@
+<section xml:id="multiplequant3-3">
+  <title>Statements with Multiple Quantifiers</title>
+
+  <p>Many statements in mathematics involve multple quantifiers. For example, <q>For all real numbers <m>x</m>, there exists a real number <m>y</m> with <m>x+y=0</m>.</q> These statements, though frequent in math courses, represent some of the most complicated types of statements to understand. In this section we will try to understand the general structure of such statements.</p>
+
+<p>Let's look at the various ways we could have statements with two quantifiers. Since we have two quantifiers, we will have two variables. Thus, our predicate will now involve both variables. We can use the notation <m>P(x, y)</m> to mean a statement about <m>x</m> and <m>y</m>.</p>
+
+<ul>
+  <li><p><m>\forall x\in D, \exists y\in E, P(x, y)</m>.</p>
+  <p>This means we can find a <m>y</m> in <m>E</m> that makes <m>P(x, y)</m> true for each <m>x</m> in <m>D</m>. In such statements <m>y</m> will often depend on <m>x</m>.</p>
+  </li>
+  <li><p><m>\exists x\in D, \forall y\in E, P(x, y)</m>.</p>
+  <p>The order of the quantifiers matters. This means we can find a <em>single</em> <m>x</m> in <m>D</m> that makes <m>P(x, y)</m> true for every <m>y</m> in <m>E</m>. In such statements <m>x</m> does not depend on <m>y</m>. The same <m>x</m> must work for all the <m>y</m>'s.</p>
+  </li>
+  <li><p><m>\forall x\in D, \forall y\in E, P(x, y)</m>.</p>
+  <p>This means <m>P(x, y)</m> is true for all <m>x\in D</m> and for all <m>y\in E</m>.</p>
+  </li>
+  <li><p><m>\exists x\in D, \exists y\in E, P(x, y)</m>.</p>
+  <p>This means <m>P(x, y)</m> is true for for at least one <m>x\in D</m> and at least one <m>y\in E</m>.</p>
+  </li>
+</ul>
+
+  <example xml:id="E_multquant1"><title>Statements with Multiple Quantifiers</title>
+    <p>Let <m>x, y\in\mathbb{R}</m>. Determine whether the following statements are true or false.</p>
+    <me>\forall x, \exists y, x+y=5.</me>
+    <p>For any <m>x</m> can you always find a corresponding <m>y</m> with <m>x+y=5</m>? </p>
+    <answer><p>Yes, for each <m>x</m> let <m>y=5-x</m>. So the statement is true.</p></answer>
+    <me>\exists x, \forall y, x+y=5.</me>
+    <p>Is there a single <m>x</m> that works for all <m>y</m>? </p>
+    <answer><p>No, no single <m>x</m> will always have <m>x+y=5</m>. So the statement is false.</p></answer>  
+  </example>
+
+
+
+  <activity><introduction><p>Let <m>x, y\in \mathbb{Z}^{nonneg}</m>. Determine if each statement is true or false. Give a reason for your answer.</p></introduction>
+
+    <task><p><m>\forall x\ \exists y, x &lt; y</m>.</p></task>
+    <task><p><m>\exists y\ \forall x, x &lt; y</m>.</p></task>
+    <task><p><m>\exists x\ \forall y, x &lt; y</m>.</p></task>
+    <task><p><m>\forall y\ \exists x, x &lt; y</m>.</p></task>
+    <task><p><m>\exists x\ \exists y, x &lt; y</m>.</p></task>
+    <task><p><m>\forall x\ \forall y, x &lt; y</m>.</p></task>
+  </activity>
+
+  <p>Although we won't study the mathematical context of the following example in this class, it is a classic example in mathematics of a statement with multiple quantifiers and a conditional. It is so important that it is the subject of one set of math bike racks in front of Taylor Hall!</p>
+
+  <example xml:id="E_deflimit"><title>Definition of a Limit</title>
+    <p>The definition of the limit of a function: For every <m>\epsilon>0</m>, there exists a <m>\delta>0</m> such that if <m>|x-a|&lt;\delta</m> then <m>|f(x)-L|&lt;\epsilon</m>. Or in symbols, <m>\forall\epsilon>0, \exists\delta>0, |x-a|&lt;\delta\rightarrow |f(x)-L|&lt;\epsilon</m>.</p>
+  </example>
+
+  <p>Now, we want to be able to negate statements with multiple quantifiers. There is nothing really new here, we just negate our quantified statements as we did for single quantifiers.</p>
+
+<assemblage xml:id="B_negmultquant">
+  <title>Negating Statements with Multiple Quantifiers</title><idx><h>quantifier</h><h>negation</h></idx>
+
+  <p>The negation of <m>\forall x\in D, \exists y\in E, P(x, y)</m> is <m>\exists x\in D, \forall y\in E, \sim P(x, y)</m>;</p>
+  <p>In notation, <me>\sim(\forall x\in D, \exists y\in E, P(x, y))\equiv \exists x\in D, \forall y\in E, \sim P(x, y).</me></p>
+  <p>The negation of <m>\exists x\in D, \forall y\in E, P(x, y)</m> is <m>\forall x\in D, \exists y\in E, \sim P(x, y)</m>;</p>
+  <p>In notation, <me>\sim(\exists x\in D, \forall y\in E, P(x, y))\equiv \forall x\in D, \exists y\in E, \sim P(x, y).</me></p>
+
+  <p>The negation of <m>\forall x\in D, \forall y\in E, P(x, y)</m> is <m>\exists x\in D, \exists y\in E, \sim P(x, y)</m>;</p>
+  <p>In notation, <me>\sim(\forall x\in D, \forall y\in E, P(x, y))\equiv \exists x\in D, \exists y\in E, \sim P(x, y).</me></p>
+
+  <p>The negation of <m>\exists x\in D, \exists y\in E, P(x, y)</m> is <m>\forall x\in D, \forall y\in E, \sim P(x, y)</m>;</p>
+  <p>In notation, <me>\sim(\exists x\in D, \exists y\in E, P(x, y))\equiv \forall x\in D, \forall y\in E, \sim P(x, y).</me></p>
+</assemblage>
+
+  <example xml:id="E_negdeflimit"><title>Negating the Definition of a Limit</title>
+    <p>If you take Elementary Analysis, you will need to be able to negate the definition of the limit from <xref ref="E_deflimit"/>. Negate <q>For every <m>\epsilon>0</m>, there exists a <m>\delta>0</m> such that if <m>|x-a|&lt;\delta</m> then <m>|f(x)-L|&lt;\epsilon</m>.</q> Hint: Our statement has the form <m>\forall \epsilon, \exists \delta, P(\delta)\rightarrow Q(\epsilon).</m> So the negation has the form <m>\exists \epsilon, \forall \delta, P(\delta)\wedge \sim Q(\epsilon).</m></p>
+    <answer><m>\exists\epsilon>0, \forall\delta>0, |x-a|&lt;\delta\wedge |f(x)-L|\geq\epsilon</m>.</answer>
+  </example>
+
+  <activity><introduction><p>Write the negation of the following statements. Then determine whether the original statment is true or false.</p></introduction>
+    <task><p>There exists an integer <m>n</m> such that for all integers <m>m,\ nm=0</m>.</p></task>
+    <task><p>For every integer <m>n</m> there exists an integer <m>m</m> such that <m>nm=0</m>.</p></task>
+</activity>
+
+<activity><introduction><p>Write the negation of the following statements. Then determine whether the original statment is true of false.</p></introduction>
+    <task><p>There exists an integer <m>n</m> such that for all integers <m>m,\ n+m=0</m>.</p></task>
+    <task><p>For every integer <m>n</m> there exists an integer <m>m</m> such that <m>n+m=0</m>.</p></task>
+</activity>
+
+  <example xml:id="E_translatingmult"><title>Translating Statements with Multiple Quantifiers</title>
+    <p>Let <m>L(x, y)</m> be <q><m>x</m> loves <m>y</m></q>. Translate each of the following statements using quantifiers and variables.</p>
+    <p>Someone loves everyone.</p>
+    <answer><m>\exists x, \forall y, L(x, y).</m></answer>
+    <p>Someone is loved by everyone.</p>
+    <answer><m>\exists x, \forall y, L(y, x).</m></answer>
+    <p>Everyone loves someone.</p>
+    <answer><m>\forall x, \exists y, L(x, y).</m></answer>
+    <p>Everyone is loved by someone.</p>
+    <answer><m>\forall x, \exists y, L(y, x).</m></answer>
+    
+  </example>
+
+  
+    <reading-questions>
+      <title>Check Your Understanding</title>
+      
+      <exercise><statement><p>Write the negation of <m>\forall x\in \mathbb{R}, \exists y\in \mathbb{R}, xy>0</m>.</p></statement>
+      <answer><m>\exists x\in \mathbb{R}, \forall y\in \mathbb{R}, xy\leq 0</m></answer></exercise>
+
+      <exercise><statement><p>True or False: <m>\forall x\in \mathbb{R}, \exists y\in \mathbb{R}, xy>0</m>.</p></statement>
+      <answer>False. If <m>y=0</m>, no <m>x</m> will have <m>xy>0</m></answer></exercise>
+
+      <exercise><statement><p>Write the negation of <m>\exists x\in \mathbb{R}, \forall y\in \mathbb{R}, xy>0</m>.</p></statement>
+      <answer><m>\forall x\in \mathbb{R}, \exists y\in \mathbb{R}, xy\leq 0</m></answer></exercise>
+
+      <exercise><statement><p>True or False: <m>\exists x\in \mathbb{R}, \forall y\in \mathbb{R}, xy>0</m>.</p></statement>
+      <answer>False. No matter which <m>x</m> you choose, <m>y=-x</m> will have <m>xy\leq 0</m></answer></exercise>
+
+
+      <exercise><statement><p>Write the negation of <m>\forall n\in \{\textrm{even integers}\}, \exists k\in \mathbb{Z}, n=2k</m>.</p></statement>
+      <answer><m>\exists n\in \{\textrm{even integers}\}, \forall k\in \mathbb{Z}, n\neq 2k</m></answer></exercise>
+
+      <exercise><statement><p>True or False: <m>\forall n\in \{\textrm{even integers}\}, \exists k\in \mathbb{Z}, n=2k</m>.</p></statement>
+      <answer>True. Every even integer is 2 times an integer.</answer></exercise>
+
+      
+
+    </reading-questions>
+
+    <exercises>
+      
+      <exercise><statement>
+        <p>
+    Let <m>D=E=\{-2, -1, 0, 1, 2\}</m>. Explain why each of the following statements are true.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    <m>\forall x\in D,\ \exists y \in E</m>, such that <m>x+y=0</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\exists x\in D</m> such that <m>\forall y\in E, x+y=y</m>.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>D=E=\{-2, -1, 0, 1, 2\}</m>. Write the negations for each of the following statements and determine which is true, the given statement or the negation.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    <m>\forall x\in D,\ \exists y \in E</m>, such that <m>x+y=1</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\exists x\in D</m> such that <m>\forall y\in E, x+y=-y</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\forall x\in D,\ \exists y \in E</m>, such that <m>xy\geq y</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\exists x\in D</m> such that <m>\forall y\in E, x\leq y</m>.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+
+           <exercise><statement>
+        <p>
+    For each of the following, (1) rewrite the statement in English without the symbols <m>\forall</m> or <m>\exists</m> or variables. Then (2) indicate whether the statement is true or false.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    <m>\forall</m> real numbers <m>x</m>, <m>\exists</m> a real number <m>y</m> such that <m>x+y=0</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\exists</m> a real number <m>y</m> such that <m>\forall</m> real numbers <m>x</m>, <m>x+y=0</m>.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+
+      <exercise><statement>
+        <p>
+    For each of the following, (1) rewrite the statement in English without the symbols <m>\forall</m> or <m>\exists</m> or variables. Express your answer as simply as possible. Then (2) write the negation for each statement.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    <m>\forall</m> colors <m>C</m>, <m>\exists</m> a candy <m>A</m> such that <m>A</m> is colored <m>C</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\forall</m> odd integers <m>n</m>, <m>\exists</m> an integer <m>k</m> such that <m>n=2k+1</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\exists</m> a real number <m>u</m> such that <m>\forall</m> real numbers <m>v</m>, <m>uv=v</m>.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+ 
+      <exercise><statement>
+        <p>
+    For each of the following, (1) write a new statement by interchanging the symbols <m>\forall</m> and <m>\exists</m>. Then (2) state which is true: the given statement, the interchanged statement, neither, or both.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    <m>\forall x\in \mathbb{R}</m>, <m>\exists y\in \mathbb{R}</m> such that <m>x&lt;y</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\exists x\in \mathbb{R}</m> such that <m>\forall y\in \mathbb{R}^-</m> (the set of negative real numbers), <m>x&gt;y</m>.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    For each of the following statements, (1) rewrite the statement formally using quantifiers and variables, and (2) write the negation for the statement.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Everybody trusts somebody.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Any even integer equals twice some integer.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Determine whether the following statements are true or false. Give a sentence or two explaining your answer.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    <m>\forall x\in \mathbb{Z}^+</m>, <m>\exists y\in \mathbb{Z}^+</m> such that <m>x=y+1</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\forall x\in \mathbb{Z}</m>, <m>\exists y\in \mathbb{Z}</m> such that <m>x=y+1</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\exists x\in \mathbb{R}</m>, such that <m>\forall y\in \mathbb{R}</m>, <m>x=y+1</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\forall x\in \mathbb{R}^+</m>, <m>\exists y\in \mathbb{R}^+</m> such that <m>xy=1</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\forall x\in \mathbb{R}</m>, <m>\exists y\in \mathbb{R}</m> such that <m>xy=1</m>.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+    </exercises>
+
+</section>

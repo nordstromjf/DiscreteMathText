@@ -1,0 +1,17 @@
+<chapter xml:id="chapter7" xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Functions</title>
+  <introduction>
+   
+    <p>
+      In this chapter we revisit functions. We will look at functions as more than just maps of real numbers. We will also study the properties of one-to-one and onto, as these properties are central to understanding maps and relationships between objects in many areas of mathematics. 
+    </p>
+
+  
+    
+
+  </introduction>
+  <xi:include  href="functions7-1.ptx" />
+  <xi:include  href="onetooneonto7-2.ptx" />
+  
+  
+</chapter>

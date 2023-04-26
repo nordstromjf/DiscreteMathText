@@ -1,0 +1,403 @@
+<section xml:id="multrule9-2">
+  <title>Multiplication Rule</title><idx>multiplication rule</idx>
+
+  <p>In this section we look at how to count a process that has several steps. We start with an example.</p>
+
+  <example xml:id="E_cointosscount"><title>Coin Toss</title>
+    <p>Toss a coin three times. How many ways can you get exactly two heads in the three tosses?</p>
+    <p>First toss: H or T</p>
+    <p>Second toss: H or T</p>
+    <p>Third toss: H or T</p>
+    <p>If we think about what happens after the first toss, we have H or T. For each of those outcomes, we get H or T on the second toss, so we now have 4 outcomes: HH, HT, TH, TT</p>
+    <p>With the third toss, each of our four outcomes could end with H or T, giving us 8 outcomes: HHH, HTH, THH, TTH, HHT, HTT, THT, TTT.</p>
+    <p>Out of these 8 possible outcomes, there are 3 outcomes with exactly 2 heads: HTH, THH, HHT.</p>
+
+    <p>We can also see the possibilies using a <term>possibility tree</term>, where the first (top) level represents the first toss, the second level, the second toss, and the third level, the third toss. The blue <q>paths</q> show the outcomes with exactly two Heads.</p>
+
+ 
+
+    <figure xml:id="F_probtree">
+  <caption>Possibility tree for tossing a coin three times</caption>
+  <image width="40%" xml:id="treecointoss">
+    <latex-image>
+\begin{tikzpicture}[level distance=1.5cm,
+    level 1/.style={sibling distance=3cm},
+    level 2/.style={sibling distance=1.5cm},
+    level 3/.style={sibling distance=.75cm}]
+   \node {$\bullet$}
+     child {node [text=blue]{$H$}
+        child {node [text=blue]{$H$}
+          child {node {$H$}}
+         child{node [text=blue] {$T$}}}
+      child{node [text=blue]{$T$}
+          child{node [text=blue]{$H$}}
+         child{node {$T$}}}
+    }
+     child {node [text=blue] {$T$}
+        child {node [text=blue]{$H$}
+          child {node [text=blue] {$H$}}
+         child{node {$T$}}}
+        child{node {$T$}
+        child{node {$H$}}
+          child{node {$T$}}}
+    };
+\end{tikzpicture}
+
+
+</latex-image></image>
+</figure>
+    
+  </example>
+
+  <p>In <xref ref="E_cointosscount" />, we saw that each toss doubled the number of outcomes from the previous toss. For example, if we tossed the coin 4 times, we would have <m>2^4=16</m> outcomes. We are using the multiplication rule to determine the number of outcomes.</p>
+
+<assemblage xml:id="B_multrule">
+  <title>Multiplication Rule</title>
+  <p>Supose we have a process with <m>k</m> steps, where
+  <ul>
+    <li>the first step can be done in <m>n_1</m> ways;</li>
+    <li>the second step can be done in <m>n_2</m> ways;</li>
+    <li>the <m>k^{th}</m> step can be done in <m>n_k</m> ways.</li>
+  </ul>
+  Then the total operation can be done in <m>n_1\cdot n_2\cdots n_k</m> ways.
+  </p>
+</assemblage>
+
+  <activity><introduction><p>Suppose a restaurant offers 3 appetizers, 3 entrees, and 2 desserts.</p></introduction>
+<task><p>Draw a possibility tree for how many different meals (one appetizer, one entree, and one dessert) you can create.</p></task>
+<task><p>How many total meals can you create?</p></task></activity>
+  
+  <example xml:id="E_licenseplates1"><title>Multiplication Rule: License Plates</title>
+    <p>Find the number of license plates that can be made if each one consists of two letters from A through E, followed by four digits from 1 through 9.</p>
+    <p>There are 5 choices for the letters: A, B, C, D, E.</p>
+    <p>There are 9 choices for the digits: 1, 2, 3, 4, 5, 6, 7, 8, 9.</p>
+
+    <p>First choose a letter, then another letter, then choose each of the numbers. We can use the multiplication rule since we can choose each character as a process.</p>
+
+    <p>Thus, we have <m>5\cdot 5\cdot 9\cdot 9\cdot 9\cdot 9=164025</m> license plates.</p>
+
+    <p>Now, suppose you cannot repeat a number in any one license plate. How many license plates can we make?</p>
+
+    <p>When choosing the numbers, first we have 9 choices, then 8, since we can't choose the same number as the first digit, etc.</p>
+    <p>The total number of license plates if we can't repeat a number is <m>5\cdot 5\cdot 9\cdot 8\cdot 7\cdot 6=75600</m>.</p>
+  </example>
+
+  <activity><introduction><p>Suppose a license plate consists of 3 letters followed by 2 digits.</p></introduction>
+<task><p>How many license plates can you make?</p></task>
+<task><p>How many license plates can you make if you cannot repeat a letter or number?</p></task></activity>
+
+  <p>A <term>string of length <m>n</m> over <m>s</m></term><idx>string</idx> is a list of <m>n</m> characters where the characters come from set <m>S</m>. A <term>binary string</term><idx><h>string</h><h>binary</h></idx> or <term>bit string</term><idx>bit string</idx> is a string with <m>S=\{0, 1\}</m>. The <term>null string</term><idx>null string</idx> is the string of length 0, denoted <m>\varepsilon</m>.</p>
+
+  <example xml:id="E_bitstrings1"><title>Multiplication Rule: Strings</title>
+    <p>Find the number of bit strings of length 5.</p>
+    <answer><m>2\cdot 2\cdot 2\cdot 2\cdot 2=32</m></answer>
+
+    <p>Find the number of <q>words</q> of length 4. These are just strings where <m>S</m> is the alphabet.</p>
+    <answer><m>26^{4}</m></answer>
+
+    <p>Find the number of strings of length 7, where <m>S=\{a, b, c, d, 1, 2, 3, 4\}</m>.</p>
+    <answer><m>8^{7}</m></answer>
+  </example>
+
+  <definition xml:id="D_permutation"><statement><p>A <term>permutation</term><idx>permutation</idx> of a set <m>S</m> is an ordering of the elements of <m>S</m> in a row.</p></statement></definition>
+
+  <example xml:id="E_permutation"><title>Permutations of a Set</title>
+    <p>
+      Let <m>S=\{a, b, c\}</m>. Then a permutation of <m>S</m> is a list of elements in <m>S</m>. List all the permutations of <m>S</m>.</p>
+      <p>Since we have 3 choices for our first element, then 2 choices for the second, and 1 for the last, there are <m>(3)(2)(1)=6</m> permutations.</p>
+
+      <p>The permutations are abc, acb, bca, bac, cab, cba.</p> 
+
+      <p>How many permutations are there of the set <m>S=\{a, b, c, d\}</m>?</p>
+      <answer><m>4\cdot 3\cdot 2\cdot 1=24</m></answer>
+    </example>
+
+    <activity><statement><p>List all the permutations of <m>S=\{1, 2, 3\}</m>.</p></statement><hint><p>There are 6.</p></hint></activity>
+
+    <activity><statement><p>How many permutations are there of a set with 5 elements?</p></statement></activity>
+
+    <activity xml:id="A_numperm"><statement><p>How many permutations are there of a set with <m>n</m> elements?</p></statement></activity>
+
+    <p><xref ref="A_numperm" /> gives us a formula for finding the number of permutations of a set with <m>n</m> elements.</p>
+
+    <theorem xml:id="T_numperm"><statement><p>The number of permutations of a set with <m>n</m> elements is <m>n</m> factorial, <m>n!</m>.</p></statement></theorem>
+
+    <definition xml:id="D_rpermutation"><statement><p>An <term><m>r</m>-permutation</term><idx><m>r</m>-permutation</idx> of a set <m>S</m> is an ordered selection of <m>r</m> elements taken from the <m>n</m> elements of <m>S</m> in a row. We use the notation <m>P(n, r)</m><notation><usage><m>P(n, r)</m></usage><description>the number of <m>r</m>-permutations from a set of <m>n</m> elements</description></notation> for the number of <m>r</m>-permutations from a set of <m>n</m> elements.</p></statement></definition>
+
+  <example xml:id="E_rpermutation"><title><m>r</m>-Permutations of a Set</title>
+    <p>
+      Let <m>S=\{a, b, c, d, e\}</m>. Then a 3-permutation of <m>S</m> is a list of 3 (non-repeating) elements from <m>S</m>. For example, ace, dbe, bda are all 3-permutations.</p>
+      <p>Find the number of 3-permutations of <m>S</m>, <m>P(5, 3)</m>.</p>
+
+      <p>We have 5 choices for the first letter, 4 choices for the second, and 3 choices for the last. Thus, <m>P(5, 3)=5\cdot 4\cdot 3=60</m>.</p> 
+
+      <p>How many 4-permutations are there of the standard English alphabet?</p>
+      <answer><m>26\cdot 25\cdot 24\cdot 23</m></answer>
+    </example>
+
+    <activity><statement><p>How many 2-permutations are there of <m>S=\{1, 2, 3\}</m>?</p></statement></activity>
+    <activity><statement><p>How many 3-permutations are there of <m>S=\{1, 2, 3, 4, 5\}</m>? </p></statement><hint><p>Think of finding a way to count them using the multiplication rule rather than writing them all down.</p></hint></activity>
+    <activity xml:id="A_numrperm"><statement><p>Try to find a general formula for counting all <m>r</m>-permutations in a set of <m>n</m> elements.</p></statement></activity>
+
+    <p><xref ref="A_numrperm" /> gives us a formula for finding the number of <m>r</m>-permutations of a set with <m>n</m> elements.</p>
+
+
+    <theorem xml:id="T_numrperm"><statement><p>The number of <m>r</m>-permutations of a set with <m>n</m> elements is <me>P(n, r)=n\cdot (n-1)\cdots (n-r+1),</me> which is often easier to calculate using <me>P(n, r)=\frac{n!}{(n-r)!}.</me></p></statement></theorem>
+
+    <activity><statement><p>Find <m>P(10, 8)</m>.</p></statement></activity>
+
+    <example xml:id="E_numberofintegers"><title>Finding Four-Digit Integers</title>
+    <p>How many odd integers are there from 1000 to 9999?</p>
+    <p>The number is a string of 4 digits. The first digit cannot be 0, so there are 9 choices: 1 through 9. The second and third digits can be anything from 0 to 9, so there are 10 choices for each. The last digit must be odd, so the only choices are 1, 3, 5, 7, 9.</p>
+
+    <p>Thus, there are <m>(9)(10)(10)(5)=4500</m> odd numbers.</p>
+
+    <p>How many integers are there from 1000 to 9999 that have distict digits?</p>
+    <p> The first digit cannot be 0, so there are 9 choices: 1 through 9. The second digit can be anything from 0 to 9, except for whatever the first digit is, so there are 9 choices. Similarly, there are 8 choices for the third digit, and 7 for the last digit.</p>
+
+    <p>Thus, there are <m>(9)(9)(8)(7)=4536</m> numbers with distinct digits.</p>
+  </example>
+
+
+    <reading-questions>
+      <title>Check Your Understanding</title>
+      
+
+      <exercise><statement><p>Toss a coin 4 times. How many ways are there to get exactly 1 Head?</p></statement>
+      <answer><m>4</m></answer></exercise>
+
+      <exercise><statement><p>Toss a coin 4 times. How many ways are there to get exactly 2 Heads?</p></statement>
+      <answer><m>6</m></answer></exercise>
+
+      <exercise><statement><p>Toss a coin 4 times. How many ways are there to get 0 Heads?</p></statement>
+      <answer><m>1</m></answer></exercise>
+
+       <exercise><statement><p>How many 3 digit numbers begin with 1 or 2 and end with 2, 3, or 4?</p></statement>
+      <answer><m>(2)(10)(3)=60</m></answer></exercise>
+
+      <exercise><statement><p>How many 3 digit numbers are divisible by 5?</p></statement>
+      <answer><m>(9)(10)(2)=180</m></answer></exercise>
+
+       <exercise><statement><p>Calculate the number of permutations of a set with 6 elements.</p></statement>
+      <answer><m>6!</m></answer></exercise>
+
+       <exercise><statement><p>Calculate <m>P(7, 4)</m>.</p></statement>
+      <answer><m>(7)(6)(5)(4)</m></answer></exercise>
+
+      <exercise><statement><p>Calculate <m>P(7, 2)</m>.</p></statement>
+      <answer><m>(7)(6)</m></answer></exercise>
+
+      
+
+    </reading-questions>
+
+    <exercises>
+      <exercise><statement><p>
+    A bag contains two green balls (labeled <m>G_1</m> and <m>G_2</m>) and one purple ball. A second bag contains one green ball and two purple balls (labeled <m>P_1</m> and <m>P_2</m>). Suppose the following experiment is performed: One of the two bags is chosen at random. Next a ball is randomly chosen from the bag. Then a second ball is chosen from the same bag without replacing the first ball.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Construct the possibility tree showing all possible outcomes of the experiment.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    What is the total number of outcomes in this experiment?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    What is the probability that two green balls are chosen?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    What is the probability that two balls of different colors are chosen?
+  </p>
+    </li>
+
+  </ol></statement></exercise>
+      <exercise><statement>
+        <p>
+    A person buying a computer system is offered a choice of three models of the basic unit, two models of the keyboard, and two models of printer. How many distinct systems can be purchased?
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Recall that a bit string is a finite sequence of 0’s and 1’s.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    How many bit strings have length 8?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    How many bit strings have length 8 and begin with 3 0’s?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    How many bit strings have length 8 and begin and end with a 1?
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    A coin is tossed four times. Each time the result <m>H</m> for heads or <m>T</m> for tails is recorded. Assume heads and tails are equally likely on each toss.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    How many distinct outcomes are possible?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    What is the probability that exactly two heads occur?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    What is the probability that exactly one head occurs?
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Suppose a license plate consists of four letters followed by three digits.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    How many different license plates are possible?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    How many license plates could begin with and <m>A</m> and end with 0?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    How many license plates could begin with <m>CATS</m>?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    How many license plates are possible if you cannot repeat a letter or number (all the letters and numbers are distinct)?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    How many license plates could begin with <m>IF</m> and have no repeated letters or numbers?
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>Consider all two digit integers 10-99.</p>
+        <ol marker="a">
+    <li>
+      <p>
+    How many integers are there from 10 through 99?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    How many odd integers are there from 10 through 99?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    How many integers from 10 through 99 have distinct digits?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    How many odd integers from 10 through 99 have distinct digits?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    What is the probability that a randomly chosen two-digit number has distinct digits? has distinct digits and is odd?
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>We want to count the number of possible functions from a finite set to a finite set. You may need to recall the definition of a function, <xref ref="D_function" />.</p>
+        <ol marker="a">
+    <li>
+      <p>
+    How many functions are there from a set with three elements to a set with four elements?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    How many functions are there from a set with five elements to a set with two elements?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    How many functions are there from a set with <m>m</m> elements to a set with <m>n</m> elements, where <m>m</m> and <m>n</m> are positive integers?
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>We consider various arrangements of the letters in the word <m>ALGORITHM</m>.</p>
+        <ol marker="a">
+    <li>
+      <p>
+    How many ways can the letters of the word <m>ALGORITHM</m> be arranged in a row?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    How many ways can the letters of the word <m>ALGORITHM</m> be arranged in a row if <m>A</m> and <m>L</m> must remain together (in order) as a unit?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    How many ways can the letters of the word <m>ALGORITHM</m> be arranged in a row if the letters <m>GOR</m> must remain together (in order) as a unit?
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+    </exercises>
+
+</section>

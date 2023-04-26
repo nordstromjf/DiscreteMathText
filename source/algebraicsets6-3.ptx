@@ -1,0 +1,301 @@
+<section xml:id="algebraicsets6-3">
+  <title>Algebraic Proofs and Counterexamples</title>
+
+  <p>The proofs we did in the last section involved looking at elements in sets. We could translate statements about sets into logical statement such as <q>and</q>s, <q>or</q>s, and conditionals. This allowed us to prove many other properties of sets, such as DeMorgan's Laws. But now that we have these properties, we can use them to prove new properties in a more algebraic way.</p>
+
+  <p>First we look at how to disprove statements involving sets. As we saw in <xref ref="directproof4-1" />, we can disprove a statement with a counterexample.</p>
+
+  <p>To prove a statement is false, give a specific counterexample. This means defining specific sets for which the property fails. If you are trying to decide if a statement is true or false, you can experiment with small sets, or you can draw a Venn diagram. The Venn diagram itself is <em>not</em> a proof or a counterexample. But it can help you decide which you should be trying to find. </p>
+
+  <example xml:id="E_setcounterexample"><title>Finding a Counterexample</title><p>
+    Prove or disprove <m>\forall A, B, C,</m> if <m>A\nsubseteq B</m> and <m>B\nsubseteq C</m>, then <m>A\nsubseteq C</m>.</p>
+    <p>This statement is false. Our counterexample should satisfy the negation of the statement: <m>A\nsubseteq B, B\nsubseteq C</m>, and <m>A\subseteq C</m>. Find small sets that satisfy the negation.</p>
+
+    <p>For example, we can try <m>A=\{1, 2\}, B=\{4, 5\}, C=\{1, 2, 3\}</m>. Then <m>A\nsubseteq B, B\nsubseteq C</m>, and <m>A\subseteq C</m>. Thus, we have a counterexample.</p>
+ </example>
+
+  <p>Advice for finding counterexamples:
+    <ul>
+      <li>Write the negation of the statement so you can make sure your sets satisfy the appropriate conditions.</li>
+      <li>Most counterexamples for the types of statements we see in this chapter can be found without needing to find <q>tricky</q> sets. So just try something, it will probably work.</li>
+      <li>You might need to be careful about whether your sets intersect or not.</li>
+      <li>If you need counterexamples that involve set complements, it is helpful to define a small universal set such as <m>U=\{1, 2, 3, 4, 5, 6\}</m>. Then if <m>A=\{1, 2, 3\}</m>, <m>A^C=\{4, 5, 6\}</m>, which is easier to work with than,  say, all the integers except 1, 2, 3. </li>
+    </ul></p>
+
+  <p>Now we want to be able to use the list of properties from the end of the previous section, <xref ref="L_SetIdent" text="title"/>, to prove statements algebraically. In this case, we do not need to use elements, but we can use properties such as the distributive property or DeMorgan's Laws to rewrite our sets.</p>
+
+  <example xml:id="E_algebraicproof"><title>Algebraic Set Theory Proof</title>
+  <p>Prove <m>A-(A\cap B)=A-B</m> using properties of sets. </p>
+  <proof><md>
+    <mrow>A-(A\cap B) &amp;= A\cap(A\cap B)^C \ \ \text{ Set Difference Law}</mrow>
+    <mrow> &amp;= A\cap(A^C\cup B^C) \ \ \text{ DeMorgan's Law}</mrow>
+    <mrow> &amp;= (A\cap A^C)\cup (A\cap B^C) \ \ \text{ Distributive Law}</mrow>
+    <mrow> &amp;= \emptyset\cup (A\cap B^C) \ \ \text{ Complement Law}</mrow>
+    <mrow> &amp;= A\cap B^C \ \ \text{ Identity Law}</mrow>
+    <mrow> &amp;= A-B \ \ \text{ Set Difference Law}</mrow>
+  </md></proof>
+</example>
+
+<activity><statement><p>Use identities from the <xref ref="L_SetIdent" text="title" /> to prove for all sets <m>A</m> and <m>B</m>, <m>A\cup(B-A)=A\cup B</m></p></statement></activity>
+
+<activity><statement><p>Prove or disprove for all sets <m>A, B</m> and <m>C</m>, <m>A-(B-C)=(A-B)-C</m>.</p></statement><hint><p> To decide if a statement is true or false, draw a Venn diagram for each side of the equality.  If the two diagrams are the same, provide a proof. If the two diagrams are different, provide a specific counterexample.</p></hint></activity>
+
+<activity><statement><p>Prove or disprove for all sets <m>A, B</m> and <m>C</m>, if <m>A\subseteq B</m> then <m>A\cap(B\cap C)^{C}=\emptyset</m>.</p></statement><hint><p>It might be easier to define a small universal set for this one.</p></hint></activity>
+
+  <p>Recall the power set of a set <m>A</m>, <m>\mathcal{P}(A)</m><idx>power set</idx>, is the set of all subsets of <m>A</m>.</p>
+
+  <example xml:id="E_powersetproof"><title>Power Set Proof</title>
+  <p>
+    Prove for all sets <m>A</m> and <m>B</m>, <me>\mathcal{P}(A\cap B)=\mathcal{P}(A)\cap \mathcal{P}(B)</me>.
+    <proof>
+      <p>Since we need to show two sets are equal we need to show both subsets. We should also note that elements of power sets are sets.</p>
+      <p><m>(\subseteq)</m>: Let <m>C\in \mathcal{P}(A\cap B)</m>. Then <m>C</m> must be a subset of <m>A\cap B</m>. Then <m>C\subseteq A</m> and <m>C\subseteq B</m>. This implies <m>C\in \mathcal{P}(A)</m> and <m>C\in \mathcal{P}(B)</m>. Thus, <m>C\in\mathcal{P}(A)\cap\mathcal{P}(B)</m>.</p>
+
+      <p><m>(\supseteq)</m>: Let <m>C\in \mathcal{P}(A)\cap\mathcal{P}(B)</m>. Then <m>C\in \mathcal{P}(A)</m> and <m>C\in \mathcal{P}(B)</m>. Then <m>C\subseteq A</m> and <m>C\subseteq B</m>. This implies <m>C</m> must be a subset of <m>A\cap B</m>. Thus, <m>C\in\mathcal{P}(A\cap B)</m>.</p>
+    </proof>
+  </p></example>
+
+<p>You might have noticed in this last proof that each of the subset proofs are really just the reverse of each other. If all the implications in our proof are really <q>if and only if</q> statements, then we can write the proof more succinctly as a single <q>if and only if</q> proof. We will show this technique in the next example. Be careful with if and only if proofs, though. Make sure that at each step both directions of the conditional are true. If you are unsure, you can always write you proof in two stages, as we did in the previous example. We generally use the symbol <m>\Leftrightarrow</m><notation><usage><m>\Leftrigharrow</m></usage><description>if and only if in proofs</description></notation> to mean <q>if and only if</q> in proofs.</p>
+
+<example xml:id="E_shortpowersetproof"><title>Power Set Proof, Shortened</title>
+  <p>
+    Prove for all sets <m>A, B</m>, <m>\mathcal{P}(A\cap B)=\mathcal{P}(A)\cap \mathcal{P}(B)</m>.</p>
+    <proof>
+      <p><md>
+        <mrow>&amp; C\in \mathcal{P}(A\cap B)</mrow>
+        <mrow>\Leftrightarrow &amp; C\subseteq A\cap B</mrow>
+        <mrow>\Leftrightarrow &amp; C\subseteq A \text{ and } C\subseteq B</mrow>
+        <mrow>\Leftrightarrow &amp; C\in \mathcal{P}(A) \text{ and } C\in \mathcal{P}(B)</mrow>
+        <mrow>\Leftrightarrow &amp; C\in\mathcal{P}(A)\cap\mathcal{P}(B).</mrow>
+      </md></p>
+    </proof>
+  </example>
+
+<p>Since we are looking at the power set, we can prove a formula for counting the number of elements of a power set. In this proof we will revisit proof by induction. The number of elements in a set, <m>S</m>, is denoted <m>|S|</m><notation><usage><m>|S|</m></usage><description>the number of elements in <m>S</m></description></notation>.</p>
+
+<theorem xml:id="T_numbereltspowerset"><statement><p>If <m>S</m> has <m>n</m> elements, then <m>\mathcal{P}(S)</m> has <m>2^n</m> elements.</p></statement></theorem>
+
+<proof>
+  <p>We will prove this by induction on the number of elements, <m>n</m>.</p>
+  <p>Base step: Let <m>n=0</m>. Then since <m>S</m> has 0 elements, <m>S=\emptyset</m>. The only subset of the empty set is <m>\emptyset</m>. Thus, <m>\mathcal{P}(S)=\{\emptyset\}</m>. Hence, <m>|\mathcal{P}(S)|=1</m>. Since <m>2^0=1</m>, if <m>n=0</m>, <m>\mathcal{P}(S)</m> has <m>2^n</m> elements.</p>
+
+  <p>Induction step: Assume if a set <m>S</m> has <m>k</m> elements, then <m>\mathcal{P}(S)</m> has <m>2^k</m> elements.</p>
+  <p>Show if a set <m>S</m> has <m>k+1</m> elements, then <m>\mathcal{P}(S)</m> has <m>2^{k+1}</m> elements.</p>
+  <p>Proof of induction step: Assume <m>|S|=k+1</m>. Let <m>b\in S</m>, then <m>S=A\cup \{b\}</m> where <m>A=S-\{b\}</m>, the set of elements of <m>S</m> except <m>b</m>. Then <m>A</m> has <m>k</m> elements, so by the induction assumption, <m>|\mathcal{P}(A)|=2^k</m>.</p>
+  <p>Now consider the subsets of <m>S</m>. Each subset either contains <m>b</m> or it doesn't. We know there are <m>2^k</m> subsets that do not contain <m>b</m>. We get all the subsets of <m>S</m> that do contain <m>b</m> by adding <m>b</m> to the sets that don't contain <m>b</m>. Thus, there are the same number of subsets that do contain <m>b</m> as those that don't. Hence, we have <m>2^k</m> subsets not containing <m>b</m> and <m>2^k</m> subsets  containing <m>b</m>.</p>
+
+  <p>Therefore, <m>S</m> has <m>2^k+2^k=2(2^k)=2^{k+1}</m> subsets, hence <m>\mathcal{P}(S)</m> has <m>2^{k+1}</m> elements.</p>
+</proof>
+
+<p>The next example demonstrates the proof of <xref ref="T_numbereltspowerset"/> in a specific set.</p>
+
+<example xml:id="E_countingsubsets"><title>Counting the Number of Subsets</title>
+<p>Let <m>S=\{1, 2, 3\}</m>. We can separate out the last element so, as in the proof of <xref ref="T_numbereltspowerset"/>, <m>b=3, A=\{1, 2\}</m>.</p>
+<p>We can look at the subsets of <m>S</m> that do not contain 3:
+<me>\emptyset, \{1\}, \{2\}, \{1, 2\}.</me>
+Now add 3 to each of these sets:
+<me>\{3\}, \{1, 3\}, \{2, 3\}, \{1, 2, 3\}.</me>
+You can check that we have all the possible subsets of <m>S</m>.
+</p>
+<p>If we count up the sets, we have <m>2^2</m> subsets not containing 3, and <m>2^2</m> subsets containing 3. Which gives us <m>2(2^2)=8=2^3</m> subsets of <m>S</m>. Hence, <m>|\mathcal{P}(S)|=2^3=8</m>.</p>
+</example>
+
+
+
+    <reading-questions>
+      <title>Check Your Understanding</title>
+
+      <p>Let <m>A, B, C</m> be sets and <m>U</m> be the universal set.</p>
+      
+
+      <exercise><statement><p>Give a counterexample to disprove <m>A\cap(B\cup C)=(A\cap B)\cup C</m>.</p></statement>
+      <answer><p>There are many possible answers. <m>A=\{1, 2\}, B=\{1, 3\}, C=\{2, 3\}</m> is one.</p></answer></exercise>
+
+      <exercise><statement><p>Give a counterexample to disprove <m>A\cup \emptyset=\emptyset</m>.</p></statement>
+      <answer><p>There are many possible answers. <m>A=\{1, 2\}</m> is one.</p></answer></exercise>
+
+      <exercise><statement><p>Give a counterexample to disprove <m>A\cup \emptyset\neq\emptyset</m>.</p></statement>
+      <answer><p><m>A=\emptyset</m>.</p></answer></exercise>
+
+
+      <exercise><statement><p>Give a counterexample to disprove <m>(A\cup B)^C=A^C\cup B^C</m>.</p></statement>
+      <answer><p>There are many possible answers. <m>A=\{1, 2\}, B=\{1, 3\}, U=\{1, 2, 3\}</m> is one.</p></answer></exercise>
+      
+      <exercise><statement><p>Give a counterexample to disprove <m>B-A=A-B</m>.</p></statement>
+      <answer><p>There are many possible answers. <m>A=\{1, 2\}, B=\{1, 3\}</m> is one.</p></answer></exercise>
+
+      <exercise><statement><p>Give a counterexample to disprove  <m>B\subseteq A\cup(B\cap C)</m>.</p></statement>
+      <answer><p>There are many possible answers. <m>A=\{1, 2\}, B=\{3, 4\}, C=\{5\}</m> is one.</p></answer></exercise>
+
+      <exercise><statement><p>True or false:  If <m>A\subseteq B\cup C</m>, then <m>A\subseteq B</m> or <m>A\subseteq C</m>.</p></statement>
+      <answer><p>False</p></answer></exercise>
+
+      <exercise><statement><p>True or false:  If <m>A\subseteq B\cap C</m>, then <m>A\subseteq B</m> and <m>A\subseteq C</m>.</p></statement>
+      <answer><p>True</p></answer></exercise>
+
+      <exercise><statement><p>Let <m>A=\{1, 2, 3, 4, 5\}</m>. Find <m>|\mathcal{P}(A)|</m>.</p></statement>
+      <answer><m>2^5=32</m></answer></exercise>
+
+      
+    
+
+    </reading-questions>
+
+    <exercises>
+      <exercise><statement>
+        <p>
+    Find a counterexample to show the following statement is false:
+  </p>
+
+  <p>
+    For all sets <m>A</m>, <m>B</m>, and <m>C</m>, <m>(A\cap B)\cup C=A\cap (B\cup C)</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Write a negation for the following statements. Indicate which is true, the statement or the negation. Justify your answer.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    <m>\forall</m> sets <m>S</m>, <m>\exists</m> a set <m>T</m> such that <m>S\cap T=\emptyset</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\exists</m> a set <m>S</m> such that <m>\forall</m> sets <m>T</m>, <m>S\cup T=\emptyset</m>.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>S=\{a, b, c\}</m> and for each integer <m>i=0, 1, 2, 3,</m> let <m>S_i</m> be the set of all subsets of <m>S</m> that have <m>i</m> elements. List the elements in <m>S_0, S_1, S_2, S_3</m>. Is <m>\{S_0, S_1, S_2, S_3\}</m> a partition of <m>{\cal P}(S)</m>?
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Supply a reason for each step in the algebraic proof of the statement: For all sets <m>A</m>, <m>B</m>, and <m>C</m>, <me>(A\cup B)\cap C=(A\cap C)\cup (B\cap C).</me>
+  </p>
+
+  <p>
+    <term>Proof:</term> Suppose <m>A</m>, <m>B</m>, and <m>C</m> are sets. Then
+  </p>
+    <tabular>
+    <row >
+      <cell halign="left"><m>(A\cup B)\cap C</m></cell>
+      <cell halign="left"><m>=C\cap(A\cup B)</m></cell>
+      <cell halign="right">by ___</cell>
+    </row>
+    <row >
+      <cell halign="left"></cell>
+      <cell halign="left"><m>=(C\cap A)\cup (C\cap B)</m></cell>
+      <cell halign="right">by ___</cell>
+    </row>
+    <row >
+      <cell halign="left"></cell>
+      <cell halign="left"><m>=(A\cap C)\cup (B\cap C)</m></cell>
+      <cell halign="right">by ___</cell>
+    </row>
+    </tabular>
+  
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Supply a reason for each step in the algebraic proof of the statement: For all sets <m>A</m>, <m>B</m>, and <m>C</m>, <me>(A\cup B)- (C-A)=A\cup(B-C).</me>
+  </p>
+
+  <p>
+    <term>Proof:</term> Suppose <m>A</m>, <m>B</m>, and <m>C</m> are sets. Then
+  </p>
+
+    <tabular>
+    <row >
+      <cell halign="left"><m>(A\cup B)-(C-A)</m></cell>
+      <cell halign="left"><m>=(A\cup B)\cap(C-A)^C</m></cell>
+      <cell halign="right"> by ___</cell>
+    </row>
+    <row >
+      <cell halign="left"></cell>
+      <cell halign="left"><m>=(A\cup B)\cap(C\cap A^C)^C</m></cell>
+      <cell halign="right"> by ___</cell>
+    </row>
+    <row >
+      <cell halign="left"></cell>
+      <cell halign="left"><m>=(A\cup B)\cap (A^C\cap C)^C</m></cell>
+      <cell halign="right"> by ___</cell>
+    </row>
+    <row >
+      <cell halign="left"></cell>
+      <cell halign="left"><m>=(A\cup B)\cap ((A^C)^C\cup C^C)</m></cell>
+      <cell halign="right"> by ___</cell>
+    </row>
+    <row >
+      <cell halign="left"></cell>
+      <cell halign="left"><m>=(A\cup B)\cap (A\cup C^C)</m></cell>
+      <cell halign="right"> by ___</cell>
+    </row>
+    <row >
+      <cell halign="left"></cell>
+      <cell halign="left"><m>=A\cup( B\cap  C^C)</m></cell>
+      <cell halign="right"> by ___</cell>
+    </row>
+    <row >
+      <cell halign="left"></cell>
+      <cell halign="left"><m>=A\cup( B-  C)</m></cell>
+      <cell halign="right"> by ___</cell>
+    </row>
+    </tabular>
+      </statement></exercise>
+
+      <exercise><statement>
+        <p>
+    Prove or disprove for all sets <m>A</m> and <m>B</m>, <m>A\cap (A\cup B)=A</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Prove or disprove for all sets <m>A, B</m> and <m>C</m>, <m>(A-B)\cap (C-B)=A-(B\cup C)</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Prove or disprove for all sets <m>A</m> and <m>B</m>, if <m>A\subseteq B</m> then <m>A\cap B^C=\emptyset</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Prove or disprove for all sets <m>A, B</m> and <m>C</m>, <me>A\cup (B-C)=(A\cup B)-(A\cup C).</me>
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Prove or disprove for all sets <m>A</m> and <m>B</m>, if <m>A\subseteq B</m> then <m>{\cal P}(A)\subseteq {\cal P}(B)</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Prove or disprove for all sets <m>A</m> and <m>B</m>, <m>{\cal P}(A\cup B)\subseteq {\cal P}(A)\cup{\cal P}(B)</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Give an algebraic proof of the statement: For all sets <m>A</m> and <m>B</m>, <m>(A-B)\cup(A\cap B)=A</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Give an algebraic proof of the statement: For all sets <m>A</m> and <m>B</m>, <m>(A-B)\cap(A\cap B)=\emptyset</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Simplify the statement using algebraic properties: <m>(A-(A\cap B))\cap(B-(A\cap B))</m>.
+  </p>
+      </statement></exercise>
+    </exercises>
+
+</section>

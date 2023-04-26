@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
+<div class="para">We will prove this by induction on the number of elements, <span class="process-math">\(n\text{.}\)</span>
+</div> <div class="para">Base step: Let <span class="process-math">\(n=0\text{.}\)</span> Then since <span class="process-math">\(S\)</span> has 0 elements, <span class="process-math">\(S=\emptyset\text{.}\)</span> The only subset of the empty set is <span class="process-math">\(\emptyset\text{.}\)</span> Thus, <span class="process-math">\(\mathcal{P}(S)=\{\emptyset\}\text{.}\)</span> Hence, <span class="process-math">\(|\mathcal{P}(S)|=1\text{.}\)</span> Since <span class="process-math">\(2^0=1\text{,}\)</span> if <span class="process-math">\(n=0\text{,}\)</span> <span class="process-math">\(\mathcal{P}(S)\)</span> has <span class="process-math">\(2^n\)</span> elements.</div> <div class="para">Induction step: Assume if a set <span class="process-math">\(S\)</span> has <span class="process-math">\(k\)</span> elements, then <span class="process-math">\(\mathcal{P}(S)\)</span> has <span class="process-math">\(2^k\)</span> elements.</div> <div class="para">Show if a set <span class="process-math">\(S\)</span> has <span class="process-math">\(k+1\)</span> elements, then <span class="process-math">\(\mathcal{P}(S)\)</span> has <span class="process-math">\(2^{k+1}\)</span> elements.</div> <div class="para">Proof of induction step: Assume <span class="process-math">\(|S|=k+1\text{.}\)</span> Let <span class="process-math">\(b\in S\text{,}\)</span> then <span class="process-math">\(S=A\cup \{b\}\)</span> where <span class="process-math">\(A=S-\{b\}\text{,}\)</span> the set of elements of <span class="process-math">\(S\)</span> except <span class="process-math">\(b\text{.}\)</span> Then <span class="process-math">\(A\)</span> has <span class="process-math">\(k\)</span> elements, so by the induction assumption, <span class="process-math">\(|\mathcal{P}(A)|=2^k\text{.}\)</span>
+</div> <div class="para">Now consider the subsets of <span class="process-math">\(S\text{.}\)</span> Each subset either contains <span class="process-math">\(b\)</span> or it doesn't. We know there are <span class="process-math">\(2^k\)</span> subsets that do not contain <span class="process-math">\(b\text{.}\)</span> We get all the subsets of <span class="process-math">\(S\)</span> that do contain <span class="process-math">\(b\)</span> by adding <span class="process-math">\(b\)</span> to the sets that don't contain <span class="process-math">\(b\text{.}\)</span> Thus, there are the same number of subsets that do contain <span class="process-math">\(b\)</span> as those that don't. Hence, we have <span class="process-math">\(2^k\)</span> subsets not containing <span class="process-math">\(b\)</span> and <span class="process-math">\(2^k\)</span> subsets  containing <span class="process-math">\(b\text{.}\)</span>
+</div> <div class="para">Therefore, <span class="process-math">\(S\)</span> has <span class="process-math">\(2^k+2^k=2(2^k)=2^{k+1}\)</span> subsets, hence <span class="process-math">\(\mathcal{P}(S)\)</span> has <span class="process-math">\(2^{k+1}\)</span> elements.</div></article><span class="incontext"><a href="algebraicsets6-3.html#proof-36" class="internal">in-context</a></span>
+</body>
+</html>

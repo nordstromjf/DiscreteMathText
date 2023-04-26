@@ -1,0 +1,418 @@
+<section xml:id="logical_form2-1">
+  <title>Truth-Tables and Logical Equivalence</title>
+
+  <p>We want to understand what makes a mathematical proof. One of the foundations for proofs is logical structure. If we build a good foundation in logic, then we can better understand mathematical statements and proof structures. So we begin by looking at logical forms, independent of content.</p>
+
+  <p>A logical argument<idx>logical argument</idx> consists of premises and a conclusion. The premises and conclusion are statements. A <term>statement</term><idx>logical statement</idx> is a sentence that is either true of false (not both!).</p>
+
+  <example xml:id="E_statement"><title>Statements</title>
+      <ul>
+        <li><p><q><m>2+3=5</m></q> is a statement. It is a true statement.</p></li>
+        <li><p><q><m>2+1=5</m></q> is a statement. It is a false statement.</p></li>
+        <li><p><q><m>x+y=5</m></q> is <em>not</em> a statement. It is neither true nor false. If we had additional information, such as specific information about the variables, then this might be a statement.</p></li>
+        <li><p><q>I ate breakfast today.</q> is a statement. Although you might not be able to determine whether I ate breakfast, the statement is either true or false.</p></li>
+      </ul>
+  </example>
+
+  <p>If <m>p</m> and <m>q</m> are variables representing statements, we can combine these statements into new statements using logical connectives.</p>
+
+<assemblage xml:id="B_connectives">
+  <title>Logical Connectives: NOT, AND, OR</title>
+    <p><ul>
+      <li><title>Negation</title><idx><h>connective</h><h>negation</h></idx> NOT. Notation: <m>\sim p</m><notation><usage><m>\sim p</m></usage><description>not <m>p</m></description></notation>, read as <q>not <m>p</m>.</q>
+      </li>
+      <li><title>Conjunction</title><idx><h>connective</h><h>conjunction</h></idx> AND. Notation: <m>p\wedge q</m><notation><usage><m>p\wedge q</m></usage><description><m>p</m> and <m>q</m></description></notation>, read as <q><m>p</m> and <m>q</m>.</q>
+      </li>
+      <li><title>Disjunction</title><idx><h>connective</h><h>disjunction</h></idx> OR. Notation: <m>p\vee q</m><notation><usage><m>p\vee q</m></usage><description><m>p</m> or <m>q</m></description></notation>, read as <q><m>p</m> or <m>q</m>.</q>
+      </li>
+    </ul>
+  </p></assemblage>
+  
+  <p>Our goal is to determine when these new statements are true or false based on whether <m>p</m> and <m>q</m> are true or false. We can create a truth-table <idx>truth-table</idx> that looks at all the possibilities of true of false for <m>p</m> and <m>q</m>. When writing a truth-table, make a column for each variable, list all the possible cases of true and false, then for each case, determine whether the new statement (with the connective) is true or false.</p>
+
+  <p><table xml:id="T_ttnot">
+    <title>Truth-table for <m>\sim p</m>.</title>
+    <tabular top="minor" left="minor">
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>\sim p</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+    </tabular>
+
+  </table></p>
+
+<p>It should make sense that if we negate T we get F, and vice versa.</p>
+
+<p><table xml:id="T_ttand">
+    <title>Truth-table for <m>p\wedge q</m>.</title>
+    <tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>p\wedge q</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+            </row>
+    </tabular>
+
+  </table></p>
+
+<p>Again, the truth values for an <q>and</q> statement should make sense. The only time it should be true is if both parts of the statement are true.</p>
+
+<p><table xml:id="T_ttor">
+    <title>Truth-table for <m>p\vee q</m>.</title>
+    <tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>p\vee q</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+            </row>
+    </tabular>
+
+  </table></p>
+
+<p>The truth values for an <q>or</q> statement should, mostly, make sense,  as long as one part of the <q>or</q> statement is true, the whole statement is true. You may ask about the case where both parts are true. We think of this as an <q>inclusive or,</q> which means we allow both to be true. For example, <q>A computer science major must take Math 175 or Math 250.</q> You will still get a major if you take both. There is a connective for an <q>exclusive or</q> (one or the other, not both), but we won't use it in this course.</p>
+
+<p>Now that we can connect two statements, we can connect as many as we'd like using multiple quantifiers. For example, we could form the statement <m>p\vee(q\ \wedge \sim p)</m>. Make sure you use parentheses when combining statements. For example, <m>\sim p\vee q</m> is not the same as <m>\sim (p\vee q)</m>.</p>
+
+<p><table xml:id="T_ttparenexample">
+    <title>Truth-table for <m>\sim p\vee q</m> and <m>\sim (p\vee q)</m>.</title>
+    <tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <col halign="center" right="minor"/>
+              <col halign="center" right="minor"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>\sim p</m></cell>
+              <cell><m>\sim p \vee q</m></cell>
+              <cell><m>p \vee q</m></cell>
+              <cell><m>\sim (p \vee q)</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+    </tabular>
+
+  </table></p>
+
+  <activity><statement><p>Give the truth-table for <m>\sim p\  \vee \sim q</m>.</p></statement></activity>
+
+  <activity><statement><p>Give the truth-table for <m>(p \vee q) \wedge \sim(p \wedge q)</m>.</p></statement></activity>
+
+  <activity><statement><p>truth-tables can have more than two variables. We just need to make sure we have a row for every possible combination of truth values for the variables. How many rows will you need in a truth-table for 3 variables? Give the truth-table for <m>(p \wedge q) \vee r</m>. </p></statement></activity>
+
+  <p>One of the things we want to be able to do is to translate English (or mathematical) sentences into logical statements. We have to be careful about how common phrases are really hidden <q>and</q>s. For example, <q><m>p</m> but <m>q</m></q> is really <m>p\wedge q</m>. Similarly, <q>neither <m>p</m> nor <m>q</m></q> is really <m>\sim p\ \wedge \sim q</m>.</p>
+
+  <definition><statement><p>A <term>tautology</term><idx>tautology</idx> is a statement that is always true.</p></statement></definition>
+
+    <p>For example, <m>p\ \vee \sim p</m> is a tautology. If you check the truth-table, you will see that the only values in the column for the statement are T.</p>
+
+    <definition><statement><p>A <term>contradiction</term><idx>contradiction</idx> is a statement that is always false.</p></statement></definition>
+
+    <p>For example, <m>p\ \wedge \sim p</m> is a contradiction. If you check the truth-table, you will see that the only values in the column for the statement are F.</p>
+
+    <p>Note that tautologies and contradictions are logical statements that are always true or always false, independent of the content of <m>p</m>.</p>
+
+    <p>If we want to make bigger statements using tautologies or contradictions, we can use <m>\mathbf{t}</m><notation><usage><m>\mathbf{t}</m></usage><description>a statement that is always true; tautology</description></notation> to represent a tautology and <m>\mathbf{c}</m><notation><usage><m>\mathbf{c}</m></usage><description>a statement that is always false; contradiction</description></notation> to represent a contradiction. For example, we could find the truth-table for <m>p\wedge \mathbf{t}</m>.</p>
+
+    <example><title>Example of <m>p\wedge \mathbf{t}</m></title>
+    
+    <p><table xml:id="T_ttwithtautology">
+    <title>Truth-table for <m>p\wedge \mathbf{t}</m>.</title>
+    <tabular top="minor" left="minor">
+              <col halign="center" right="medium"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>\mathbf{t}</m></cell>
+              <cell><m>p\wedge \mathbf{t}</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+    </tabular>
+
+  </table>
+
+    </p>
+
+    </example>
+
+    <definition xml:id="D_logequiv"><statement><p>Two statements are <term>logically equivalent</term><idx>logical equivalence</idx> if they have identical truth-tables. If statements <m>P</m> and <m>Q</m> are logically equivalent, we denote it <m>P\equiv Q</m><notation><usage><m>P\equiv Q</m></usage><description><m>P</m> is logically equivalent to <m>Q</m></description></notation>. </p></statement></definition>
+
+    <p>For example, we can see that <m>p</m> is logically equivalent to <m>p\wedge \mathbf{t}</m> by comparing the first and last columns of <xref ref="T_ttwithtautology"/>.</p>
+
+    <activity><statement><p>Use a truth-table to determine if <m>\sim(p \vee q)</m> and <m>\sim p\  \vee \sim q</m> are logically equivalent. What does this tell you about <q>distributing</q> negation?</p></statement></activity>
+
+    <activity xml:id="A_demorgan1"><statement><p>Use a truth-table to show <m>\sim(p \vee q)</m> and <m>\sim p\ \wedge \sim q</m> are logically equivalent.</p></statement></activity>
+
+    <activity xml:id="A_demorgan2"><statement><p>Use a truth-table to show <m>\sim(p \wedge q)</m> and <m>\sim p\ \vee \sim q</m> are logically equivalent.</p></statement></activity>
+
+    <p>The equivalences in <xref ref="A_demorgan1" /> and <xref ref="A_demorgan2" /> are called <term>DeMorgan's Laws</term><idx>DeMorgan's Laws</idx>. These are useful equivalences and are worth committing to memory. As we've seen in the above activities, we cannot simply distribute a negation sign. However, DeMorgan's Laws allow us to distribute the negation as long as we also change from <q>and</q> to <q>or</q> and vice versa. Given the importance of this concept in mathematics, it is useful at this point to convince yourself that the negation of and <q>and</q> statement is an <q>or</q> statement and vice versa using statements in English. For example, if the weather is not cold <em>and</em> rainy, then it is either not cold <em>or</em> not rainy.</p>
+
+    <p>One thing to be careful about with English statements is that they do not naturally contain parentheses, we often really have to think about the meaning of the statement and infer the intended parentheses. Even in the above cold and rainy sentence, we have to understand that we mean <q>not (cold and rainy)</q> rather than <q>(not cold) and rainy.</q></p>
+
+<p>The following is a list of important logical equivalences. All of them can be checked using truth-tables. </p>
+
+
+   
+<assemblage xml:id="B_logicalequivalences">
+<title>Summary of Logical Equivalences</title><idx>logical equivalence</idx>
+
+<p>Let <m>p, q,</m> and <m>r</m> be variables representing statements. Let <m>\mathbf{t}</m> be a tautology and <m>\mathbf{c}</m> be a contradiction.</p>
+
+<p><ol marker="1">
+  <li><title>Commutative Laws</title> <m>p \wedge q \equiv q \wedge p; \ \ \ p \vee q \equiv q \vee p</m></li>
+  <li><title>Associative Laws</title><m>(p \wedge q)\wedge r \equiv p \wedge (q \wedge r);\ \ \ (p \vee q)\vee r \equiv p \vee (q \vee r)</m></li>
+  <li><title>Distributive Laws</title> <m>p \wedge (q \vee r) \equiv (p \wedge q)\vee (p \wedge r);\ \ \ p \vee (q \wedge r) \equiv (p \vee q) \wedge (p \vee r)</m></li>
+  <li><title>Identity Laws</title> <m>p \wedge {\rm\textbf{t}} \equiv p;\ \ \ p \vee {\rm\textbf{c}} \equiv p</m></li>
+  <li><title>Negation Laws</title> <m>p\ \vee \sim p \equiv {\rm\textbf{t}};\ \ \ p\ \wedge \sim p \equiv \rm{\textbf{c}}</m></li>
+  <li><title>Double Negation Law</title> <m>\sim(\sim p)\equiv p</m></li>
+  <li><title>Idempotent Laws</title> <m>p \wedge p \equiv p;\ \ \ p \vee p \equiv p</m></li>
+  <li><title>Universal Bound Laws</title> <m>p \vee {\rm\textbf{t}} \equiv {\rm\textbf{t}};\ \ \ p \wedge \rm{\textbf{c}} \equiv {\rm\textbf{c}}</m></li>
+  <li><title>DeMorgan's Laws</title> <m>\sim(p \wedge q) \equiv \sim p \vee \sim q;\ \ \ \sim(p \vee q) \equiv \sim p\ \wedge \sim q</m></li>
+  <li><title>Absorption Laws</title> <m>p \vee (p \wedge q) \equiv p;\ \ \ p \wedge (p \vee q) \equiv p</m></li>
+</ol>
+
+</p>
+</assemblage>
+
+
+
+
+    <reading-questions>
+      <title>Check Your Understanding</title>
+      <exercise><statement><p>Give the truth-table for <m>\sim(\sim p \vee q)</m>. </p></statement>
+      <answer><tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>\sim(\sim p\vee q)</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+            </row>
+    </tabular></answer></exercise>
+
+      <exercise><statement><p>Give the truth-table for <m>(p\ \vee \sim q)</m>. </p></statement>
+      <answer><tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>(p\ \vee \sim q)</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+    </tabular></answer></exercise>
+
+    <exercise><statement><p>Give the truth-table for <m>(p\ \wedge \sim q)</m>. </p></statement>
+      <answer><tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>(p\ \wedge \sim q)</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+            </row>
+    </tabular></answer></exercise>
+
+    <exercise><statement><p>Are any of the three statements in the above exercises logically equivalent?</p></statement>
+      <answer><p>Yes, <m>\sim(\sim p\vee q)</m> is logically equivalent to <m>(p\ \wedge \sim q)</m>.</p></answer>
+    </exercise>
+
+    </reading-questions>
+
+    <exercises>
+      <title>Exercises</title>
+      <exercise><statement>
+        <p>Write the following statements in symbolic form using the logical connectives <m>\sim, \vee, \wedge</m> and the indicated letters to represent component statements. Let <m>h=</m> <q>Jane is healthy,</q> <m>w=</m> <q>Jane is wealthy,</q> and <m>s=</m> <q>Jane is wise.</q> </p>
+      <ol marker="a">
+      <li><p>Jane is healthy and wealthy but not wise.</p></li>
+      <li><p>Jane is not wealthy but she is healthy and wise.</p></li>
+      <li><p>Jane is neither healthy, wealthy, nor wise.</p></li>
+      <li><p>Jane is neither wealthy nor wise, but she is healthy.</p></li>
+      <li><p>Jane is wealthy, but she is not both healthy and wise.</p></li></ol>
+      </statement></exercise>
+
+      <exercise><statement><p>Give the truth-table for <m>\sim(p\ \wedge q)\vee (p \vee q)</m>.</p></statement></exercise>
+
+      <exercise><statement><p>Use truth-tables to determine whether the two statements in each part are logically equivalent. Clearly state your conclusion about whether they are logically equivalent or not, and how your truth-table justifies your conclusion.</p>
+    <ol marker="a">
+    <li><p><m>p\ \vee (p\ \wedge q)</m> and <m>p</m> </p></li>
+    <li><p><m>\sim(p\ \wedge q)</m> and <m>\sim p\ \wedge \sim q</m></p></li>
+    <li><p><m>p\ \wedge {\rm\bf{c}}</m> and <m>p\ \vee {\rm\bf{c}}</m></p></li> 
+    <li><p><m>(p\ \wedge q) \vee r</m> and <m>p\ \wedge (q\ \vee r)</m></p></li>
+    </ol></statement></exercise>
+
+      <exercise><statement><p>Use DeMorgan's Laws to write the negation of the statement: Zoro is a math major and Zoro's sister is a computer science major.</p></statement></exercise>
+
+      <exercise><statement><p>Use DeMorgan's Laws to write the negation of the statement: The units digit of <m>4^{185}</m> is 4 or it is 6. </p></statement></exercise>
+
+      <exercise><statement><p>Assume <m>x</m> is a real number. Use DeMorgan's Laws to write the negation of the statement: <m>-8\leq x &lt;3</m>.</p></statement></exercise>
+
+      <exercise><statement><p>Use truth-tables to establish whether the following statements are tautologies, contradictions, or neither.</p>
+        <ol marker="a">
+          <li><p><m>\sim(p\ \wedge q)</m></p></li>
+        <li><p><m>(p\ \wedge \sim q) \wedge (\sim p\ \vee q)</m></p></li>
+
+        <li><p><m>(\sim p\ \vee q) \vee (p\ \wedge \sim q)</m></p></li></ol></statement></exercise>
+    </exercises>
+
+</section>

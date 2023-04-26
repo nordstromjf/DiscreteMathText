@@ -1,0 +1,20 @@
+<chapter xml:id="chapter10" xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Graph Theory</title>
+  <introduction>
+   
+    <p>
+     In this chapter we look at an area of mathematics called graph theory. Graph theory studies collections of vertices and edges, called graphs. Graphs are useful for representing relationships between objects. In fact, we have already seen examples of graphs used to represent relations on a set <m>A</m> in <xref ref="relations8-1"/> and <xref ref="rstrelations8-2"/>.
+    </p>
+
+  
+    
+
+  </introduction>
+  <xi:include  href="graphs10-1.ptx" />
+  <xi:include  href="pathscircuits10-2.ptx" />
+   <xi:include  href="trees10-3.ptx" />
+
+  
+  
+  
+</chapter>

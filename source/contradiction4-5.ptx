@@ -1,0 +1,203 @@
+<section xml:id="contradiction4-5">
+  <title>Proof by Contradiction and Contrapositive</title><idx><h>proof</h><h>by contradiction</h></idx><idx><h>proof</h><h>by contrapositive</h></idx><idx><h>contradiction</h><h>proof</h></idx><idx><h>contrapositive</h><h>proof</h></idx>
+
+  <p>In this section we will learn two new proof techniques, contradiction and contrapositive. Both proof techniques rely on being able to negate mathematical statements.</p>
+
+<p>As we add more proof techniques, it is important to realize that you are not expected to know which technique to use when you start a proof. Proof-writing often takes some trial and error. First try a direct proof, if you get stuck, you may think about whether breaking your set into cases will  help, or whether negating a statement will make it easier to use. It is also quite possible that different methods can be used to prove the same statement.</p>
+  
+  <assemblage xml:id="B_pfcontradiction">
+<title>Method of Proof by Contradiction</title><idx><h>proof</h><h>by contradiction</h></idx><idx><h>contradiction</h><h>proof</h></idx>
+<p><ol marker="1">
+  <li><p>Assume the statement to be proved is false. Or, assume the negation is true.</p></li>
+  <li><p>Show you reach some logical contradiction.</p></li>
+  <li><p>Conclude the original statement is true.</p></li>
+  
+</ol></p>
+</assemblage>
+
+<example xml:id="E_nogreatinteger"><title>There Is No Greatest Integer</title>
+<p>Prove there is no greatest integer.</p>
+<proof><p>By contradiction. Assume there is a greatest integer. Call this greatest integer <m>N</m>. Now consider <m>N+1</m>. Since <m>N</m> is an integer, <m>N+1</m> is an integer. We can see that <m>N+1>N</m>, which contradicts that <m>N</m> was the greatest. Therefore, there is no greatest integer.</p></proof>
+</example>
+
+<p>Since contradiction relies on negating statements, recall the following negations:
+<ul>
+  <li><m>p\rightarrow q</m> has negation <m>p\ \wedge \sim q</m></li>
+  <li><m>p\ \wedge q</m> has negation <m>\sim p\ \vee \sim q</m></li>
+  <li><m>p\ \vee q</m> has negation <m>\sim p\ \wedge \sim q</m></li>
+</ul>
+</p>
+
+<activity><introduction><p>Consider the statement: The sum of a rational number and an irrational number is irrational.</p></introduction>
+<task><p>Try to determine if the statement is true or false by trying examples and looking for a counterexample.</p></task>
+<task><p>Write the statement using variables and quantifiers.</p></task>
+<task><p>Write the negation of the statement.</p></task>
+<task><p>Now assume the negation is true and find a contradiction.</p></task>
+<task><p>The work in (d) is your scratch work. Write a careful proof by contradiction to show the original statement is true.</p></task></activity>
+
+<p>Recall from <xref ref="conditional2-2"/> that a conditional, <m>p\rightarrow q</m>, and its contrapositive, <m>\sim q\rightarrow \sim p</m>, are logically equivalent. This means we can prove the contrapositive rather than the original statement.</p>
+
+<assemblage xml:id="B_pfcontrapositive">
+
+<title>Method of Proof by Contrapositive</title><idx><h>proof</h><h>by contrapositive</h></idx><idx><h>contrapositive</h><h>proof</h></idx>
+<p><ol marker="1">
+  <li><p>Write the statement to be proved in the form <m>\forall x\in D</m>, if <m>P(x)</m> then <m>Q(x)</m>.</p></li>
+  <li><p>Write the contrapositive of the statement: <m>\forall x\in D</m>, if <m>\sim Q(x)</m> then <m>\sim P(x)</m>.</p></li>
+  <li><p>Prove the contrapositive directly: assume <m>\sim Q(x)</m>, show <m>\sim P(x)</m>.</p></li>
+  
+</ol></p>
+</assemblage>
+
+<example xml:id="E_contrapositiveproof"><title>A Divisibility Proof by Contrapositive</title>
+<p>Prove for all <m>a, b, c\in \mathbb{Z}</m>, if <m>a \nmid bc</m> then <m>a \nmid b</m>.</p>
+<p>This statement has contrapositive: For all <m>a, b, c\in \mathbb{Z}</m>, if <m>a \mid b</m> then <m>a \mid bc</m>.</p>
+<proof><p> By contrapositive. Let <m>a, b, c\in \mathbb{Z}</m>. Assume <m>a \mid b</m>. This means <m>b=ak</m> for some <m>k\in\mathbb{Z}</m>. Then <m>bc=(ak)c=a(kc)</m>, where <m>kc \in \mathbb{Z}</m>. Thus, <m>a \mid bc</m>.
+</p></proof>
+</example>
+
+<activity xml:id="A_n2evenneven"><introduction><p>Consider the statement: For all integers <m>n</m>, if <m>n^2</m> is even then <m>n</m> is even.</p></introduction>
+<task><p>Write the contrapositive of the statement.</p></task>
+<task><p>To prove the statement by contrapositive, what should you assume?</p></task>
+<task><p>To prove the statement by contrapositive, what should you show?</p></task>
+<task><p>Give a direct proof of the contrapositive. You have now proven the original statement by contrapositive. </p></task>
+</activity>
+
+<p>Since we can use either contradiction or contrapositive on statements of the form <m>p\rightarrow q</m>, the following comparison may be helpful.</p>
+
+<assemblage xml:id="B_compcontradiction">
+  <title>Comparing Contradiction and Contrapositive</title>
+
+<p>Contradiction with <m>p\rightarrow q</m>:
+<ul>
+  <li>Assume <m>p\ \wedge \sim q</m>.</li>
+  <li> Show any contradiction. The contradiction may be <m>\sim p</m> or it may be <m>q</m>, or some other logical contradiction.</li>
+  <li>Since you can reach any contradiction at all, it may be difficult to know what you are looking for. It also may be difficult to know if you've made an error.</li>
+  <li>With contradiction you get to assume more, but it is less clear what you want to show.</li>
+</ul>
+</p>
+
+<p>Contrapositive with <m>p\rightarrow q</m>:
+<ul>
+  <li>Assume <m>\sim q</m>.</li>
+  <li> Show <m>\sim p</m>. </li>
+  <li>With contrapositive you assume less than contradiction, but you know exactly what you are trying to show.</li>
+</ul>
+</p>
+</assemblage>
+
+
+
+
+
+
+    <reading-questions>
+      <title>Check Your Understanding</title>
+
+      <exercise><statement><p>Give the negation for the statement: There does not exist a greatest odd integer.</p></statement>
+      <answer><p>There exists a greatest odd integer.</p></answer></exercise>
+      
+      <exercise><statement><p>Give the negation for the statement: For all real numbers <m>r</m>, if <m>r</m> is not rational then <m>3r</m> is not rational.</p></statement>
+      <answer><p>There exists a real number <m>r</m> such that <m>r</m> is rational and <m>3r</m> is not rational.</p></answer></exercise>
+
+      <exercise><statement><p>Suppose you want to prove the following statement by contradiction: For all real numbers <m>r</m>, if <m>r</m> is not rational then <m>3r</m> is not rational. What should you assume? What should you show?</p></statement>
+      <answer><p>Assume: there exists a real number <m>r</m> such that <m>r</m> is rational and <m>3r</m> is not rational. Show: any contradiction.</p></answer></exercise>
+
+      <exercise><statement><p>Give the contrapositive for the statement: For all real numbers <m>r</m>, if <m>r</m> is not rational then <m>3r</m> is not rational.</p></statement>
+      <answer><p>For all real numbers <m>r</m> if <m>3r</m> is rational then <m>r</m> is rational.</p></answer></exercise>
+
+      <exercise><statement><p>Suppose you want to prove the following statement by contrapositive: For all real numbers <m>r</m>, if <m>r</m> is not rational then <m>3r</m> is not rational. What should you assume? What should you show?</p></statement>
+      <answer><p>Assume: <m>r</m> is real, <m>3r</m> is rational. Show: <m>r</m> is rational.</p></answer></exercise>
+
+       <exercise><statement><p>Give the negation for the statement: For all integers <m>n</m> and primes <m>p</m>, if  <m>p\mid n^2</m>  then <m>p \mid n</m>.</p></statement>
+      <answer><p>There exists an integer <m>n</m> and a prime <m>p</m> such that <m>p\mid n^2</m> and <m>p\nmid n</m>.</p></answer></exercise>
+
+      <exercise><statement><p>Suppose you want to prove the following statement by contradiction: For all integers <m>n</m> and primes <m>p</m>, if  <m>p\mid n^2</m>  then <m>p \mid n</m>. What should you assume? What should you show?</p></statement>
+      <answer><p>Assume: there exists an integer <m>n</m> and a prime <m>p</m> such that <m>p\mid n^2</m> and <m>p\nmid n</m>. Show any contradiction. </p></answer></exercise>
+
+      <exercise><statement><p>Give the contrapositive for the statement: For all integers <m>n</m> and primes <m>p</m>, if  <m>p\mid n^2</m>  then <m>p \mid n</m>.</p></statement>
+      <answer><p>For all integers <m>n</m> if <m>p \nmid n</m> then <m>p\nmid n^2</m>.</p></answer></exercise>
+
+       <exercise><statement><p>Suppose you want to prove the following statement by contrapositive: For all integers <m>n</m> and primes <m>p</m>, if  <m>p\mid n^2</m>  then <m>p \mid n</m>. What should you assume? What should you show?</p></statement>
+      <answer><p>Assume: <m>n</m> is an integer, <m>p</m> is prime, and <m>p\nmid n</m>. Show: <m>p \nmid n^2</m>. </p></answer></exercise>
+
+
+    </reading-questions>
+
+    <exercises>
+      <exercise><statement><p>
+    Is <m>\frac{1}{0}</m> an irrational number? Explain.
+  </p></statement></exercise>
+      <exercise><statement>
+        <p>
+    Consider the statement: For all integers <m>n</m>, if <m>n^2</m> is odd then <m>n</m> is odd.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Write what you would assume and what you would need to show to prove this statement by contradiction.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Write what you would assume and what you would need to show to prove this statement by contrapositive.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    <term>A Test to Determine if a Number is Prime:</term> Given any integer <m>n&gt;1</m>, to test whether <m>n</m> is prime check to see if it is divisible by a prime number less than or equal to <m>\sqrt{n}</m>. If it is not divisible by any prime less than or equal to <m>\sqrt{n}</m>, then <m>n</m> is prime.
+  </p>
+  <p>
+    Use this test to determine if the following numbers are prime or not.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    527
+  </p>
+    </li>
+
+    <li>
+      <p>
+    613
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Carefully write the negation of each statement then prove the statement by contradiction.
+  </p>
+  <ol marker="a">
+    <li><p>
+    There is no greatest even integer.
+  </p></li>
+  <li><p>
+    There is no least positive rational number.
+  </p>
+    </li>
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Prove by contradiction: If <m>a</m> and <m>b</m> are rational numbers, <m>b\neq 0</m>, and <m>r</m> an irrational number, then <m>a+br</m> is irrational.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Prove the following statement in two ways: (a) by contrapositive and (b) by contradiction.
+  </p>
+
+  <p>
+    For all integers <m>n</m>, if <m>n^2</m> is odd then <m>n</m> is odd.
+  </p>
+      </statement></exercise>
+    </exercises>
+
+</section>

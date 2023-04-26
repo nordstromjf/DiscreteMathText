@@ -1,0 +1,101 @@
+
+<section xml:id="variables1-1">
+  <title>Variables and Statements</title>
+
+  <p>Think of some examples of variables <idx>variable</idx> you've seen in other math classes. What do these variables represent? Probably, the first example that comes to mind is something from an algebra class, such as <m>y=x^2</m> or <m>f(x)=3x+2</m>. You may also think of examples such as solving for <m>x</m> in an expression such as <m>x^2=4</m>. We use variables in mathematical statements to represent quantities that can vary. But we also use them to be more precise. Think of how much more confusing <m>y=x^2</m> would be if we had to write it as "a number squared equals another number;" or <m>f(x)=3x+2</m>, "the function which multiplies a number by 3 and adds 2." When you first learned varables, you probably <em>were</em> introduced to them in terms of sentences, but eventually, you got used to what the symbols mean. </p>
+
+  <p>In this class, we will rarely be interested in mathematical equations. We want to move to the common format of mathematical statements often found when describing mathematical defintions or theorems.</p>
+
+  <p> Common forms of mathematical statements:
+    <ul>
+      <li><title>Universal Statements<idx><h>universal</h><h>statement</h></idx></title> <p>We use these statements when a property is true for all things in a set.</p> <p>Example: Every math student takes Calculus.</p>
+      </li>
+      <li><title>Conditional Statements<idx><h>conditional</h><h>statement</h></idx></title>  <p>These statements usually have the form "if...then...". </p> <p>Example: If a student majors in Computer Science, then she takes Discrete Math.</p></li>
+      <li><title>Existential Statements<idx><h>existential</h><h>statement</h></idx></title> <p>We use these statements when somthing exists with a particular property.</p> <p>Example: There exists a Linfield class that meets at 9am on Mondays.</p></li>
+    </ul>
+  </p>
+  <activity>
+    <statement>
+      <p>Give an additional example of each type of statement.</p>
+    </statement>
+  </activity>
+
+  <activity>
+    <introduction><p>For each of the following statements, determine which type of statement it is, universal, conditional, or existential.</p></introduction>
+    <task><p>All even numbers have a factor of 2.</p></task>
+    <task><p>If <m>x>4</m>, then <m>x^2>16</m>.</p></task>
+    <task><p>There exists a number greater than 100.</p></task>
+  </activity>
+
+  <activity>
+    <introduction><p>There is a relationship between universal statements and conditional statements.</p></introduction>
+    <task><p>Rewrite the statement <q>All even numbers have a factor of 2.</q> as a conditional statement.</p></task>
+    <task><p>Rewrite the statement <q>If <m>x>4</m>, then <m>x^2>16</m>.</q> as a universal statement.</p></task>
+  </activity>
+  
+  <p>We can also combine statements of the above types. Many mathematical statements are combinations of the common forms.
+    <ul>
+      <li><title>Universal Conditional<idx><h>universal</h><h>conditional</h></idx></title> <p>For all ___, if ___ then ___. </p> <p>Example: For every real number <m>x</m>, if <m>x\geq 2</m>, then <m>x\geq 1</m>.</p></li>
+      <li><title>Universal Existential<idx><h>universal</h><h>existential</h></idx></title> <p>For all ___, there exists ___. </p> <p>Example: For all integers <m>n</m>, there exists an integer <m>m</m> such that <m>n+m=0</m>.</p></li>
+      <li><title>Existential Universal<idx><h>existential</h><h>universal</h></idx></title> <p>There exists ___ for every ___.</p> <p>Example: There exists an integer <m>m</m> such that for all integers <m>n</m>, <m>m+n=n</m>.</p></li>
+    </ul></p>
+
+    <activity xml:id="A_excomb"><statement><p>Give an additional example of each of the combined forms.</p></statement></activity>
+
+    <activity><statement><p>One thing that makes understanding mathematical statements tricky is that they can be phrased in different ways. Try writing one of your statements from <xref ref="A_excomb" /> in two different (but equivalent) ways. You might think about how you would express the same idea in a less formal way. If your statement involves variables, can you write it without them? If your statement does not include variables, can you write it with some?</p></statement></activity>
+
+    <reading-questions>
+      <title>Check Your Understanding</title>
+      <exercise><statement><p>Consider the statement "If it is Tuesday, then we will have pizza for lunch." Which type of statement is this? </p></statement>
+      <answer>Conditional</answer></exercise>
+
+      <exercise><statement><p>Consider the statement "If it is Tuesday, then we will have pizza for lunch." Rewrite this statement as a universal statement. </p></statement>
+      <answer>Every Tuesday we will have pizza for lunch.</answer></exercise>
+
+      <exercise><statement><p>Consider the statement "Every differentiable function is continuous." Which type of statement is this? </p></statement>
+      <answer>Universal</answer></exercise>
+
+       <exercise><statement><p>Consider the statement "Every differentiable function is continuous." Rewrite this statement as a conditional statement.</p></statement>
+      <answer>If a function is differentiable, then it is continuous.</answer></exercise>
+
+    </reading-questions>
+
+    <exercises>
+      <title>
+        Exercises
+      </title>
+      <exercise><statement><p>Often it is necessary to convert an informal mathematical statement into a more formal one. Complete the following statements so they are equivalent to <q>The reciprocal of any positive number is positive.</q></p>
+      <ol marker="a">
+        <li><p>Given any positive real number <m>r</m>, the reciprocal of ___.</p></li>
+        <li><p>For any real number <m>r</m>, if <m>r</m> is ___ then ___.</p></li>
+        <li><p>If a real number <m>r</m> ___, then ___.</p></li>
+      </ol>
+    </statement></exercise>
+      <exercise><statement><p>Complete the following statements so they are equivalent to <q>The cube root of any negative real number is negative.</q></p>
+      <ol marker="a">
+        <li><p>Given any negative real number <m>s</m>, the cube root of ___.</p></li>
+        <li><p>For any real number <m>s</m>, if <m>s</m> is ___, then ___.</p></li>
+        <li><p>If a real number <m>s</m>___, then ___.</p></li>
+      </ol>
+
+    </statement></exercise>
+      <exercise><statement><p>
+        In order to better understand mathematical statements, it can be helpful to write statements less formally. First rewrite each statement without using variables, then determine whether the statements are true or false.
+      </p>
+      <ol marker="a">
+        <li><p>There are real numbers <m>u</m> and <m>v</m> with the property that <m>u+v &lt; v-u</m>.</p></li>
+        <li><p>There is a real number <m>x</m> such that <m>x^2 &lt; x</m>.</p></li>
+        <li><p>For all positive integers <m>n</m>, <m>n^2\geq n</m>.</p></li>
+        <li><p>For all real numbers <m>a</m> and <m>b</m>, <m>| a+b | \leq | a | + | b |</m>.</p></li>
+      </ol></statement></exercise>
+      <exercise><statement><p>
+        Fill in the blanks to rewrite the statement <q>Every nonzero real number has a reciprocal.</q>
+      </p>
+      <ol marker="a">
+        <li><p>All nonzero real numbers ___.</p></li>
+        <li><p>For all nonzero real numbers <m>r</m>, there is ___ for <m>r</m>.</p></li>
+        <li><p>For all nonzero real numbers <m>r</m>, there is a real number <m>s</m> such that ___.</p></li></ol>
+    </statement></exercise>
+    </exercises>
+
+</section>

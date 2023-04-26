@@ -1,0 +1,472 @@
+<section xml:id="functions7-1">
+  <title>Functions</title><idx>function</idx>
+
+  <p>Functions are familar mathematical objects from algebra and calculus. We also saw them in <xref ref="lang_relations1-3"/>.</p>
+
+  <definition xml:id="D_function"><statement><p>A <term>function</term><idx>function</idx>, <m>f:X\rightarrow Y</m>, is a map in which each input is related to one and only one output.</p>
+  <p>We say <m>X</m> is the <term>domain</term><idx>domain</idx> and <m>Y</m> is the <term>codomain</term><idx>codomain</idx> of <m>f</m>.</p>
+  </statement></definition>
+
+  <example xml:id="E_notfunctionimages"><title>Exploring the Definition of a Function</title>
+    <p>Let <m>f: X\rightarrow Y</m> be a map as shown in the figure.</p>
+    <figure xml:id="F_notfnonetotwo">
+  <!--<caption> </caption>-->
+  <image width="10%" xml:id="notfn1to2">
+    <latex-image>
+  \begin{tikzpicture}[node distance = 1cm, thick]
+    %not function 2 to 2 outputs
+        \node (1) {$x_1$};
+        \node (2) [below=of 1] {$x_2$};
+        \node (3) [below=of 2] {$x_3$};
+        \node (4) [right=of 1] {$y_1$};
+         \node (5) [right=of 2] {$y_2$};
+          \node (6) [right=of 3] {$y_3$};
+          \node (7) [above=of 1]{$X$};
+          \node(8)[above=of 4]{$Y$};
+          \draw[->] (1) to (4);
+        \draw[->] (2) to (4);
+        \draw[->] (2) to (5);
+        \draw[->] (3) to (6);
+    \end{tikzpicture}
+
+</latex-image></image>
+</figure>
+<p><xref ref="F_notfnonetotwo"/> shows a map that is not a function since <m>x_2</m> maps to two different outputs.</p>
+
+<p>Let <m>g: X\rightarrow Y</m> be a map as shown in the figure.</p>
+    <figure xml:id="F_notfnonetozero">
+  <!--<caption> </caption>-->
+  <image width="10%" xml:id="notfn1to0">
+    <latex-image>
+  \begin{tikzpicture}[node distance = 1cm, thick]% 
+%not function 1 no output
+        \node (1) {$x_1$};
+        \node (2) [below=of 1] {$x_2$};
+        \node (3) [below=of 2] {$x_3$};
+        \node (4) [right=of 1] {$y_1$};
+         \node (5) [right=of 2] {$y_2$};
+          \node (6) [right=of 3] {$y_3$};
+          \node (7) [above=of 1]{$X$};
+          \node(8)[above=of 4]{$Y$};
+  
+        \draw[->] (2) to (4);
+      
+        \draw[->] (3) to (6);
+    \end{tikzpicture}
+
+
+</latex-image></image>
+</figure>
+<p><xref ref="F_notfnonetozero"/> shows a map that is not a function since <m>x_1</m> does not map to any output.</p>
+
+<p>Let <m>h: X\rightarrow Y</m> be a map as shown in the figure.</p>
+    <figure xml:id="F_functionh">
+  <!--<caption> </caption>-->
+  <image width="10%" xml:id="functionh">
+    <latex-image>
+  \begin{tikzpicture}[node distance = 1cm, thick]% 
+%function 
+        \node (1) {$x_1$};
+        \node (2) [below=of 1] {$x_2$};
+        \node (3) [below=of 2] {$x_3$};
+        \node (4) [right=of 1] {$y_1$};
+         \node (5) [right=of 2] {$y_2$};
+          \node (6) [right=of 3] {$y_3$};
+          \node (7) [above=of 1]{$X$};
+          \node(8)[above=of 4]{$Y$};
+          \draw[->] (1) to (4);
+        \draw[->] (2) to (4);
+        %\draw[->] (2) to (5);
+        \draw[->] (3) to (6);
+    \end{tikzpicture}
+
+
+</latex-image></image>
+</figure>
+<p><xref ref="F_functionh"/> shows a map that is a function since each <m>x_i</m> maps to exactly one <m>y_i</m>.</p>
+  </example>
+
+  <p>For a given <m>x\in X</m>, <m>f(x)</m> is 
+  <ul>
+    <li>the <term>output</term> of <m>f</m>,</li>
+    <li>the <term>value</term> of <m>f</m> at <m>x</m>,</li>
+    <li>the <term>image</term> of <m>x</m> under <m>f</m>.
+  </li></ul></p>
+
+  <definition xml:id="D_image"><statement><p>The <term>image</term><idx>image</idx> or <term>range</term><idx>range</idx> of a set <m>X</m> under <m>f</m> is the set of outputs of <m>f</m> corresponding to inputs from <m>X</m>. In notation
+    <me>
+     \text{Im}(f)=\{y\in Y : y=f(x) \text{ for some } x\in X\}.
+    </me><notation><usage><m>\text{Im}(f)</m></usage><description>the image of <m>f</m></description></notation></p></statement></definition>
+
+    <p>If <m>f(x)=y</m> we say <m>x</m> is a <term>preimage</term><idx><h>preimage</h></idx> or an <term>inverse image</term><idx><h>inverse</h><h>image</h></idx> of <m>y</m>.</p>
+
+    <p>Since <m>y</m> can have several preimages, we usually care about the set of all of them.</p>
+    <definition xml:id="D_preimage"><statement><p>Let <m>f:X\rightarrow Y</m> be a function. The set <m>\{x\in X : f(x)=y\}</m> is the <term>preimage</term><idx>preimage</idx> of <m>y</m>.</p></statement></definition>
+
+    <activity><introduction><p>Define <m>f:\mathbb{Z}\rightarrow\mathbb{Z}</m> by <m>f(n)=r</m> where <m>r</m> is the remainder when <m>n</m> is divided by 3.</p>
+  </introduction>
+    <task><p>Find <m>f(0), f(9), f(5), f(-7), f(10)</m>.</p></task>
+    <task><p>What is the image of <m>\mathbb{Z}</m> under <m>f</m>?</p></task>
+  <task><p>What is the set of preimages of 0? In other words, find the preimage of 0. </p></task><himt><p>To find the set of preimages of 0, find all integers that map to 0</p></himt>
+</activity>
+
+    
+  <p>If we have a map from a finite set to a finite set, we can draw an <term>arrow diagram</term><idx>arrow diagram</idx> in which we use arrows to represent the map from <m>X</m> to <m>Y</m>, as in <xref ref="E_notfunctionimages"/>.</p>
+
+  <example xml:id="E_arrowdiagram"><title>Arrow Diagram</title>
+    <p>Let <m>X=\{a, b, c, d\}</m> and <m>Y=\{0, 1, 2\}</m>. Let <m>f: X\rightarrow Y</m> be the function given by the following arrow diagram.</p>
+    <figure xml:id="F_arrowdiag">
+  <!--<caption> </caption>-->
+  <image width="10%" xml:id="arrowdiag">
+    <latex-image>
+  \begin{tikzpicture}[node distance = 1cm, thick]
+%arrow diagram example
+        \node (1) {$a$};
+        \node (2) [below=of 1] {$b$};
+        \node (3) [below=of 2] {$c$};
+        \node (4) [right=of 1] {$0$};
+         \node (5) [right=of 2] {$1$};
+          \node (6) [right=of 3] {$2$};
+          \node (7) [above=of 1]{$X$};
+          \node(8)[above=of 4]{$Y$};
+          \node(9)[below=of 3]{$d$};
+          
+          \draw[->] (1) to (4);
+        \draw[->] (2) to (4);
+        \draw[->] (3) to (6);
+        \draw[->] (9) to (6);
+    \end{tikzpicture}
+
+
+</latex-image></image>
+</figure>
+<p>Find the domain of <m>f</m>.</p>
+<answer><m>\{a, b, c, d\}</m></answer>
+<p>Find the codomain of <m>f</m>.</p>
+<answer><m>\{0, 1, 2\}</m></answer>
+<p>Find the range or image of <m>f</m>.</p>
+<answer><m>\{0, 2\}</m></answer>
+
+<p>Find <m>f(a)</m>.</p>
+<answer><m>0</m></answer>
+
+<p>Find the preimage or inverse image of <m>0</m>.</p>
+<answer><m>\{a, b\}</m></answer>
+</example>
+
+    <!--Put in function images and arrow diagrams-->
+
+  <example xml:id="E_functionxsquared"><title>Finding Sets for a Function</title><p>
+    Let  <m>f:\mathbb{R}\rightarrow \mathbb{R}</m> be given by <m>f(x)=x^2</m>.</p>
+
+    <p>Find the domain of <m>f</m>.</p>
+    <answer><m>\mathbb{R}</m></answer>
+
+    <p>Find the codomain of <m>f</m>.</p>
+    <answer><m>\mathbb{R}</m></answer>
+
+    <p>Find the range of <m>f</m>.</p>
+    <answer><m>[0, \infty)</m></answer>
+
+    <p>Find the preimage (or inverse image) of <m>1</m>.</p>
+    <answer><m>\{1, -1\}</m></answer>
+ </example>
+
+ <p>Let <m>f, g</m> be functions from <m>X</m> to <m>Y</m>. Then <m>f=g</m> if <m>f(x)=g(x)</m> for all <m>x\in X</m>.</p>
+
+ <p>In this course we want to look at functions to and from sets other than just the real numbers. For example, we may have functions from finite sets to finite sets.</p>
+
+<example xml:id="E_morefunctions"><title>More Functions</title>
+
+  <p>A sequence is a function from <m>\mathbb{Z}^+</m> to <m>\mathbb{R}</m>. For example, <m>f(n)=\frac{1}{n}</m>.</p>
+
+  <p>We may also have functions involving Cartesian products of sets. For example, <m>f:\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}</m> given by <m>f(a, b)=a+b</m>.</p>
+</example>
+
+  
+
+<activity><introduction><p>Define <m>f:\mathbb{Z}\rightarrow\mathbb{Z}\times\mathbb{Z}</m> by <m>f(a, b)=a-b</m>.</p>
+  </introduction>
+    <task><p>Find <m>f(0, 2), f(1, 1), f(2, 0), f(3, 2), f(n, 0)</m>.</p></task>
+    <task><p>What is the image of <m>\mathbb{Z}\times\mathbb{Z}</m> under <m>f</m>?</p></task>
+  <task><p>What is the preimage of 0?</p></task><himt><p>The preimage is a set, so find all ordered pairs that map to 0.</p></himt>
+</activity>
+
+<activity><introduction><p>Define <m>f:\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}</m> by <m>f(a)=(a, a)</m>.</p>
+  </introduction>
+    <task><p>Find <m>f(0), f(2), f(-3)</m>.</p></task>
+    <task><p>What is the image of <m>\mathbb{Z}</m> under <m>f</m>? Is <m>(1, 1)</m> in the image? Is <m>(-1, 1)</m> in the image?</p></task>
+  <task><p>What is the preimage of <m>(0, 0)</m>? </p></task><himt><p>The preimage is a set, so find all integers that map to <m>(0, 0)</m>.</p></himt>
+</activity>
+
+
+  <p>Since a function needs to satisfy the property that each <m>x\in X</m> can only map to one <m>y \in Y</m>, we say a function is <term>well-defined</term><idx>well-defined function</idx> if whenever <m>a=b</m>, <m>f(a)=f(b)</m>. Most of the functions you've seen in algebra and calculus are clearly well-defined since when <m>a=b</m>, <m>f(a)=f(b)</m>. This property is really only interesting when elements of <m>X</m> have multiple representations. In other words, when two equal elements in <m>X</m> have two different forms. The most familiar set where this happens is <m>\mathbb{Q}</m>. For example, <m>\frac{1}{2}=\frac{2}{4}</m>.</p>
+
+  <example xml:id="E_welldefined"><title>A Map That is Not Well-Defined</title>
+<p>
+  Let <m>f:\mathbb{Q}\rightarrow \mathbb{Z}</m> be given by <m>f(p/q)=p+q</m>.</p>
+  <p> Then <m>1/2=2/4</m> in <m>\mathbb{Q}</m>, but <m>f(1/2)=1+2=3</m> and <m>f(2/4)=2+4=6</m>. Thus, <m>1/2=2/4</m> but <m>f(1/2)\neq f(2/4)</m>.</p>
+  <p>Thus <m>f</m> is not well-defined, and hence, <m>f</m> is not a function.
+</p></example>
+
+<activity><statement><p>Let <m>f:\mathbb{Q}\rightarrow\mathbb{Z}</m> be given by <m>f(m/n)=m</m>. Show <m>f</m> is <em>not</em> well-defined by finding two equivalent fractions in <m>\mathbb{Q}</m> that map to two different integers.</p></statement></activity>
+
+
+
+
+    <reading-questions>
+      <title>Check Your Understanding</title>
+
+      <p>Let <m>A=\{1, 2, 3\}, B=\{2, 4, 6, 8\}, C=\{0, 1\}</m>.</p>
+      
+
+      <exercise><statement><p>Let <m>f:A\rightarrow B</m> be given by <m>f(1)=4, f(2)=8, f(3)=2</m>. True or false: <m>f</m> is a function.</p></statement>
+      <answer>True</answer></exercise>
+
+      <exercise><statement><p>Let <m>f:A\rightarrow B</m> be given by <m>f(1)=2, f(2)=4, f(3)=2</m>. True or false: <m>f</m> is a function.</p></statement>
+      <answer>True</answer></exercise>
+
+
+      <exercise><statement><p>Let <m>f:B\rightarrow C</m> be given by <m>f(2)=0, f(4)=1</m>. True or false: <m>f</m> is a function.</p></statement>
+      <answer><p>False. <m>4, 6</m> don't map anywhere.</p></answer></exercise>
+
+      <exercise><statement><p>Let <m>f:B\rightarrow C</m> be given by <m>f(2)=0, f(4)=1, f(6)=1, f(8)=1</m>. True or false: <m>f</m> is a function.</p></statement>
+      <answer>True</answer></exercise>
+
+      <exercise><statement><p>Let <m>f:C\rightarrow C</m> be given by <m>f(0)=0, f(0)=1, f(1)=0, f(1)=1</m>. True or false: <m>f</m> is a function.</p></statement>
+      <answer><p>False. 0 maps to two different values.</p></answer></exercise>
+
+      <exercise><statement><p>Let <m>f:A\times C\rightarrow C</m> be given by <m>f(a, c)=c</m>. Find the preimage of <m>0\in C</m>.</p></statement>
+      <answer><m>\{(1, 0), (2, 0), (3, 0)\}</m></answer></exercise>
+
+
+
+    
+
+    </reading-questions>
+
+    <exercises>
+      
+      <exercise><statement>
+        <p>
+    Let <m>X=\{1, 3, 5\}</m> and <m>Y=\{a, b, c, d\}</m>. Define the function <m>g:X\rightarrow Y</m> as the set of ordered pairs <me>\{(1, b), (3, b), (5, b)\}.</me>
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Write the domain and codomain of <m>g</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    What is the range of <m>g</m>?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Is 3 an inverse image of <m>a</m>? Is 1 an inverse image of <m>b</m>?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    What is the inverse image of <m>b</m>? What is the inverse image of <m>c</m>?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Represent <m>g</m> as an arrow diagram.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Determine if the following are true or false. Justify your answer.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    If two elements in the domain of a function are equal, then their images in the codomain are equal.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    If two elements in the codomain of a function are equal, then their preimages in the domain are equal.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    A function can have the same output for more than one input.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    A function can have the same input for more than one output.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>A=\{1, 2, 3, 4, 5\}</m> and define a function <m>F:{\cal P}(A)\rightarrow \mathbb{Z}</m> where for all sets <m>X</m> in <m>{\cal P}(A)</m>, <me>F(X)=
+\begin{cases}
+0 &amp;\text{if $X$ has an even number of elements}\\
+1 &amp;\text{if $X$ has an odd number of elements.}
+\end{cases}</me>
+  </p>
+
+  
+
+  <ol marker="a">
+    <li>
+      <p>Find
+    <m>F(\{1, 3, 4\})</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>Find
+    <m>F(\emptyset)</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>Find
+    <m>F(\{2, 3\})</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>F(\{2, 3, 4, 5\})</m>.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>D</m> be the set of all finite subsets of positive integers. Let <m>T:\mathbb{Z}^+\rightarrow D</m> be the function where for each positive integer <m>n</m>, <m>T(n)</m> is the set of positive divisors of <m>n</m>.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p> Find
+    <m>T(1)</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>Find 
+    <m>T(15)</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>Find
+    <m>T(17)</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>Find
+    <m>T(5)</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>Find 
+    <m>T(18)</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>Find
+    <m>T(21)</m>.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Define the function <m>F:\mathbb{Z}\times\mathbb{Z}\rightarrow \mathbb{Z}\times\mathbb{Z}</m> where for all ordered pairs <m>(a, b)</m> of integers, <m>F(a, b)=(2a+1, 3b-2)</m>.
+  </p>
+
+ <ol marker="a">
+    <li>
+      <p>Find
+    <m>F(4, 4)</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>Find 
+    <m>F(2, 1)</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>Find 
+    <m>F(3, 2)</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>Find 
+    <m>F(1, 5)</m>.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>X=\{1, 2, 3, 4\}</m> and <m>Y=\{a, b, c, d, e\}</m>. Define <m>g:X\rightarrow Y</m> by <m>g(1)=a, g(2)=a, g(3)=a</m> and <m>g(4)=d</m>.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Draw an arrow diagram for <m>g</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Let <m>A=\{2, 3\}, C=\{a\}</m>, and <m>D=\{b, c\}</m>. Find <m>g(A), g(X), g^{-1}(C), g^{-1}(D)</m>, and <m>g^{-1}(Y)</m>.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement><p>Show that each of the following maps is not a function by showing it is not well-defined.</p>
+      <ol marker="a">
+        <li>
+      <p>
+    Define <m>g:\mathbb{Q}\rightarrow\mathbb{Z}</m> by the rule <me>g\Big(\frac{m}{n}\Big)=m-n</me> for all integers <m>m</m> and <m>n</m> with <m>n\neq 0</m>. 
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Define <m>h:\mathbb{Q}\rightarrow\mathbb{Q}</m> by the rule <me>h\Big(\frac{m}{n}\Big)=\frac{m^2}{n}</me> for all integers <m>m</m> and <m>n</m> with <m>n\neq 0</m>. 
+  </p>
+    </li>
+        
+      </ol></statement></exercise>
+
+    </exercises>
+
+</section>

@@ -1,0 +1,595 @@
+<section xml:id="arguments2-3">
+  <title>Valid and Invalid Arguments</title><idx>argument</idx>
+
+  <p>We've been looking at logical statements, and now we want to be able to put statements together to form logical arguments. Just like with the statements, we are going to be concerned more about the structure of an argument than the specific content. </p>
+
+  <p>An <term>argument</term> consists of premises and a conclusion. You must have at least one premise, but can have as many as you like. You have exactly one conclusion.</p>
+
+<assemblage xml:id="B_formargument">
+  <title>General Form of an Argument</title><idx>argument</idx>
+    <p><tabular>
+      <row><cell>A</cell></row>
+      <row bottom="medium"><cell>B</cell></row>
+      <row><cell><m>\therefore\ </m>C</cell></row>
+    </tabular>
+
+    Statements A and B are the <term>premises</term><idx>premise</idx>, and statement C is the <term>conclusion</term><idx>conclusion</idx>. The symbol <m>\ \therefore\ </m><notation><usage><m>\therefore</m></usage><description>therefore</description></notation> is read <q>therefore.</q>
+  </p>
+</assemblage>
+
+  <p>Since an argument is just a list of statements, we need some structure for what makes a <q>good</q> argument.</p>
+
+  <definition xml:id="D_valid"><statement><p>An argument is <term>valid</term><idx>valid argument</idx> if whenever the premises are true, the conclusion must be true.</p></statement></definition>
+
+  <definition xml:id="D_invalid"><statement><p>An argument is <term>invalid</term><idx>invalid argument</idx> if it is possible for the premises to be true and the conclusion false.</p></statement></definition>
+
+  <p>It is really important to note that validity of an argument does not depend on the actual truth or falsity of the statements. To decide if an argument is valid, we construct a truth-table for the premises and conclusion. Then we check for whether there is a case where the premises are true and the conclusion false.</p>
+
+  <example xml:id="E_validarg"><title>Valid Argument</title><p>
+    Decide whether the following argument is valid or invalid.
+    <tabular>
+      <row bottom="medium"><cell><m>p\wedge q</m></cell></row>
+      <row><cell><m>\therefore\ </m><m>p</m></cell></row>
+    </tabular>
+    We construct a truth-table with a columnn for each premise and conclusion.
+    <table xml:id="T_validarg">
+    <!--<title>Truth-table for <m>p\rightarrow q</m>.</title>-->
+    <tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>p\wedge q</m></cell>
+              <cell><m>p</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell><alert>T</alert></cell>
+              <cell><alert>T</alert></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+            </row>
+    </tabular>
+
+  </table></p>
+
+  <p>Since we are looking for where the premise is true, we only need to look at the first row (in bold). In this case, the conclusion is also true. Thus, whenever to premises are true the conclusion must be true. Hence, the argument is valid.</p>
+</example>
+
+<example xml:id="E_invalidarg"><title>Invalid Argument</title><p>
+    Decide whether the following argument is valid or invalid.
+    <tabular>
+      <row bottom="medium"><cell><m>p\vee q</m></cell></row>
+      <row><cell><m>\therefore\ </m><m>p</m></cell></row>
+    </tabular>
+    We construct a truth-table with a columnn for each premise and conclusion.
+    <table xml:id="T_invalidarg">
+    <!--<title>Truth-table for <m>p\rightarrow q</m>.</title>-->
+    <tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>p\vee q</m></cell>
+              <cell><m>p</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell><alert>T</alert></cell>
+              <cell><alert>T</alert></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell><alert>T</alert></cell>
+              <cell><alert>T</alert></cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell><alert>T</alert></cell>
+              <cell><alert>F</alert></cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+            </row>
+    </tabular>
+
+  </table></p>
+
+  <p>The first three rows all have true premises. However, in the case that <m>p</m> is false and <m>q</m> is true, the premise is true while the conclusion is false. Thus, it is possible to have true premises and a false conclusion. Hence, the argument is invalid.</p>
+</example>
+
+<activity><statement><p>Use a truth-table to determine if the following argument is valid or invalid.
+
+  <tabular>
+      <row><cell><m>p\rightarrow q</m></cell></row>
+      <row bottom="medium"><cell><m>\sim q</m></cell></row>
+      <row><cell><m>\therefore\ </m><m>\sim p</m></cell></row>
+    </tabular>
+</p></statement></activity>
+
+<activity><statement><p>Use a truth-table to determine if the following argument is valid or invalid.
+
+  <tabular>
+      <row><cell><m>p\rightarrow q</m></cell></row>
+      <row bottom="medium"><cell><m>\sim p</m></cell></row>
+      <row><cell><m>\therefore\ </m><m>\sim q</m></cell></row>
+    </tabular>
+</p></statement></activity>
+
+<activity><statement><p>Use a truth-table to determine if the following argument is valid or invalid.
+
+  <tabular>
+      <row><cell><m>p\ \vee q</m></cell></row>
+      <row><cell><m>p\rightarrow r</m></cell></row>
+      <row bottom="medium"><cell><m>q\rightarrow r</m></cell></row>
+      <row><cell><m>\therefore\ </m><m>r</m></cell></row>
+    </tabular>
+</p></statement></activity>
+
+<example xml:id="E_argsentences"><title>An Argument with False Premises and False Conclusion</title>
+  <p>Let's look at a more specific example:</p>
+    <p><tabular>
+ <row bottom="medium"><cell>The sun is purple and the sun sets in the west.</cell></row>
+  <row><cell>Therefore, the sun is purple.</cell></row>
+    </tabular></p>
+  <p>Although the two statements are false, the argument is still valid. It has the form of <xref ref="E_validarg"/>, which we determined was valid. But if we think about the definition of validity, we should be able to see that it would be impossible to have the premise be true while the conclusion is false.</p>
+</example>
+
+<activity xml:id="A_possibleforms"><introduction><p>If possible, give an example of an argument (in sentences, not variables) that meets the given criteria. If it is not possible, just state that it is not possible.</p></introduction>
+<task><p>A valid argument that has false premises and a true conclusion.</p></task>
+<task><p>An invalid argument that has false premises and a true conclusion.</p></task>
+<task><p>A valid argument that has true premises and a true conclusion.</p></task>
+<task><p>An invalid argument that has true premises and a true conclusion.</p></task>
+<task><p>A valid argument that has true premises and a false conclusion.</p></task>
+<task><p>An invalid argument that has true premises and a false conclusion.</p></task>
+</activity>
+
+<assemblage xml:id="B_commonvalid">
+<title>Some Common Forms for Valid Arguments</title>
+
+<p>Modus ponens:<idx>modus ponens</idx>
+
+    <tabular>
+      <row><cell><m>p\rightarrow q</m></cell></row>
+       <row bottom="medium"><cell><m>p</m></cell></row>
+      <row><cell><m>\therefore\ </m><m>q</m></cell></row>
+    </tabular>
+</p>
+
+<p>Modus tollens:<idx>modus tollens</idx>
+
+    <tabular>
+      <row><cell><m>p\rightarrow q</m></cell></row>
+       <row bottom="medium"><cell><m>\sim q</m></cell></row>
+      <row><cell><m>\therefore\ </m><m>\sim p</m></cell></row>
+    </tabular>
+</p>
+
+<p>Transitivity:<idx><h>transitive</h><h>argument</h></idx>
+
+    <tabular>
+      <row><cell><m>p\rightarrow q</m></cell></row>
+       <row bottom="medium"><cell><m>q\rightarrow r</m></cell></row>
+      <row><cell><m>\therefore\ </m><m>p\rightarrow r</m></cell></row>
+    </tabular>
+</p>
+</assemblage>
+
+<example xml:id="E_transitivearg"><title>Validity of Transitivity</title><p>
+    We will show that transitivity is a valid argument using a truth-table.
+    <table xml:id="T_transitivityarg">
+    <title>Truth-table for transitivity.</title>
+    <tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <col halign="center" right="minor"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>r</m></cell>
+              <cell><m>p\rightarrow q</m></cell>
+              <cell><m>q\rightarrow r</m></cell>
+              <cell><m>p\rightarrow r</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell><alert>T</alert></cell>
+              <cell><alert>T</alert></cell>
+              <cell><alert>T</alert></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+             </row>
+             <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+             </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell><alert>T</alert></cell>
+              <cell><alert>T</alert></cell>
+              <cell><alert>T</alert></cell>
+             </row>
+              <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell><alert>T</alert></cell>
+              <cell><alert>T</alert></cell>
+              <cell><alert>T</alert></cell>
+             </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell><alert>T</alert></cell>
+              <cell><alert>T</alert></cell>
+              <cell><alert>T</alert></cell>
+            </row>
+    </tabular>
+
+  </table></p>
+
+  <p>Looking at the rows where both premises are true (in bold), we can see that the conclusion must be true. Thus, the argument is valid.</p>
+</example>
+
+<assemblage xml:id="B_commoninvalid">
+<title>Some Common Invalid Arguments</title>
+
+<p>Converse error:<idx>converse error</idx>
+
+    <tabular>
+      <row><cell><m>p\rightarrow q</m></cell></row>
+       <row bottom="medium"><cell><m>q</m></cell></row>
+      <row><cell><m>\therefore\ </m><m>p</m></cell></row>
+    </tabular>
+</p>
+
+<p>Inverse error:<idx>inverse error</idx>
+
+    <tabular>
+      <row><cell><m>\sim p\rightarrow q</m></cell></row>
+       <row bottom="medium"><cell><m>p</m></cell></row>
+      <row><cell><m>\therefore\ </m><m>\sim q</m></cell></row>
+    </tabular>
+</p>
+</assemblage>
+
+  <p>Since it is possible to have a valid argument with a false conclusion, but we'd like our arguments to have true conclusions, we need something more to have a <q>good</q> argument.</p>
+
+  <definition xml:id="D_sound">
+    <statement><p>An argument is <term>sound</term> if it is valid and all the premises are true.</p></statement>
+  </definition>
+<p>Since a valid argument cannot have true premises and a false conclusion, if the premises are actually true, then the argument must have a true conclusion. Note, soundness of an argument <em>does</em> depend on the actual content of the statements.</p>
+
+<activity><statement><p>Which or your arguments in <xref ref="A_possibleforms"/> are sound?</p></statement></activity>
+
+    <reading-questions>
+      <title>Check Your Understanding</title>
+      
+
+      <exercise><statement><p>Use a truth-table to show the converse error is an invalid argument.</p></statement>
+      <answer>
+      <tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <col halign="center" right="minor"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>p\rightarrow q</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>p</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+            </row>
+    </tabular>
+    <p>We can see in the third row we have true premises and a false conclusion. Thus it is invalid.</p></answer></exercise>
+
+<exercise><statement><p>Use a truth-table to determine if the following argument is valid or invalid.</p>
+      <p><tabular>
+      <row><cell><m>p\vee q</m></cell></row>
+       <row bottom="medium"><cell><m>\sim p</m></cell></row>
+      <row><cell><m>\therefore\ </m><m>\sim q</m></cell></row>
+    </tabular></p></statement>
+      <answer>
+      <tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <col halign="center" right="minor"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>p\vee q</m></cell>
+              <cell><m>\sim p</m></cell>
+              <cell><m>q</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+    </tabular>
+    <p>The third row is the only one with all true premises. In this case the conclusion is true. Thus it is valid.</p></answer></exercise>
+      <exercise><statement><p>True or False: A valid argument can have false premises and a true conclusion.</p></statement><answer>True</answer></exercise>
+      <exercise><statement><p>True or False: An invalid argument can have true premises and a true conclusion.</p></statement><answer>True</answer></exercise>
+      <exercise><statement><p>True or False: A valid argument can have true premises and a false conclusion.</p></statement><answer>False</answer></exercise>
+      <exercise><statement><p>True or False: A sound argument can have false premises and a true conclusion.</p></statement><answer>False</answer></exercise>
+      <exercise><statement><p>True or False: A sound argument can have true premises and a false conclusion.</p></statement><answer>False</answer></exercise>
+
+    </reading-questions>
+
+    <exercises>
+      <title>Exercises</title>
+
+      <exercise><statement>
+        <p>
+    Use a truth-table to determine if the following argument is valid or invalid. Indicate the premises and conclusion on your table. Clearly state your conclusion and explain how your truth-table supports your conclusion.
+  </p>
+
+    <tabular>
+    <row>
+      <cell halign="left"><m>p</m></cell>
+    </row>
+    <row>
+      <cell halign="left"><m>p\rightarrow q</m></cell>
+    </row>
+    <row bottom="medium">
+      <cell halign="left"><m>\sim q\ \vee r</m></cell>
+    </row>
+    <row>
+      <cell halign="left"><m>\therefore r</m></cell>
+    </row>
+    </tabular>
+
+      </statement></exercise>
+
+      <exercise><statement>
+        
+       <p>
+    Use a truth-table to determine if the following argument is valid or invalid. Indicate the premises and conclusion on your table. Clearly state your conclusion and explain how your truth-table supports your conclusion.
+  </p>
+
+    
+    <tabular>
+    <row>
+      <cell halign="left"><m>(p\ \wedge q)\rightarrow \sim r</m></cell>
+    </row>
+    <row>
+      <cell halign="left"><m>p\ \vee \sim q</m></cell>
+    </row>
+    <row bottom="medium">
+      <cell halign="left"><m>\sim q\rightarrow p</m></cell>
+    </row>
+    <row>
+      <cell halign="left"><m>\therefore \sim r</m></cell>
+    </row>
+    </tabular>
+
+      </statement></exercise>
+
+      <exercise><statement>
+        <p>
+    Use a truth-table to show that the following argument is valid. Indicate the premises and conclusion on your table. Explain how your truth-table supports your conclusion.
+  </p>
+
+    
+    <tabular>
+    <row >
+      <cell halign="left"><m>p \ \vee q</m></cell>
+    </row>
+    <row bottom="medium">
+      <cell halign="left"><m>\sim p</m></cell>
+    </row>
+    <row >
+      <cell halign="left"><m>\therefore q</m></cell>
+    </row>
+    </tabular>
+
+      </statement></exercise>
+
+      <exercise><statement>
+        <p>
+    Use a truth-table to show that the following argument (modus tollens) is valid. Indicate the premises and conclusion on your table. Explain how your truth-table supports your conclusion.
+  </p>
+
+    
+    <tabular>
+    <row >
+      <cell halign="left"><m>p\rightarrow q</m></cell>
+    </row>
+    <row bottom="medium">
+      <cell halign="left"><m>\sim q</m></cell>
+    </row>
+    <row >
+      <cell halign="left"><m>\therefore \sim p</m></cell>
+    </row>
+    </tabular>
+ 
+      </statement></exercise>
+
+      <exercise><statement>
+        <p>
+    Use a truth-table to show that the following argument (also known as proof by cases) is valid. Indicate the premises and conclusion on your table. Explain how your truth-table supports your conclusion.
+  </p>
+
+    <tabular>
+    <row >
+      <cell halign="left"><m>p\ \vee q</m></cell>
+    </row>
+    <row >
+      <cell halign="left"><m>p\rightarrow r</m></cell>
+    </row>
+    <row bottom="medium">
+      <cell halign="left"><m>q\rightarrow r</m></cell>
+    </row>
+    <row >
+      <cell halign="left"><m>\therefore r</m></cell>
+    </row>
+    </tabular>
+
+      </statement></exercise>
+
+      <exercise><statement>
+        <p>
+    Determine whether the following arguments are valid or invalid. If they are invalid, determine it they exhibit the converse error or the inverse error. Rewrite each argument using symbols to help determine validity.
+  </p>
+
+  <p><ol marker="a">
+    <li>
+    
+    <tabular>
+    <row >
+      <cell halign="left">If Jules solved this problem correctly, then Jules obtained the answer <m>\pi</m>.</cell>
+    </row>
+    <row>
+      <cell halign="left">Jules obtained the answer <m>\pi</m>.</cell>
+    </row>
+    <row >
+      <cell halign="left"><m>\therefore</m> Jules solved the problem correctly.</cell>
+    </row>
+    </tabular>
+
+    </li>
+
+    <li>
+    
+    
+    <tabular>
+    <row >
+      <cell halign="left">If at least one of these two numbers is divisible by 6, then the product of these two numbers is divisible by 6.</cell>
+    </row>
+    <row >
+      <cell halign="left">Neither of these two numbers is divisible by 6.</cell>
+    </row>
+    <row >
+      <cell halign="left"><m>\therefore</m> The product of these two numbers is not divisible by 6.</cell>
+    </row>
+    </tabular>
+
+    </li>
+
+  </ol></p>
+      </statement></exercise>
+
+      <exercise><statement><p>
+    Explain in your own words what distinguishes a valid form of argument from an invalid one.
+  </p></statement></exercise>
+
+    </exercises>
+
+</section>

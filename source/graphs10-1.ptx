@@ -1,0 +1,796 @@
+<section xml:id="graphs10-1">
+  <title>Graphs</title><idx>graph</idx>
+
+  <p>This section focuses on some of the terminology associated with graphs. We will also define some special types of graphs, such as complete graphs.</p>
+
+  <p>A <term>graph</term><idx>graph</idx> is a collection of <term>vertices</term><idx>vertex</idx> and <term>edges</term><idx>edge</idx>.</p>
+  <figure xml:id="F_basicgraph">
+  <caption>Example of a graph, <m>G</m></caption>
+  <image width="30%" xml:id="basicgraph">
+    <latex-image>
+\begin{tikzpicture}
+%basic example
+
+\tikzset{every loop/.style={min distance=7mm,looseness=50}}
+
+\node[main node](1)[label=above:$v_1$]{};
+\node[main node](2)[label=left:$v_2$][below left=1.3cm of 1]{};
+\node[main node](3)[label=right:$v_3$][below right=1.3cm of 1]{};
+\node[main node](4)[label=below:$v_4$][below=2.0cm of 1]{};
+
+
+
+
+\path[draw, thick](1) edge node [above=.2ex]{$e_1$} (2);
+\path[draw, thick](1) edge node [above=.2ex]{$e_2$} (3);
+\path[draw, thick](1) edge node [below right=.2ex]{$e_4$} (4);
+\path[draw, thick](2) edge  node [above left=.2ex]{$e_3$} (3);
+\path[draw, thick](2) edge  node [below=.2ex]{$e_5$} (4);
+\end{tikzpicture}
+
+
+
+</latex-image></image>
+</figure>
+
+<p><xref ref="F_basicgraph"/> is an example of a graph. We have labeled the vertices with<m>v_1, v_2, v_3, v_4</m> and the edges with <m>e_1, e_2, e_3, e_4, e_5</m>.</p>
+
+<definition xml:id="D_graphterms">
+  <statement>
+    <p>A graph, <m>G</m>, consists of a finite set, <m>V(G)</m>, of <term>vertices</term><idx>vertex</idx> and a finite set, <m>E(G)</m>, of <term>edges</term><idx>edge</idx>. Each edge is assocated with two vertices (it may be the same vertex) called <term>endpoints</term><idx>endpoints of an edge</idx>.</p></statement></definition>
+
+    <p>In the above example, <xref ref="F_basicgraph"/>, <m>V(G)=\{v_1, v_2, v_3, v_4\}, E(G)=\{e_1, e_2, e_3, e_4, e_5\}</m>. The endpoints of edge <m>e_1</m> are <m>v_1, v_2</m>.</p> 
+
+    <p>If two edges have the same endpoints, we say they are <term>parallel</term><idx>parallel edges</idx><idx><h>edge</h><h>parallel</h></idx>.</p> 
+    <p>A <term>loop</term><idx>loop</idx> is an edge where both endpoints are the same vertex.</p>
+
+    <p>Two vertices connected by an edge are called <term>adjacent</term><idx><h>adjacent</h><h>vertices</h></idx><idx><h>vertex</h><h>adjacent</h></idx>. For example, in <xref ref="F_basicgraph"/> <m>v_2</m> is adjacent to <m>v_3</m>, but <m>v_3</m> is not adjacent to <m>v_4</m>.</p>
+
+    <p>A vertex of a loop is adjacent to itself.</p>
+
+    <p>An edge is <term>incident on</term><idx><h>incident</h><h>edge</h></idx> each of its endpoints.</p>
+
+    <p>Two edges that are incident on the same vertex are <term>adjacent</term><idx><h>adjacent</h><h>edges</h></idx><idx><h>edge</h><h>adjacent</h></idx>. For example, in <xref ref="F_basicgraph"/> <m>e_1</m> and <m>e_2</m> are adjacent, but <m>e_2</m> and <m>e_5</m> are not adjacent.</p>
+
+    <p>An <term>isolated vertex</term><idx>isolated vertex</idx> is one with no incident edges.</p>
+
+    <p>A graph with no vertices is the <term>empty graph</term><idx>empty graph</idx>.</p>
+
+
+<p>In <xref ref="F_parallelandloop"/>, edges <m>e_1</m> and <m>e_2</m> are parallel edges, while edge <m>e_3</m> is a loop. We also have an isolated vertex, <m>v_3</m>.</p>
+
+<figure xml:id="F_parallelandloop">
+  <caption>Example of a graph with parallel edges and a loop</caption>
+  <image width="40%" xml:id="parallelgraph">
+    <latex-image>
+\begin{tikzpicture}
+%parallel edges, loops
+\tikzset{every loop/.style={min distance=15mm,looseness=50}}
+
+\node[main node](1)[label=left:$v_1$]{};
+\node[main node](2)[label=above:$v_2$][right=2.0cm of 1]{};
+\node[main node](3)[label=right:$v_3$][right=2.0cm of 2]{};
+
+
+
+
+\path[draw, thick](1) edge [bend left] node [above=.1ex]{$e_1$} (2);
+\path[draw, thick](1) edge [bend right] node [below=.1ex]{$e_2$} (2);
+\path[draw, thick](2) edge [loop right]  node [right=.1ex]{$e_3$} (2);
+
+
+\end{tikzpicture}
+
+
+
+</latex-image></image>
+</figure>
+
+
+
+  <example xml:id="E_beachballgraph"><title>Graph Terminology</title>
+  <p>Consider the graph, <m>G</m> given in the figure.</p>
+  <figure xml:id="F_beachballgr">
+  <caption>Graph <m>G</m></caption>
+  <image width="40%" xml:id="beachballg">
+    <latex-image>
+\begin{tikzpicture}
+%example for incident, adjacent
+\tikzset{every loop/.style={min distance=15mm,looseness=50}}
+
+\node[main node](1)[label=above:$v_1$]{};
+\node[main node](2)[label=left:$v_2$][below left=1.7cm of 1]{};
+\node[main node](3)[label=below:$v_3$][below=2.3cm of 1]{};
+\node[main node](4)[label=right:$v_4$][below right=1.7cm of 1]{};
+
+
+
+\path[draw, thick](1) edge [bend right] node [above=.1ex]{$e_1$} (2);
+\path[draw, thick](1) edge [bend left] node [above=.1ex]{$e_4$} (4);
+\path[draw, thick](1) edge [bend right]  node [left=.1ex]{$e_2$} (3);
+\path[draw, thick](1) edge [bend left]  node [right=.1ex]{$e_3$} (3);
+\path[draw, thick](2) edge [bend right] node [below=.1ex]{$e_5$} (3);
+\path[draw, thick](3) edge [bend right] node [below=.1ex]{$e_6$} (4);
+
+\end{tikzpicture}
+
+
+
+</latex-image></image>
+</figure>
+
+    <p>Find <m>V(G)</m>.</p>
+    <answer><m>V(G)=\{v_1, v_2, v_3, v_4\}</m></answer>
+    <p>Find <m>E(G)</m>.</p>
+    <answer><m>E(G)=\{e_1, e_2, \ldots, e_6\}</m></answer>
+    <p>Find the endpoints for <m>e_1</m>.</p>
+    <answer><m>\{v_1, v_2\}</m></answer>
+    <p>Find the endpoints for <m>e_3</m>.</p>
+    <answer><m>\{v_1, v_3\}</m></answer>
+    <p>Find the endpoints for <m>e_6</m>.</p>
+    <answer><m>\{v_3, v_4\}</m></answer>
+    <p>Find the edges incident on <m>v_1</m>.</p>
+    <answer><m>e_1, e_2, e_3, e_4</m></answer>
+    <p>Find all vertices adjacent to <m>v_4</m>.</p>
+    <answer><m>\{v_1, v_3\}</m></answer>
+    <p>Does <m>G</m> have any parallel edges?</p>
+    <answer>Yes. <m>e_2, e_3</m></answer>
+    <p>Does <m>G</m> have any loops?</p>
+    <answer>No.</answer>
+    
+  </example>
+
+  <p>It is important to note that it is possible to draw the same graph in different ways.</p>
+
+<figure xml:id="F_isographs">
+  <caption>The same graph drawn in two different ways</caption>
+  <image width="80%" xml:id="isomorphicgraphs">
+    <latex-image>
+\begin{tikzpicture}
+%isomporphic graphs
+
+\tikzset{every loop/.style={min distance=7mm,looseness=50}}
+
+\node[main node](1)[label=above:$v_1$]{};
+\node[main node](2)[label=left:$v_2$][below left=1.3cm of 1]{};
+\node[main node](3)[label=right:$v_3$][below right=1.3cm of 1]{};
+\node[main node](4)[label=below:$v_4$][below=2.0cm of 1]{};
+
+
+\node[main node](5)[label=above:$v_1$][right=3.5 of 1]{};
+\node[main node](6)[label=below:$v_2$][below=2.0cm of 5]{};
+\node[main node](7)[label=right:$v_3$][below right=1.3cm of 5]{};
+\node[main node](8)[label=left:$v_4$][below left=1.3cm of 5]{};
+
+
+\path[draw, thick](1) edge node [above=.2ex]{$e_1$} (2);
+\path[draw, thick](1) edge node [above=.2ex]{$e_2$} (3);
+\path[draw, thick](1) edge node [below right=.2ex]{$e_4$} (4);
+\path[draw, thick](2) edge  node [above left=.2ex]{$e_5$} (3);
+\path[draw, thick](2) edge  node [below=.2ex]{$e_3$} (4);
+
+\path[draw, thick](5) edge node [right=.1ex]{$e_1$} (6);
+\path[draw, thick](5) edge node [above=.2ex]{$e_2$} (7);
+\path[draw, thick](5) edge node [above=.2ex]{$e_4$} (8);
+\path[draw, thick](6) edge  node [below=.2ex]{$e_5$} (7);
+\path[draw, thick](6) edge  node [below=.2ex]{$e_3$} (8);
+\end{tikzpicture}
+
+
+
+
+</latex-image></image>
+</figure>
+<p>The two graphs in <xref ref="F_isographs" /> are the same graph since they have the same vertex and edge sets, and a given edge still has the same endpoints.</p>
+
+<definition xml:id="digraph"><statement><p>A <term>directed graph</term><idx>directed graph</idx> or <term>digraph</term><idx>digraph</idx><idx><h>graph</h><h>directed</h></idx> consists of a set of vertices, <m>V(G)</m> and directed edges (arrows), <m>D(G)</m>, where each edge is associated with an <alert>ordered</alert> pair of of vertices called endpoints, <m>(v, w)</m>.</p></statement></definition>
+
+<p>We saw directed graphs in <xref ref="relations8-1"/> and <xref ref="rstrelations8-2"/>. For example, see <xref ref="F_digraphlessthan"/>. In this example, we have an edge with endpoints <m>(1, 2)</m>, but not <m>(2, 1)</m>.</p>
+
+<p>Really, the vertices of a graph represent a set, while the edges represent relationships between elements of that set. There are lots of examples of graphs as representations of relationships or networks. For example, graphs are used to represent communications systems, flight patterns, and friendship networks. Graphs can even be used to find strategies in games such as sudoku.</p>
+
+<p>A graph with no parallel edges or loops is called <term>simple</term><idx>simple graph</idx>. For example, <xref ref="F_basicgraph"/> is simple, while <xref ref="F_parallelandloop"/> is not.</p>
+
+<p>Now we want to define a couple special graphs.</p>
+
+<definition xml:id="D_completegraph"><statement><p>A <term>complete graph on <m>n</m> vertices</term><idx>complete graph</idx><idx><h>graph</h><h>complete</h></idx>, <m>K_n</m>, is a simple graph with <m>n</m> vertices whose set of edges contains exactly one edge for every pair of vertices.</p></statement></definition>
+
+<p><m>K_1, \ldots, K_4</m> are given in the following figure.</p>
+<figure xml:id="F_completegraphs">
+  <caption>Examples of complete graphs</caption>
+  <image width="60%" xml:id="compgraphs">
+    <latex-image>
+\begin{tikzpicture}
+%complete graphs
+
+\node[main node](1){};
+\node(2)[below=1.0cm of 1]{$K_1$};
+
+\node[main node](3)[right=1.0cm of 1]{};
+\node[main node](4)[right=0.6cm of 3]{};
+
+\path[draw, thick](3) edge node [below=1.05cm]{$K_2$}(4);
+
+\node[main node](5)[right=1.0cm of 4]{};
+\node[main node](6)[right=0.6cm of 5]{};
+\node[main node](7)[below right=0.45cm of 5]{};
+\node(8)[below=0.65cm of 7]{$K_3$};
+
+\path[draw, thick](5) edge node {} (6);
+\path[draw, thick](6) edge node {} (7);
+\path[draw, thick](5) edge node {}  (7);
+
+\node[main node](9)[right=1.0cm of 6]{};
+\node[main node](10)[right=0.6cm of 9]{};
+\node[main node](11)[below=0.5cm of 9]{};
+\node[main node](12)[below=0.5cm of 10]{};
+
+\path[draw, thick](9) edge node {} (10);
+\path[draw, thick](9) edge node {} (11);
+\path[draw, thick](10) edge node {}  (12);
+\path[draw, thick](9) edge node {}  (12);
+\path[draw, thick](10) edge node {} (11);
+\path[draw, thick](11) edge node [below=0.5cm]{$K_4$}(12);
+
+
+\end{tikzpicture}
+
+
+
+</latex-image></image>
+</figure>
+
+<activity><statement><p>Draw the complete graphs on 5 vertices and 6 vertices, <m>K_5</m> and <m>K_6</m>.</p></statement></activity>
+
+<definition xml:id="D_compbipartite"><statement>
+  <p>Let <m>m, n\in \mathbb{Z}^{+}</m>. A <term>complete bipartite graph on <m>(m, n)</m> vertices</term><idx>complete bipartite graph</idx><idx><h>graph</h><h>complete bipartite</h></idx>, <m>K_{m, n}</m>, is a simple graph with vertices <m>v_1, v_2, \ldots, v_m</m> and <m>w_1, w_2, \ldots w_n</m>, such that 
+<ol>
+  <li>there is an edge from <m>v_i</m> to <m>w_j</m> for all <m>i=1, \ldots, m</m> and <m>j=1, \ldots n</m>;</li>
+  <li>there are no edges from <m>v_i</m> to <m>v_k</m> for all <m>i, k=1, \ldots, m</m>;</li>
+  <li>there are no edges from <m>w_i</m> to <m>w_k</m> for all <m>i, k=1, \ldots, n</m>.</li>
+</ol></p>
+</statement></definition>
+
+<figure xml:id="F_completebipartitegraph">
+  <caption>Complete bipartite graph, <m>K_{3, 2}</m></caption>
+  <image width="30%" xml:id="compbipartgraph">
+    <latex-image>
+\begin{tikzpicture}
+%complete bipartite graph
+
+\node[main node](1){};
+\node[main node](2)[right=1.0cm of 1]{};
+\node[main node](3)[below left=1.5cm of 1]{};
+\node[main node](4)[right=1.5cm of 3]{};
+\node[main node](5)[right=1.5cm of 4]{};
+
+\path[draw, thick](1) edge node {} (3);
+\path[draw, thick](1) edge node {} (4);
+\path[draw, thick](1) edge node {}  (5);
+\path[draw, thick](2) edge node {}  (3);
+\path[draw, thick](2) edge node {} (4);
+\path[draw, thick](2) edge node {} (5);
+
+
+
+
+\end{tikzpicture}
+
+
+
+</latex-image></image>
+</figure>
+
+<activity><statement><p>Draw the complete bipartite graphs <m>K_{3, 3}</m> and <m>K_{4, 5}</m>.</p></statement></activity>
+
+<definition xml:id="D_subgraph"><statement><p>A graph <m>H</m> is a <term>subgraph</term><idx>subgraph</idx> of <m>G</m> if every vertex in <m>H</m> is also a vertex in <m>G</m>, and every edge in <m>H</m> is also an edge in <m>G</m> such that the edges in <m>H</m> have the same endpoints as in <m>G</m>.</p></statement></definition>
+
+<p>In the following figure, <m>H_1</m> and <m>H_2</m> are subgraphs of <m>G</m>.</p>
+
+<figure xml:id="F_subgraph">
+  <caption>Examples of subgraphs, <m>H_1, H_2</m>, of the graph <m>G</m></caption>
+  <image width="60%" xml:id="subgraphs">
+    <latex-image>
+\begin{tikzpicture}
+%subgraphs
+
+\tikzset{every loop/.style={min distance=7mm,looseness=50}}
+
+\node[main node](1)[label=above:$v_1$]{};
+\node[main node](2)[label=left:$v_2$][below left=1.3cm of 1]{};
+\node[main node](3)[label=right:$v_3$][below right=1.3cm of 1]{};
+\node[main node](4)[label=below:$v_4$][below=2.0cm of 1]{};
+
+
+\node[main node](5)[label=above:$v_1$][right=3.5 of 1]{};
+\node[main node](6)[label=left:$v_2$][below left=1.3cm of 5]{};
+\node[main node](7)[label=right:$v_3$][below right=1.3cm of 5]{};
+\node[main node](8)[label=below:$v_4$][below=2.0cm of 5]{};
+
+
+\path[draw, thick](1) edge node [above=.2ex]{$e_1$} (2);
+\path[draw, thick](1) edge node [above=.2ex]{$e_2$} (3);
+\path[draw, thick](1) edge node [below right=.2ex]{$e_4$} (4);
+\path[draw, thick](2) edge  node [above left=.2ex]{$e_5$} (3);
+\path[draw, thick](2) edge  node [below=.2ex]{$e_3$} (4);
+
+\path[draw, thick](5) edge node [above=.1ex]{$e_1$} (6);
+\path[draw, thick](5) edge node [above=.2ex]{$e_2$} (7);
+%\path[draw, thick](5) edge node [above=.2ex]{$e_4$} (8);
+%\path[draw, thick](6) edge  node [below=.2ex]{$e_5$} (7);
+\path[draw, thick](6) edge  node [below=.2ex]{$e_3$} (8);
+
+\node[main node](9)[label=above:$v_1$][right=3.5 of 5]{};
+\node[main node](10)[label=left:$v_2$][below left=1.3cm of 9]{};
+\node[main node](11)[label=right:$v_3$][below right=1.3cm of 9]{};
+%\node[main node](12)[label=below:$v_4$][below=2.0cm of 9]{};
+
+\path[draw, thick](9) edge node [above=.2ex]{$e_1$} (10);
+\path[draw, thick](9) edge node [above=.2ex]{$e_2$} (11);
+%\path[draw, thick](1) edge node [below right=.2ex]{$e_4$} (4);
+\path[draw, thick](10) edge  node [above left=.2ex]{$e_5$} (11);
+%\path[draw, thick](2) edge  node [below=.2ex]{$e_3$} (4);
+
+\node(13)[above=0.5cm of 1]{$G$};
+\node(14)[above=0.5cm of 5]{$H_1$};
+\node(15)[above=0.5cm of 9]{$H_2$};
+
+\end{tikzpicture}
+
+
+
+
+</latex-image></image>
+</figure>
+
+<definition xml:id="D_degree"><statement><p>The <term>degree</term><idx><h>degree</h><h>of a vertex</h></idx><idx><h>vertex</h><h>degree</h></idx> of a vertex <m>v</m>, <m>\text{deg}(v)</m>, is the number of edges incident on <m>v</m>. Loops are counted twice. The <term>total degree</term><idx>total degree</idx><idx><h>graph</h><h>total degree</h></idx> of a graph <m>G</m> is the sum of the degrees of all vertices in <m>G</m>.</p></statement></definition>
+
+<example xml:id="E_degree"><title>Degree</title>
+<p>Let <m>G</m> be the graph in <xref ref="F_basicgraph"/>.</p>
+<p>Find <m>\text{deg}(v_2)</m>.</p>
+<answer>3</answer>
+
+<p>Find <m>\text{deg}(v_4)</m>.</p>
+<answer>2</answer>
+
+<p>Find the total degree of <m>G</m>.</p>
+<answer>10</answer>
+
+<p>Let <m>G</m> be the graph in <xref ref="F_parallelandloop"/>.</p>
+<p>Find <m>\text{deg}(v_2)</m>.</p>
+<answer>4</answer>
+
+<p>Find <m>\text{deg}(v_3)</m>.</p>
+<answer>0</answer>
+
+<p>Find the total degree of <m>G</m>.</p>
+<answer>6</answer>
+
+<p>Is there a relationship between the number of edges in <m>G</m> and the total degree?</p>
+</example>
+
+<p>As you might have seen in <xref ref="E_degree"/>, there is a relationship between the total degree of a graph and the number of edges. </p>
+<theorem xml:id="T_totaldegree"><statement><p>The total degree of a graph <m>G</m> is <m>2k</m> where <m>k</m> is the number of edges in <m>G</m>.</p></statement></theorem>
+
+<p>We will not provide a formal proof, but the theorem is not hard to show as each edge must be incident on two vertices. Thus, each edge is counted twice in the total degree.</p>
+
+<activity><statement><p>Draw any graph with 6 edges. Find the total degree of your graph. Verify that the total degree is twice the number of edges.</p></statement></activity>
+
+<corollary xml:id="C_totaldegreeeven"><statement><p>The total degree of any graph is even.</p></statement></corollary>
+  
+<activity><statement><p>Explain why in any graph there is an even number of vertices of odd degree.</p></statement></activity>
+
+<activity><introduction><p>For each of the following either draw an example of the graph or explain why it is impossible.</p></introduction>
+<task><p>A graph with 4 vertices of degrees 1, 1, 2, 3.</p></task>
+<task><p>A graph with 4 vertices of degrees 1, 1, 2, 2.</p></task>
+<task><p>A simple graph with 4 vertices of degrees 1, 1, 2, 2.</p></task>
+<task><p>A graph with 4 vertices of degrees 1, 2, 3, 3.</p></task>
+<task><p>A simple graph with 4 vertices of degrees 1, 2, 3, 4.</p></task>
+<task><p>A simple graph with 6 edges and all vertices of degrees 3.</p></task>
+</activity>
+    <reading-questions>
+      <title>Check Your Understanding</title>
+
+      <p>Use the following graph for questions about <m>G</m>.</p>
+      <figure xml:id="F_readingquestions">
+  <caption>The graph <m>G</m> for Check Your Understanding</caption>
+  <image width="30%" xml:id="readquest">
+    <latex-image>
+\begin{tikzpicture}
+%reading questions graph
+
+\tikzset{every loop/.style={min distance=10mm,looseness=80}}
+
+
+
+\node[main node](1)[label=above:$v_1$]{};
+\node[main node](2)[label=right:$v_2$][below=2.0cm of 1]{};
+\node[main node](3)[label=right:$v_3$][below right=1.3cm of 1]{};
+\node[main node](4)[label=left:$v_4$][below left=1.3cm of 1]{};
+
+
+\path[draw, thick](1) edge node [right=.1ex]{$e_1$} (2);
+\path[draw, thick](1) edge node [above=.2ex]{$e_2$} (3);
+\path[draw, thick](1) edge node [above=.2ex]{$e_4$} (4);
+\path[draw, thick](2) edge node [below=.2ex]{$e_5$} (3);
+\path[draw, thick](2) edge [bend right] node [above=.2ex]{$e_3$} (4);
+\path[draw, thick](2) edge [bend left] node [below=.1ex]{$e_6$} (4);
+\path[draw, thick](2) edge [loop below]  node [right=.1ex]{$e_7$} (2);
+
+\end{tikzpicture}
+
+
+
+
+
+</latex-image></image>
+</figure>
+      
+
+      <exercise><statement><p>List the edges of <m>G</m> incident on <m>v_2</m>.</p></statement>
+      <answer><m>e_1, e_3, e_5, e_6, e_7</m></answer></exercise>
+
+      <exercise><statement><p>Does <m>G</m> have any parallel edges?</p></statement>
+      <answer>Yes, <m>e_3, e_6</m></answer></exercise>
+
+      <exercise><statement><p>True or false: in <m>G</m>, <m>v_1</m> and <m>v_2</m> are adjacent.</p></statement>
+      <answer>True</answer></exercise>
+
+      <exercise><statement><p>True or false: in <m>G</m>, <m>v_3</m> and <m>v_4</m> are adjacent.</p></statement>
+      <answer>False</answer></exercise>
+
+      <exercise><statement><p>True or false: in <m>G</m>, <m>e_3</m> and <m>e_6</m> are adjacent.</p></statement>
+      <answer>True</answer></exercise>
+
+       <exercise><statement><p>In <m>G</m>, find the degree of <m>v_4</m>.</p></statement>
+      <answer><m>3</m></answer></exercise>
+
+      <exercise><statement><p>In <m>G</m>, find the degree of <m>v_2</m>.</p></statement>
+      <answer><m>6</m></answer></exercise>
+
+      <exercise><statement><p>What is the total degree of <m>G</m>?</p></statement>
+      <answer><m>14</m></answer></exercise>
+
+       
+
+       <exercise><statement><p>Draw <m>K_5</m>. How many edges does it have? What is the degree of each vertex?</p></statement>
+      <answer><p>It has 10 edges. All vertices have degree 4.</p></answer></exercise>
+
+      <exercise><statement><p>True or false: there exists a graph with 4 vertices of degrees 1, 2, 1, 2.</p></statement>
+      <answer>True. One example is a line (path) with 4 vertices.</answer></exercise>
+
+      <exercise><statement><p>True or false: there exists a graph with 4 vertices of degrees 1, 2, 1, 3.</p></statement>
+      <answer>False. Total degree would be odd.</answer></exercise>
+
+
+      <exercise><statement><p>True or false: there exists a graph with 4 vertices of degrees 4, 4, 4, 4.</p></statement>
+      <answer>True. One example has parallel edges between each vertex. Can also have an example with loops.</answer></exercise>
+
+      <exercise><statement><p>True or false: there exists a simple graph with 4 vertices of degrees 4, 4, 4, 4.</p></statement>
+      <answer>False. Can't have more edges than the complete graph on 4 vertices.</answer></exercise>
+
+      
+
+    </reading-questions>
+
+    <exercises>
+
+      <exercise><statement><p>
+    Draw the graph given by the following information: Graph <m>H</m> has vertex set <m>\{v_1, v_2, v_3, v_4, v_5\}</m> and edge set <m>\{e_1, e_2, e_3, e_4\}</m> with edge-endpoint function given by the table.
+  </p>
+<tabular>
+    <row header="yes">
+      <cell halign="center">Edge</cell>
+      <cell halign="center">Endpoints</cell>
+    </row>
+    <row >
+      <cell halign="center"><m>e_1</m></cell>
+      <cell halign="center"><m>\{v_1\}</m></cell>
+    </row>
+    <row >
+      <cell halign="center"><m>e_2</m></cell>
+      <cell halign="center"><m>\{v_2, v_3\}</m></cell>
+    </row>
+    <row >
+      <cell halign="center"><m>e_3</m></cell>
+      <cell halign="center"><m>\{v_2, v_3\}</m></cell>
+    </row>
+    <row >
+      <cell halign="center"><m>e_4</m></cell>
+      <cell halign="center"><m>\{v_1, v_5\}</m></cell>
+    </row>
+    </tabular></statement></exercise>
+
+    <exercise><statement>
+      <p>
+    Show that the two drawings represent the same graph by labeling the vertices and edges of the right-hand drawing to correspond to those of the left-hand drawing.
+  </p>
+
+  <image width="80%" xml:id="exiso1">
+    <latex-image>
+\begin{tikzpicture}
+%Exercise isomorphic graphs
+%\tikzset{every loop/.style={min distance=7mm,looseness=50}}
+
+\node[main node](1)[label=left:$v_1$]{};
+\node[main node](2)[label=left:$v_2$][right=1.0cm of 1]{};
+\node[main node](3)[label=right:$v_3$][right=1.0cm of 2]{};
+\node[main node](4)[label=below:$v_4$][below right=1.0cm and .3cm of 3]{};
+\node[main node](5)[label=below:$v_5$][below=1.5cm of 2]{};
+\node[main node](6)[label=below:$v_6$][below left=1.0cm and .3cm of 1]{};
+
+
+\path[draw, thick](1) edge [bend left] node [above=.1ex]{$e_2$} (3);
+\path[draw, thick](1) edge [bend right] node [right=.5cm]{$e_3$} (3);
+\path[draw, thick](1) edge  node [left=.1ex]{$e_1$} (6);
+\path[draw, thick](2) edge  node [below left=.1ex]{$e_6$} (5);
+\path[draw, thick](2) edge  node [below=.1ex]{$e_7$} (6);
+\path[draw, thick](2) edge  node [below=.1ex]{$e_5$} (4);
+\path[draw, thick](3) edge  node [right=.1ex]{$e_4$} (4);
+
+\node[main node](7)[right=3cm of 3]{};
+\node[main node](8)[right=1cm of 7]{};
+\node[main node](9)[right=1cm of 8]{};
+\node[main node](10)[above=1cm of 8]{};
+\node[main node](11)[below=1cm of 7]{};
+\node[main node](12)[below=1cm of 9]{};
+
+\path[draw, thick](7) edge node{}(8);
+\path[draw, thick](8) edge node{}(9);
+\path[draw, thick](8) edge node{}(10);
+\path[draw, thick](7) edge node{}(11);
+\path[draw, thick](9) edge node{}(12);
+\path[draw, thick](11) edge [bend left] node{}(12);
+\path[draw, thick](11) edge [bend right] node{}(12);
+
+\end{tikzpicture}
+
+
+
+
+
+</latex-image></image>
+<!--</figure>-->
+    </statement></exercise>
+
+    <exercise><statement><p>
+    Show that the two drawings represent the same graph by labeling the vertices and edges of the right-hand drawing to correspond to those of the left-hand drawing.
+  </p>
+
+  <image width="80%" xml:id="exiso2">
+    <latex-image>
+\begin{tikzpicture}
+
+%\tikzset{every loop/.style={min distance=7mm,looseness=50}}
+
+\node[main node](1)[label=below:$v_1$]{};
+\node[main node](2)[label=above:$v_2$][above right=1.0cm and .5cm of 1]{};
+\node[main node](3)[label=above:$v_3$][right=2.0cm of 2]{};
+\node[main node](4)[label=below:$v_4$][below right=1.0cm and .5cm of 3]{};
+\node[main node](5)[label=below:$v_5$][below=2.3cm of 3]{};
+\node[main node](6)[label=above:$v_6$][left=1.5cm of 4]{};
+\node[main node](7)[label=below:$v_7$][below=2.3cm of 2]{};
+
+
+\path[draw, thick](1) edge node [left=.1ex]{$e_1$} (2);
+\path[draw, thick](2) edge  node [above=.1ex]{$e_2$} (3);
+\path[draw, thick](3) edge  node [right=.1ex]{$e_3$} (4);
+\path[draw, thick](4) edge  node [above left=.1ex]{$e_4$} (6);
+\path[draw, thick](3) edge  node [below right=.2 cm and.1ex]{$e_5$} (5);
+\path[draw, thick](5) edge  node [below=.1ex]{$e_6$} (6);
+\path[draw, thick](6) edge  node [below=.3ex]{$e_7$} (7);
+\path[draw, thick](6) edge  node [above right=.1ex]{$e_8$} (1);
+\path[draw, thick](7) edge  node [below left=.2cm and .1ex]{$e_9$} (2);
+
+\node[main node](8)[right=3cm of 3]{};
+\node[main node](9)[below right=1cm of 8]{};
+\node[main node](10)[right=1cm of 9]{};
+\node[main node](11)[above right=1cm of 10]{};
+\node[main node](12)[below=1cm of 9]{};
+\node[main node](13)[below=1cm of 10]{};
+\node[main node](14)[below right=1cm and .5cm of 12]{};
+
+\path[draw, thick](8) edge node{}(9);
+\path[draw, thick](9) edge node{}(10);
+\path[draw, thick](10) edge node{}(11);
+\path[draw, thick](11) edge [bend left] node{}(14);
+\path[draw, thick](10) edge node{}(13);
+\path[draw, thick](9) edge node{}(12);
+\path[draw, thick](8) edge [bend right] node{}(14);
+\path[draw, thick](12) edge node{}(14);
+\path[draw, thick](13) edge node{}(14);
+
+\end{tikzpicture}
+
+
+</latex-image></image>
+<!--</figure>--></statement></exercise>
+
+<exercise><statement>
+  <p>
+    Consider the graph
+  </p>
+
+  <image width="50%" xml:id="exdescribe1">
+    <latex-image>
+\begin{tikzpicture}
+
+\tikzset{every loop/.style={min distance=7mm,looseness=50}}
+
+\node[main node](1)[label=above:$v_1$]{};
+\node[main node](2)[label=right:$v_2$][below right=0.2cm and 3cm of 1]{};
+\node[main node](3)[label=right:$v_3$][below=2.0cm of 2]{};
+\node[main node](4)[label=below:$v_4$][below right=2.0cm and 1cm of 1]{};
+\node[main node](5)[label=below:$v_5$][below left=2.0cm and 1cm of 1]{};
+\node[main node](6)[label=right:$v_6$][right=1.5cm of 2]{};
+
+
+\path[draw, thick](1) edge node [left=.1ex]{$e_1$} (5);
+\path[draw, thick](1) edge  node [right=.1ex]{$e_2$} (4);
+\path[draw, thick](1) edge  node [above=.1ex]{$e_3$} (3);
+\path[draw, thick](2) edge [bend right] node [left=.1ex]{$e_4$} (3);
+\path[draw, thick](2) edge [bend left] node [right=.1ex]{$e_5$} (3);
+\path[draw, thick](2) edge [loop above] node [left=.1ex]{$e_6$} (2);
+\path[draw, thick](3) edge [loop below] node [right=.1ex]{$e_7$} (3);
+\path[draw, thick](5) edge [bend right] node [below=.3ex]{$e_9$} (4);
+\path[draw, thick](5) edge [bend left] node [above=.3ex]{$e_8$} (4);
+\path[draw, thick](4) edge  node [below left=.4cm and .1ex]{$e_{10}$} (2);
+
+
+\end{tikzpicture}
+
+
+</latex-image></image>
+<!--</figure>-->
+
+  <ol marker="a">
+    <li>
+      <p>
+    Find all edges that are incident on <m>V_1</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Find all vertices that are adjacent to <m>v_3</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Find all edges that are adjacent to <m>e_1</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Find all loops.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Find all parallel edges.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Find all isolated vertices.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Find the degree of <m>v_3</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Find the total degree of the graph.
+  </p>
+    </li>
+
+  </ol>
+</statement></exercise>
+<exercise><statement><p>
+    A graph has vertices of degrees 0, 2, 2, 3, and 9. How many edges does the graph have?
+  </p></statement></exercise>
+
+  <exercise><statement>
+    <p>
+    For each of the following, draw the graph if it exists or explain why no such graph exists.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    A graph with four vertices of degrees 1, 1, 1, and 4.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    A graph with four vertices of degrees 1, 2, 3, and 4.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    A simple graph with 9 edges and all vertices of degree 3.
+  </p>
+    </li>
+
+  </ol>
+  </statement></exercise>
+  <exercise><statement><p>
+    In a group of 25 people, is it possible for each person to shake hands with exactly 3 other people? Explain your answer.
+  </p></statement></exercise>
+  <exercise><statement>
+    <p>
+    Recall that <m>K_{m,n}</m> denotes the complete bipartite graph on <m>(m, n)</m> vertices.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Draw <m>K_{4, 2}</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Draw <m>K_{1, 3}</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Draw <m>K_{3, 4}</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    How many vertices of <m>K_{m, n}</m> have of degree <m>m</m>? degree <m>n</m>?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    What is the total degree of <m>K_{m, n}</m>?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Find a formula in terms of <m>m</m> and <m>n</m> for the number of edges of <m>K_{m, n}</m>.
+  </p>
+    </li>
+
+  </ol>
+  </statement></exercise>
+  <exercise><statement>
+    <p>
+    Recall <m>K_n</m> is the complete graph on <m>n</m> vertices.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Draw <m>K_6</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Show that for all integers <m>n\geq 1</m>, the number of edges of <m>K_n</m> is <m>\frac{n(n-1)}{2}</m>. 
+  </p>
+    </li>
+
+  </ol>
+  </statement><hint><p>There are two possible approaches for the proof. One is to try a counting argument, the other is to do induction on <m>n</m>.</p></hint></exercise>
+  </exercises>
+
+</section>

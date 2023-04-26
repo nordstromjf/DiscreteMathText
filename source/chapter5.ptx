@@ -1,0 +1,22 @@
+<chapter xml:id="chapter5" xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Sequences and Mathematical Induction</title>
+  <introduction>
+   
+    <p>
+      In this chapter we study mathematical sequences. Sequences are important objects in many areas of mathematics, including calculus, numerical analysis, number theory, and combinatorics. Sequences also have an important role in computer science as algorithms are often build around sequential processes, such as recurssion.
+    </p>
+
+    <p>
+    	We will  also learn about the princicle of mathematical induction and how to construct proofs by induction. This is a powerful tool that helps us prove many useful results involving the positive integers. 
+    </p>
+    
+
+  </introduction>
+  <xi:include  href="sequences5-1.ptx" />
+  <xi:include  href="induction5-2.ptx" />
+  <xi:include  href="moreinduction5-3.ptx" />
+  <xi:include  href="stronginduction5-4.ptx" />
+  <xi:include  href="recursion5-5.ptx" />
+  <xi:include  href="iteration5-6.ptx" />
+  
+</chapter>

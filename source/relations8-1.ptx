@@ -1,0 +1,421 @@
+<section xml:id="relations8-1">
+  <title>Relations on Sets</title><idx>relation</idx>
+
+  <p>We first saw relations in <xref ref="lang_relations1-3"/>. In this section we revisit the definition, look at several examples, and connect the idea of a function to a relation.</p>
+
+  <definition xml:id="D_relation"><statement><p>A <term>relation</term><idx>relation</idx>, <m>R</m>, on <m>A\times B</m>, is a set of ordered pairs in <m>A\times B</m>.</p>
+  </statement></definition>
+
+  <p>Simply put, a relation is just a subset, <m>R</m>, of <m>A\times B</m>.</p>
+
+  <p>We often use the notation <m>x R y</m><notation><usage><m>x R y</m></usage><description><m>x</m> is related to <m>y</m></description></notation> to mean <q><m>x</m> is related to <m>y</m>.</q> In particular, <m>(x, y)\in R</m> if and only if <m>x R y</m>.</p>
+
+  <example xml:id="E_relationsasset"><title>Relation Defined by a Set</title>
+
+  <p>Let <m>A=\{1, 2, 3, 4\}</m>, <m>B=\{1, 3, 5\}</m> define the relation on <m>A\times B</m> by 
+  <me>R=\{(1, 1), (1, 5), (3, 5), (2, 1), (4, 3)\}.</me>
+
+  Then <m>1 R 1, 3 R 5, 4 R 3</m>, for example. But 3 is not related to 1, for example. </p>
+
+  </example>
+
+  <example xml:id="E_lessthan"><title>Relation Defined by Less Than</title>
+  <p>We can also define relations with familiar mathematical relationships.</p>
+  <p>Let <m>A=\{1, 2, 3, 4\}</m>, <m>B=\{1, 3, 5\}</m> define the relation on <m>A\times B</m> by 
+  <me>x R y \Leftrightarrow x&lt; y.</me></p>
+  <p>Find the set of ordered pairs for <m>R</m>.</p>
+  <answer><m>R=\{(1, 3), (1, 5), (2, 3), (2, 5), (3, 5), (4, 5)\}</m></answer>
+
+  
+
+  </example>
+
+  <p>As with functions, we can draw an arrow diagram from <m>A</m> to <m>B</m> representing the relationship. We have an arrow from <m>a</m> to <m>b</m> if <m>aRb</m>, or <m>(a, b)\in R</m>.</p>
+
+  <p>The arrow diagram for the relation <q>a&lt; b</q>, given in <xref ref="E_relationsasset"/> is given in the following figure.</p>
+
+  <figure xml:id="F_arrowdiaglessthan">
+  <caption>Arrow diagram for less than.</caption>
+  
+  <image width="10%" xml:id="ltgraph">
+    <latex-image>
+  \begin{tikzpicture}[node distance = 1.0cm, thick]
+%arrowrelationlessthan
+        \node (1) {$1$};
+        \node (2) [below=of 1] {$2$};
+        \node (3) [below=of 2] {$3$};
+         \node(4)[below=of 3]{$4$};
+        \node (5) [right=of 1] {$1$};
+         \node (6) [right=of 2] {$3$};
+          \node (7) [right=of 3] {$5$};
+          \node (8) [above=of 1]{$A$};
+          \node(9)[above=of 5]{$B$};
+         
+          
+          \draw[->] (1) to (6);
+        \draw[->] (1) to (7);
+        \draw[->] (2) to (6);
+        \draw[->] (2) to (7);
+        \draw[->] (3) to (7);
+         \draw[->] (4) to (7);
+
+    \end{tikzpicture}
+
+
+
+
+</latex-image></image>
+</figure>
+
+  <p>A function is a relation. Let <m>f:A\rightarrow B, f(a)=b</m>. Then define <m>R</m> by
+<me>(a, b)\in R \Leftrightarrow f(a)=b.</me>
+</p>
+
+<p>We can see that <xref ref="E_lessthan"/> is not a function since an element of <m>A</m> can map to two different elements of <m>B</m>: <m>(1, 3), (1, 5)</m>.</p>
+
+<example xml:id="E_fnasrelation"><title>A Function as a Relation</title>
+<p>Let <m>f:\mathbb{Z}\rightarrow\mathbb{Z}</m> be given by <m>f(n)=n^2</m>. Let <m>F</m> be the relation given by <m>f</m>:
+<me>(a, b)\in F \Leftrightarrow f(a)=b.</me></p>
+<p>True or false: <m>(1, 1)\in F</m>.
+</p>
+<answer><p>True</p></answer>
+
+<p>True or false: <m>(3, 9)\in F</m>.
+</p>
+<answer><p>True</p></answer>
+
+<p>True or false: <m>(9, 3)\in F</m>.
+</p>
+<answer><p>False</p></answer>
+
+<p>True or false: <m>(-2, 4)\in F</m>.
+</p>
+<answer><p>True</p></answer>
+
+<p>True or false: <m>(2, -4)\in F</m>.
+</p>
+<answer><p>False</p></answer>
+
+<p>True or false: <m>(1, 3)\in F</m>.
+</p>
+<answer><p>False</p></answer>
+</example>
+
+<assemblage xml:id="B_functionisrelation">
+  <title>Determining if a Relation Is a Function</title><idx><h>relation</h><h>function</h></idx>
+<p>A relation is a function if the following two properties hold:
+<ol marker="1">
+  <li>For every <m>a\in A</m> there must be a <m>b\in B</m> related to <m>a</m>.</li>
+  <li>Each <m>a\in A</m> can only be related in one <m>b\in B</m>.</li>
+</ol></p>
+
+<p>We can translate this idea into the ordered pair notation:
+<ol marker="1">
+  <li>For every <m>a\in A</m> there must be a <m>b\in B</m> such that  <m>(a, b)\in F</m>.</li>
+  <li>If <m>(a, b)\in F</m> and <m>(a, c)\in F</m> then <m>b=c</m>.</li>
+</ol></p>
+</assemblage>
+  
+
+  <definition xml:id="D_inverserelation"><statement><p>Let <m>R</m> be a relation on <m>A\times B</m>. The  <term>inverse relation</term><idx><h>inverse</h><h>relation</h></idx>, <m>R^{-1}</m>, on <m>B\times A</m> is 
+    <me>
+     R^{-1}=\{(b, a)\in B\times A : (a, b)\in R\}.
+    </me></p></statement></definition>
+
+    <p>In other words, <m>(a, b)\in R</m> if and only if <m>(b, a)\in R^{-1}</m>.</p>
+
+    
+
+  <example xml:id="E_invereserel"><title>Inverse Relation</title><p>
+    Let  <m>R=\{(1, 3), (1, 5), (2, 3), (2, 5), (3, 5), (4, 5)\}</m>. This is the relation in <xref ref="E_lessthan"/>.</p>
+
+    <p>Find <m>R^{-1}</m>.</p>
+    <answer><m>\{(3, 1), (5, 1), (3, 2), (5, 2), (5, 3), (5, 4)\}</m></answer>
+ </example>
+
+ <activity><introduction><p> Let <m>A=\{1, 2, 3, 4\}</m> and <m>B=\{0, 1\}</m>. Define the relation from <m>A</m> to <m>B</m> by 
+<me>(x, y)\in R \iff x-y\ \text{is even}.</me></p></introduction>
+<task><p>Find the set of ordered pairs given by this relation.</p></task>
+<task><p>Draw the arrow diagram for this relation.</p></task>
+<task><p>Give the inverse relation for <m>R</m>. Remember, it is a set of ordered pairs.</p></task>
+<task><p>Is the relation <m>R</m> a function?</p></task></activity>
+
+ <definition xml:id="D_relonA"><statement><p>A <term>relation on <m>A</m></term> is a relation on <m>A\times A</m>. We also say a relation from <m>A</m> to <m>A</m>.</p></statement></definition>
+
+ <p>We can use a directed graph to represent a relation on <m>A</m>. We label the vertices with the elements from <m>A</m> and draw and arrow from <m>a</m> to <m>b</m> if <m>aRb</m>. Note, if <m>aRa</m>, then we get a <q>loop</q> at <m>a</m>.</p>
+
+<example xml:id="E_dirgraphrelation"><title>Directed Graph of a Relation</title>
+<p>Let <m>A=\{1, 2, 3\}</m>. Let <m>R=\{(x, y) : x&lt; y\}</m>. Then we get the following directed graph for <m>R</m>.
+</p>
+<figure xml:id="F_digraphlessthan">
+  <caption>Directed graph for less than.</caption>
+  <image width="20%" xml:id="gdlessthan">
+    <latex-image>
+  \begin{tikzpicture}
+%directed graph less than
+
+\tikzset{every loop/.style={min distance=10mm,in=-60,out=60,looseness=50}}
+
+\node[main node](1)[label=left:$1$]{};
+\node[main node](2)[label=right:$2$][right=1.0cm of 1]{};
+\node[main node](3)[label=right:$3$][below=1.0cm of 2]{};
+%\node[main node](4)[label=below:$d$][below=1.0cm of 1]{};
+
+\path[-{Latex}, thick](1) edge node {} (2);
+\path[-{Latex}, thick](2) edge node {} (3);
+\path[-{Latex}, thick](1) edge node {} (3);
+%\path[->, thick](4) edge [loop above] node {} (4);
+
+\end{tikzpicture}
+
+</latex-image></image>
+</figure>
+
+<p>If we now want the relations for less than or equal to, <m>R=\{(x, y) : x\leq y\}</m>, we have the following directed graph.</p>
+
+<figure xml:id="F_digraphlessthaneq">
+  <caption>Directed graph for less than or equal.</caption>
+  <image width="20%" xml:id="gdlessthaneq">
+    <latex-image>
+  \begin{tikzpicture}
+%directed graph less than equal
+
+\tikzset{every loop/.style={min distance=15mm,looseness=30}}
+
+\node[main node](1)[label=left:$1$]{};
+\node[main node](2)[label=right:$2$][right=1.0cm of 1]{};
+\node[main node](3)[label=right:$3$][below=1.0cm of 2]{};
+%\node[main node](4)[label=below:$d$][below=1.0cm of 1]{};
+
+\path[-{Latex}, thick](1) edge node {} (2);
+\path[-{Latex}, thick](2) edge node {} (3);
+\path[-{Latex}, thick](1) edge node {} (3);
+%\path[->, thick](4) edge [loop above] node {} (4);
+
+\path[-{Latex}, thick](1) edge [loop above] node {} (1);
+\path[-{Latex}, thick](2) edge [loop above] node {} (2);
+\path[-{Latex}, thick](3) edge [loop below] node {} (3);
+
+\end{tikzpicture}
+
+</latex-image></image>
+</figure>
+
+</example>
+
+
+
+<activity><introduction><p> Let <m>A=\{0, 1, 2, 3, 4, 5\}</m>.  Define the relation on <m>A</m> by  
+<me>(x, y)\in R \iff 3 \mid (x-y).</me></p></introduction>
+<task><p>Find the set of ordered pairs given by this relation.</p></task>
+<task><p>Draw the directed graph for this relation.</p></task>
+<task><p>Give the inverse relation for <m>R</m>. Remember, it is a set of ordered pairs.</p></task>
+<task><p>Is the relation <m>R</m> a function?</p></task></activity>
+
+<activity><introduction><p> Let <m>A=\{0, 1, 2, 3, 4, 5\}</m>.  Define the relation on <m>A</m> by  
+<me>(x, y)\in R \iff x\ \text{divides}\ y.</me></p></introduction>
+<task><p>Find the set of ordered pairs given by this relation.</p></task>
+<task><p>Draw the directed graph for this relation.</p></task>
+<task><statement><p>Give the inverse relation for <m>R</m>.</p></statement><hint><p>Remember, it is a set of ordered pairs.</p></hint></task>
+<task><p>Is the relation <m>R</m> a function?</p></task></activity>
+
+
+
+    <reading-questions>
+      <title>Check Your Understanding</title>
+
+      <p>Let <m>A=\{1, 2, 3\}, B=\{2, 4, 6, 8\}, C=\{0, 1\}</m>.</p>
+      
+
+      <exercise><statement><p>Give the ordered pairs for the relation on <m>A\times B</m> given by 
+      <me>a R b \Leftrightarrow a\geq b</me></p></statement>
+      <answer><m>\{(2, 2), (3, 2)\}</m></answer></exercise>
+
+      <exercise><statement><p>Give the ordered pairs for the relation on <m>C</m> given by 
+      <me>a R b \Leftrightarrow a+b \text{ is even}</me></p></statement>
+      <answer><m>\{(0, 0), (1, 1)\}</m></answer></exercise>
+
+      <exercise><statement><p>True or false: the relation on <m>A\times B</m> given by 
+      <me>a R b \Leftrightarrow a\geq b</me>
+      is a function from <m>A</m> to <m>B</m>.</p></statement>
+      <answer>False</answer></exercise>
+
+      <exercise><statement><p>True or false: the relation on <m>C</m> given by 
+      <me>a R b \Leftrightarrow a+b \text{ is even}</me>
+      is a function on <m>C</m>.</p></statement>
+      <answer>True</answer></exercise>
+
+      <exercise><statement><p>Give the ordered pairs for the relation on <m>B</m> given by 
+      <me>a R b \Leftrightarrow a\mid b</me></p></statement>
+      <answer><m>\{(2, 2), (2, 4), (2, 6), (2, 8), (4, 4), (4, 8), (6, 6), (8, 8)\}</m></answer></exercise>
+
+      <exercise><statement><p>Give the ordered pairs for the inverse relation, <m>R^{-1}</m> on <m>B</m> when <m>R</m> is given by 
+      <me>a R b \Leftrightarrow a\mid b</me></p></statement>
+      <answer><m>\{(2, 2), (4, 2), (6, 2), (8, 2), (4, 4), (8, 4), (6, 6), (8, 8)\}</m></answer></exercise>
+      
+    
+
+    </reading-questions>
+
+        <exercises>
+      
+      <exercise><statement>
+        <p>
+    Define the <term>congruence modulo 3</term> relation, <m>T</m>, on <m>\mathbb{Z}</m> by
+  </p>
+
+  <p>
+    <me>m\ T\ n \iff 3\mid (m-n).</me>
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Is <m>10\ T\ 1</m>? Is <m>1\ T\ 10</m>? Is <m>(2, 2)\in T</m>? Is <m>(8, 1)\in T</m>?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    List five integers <m>n</m> such that <m>n\ T\ 0</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    List five integers <m>n</m> such that <m>n\ T\ 1</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    List five integers <m>n</m> such that <m>n\ T\ 2</m>.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>X=\{a, b, c\}</m> and <m>{\cal P}(X)</m> be the power set of <m>X</m>. Define the relation <m>R</m> on <m>{\cal P}(X)</m> by <me>A \ R\ B \iff A \text{ has the same number of elements as } B.</me>
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Is <m>\{a, b\}\ R\ \{b, c\}</m>?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Is <m>\{a\}\ R\ \{a, b\}</m>?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Is <m>\{c\}\ R\ \{b\}</m>?
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Define the relation, <m>S</m>, on <m>\mathbb{Z}</m> by
+  </p>
+
+  <p>
+    <me>m\ S\ n \iff 5\mid (m^2-n^2).</me>
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Is <m>1\ S\ (-9)</m>?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Is <m>2\ S\ 13</m>?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Is <m>2\ S\ (-8)</m>?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Is <m>(-8)\ S\ 2</m>?
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>A=\{3, 4, 5\}</m> and <m>B=\{4, 5, 6\}</m> and let <m>R</m> be the <q>less than</q> relation. That is, for all <m>(x, y)\in A\times B</m>, <me>x\ R\ y \iff x&lt;y.</me>
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Find the set of ordered pairs in <m>R</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Find the set of ordered pairs in <m>R^{-1}</m>.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>A=\{3, 4, 5\}</m> and <m>B=\{4, 5, 6\}</m> and let <m>S</m> be the <q>divides</q> relation. That is, for all <m>(x, y)\in A\times B</m>, <me>x\ S\ y \iff x\mid y.</me>
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Find the set of ordered pairs in <m>S</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Find the set of ordered pairs in <m>S^{-1}</m>.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>A=\{a, b, c, d\}</m>. Define the relation <m>R</m> on <m>A</m> by <me>R=\{(a, b), (a, c), (b, c), (d, d)\}</me>. Draw the directed graph for <m>R</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>A=\{2, 3, 4, 5, 6, 7, 8\}</m>. Define the relation <m>S</m> on <m>A</m> by <me>x\ S\ y \iff x\mid y.</me>
+
+    Draw the directed graph for <m>R</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>A=\{2, 3, 4, 5, 6, 7, 8\}</m>. Define the relation <m>T</m> on <m>A</m> by <me>x\ T\ y \iff 3\mid (x-y).</me>
+ 
+    Draw the directed graph for <m>T</m>.
+  </p>
+      </statement></exercise>
+    </exercises>
+
+</section>

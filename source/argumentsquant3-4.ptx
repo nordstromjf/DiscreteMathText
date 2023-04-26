@@ -1,0 +1,522 @@
+<section xml:id="argumentsquant3-4">
+  <title>Arguments with Quantifiers</title><idx><h>argument</h><h>quantifier</h></idx>
+
+  <p>In <xref ref="arguments2-3"/> we studied arguments with logical statements. In this chapter we've looked at statements with quantifiers. Now we want to combine the two ideas.</p>
+
+  <p>Recall, an argument is <term>valid</term><idx><h>argument</h><h>quantifier</h></idx><idx>valid argument</idx> if it whenever the premises are true, the conclusion <em>must</em> be true. An argument is <term>invalid</term><idx>invalid argument</idx> if it possible for the premises to be true and the conclusion false.</p>
+
+<example xml:id="argwquant1"><title>An Argument with Quantified Statements</title>
+<p>
+  <tabular>
+    <row><cell>All computer science majors take Discrete Math before graduation.</cell></row>
+      <row bottom="minor"><cell>Anna is a computer science major.</cell></row>
+      <row><cell><m>\therefore\ </m>Anna takes Discrete Math before graduation.</cell></row>
+    </tabular>
+    Is this argument valid or invalid?</p>
+    <answer>This argument is valid.</answer> 
+</example>
+
+<example xml:id="argwquant2"><title>Another Argument with Quantified Statements</title>
+<p>
+  <tabular>
+    <row><cell>All computer science majors take Discrete Math before graduation.</cell></row>
+      <row bottom="minor"><cell>Troy did not take Discrete Math before graduation.</cell></row>
+      <row><cell><m>\therefore\ </m>Troy is not a computer science major.</cell></row>
+    </tabular>
+    Is this argument valid or invalid?</p>
+    <answer>This argument is valid.</answer> 
+</example>
+
+<p>Although <xref ref="argwquant1" /> and <xref ref="argwquant2"/> are a valid arguments, we will have trouble using a truth-table to determine validity. In this section we will develop other tools for analyzing quantified arguments. These examples are extentions of modus ponens and modus tollens from <xref ref="B_commonvalid" text="title"/>.</p>
+
+<assemblage xml:id="B_universalmodpon">
+  <title>Common Forms of Arguments with Quantifiers</title>
+  <p>Universal modus ponens<idx><h>modus ponens</h><h>universal</h></idx>:
+    <tabular>
+      <row><cell><m>\forall x</m>, if <m>P(x)</m> then <m>Q(x)</m></cell></row>
+      <row bottom="minor"><cell><m>P(a)</m></cell></row>
+      <row><cell><m>\therefore\ Q(a)</m></cell></row>
+    </tabular>
+
+    <xref ref="argwquant1" /> is an example of universal modus ponens.</p>
+
+    <p>Universal modus tollens<idx><h>modus tollens</h><h>universal</h></idx>:
+    <tabular>
+      <row><cell><m>\forall x</m>, if <m>P(x)</m> then <m>Q(x)</m></cell></row>
+      <row bottom="minor"><cell><m>\sim Q(a)</m></cell></row>
+      <row><cell><m>\therefore\ \sim P(a)</m></cell></row>
+    </tabular>
+
+    <xref ref="argwquant2" /> is an example of universal modus tollens.</p>
+  </assemblage>
+
+    
+
+
+  
+
+
+<p>To determine validity of quantified arguments we need to ask if it is possible for the premises to be true while the conclusion is false. If it is possible, then the argument is invalid. If it is not possible, then the argument is valid. We will use <term>Venn diagrams</term><idx><h>Venn diagram</h><h>quantified argument</h></idx> to help us determine validity. A Venn diagram is just a picture where we use circles to represent sets of objects and points to represent specific elements. We draw the circles to represent how our sets are related to each other.</p>
+
+<p>The Venn diagram for <xref ref="argwquant1" /> is given by the following figure.</p>
+
+<figure xml:id="venndiagEx1">
+  <caption> Venn diagram for the argument in <xref ref="argwquant1" /></caption>
+  <image width="20%" xml:id="modusponens1">
+    <latex-image>
+  \begin{tikzpicture}
+  \def\firstcircle{(0,-.2) circle (1.0cm)}
+  \def\secondcircle{(0, .2) circle (1.7cm)}
+    \draw \firstcircle node (a) at (0,0) {$\text{CS majors}$};
+    \draw \secondcircle node (b) at (0, 1.0) {$\text{Discrete Math}$};
+    \draw  node (c) at (0, -0.7)  {$\bullet\text{Anna}$};
+\end{tikzpicture}  
+
+</latex-image></image>
+</figure>
+
+<p>The picture represents the two premises of the argument. In the Venn diagram we have a circle representing students taking Discrete Math (<q>Discrete Math</q>) and a circle representing computer science majors (<q>CS majors</q>). The CS major circle is completely inside the Discrete Math circle since the first statement in the argument is that all computer science majors take Discrete Math. This means the set of computer science majors is a subset of the set of students taking Discrete Math. The second statement in the argument is that Anna is a computer science major. This means Anna is an element (represented by a point) of the set of CS majors. </p>
+
+<p>Now, if we look at the diagram determined by the two premises, we see that Anna must also be an element of the set of students taking Discrete Math. Thus, it is not possible to have true premises and a false conclusion.</p>
+
+<assemblage xml:id="B_vennforvalid">
+<title>Process for Using a Venn diagram to Determine Validity</title>
+
+<p>
+<ol marker="1">
+<li><p>Draw the Venn diagram for each premise.</p> <p>Statements such as <q>All A are B</q> mean A is a subset of B.</p></li>
+<li><p>Make sure you distinguish between sets (lots of things have a certain property) and elements (a specific thing with a property).</p></li>
+
+<li><p>See if it is possible for the premises to be true and the conclusion false.</p>
+ <p>Sometimes there is a choice about where to place a certain element of set. For example, if I know <m>x</m> is not in set A, then <m>x</m> might be in set B or it might not be in B. We can use these choices to see if we can make the premises true and the conclusion false.</p></li>
+</ol></p>
+</assemblage>
+
+<p>Let's use this process on some more examples.</p>
+
+<example xml:id="quantmodtoll"><title>Determining Validity</title>
+<p>
+  <tabular>
+    <row><cell>All integers are rational numbers.</cell></row>
+      <row bottom="minor"><cell><m>\sqrt{2}</m> is not rational.</cell></row>
+      <row><cell><m>\therefore\ \sqrt{2}</m> is not an integer.</cell></row>
+    </tabular>
+    The two premises are represented with the following diagram. Recall, <m>\mathbb{Q}</m> is the set of rational numbers and <m>\mathbb{Z}</m> is the set of integers.</p>
+
+    <!--<figure xml:id="venndiagmodtoll">
+  <caption> Venn diagram for the argument in <xref ref="argwquant1" /></caption>-->
+  <image width="20%" xml:id="modustollens1">
+    <latex-image>
+    \begin{tikzpicture}
+  \def\firstcircle{(0,-.2) circle (0.7cm)}
+  \def\secondcircle{(0, .2) circle (1.5cm)}
+    \draw \firstcircle node (a) at (0,0) {$\mathbb{Z}$};
+    \draw \secondcircle node (b) at (0, 1.0) {$\mathbb{Q}$};
+    \draw  node (c) at (2.1, 0)  {$\bullet\sqrt{2}$};
+\end{tikzpicture}  
+    </latex-image></image>
+    <p>We can see from the diagram that it is impossible to make the conclusion false. In particular, <m>\sqrt{2}</m> cannot be in the set of integers. 
+</p></example>
+
+<activity><introduction><p>Consider the general form of universal modus ponens.</p></introduction>
+  <task><p>Draw the Venn diagram for universal modus ponens. You should have a circle labeled <q>P</q> and one labeled <q>Q.</q></p></task>
+  <task><p>Write your own argument that has the form of universal modus tollens.</p></task>
+  <task><p>Use a Venn diagram with appropriate labels to show that your argument is valid.</p></task>
+</activity>
+
+
+<activity><introduction><p>Consider the general form of universal modus tollens.</p></introduction>
+  <task><p>Draw the Venn diagram for universal modus tollens. You should have a circle labeled <q>P</q> and one labeled <q>Q.</q></p></task>
+  <task><p>Write your own argument that has the form of universal modus ponens.</p></task>
+  <task><p>Use a Venn diagram with appropriate labels to show that your argument is valid.</p></task>
+</activity>
+
+<example xml:id="invalidargquant"><title>An Invalid Argument</title>
+<p>
+  <tabular>
+    <row><cell>All integers are rational numbers.</cell></row>
+      <row bottom="minor"><cell><m>x</m> is rational.</cell></row>
+      <row><cell><m>\therefore\ x</m> is an integer.</cell></row>
+    </tabular>
+    The first premise is represented with the following diagram.</p>
+
+    <!--<figure xml:id="venndiagmodtoll">
+  <caption> Venn diagram for the argument in <xref ref="argwquant1" /></caption>-->
+  <image width="20%" xml:id="integerrational">
+    <latex-image>
+    \begin{tikzpicture}
+      \def\firstcircle{(0,-.2) circle (0.7cm)}
+      \def\secondcircle{(0, .2) circle (1.5cm)}
+    \draw \firstcircle node (a) at (0,0) {$\mathbb{Z}$};
+    \draw \secondcircle node (b) at (0, 1.0) {$\mathbb{Q}$};
+    \end{tikzpicture}  
+    </latex-image></image>
+
+    <p>But we need to be careful about where we place <m>x</m>. The second premise just says it needs to be inside the rational circle. Is it possible to place it in the rational circle so that the conclusion is false? Yes, we can place <m>x</m> inside the rational circle, but not in the integer circle. So the following diagram shows how it is possible to have true premises and a false conclusion.</p>
+
+  <image width="20%" xml:id="integerrationalinvalid">
+    <latex-image>
+    \begin{tikzpicture}
+      \def\firstcircle{(0,-.2) circle (0.7cm)}
+      \def\secondcircle{(0, .2) circle (1.5cm)}
+    \draw \firstcircle node (a) at (0,0) {$\mathbb{Z}$};
+    \draw \secondcircle node (b) at (0, 1.0) {$\mathbb{Q}$};
+    \draw  node (c) at (1.0, .5)  {$\bullet x$};
+    \end{tikzpicture}  
+    </latex-image></image>
+
+    <p>Therefore, the argument is invalid.</p>
+
+</example>
+
+<assemblage xml:id="B_universalerror">
+  <title>Invalid Arguments with Quantifiers</title>
+  <p>Converse error<idx><h>converse error</h><h>quantifier</h></idx>
+    <tabular>
+      <row><cell><m>\forall x</m> if <m>P(x)</m> then <m>Q(x)</m></cell></row>
+       <row bottom="minor"><cell><m>Q(a)</m></cell></row>
+      <row><cell><m>\therefore\ </m><m>P(a)</m></cell></row>
+    </tabular>
+
+    <xref ref="invalidargquant"/> is an example of converse error.</p>
+
+    <p>Inverse error<idx><h>inverse error</h><h>quantifier</h></idx>
+    <tabular>
+      <row><cell><m>\forall x</m> if <m>P(x)</m> then <m>Q(x)</m></cell></row>
+       <row bottom="minor"><cell><m>\sim P(a)</m></cell></row>
+      <row><cell><m>\therefore\ </m><m>\sim Q(a)</m></cell></row>
+    </tabular></p>
+</assemblage>
+
+<activity><statement><p>Write your own example of inverse error. Use a Venn diagram to show your argument is invalid.</p></statement></activity>
+
+
+
+<p>It will be useful to have some standard Venn diagrams for common forms of statements.</p>
+
+<assemblage xml:id="B_commnVenn">
+<title>Venn Diagrams for Common Statements</title><idx>Venn diagram</idx>
+
+<p><ul>
+<li><p>All B are A.</p>
+<image width="20%" xml:id="allAareB">
+    <latex-image>
+    \begin{tikzpicture}
+      \def\firstcircle{(0,-.2) circle (0.7cm)}
+      \def\secondcircle{(0, .2) circle (1.5cm)}
+    \draw \firstcircle node (a) at (0,0) {B};
+    \draw \secondcircle node (b) at (0, 1.0) {A};
+    \end{tikzpicture}  
+    </latex-image></image></li>
+
+    <li><p>Some A are B, or there exists an A that is a B.</p>
+    <image width="20%" xml:id="someAareB">
+    <latex-image>
+    \begin{tikzpicture}
+  \def\firstcircle{(-.6,0) circle (1.0cm)}
+  \def\secondcircle{(.6, 0) circle (1.0cm)}
+    \draw \firstcircle node (a) at (-.7, 0) {A};
+    \draw \secondcircle node (b) at (.7, 0) {B};
+    \draw  node (c) at (0, 0)  {$\bullet$};
+\end{tikzpicture}  
+</latex-image></image></li>
+
+<li><p>No A are B.</p>
+    <image width="20%" xml:id="noAareB">
+    <latex-image>
+    \begin{tikzpicture}
+  \def\firstcircle{(-1.0,0) circle (0.8cm)}
+  \def\secondcircle{(1.0, 0) circle (0.8cm)}
+    \draw \firstcircle node (a) at (-1.0, 0) {A};
+    \draw \secondcircle node (b) at (1.0, 0) {B};
+ 
+\end{tikzpicture}   
+</latex-image></image></li>
+</ul></p>
+</assemblage>
+
+<activity><introduction><p>For each argument use a Venn diagram to determine if the argument is valid or invalid.</p></introduction>
+<task><tabular>
+<row><cell>Every Linfield student lives on campus.</cell></row>
+<row bottom="medium"><cell>Freya lives on campus.</cell></row> 
+<row><cell><m>\therefore</m> Freya is a Linfield student.</cell></row> 
+</tabular>
+</task>
+<task><tabular>
+<row><cell>Every polynomial function is differentiable.</cell></row>
+<row bottom="medium"><cell><m>f(x)=|x|</m> is not a polynomial function.</cell></row> 
+<row><cell><m>\therefore f(x)=|x|</m> is not differentiable. </cell></row> 
+</tabular>
+</task>
+</activity>
+
+<activity><introduction><p>For each argument use a Venn diagram to determine if the argument is valid or invalid.</p></introduction>
+<task><tabular>
+<row><cell><m>\forall\ x</m>, if <m>x</m> studies then <m>x</m> will do well on the exams.</cell></row>
+<row bottom="medium"><cell><m>\forall\ x</m>, if <m>x</m> does well on the exams then <m>x</m> will get an A in Discrete Math.</cell></row> 
+<row><cell><m>\therefore</m> If Gauss studies then Gauss will get an A in Discrete Math.</cell></row> 
+</tabular>
+</task>
+<task><tabular>
+<row><cell><m>\forall\ x</m>, if <m>x</m> studies then <m>x</m> will do well on the exams.</cell></row>
+<row bottom="medium"><cell><m>\forall\ x</m>, if <m>x</m> does well on the exams then <m>x</m> will get an A in Discrete Math.</cell></row> 
+<row><cell><m>\therefore</m> Newton will get an A in Discrete Math.</cell></row> 
+</tabular>
+</task>
+<task><p>Compare your answers to the two arguments. What is different? How does the difference affect the argument?</p></task>
+</activity>
+
+
+
+
+    <reading-questions>
+      <title>Check Your Understanding</title>
+      
+
+      <exercise><statement><p>Determine whether the following argument is valid or invalid.
+          <tabular>
+            <row><cell>All zebras have stripes.</cell></row>
+            <row bottom="minor"><cell>Rex has stripes.</cell></row>
+            <row><cell><m>\therefore\ </m> Rex is a zebra.</cell></row>
+          </tabular>
+      </p></statement>
+      <answer><p>Invalid.</p></answer></exercise>
+
+      <exercise><statement><p>Determine whether the following argument is valid or invalid.
+          <tabular>
+            <row><cell>All zebras have stripes.</cell></row>
+            <row bottom="minor"><cell>Lily does not have stripes.</cell></row>
+            <row><cell><m>\therefore\ </m> Lily is not a zebra.</cell></row>
+          </tabular>
+      </p></statement>
+      <answer><p>Valid.</p></answer></exercise>
+
+      <exercise><statement><p>Determine whether the following argument is valid or invalid.
+          <tabular>
+            <row><cell>All zebras have stripes.</cell></row>
+            <row><cell>All zebras are animals.</cell></row>
+            <row bottom="minor"><cell>Rex has stripes.</cell></row>
+            <row><cell><m>\therefore\ </m> Rex is an animal.</cell></row>
+          </tabular>
+      </p></statement>
+      <answer><p>Invalid.</p></answer></exercise>
+
+      <exercise><statement><p>Determine whether the following argument is valid or invalid.
+          <tabular>
+            <row><cell>All zebras have stripes.</cell></row>
+            <row bottom="minor"><cell>All animals have stripes.</cell></row>
+            <row><cell><m>\therefore\ </m> All zebras are animals.</cell></row>
+          </tabular>
+      </p></statement>
+      <answer><p>Invalid.</p></answer></exercise>
+
+      <exercise><statement><p>Determine whether the following argument is valid or invalid.
+          <tabular>
+            <row><cell>All zebras have stripes.</cell></row>
+            <row bottom="minor"><cell>All things with stripes are animals.</cell></row>
+            <row><cell><m>\therefore\ </m> All zebras are animals.</cell></row>
+          </tabular>
+      </p></statement>
+      <answer><p>Valid.</p></answer></exercise>
+
+      <exercise><statement><p>Determine whether the following argument is valid or invalid.
+          <tabular>
+            <row><cell>All zebras are animals.</cell></row>
+            <row bottom="minor"><cell>All animals have stripes.</cell></row>
+            <row><cell><m>\therefore\ </m> All zebras have stripes.</cell></row>
+          </tabular>
+      </p></statement>
+      <answer><p>Valid.</p></answer></exercise>
+
+
+
+    </reading-questions>
+
+    <exercises>
+      
+      <exercise><statement>
+        <p>
+    Determine if the argument is valid or invalid. If it is valid, state whether it is an example of modus ponens or modus tollens. If it is invalid, state whether it it exhibits converse error or inverse error.
+  </p>
+
+  <ol marker="a">
+    <li>
+    <tabular>
+    <row >
+      <cell halign="left">All healthy people eat an apple a day.</cell>
+    </row>
+    <row bottom="medium">
+      <cell halign="left">Keisha eats an apple a day.</cell>
+    </row>
+    <row >
+      <cell halign="left"><m>\therefore</m> Keisha is a healthy person.</cell>
+    </row>
+    </tabular>
+    </li>
+
+    <li>
+  
+    <tabular>
+    <row >
+      <cell halign="left">If the product of two numbers is 0, then at least one of the numbers is 0.</cell>
+    </row>
+    <row bottom="medium">
+      <cell halign="left">For a particular number <m>x</m>, neither <m>(2x+1)</m> nor <m>(x-7)</m> equals 0.</cell>
+    </row>
+    <row >
+      <cell halign="left"><m>\therefore</m> The product <m>(2x+1)(x-7)</m> is not 0.</cell>
+    </row>
+    </tabular>
+    </li>
+
+    <li>
+    
+    <tabular>
+    <row >
+      <cell halign="left">All honest people pay their taxes.</cell>
+    </row>
+    <row bottom="medium">
+      <cell halign="left">Darth is not honest.</cell>
+    </row>
+    <row >
+      <cell halign="left"><m>\therefore</m> Darth does not pay his taxes.</cell>
+    </row>
+    </tabular>
+  
+    </li>
+
+    <li>
+      
+    <tabular>
+    <row >
+      <cell halign="left">Any sum of two rational numbers is rational.</cell>
+    </row>
+    <row bottom="medium">
+      <cell halign="left">The sum <m>r+s</m> is rational.</cell>
+    </row>
+    <row >
+      <cell halign="left"><m>\therefore</m> The numbers <m>r</m> and <m>s</m> are both rational.</cell>
+    </row>
+    </tabular>
+
+    </li>
+
+    <li>
+     
+    <tabular>
+    <row >
+      <cell halign="left">If an infinite series converges, then its terms go to 0.</cell>
+    </row>
+    <row bottom="medium">
+      <cell halign="left">The terms of the infinite series <m>\sum_{n=1}^{\infty}\frac{1}{n}</m> go to 0.</cell>
+    </row>
+    <row >
+      <cell halign="left"><m>\therefore</m> The infinite series <m>\sum_{n=1}^{\infty}\frac{1}{n}</m> converges.</cell>
+    </row>
+    </tabular>
+ 
+    </li>
+
+    <li>
+      
+    <tabular>
+    <row >
+      <cell halign="left">If an infinite series converges, then its terms go to 0.</cell>
+    </row>
+    <row bottom="medium">
+      <cell halign="left">The terms of the infinite series <m>\sum_{n=1}^{\infty}\frac{n}{n+1}</m> do not go to 0.</cell>
+    </row>
+    <row >
+      <cell halign="left"><m>\therefore</m> The infinite series <m>\sum_{n=1}^{\infty}\frac{n}{n+1}</m> does not converge.</cell>
+    </row>
+    </tabular>
+  
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Determine if the argument is valid or invalid. Support your answer by drawing a Venn diagram.
+  </p>
+  <ol marker="a">
+    <li><tabular>
+    <row >
+      <cell halign="left">All people are mice.</cell>
+    </row>
+    <row bottom="medium">
+      <cell halign="left">All mice are mortal.</cell>
+    </row>
+    <row >
+      <cell halign="left"><m>\therefore</m> All people are mortal.</cell>
+    </row>
+    </tabular></li>
+    <li><tabular>
+    <row >
+      <cell halign="left">All polynomial functions are differentiable.</cell>
+    </row>
+    <row bottom="medium">
+      <cell halign="left">All differentiable functions are continuous.</cell>
+    </row>
+    <row >
+      <cell halign="left"><m>\therefore</m> All polynomial functions are continuous.</cell>
+    </row>
+    </tabular></li></ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Use a diagram to show the following argument can have true premises and a false conclusion.
+  </p>
+
+    <tabular>
+    <row >
+      <cell halign="left">All dogs are carnivorous.</cell>
+    </row>
+    <row bottom="medium">
+      <cell halign="left">Aaron is not a dog.</cell>
+    </row>
+    <row >
+      <cell halign="left"><m>\therefore</m> Aaron is not carnivorous.</cell>
+    </row>
+    </tabular>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    What can you conclude about the validity or invalidity of the following argument form? Explain your answer.
+  </p>
+
+
+    <tabular>
+    <row >
+      <cell halign="left"><m>\forall x</m>, if <m>P(x)</m> then <m>Q(x)</m>.</cell>
+    </row>
+    <row bottom="medium">
+      <cell halign="left"><m>\forall x</m>, if <m>Q(x)</m> then <m>R(x)</m>.</cell>
+    </row>
+    <row >
+      <cell halign="left"><m>\therefore</m> <m>P(a)</m> and <m>R(a)</m>.</cell>
+    </row>
+    </tabular>
+      </statement></exercise>
+
+      <exercise><statement>
+        <p>
+    What can you conclude about the validity or invalidity of the following argument form? Explain your answer.
+  </p>
+
+
+    <tabular>
+    <row >
+      <cell halign="left"><m>\forall x</m>, if <m>P(x)</m> then <m>Q(x)</m>.</cell>
+    </row>
+    <row bottom="medium">
+      <cell halign="left"><m>\forall x</m>, if <m>Q(x)</m> then <m>R(x)</m>.</cell>
+    </row>
+    <row >
+      <cell halign="left"><m>\therefore</m> <m>P(a)\rightarrow R(a)</m>.</cell>
+    </row>
+    </tabular>
+      </statement></exercise>
+    </exercises>
+
+</section>

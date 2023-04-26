@@ -1,0 +1,15 @@
+<chapter xml:id="chapter3" xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Logic with Quantifiers</title>
+  <introduction>
+   
+    <p>
+      We want to be able to expand our ability to use logic with mathematical statements. Many mathematical statements use variables. We say that an expression such as <m>x+y=5</m> is not a statement. However, if we can give more information about <m>x</m> and <m>y</m>, then we can use such an expression in a statement. For example, we could say there exists an <m>x</m> and <m>y</m> such that <m>x+y=5</m>. Or we could say for every <m>x</m> there exists a <m>y</m> with <m>x+y=5</m>. To use statements with <q>for every</q> and <q>there exists,</q> we will need to be able to understand logical statements with quantifiers.
+    </p>
+    
+
+  </introduction>
+  <xi:include  href="quantifiersI3-1.ptx" />
+  <xi:include  href="negquant3-2.ptx" />
+ <xi:include  href="multiplequant3-3.ptx" />
+ <xi:include  href="argumentsquant3-4.ptx" />
+</chapter>

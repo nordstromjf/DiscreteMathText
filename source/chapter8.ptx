@@ -1,0 +1,21 @@
+<chapter xml:id="chapter8" xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Relations</title>
+  <introduction>
+   
+    <p>
+      In this chapter we revisit relations. We will look at how relations can be used to describe mathematical relationships between numbers, sets, and other mathematical objects. We will also study the reflexive, symmetric and transitive properties, as these properties are central to understanding the concept of equivalence. Finally, we will apply the concept of equivalence to modular arithmetic.
+    </p>
+
+  
+    
+
+  </introduction>
+  <xi:include  href="relations8-1.ptx" />
+  <xi:include  href="rstrelations8-2.ptx" />
+  <xi:include  href="equivalencerelations8-3.ptx" />
+  <xi:include  href="modarith8-4.ptx" />
+
+  
+  
+  
+</chapter>

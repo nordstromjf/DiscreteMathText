@@ -1,0 +1,352 @@
+<section xml:id="conditional2-2">
+  <title>Conditional Statements</title><idx><h>conditional</h><h>statement</h></idx>
+
+  <p>In this section we introduce a new connective.</p>
+
+  <p>A conditional statement, as we saw in <xref ref="variables1-1"/>, has the form <q>if <m>p</m> then <m>q</m>.</q> We use the connective <m>p\rightarrow q</m> for conditional statements.</p>
+
+<assemblage xml:id="B_condconnective">
+  <title>Logical Connective: IF...THEN</title>
+    <p><ul>
+      <li><title>Conditional</title><idx><h>connective</h><h>conditional</h></idx> IF THEN. Notation: <m>p\rightarrow q</m><notation><usage><m>p\rightarrow q</m></usage><description>if <m>p</m> then <m>q</m></description></notation>, read as <q>if <m>p</m> then <m>q</m>.</q>
+      </li>
+    </ul>
+  </p></assemblage>
+
+  <p>Before looking at the truth-table, we need to understand when an if...then... statement is true or false. This is actually trickier than it seems.</p>
+
+  <example xml:id="E_condstatement"><title>Conditional Statement</title>
+  <p>Suppose I say to you <q>If it rains tomorrow, then class is cancelled.</q> When would you accuse me of lying to you? For example, if it doesn't rain and we have class, would you have thought my statement false? No. Now, you might not think my statement is true, either. But remember, statements must be either true or false. So if it is not false, then it is true.</p>
+  <p>Now, what if it doesn't rain, but I cancel class anyway? Would I have lied? No, I didn't tell you I wouldn't cancel class. So, again, this would be a true statement.</p>
+  <p>The only time you could accuse me of having made a false statement is if it rains and we don't cancel class. If we think of <q>it rains tomorrow</q> as <m>p</m> and <q>class is cancelled</q> as <m>q</m>, then the only time the statement is false is when <m>p</m> is true and <m>q</m> is false.</p>
+  </example>
+
+<p><table xml:id="T_ttconditional">
+    <title>Truth-table for <m>p\rightarrow q</m>.</title>
+    <tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>p\rightarrow q</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+    </tabular>
+
+  </table></p>
+
+<p>To better understand the truth or falsity of a conditional, let's look at another example.</p>
+<example xml:id="E_mathcond"><title>A Mathematical Conditional Statement</title>
+<p>Consider the mathematical statement <q>If <m>x>2</m> then <m>x^2>4</m></q>. Do you agree this is a true mathematical statement?</p> <p>Let <m>p</m> be <m>x>2</m> and <m>q</m> be <m>x^2>4</m>. Consider all the cases of <m>p</m> and <m>q</m> being true or false.</p> <p>For example, if <m>x=5, x^2=25</m>, then we have the case where <m>p</m> is true and <m>q</m> is true.</p> <p>If <m>x=-5, x^2=25</m>, then we have the case where <m>p</m> is false and <m>q</m> is true. But remember, the original statement is still true!</p> <p>If <m>x=1, x^2=1</m>, then we have the case where <m>p</m> is false and <m>q</m> is false. But again, the original statement is still true.</p> <p>It will be impossible to find an <m>x</m> that makes <m>x>2</m> true and <m>x^2>4</m> false. Thus, we never have the case where the conditional is false. </p>
+
+</example>
+
+<activity><statement><p>Give an example of a conditional statement, not one of the examples from above. Write in your own words why <m>p\rightarrow q</m> must be true whenever <m>p</m> is false.</p></statement></activity>
+
+<p>In a conditional statement <m>p\rightarrow q</m>, we call <m>p</m> the <term>hypothesis</term>, and <m>q</m> the <term>conclusion</term>.</p>
+
+<activity><statement><p>Use a truth-table to show <m>\sim(p \rightarrow q)</m> is logically equivalent to <m>p\ \wedge\sim q</m>. This is the rule for negating an if...then. Like DeMorgan's Law, it is worth committing to memory.</p></statement></activity>
+
+<assemblage xml:id="B_equivconditional">
+<title>Logical Equivalences for Conditionals</title>
+
+<p>
+<ol>
+  <li><m>p\rightarrow q\equiv \sim p\ \vee q</m></li>
+  <li><m>\sim(p\rightarrow q)\equiv p\ \wedge \sim q</m><idx><h>negation</h><h>of conditional</h></idx><idx><h>conditional</h><h>negation of</h></idx></li>
+</ol></p></assemblage>
+
+<p>The second equivalence is the <term>negation of the conditional</term>. It is going to be really important that we understand that the negation of a conditional is <em>not</em> a conditional itself.</p>
+
+
+<activity><statement><p>Give the truth-table for <m>q\rightarrow p</m>. Is it equivalent to <m>p\rightarrow q</m>? The statement <m>q\rightarrow p</m> is the <term>converse</term> of <m>p\rightarrow q</m>.</p></statement></activity>
+
+<activity><statement><p>Give the truth-table for <m>\sim q\rightarrow \sim p</m>. Is it equivalent to <m>p\rightarrow q</m>? The statement <m>\sim q\rightarrow \sim p</m> is the <term>contrapositive</term> of <m>p\rightarrow q</m>.</p></statement></activity>
+
+<activity><statement><p>What is the contrapositive of <m>q\rightarrow p</m>? This is also called the <term>inverse</term> of <m>p\rightarrow q</m>.</p></statement></activity>
+
+<p>We summarize the previous activities in the following definition.</p>
+
+<definition><statement><p>A conditional statement <m>p\rightarrow q</m> has
+  <ul>
+    <li><term>contrapositive</term><idx>contrapositive</idx>: <m>\sim q\rightarrow \sim p</m>;</li>
+    <li><term>converse</term><idx>converse</idx>: <m>q\rightarrow p</m>;</li>
+    <li><term>inverse</term><idx><h>inverse</h><h>of conditional</h></idx>: <m>\sim p\rightarrow \sim q</m>.</li>
+  </ul>
+</p></statement>
+</definition>
+
+<example xml:id="E_contrpositive"><title>Contrapositive and Converse</title>
+<p>Consider the statement: If <m>x>2</m> then <m>x^2>4</m>. What is the contrapositive of this statement? What is the converse?</p>
+<p><answer>Contrapositive: If <m>x^2\leq 4</m> then <m>x\leq 2</m>; Converse: If <m>x^2>4</m> then <m>x>2</m>.</answer></p>
+</example>
+
+<activity><statement><p>Give the truth-table for <m>(p \rightarrow q) \wedge (q\rightarrow p)</m>. </p></statement></activity>
+
+
+<p>The statement <m>(p \rightarrow q) \wedge (q\rightarrow p)</m> is useful in mathematics, but it is not very concise. We can simplify this statement by introducing an additional logical connective.</p>
+
+<assemblage xml:id="B_bicondconn">
+<title>Logical Connective: IF AND ONLY IF</title>
+    <p><ul>
+      <li><title>Biconditional</title><idx><h>connective</h><h>biconditional</h></idx> IF AND ONLY IF. Notation: <m>p\leftrightarrow q</m>, read as "<m>p</m> if and only if <m>q</m>."
+      </li>
+    </ul>
+  </p></assemblage>
+
+  <p>The biconditional is really just the combination of two conditionals: <m>p\rightarrow q</m> and <m>q\rightarrow p</m>. In particular, <m>p\leftrightarrow q\equiv (p\rightarrow q)\wedge (q\rightarrow p)</m>.</p>
+
+<p><table xml:id="T_ttbicond">
+    <title>Truth-table for <m>p\leftrightarrow q</m>.</title>
+    <tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>p\leftrightarrow q</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+    </tabular>
+
+  </table></p>
+
+  <activity><statement><p>Explain, in your own words, how to decide when <m>p \leftrightarrow q</m> is true or false.</p></statement></activity>
+
+  <activity><statement><p>We read the biconditional <m>p \leftrightarrow q</m> as <q><m>p</m> if and only if <m>q</m>.</q> Determine which of the two statements <m>p \rightarrow q</m> and <m>q\rightarrow p</m> is equivalent to <q><m>p</m> if <m>q</m></q> and which is <q><m>p</m> only if <m>q</m>.</q> Think about when each statement should be true (or false).</p></statement></activity>
+
+<p>In mathematics we might see statements such as <q><m>p</m> is necessary for <m>q</m></q> or <q><m>p</m> is sufficient for <m>q</m></q>. These are really conditional statements.
+
+<ul>
+<li><p><m>p</m> is <term>sufficient</term> for <m>q</m> means <m>p\rightarrow q</m>.</p></li>
+
+<li><p><m>p</m> is <term>necessary</term> for <m>q</m> means <m>\sim p\rightarrow \sim q</m>, which is equivalent to <m>q\rightarrow p</m>.</p></li>
+</ul>
+
+So a statement such as <q><m>p</m> is necessary and sufficient for <m>q</m></q> means <m>p\leftrightarrow q</m>.</p>
+
+
+    <reading-questions>
+      <title>Check Your Understanding</title>
+      <exercise><statement><p>What is the negation of <m>p\rightarrow q</m>? Check your answer with a truth-table.</p></statement>
+      <answer><p><m>p\ \wedge \sim q</m></p>
+      <tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>p\ \wedge \sim q</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+            </row>
+    </tabular></answer></exercise>
+
+      <exercise><statement><p>Give the truth-table for <m>\sim p\rightarrow \sim q</m>. </p></statement>
+      <answer><tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>\sim p\rightarrow \sim q</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+    </tabular></answer></exercise>
+
+    <exercise><statement>Using your truth-table from the previous question, explain why <m>\sim p\rightarrow \sim q</m> is NOT the negation of <m>p\rightarrow q</m>.</statement>
+    <answer>The truth-tables are not the same. </answer></exercise>
+
+    <exercise><statement><p>Give the truth-table for <m>\sim p \leftrightarrow q</m>. </p></statement>
+      <answer><tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>\sim p \leftrightarrow q</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+            </row>
+    </tabular></answer></exercise>
+
+    </reading-questions>
+
+    <exercises>
+      <title>Exercises</title>
+      <exercise><statement><p>
+    Give the truth-table for <m>(p\ \wedge \sim q) \rightarrow r</m>.
+  </p></statement></exercise>
+      <exercise><statement><p>
+    Give the truth-table for <m>(p\rightarrow r) \leftrightarrow (q\rightarrow r)</m>.
+  </p></statement></exercise>
+      <exercise><statement><p>
+    Use a truth truth-table to show the logical equivalence <m>(p \rightarrow q)\equiv (\sim p\ \vee q)</m>.
+  </p></statement></exercise>
+      <exercise><statement><p>
+    Use a truth truth-table to show the logical equivalence <m>\sim (p \rightarrow q)\equiv (p\ \wedge \sim q)</m>.
+  </p></statement></exercise>
+      <exercise><statement><p>
+    Write each of the following statements in symbolic form and determine whether they are logically equivalent. Include a truth-table and clearly state your conclusion.
+  </p>
+
+  <p>
+    If you paid full price, you didn’t buy it at Powell’s Books.
+  </p>
+
+  <p>
+    You didn’t buy it at Powell’s Books or you paid full price.
+  </p></statement></exercise>
+      <exercise><statement><p>
+    Write each of the following statements in symbolic form and determine whether they are logically equivalent. Include a truth-table and clearly state your conclusion.
+  </p>
+
+  <p>
+    If 2 is a factor of <m>n</m> and 3 is a factor of <m>n</m>, then 6 is a factor of <m>n</m>.
+  </p>
+
+  <p>
+    2 is not a factor of <m>n</m> or 3 is not a factor of <m>n</m> or 6 is a factor of <m>n</m>.
+  </p></statement></exercise>
+
+     <exercise><statement><p>
+    Write the negation (in English) of each of the following statements.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    If <m>P</m> is a square, then <m>P</m> is a rectangle.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    If the decimal expansion of <m>r</m> is terminating, then <m>r</m> is rational.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    If <m>x</m> is nonnegative, then <m>x</m> is positive or <m>x</m> is 0.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    If <m>n</m> is divisible by 6, then <m>n</m> is divisible by 2 and <m>n</m> is divisible by 3.
+  </p>
+    </li>
+
+  </ol></statement></exercise>
+      <exercise><statement><p>
+    Use a truth-table to show that the conditional statement <m>p\rightarrow q</m> is not equivalent to its inverse.
+  </p></statement></exercise>
+      <exercise><statement><p>
+    If statements <m>P</m> and <m>Q</m> are logically equivalent, then the statement <m>P\leftrightarrow Q</m> is a tautology. Conversely, if <m>P\leftrightarrow Q</m> is a tautology, then <m>P</m> and <m>Q</m> are logically equivalent. Convert the logical equivalence <m>p\rightarrow (q\rightarrow r)\equiv (p\ \wedge q)\rightarrow r</m> to a statement using <m>\leftrightarrow</m> and use a truth-table to verify the statement is a tautology.
+  </p>
+  </statement></exercise>
+   
+
+    </exercises>
+
+</section>

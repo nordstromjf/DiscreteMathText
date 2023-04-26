@@ -1,0 +1,292 @@
+<section xml:id="equivalencerelations8-3">
+  <title>Equivalence Relations</title><idx>equivalence relation</idx><idx><h>relation</h><h>equivalence</h></idx>
+
+<p>In <xref ref="rstrelations8-2"/> we studied three properties of a relation, the reflexive, symmetric, and transitive properties. These three properties are important for generalizing the idea of equality in mathematics. We may want to relate objects based on certain criteria; objects that share that criteria are <q>equivalent.</q> For example, you may recall from geometry, the idea of congruent triangles. Two triangles are congruent if they have the same angles. In geometry, we may not care at all about the lengths of the sides, just the angles. In this case, we relate triangles with the same angles and treat them as the same triangle.  </p>
+
+  <definition xml:id="D_equivrel"><statement><p>A relation that is reflexive, symmetric and transitive is an <term>equivalence relation</term><idx>equivalence relation</idx>. </p>
+  </statement></definition>
+
+  <p>In <xref ref="E_provingRST" /> we proved that the relation given by <m>(m, n)\in R \Leftrightarrow 3\mid (m-n)</m> is an equivalence relation since we proved it is reflexive, symmetric, and transitive.</p>
+
+  <p>In fact, the proof can easily be adapted to show <m>(m, n)\in R \Leftrightarrow d\mid (m-n)</m>
+ is an equivalence relation for <m>d\neq 0, d\in \mathbb{Z}</m>. The details are left as an exercise, <xref ref="X_modn"/></p>
+
+ <p>This relation is an important enough that it has its own definition.
+</p>
+
+ <definition xml:id="D_mod"><statement><p>Let <m>m, n, d\in \mathbb{Z}, d>0</m>. Then <m>m</m> and <m>n</m> are <term>congruent modulo <m>d</m></term><idx>congruent mod <m>d</m></idx> if <m>d\mid (m-n)</m>.</p></statement></definition>
+
+ <p>We often just say <m>m</m> is congruent to <m>n</m> mod <m>d</m>, and denote it <me>m\equiv n \mod d.</me><notation><usage><m>m\equiv n \mod d</m></usage><description><m>m</m> is congruent to <m>n</m> mod <m>d</m>; <m>d\mid (m-n)</m></description></notation></p>
+
+  <example xml:id="E_mod"><title>Congruence mod 3</title>
+
+  <p>True or false: <m>7\equiv 1 \mod 3</m>.</p>
+  <answer><p>Since <m>3\mid (7-1)</m>, true.</p></answer>
+
+  <p>True or false: <m>7\equiv -2 \mod 3</m>.</p>
+  <answer><p>Since <m>3\mid (7+2)</m>, true.</p></answer>
+
+  <p>True or false: <m>7\equiv -7 \mod 3</m>.</p>
+  <answer><p>Since <m>3\nmid (7+7)</m>, false.</p></answer>
+
+  <p>True or false: <m>7\equiv 2 \mod 3</m>.</p>
+  <answer><p>Since <m>3\nmid (7-2)</m>, false.</p></answer>
+
+  </example>
+
+  <p>Let <m>R</m> be an equivalence relation on <m>A</m>. Let <m>a\in A</m>. The set 
+<me>[a]=\{b\in A : b R a\}</me>
+is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.</p>
+
+<p>Given a specific <m>a\in A</m>, we find the equivalence class of <m>a</m> by finding all the elements that are related to <m>a</m>. Keep in mind the equivalence class is a set, denoted <m>[a]</m>.<notation><usage><m>[a]</m></usage><description>the equivalence class of <m>a</m></description></notation></p>
+
+  <example xml:id="E_equivclasses"><title>Equivalence Classes</title>
+
+  <p>Consider the equivalence relation <m>m\equiv n \mod 3</m>, on <m>\mathbb{Z}</m>.</p>
+
+  <p>Find <m>[0]</m>, the set of elements in <m>\mathbb{Z}</m> equivalent to 0.</p>
+  <answer><m>[0]=\{0, 3, -3, 6, -6, \ldots\}=\{3k : k\in \mathbb{Z}\}</m></answer>
+  <p>Find <m>[1]</m>, the set of elements in <m>\mathbb{Z}</m> equivalent to 1.</p>
+  <answer><m>[1]=\{1, 4, -2, -5, 7, 10, \ldots\}=\{3k+1: k\in \mathbb{Z}\}</m></answer>
+
+  <p>Find <m>[2]</m>, the set of elements in <m>\mathbb{Z}</m> equivalent to 2.</p>
+  <answer><m>[2]=\{2, 5, -1, -4, -7, \ldots\}=\{3k+2: k\in \mathbb{Z}\}</m></answer>
+  <p>Find <m>[3]</m>, the set of elements in <m>\mathbb{Z}</m> equivalent to 3.</p>
+  <answer><m>[3]=\{0, 3, -3, 6, -6, \ldots\}=\{3k : k\in \mathbb{Z}\}</m></answer>
+  <p>Find <m>[-1]</m>, the set of elements in <m>\mathbb{Z}</m> equivalent to -1.</p>
+  <answer><m>[-1]=\{2, 5, -1, -4, -7, \ldots\}=\{3k+2: k\in \mathbb{Z}\}</m></answer>
+
+  </example>
+
+  
+
+  <p>We can notice a few things from this last example. We can see that some of our equivalence classes are the same. In particular, <m>[0]=[3]</m> and <m>[2]=[-1]</m>. In fact, there are only three distinct equivalence classes, <m>[0], [1], [2]</m>, any other equivalence class will equal one of these. 
+  </p>
+
+  <p>A few other things to notice, distinct equivalence classes are disjoint--they have no elements in common. Also, <m>[a]</m> contains <m>a</m>. We may also recognize that the equivalence classes <m>[0], [1], [2]</m> partition the integers.</p>
+
+  <example xml:id="E_equivclasses2"><title>More Equivalence Classes</title>
+
+  <p>Consider the equivalence relation <m>A R B \Leftrightarrow |A|=|B|</m>, on <m>\mathcal{P}(\{1, 2, 3\})</m>.</p>
+  <p>This is the relation where two subsets of <m>\{1, 2, 3\}</m> are related if they have the same number of elements. You can check that this is an equivalence relation.</p>
+
+  <p>Find <m>[\emptyset]</m>, the set of elements in <m>\mathcal{P}(\{1, 2, 3\})</m> equivalent to <m>\emptyset</m>.</p>
+  <answer><m>[\emptyset]=\{\emptyset\}</m>, since this is the only subset with 0 elements.</answer>
+  <p>Find <m>[\{1\}]</m>.</p>
+  <answer><m>[\{1\}]=\{\{1\}, \{2\}, \{3\}\}</m>, since these all have 1 element.</answer>
+
+  <p>Find <m>[\{1, 2\}]</m>.</p>
+  <answer><m>[\{1, 2\}]=\{\{1, 2\}, \{2, 3\}, \{1, 3\}\}</m></answer>
+
+  <p>Find <m>[\{1, 2, 3\}]</m>.</p>
+  <answer><m>[\{1, 2, 3\}]=\{\{1, 2, 3\}\}</m></answer>
+
+  </example>
+
+  <p>Once again, the distinct equivalence classes are disjoint--they have no elements in common. Furthermore, the equivalence classes <m>[\emptyset], [\{1\}], [\{1, 2\}], [\{1, 2, 3\}]</m> partition the power set by size of the subset.</p>
+
+  <activity><introduction><p>Define the relation on <m>\mathbb{Z}</m> by <m>xRy \iff |x|=|y|</m>.</p></introduction>
+<task><p>Prove <m>R</m> is an equivalence relation.</p></task>
+<task><p>Find <m>[0]</m> and <m>[-5]</m>.</p></task></activity>
+
+<activity><introduction><p>Recall that <m>n \equiv m \mod 5\iff 5\mid (m-n)</m>.</p></introduction>
+<task><p>Prove the relation <m>nRm \iff n \equiv m \mod 5</m> is an equivalence relation on <m>\mathbb{Z}</m>. </p></task>
+<task><p>Find <m>[0]</m> and <m>[2]</m>.</p></task></activity>
+
+  <activity xml:id="A_partasequivrel"><introduction><p>Let <m>S=\{1, 2, 3, 4, 5, 6\}</m>. Let <m>A_1=\{1, 2, 3\}, A_2=\{4\}, A_3=\{5, 6\}</m>.</p></introduction>
+<task><p>Check the conditions in <xref ref="D_partition"/> to show <m>\{A_i\}</m> is a partition of <m>S</m>.</p></task>
+<task><p>Define the relation on <m>S</m>, <m>xRy \iff</m> <m>x</m> and <m>y</m> are in the same subset of the partition. Draw the directed graph for <m>R</m>.</p></task>
+<task><p>Show <m>R</m> is reflexive, symmetric and transitive.</p></task>
+<task><p>Find <m>[1]</m>, the equivalence class of 1. </p></task>
+<task><p>Do you think this particular partition matters? Could we define this relation on any partition of any set and still have it be reflexive, symmetric and transitive?</p></task></activity>
+
+  <p>There is an important connection between equivalence classes and partitions, as we see in the next two theorems.</p>
+
+  <theorem xml:id="T_equivclassespartition"><statement><p>Let <m>A</m> be a set and <m>R</m> an equivalence relation. The equivalence classes of <m>R</m> form a partition of <m>A</m></p>.</statement></theorem>
+
+
+  <p>Conversely, as we saw in <xref ref="A_partasequivrel"/>, if we have a partition <m>\{A_1, A_2, \ldots, A_n\ldots\}</m> of <m>A</m> and define the relation <m>(a, b)\in R \Leftrightarrow a</m> and <m>b</m> are in the same subset <m>A_i</m>, then <m>R</m> is an equivalence relation. We call this the equivalence relation <term>induced</term> by the partition.</p>
+
+  <theorem xml:id="T_partitionequivrelation"><statement><p>Let <m>A</m> be a set and <m>\{A_1, A_2, \ldots, A_n, \ldots\}</m> be a partition of <m>A</m>. Let <m>R</m> be the relation induced by the partition. Then <m>R</m> is an equivalence relation.</p></statement></theorem>
+
+  <p>We leave the details of the proof of <xref ref="T_partitionequivrelation"/> as an exercise.</p>
+
+  <p>The proof of <xref ref="T_equivclassespartition"/> follows directly from the next two Lemmas.</p>
+
+  <lemma xml:id="L_aRbsameclass"><statement><p>Let <m>R</m> be an equivalence relation on <m>A</m> and <m>a, b\in A</m>. If <m>a R b</m> then <m>[a]=[b]</m>.</p></statement></lemma>
+
+  <proof> <p>Since we want to show the sets are equal, we will show <m>[a], [b]</m> are subsets of each other.</p>
+
+  <p>Show <m>[a]\subseteq [b]</m>. Let <m>x\in [a]</m>. Then by defintion of equivalence class, <m>x R a</m>. We assumed <m>a R b</m>. By the transitive property, <m>x R b</m>. Thus, <m>x\in [b]</m>.</p>
+
+  <p>Show <m>[b]\subseteq [a]</m>. Let <m>x\in [b]</m>. Then by definition of equivalence class, <m>x R b</m>. We assumed <m>a R b</m>. By the symmetric property, <m>b R a</m>. By the transitive property, <m>x R a</m>. Thus, <m>x\in [a]</m>.</p>
+  </proof>
+
+  <p><xref ref="L_aRbsameclass"/> really says that if two elements are related in an equivalence relation, they must have the same equivalence class. You can check this with the above examples. Note, we needed the symmetric and transitive properties to prove this lemma.</p>
+
+  <lemma xml:id="L_classdisjoint"><statement><p>Let <m>R</m> be an equivalence relation on <m>A</m> and <m>a, b\in A</m>. Either <m>[a]\cap[b]=\emptyset</m> or <m>[a]=[b]</m>.</p></statement></lemma>
+
+  <proof><p>Assume <m>[a]\cap[b]\neq \emptyset</m>. We want to show <m>[a]=[b]</m>. Since <m>[a]\cap[b]\neq \emptyset</m>, there exists <m>x\in [a]\cap[b]</m>. This means <m>x R a</m> and <m>x R b</m>. By the symmetric property, <m>a R x</m>. By the transitive property, since <m>a R x</m> and  <m>x R b</m>, we have <m>a R b</m>. By <xref ref="L_aRbsameclass" />, <m>[a]=[b]</m>.</p>
+</proof>
+
+<p><xref ref="L_classdisjoint"/> really says that any two equivalence classes are either disjoint or exactly the same.</p>
+
+<p><xref ref="T_equivclassespartition"/> follows since, by the reflexive property, <m>x R x, \forall x\in A</m> means every element is in an equivalence class. Thus, the union of the equivalence classes is all of <m>A</m>. By <xref ref="L_classdisjoint"/> distinct equivalence classes are disjoint. Thus, we have a partition of <m>A</m>.</p>
+
+    <reading-questions>
+      <title>Check Your Understanding</title>
+
+      <p>Let <m>A=\{1, 2, 3\}, B=\{2, 4, 6, 8\}, C=\{0, 1\}</m>.</p>
+  
+      <exercise><statement><p>Determine if the relation is an equivalence relation. If it is, find the equivalence classes. <m>R</m> is the relation on <m>A</m> given by 
+      <me>a R b \Leftrightarrow a\leq b.</me></p></statement>
+     <answer>Not an equivalence relation.</answer></exercise>
+
+      <exercise><statement><p>Determine if the relation is an equivalence relation. If it is, find the equivalence classes. <m>R</m> is the relation on <m>C</m> given by 
+      <me>a R b \Leftrightarrow a+b \text{ is even}.</me></p></statement>
+      <answer>Equivalence relation. <m>[0]=\{0\}, [1]=\{1\}</m></answer></exercise>
+
+      <exercise><statement><p>Determine if the relation is an equivalence relation. If it is, find the equivalence classes. <m>R</m> is the relation on <m>B</m> given by 
+      <me>a R b \Leftrightarrow a+b \text{ is even}.</me></p></statement>
+      <answer>Equivalence relation. <m>[2]=\{2, 4, 6, 8\}</m></answer></exercise>
+
+      <exercise><statement><p>Determine if the relation is an equivalence relation. If it is, find the equivalence classes. <m>R</m> is the relation on <m>A</m> given by 
+      <me>a R b \Leftrightarrow a+b \text{ is even}.</me></p></statement>
+      <answer>Equivalence relation. <m>[1]=\{1, 3\}, [2]=\{2\}</m></answer></exercise>
+
+      <exercise><statement><p>Determine if the relation is an equivalence relation. If it is, find the equivalence classes. <m>R</m> is the relation on <m>B</m> given by 
+      <me>a R b \Leftrightarrow a\mid b.</me></p></statement>
+      <answer>Not an equivalence relation.</answer></exercise>
+
+      <exercise><statement><p>Determine if the relation is an equivalence relation. If it is, find the equivalence classes. <m>R</m> is the relation on <m>\mathbb{Z}</m> given by 
+      <me>a R b \Leftrightarrow a+b=0.</me></p></statement>
+      <answer>Not an equivalence relation.</answer></exercise>
+
+      <exercise><statement><p>Determine if the relation is an equivalence relation. If it is, find the equivalence classes. <m>R</m> is the relation on <m>\mathbb{Z}</m> given by 
+      <me>a R b \Leftrightarrow a\equiv b \mod 4.</me></p></statement>
+      <answer>Equivalence relation. <m>[0]=\{4k : k\in \mathbb{Z}\}</m>, <m>[1]=\{4k+1: k\in \mathbb{Z}\}</m>, <m>[2]=\{4k+2 : k\in \mathbb{Z}\}</m>, <m>[3]=\{4k+3 : k\in \mathbb{Z}\}</m></answer></exercise>
+
+
+
+
+
+      
+      
+    
+
+    </reading-questions>
+
+    <exercises>
+      <exercise><statement>
+        <p>
+    Let <m>A=\{0, 1, 2, 3, 4\}</m>. Let
+  
+    <me>R=\{(0, 0), (0, 4), (1, 1), (1, 3), (2, 2), (3, 1), (3, 3), (4, 0), (4, 4)\}.</me>
+  
+    Find the equivalence classes of <m>R</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>A=\{0, 1, 2, 3, 4, \ldots, 20\}</m>. Let <m>R</m> be the relation on <m>A</m> given by <me>x\ R\ y\iff 4\mid (x-y).</me>
+
+    Find the equivalence classes of <m>R</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>A=\{-4, -3, -2, -1, 0, 1, 2, 3, 4, 5\}</m>. Let <m>R</m> be the relation on <m>A</m> given by <me>x\ R\ y\iff 3\mid (x-y).</me>
+ 
+    Find the equivalence classes of <m>R</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>X=\{a, b, c\}</m> and <m>A={\cal P}(X)</m>. Let <m>R</m> be the relation on <m>A</m> given by <me>U\ R\ V\iff N(U)=N(V)</me> where <m>N(U)</m> is the number of elements in <m>U</m>. Find the equivalence classes of <m>R</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Determine if the following are true or false.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    <m>17 \equiv 2 \mod 5</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>4 \equiv -5 \mod 7</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>-2 \equiv -8 \mod 3</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>-6 \equiv 22 \mod 2</m>.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>R</m> be the relation <q>congruence modulo 3.</q> Which of the following equivalence classes are equal? <me>[7], [-4], [-6], [17], [4], [27], [19]</me>
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>R</m> be the relation <q>congruence modulo 7.</q> Which of the following equivalence classes are equal? <me>[35], [3], [-7], [12], [0], [-2], [17]</me>
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Prove <m>n \equiv m\ \text{mod}\ 4</m> is an equivalence relation on <m>\mathbb{Z}</m>. Then describe the distinct equivalence classes for this relation.
+  </p>
+      </statement><hint><p>
+    Use that <m>nRm \iff n \equiv m\ \text{mod}\ 4\iff 4\mid (m-n)</m>.
+  </p></hint></exercise>
+
+  <exercise xml:id="X_modn"><statement>
+        <p>
+    Prove <m>a \equiv b\ \text{mod}\ n</m> is an equivalence relation on <m>\mathbb{Z}</m>. Then describe the distinct equivalence classes for this relation.
+  </p>
+      </statement><hint><p>
+    Use that <m>aRb \iff a \equiv b\ \text{mod}\ n\iff 4\mid (a-b)</m>.
+  </p></hint></exercise>
+      <exercise><statement>
+        <p>
+    Define <m>A</m> to be the <q>absolute value</q> relation on <m>\mathbb{R}</m> by <me>x\ A\ y \iff |x|=|y|.</me>
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Prove <m>A</m> is an equivalence relation on <m>\mathbb{R}</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Describe the distinct equivalence classes for this relation.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>R</m> be an equivalence relation on a set <m>A</m>. Prove for all <m>a</m>, <m>b</m>, and <m>c</m> in <m>A</m>, if <m>b\ R\ c</m> and <m>c\in [a]</m>, then <m>b\in [a]</m>.
+  </p>
+      </statement></exercise>
+    </exercises>
+
+</section>

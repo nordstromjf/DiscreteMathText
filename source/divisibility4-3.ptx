@@ -1,0 +1,289 @@
+<section xml:id="divisibility4-3">
+  <title>Divisibility</title>
+
+  <p>In this section we introduce the idea of divisibility for integers. It is important to understand that this concept involves only integers and is not the same thing as division. Divisibility is a property while division is an operation.</p>
+
+<definition><statement><p>Let <m>n, d\in \mathbb{Z}</m>. Then <m>n</m> is <term>divisible</term><idx>divisible</idx> by <m>d</m> if <m>n=dk</m> for some <m>k\in \mathbb{Z}</m>.</p></statement></definition>
+
+<p>If <m>n=dk</m> for some <m>k\in \mathbb{Z}</m> we can also say
+<ul>
+  <li><m>n</m> is a <term>multiple</term><idx>multiple</idx> of <m>d</m>;</li>
+  <li><m>d</m> is a <term>factor</term><idx>factor</idx> of <m>n</m>;</li>
+  <li><m>d</m> is a <term>divisor</term><idx>divisor</idx> of <m>n</m>;</li>
+  <li><m>d</m> <term>divides</term><idx>divides</idx> <m>n</m>.</li>
+</ul></p>
+
+<p>We use the notation <m>d\mid n</m><notation><usage><m>d\mid n</m></usage><description><m>d</m> divides <m>n</m></description></notation>, read <q><m>d</m> divides <m>n</m>.</q></p>
+
+<p><alert>Warning:</alert> <m>d\mid n</m> is a relationship between two integers. It is a statement that is either true or false. It does <em>not</em> equal a number. It is <em>not</em> the same thing as a fraction. It is not an equation, but it can be translated to the equation <m>n=dk</m> for some integer <m>k</m>.</p>
+
+<p>It is important to look at the special case when <m>n</m> or <m>d</m> is 0.
+<ul>
+  <li><m>0\mid n</m> is always false.</li>
+  <li><m>d\mid 0</m> is true if <m>d\neq 0</m>.</li>
+  <li>Thus, <m>0\mid 0</m> is false, even though, technically, one could write <m>0=0\cdot k</m>.</li>
+</ul>
+</p>
+
+<example xml:id="E_divides"><title>Finding Divisors</title>
+  <p>
+  Find the divisors of 6.</p>
+  <answer>1, 2, 3, 6, -1, -2, -3, -6</answer>
+  <p>
+  Find the divisors of 5.</p>
+  <answer>1, 5, -1, -5</answer>
+  <p>
+  Find the divisors of 1.</p>
+  <answer>1, -1</answer>
+</example>
+
+<p>If <m>d</m> does not divide <m>n</m>, then for every <m>k\in \mathbb{Z}, n\neq dk</m>. This can be difficult to show in general, but if <m>n</m> and <m>d</m> are specific integers, you could show <m>\frac{n}{d}</m> is not an integer. This is the <em>only</em> time a fraction can show up in proofs about divibilty.</p>
+<p>We use the notation <m>d\nmid n</m><notation><useage><m>d\nmid n</m></useage><description><m>d</m> does not divide <m>n</m></description></notation> for <m>d</m> does not divide <m>n</m>.</p>
+
+<example xml:id="E_TFdivides"><title>Determining Divisibility</title>
+  <p>
+  True or false: <m>8\mid 24</m>.</p>
+  <answer>True, <m>24=8(3)</m>.</answer>
+  <p>
+  True or false: <m>8\mid 4</m>.</p>
+  <answer>False, <m>4=8(k)</m> has no integer solutions since <m>k=1/2</m>.</answer>
+
+  <p>
+  True or false: <m>8\mid 10</m>.</p>
+  <answer>False, <m>10=8(k)</m> has no integer solutions since <m>k=5/4</m>.</answer>
+
+   <p>
+  True or false: <m>8\mid -8</m>.</p>
+  <answer>True, <m>-8=8(-1)</m>.</answer>
+
+   <p>
+  True or false: <m>-2\mid 8</m>.</p>
+  <answer>True, <m>8=-2(-4)</m>.</answer>
+
+   <p>
+  True or false: <m>1\mid 4</m>.</p>
+  <answer>True, <m>4=1(4)</m>.</answer>
+
+   <p>
+  True or false: <m>8\mid 0</m>.</p>
+  <answer>True, <m>0=8(0)</m>.</answer>
+
+  <p>
+  True or false: <m>4\mid 1</m>.</p>
+  <answer>False, <m>1=4(k)</m> has no integer solutions since <m>k=1/4</m>.</answer>
+
+  <p>
+  True or false: <m>0\mid 8</m>.</p>
+  <answer>False, <m>8=0(k)</m> has no integer solutions.</answer>
+</example>
+
+<activity><introduction><p>Determine if the following divisibility statements are true or false, and justify your answer.</p></introduction>
+<task><m>3\mid 10</m></task>
+<task><m>3\mid 0</m></task>
+<task><m>3\mid 36</m></task>
+<task><m>12\mid 4</m></task>
+<task><m>0\mid 4</m></task>
+</activity>
+
+
+
+<p>Now, let's use the definition of divisibility to prove a more general theorem.</p>
+
+<theorem xml:id="T_transdivides"><statement><p>For all integers, <m>a, b, c</m>, if  <m>a\mid b</m> and <m>b\mid c</m>, then <m>a\mid c</m>.</p></statement></theorem>
+
+<proof><p>Let <m>a, b, c\in \mathbb{Z}</m>. Assume <m>a\mid b</m> and <m>b\mid c</m>. Then by definition, <m>b=ak</m> for some <m>k\in \mathbb{Z}</m> and <m>c=bj</m> for some <m>j\in \mathbb{Z}</m>. Substituting the first equation into the second, <m>c=(ak)j=a(kj)</m>. Since <m>kj\in\mathbb{Z}</m>, <m>a\mid c</m>.</p></proof>
+
+<activity><statement><p>Prove if 15 divides <m>n</m>, then 5 divides <m>n</m>.</p></statement></activity>
+
+<activity><statement><p>Prove or disprove if 6 divides <m>n</m>, then 12 divides <m>n</m>.</p></statement></activity>
+
+<activity><statement><p>Prove if <m>d\mid n</m> and <m>d\mid m</m>, then <m>d\mid (n+m)</m>.</p></statement></activity>
+
+
+<p>Now that we have the concept of divisibility, we can look at some bigger mathematical theorems involving divisibility by primes.</p>
+
+<theorem xml:id="T_divbyprime"><statement>Any integer <m>n>1</m> is divisible by a prime.</statement></theorem>
+<proof><p>We will divide this proof into two cases, where <m>n</m> is prime and where <m>n</m> is composite.</p>
+<p>
+  Case 1: <m>n</m> is prime. We can see that <m>n\mid n</m>. Since <n>n</n> is prime, <m>n</m> is divisible by a prime.
+</p>
+
+<p>Case 2: <m>n</m> is composite. Then <m>n=r_0s_0</m> where <m>1&lt; r_0 &lt; n</m>, and <m>r_0, s_0\in \mathbb{Z}</m>. If <m>r_0</m> is prime, then <m>n</m> is divisible by a prime.</p>
+<p>If <m>r_0</m> is not prime, then <m>r_0=r_1s_1</m> where <m>1&lt; r_1 &lt; r_0</m>, and <m>r_1, s_1\in \mathbb{Z}</m>. If <m>r_1</m> is prime, then <m>n=r_1s_1s_0</m> and <m>n</m> is divisible by a prime.</p>
+<p>Similarly, if <m>r_1</m> is not prime, then <m>r_1=r_2s_2</m> where <m>1&lt; r_2 &lt; r_1 &lt; r_0</m>, and <m>r_2, s_2\in \mathbb{Z}</m>, etc.</p>
+
+<p>We can keep applying this process to get <m>n=r_ks_k\cdots s_0</m> with <m>1&lt; r_k &lt;\cdots&lt; r_1 &lt; r_0</m>, and <m>r_k, s_k\in \mathbb{Z}</m>.</p>
+
+<p>If at any point <m>r_k</m> is prime, then we are done, as we have found a prime divisor of <m>n</m>. We know that there cannot be infinitely many non-prime <m>r_k</m> since there are only finitely many integers between 1 and <m>n</m>. Thus, the process must terminate with a prime divisor of <m>n</m>. Hence, every integer is divisible by a prime.</p>
+
+</proof>
+
+<p>We now state a big theorem in discrete mathematics, but leave the proof for later. This theorem is more commonly called the Fundamental Theorem of Arthmetic.<idx><h>Fundamental Theorem of Arithmetic</h><see>Unique Factorization Theorem</see></idx></p>
+
+<theorem xml:id="T_FTofArith"><title>Unique Factorization Theorem</title><idx>Unique Factorization Theorem</idx>
+<statement><p>Given any integer <m>n>1</m> there exists a positive integer <m>k</m>, distinct primes <m>p_1, p_2, \ldots, p_k</m>, and positive integers <m>e_1, e_2, \ldots e_k</m>, such that <m>n=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}</m>. This factorization of <m>n</m> into powers of primes is unique except for the order of the factors.</p></statement></theorem>
+
+<p>The decomposition into powers of primes, <m>n=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}</m>, is called the <term>standard form</term><idx><h>prime factorization</h><h>standard form</h></idx> of the prime factorization.</p>
+
+<definition xml:id="D_factorial"><statement><p>Let <m>n</m> be an integer <m>n\geq 1</m>. Then the <term>factorial</term> of <m>n</m><idx>factorial</idx> is given by <m>n!=(n)(n-1)(n-2)\cdots(2)(1)</m>. </p></statement></definition>
+
+<p>For example, <m>5!=5(4)(3)(2)(1)=120</m>.</p>
+
+<example xml:id="E_primefactorization"><title>Prime Factorization</title>
+<p>Find the prime factorization of 252 in standard form.</p>
+<answer><m>252=(2^2)(3^2)(7)</m>.</answer>
+
+<p>Find the prime factorization of 17 in standard form.</p>
+<answer><m>17</m>, since it is prime.</answer>
+
+<p>Find the prime factorization of 195 in standard form.</p>
+<answer><m>195=(3)(5)(13)</m>.</answer>
+
+<p>Find the prime factorization of <m>8!</m> in standard form.</p>
+<answer>
+  <md><mrow>8!=(8)(7)(6)(5)(4)(3)(2)(1)</mrow>
+  <mrow>&amp;=(2^3)(7)(2\cdot 3)(5)(2^2)(3)(2)</mrow>
+  <mrow>&amp;=(2^7)(3^3)(5)(7)</mrow></md>.</answer>
+
+</example>
+
+<activity><statement><p>Give the prime factorization of 600 in standard form.</p></statement></activity>
+
+<activity><statement><p>Give the prime factorization of <m>9!</m> (9 factorial). Is 10 a factor of <m>9!</m>? Is <m>10^2</m>?</p></statement></activity>
+
+
+
+<p><xref ref="T_FTofArith" /> is more powerful than it may seem. Although you have probably found prime factorizations before, you may not have thought much about the fact that they are unique. Consider the statement <m>3\mid 2^{101}</m>. Is this true or false? Well, since <m>2^{101}</m> is a prime factorization, the only prime divisor it has is 2. Thus, <m>3\mid 2^{101}</m> is false. If you have the prime factorization of an integer, then you know exactly which primes (and which powers of primes) divide the integer. </p>
+
+<activity><introduction><p>Determine if the follwing are true or false. Give a reason for your answer.</p></introduction>
+<task><p>5 divides <m>3^{600}</m>.</p></task>
+<task><p>6 divides <m>3^{600}</m>.</p></task>
+<task><p>9 divides <m>3^{600}</m>.</p></task>
+<task><p>300 divides <m>3^{600}</m>.</p></task>
+</activity>
+
+
+    <reading-questions>
+      <title>Check Your Understanding</title>
+      
+      <exercise><statement><p>True or false: <m>6\mid 24</m>.</p></statement>
+      <answer>True.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>1\mid 9</m>.</p></statement>
+      <answer>True.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>0\mid 9</m>.</p></statement>
+      <answer>False.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>6\mid 3</m>.</p></statement>
+      <answer>False.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>6\mid 6</m>.</p></statement>
+      <answer>True.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>6\mid -30</m>.</p></statement>
+      <answer>True.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>6\mid 0</m>.</p></statement>
+      <answer>True.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>6\mid 21</m>.</p></statement>
+      <answer>False.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>5\mid 3^{56}</m>.</p></statement>
+      <answer>False.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>6\mid 3^{10}2^{5}5^{9}</m>.</p></statement>
+      <answer>True.</answer></exercise>
+
+      
+      <exercise><statement><p>Give the prime factorization for <m>7!</m>.</p></statement>
+      <answer><m>7!=(7)(6)(5)(4)(3)(2)(1)=(7)(2\cdot 3)(5)(2\cdot 2)(3)(2)(1)=(2^4)(3^2)(5)(7)</m>.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>10\mid 7!</m>.</p></statement>
+      <answer>True.</answer></exercise>
+
+       <exercise><statement><p>True or false: <m>100\mid 7!</m>.</p></statement>
+      <answer>False, <m>100=2^25^2</m>, so <m>7!</m> would need a factor of <m>5^2</m>.</answer></exercise>
+
+    </reading-questions>
+
+    <exercises>
+      <exercise><statement><p>Determine if the following statements are true or false. Justify your answer.</p>
+        <ol marker="a">
+        <li>
+        <p><m>5\mid 0</m></p>
+        </li>
+
+        <li>
+        <p><m>-3</m> is a factor of 66</p>
+        </li>
+
+        <li>
+        <p><m>13\mid 73</m></p>
+        </li></ol>
+    </statement></exercise>
+      <exercise><statement>
+        <p>Let <m>n\in \mathbb{Z}</m>. Determine if the following statements are true or false. Justify your answer.</p>
+        <ol marker="a">
+        <li>
+        <p>3 divides <m>(3n+1)(3n+2)(3n+3)</m>.</p>
+        </li>
+
+        <li>
+        <p><m>6n(2n+10)</m> is divisible by 4.</p>
+        </li>
+
+        <li>
+        <p>100 divides <m>(5n)^2(8n+24).</m></p>
+        </li></ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Show that the following statement is false: For all integers <m>a</m> and <m>b</m>, if <m>3\mid (a+b)</m> then <m>3\mid (a-b)</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        
+<p>Recall that the standard factored form of an integer is a product of powers of a prime, as in <xref ref="T_FTofArith"/>.
+  <ol marker="a">
+    <li>
+      <p>
+    Write <m>6!</m> in standard factored form.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Write <m>20!</m> in standard factored form.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Without computing the value of <m>(20!)^2</m> determine how many zeros are at the end of this number when written in decimal form. Justify your answer. 
+  </p>
+    </li>
+
+  </ol></p>
+      </statement><hint><p>For (c), What prime factors correspond to zeros at the end of a number?</p></hint></exercise>
+      <exercise><statement>
+        <p>
+    Prove, using the definition of divisibility, for all integers <m>a</m>, <m>b</m>, and <m>c</m>, if <m>a\mid b</m> and <m>a\mid c</m> then <m>a\mid (b+c)</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement><p>
+    Prove or disprove: The product of any two even integers is a multiple of 4.
+  </p></statement></exercise>
+      <exercise><statement><p>
+    Prove or disprove: For all integers <m>a</m>, <m>b</m>, and <m>c</m>, if <m>ab\mid c</m> then <m>a\mid c</m> and <m>b\mid c</m>.
+  </p></statement></exercise>
+      <exercise><statement><p>
+    Prove or disprove: For all integers <m>a</m>, <m>b</m>, and <m>c</m>, if <m>a\mid bc</m> then <m>a\mid b</m> or <m>a\mid c</m>.
+  </p></statement></exercise>
+      <exercise><statement><p>
+    Prove or disprove: For all integers <m>a</m>, <m>b</m>, and <m>c</m>, if <m>a</m> is a factor of <m>c</m> then <m>ab</m> is a factor of <m>c</m>.
+  </p></statement></exercise>
+    </exercises>
+
+</section>

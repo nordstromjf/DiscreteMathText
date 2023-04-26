@@ -1,0 +1,22 @@
+<chapter xml:id="chapter4" xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Proof Techniques</title>
+  <introduction>
+   
+    <p>
+      Now that we have a foundation in logic, we can introduce some standard proof techniques. Our focus will be on the structure of the technique, but we will need to introduce some additional mathematical content. Many of our examples in this chapter come from the area of number theory. Number theory, generally, is the study of integers. We will be looking at sets of integers such as even numbers, odd numbers, and prime numbers. Since these sets are very familiar, it might at first seem challenging to try to prove statements that you believe are obvious. However, it is better to start by proving statements that are familiar than proving statements with objects about which you have no intuition. Keep in mind the focus is on the technique and structure, rather than the mathematics.
+    </p>
+
+    <p>
+    	It is important to remember that learning how to write proofs is challenging. There is no <q>right</q> answer. Any two people's proofs may look very different, but still both be correct. Although there are certainly many standard writing conventions, just as there are in any discipline-specific writing, there is still room for your own style.
+    </p>
+    
+
+  </introduction>
+  <xi:include  href="directproof4-1.ptx" />
+  <xi:include  href="rationals4-2.ptx" />
+  <xi:include  href="divisibility4-3.ptx" />
+  <xi:include  href="cases4-4.ptx" />
+  <xi:include  href="contradiction4-5.ptx" />
+  <xi:include  href="morecontradiction4-6.ptx" />
+  
+</chapter>

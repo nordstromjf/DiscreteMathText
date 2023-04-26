@@ -1,0 +1,17 @@
+<chapter xml:id="chapter6" xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Set Theory</title>
+  <introduction>
+   
+    <p>
+      In this chapter we study sets, which are fundamental obsect in any math course. We will cover common notation, operations, and properties of sets. We will also look at how to write set theoretic proofs using element-wise proofs as well as more algebraic proofs.
+    </p>
+
+  
+    
+
+  </introduction>
+  <xi:include  href="sets6-1.ptx" />
+  <xi:include  href="propertiesofsets6-2.ptx" />
+  <xi:include  href="algebraicsets6-3.ptx" />
+  
+</chapter>

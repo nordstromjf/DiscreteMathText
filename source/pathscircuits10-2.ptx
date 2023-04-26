@@ -1,0 +1,613 @@
+<section xml:id="pathscircuits10-2">
+  <title>Paths and Circuits</title><idx>path</idx><idx>circuit</idx><idx><h>graph</h><h>path</h></idx><idx><h>graph</h><h>circuit</h></idx>
+
+  <p>The origin story for this section is the Konigsberg Bridge Problem, which involves seven bridges, as pictured in <xref ref="F_Kbridge"/>. The story is that the challenge of Konigsberg was to try to traverse all the bridges, without repeating one, and return to where you started. Euler found a way to represent the problem as a graph, also pictured. The vertices are the land masses and the edges are the bridges. This representation makes it easier to try to answer the question. Before moving on, try to solve the bridge problem by finding a route through the graph that starts and ends at some vertex and traverses each edge exactly once.</p>
+
+  
+  <figure xml:id="F_Kbridge">
+  <caption>Konigsberg bridge problem, <m>G</m></caption>
+  <image source="konigsbergbridge.png" width="70%" xml:id="konigsbergbridge"/>
+</figure>
+
+<definition xml:id="D_pathscircuits"><statement><p>For each of the following terms we have a list of vertices and edges, <m>v_0e_1v_1e_2\cdots e_nv_v</m>,  that represent a way to traverse through the graph. So, for example, <m>v_0</m> must be an endpoint of <m>e_1</m>, <m>v_1</m> must be an endpoint of <m>e_1</m> and <m>e_2</m>, etc. For each of the following terms we indicate whether we can repeat vertices and/or edges in the list.
+<ul>
+  <li>A <term>walk</term><idx>walk</idx> from <m>v</m> to <m>w</m> has <m>v=v_0, w=v_n</m>. It can repeat edges and vertices. It can begin at any vertex and end at any vertex.</li>
+  <li>A <term>trail</term><idx>trail</idx> from <m>v</m> to <m>w</m> has <m>v=v_0, w=v_n</m>. It cannot repeat edges. It can begin at any vertex and end at any vertex.</li>
+  <li>A <term>path</term><idx>path</idx> from <m>v</m> to <m>w</m> has <m>v=v_0, w=v_n</m>. It cannot repeat edges or vertices. It can begin at any vertex and end at any vertex.</li>
+  <li>A <term>closed walk</term><idx>closed walk</idx><idx><h>walk</h><h>closed</h></idx> must start and end at the same vertex <m>v</m>,  <m>v=v_0, v=v_n</m>. It can repeat edges and vertices. </li>
+  <li>A <term>circuit</term><idx>circuit</idx> must start and end at the same vertex <m>v</m>,  <m>v=v_0, v=v_n</m>. It cannot repeat edges. It can repeat vertices.</li>
+  <li>A <term>simple circuit</term><idx>simple circuit</idx><idx><h>circuit</h><h>simple</h></idx> must start and end at the same vertex <m>v</m>,  <m>v=v_0, v=v_n</m>. It cannot repeat edges or vertices, except for the initial and terminal vertex.</li>
+</ul></p>
+</statement></definition>
+
+<p>If it is clear which vertices we must use, we often just use the edges, <m>e_1e_2\cdots e_n</m>, to describe paths, curcuits, walks, etc. </p>
+
+<p>The <term>trivial walk</term><idx><h>walk</h><h>trivial</h></idx> is just the single vertex <m>v</m>. This is also the <term>trivial circuit</term><idx><h>circuit</h><h>trivial</h></idx>.</p>
+
+<example xml:id="E_pathsandcircuits"><title>Paths and Circuits</title>
+<p>Consider the graph <m>G</m>.</p>
+
+<figure xml:id="F_pathcircuit">
+  <caption>The graph <m>G</m> for <xref ref="E_pathsandcircuits"/></caption>
+  <image width="30%" xml:id="bridgegraph">
+    <latex-image>
+\begin{tikzpicture}
+%Konigsberg bridge graph
+\tikzset{every loop/.style={min distance=15mm,looseness=50}}
+
+\node[main node](1)[label=left:$v_1$]{};
+\node[main node](2)[label=left:$v_2$][below=1.5cm of 1]{};
+\node[main node](3)[label=left:$v_3$][below=1.5cm of 2]{};
+\node[main node](4)[label=right:$v_4$][right=1.9cm of 2]{};
+
+
+
+\path[draw, thick](1) edge [bend right] node [left=.1ex]{$e_1$} (2);
+\path[draw, thick](1) edge [bend left] node [right=.1ex]{$e_2$} (2);
+\path[draw, thick](2) edge [bend right]  node [left=.1ex]{$e_3$} (3);
+\path[draw, thick](2) edge [bend left]  node [right=.1ex]{$e_4$} (3);
+\path[draw, thick](1) edge node [above right=.2ex]{$e_5$} (4);
+\path[draw, thick](2) edge node [above=.1ex]{$e_6$} (4);
+\path[draw, thick](3) edge node [below right=.2ex]{$e_7$} (4);
+
+\end{tikzpicture}
+
+
+
+
+
+</latex-image></image>
+</figure>
+
+<p>For each list of vertices and edges, decide if it is a walk, trail, path, closed walk, circuit, simple circuit.</p>
+<p>
+  <ol><li><p><m>v_2e_2v_1e_5v_4e_6v_2e_2v_1</m></p>
+  <answer>walk</answer></li>
+  <li><p><m>v_2e_2v_1e_5v_4e_6v_2e_1v_1</m></p>
+  <answer>walk, trail</answer></li>
+  <li><p><m>v_2e_2v_1e_5v_4e_6v_2</m></p>
+  <answer>walk, trail, closed walk, circuit, simple circuit</answer></li>
+  <li><p><m>v_2e_2v_1e_5v_4e_6v_2e_1v_1</m></p>
+  <answer>walk, trail</answer></li>
+  <li><p><m>v_2e_2v_1e_1v_2e_3v_3e_4v_2</m></p>
+  <answer>walk, trail, closed walk, circuit</answer></li>
+</ol></p>
+</example>
+
+<definition xml:id="D_connectedvert"><statement>Two vertices, <m>v, w</m>, are <term>connected</term><idx><h>connected</h><h>vertices</h></idx> if there is a walk from <m>v</m> to <m>w</m>.</statement></definition>
+
+<definition xml:id="D_connectedgraph"><statement>A graph, <m>G</m>, is <term>connected</term><idx><h>connected</h><h>graph</h></idx> if given any two vertices <m>v, w</m>, there is a walk from <m>v</m> to <m>w</m>.</statement></definition>
+
+<p>Basically, a graph is connected if it is in one piece. <xref ref="F_pathcircuit"/> is an example of a connected graph. The example in <xref ref="F_parallelandloop"/> with the isolated vertex, is an example of a graph that is not connected.</p>
+
+<p>We state several propositions in this section without proof. You are encouraged to sketch examples of graphs to try to verify the propositions for yourself.</p>
+
+<proposition xml:id="P_connectsimple"><statement><p>If <m>G</m> is a connected graph then any two distinct vertices of <m>G</m> can be connected by a simple path.</p></statement></proposition>
+
+<activity><statement><p>Draw several examples of connected graphs. Verify for yourself that if <m>G</m> is connected then any two distinct vertices of <m>G</m> can be connected by a simple path. </p></statement></activity>
+
+<proposition xml:id="P_circuitremove"><statement><p>If <m>v</m> and <m>w</m> are part of a circuit in <m>G</m> and one edge is removed, then there still exists a path from <m>v</m> to <m>w</m> in <m>G</m>.</p></statement></proposition>
+
+<activity><statement><p>Draw several examples of graphs with a circuit. Verify for yourself that if <m>v</m> and <m>w</m> are part of a circuit and one edge is removed then there still exists a path from <m>v</m> to <m>w</m> in <m>G</m>. </p></statement></activity>
+
+<proposition xml:id="P_stayconnected"><statement><p>If <m>G</m> is a connected graph and contains a nontrivial circuit, then an edge of the circuit can be removed without disconnecting <m>G</m>.</p></statement></proposition>
+
+<activity><statement><p>Draw several examples of connected graphs containing a nontrivial circuit. Verify for yourself that if <m>G</m> is connected and contains a nontrivial circuit then an edge of the circuit can be removed without disconnecting <m>G</m>.</p></statement></activity>
+
+<definition xml:id="D_eulercircuit"><statement><p>An <term>Euler circuit</term><idx>Euler circuit</idx><idx><h>circuit</h><h>Euler</h></idx> for a graph <m>G</m> is a circuit that contains every vertex and every edge of <m>G</m>.</p></statement></definition>
+<p>An Euler circuit must start and end at the same vertex and include every vertex and every edge. It can repeat vertices, but it cannot repeat edges. If you look back at the Konigsberg bridge problem, you can see that to solve the bridge problem is to find an Euler circuit for the associated graph. Were you able to find such a circuit?</p>
+
+<example xml:id="E_findingEcircuits"><title>Finding Euler Circuits</title>
+<p>Is it possible to find an Euler circuit for the graph in <xref ref="F_beachballEC"/>?</p>
+<figure xml:id="F_beachballEC">
+ 
+  <image width="40%" xml:id="beachballe">
+    <latex-image>
+\begin{tikzpicture}
+%example for incident, adjacent
+\tikzset{every loop/.style={min distance=15mm,looseness=50}}
+
+\node[main node](1)[label=above:$v_1$]{};
+\node[main node](2)[label=left:$v_2$][below left=1.7cm of 1]{};
+\node[main node](3)[label=below:$v_3$][below=2.3cm of 1]{};
+\node[main node](4)[label=right:$v_4$][below right=1.7cm of 1]{};
+
+
+
+\path[draw, thick](1) edge [bend right] node [above=.1ex]{$e_1$} (2);
+\path[draw, thick](1) edge [bend left] node [above=.1ex]{$e_4$} (4);
+\path[draw, thick](1) edge [bend right]  node [left=.1ex]{$e_2$} (3);
+\path[draw, thick](1) edge [bend left]  node [right=.1ex]{$e_3$} (3);
+\path[draw, thick](2) edge [bend right] node [below=.1ex]{$e_5$} (3);
+\path[draw, thick](3) edge [bend right] node [below=.1ex]{$e_6$} (4);
+
+\end{tikzpicture}
+
+
+
+</latex-image></image>
+</figure>
+
+<answer>Yes. For example <m>e_1e_5e_2e_3e_6e_4</m>.</answer>
+
+<p>Is it possible to find an Euler circuit for the Konigsberg bridge graph in <xref ref="F_KbergEC"/>?</p>
+
+<figure xml:id="F_KbergEC">
+  
+  <image width="30%" xml:id="bridgegraph2">
+    <latex-image>
+\begin{tikzpicture}
+%Konigsberg bridge graph
+\tikzset{every loop/.style={min distance=15mm,looseness=50}}
+
+\node[main node](1)[label=left:$v_1$]{};
+\node[main node](2)[label=left:$v_2$][below=1.5cm of 1]{};
+\node[main node](3)[label=left:$v_3$][below=1.5cm of 2]{};
+\node[main node](4)[label=right:$v_4$][right=1.9cm of 2]{};
+
+
+
+\path[draw, thick](1) edge [bend right] node [left=.1ex]{$e_1$} (2);
+\path[draw, thick](1) edge [bend left] node [right=.1ex]{$e_2$} (2);
+\path[draw, thick](2) edge [bend right]  node [left=.1ex]{$e_3$} (3);
+\path[draw, thick](2) edge [bend left]  node [right=.1ex]{$e_4$} (3);
+\path[draw, thick](1) edge node [above right=.2ex]{$e_5$} (4);
+\path[draw, thick](2) edge node [above=.1ex]{$e_6$} (4);
+\path[draw, thick](3) edge node [below right=.2ex]{$e_7$} (4);
+
+\end{tikzpicture}
+
+
+
+
+
+</latex-image></image>
+</figure>
+<answer>No.</answer>
+</example>
+
+<activity><statement><p>Draw the complete bipartite graphs <m>K_{2, 3}</m>, <m>K_{2, 4}</m>, <m>K_{3, 3}</m> and <m>K_{4, 4}</m>. Determine if each of these graphs has an Euler circuit.</p></statement></activity>
+
+<p>We want to decide when a graph has an Euler circuit. The following two theorems completely characterize when a graph has an Euler circuit.</p>
+
+<theorem xml:id="T_ECtheneven"><statement><p>If a graph has an Euler circuit, then every vertex has even degree.</p></statement></theorem>
+
+<p>Although we will not prove this formally, the basic idea is that to create an Euler circuit for each vertex you need to be able to arrive at the vertex along an edge and then leave the vertex along a different edge. In the case of the inital vertex, you need to be able to leave the vertex and then return.</p>
+
+<p><xref ref="T_ECtheneven"/> tells us that the Konigsberg bridge graph cannot have an Euler circuit since we have vertices of odd degree.</p>
+
+<theorem xml:id="T_eventhenEC"><statement><p>If every vertex of a nonempty graph has even degree and is connected, then the graph has an Euler circuit.</p></statement></theorem>
+
+<p><xref ref="T_eventhenEC"/> tells us that the graph in <xref ref="F_beachballEC" /> has an Euler circuit since all vertices have even degree, and the graph is connected. The graph in <xref ref="F_parallelandloop"/> does not have an Euler circuit since it is not connected (although every vertex has even degree).</p>
+
+<activity><statement><p>Verify <xref ref="T_ECtheneven" /> and <xref ref="T_eventhenEC" /> on <m>K_{2, 3}</m>, <m>K_{2, 4}</m>, <m>K_{3, 3}</m> and <m>K_{4, 4}</m>. </p></statement></activity>
+
+<definition xml:id="D_eulerpath"><statement><p>An <term>Euler path</term><idx>Euler path</idx> from <m>v</m> to <m>w</m> is a sequence of adjacent edges and vertices that starts at <m>v</m> and ends at <m>w</m> passing through every vertex of <m>G</m> at least once and traversing every edge exactly once.</p></statement></definition>
+
+<p>An Euler path is a path that covers every edge and vertex of <m>G</m> without repeating edges.</p>
+
+<corollary xml:id="C_eulerpathodd"><statement><p>A graph <m>G</m> has an Euler path from <m>v</m> to <m>w</m> if and only if <m>G</m> is connected, <m>v</m> and <m>w</m> have odd degree, and all other vertices of <m>G</m> have even degree.</p></statement></corollary>
+
+<activity><statement><p>Draw a graph that has an Euler path but not an Euler circuit.</p></statement></activity>
+
+<p>We've been focusing on traversing a graph by covering each edge exactly once, but what if we want to traverse each vertex exactly once?</p>
+
+<definition xml:id="hamiltoniancircuit"><statement><p>A <term>Hamiltonian circuit</term><idx>Hamiltonian circuit</idx><idx><h>circuit</h><h>Hamiltonian</h></idx> for <m>G</m> is a simple circuit that includes every vertex of <m>G</m>.</p></statement></definition>
+
+<p>A Hamiltonian circuit starts and ends at the same vertex, passes through all other vertices without repeating, does not repeat edges, but does not need to use all the edges. For example, in the Konigsberg bridge graph <xref ref="F_KbergEC"/>, we have Hamiltonian circuit <m>v_1e_5v_4e_7v_3e_3v_2e_1v_1</m>.</p>
+
+
+<activity><statement><p>Draw the complete bipartite graphs <m>K_{2, 3}</m>, <m>K_{2, 4}</m>, <m>K_{3, 3}</m> and <m>K_{4, 4}</m>. Determine if these graphs have an Hamiltonian circuit.</p></statement></activity>
+  
+
+    <reading-questions>
+      <title>Check Your Understanding</title>
+
+      <p>Use the following graph for questions about <m>G</m>.</p>
+      <figure xml:id="F_readingquestions2">
+  <caption>The graph <m>G</m> for Check Your Understanding</caption>
+  <image width="30%" xml:id="readquest2">
+    <latex-image>
+\begin{tikzpicture}
+%reading questions graph
+
+\tikzset{every loop/.style={min distance=10mm,looseness=80}}
+
+
+
+\node[main node](1)[label=above:$v_1$]{};
+\node[main node](2)[label=right:$v_2$][below=2.0cm of 1]{};
+\node[main node](3)[label=right:$v_3$][below right=1.3cm of 1]{};
+\node[main node](4)[label=left:$v_4$][below left=1.3cm of 1]{};
+
+
+\path[draw, thick](1) edge node [right=.1ex]{$e_1$} (2);
+\path[draw, thick](1) edge node [above=.2ex]{$e_2$} (3);
+\path[draw, thick](1) edge node [above=.2ex]{$e_4$} (4);
+\path[draw, thick](2) edge node [below=.2ex]{$e_5$} (3);
+\path[draw, thick](2) edge [bend right] node [above=.2ex]{$e_3$} (4);
+\path[draw, thick](2) edge [bend left] node [below=.1ex]{$e_6$} (4);
+\path[draw, thick](2) edge [loop below]  node [right=.1ex]{$e_7$} (2);
+
+\end{tikzpicture}
+
+
+
+
+
+</latex-image></image>
+</figure>
+      
+
+      <exercise><statement><p>True or false: <m>v_1e_2v_3e_5v_2e_7v_2</m> is a path in <m>G</m>.</p></statement>
+      <answer>False. Repeats <m>v_2</m>.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>v_1e_2v_3e_5v_2e_7v_2</m> is a closed walk in <m>G</m>.</p></statement>
+      <answer>False. Starts and ends at different vertices.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>v_1e_2v_3e_5v_2e_7v_2e_1v_1</m> is a circuit in <m>G</m>.</p></statement>
+      <answer>True.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>v_1e_2v_3e_5v_2e_7v_2e_1v_1</m> is a simple circuit in <m>G</m>.</p></statement>
+      <answer>False. Repeats <m>v_2</m>.</answer></exercise>
+
+      <exercise><statement><p>True or false <m>v_4e_3v_2e_6v_4</m> is a simple circuit in <m>G</m>.</p></statement>
+      <answer>True.</answer></exercise>
+
+
+      <exercise><statement><p>True or false: <m>G</m> has an Euler circuit.</p></statement>
+      <answer>False. There are vertices of odd degree.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>G</m> has an Euler path.</p></statement>
+      <answer>True. Can start at <m>v_1</m>, end at <m>v_4</m>.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>G</m> has a Hamiltonian circuit.</p></statement>
+      <answer>True. For example, <m>e_2e_5e_6e_4</m>.</answer></exercise>
+
+      
+      
+
+    </reading-questions>
+
+    <exercises>
+      <exercise><statement>
+        <p>
+    In the graph below, determine whether the following walks are trails, paths, closed walks, circuits, simple circuits, or just walks.
+  </p>
+  <image width="50%" xml:id="expaths1">
+    <latex-image>
+\begin{tikzpicture}
+
+\tikzset{every loop/.style={min distance=7mm,looseness=50}}
+
+\node[main node](0)[label=left:$v_0$]{};
+\node[main node](1)[label=above:$v_1$][above right=2cm of 0]{};
+\node[main node](2)[label=below:$v_2$][below right=2.0cm of 1]{};
+\node[main node](3)[label=above:$v_3$][above right=2.0cm of 2]{};
+\node[main node](4)[label=below:$v_4$][below=2.0cm of 3]{};
+\node[main node](5)[label=below:$v_5$][below=2.0cm of 1]{};
+%\node[main node](6)[label=below:$v_6$][below left=1.0cm and .3cm of 1]{};
+
+
+\path[draw, thick](0) edge node [above=.1ex]{$e_1$} (1);
+\path[draw, thick](1) edge [bend right] node [above right=.5cm]{$e_2$} (2);
+\path[draw, thick](1) edge [bend left] node [below left=.1ex]{$e_3$} (2);
+\path[draw, thick](2) edge  node [above=.1ex]{$e_4$} (3);
+\path[draw, thick](3) edge  node [right=.1ex]{$e_5$} (4);
+\path[draw, thick](4) edge [loop right] node [right=.1ex]{$e_6$} (4);
+\path[draw, thick](2) edge  node [above=.1ex]{$e_7$} (4);
+\path[draw, thick](5) edge  node [below=.1ex]{$e_8$} (4);
+\path[draw, thick](2) edge  node [above=.1ex]{$e_9$} (5);
+\path[draw, thick](1) edge  node [left=.1ex]{$e_{10}$} (5);
+
+
+\end{tikzpicture}
+
+
+
+
+
+</latex-image></image>
+
+  <ol marker="a">
+    <li>
+      <p>
+    <m>v_0e_1v_1e_{10}v_5e_9v_2v_1</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>v_4e_7v_2e_9v_5e_{10}v_1e_3v_2e_9v_5</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>v_2</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>v_5v_2v_3v_4v_4v_5</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>v_2v_3v_4v_5v_2v_4v_3v_2</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>e_5e_8e_{10}e_3</m>
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Consider the following graph.
+  </p>
+    <image width="50%" xml:id="expaths2">
+    <latex-image>
+\begin{tikzpicture}
+
+%\tikzset{every loop/.style={min distance=7mm,looseness=50}}
+
+
+\node[main node](1)[label=below:$v_1$]{};
+\node[main node](2)[label=below left:$v_2$][right=2.0cm of 1]{};
+\node[main node](3)[label=below right:$v_3$][right=2.5cm of 2]{};
+\node[main node](4)[label=below:$v_4$][right=2.0cm of 3]{};
+
+%\node[main node](6)[label=below:$v_6$][below left=1.0cm and .3cm of 1]{};
+
+
+\path[draw, thick](1) edge node [above=.1ex]{$e_1$} (2);
+\path[draw, thick](2) edge [bend left] node [above=.1ex]{$e_2$} (3);
+\path[draw, thick](2) edge [bend right] node [below=.1ex]{$e_4$} (3);
+\path[draw, thick](2) edge  node [above=.00ex]{$e_3$} (3);
+\path[draw, thick](3) edge  node [above=.1ex]{$e_5$} (4);
+
+
+\end{tikzpicture}
+
+
+</latex-image></image>
+
+  <ol marker="a">
+    <li>
+      <p>
+    How many paths are there from <m>v_1</m> to <m>v_4</m>?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    How many trails are there from <m>v_1</m> to <m>v_4</m>?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    How many walks are there from <m>v_1</m> to <m>v_4</m>?
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Each of (a)-(c) describes a graph. In each case answer <em>yes, no</em> or <em>not necessarily</em> to whether the graph has an Euler circuit. Justify your answer.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    <m>G</m> is a connected graph with 5 vertices of degrees 2, 2, 3, 3, and 4.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>G</m> is a connected graph with 5 vertices of degrees 2, 2, 4, 4, and 6.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>G</m> is a graph with 5 vertices of degrees 2, 2, 4, 4, and 6.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Determine whether the following graph has an Euler circuit. If it does, describe it, if it doesn’t, explain why not.
+  </p>
+      <image width="40%" xml:id="exeulertriangles">
+    <latex-image>
+\begin{tikzpicture}
+
+%\tikzset{every loop/.style={min distance=7mm,looseness=50}}
+
+
+\node[main node](1)[label=below:$r$]{};
+\node[main node](2)[label=below:$z$][right=1.0cm of 1]{};
+\node[main node](3)[label=below:$y$][right=1.0cm of 2]{};
+\node[main node](4)[label=below:$x$][right=1.0cm of 3]{};
+\node[main node](5)[label=left:$s$][above right=.6cm and .6cm of 1]{};
+\node[main node](6)[label=below:$u$][right=1.0cm of 5]{};
+\node[main node](7)[label=right:$x$][right=1.0cm of 6]{};
+\node[main node](8)[label=above:$t$][above right=.6cm and .6cm of 5]{};
+\node[main node](9)[label=above:$v$][right=1.0cm of 8]{};
+
+
+\path[draw, thick](1) edge node{} (2);
+\path[draw, thick](2) edge node{} (3);
+\path[draw, thick](3) edge node{} (4);
+\path[draw, thick](1) edge node{} (5);
+\path[draw, thick](2) edge node{} (5);
+\path[draw, thick](2) edge node{} (6);
+\path[draw, thick](5) edge node{} (6);
+\path[draw, thick](3) edge node{} (6);
+\path[draw, thick](3) edge node{} (7);
+\path[draw, thick](4) edge node{} (7);
+\path[draw, thick](6) edge node{} (7);
+\path[draw, thick](5) edge node{} (8);
+\path[draw, thick](6) edge node{} (8);
+\path[draw, thick](6) edge node{} (9);
+\path[draw, thick](7) edge node{} (9);
+
+
+
+\end{tikzpicture}
+
+
+</latex-image></image>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Determine whether the following graph has an Euler circuit. If it does, describe it, if it doesn’t, explain why not.
+  </p>
+        <image width="30%" xml:id="exeulerstar">
+    <latex-image>
+\begin{tikzpicture}
+
+%\tikzset{every loop/.style={min distance=7mm,looseness=50}}
+
+
+
+\node[main node](2)[label=above:$v_1$]{};
+\node[main node](1)[label=left:$v_0$][below left=1cm of 2]{};
+\node[main node](3)[label=right:$v_2$][below right=1.0cm of 2]{};
+\node[main node](4)[label=right:$v_3$][below=1.0cm of 3]{};
+\node[main node](5)[label=below:$v_4$][below=2.5cm of 2]{};
+\node[main node](6)[label=left:$v_5$][below=1.0cm of 1]{};
+
+
+\path[draw, thick](1) edge node{} (3);
+\path[draw, thick](1) edge node{} (5);
+\path[draw, thick](5) edge node{} (3);
+\path[draw, thick](2) edge node{} (4);
+\path[draw, thick](2) edge node{} (6);
+\path[draw, thick](4) edge node{} (6);
+
+
+
+\end{tikzpicture}
+
+
+
+</latex-image></image>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Find a Hamiltonian circuit for the graph below.
+  </p>
+          <image width="30%" xml:id="exhamil">
+    <latex-image>
+\begin{tikzpicture}
+
+%\tikzset{every loop/.style={min distance=7mm,looseness=50}}
+
+
+
+\node[main node](1)[label=above:$a$]{};
+\node[main node](2)[label=left:$l$][below left=1.5cm of 1]{};
+\node[main node](3)[label=right:$b$][below right=1.5cm of 1]{};
+\node[main node](4)[label=above:$h$][right=0.6cm of 2]{};
+\node[main node](5)[label=below right:$g$][below right=1.0cm of 4]{};
+\node[main node](6)[label=left:$k$][below=1.5cm of 2]{};
+\node[main node](7)[label=above left:$i$][below=1.0cm of 4]{};
+\node[main node](8)[label=below right:$f$][below=1.0cm of 5]{};
+\node[main node](9)[label=right:$c$][below=1.5cm of 3]{};
+\node[main node](10)[label=left:$j$][below=1.5cm of 6]{};
+\node[main node](11)[label=below:$e$][below=1.5cm of 8]{};
+\node[main node](12)[label=right:$d$][below=1.5cm of 9]{};
+
+
+
+\path[draw, thick](1) edge node{} (2);
+\path[draw, thick](1) edge node{} (3);
+\path[draw, thick](2) edge node{} (6);
+\path[draw, thick](3) edge node{} (9);
+\path[draw, thick](6) edge node{} (10);
+\path[draw, thick](9) edge node{} (12);
+\path[draw, thick](5) edge node{} (8);
+\path[draw, thick](8) edge node{} (11);
+\path[draw, thick](4) edge node{} (3);
+\path[draw, thick](8) edge node{} (9);
+\path[draw, thick](10) edge node{} (11);
+\path[draw, thick](11) edge node{} (12);
+\path[draw, thick](4) edge node{} (5);
+\path[draw, thick](7) edge node{} (8);
+\path[draw, thick](7) edge node{} (11);
+\path[draw, thick](5) edge node{} (3);
+\path[draw, thick](4) edge node{} (7);
+\path[draw, thick](6) edge node{} (7);
+
+
+
+\end{tikzpicture}
+
+
+</latex-image></image>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Show that the following graph does not have a Hamiltonian circuit.
+  </p>
+            <image width="40%" xml:id="exhamil2">
+    <latex-image>
+\begin{tikzpicture}
+
+%\tikzset{every loop/.style={min distance=7mm,looseness=50}}
+
+
+
+\node[main node](1)[label=left:$a$]{};
+\node[main node](2)[label=above:$b$][above right=1.5cm of 1]{};
+\node[main node](3)[label=above:$c$][below right=1.5cm of 2]{};
+\node[main node](4)[label=above:$d$][above right=1.5cm of 3]{};
+\node[main node](5)[label=right:$e$][below right=1.5cm of 4]{};
+\node[main node](6)[label=below:$g$][below right=1.5cm of 1]{};
+\node[main node](7)[label=below:$f$][below right=1.5cm of 3]{};
+
+
+
+\path[draw, thick](1) edge node{} (2);
+\path[draw, thick](2) edge node{} (3);
+\path[draw, thick](3) edge node{} (4);
+\path[draw, thick](4) edge node{} (5);
+\path[draw, thick](1) edge node{} (3);
+\path[draw, thick](1) edge node{} (6);
+\path[draw, thick](6) edge node{} (3);
+\path[draw, thick](3) edge node{} (7);
+\path[draw, thick](7) edge node{} (5);
+
+
+
+\end{tikzpicture}
+
+
+</latex-image></image>
+
+      </statement></exercise>
+      <exercise><statement><p>
+    Give two examples of graphs that have Euler circuits but not Hamiltonian circuits. Your graphs must have a different number of edges from each other.
+  </p></statement></exercise>
+      <exercise><statement>
+        <p>
+    Give two examples of graphs that have Hamiltonian circuits but not Euler circuits. Your graphs must have a different number of edges from each other.
+  </p>
+      </statement></exercise>
+
+    </exercises>
+
+</section>

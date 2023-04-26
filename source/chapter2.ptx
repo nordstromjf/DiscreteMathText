@@ -1,0 +1,15 @@
+
+<chapter xml:id="chapter2" xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Logic</title>
+  <introduction>
+   
+    <p>
+      In order to understand mathematical structure and form, we need to build a foundation in logic. Logical structure will give us a framework for understanding mathematical statements. We can then connect mathematical statements into the form of an argument. This allows us to understand the structure of mathematical proofs. 
+    </p>
+    
+
+  </introduction>
+  <xi:include  href="logical_form2-1.ptx" />
+  <xi:include  href="conditional2-2.ptx" />
+  <xi:include  href="arguments2-3.ptx" />
+</chapter>
