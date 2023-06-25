@@ -108,20 +108,25 @@
 
     <reading-questions>
       <title>Check Your Understanding</title>
-      <p>Let <m>D=\mathbb{Z}</m>. Let <m>P(x)</m> be <q><m>x^2</m> is even.</q> Determine whether each of the following statements are true or false.</p>
-      <exercise><statement><p><m>\forall x\in D, P(x).</m></p></statement>
+      <!--<p>Let <m>D=\mathbb{Z}</m>. Let <m>P(x)</m> be <q><m>x^2</m> is even.</q> Determine whether each of the following statements are true or false.</p>-->
+      <exercise label="DMT_quant_CYU_forall"><statement correct="no"><p>Let <m>D=\mathbb{Z}</m>. Let <m>P(x)</m> be <q><m>x^2</m> is even.</q></p> <p>True or False: <m>\forall x\in D, P(x).</m></p></statement>
+      <feedback><p>It is not true that every square is even. For example, <m>3^2=9</m> is odd.</p></feedback>
       <answer>False. It is not true that every square is even. For example, <m>3^2=9</m> is odd.</answer></exercise>
 
-      <exercise><statement><p><m>\exists x\in D, P(x).</m></p></statement>
+      <exercise label="DMT_quant_CYU_exists"><statement correct="yes" ><p>Let <m>D=\mathbb{Z}</m>. Let <m>P(x)</m> be <q><m>x^2</m> is even.</q></p> <p>True or False: <m>\exists x\in D, P(x).</m></p></statement>
+      <feedback><p>For example, <m>2^2=4</m> is even.</p></feedback>
       <answer>True. For example, <m>2^2=4</m> is even.</answer></exercise>
 
-      <exercise><statement><p><m>\forall x\in D, \sim P(x).</m></p></statement>
+      <exercise label="DMT_quant_CYU_forallnot"><statement correct="no"><p>Let <m>D=\mathbb{Z}</m>. Let <m>P(x)</m> be <q><m>x^2</m> is even.</q></p> <p>True or False: <m>\forall x\in D, \sim P(x).</m></p></statement>
+      <feedback><p>It is not true that every square is not even.</p></feedback>
       <answer>False. It is not true that every square is not even.</answer></exercise>
 
-      <exercise><statement><p><m>\exists x\in D, \sim P(x).</m></p></statement>
+      <exercise label="DMT_quant_CYU_existsnot"><statement correct="yes"><p>Let <m>D=\mathbb{Z}</m>. Let <m>P(x)</m> be <q><m>x^2</m> is even.</q></p> <p>True or False: <m>\exists x\in D, \sim P(x).</m></p></statement>
+      <feedback><p>There exists a square which is not even.</p></feedback>
       <answer>True. There exists a square which is not even.</answer></exercise>
 
-      <exercise><statement><p><m>\sim(\forall x\in D, P(x)).</m></p></statement>
+      <exercise label="DMT_quant_CYU_notforall"><statement correct="yes"><p>Let <m>D=\mathbb{Z}</m>. Let <m>P(x)</m> be <q><m>x^2</m> is even.</q></p> <p>True or False: <m>\sim(\forall x\in D, P(x)).</m></p></statement>
+      <feedback><p>This is the negation of <m>\forall x\in D, P(x)</m>, which was false, so it must be true.</p></feedback>
       <answer>True. This is the negation of (1), so must be true.</answer></exercise>
 
       

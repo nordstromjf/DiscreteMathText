@@ -62,8 +62,39 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.0.0dev3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runtime.71ffd81c0faeb38b.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.e543e0dd19670ae2.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.1f1f63d2cda36a4d.css">
 </head>
-<body class="pretext book ignore-math">
+<body id="DiscreteMathText" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" href=""></a><div class="title-container">
 <h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
@@ -549,13 +580,13 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="combinations9-5"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">9.5</span> <span class="title">Combinations</span>
 </h2>
-<div class="para" id="p-2654">In this section we look at how to count subsets of a set and define the mathematical concept of a combination.</div>
+<div class="para" id="p-2894">In this section we look at how to count subsets of a set and define the mathematical concept of a combination.</div>
 <article class="definition definition-like" id="D_combination"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.5.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-2655">Let <span class="process-math">\(n, r\)</span> be nonnegative integers with <span class="process-math">\(r\leq n\text{.}\)</span> An <dfn class="terminology"><span class="process-math">\(r\)</span>-combination</dfn> of a set of <span class="process-math">\(n\)</span> elements is the number of subsets of size <span class="process-math">\(r\)</span> that can be chosen from a set of <span class="process-math">\(n\)</span> elements. We denote it <span class="process-math">\(\binom{n}{r}\text{,}\)</span> which is read “<span class="process-math">\(n\)</span> choose <span class="process-math">\(r\text{.}\)</span>”</div></article><div class="para" id="p-2656">Other common notation are <span class="process-math">\(C(n, r)\text{,}\)</span> or <span class="process-math">\(nCr\text{.}\)</span> We will use <span class="process-math">\(\binom{n}{r}\)</span> notation, which we first saw in <a href="sequences5-1.html" class="internal" title="Section 5.1: Sequences">Section 5.1</a>. For example, <span class="process-math">\(\binom{5}{4}\)</span> is the number of subsets of size 4 chosen from a set of 5 elements.</div>
-<div class="para" id="p-2657">Since order does not matter in a set, the order in which we choose elements of a set does not matter. Recall, when counting permutations, the order in which we chose our elements did matter. We can use what we know about permutations, though, to count combinations.</div>
-<div class="para logical" id="p-2658">
+<div class="para" id="p-2895">Let <span class="process-math">\(n, r\)</span> be nonnegative integers with <span class="process-math">\(r\leq n\text{.}\)</span> An <dfn class="terminology"><span class="process-math">\(r\)</span>-combination</dfn> of a set of <span class="process-math">\(n\)</span> elements is the number of subsets of size <span class="process-math">\(r\)</span> that can be chosen from a set of <span class="process-math">\(n\)</span> elements. We denote it <span class="process-math">\(\binom{n}{r}\text{,}\)</span> which is read “<span class="process-math">\(n\)</span> choose <span class="process-math">\(r\text{.}\)</span>”</div></article><div class="para" id="p-2896">Other common notation are <span class="process-math">\(C(n, r)\text{,}\)</span> or <span class="process-math">\(nCr\text{.}\)</span> We will use <span class="process-math">\(\binom{n}{r}\)</span> notation, which we first saw in <a href="sequences5-1.html" class="internal" title="Section 5.1: Sequences">Section 5.1</a>. For example, <span class="process-math">\(\binom{5}{4}\)</span> is the number of subsets of size 4 chosen from a set of 5 elements.</div>
+<div class="para" id="p-2897">Since order does not matter in a set, the order in which we choose elements of a set does not matter. Recall, when counting permutations, the order in which we chose our elements did matter. We can use what we know about permutations, though, to count combinations.</div>
+<div class="para logical" id="p-2898">
 <div class="para">We can calculate combinations by first finding all the <span class="process-math">\(r\)</span>-permuatations of a set, then dividing by all the possible orderings of that subset: <span class="process-math">\(\frac{P(n, r)}{r!}\text{.}\)</span> This can be rewritten to be the standard formula for calculating combinations:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -563,30 +594,30 @@ window.MathJax = {
 \end{equation*}
 </div>
 </div>
-<div class="para" id="p-2659">Note, since <span class="process-math">\(0!=1\text{,}\)</span>  <span class="process-math">\(\binom{n}{0}=1\)</span> and <span class="process-math">\(\binom{0}{0}=1\text{.}\)</span> This also makes sense with the definition, as there is only one set with 0 elements, the empty set.</div>
+<div class="para" id="p-2899">Note, since <span class="process-math">\(0!=1\text{,}\)</span>  <span class="process-math">\(\binom{n}{0}=1\)</span> and <span class="process-math">\(\binom{0}{0}=1\text{.}\)</span> This also makes sense with the definition, as there is only one set with 0 elements, the empty set.</div>
 <article class="activity project-like" id="activity-169"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.5.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-2660">Calculate <span class="process-math">\({6 \choose 2}\)</span> and <span class="process-math">\({6 \choose 4}\text{.}\)</span>
+<div class="para" id="p-2900">Calculate <span class="process-math">\({6 \choose 2}\)</span> and <span class="process-math">\({6 \choose 4}\text{.}\)</span>
 </div></article><article class="activity project-like" id="activity-170"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.5.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-2661">Calculate <span class="process-math">\({4 \choose 0}\)</span> and <span class="process-math">\({4 \choose 4}\text{.}\)</span>
+<div class="para" id="p-2901">Calculate <span class="process-math">\({4 \choose 0}\)</span> and <span class="process-math">\({4 \choose 4}\text{.}\)</span>
 </div></article><article class="example example-like" id="E_combvperm"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_combvperm"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.5.2</span><span class="period">.</span><span class="space"> </span><span class="title">Combinations versus Permutations.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_combvperm"><article class="example example-like"> <div class="para" id="p-2662">Suppose you want to choose a group of 3 students in a class of 15 for a group project. How many ways can you choose the group?</div> <div class="para" id="p-2663">We use combinations: <span class="process-math">\(\binom{15}{3}\text{.}\)</span> It does not matter if a member was chosen first, second, or third, they would still be a member of the group. Thus, there are <span class="process-math">\(\frac{15!}{3!12!}=455\)</span> ways to choose a group of 3.</div> <div class="para" id="p-2664">Now suppose you want to choose a group of 3 students in a class of 15 for a group project, but the first student chosen will be the note-taker, the second will be the presenter, the third will manage the discussion. How many ways can you choose the group?</div> <div class="para" id="p-2665">We use permutations: <span class="process-math">\(P(15, 3)\text{.}\)</span> Now it <em class="emphasis">does</em> matter if a member was chosen first, second, or third, as each member has a different role. Thus, there are <span class="process-math">\(\frac{15!}{12!}=2730\)</span> ways to choose a group of 3 where the members' roles are defined.</div></article></div>
-<div class="para" id="p-2666">In deciding whether to use combinations or permutations, you need to decide whether order matters. For combinations, order doesn't matter; think about choosing subsets. For permuations, order does matter; think about choosing ordered lists.</div>
-<div class="para" id="p-2667">Recall, a binary string is just a list of 0s and 1s</div>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_combvperm"><article class="example example-like"> <div class="para" id="p-2902">Suppose you want to choose a group of 3 students in a class of 15 for a group project. How many ways can you choose the group?</div> <div class="para" id="p-2903">We use combinations: <span class="process-math">\(\binom{15}{3}\text{.}\)</span> It does not matter if a member was chosen first, second, or third, they would still be a member of the group. Thus, there are <span class="process-math">\(\frac{15!}{3!12!}=455\)</span> ways to choose a group of 3.</div> <div class="para" id="p-2904">Now suppose you want to choose a group of 3 students in a class of 15 for a group project, but the first student chosen will be the note-taker, the second will be the presenter, the third will manage the discussion. How many ways can you choose the group?</div> <div class="para" id="p-2905">We use permutations: <span class="process-math">\(P(15, 3)\text{.}\)</span> Now it <em class="emphasis">does</em> matter if a member was chosen first, second, or third, as each member has a different role. Thus, there are <span class="process-math">\(\frac{15!}{12!}=2730\)</span> ways to choose a group of 3 where the members' roles are defined.</div></article></div>
+<div class="para" id="p-2906">In deciding whether to use combinations or permutations, you need to decide whether order matters. For combinations, order doesn't matter; think about choosing subsets. For permuations, order does matter; think about choosing ordered lists.</div>
+<div class="para" id="p-2907">Recall, a binary string is just a list of 0s and 1s</div>
 <article class="example example-like" id="E_binstrings"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_binstrings"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.5.3</span><span class="period">.</span><span class="space"> </span><span class="title">Binary Strings.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_binstrings"><article class="example example-like"><div class="para" id="p-2668">How many binary strings of length 5 can have exactly 2 ones?</div> <div class="para logical" id="p-2669">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_binstrings"><article class="example example-like"><div class="para" id="p-2908">How many binary strings of length 5 can have exactly 2 ones?</div> <div class="para logical" id="p-2909">
 <div class="para">We can think of forming a binary string with 2 ones as a list of 5 places where we need to choose 2 places for the ones. Once we've done that, the other places must have 0's. Thus, we have five places and choose 2:</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \binom{5}{2}=\frac{5!}{2!3!}=10.
 \end{equation*}
 </div>
-</div> <div class="para" id="p-2670">How many binary strings of length 5 can have at most 2 ones?</div> <div class="para logical" id="p-2671">
+</div> <div class="para" id="p-2910">How many binary strings of length 5 can have at most 2 ones?</div> <div class="para logical" id="p-2911">
 <div class="para">Here we can count the strings with 2 ones, 1 one, and 0 ones. We add them since the strings with different numbers of ones are disjoint:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -597,21 +628,21 @@ window.MathJax = {
 <article class="activity project-like" id="activity-171"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.5.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-2672">How many binary strings of length 7 have exactly 3 ones?</div>
+<div class="para" id="p-2912">How many binary strings of length 7 have exactly 3 ones?</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-35" id="hint-35"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-35"><div class="hint solution-like"><div class="para" id="p-2673">Think of this as a list of 7 digits. How many ways are there to place the ones?</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-49" id="hint-49"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-49"><div class="hint solution-like"><div class="para" id="p-2913">Think of this as a list of 7 digits. How many ways are there to place the ones?</div></div></div>
 </div></article><article class="activity project-like" id="activity-172"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.5.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-2674">How many binary strings of length 7 have at most 2 ones?</div>
+<div class="para" id="p-2914">How many binary strings of length 7 have at most 2 ones?</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-36" id="hint-36"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-36"><div class="hint solution-like"><div class="para" id="p-2675">First count how many have 0 ones, then 1 one, then 2 ones. Should you use the addition rule or multiplication rule to find the total number?</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-50" id="hint-50"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-50"><div class="hint solution-like"><div class="para" id="p-2915">First count how many have 0 ones, then 1 one, then 2 ones. Should you use the addition rule or multiplication rule to find the total number?</div></div></div>
 </div></article><article class="example example-like" id="E_reorderletters"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_reorderletters"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.5.4</span><span class="period">.</span><span class="space"> </span><span class="title">Rearranging Letters.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_reorderletters"><article class="example example-like"><div class="para" id="p-2676">How many ways are there to order the letters in the word “letter”?</div> <div class="para" id="p-2677">We can think of the string of letters as 6 places where we can choose to put letters. First we can choose the place to put the “l”: we have 6 places, we need to choose 1: <span class="process-math">\(\binom{6}{1}.\)</span>
-</div> <div class="para" id="p-2678">Next we choose the places to put the two “e”s: we now only have 5 places (since one has the l), we need to choose 2: <span class="process-math">\(\binom{5}{2}.\)</span>
-</div> <div class="para" id="p-2679">We continue in this way, with 3 places to put the two “t”s: <span class="process-math">\(\binom{3}{2}\text{,}\)</span> and one remaining place to put the “r”: <span class="process-math">\(\binom{1}{1}\text{.}\)</span>
-</div> <div class="para logical" id="p-2680">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_reorderletters"><article class="example example-like"><div class="para" id="p-2916">How many ways are there to order the letters in the word “letter”?</div> <div class="para" id="p-2917">We can think of the string of letters as 6 places where we can choose to put letters. First we can choose the place to put the “l”: we have 6 places, we need to choose 1: <span class="process-math">\(\binom{6}{1}.\)</span>
+</div> <div class="para" id="p-2918">Next we choose the places to put the two “e”s: we now only have 5 places (since one has the l), we need to choose 2: <span class="process-math">\(\binom{5}{2}.\)</span>
+</div> <div class="para" id="p-2919">We continue in this way, with 3 places to put the two “t”s: <span class="process-math">\(\binom{3}{2}\text{,}\)</span> and one remaining place to put the “r”: <span class="process-math">\(\binom{1}{1}\text{.}\)</span>
+</div> <div class="para logical" id="p-2920">
 <div class="para">Since placing each letter is a process (we don't have a complete string until we have placed all the letters), we need to use the multiplication rule:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -619,11 +650,11 @@ window.MathJax = {
 \end{equation*}
 </div>
 </div></article></div>
-<div class="para" id="p-2681">There is another way to calculate the previous example.</div>
+<div class="para" id="p-2921">There is another way to calculate the previous example.</div>
 <article class="example example-like" id="E_altreorderletters"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_altreorderletters"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.5.5</span><span class="period">.</span><span class="space"> </span><span class="title">Alternate Rearranging Letters.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_altreorderletters"><article class="example example-like"><div class="para" id="p-2682">How many ways are there to order the letters in the word “letter”?</div> <div class="para" id="p-2683">We can think of the string of letters as 6 places where we can choose to put letters. First we can think of all the letters as distinct. Then we have 6 letters to choose for the first place, 5 for the second, 4 for the third, etc. Thus we have <span class="process-math">\(6!\)</span> ways to place 6 distinct letters.</div> <div class="para" id="p-2684">But the letters are not distinct, so we need to divide by the number of ways we over-counted. For each permutation we just counted, switching the two “e”s gives us the same word, so we need to divide by the number of ways to rearrange the two “e”s: <span class="process-math">\(2!.\)</span> Similarly, we need to divide by equivalent arrangements of the two “t”s: <span class="process-math">\(2!\text{.}\)</span>
-</div> <div class="para logical" id="p-2685">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_altreorderletters"><article class="example example-like"><div class="para" id="p-2922">How many ways are there to order the letters in the word “letter”?</div> <div class="para" id="p-2923">We can think of the string of letters as 6 places where we can choose to put letters. First we can think of all the letters as distinct. Then we have 6 letters to choose for the first place, 5 for the second, 4 for the third, etc. Thus we have <span class="process-math">\(6!\)</span> ways to place 6 distinct letters.</div> <div class="para" id="p-2924">But the letters are not distinct, so we need to divide by the number of ways we over-counted. For each permutation we just counted, switching the two “e”s gives us the same word, so we need to divide by the number of ways to rearrange the two “e”s: <span class="process-math">\(2!.\)</span> Similarly, we need to divide by equivalent arrangements of the two “t”s: <span class="process-math">\(2!\text{.}\)</span>
+</div> <div class="para logical" id="p-2925">
 <div class="para">Putting this together we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -634,38 +665,38 @@ window.MathJax = {
 <article class="activity project-like" id="activity-173"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.5.5</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-2686">How many ways are there to order the letters in “book”?</div>
+<div class="para" id="p-2926">How many ways are there to order the letters in “book”?</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-37" id="hint-37"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-37"><div class="hint solution-like"><div class="para" id="p-2687">First place all the “b”s--how many ways can you do this? Then count how many ways to place all the “o”s, then all the “k”s.</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-51" id="hint-51"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-51"><div class="hint solution-like"><div class="para" id="p-2927">First place all the “b”s--how many ways can you do this? Then count how many ways to place all the “o”s, then all the “k”s.</div></div></div>
 </div></article><article class="activity project-like" id="activity-174"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.5.6</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-2688">How many ways are there to order the letters in “infinity”?</div></article><article class="example example-like" id="E_committees"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_committees"><h3 class="heading">
+<div class="para" id="p-2928">How many ways are there to order the letters in “infinity”?</div></article><article class="example example-like" id="E_committees"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_committees"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.5.6</span><span class="period">.</span><span class="space"> </span><span class="title">Forming Committees.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_committees"><article class="example example-like"> <div class="para" id="p-2689">A class has 13 students. How many ways can a group of 7 be chosen?</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-408" id="answer-408"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-408"><div class="answer solution-like"><span class="process-math">\(\binom{13}{7}\)</span></div></div> <div class="para" id="p-2690">Suppose in this class of 13 there are 7 juniors and 6 seniors.</div> <div class="para logical" id="p-2691"><ul class="disc">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_committees"><article class="example example-like"> <div class="para" id="p-2929">A class has 13 students. How many ways can a group of 7 be chosen?</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-400" id="answer-400"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-400"><div class="answer solution-like"><span class="process-math">\(\binom{13}{7}\)</span></div></div> <div class="para" id="p-2930">Suppose in this class of 13 there are 7 juniors and 6 seniors.</div> <div class="para logical" id="p-2931"><ul class="disc">
 <li id="li-690">
-<div class="para" id="p-2692">How many groups of 7 can be chosen that contain 4 juniors and 3 seniors?</div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-409" id="answer-409"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-409"><div class="answer solution-like"><div class="para" id="p-2693">
+<div class="para" id="p-2932">How many groups of 7 can be chosen that contain 4 juniors and 3 seniors?</div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-401" id="answer-401"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-401"><div class="answer solution-like"><div class="para" id="p-2933">
 <span class="process-math">\(\binom{7}{4}\cdot \binom{6}{3}\text{,}\)</span> first choose the juniors then the seniors.</div></div></div>
 </li>
 <li id="li-691">
-<div class="para" id="p-2694">How many groups of 7 can be chosen so that there is at least one senior?</div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-410" id="answer-410"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-410"><div class="answer solution-like"><div class="para" id="p-2695">
+<div class="para" id="p-2934">How many groups of 7 can be chosen so that there is at least one senior?</div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-402" id="answer-402"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-402"><div class="answer solution-like"><div class="para" id="p-2935">
 <span class="process-math">\(\binom{13}{7}- \binom{7}{7}\text{,}\)</span> all the possible groups minus the groups with no seniors.</div></div></div>
 </li>
 <li id="li-692">
-<div class="para" id="p-2696">How many groups of 7 can be chosen so that there are at most 3 juniors?</div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-411" id="answer-411"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-411"><div class="answer solution-like"><div class="para" id="p-2697">
+<div class="para" id="p-2936">How many groups of 7 can be chosen so that there are at most 3 juniors?</div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-403" id="answer-403"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-403"><div class="answer solution-like"><div class="para" id="p-2937">
 <span class="process-math">\(\binom{7}{1}\cdot \binom{6}{6}+\binom{7}{2}\cdot \binom{6}{5}+\binom{7}{3}\cdot \binom{6}{4}\text{,}\)</span> count the groups of one junior and 6 seniors, two juniors and 5 seniors, three juniors and 4 seniors. Note, there are no groups with no juniors.</div></div></div>
 </li>
 <li id="li-693">
-<div class="para" id="p-2698">How many groups of 7 can be chosen if two people refuse to work together?</div>
-<div class="para" id="p-2699">Call the two people A and B.</div>
-<div class="para" id="p-2700">Find the number of groups with A and not B: <span class="process-math">\(\binom{11}{6}\text{.}\)</span> Note, we only need to choose 6 out of 11 since we know A is in the group and B is not, so we just need to choose the other 6 members.</div>
-<div class="para" id="p-2701">Similarly, find the number of groups with B and not A: <span class="process-math">\(\binom{11}{6}\text{.}\)</span>
+<div class="para" id="p-2938">How many groups of 7 can be chosen if two people refuse to work together?</div>
+<div class="para" id="p-2939">Call the two people A and B.</div>
+<div class="para" id="p-2940">Find the number of groups with A and not B: <span class="process-math">\(\binom{11}{6}\text{.}\)</span> Note, we only need to choose 6 out of 11 since we know A is in the group and B is not, so we just need to choose the other 6 members.</div>
+<div class="para" id="p-2941">Similarly, find the number of groups with B and not A: <span class="process-math">\(\binom{11}{6}\text{.}\)</span>
 </div>
-<div class="para" id="p-2702">Now, find the number of groups with neither A nor B: <span class="process-math">\(\binom{11}{7}\text{.}\)</span> Note, we need to choose 7 out of 11 since we know A and B cannot be chosen.</div>
-<div class="para logical" id="p-2703">
+<div class="para" id="p-2942">Now, find the number of groups with neither A nor B: <span class="process-math">\(\binom{11}{7}\text{.}\)</span> Note, we need to choose 7 out of 11 since we know A and B cannot be chosen.</div>
+<div class="para logical" id="p-2943">
 <div class="para">Since the sets of each type of group (with A, with B, with neither) are disjoint, we use the addition rule:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -678,110 +709,81 @@ window.MathJax = {
 <section class="reading-questions" id="reading-questions-36"><h3 class="heading hide-type">
 <span class="type">Reading Questions</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-542"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-2704">Calculate the number of 4-combinations of a set with 6 elements.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-412" id="answer-412"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-412"><div class="answer solution-like"><span class="process-math">\(\frac{6!}{4!2!}=15\)</span></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-543"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-2705">Calculate <span class="process-math">\(\binom{7}{4}\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-413" id="answer-413"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-413"><div class="answer solution-like"><span class="process-math">\(\frac{7!}{4!3!}=35\)</span></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-544"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-2706">Calculate <span class="process-math">\(\binom{7}{2}\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-414" id="answer-414"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-414"><div class="answer solution-like"><span class="process-math">\(21\)</span></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-545"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-2707">Calculate <span class="process-math">\(\binom{7}{1}\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-415" id="answer-415"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-415"><div class="answer solution-like"><span class="process-math">\(7\)</span></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-546"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-2708">Calculate <span class="process-math">\(\binom{7}{7}\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-416" id="answer-416"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-416"><div class="answer solution-like"><span class="process-math">\(1\)</span></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-547"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-2709">Calculate <span class="process-math">\(\binom{7}{0}\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-417" id="answer-417"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-417"><div class="answer solution-like"><span class="process-math">\(1\)</span></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-548"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-2710">Find the number of binary strings of length 7 with 4 zeros.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-418" id="answer-418"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-418"><div class="answer solution-like"><span class="process-math">\(\binom{7}{4}\)</span></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-549"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="p-2711">Find the number of binary strings of length 7 with at most 2 zeros.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-419" id="answer-419"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-419"><div class="answer solution-like"><span class="process-math">\(\binom{7}{0}+\binom{7}{1}+\binom{7}{2}\)</span></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-550"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<div class="para" id="p-2712">Find the number of strings that can be formed from the letters in the word “calculate”.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-420" id="answer-420"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-420"><div class="answer solution-like">
-<span class="process-math">\(\binom{9}{2}\cdot\binom{7}{2}\cdot\binom{5}{2}\cdot\binom{3}{1}\cdot\binom{2}{1}\cdot\binom{1}{1}\)</span> or <span class="process-math">\(\frac{9!}{2!2!2!}\)</span>
-</div></div>
-</div></article></section><section class="exercises" id="exercises-36"><h3 class="heading hide-type">
+<article class="exercise exercise-like" id="exercise-535"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-2944">Calculate the number of 4-combinations of a set with 6 elements.</div></article><article class="exercise exercise-like" id="exercise-536"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-2945">Calculate <span class="process-math">\(\binom{7}{4}\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-537"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-2946">Calculate <span class="process-math">\(\binom{7}{2}\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-538"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="p-2947">Calculate <span class="process-math">\(\binom{7}{1}\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-539"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="p-2948">Calculate <span class="process-math">\(\binom{7}{7}\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-540"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="p-2949">Calculate <span class="process-math">\(\binom{7}{0}\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-541"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="p-2950">Find the number of binary strings of length 7 with 4 zeros.</div></article><article class="exercise exercise-like" id="exercise-542"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para" id="p-2951">Find the number of binary strings of length 7 with at most 2 zeros.</div></article><article class="exercise exercise-like" id="exercise-543"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="para" id="p-2952">Find the number of strings that can be formed from the letters in the word “calculate”.</div></article></section><section class="exercises" id="exercises-36"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-551"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-2713">Calculate</div> <ol class="lower-alpha">
-<li id="li-694"><div class="para" id="p-2714"><span class="process-math">\(\displaystyle {6 \choose 0}\)</span></div></li>
-<li id="li-695"><div class="para" id="p-2715"><span class="process-math">\(\displaystyle {6 \choose 1}\)</span></div></li>
-<li id="li-696"><div class="para" id="p-2716"><span class="process-math">\(\displaystyle {6\choose 2}\)</span></div></li>
-<li id="li-697"><div class="para" id="p-2717"><span class="process-math">\(\displaystyle {6\choose 3}\)</span></div></li>
-<li id="li-698"><div class="para" id="p-2718"><span class="process-math">\(\displaystyle {6\choose 4}\)</span></div></li>
-<li id="li-699"><div class="para" id="p-2719"><span class="process-math">\(\displaystyle {6\choose 5}\)</span></div></li>
-<li id="li-700"><div class="para" id="p-2720"><span class="process-math">\(\displaystyle {6\choose 6}\)</span></div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-552"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-2721">A student council consists of 15 students.</div> <ol class="lower-alpha">
-<li id="li-701"><div class="para" id="p-2722">In how many ways can a committee of 6 be selected from the membership of the council?</div></li>
-<li id="li-702"><div class="para" id="p-2723">Two council members have the same major and are not permitted to serve together on a committee. How many ways can a committee of 6 be selected from the membership of the council?</div></li>
-<li id="li-703"><div class="para" id="p-2724">Two council members always insist on serving together on a committee. If they can’t serve together, they won’t serve at all. How many ways can a committee of 6 be selected from the membership of the council?</div></li>
+<article class="exercise exercise-like" id="exercise-544"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-2953">Calculate</div> <ol class="lower-alpha">
+<li id="li-694"><div class="para" id="p-2954"><span class="process-math">\(\displaystyle {6 \choose 0}\)</span></div></li>
+<li id="li-695"><div class="para" id="p-2955"><span class="process-math">\(\displaystyle {6 \choose 1}\)</span></div></li>
+<li id="li-696"><div class="para" id="p-2956"><span class="process-math">\(\displaystyle {6\choose 2}\)</span></div></li>
+<li id="li-697"><div class="para" id="p-2957"><span class="process-math">\(\displaystyle {6\choose 3}\)</span></div></li>
+<li id="li-698"><div class="para" id="p-2958"><span class="process-math">\(\displaystyle {6\choose 4}\)</span></div></li>
+<li id="li-699"><div class="para" id="p-2959"><span class="process-math">\(\displaystyle {6\choose 5}\)</span></div></li>
+<li id="li-700"><div class="para" id="p-2960"><span class="process-math">\(\displaystyle {6\choose 6}\)</span></div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-545"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-2961">A student council consists of 15 students.</div> <ol class="lower-alpha">
+<li id="li-701"><div class="para" id="p-2962">In how many ways can a committee of 6 be selected from the membership of the council?</div></li>
+<li id="li-702"><div class="para" id="p-2963">Two council members have the same major and are not permitted to serve together on a committee. How many ways can a committee of 6 be selected from the membership of the council?</div></li>
+<li id="li-703"><div class="para" id="p-2964">Two council members always insist on serving together on a committee. If they can’t serve together, they won’t serve at all. How many ways can a committee of 6 be selected from the membership of the council?</div></li>
 <li id="li-704">
-<div class="para" id="p-2725">Suppose the council contains 8 seniors and 7 juniors.</div>
-<div class="para logical" id="p-2726"><ol class="lower-roman">
-<li id="li-705"><div class="para" id="p-2727">How many committees of six contain three seniors and three juniors?</div></li>
-<li id="li-706"><div class="para" id="p-2728">How many committees of six contain at least one junior?</div></li>
+<div class="para" id="p-2965">Suppose the council contains 8 seniors and 7 juniors.</div>
+<div class="para logical" id="p-2966"><ol class="lower-roman">
+<li id="li-705"><div class="para" id="p-2967">How many committees of six contain three seniors and three juniors?</div></li>
+<li id="li-706"><div class="para" id="p-2968">How many committees of six contain at least one junior?</div></li>
 </ol></div>
 </li>
-<li id="li-707"><div class="para" id="p-2729">Suppose the council consists of three freshmen, four sophomores, three juniors, and five seniors. How many committees of eight contain two from each class?</div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-553"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-2730">An instructor gives an exam with fourteen questions. Students are allowed to choose any ten questions to answer.</div> <ol class="lower-alpha">
-<li id="li-708"><div class="para" id="p-2731">How many different choices of ten questions are there?</div></li>
+<li id="li-707"><div class="para" id="p-2969">Suppose the council consists of three freshmen, four sophomores, three juniors, and five seniors. How many committees of eight contain two from each class?</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-546"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-2970">An instructor gives an exam with fourteen questions. Students are allowed to choose any ten questions to answer.</div> <ol class="lower-alpha">
+<li id="li-708"><div class="para" id="p-2971">How many different choices of ten questions are there?</div></li>
 <li id="li-709">
-<div class="para" id="p-2732">Suppose six questions require proof and eight do not.</div>
-<div class="para logical" id="p-2733"><ol class="lower-roman">
-<li id="li-710"><div class="para" id="p-2734">How many groups of ten questions contain four that require proof and six that do not?</div></li>
-<li id="li-711"><div class="para" id="p-2735">How many groups of ten questions contain fat least one that requires proof?</div></li>
-<li id="li-712"><div class="para" id="p-2736">How many groups of ten questions contain at most three that require proof?</div></li>
+<div class="para" id="p-2972">Suppose six questions require proof and eight do not.</div>
+<div class="para logical" id="p-2973"><ol class="lower-roman">
+<li id="li-710"><div class="para" id="p-2974">How many groups of ten questions contain four that require proof and six that do not?</div></li>
+<li id="li-711"><div class="para" id="p-2975">How many groups of ten questions contain fat least one that requires proof?</div></li>
+<li id="li-712"><div class="para" id="p-2976">How many groups of ten questions contain at most three that require proof?</div></li>
 </ol></div>
 </li>
-<li id="li-713"><div class="para" id="p-2737">Suppose the exam instructions specify that at most one of the questions 1 and 2 may be included among the ten. How many different choices of the ten questions are there?</div></li>
-<li id="li-714"><div class="para" id="p-2738">Suppose the exam instructions specify that either questions 1 and 2 are to be included among the ten or neither is to be included. How many different choices of ten questions are there?</div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-554"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-2739">A coin is tossed ten times. in each case the outcome (H or T) is recorded.</div> <ol class="lower-alpha">
-<li id="li-715"><div class="para" id="p-2740">What is the total number of possible outcomes of the coin tossing experiment?</div></li>
-<li id="li-716"><div class="para" id="p-2741">In how many of the possible outcomes are exactly five heads obtained?</div></li>
-<li id="li-717"><div class="para" id="p-2742">In how many of the possible outcomes are at least eight heads obtained?</div></li>
-<li id="li-718"><div class="para" id="p-2743">In how many of the possible outcomes is at least one head obtained?</div></li>
-<li id="li-719"><div class="para" id="p-2744">In how many of the possible outcomes is at most one head obtained?</div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-555"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-2745">A binary or bit string consists of just 0’s and 1’s. A bit string of length 16 is called a 16-bit string.</div> <ol class="lower-alpha">
-<li id="li-720"><div class="para" id="p-2746">How many 16-bit strings contain exactly seven 1’s?</div></li>
-<li id="li-721"><div class="para" id="p-2747">How many 16-bit strings contain at least thirteen 1’s?</div></li>
-<li id="li-722"><div class="para" id="p-2748">How many 16-bit strings contain at least one 1?</div></li>
-<li id="li-723"><div class="para" id="p-2749">How many 16-bit strings contain at most one 1?</div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-556"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-2750">Consider the word <span class="process-math">\(NINETEENTH\)</span>
+<li id="li-713"><div class="para" id="p-2977">Suppose the exam instructions specify that at most one of the questions 1 and 2 may be included among the ten. How many different choices of the ten questions are there?</div></li>
+<li id="li-714"><div class="para" id="p-2978">Suppose the exam instructions specify that either questions 1 and 2 are to be included among the ten or neither is to be included. How many different choices of ten questions are there?</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-547"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="p-2979">A coin is tossed ten times. in each case the outcome (H or T) is recorded.</div> <ol class="lower-alpha">
+<li id="li-715"><div class="para" id="p-2980">What is the total number of possible outcomes of the coin tossing experiment?</div></li>
+<li id="li-716"><div class="para" id="p-2981">In how many of the possible outcomes are exactly five heads obtained?</div></li>
+<li id="li-717"><div class="para" id="p-2982">In how many of the possible outcomes are at least eight heads obtained?</div></li>
+<li id="li-718"><div class="para" id="p-2983">In how many of the possible outcomes is at least one head obtained?</div></li>
+<li id="li-719"><div class="para" id="p-2984">In how many of the possible outcomes is at most one head obtained?</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-548"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="p-2985">A binary or bit string consists of just 0’s and 1’s. A bit string of length 16 is called a 16-bit string.</div> <ol class="lower-alpha">
+<li id="li-720"><div class="para" id="p-2986">How many 16-bit strings contain exactly seven 1’s?</div></li>
+<li id="li-721"><div class="para" id="p-2987">How many 16-bit strings contain at least thirteen 1’s?</div></li>
+<li id="li-722"><div class="para" id="p-2988">How many 16-bit strings contain at least one 1?</div></li>
+<li id="li-723"><div class="para" id="p-2989">How many 16-bit strings contain at most one 1?</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-549"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="p-2990">Consider the word <span class="process-math">\(NINETEENTH\)</span>
 </div> <ol class="lower-alpha">
-<li id="li-724"><div class="para" id="p-2751">How many distinguishable ways are there to order the letters in the word <span class="process-math">\(NINETEENTH\text{?}\)</span>
+<li id="li-724"><div class="para" id="p-2991">How many distinguishable ways are there to order the letters in the word <span class="process-math">\(NINETEENTH\text{?}\)</span>
 </div></li>
-<li id="li-725"><div class="para" id="p-2752">How many distinguishable ways are there to order the letters in the word <span class="process-math">\(NINETEENTH\)</span> if it must begin with <span class="process-math">\(I\)</span> and end with <span class="process-math">\(E\text{?}\)</span>
+<li id="li-725"><div class="para" id="p-2992">How many distinguishable ways are there to order the letters in the word <span class="process-math">\(NINETEENTH\)</span> if it must begin with <span class="process-math">\(I\)</span> and end with <span class="process-math">\(E\text{?}\)</span>
 </div></li>
-<li id="li-726"><div class="para" id="p-2753">How many distinguishable ways are there to order the letters in the word <span class="process-math">\(NINETEENTH\)</span> if the letters <span class="process-math">\(HI\)</span> must be next to each other in order?</div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-557"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-2754">In Morse code, symbols are represented by variable-length sequences of dots and dashes. For example, <span class="process-math">\(A=\cdot -, 1=\cdot - - - -, ?=\cdot \cdot - - \cdot \cdot\text{.}\)</span> How many different symbols can be represented by sequences of seven or fewer dots and dashes?</div></article></section></section></div>
+<li id="li-726"><div class="para" id="p-2993">How many distinguishable ways are there to order the letters in the word <span class="process-math">\(NINETEENTH\)</span> if the letters <span class="process-math">\(HI\)</span> must be next to each other in order?</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-550"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="p-2994">In Morse code, symbols are represented by variable-length sequences of dots and dashes. For example, <span class="process-math">\(A=\cdot -, 1=\cdot - - - -, ?=\cdot \cdot - - \cdot \cdot\text{.}\)</span> How many different symbols can be represented by sequences of seven or fewer dots and dashes?</div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="pigeonhole9-4.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="binomial9-6.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
@@ -789,5 +791,13 @@ window.MathJax = {
 <div id="ptx-page-footer">
 <a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12894193;
+var sc_invisible=1;
+var sc_security="e67c59eb";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12894193/0/e67c59eb/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
 </body>
 </html>

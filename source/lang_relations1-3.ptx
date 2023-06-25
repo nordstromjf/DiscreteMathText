@@ -93,37 +93,47 @@
 
     <reading-questions>
       <title>Check Your Understanding</title>
-      <p>Let <m>A=\{2, 4, 6\}, B=\{3, 4, 5\}</m>.</p>
-      <exercise><statement><p>True or False: <m>\{(2, 2), (3, 3), (4, 4)\}</m> is a relation from <m>A</m> to <m>B</m>.</p></statement>
-      <answer>False</answer></exercise>
+      <!--<p>Let <m>A=\{2, 4, 6\}, B=\{3, 4, 5\}</m>.</p>-->
+      <exercise label="DMT_introrel_CYU_234relAB"><statement correct="no"><p>Let <m>A=\{2, 4, 6\}, B=\{3, 4, 5\}</m>, then <m>\{(2, 2), (3, 3), (4, 4)\}</m> is a relation from <m>A</m> to <m>B</m>.</p></statement>
+      <answer>False</answer>
+    </exercise>
 
-      <exercise><statement><p>True or False: <m>\{(2, 2), (4, 4), (6, 6)\}</m> is a relation from <m>A</m> to <m>A</m>.</p></statement>
-      <answer>True</answer></exercise>
+      <exercise label="DMT_introrel_CYU_246relAA"><statement correct="yes"><p>Let <m>A=\{2, 4, 6\}, B=\{3, 4, 5\}</m>, then <m>\{(2, 2), (4, 4), (6, 6)\}</m> is a relation from <m>A</m> to <m>A</m>.</p></statement>
+      <answer>True</answer>
+    </exercise>
 
-      <exercise><statement><p>True or False: <m>\{(2, 3), (4, 3), (6, 3)\}</m> is a relation from <m>A</m> to <m>B</m>.</p></statement>
-      <answer>True</answer></exercise>
+      <exercise label="DMT_introrel_CYU_246relAB"><statement correct="yes"><p>Let <m>A=\{2, 4, 6\}, B=\{3, 4, 5\}</m>, then <m>\{(2, 3), (4, 3), (6, 3)\}</m> is a relation from <m>A</m> to <m>B</m>.</p></statement>
+      <answer>True</answer>
+    </exercise>
 
-      <exercise><statement><p>True or False: <m>\{(2, 3), (2, 4), (2, 5)\}</m> is a relation from <m>A</m> to <m>B</m>.</p></statement>
-      <answer>True</answer></exercise>
+      <exercise label="DMT_introrel_CYU_222reaAB"><statement correct="yes"><p>Let <m>A=\{2, 4, 6\}, B=\{3, 4, 5\}</m>, then <m>\{(2, 3), (2, 4), (2, 5)\}</m> is a relation from <m>A</m> to <m>B</m>.</p></statement>
+      <answer>True</answer>
+    </exercise>
 
-      <exercise><statement><p>True or False: <m>\{(4, 3), (2, 5)\}</m> is a relation from <m>A</m> to <m>B</m>.</p></statement>
-      <answer>True</answer></exercise>
+      <exercise label="DMT_introrel_CYU_42relAB"><statement correct="yes"><p>Let <m>A=\{2, 4, 6\}, B=\{3, 4, 5\}</m>, then <m>\{(4, 3), (2, 5)\}</m> is a relation from <m>A</m> to <m>B</m>.</p></statement>
+      <answer>True</answer>
+    </exercise>
 
    
-      <exercise><statement><p>True or False: <m>\{(2, 2), (3, 3), (4, 4)\}</m> is a function from <m>A</m> to <m>B</m>.</p></statement>
-      <answer>False</answer></exercise>
+      <exercise label="DMT_introrel_CYU_234funAB"><statement correct="no"><p>Let <m>A=\{2, 4, 6\}, B=\{3, 4, 5\}</m>, then <m>\{(2, 2), (3, 3), (4, 4)\}</m> is a function from <m>A</m> to <m>B</m>.</p></statement>
+      <answer>False</answer>
+    </exercise>
 
-      <exercise><statement><p>True or False: <m>\{(2, 2), (4, 4), (6, 6)\}</m> is a function from <m>A</m> to <m>A</m>.</p></statement>
-      <answer>True</answer></exercise>
+      <exercise label="DMT_introrel_CYU_246funAA"><statement correct="yes"><p>Let <m>A=\{2, 4, 6\}, B=\{3, 4, 5\}</m>, then <m>\{(2, 2), (4, 4), (6, 6)\}</m> is a function from <m>A</m> to <m>A</m>.</p></statement>
+      <answer>True</answer>
+    </exercise>
 
-      <exercise><statement><p>True or False: <m>\{(2, 3), (4, 3), (6, 3)\}</m> is a function from <m>A</m> to <m>B</m>.</p></statement>
-      <answer>True</answer></exercise>
+      <exercise label="DMT_introrel_CYU_246funAB"><statement correct="yes"><p>Let <m>A=\{2, 4, 6\}, B=\{3, 4, 5\}</m>, then <m>\{(2, 3), (4, 3), (6, 3)\}</m> is a function from <m>A</m> to <m>B</m>.</p></statement>
+      <answer>True</answer>
+    </exercise>
 
-      <exercise><statement><p>True or False: <m>\{(2, 3), (2, 4), (2, 5)\}</m> is a function from <m>A</m> to <m>B</m>.</p></statement>
-      <answer>False</answer></exercise>
+      <exercise label="DMT_introrel_CYU_222funAB"><statement correct="no"><p>Let <m>A=\{2, 4, 6\}, B=\{3, 4, 5\}</m>, then <m>\{(2, 3), (2, 4), (2, 5)\}</m> is a function from <m>A</m> to <m>B</m>.</p></statement>
+      <answer>False</answer>
+    </exercise>
 
-      <exercise><statement><p>True or False: <m>\{(4, 3), (2, 5)\}</m> is a function from <m>A</m> to <m>B</m>.</p></statement>
-      <answer>False</answer></exercise>
+      <exercise label="DMT_introrel_CYU_42funAB"><statement correct="no"><p>Let <m>A=\{2, 4, 6\}, B=\{3, 4, 5\}</m>, then <m>\{(4, 3), (2, 5)\}</m> is a function from <m>A</m> to <m>B</m>.</p></statement>
+      <answer>False</answer>
+    </exercise>
 
     </reading-questions>
 

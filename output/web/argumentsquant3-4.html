@@ -62,8 +62,39 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.0.0dev3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runtime.71ffd81c0faeb38b.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.e543e0dd19670ae2.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.1f1f63d2cda36a4d.css">
 </head>
-<body class="pretext book ignore-math">
+<body id="DiscreteMathText" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" href=""></a><div class="title-container">
 <h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
@@ -549,11 +580,11 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="argumentsquant3-4"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.4</span> <span class="title">Arguments with Quantifiers</span>
 </h2>
-<div class="para" id="p-632">In <a href="arguments2-3.html" class="internal" title="Section 2.3: Valid and Invalid Arguments">Section 2.3</a> we studied arguments with logical statements. In this chapter we've looked at statements with quantifiers. Now we want to combine the two ideas.</div>
-<div class="para" id="p-633">Recall, an argument is <dfn class="terminology">valid</dfn> if it whenever the premises are true, the conclusion <em class="emphasis">must</em> be true. An argument is <dfn class="terminology">invalid</dfn> if it possible for the premises to be true and the conclusion false.</div>
+<div class="para" id="p-759">In <a href="arguments2-3.html" class="internal" title="Section 2.3: Valid and Invalid Arguments">Section 2.3</a> we studied arguments with logical statements. In this chapter we've looked at statements with quantifiers. Now we want to combine the two ideas.</div>
+<div class="para" id="p-760">Recall, an argument is <dfn class="terminology">valid</dfn> if it whenever the premises are true, the conclusion <em class="emphasis">must</em> be true. An argument is <dfn class="terminology">invalid</dfn> if it possible for the premises to be true and the conclusion false.</div>
 <article class="example example-like" id="argwquant1"><a href="" data-knowl="" class="id-ref example-knowl original has-tabular" data-refid="hk-argwquant1"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">An Argument with Quantified Statements.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-argwquant1"><article class="example example-like"> <div class="para" id="p-634">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-argwquant1"><article class="example example-like"> <div class="para" id="p-761">
 <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines">All computer science majors take Discrete Math before graduation.</td></tr>
 <tr><td class="l m b1 r0 l0 t0 lines">Anna is a computer science major.</td></tr>
@@ -562,81 +593,81 @@ window.MathJax = {
 </table></div> Is this argument valid or invalid?</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-82" id="answer-82"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-82"><div class="answer solution-like">This argument is valid.</div></div></article></div>
 <article class="example example-like" id="argwquant2"><a href="" data-knowl="" class="id-ref example-knowl original has-tabular" data-refid="hk-argwquant2"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Another Argument with Quantified Statements.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-argwquant2"><article class="example example-like"> <div class="para" id="p-635">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-argwquant2"><article class="example example-like"> <div class="para" id="p-762">
 <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines">All computer science majors take Discrete Math before graduation.</td></tr>
 <tr><td class="l m b1 r0 l0 t0 lines">Troy did not take Discrete Math before graduation.</td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines">
 <span class="process-math">\(\therefore\ \)</span>Troy is not a computer science major.</td></tr>
 </table></div> Is this argument valid or invalid?</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-83" id="answer-83"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-83"><div class="answer solution-like">This argument is valid.</div></div></article></div>
-<div class="para" id="p-636">Although <a href="" class="xref" data-knowl="./knowl/argwquant1.html" title="Example 3.4.1: An Argument with Quantified Statements">Example 3.4.1</a> and <a href="" class="xref" data-knowl="./knowl/argwquant2.html" title="Example 3.4.2: Another Argument with Quantified Statements">Example 3.4.2</a> are a valid arguments, we will have trouble using a truth-table to determine validity. In this section we will develop other tools for analyzing quantified arguments. These examples are extentions of modus ponens and modus tollens from <a href="" class="xref" data-knowl="./knowl/B_commonvalid.html" title="Assemblage: Some Common Forms for Valid Arguments">Some Common Forms for Valid Arguments</a>.</div>
+<div class="para" id="p-763">Although <a href="" class="xref" data-knowl="./knowl/argwquant1.html" title="Example 3.4.1: An Argument with Quantified Statements">Example 3.4.1</a> and <a href="" class="xref" data-knowl="./knowl/argwquant2.html" title="Example 3.4.2: Another Argument with Quantified Statements">Example 3.4.2</a> are a valid arguments, we will have trouble using a truth-table to determine validity. In this section we will develop other tools for analyzing quantified arguments. These examples are extentions of modus ponens and modus tollens from <a href="" class="xref" data-knowl="./knowl/B_commonvalid.html" title="Assemblage: Some Common Forms for Valid Arguments">Some Common Forms for Valid Arguments</a>.</div>
 <article class="assemblage assemblage-like" id="B_universalmodpon"><h3 class="heading"><span class="title">Common Forms of Arguments with Quantifiers.</span></h3>
-<div class="para" id="p-637">Universal modus ponens: <div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="p-764">Universal modus ponens: <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines">
 <span class="process-math">\(\forall x\text{,}\)</span> if <span class="process-math">\(P(x)\)</span> then <span class="process-math">\(Q(x)\)</span>
 </td></tr>
 <tr><td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(P(a)\)</span></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\therefore\ Q(a)\)</span></td></tr>
 </table></div> <a href="" class="xref" data-knowl="./knowl/argwquant1.html" title="Example 3.4.1: An Argument with Quantified Statements">Example 3.4.1</a> is an example of universal modus ponens.</div>
-<div class="para" id="p-638">Universal modus tollens: <div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="p-765">Universal modus tollens: <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines">
 <span class="process-math">\(\forall x\text{,}\)</span> if <span class="process-math">\(P(x)\)</span> then <span class="process-math">\(Q(x)\)</span>
 </td></tr>
 <tr><td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(\sim Q(a)\)</span></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\therefore\ \sim P(a)\)</span></td></tr>
-</table></div> <a href="" class="xref" data-knowl="./knowl/argwquant2.html" title="Example 3.4.2: Another Argument with Quantified Statements">Example 3.4.2</a> is an example of universal modus tollens.</div></article><div class="para" id="p-639">To determine validity of quantified arguments we need to ask if it is possible for the premises to be true while the conclusion is false. If it is possible, then the argument is invalid. If it is not possible, then the argument is valid. We will use <dfn class="terminology">Venn diagrams</dfn> to help us determine validity. A Venn diagram is just a picture where we use circles to represent sets of objects and points to represent specific elements. We draw the circles to represent how our sets are related to each other.</div>
-<div class="para" id="p-640">The Venn diagram for <a href="" class="xref" data-knowl="./knowl/argwquant1.html" title="Example 3.4.1: An Argument with Quantified Statements">Example 3.4.1</a> is given by the following figure.</div>
+</table></div> <a href="" class="xref" data-knowl="./knowl/argwquant2.html" title="Example 3.4.2: Another Argument with Quantified Statements">Example 3.4.2</a> is an example of universal modus tollens.</div></article><div class="para" id="p-766">To determine validity of quantified arguments we need to ask if it is possible for the premises to be true while the conclusion is false. If it is possible, then the argument is invalid. If it is not possible, then the argument is valid. We will use <dfn class="terminology">Venn diagrams</dfn> to help us determine validity. A Venn diagram is just a picture where we use circles to represent sets of objects and points to represent specific elements. We draw the circles to represent how our sets are related to each other.</div>
+<div class="para" id="p-767">The Venn diagram for <a href="" class="xref" data-knowl="./knowl/argwquant1.html" title="Example 3.4.1: An Argument with Quantified Statements">Example 3.4.1</a> is given by the following figure.</div>
 <figure class="figure figure-like" id="venndiagEx1"><div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/latex-image/modusponens1.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.3<span class="period">.</span></span><span class="space"> </span>Venn diagram for the argument in <a href="" class="xref" data-knowl="./knowl/argwquant1.html" title="Example 3.4.1: An Argument with Quantified Statements">Example 3.4.1</a></figcaption></figure><div class="para" id="p-641">The picture represents the two premises of the argument. In the Venn diagram we have a circle representing students taking Discrete Math (“Discrete Math”) and a circle representing computer science majors (“CS majors”). The CS major circle is completely inside the Discrete Math circle since the first statement in the argument is that all computer science majors take Discrete Math. This means the set of computer science majors is a subset of the set of students taking Discrete Math. The second statement in the argument is that Anna is a computer science major. This means Anna is an element (represented by a point) of the set of CS majors.</div>
-<div class="para" id="p-642">Now, if we look at the diagram determined by the two premises, we see that Anna must also be an element of the set of students taking Discrete Math. Thus, it is not possible to have true premises and a false conclusion.</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.3<span class="period">.</span></span><span class="space"> </span>Venn diagram for the argument in <a href="" class="xref" data-knowl="./knowl/argwquant1.html" title="Example 3.4.1: An Argument with Quantified Statements">Example 3.4.1</a></figcaption></figure><div class="para" id="p-768">The picture represents the two premises of the argument. In the Venn diagram we have a circle representing students taking Discrete Math (“Discrete Math”) and a circle representing computer science majors (“CS majors”). The CS major circle is completely inside the Discrete Math circle since the first statement in the argument is that all computer science majors take Discrete Math. This means the set of computer science majors is a subset of the set of students taking Discrete Math. The second statement in the argument is that Anna is a computer science major. This means Anna is an element (represented by a point) of the set of CS majors.</div>
+<div class="para" id="p-769">Now, if we look at the diagram determined by the two premises, we see that Anna must also be an element of the set of students taking Discrete Math. Thus, it is not possible to have true premises and a false conclusion.</div>
 <article class="assemblage assemblage-like" id="B_vennforvalid"><h3 class="heading"><span class="title">Process for Using a Venn diagram to Determine Validity.</span></h3>
-<div class="para logical" id="p-643"><ol class="decimal">
+<div class="para logical" id="p-770"><ol class="decimal">
 <li id="li-203">
-<div class="para" id="p-644">Draw the Venn diagram for each premise.</div>
-<div class="para" id="p-645">Statements such as “All A are B” mean A is a subset of B.</div>
+<div class="para" id="p-771">Draw the Venn diagram for each premise.</div>
+<div class="para" id="p-772">Statements such as “All A are B” mean A is a subset of B.</div>
 </li>
-<li id="li-204"><div class="para" id="p-646">Make sure you distinguish between sets (lots of things have a certain property) and elements (a specific thing with a property).</div></li>
+<li id="li-204"><div class="para" id="p-773">Make sure you distinguish between sets (lots of things have a certain property) and elements (a specific thing with a property).</div></li>
 <li id="li-205">
-<div class="para" id="p-647">See if it is possible for the premises to be true and the conclusion false.</div>
-<div class="para" id="p-648">Sometimes there is a choice about where to place a certain element of set. For example, if I know <span class="process-math">\(x\)</span> is not in set A, then <span class="process-math">\(x\)</span> might be in set B or it might not be in B. We can use these choices to see if we can make the premises true and the conclusion false.</div>
+<div class="para" id="p-774">See if it is possible for the premises to be true and the conclusion false.</div>
+<div class="para" id="p-775">Sometimes there is a choice about where to place a certain element of set. For example, if I know <span class="process-math">\(x\)</span> is not in set A, then <span class="process-math">\(x\)</span> might be in set B or it might not be in B. We can use these choices to see if we can make the premises true and the conclusion false.</div>
 </li>
-</ol></div></article><div class="para" id="p-649">Let's use this process on some more examples.</div>
+</ol></div></article><div class="para" id="p-776">Let's use this process on some more examples.</div>
 <article class="example example-like" id="quantmodtoll"><a href="" data-knowl="" class="id-ref example-knowl original has-image has-tabular" data-refid="hk-quantmodtoll"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Determining Validity.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-quantmodtoll"><article class="example example-like"> <div class="para" id="p-650">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-quantmodtoll"><article class="example example-like"> <div class="para" id="p-777">
 <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines">All integers are rational numbers.</td></tr>
 <tr><td class="l m b1 r0 l0 t0 lines">
 <span class="process-math">\(\sqrt{2}\)</span> is not rational.</td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines">
 <span class="process-math">\(\therefore\ \sqrt{2}\)</span> is not an integer.</td></tr>
-</table></div> The two premises are represented with the following diagram. Recall, <span class="process-math">\(\mathbb{Q}\)</span> is the set of rational numbers and <span class="process-math">\(\mathbb{Z}\)</span> is the set of integers.</div>  <div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/latex-image/modustollens1.svg" role="img" class="contained"></div> <div class="para" id="p-651">We can see from the diagram that it is impossible to make the conclusion false. In particular, <span class="process-math">\(\sqrt{2}\)</span> cannot be in the set of integers.</div></article></div>
+</table></div> The two premises are represented with the following diagram. Recall, <span class="process-math">\(\mathbb{Q}\)</span> is the set of rational numbers and <span class="process-math">\(\mathbb{Z}\)</span> is the set of integers.</div>  <div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/latex-image/modustollens1.svg" role="img" class="contained"></div> <div class="para" id="p-778">We can see from the diagram that it is impossible to make the conclusion false. In particular, <span class="process-math">\(\sqrt{2}\)</span> cannot be in the set of integers.</div></article></div>
 <article class="activity project-like" id="activity-50"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-22"><div class="para" id="p-652">Consider the general form of universal modus ponens.</div></div>
+<div class="introduction" id="introduction-22"><div class="para" id="p-779">Consider the general form of universal modus ponens.</div></div>
 <article class="task exercise-like" id="task-65"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-653">Draw the Venn diagram for universal modus ponens. You should have a circle labeled “P” and one labeled “Q.”</div></article><article class="task exercise-like" id="task-66"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-654">Write your own argument that has the form of universal modus tollens.</div></article><article class="task exercise-like" id="task-67"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-655">Use a Venn diagram with appropriate labels to show that your argument is valid.</div></article></article><article class="activity project-like" id="activity-51"><h3 class="heading">
+<div class="para" id="p-780">Draw the Venn diagram for universal modus ponens. You should have a circle labeled “P” and one labeled “Q.”</div></article><article class="task exercise-like" id="task-66"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-781">Write your own argument that has the form of universal modus tollens.</div></article><article class="task exercise-like" id="task-67"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-782">Use a Venn diagram with appropriate labels to show that your argument is valid.</div></article></article><article class="activity project-like" id="activity-51"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-23"><div class="para" id="p-656">Consider the general form of universal modus tollens.</div></div>
+<div class="introduction" id="introduction-23"><div class="para" id="p-783">Consider the general form of universal modus tollens.</div></div>
 <article class="task exercise-like" id="task-68"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-657">Draw the Venn diagram for universal modus tollens. You should have a circle labeled “P” and one labeled “Q.”</div></article><article class="task exercise-like" id="task-69"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-658">Write your own argument that has the form of universal modus ponens.</div></article><article class="task exercise-like" id="task-70"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-659">Use a Venn diagram with appropriate labels to show that your argument is valid.</div></article></article><article class="example example-like" id="invalidargquant"><a href="" data-knowl="" class="id-ref example-knowl original has-image has-tabular" data-refid="hk-invalidargquant"><h3 class="heading">
+<div class="para" id="p-784">Draw the Venn diagram for universal modus tollens. You should have a circle labeled “P” and one labeled “Q.”</div></article><article class="task exercise-like" id="task-69"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-785">Write your own argument that has the form of universal modus ponens.</div></article><article class="task exercise-like" id="task-70"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-786">Use a Venn diagram with appropriate labels to show that your argument is valid.</div></article></article><article class="example example-like" id="invalidargquant"><a href="" data-knowl="" class="id-ref example-knowl original has-image has-tabular" data-refid="hk-invalidargquant"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.5</span><span class="period">.</span><span class="space"> </span><span class="title">An Invalid Argument.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-invalidargquant"><article class="example example-like"> <div class="para" id="p-660">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-invalidargquant"><article class="example example-like"> <div class="para" id="p-787">
 <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines">All integers are rational numbers.</td></tr>
 <tr><td class="l m b1 r0 l0 t0 lines">
 <span class="process-math">\(x\)</span> is rational.</td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines">
 <span class="process-math">\(\therefore\ x\)</span> is an integer.</td></tr>
-</table></div> The first premise is represented with the following diagram.</div>  <div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/latex-image/integerrational.svg" role="img" class="contained"></div> <div class="para" id="p-661">But we need to be careful about where we place <span class="process-math">\(x\text{.}\)</span> The second premise just says it needs to be inside the rational circle. Is it possible to place it in the rational circle so that the conclusion is false? Yes, we can place <span class="process-math">\(x\)</span> inside the rational circle, but not in the integer circle. So the following diagram shows how it is possible to have true premises and a false conclusion.</div> <div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/latex-image/integerrationalinvalid.svg" role="img" class="contained"></div> <div class="para" id="p-662">Therefore, the argument is invalid.</div></article></div>
+</table></div> The first premise is represented with the following diagram.</div>  <div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/latex-image/integerrational.svg" role="img" class="contained"></div> <div class="para" id="p-788">But we need to be careful about where we place <span class="process-math">\(x\text{.}\)</span> The second premise just says it needs to be inside the rational circle. Is it possible to place it in the rational circle so that the conclusion is false? Yes, we can place <span class="process-math">\(x\)</span> inside the rational circle, but not in the integer circle. So the following diagram shows how it is possible to have true premises and a false conclusion.</div> <div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/latex-image/integerrationalinvalid.svg" role="img" class="contained"></div> <div class="para" id="p-789">Therefore, the argument is invalid.</div></article></div>
 <article class="assemblage assemblage-like" id="B_universalerror"><h3 class="heading"><span class="title">Invalid Arguments with Quantifiers.</span></h3>
-<div class="para" id="p-663">Converse error <div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="p-790">Converse error <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines">
 <span class="process-math">\(\forall x\)</span> if <span class="process-math">\(P(x)\)</span> then <span class="process-math">\(Q(x)\)</span>
 </td></tr>
@@ -645,7 +676,7 @@ window.MathJax = {
 <span class="process-math">\(\therefore\ \)</span><span class="process-math">\(P(a)\)</span>
 </td></tr>
 </table></div> <a href="" class="xref" data-knowl="./knowl/invalidargquant.html" title="Example 3.4.5: An Invalid Argument">Example 3.4.5</a> is an example of converse error.</div>
-<div class="para" id="p-664">Inverse error <div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="p-791">Inverse error <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines">
 <span class="process-math">\(\forall x\)</span> if <span class="process-math">\(P(x)\)</span> then <span class="process-math">\(Q(x)\)</span>
 </td></tr>
@@ -657,25 +688,25 @@ window.MathJax = {
 </div></article><article class="activity project-like" id="activity-52"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.4.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-665">Write your own example of inverse error. Use a Venn diagram to show your argument is invalid.</div></article><div class="para" id="p-666">It will be useful to have some standard Venn diagrams for common forms of statements.</div>
+<div class="para" id="p-792">Write your own example of inverse error. Use a Venn diagram to show your argument is invalid.</div></article><div class="para" id="p-793">It will be useful to have some standard Venn diagrams for common forms of statements.</div>
 <article class="assemblage assemblage-like" id="B_commnVenn"><h3 class="heading"><span class="title">Venn Diagrams for Common Statements.</span></h3>
-<div class="para logical" id="p-667"><ul class="disc">
+<div class="para logical" id="p-794"><ul class="disc">
 <li id="li-206">
-<div class="para" id="p-668">All B are A.</div>
+<div class="para" id="p-795">All B are A.</div>
 <div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/latex-image/allAareB.svg" role="img" class="contained"></div>
 </li>
 <li id="li-207">
-<div class="para" id="p-669">Some A are B, or there exists an A that is a B.</div>
+<div class="para" id="p-796">Some A are B, or there exists an A that is a B.</div>
 <div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/latex-image/someAareB.svg" role="img" class="contained"></div>
 </li>
 <li id="li-208">
-<div class="para" id="p-670">No A are B.</div>
+<div class="para" id="p-797">No A are B.</div>
 <div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/latex-image/noAareB.svg" role="img" class="contained"></div>
 </li>
 </ul></div></article><article class="activity project-like" id="activity-53"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.4.4</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-24"><div class="para" id="p-671">For each argument use a Venn diagram to determine if the argument is valid or invalid.</div></div>
+<div class="introduction" id="introduction-24"><div class="para" id="p-798">For each argument use a Venn diagram to determine if the argument is valid or invalid.</div></div>
 <article class="task exercise-like" id="task-71"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines">Every Linfield student lives on campus.</td></tr>
@@ -692,7 +723,7 @@ window.MathJax = {
 </table></div></article></article><article class="activity project-like" id="activity-54"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.4.5</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-25"><div class="para" id="p-672">For each argument use a Venn diagram to determine if the argument is valid or invalid.</div></div>
+<div class="introduction" id="introduction-25"><div class="para" id="p-799">For each argument use a Venn diagram to determine if the argument is valid or invalid.</div></div>
 <article class="task exercise-like" id="task-73"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines">
@@ -710,31 +741,38 @@ window.MathJax = {
 <tr><td class="l m b0 r0 l0 t0 lines">
 <span class="process-math">\(\therefore\)</span> Newton will get an A in Discrete Math.</td></tr>
 </table></div></article><article class="task exercise-like" id="task-75"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-673">Compare your answers to the two arguments. What is different? How does the difference affect the argument?</div></article></article><section class="reading-questions" id="reading-questions-10"><h3 class="heading hide-type">
+<div class="para" id="p-800">Compare your answers to the two arguments. What is different? How does the difference affect the argument?</div></article></article><section class="reading-questions" id="reading-questions-10"><h3 class="heading hide-type">
 <span class="type">Reading Questions</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-120"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-674">Determine whether the following argument is valid or invalid. <div class="tabular-box natural-width"><table class="tabular">
+<article class="exercise exercise-like" id="DMT_argquant_CYU_zsRsRz"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="DMT_argquant_CYU_zsRsRz" data-multipleanswers="false">
+<div class="para" id="p-801">Determine whether the following argument is valid or invalid. <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines">All zebras have stripes.</td></tr>
 <tr><td class="l m b1 r0 l0 t0 lines">Rex has stripes.</td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines">
 <span class="process-math">\(\therefore\ \)</span> Rex is a zebra.</td></tr>
 </table></div>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-84" id="answer-84"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-84"><div class="answer solution-like"><div class="para" id="p-675">Invalid.</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-121"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-676">Determine whether the following argument is valid or invalid. <div class="tabular-box natural-width"><table class="tabular">
+<li data-component="answer" id="DMT_argquant_CYU_zsRsRz_opt_a"><div class="para" id="p-802">The argument is valid.</div></li>
+<li data-component="feedback" id="DMT_argquant_CYU_zsRsRz_opt_a">
+<li data-component="answer" id="DMT_argquant_CYU_zsRsRz_opt_b" data-correct=""><div class="para" id="p-803">The argument is invalid.</div></li>
+<li data-component="feedback" id="DMT_argquant_CYU_zsRsRz_opt_b">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_argquant_CYU_zsLnsLnz"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="DMT_argquant_CYU_zsLnsLnz" data-multipleanswers="false">
+<div class="para" id="p-805">Determine whether the following argument is valid or invalid. <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines">All zebras have stripes.</td></tr>
 <tr><td class="l m b1 r0 l0 t0 lines">Lily does not have stripes.</td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines">
 <span class="process-math">\(\therefore\ \)</span> Lily is not a zebra.</td></tr>
 </table></div>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-85" id="answer-85"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-85"><div class="answer solution-like"><div class="para" id="p-677">Valid.</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-122"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-678">Determine whether the following argument is valid or invalid. <div class="tabular-box natural-width"><table class="tabular">
+<li data-component="answer" id="DMT_argquant_CYU_zsLnsLnz_opt_a" data-correct=""><div class="para" id="p-806">The argument is valid.</div></li>
+<li data-component="feedback" id="DMT_argquant_CYU_zsLnsLnz_opt_a">
+<li data-component="answer" id="DMT_argquant_CYU_zsLnsLnz_opt_b"><div class="para" id="p-807">The argument is invalid.</div></li>
+<li data-component="feedback" id="DMT_argquant_CYU_zsLnsLnz_opt_b">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_argquant_CYU_zszaRsRa"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="DMT_argquant_CYU_zszaRsRa" data-multipleanswers="false">
+<div class="para" id="p-809">Determine whether the following argument is valid or invalid. <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines">All zebras have stripes.</td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines">All zebras are animals.</td></tr>
 <tr><td class="l m b1 r0 l0 t0 lines">Rex has stripes.</td></tr>
@@ -742,43 +780,54 @@ window.MathJax = {
 <span class="process-math">\(\therefore\ \)</span> Rex is an animal.</td></tr>
 </table></div>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-86" id="answer-86"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-86"><div class="answer solution-like"><div class="para" id="p-679">Invalid.</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-123"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-680">Determine whether the following argument is valid or invalid. <div class="tabular-box natural-width"><table class="tabular">
+<li data-component="answer" id="DMT_argquant_CYU_zszaRsRa_opt_a"><div class="para" id="p-810">The argument is valid.</div></li>
+<li data-component="feedback" id="DMT_argquant_CYU_zszaRsRa_opt_a">
+<li data-component="answer" id="DMT_argquant_CYU_zszaRsRa_opt_b" data-correct=""><div class="para" id="p-811">The argument is invalid.</div></li>
+<li data-component="feedback" id="DMT_argquant_CYU_zszaRsRa_opt_b">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_argquant_CYU_zsasza"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="DMT_argquant_CYU_zsasza" data-multipleanswers="false">
+<div class="para" id="p-813">Determine whether the following argument is valid or invalid. <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines">All zebras have stripes.</td></tr>
 <tr><td class="l m b1 r0 l0 t0 lines">All animals have stripes.</td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines">
 <span class="process-math">\(\therefore\ \)</span> All zebras are animals.</td></tr>
 </table></div>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-87" id="answer-87"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-87"><div class="answer solution-like"><div class="para" id="p-681">Invalid.</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-124"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-682">Determine whether the following argument is valid or invalid. <div class="tabular-box natural-width"><table class="tabular">
+<li data-component="answer" id="DMT_argquant_CYU_zsasza_opt_a"><div class="para" id="p-814">The argument is valid.</div></li>
+<li data-component="feedback" id="DMT_argquant_CYU_zsasza_opt_a">
+<li data-component="answer" id="DMT_argquant_CYU_zsasza_opt_b" data-correct=""><div class="para" id="p-815">The argument is invalid.</div></li>
+<li data-component="feedback" id="DMT_argquant_CYU_zsasza_opt_b">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_argquant_CYU_zssaza"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="DMT_argquant_CYU_zssaza" data-multipleanswers="false">
+<div class="para" id="p-817">Determine whether the following argument is valid or invalid. <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines">All zebras have stripes.</td></tr>
 <tr><td class="l m b1 r0 l0 t0 lines">All things with stripes are animals.</td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines">
 <span class="process-math">\(\therefore\ \)</span> All zebras are animals.</td></tr>
 </table></div>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-88" id="answer-88"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-88"><div class="answer solution-like"><div class="para" id="p-683">Valid.</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-125"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-684">Determine whether the following argument is valid or invalid. <div class="tabular-box natural-width"><table class="tabular">
+<li data-component="answer" id="DMT_argquant_CYU_zssaza_opt_a" data-correct=""><div class="para" id="p-818">The argument is valid.</div></li>
+<li data-component="feedback" id="DMT_argquant_CYU_zssaza_opt_a">
+<li data-component="answer" id="DMT_argquant_CYU_zssaza_opt_b"><div class="para" id="p-819">The argument is invalid.</div></li>
+<li data-component="feedback" id="DMT_argquant_CYU_zssaza_opt_b">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_argquant_CYU_zaaszs"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="DMT_argquant_CYU_zaaszs" data-multipleanswers="false">
+<div class="para" id="p-821">Determine whether the following argument is valid or invalid. <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines">All zebras are animals.</td></tr>
 <tr><td class="l m b1 r0 l0 t0 lines">All animals have stripes.</td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines">
 <span class="process-math">\(\therefore\ \)</span> All zebras have stripes.</td></tr>
 </table></div>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-89" id="answer-89"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-89"><div class="answer solution-like"><div class="para" id="p-685">Valid.</div></div></div>
-</div></article></section><section class="exercises" id="exercises-10"><h3 class="heading hide-type">
+<li data-component="answer" id="DMT_argquant_CYU_zaaszs_opt_a" data-correct=""><div class="para" id="p-822">The argument is valid.</div></li>
+<li data-component="feedback" id="DMT_argquant_CYU_zaaszs_opt_a">
+<li data-component="answer" id="DMT_argquant_CYU_zaaszs_opt_b"><div class="para" id="p-823">The argument is invalid.</div></li>
+<li data-component="feedback" id="DMT_argquant_CYU_zaaszs_opt_b">
+</ul></div></div></article></section><section class="exercises" id="exercises-10"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="exercise-126"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-686">Determine if the argument is valid or invalid. If it is valid, state whether it is an example of modus ponens or modus tollens. If it is invalid, state whether it it exhibits converse error or inverse error.</div> <ol class="lower-alpha">
+<div class="para" id="p-825">Determine if the argument is valid or invalid. If it is valid, state whether it is an example of modus ponens or modus tollens. If it is invalid, state whether it it exhibits converse error or inverse error.</div> <ol class="lower-alpha">
 <li id="li-209"><div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines">All healthy people eat an apple a day.</td></tr>
 <tr><td class="l m b2 r0 l0 t0 lines">Keisha eats an apple a day.</td></tr>
@@ -816,7 +865,7 @@ window.MathJax = {
 <span class="process-math">\(\therefore\)</span> The infinite series <span class="process-math">\(\sum_{n=1}^{\infty}\frac{n}{n+1}\)</span> does not converge.</td></tr>
 </table></div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-127"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-687">Determine if the argument is valid or invalid. Support your answer by drawing a Venn diagram.</div> <ol class="lower-alpha">
+<div class="para" id="p-826">Determine if the argument is valid or invalid. Support your answer by drawing a Venn diagram.</div> <ol class="lower-alpha">
 <li id="li-215"><div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines">All people are mice.</td></tr>
 <tr><td class="l m b2 r0 l0 t0 lines">All mice are mortal.</td></tr>
@@ -830,13 +879,13 @@ window.MathJax = {
 <span class="process-math">\(\therefore\)</span> All polynomial functions are continuous.</td></tr>
 </table></div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-128"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-688">Use a diagram to show the following argument can have true premises and a false conclusion.</div> <div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="p-827">Use a diagram to show the following argument can have true premises and a false conclusion.</div> <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines">All dogs are carnivorous.</td></tr>
 <tr><td class="l m b2 r0 l0 t0 lines">Aaron is not a dog.</td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines">
 <span class="process-math">\(\therefore\)</span> Aaron is not carnivorous.</td></tr>
 </table></div></article><article class="exercise exercise-like" id="exercise-129"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-689">What can you conclude about the validity or invalidity of the following argument form? Explain your answer.</div> <div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="p-828">What can you conclude about the validity or invalidity of the following argument form? Explain your answer.</div> <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines">
 <span class="process-math">\(\forall x\text{,}\)</span> if <span class="process-math">\(P(x)\)</span> then <span class="process-math">\(Q(x)\text{.}\)</span>
 </td></tr>
@@ -847,7 +896,7 @@ window.MathJax = {
 <span class="process-math">\(\therefore\)</span> <span class="process-math">\(P(a)\)</span> and <span class="process-math">\(R(a)\text{.}\)</span>
 </td></tr>
 </table></div></article><article class="exercise exercise-like" id="exercise-130"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-690">What can you conclude about the validity or invalidity of the following argument form? Explain your answer.</div> <div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="p-829">What can you conclude about the validity or invalidity of the following argument form? Explain your answer.</div> <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines">
 <span class="process-math">\(\forall x\text{,}\)</span> if <span class="process-math">\(P(x)\)</span> then <span class="process-math">\(Q(x)\text{.}\)</span>
 </td></tr>
@@ -865,5 +914,13 @@ window.MathJax = {
 <div id="ptx-page-footer">
 <a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12894193;
+var sc_invisible=1;
+var sc_security="e67c59eb";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12894193/0/e67c59eb/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
 </body>
 </html>

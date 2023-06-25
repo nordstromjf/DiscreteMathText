@@ -151,19 +151,24 @@ But then <m>n-d(q+1)\in S</m> and <m>n-d(q+1)&lt; n-dq=r</m>. This contradicts t
     <reading-questions>
       <title>Check Your Understanding</title>
 
-      <exercise><statement><p>True or false: <m>S=\{\frac{3n+1}{4} : n\in \mathbb{Z}, n\geq 0\}</m> satisfies the conditions of the Well-Ordering Principle.</p></statement>
+      <exercise label="DMT_strongind_CYU_3np1wop"><statement correct="no"><p>True or false: <m>S=\{\frac{3n+1}{4} : n\in \mathbb{Z}, n\geq 0\}</m> satisfies the conditions of the Well-Ordering Principle.</p></statement>
+      <feedback><p>The elements aren't all integers.</p></feedback>
       <answer><p>False, the elements aren't all integers.</p></answer></exercise>
 
-      <exercise><statement><p>True or false: <m>S=\{3n : n\in \mathbb{Z}, n\geq 0\}</m> satisfies the conditions of the Well-Ordering Principle.</p></statement>
+      <exercise label="DMT_strongind_CYU_3nwop"><statement correct="yes"><p>True or false: <m>S=\{3n : n\in \mathbb{Z}, n\geq 0\}</m> satisfies the conditions of the Well-Ordering Principle.</p></statement>
+      <feedback><p>Check that the set satifies the three conditions.</p></feedback>
       <answer><p>True.</p></answer></exercise>
 
-      <exercise><statement><p>True or false: <m>S=\{-n : n\in \mathbb{Z}, n\geq 0\}</m> satisfies the conditions of the Well-Ordering Principle.</p></statement>
+      <exercise label="DMT_strongind_CYU_negnwop"><statement correct="no"><p>True or false: <m>S=\{-n : n\in \mathbb{Z}, n\geq 0\}</m> satisfies the conditions of the Well-Ordering Principle.</p></statement>
+      <feedback><p>The elements aren't all greater that some integer.</p></feedback>
       <answer><p>False, the elements aren't all greater that some integer.</p></answer></exercise>
 
-      <exercise><statement><p>True or false: <m>S=\{3n-k : n,k\in \mathbb{Z}, 3n-k\geq 0\}</m> satisfies the conditions of the Well-Ordering Principle.</p></statement>
+      <exercise label="DMT_strongind_CYU_3npmkwop"><statement correct="yes"><p>True or false: <m>S=\{3n-k : n,k\in \mathbb{Z}, 3n-k\geq 0\}</m> satisfies the conditions of the Well-Ordering Principle.</p></statement>
+      <feedback><p>Check that the set satifies the three conditions.</p></feedback>
       <answer><p>True.</p></answer></exercise>
 
-      <exercise><statement><p>True or false: <m>S=\{(-1)^n : n\in \mathbb{Z}\}</m> satisfies the conditions of the Well-Ordering Principle.</p></statement>
+      <exercise label="DMT_strongind_CYU_alt1wop"><statement correct="yes"><p>True or false: <m>S=\{(-1)^n : n\in \mathbb{Z}\}</m> satisfies the conditions of the Well-Ordering Principle.</p></statement>
+      <feedback><p>Check that the set satifies the three conditions.</p></feedback>
       <answer><p>True.</p></answer></exercise>
 
 

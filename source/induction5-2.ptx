@@ -149,36 +149,127 @@ Thus, <m>\sum_{i=0}^{k+1}r^i=\frac{r^{k+2}-1}{r-1}</m>.</p>
     <reading-questions>
       <title>Check Your Understanding</title>
       
-      <exercise><statement><p>Use one of the summation formulas to find <m>3+4+5+6+7+8</m>.</p></statement>
+      <exercise label="DMT_induction_CYU_sumformn38"><statement><p>Determine the values of <m>a, n</m> in the summation formula to find <m>3+4+5+6+7+8</m>.
+        <me>\sum_{i=a}^{n}i=\sum_{i=1}^{n}i-(1+2)=\frac{n(n+1)}{2}-(3)=33</me></p>
+        <p><m>a</m>:<var width="3" />, <m>n</m>:<var width="3" /></p>
+      <p></p></statement>
+      <setup>
+        <var>
+          <condition number="3">
+             <feedback><p>Correct</p></feedback>
+          </condition>
+          <condition string=".*">
+            <feedback><p>What is the first term of the sum?</p></feedback>
+          </condition>
+        </var>
+        <var>
+          <condition number="8">
+            <feedback><p>Correct</p></feedback>
+          </condition>
+          <condition string=".*">
+            <feedback><p>What is the last term of the sum?</p></feedback>
+          </condition>
+        </var>
+      </setup>
       <answer><m>\sum_{i=3}^{8}i=\sum_{i=1}^{8}i-(1+2)=\frac{8(8+1)}{2}-(3)=33</m></answer></exercise>
 
-      <exercise><statement><p>Use one of the summation formulas to find <m>2+4+6+8+10+12</m>.</p></statement>
+      <exercise label="DMT_induction_CYU_sumform2n212"><statement><p>Determine the values of <m>a, n</m> in the summation formula to find <m>2+4+6+8+10+12</m>.
+      <me>\sum_{i=a}^{n}2i=2\sum_{i=a}^{n}i=(2)\frac{n(n+1)}{2}=42</me></p>
+    <p><m>a</m>:<var width="3" />, <m>n</m>:<var width="3" /></p></statement>
+    <setup>
+        <var>
+          <condition number="1">
+             <feedback><p>Correct</p></feedback>
+          </condition>
+          <condition string=".*">
+            <feedback><p>What is the first value for <m>i</m> so that the first term in the sequence is 2?</p></feedback>
+          </condition>
+        </var>
+        <var>
+          <condition number="6">
+            <feedback><p>Correct</p></feedback>
+          </condition>
+          <condition string=".*">
+            <feedback><p>What is the last value for <m>i</m> so that the last term is 12?</p></feedback>
+          </condition>
+        </var>
+      </setup>
       <answer><m>\sum_{i=1}^{6}2i=2\sum_{i=1}^{6}i=(2)\frac{6(6+1)}{2}=42</m></answer></exercise>
 
-      <exercise><statement><p>Use one of the summation formulas to find <m>1+5+25+125+625</m>.</p></statement>
+      <exercise label="DMT_induction_CYU_sumformr1625"><statement><p>Determine the values of <m>n, r</m> in the summation formula to find <m>1+5+25+125+625</m>.
+      <me>\sum_{i=0}^{n}r^i=\frac{r^{n+1}-1}{r-1}=781</me></p>
+    <p><m>n</m>:<var width="3" />, <m>r</m>:<var width="3" /></p></statement>
+    <setup>
+        <var>
+          <condition number="4">
+             <feedback><p>Correct</p></feedback>
+          </condition>
+          <condition string=".*">
+            <feedback><p>How many terms are there if we start counting at 0?</p></feedback>
+          </condition>
+        </var>
+        <var>
+          <condition number="5">
+            <feedback><p>Correct</p></feedback>
+          </condition>
+          <condition string=".*">
+            <feedback><p>What do you multiply each term by to get the next term?</p></feedback>
+          </condition>
+        </var>
+      </setup>
       <answer><m>\sum_{i=0}^{4}5^i=\frac{5^{4+1}-1}{4}=781</m></answer></exercise>
 
-      <exercise><statement><p>Use one of the summation formulas to find <m>1+7+7^2+\cdots+7^{50}</m>.</p></statement>
+      <exercise label="DMT_induction_CYU_sumformr1750"><statement><p>Determine the values of <m>n, r</m> in the summation formula to find <m>1+7+7^2+\cdots+7^{50}</m>.
+    <me>\sum_{i=0}^{n}r^i=\frac{r^{n+1}-1}{r-1}=781</me></p>
+    <p><m>n</m>:<var width="3" />, <m>r</m>:<var width="3" /></p></statement>
+    <setup>
+        <var>
+          <condition number="50">
+             <feedback><p>Correct</p></feedback>
+          </condition>
+          <condition string=".*">
+            <feedback><p>How many terms are there if we start counting at 0?</p></feedback>
+          </condition>
+        </var>
+        <var>
+          <condition number="7">
+            <feedback><p>Correct</p></feedback>
+          </condition>
+          <condition string=".*">
+            <feedback><p>What do you multiply each term by to get the next term?</p></feedback>
+          </condition>
+        </var>
+      </setup>
       <answer><m>\sum_{i=0}^{50}7^i=\frac{7^{50+1}-1}{6}=\frac{7^{51}-1}{6}</m></answer></exercise>
 
-      <exercise><statement><p>Use one of the summation formulas to find <m>1+7+7^2+\cdots+7^{n}</m>.</p></statement>
+      <exercise label="DMT_induction_CYU_sumformr17n"><statement><p>Write out the rest of the summation formula for <m>1+7+7^2+\cdots+7^{n}</m>.
+      <me>\sum_{i=0}^{n}7^i=</me></p></statement>
+      <response />
       <answer><m>\sum_{i=0}^{n}7^i=\frac{7^{n+1}-1}{6}</m></answer></exercise>
 
-      <exercise><statement><p>Suppose you want to prove <m>\sum_{i=1}^n i^2=\frac{n(n+1)(2n+1)}{6}</m>. Show the formula holds for <m>n=1</m>.</p></statement>
+      <exercise label="DMT_induction_CYU_pfn1sumi2"><statement><p>Suppose you want to prove <m>\sum_{i=1}^n i^2=\frac{n(n+1)(2n+1)}{6}</m>. Show the formula holds for <m>n=1</m>.</p></statement>
+      <response />
+      <hint><p>Use a LHS/RHS proof.</p></hint>
       <answer><p>LHS:<m>\sum_{i=1}^1 i^2=1^2=1</m></p><p>RHS:<m>\frac{1(1+1)(2(1)+1)}{6}=1</m></p></answer></exercise>
 
-      <exercise><statement><p>Suppose you want to prove <m>\sum_{i=1}^n i^2=\frac{n(n+1)(2n+1)}{6}</m>. What should you assume in the induction step?</p></statement>
+      <exercise label="DMT_induction_CYU_pfindasumi2"><statement><p>Suppose you want to prove <m>\sum_{i=1}^n i^2=\frac{n(n+1)(2n+1)}{6}</m>. What should you assume in the induction step?</p></statement>
+      <response />
+      <hint><p>Let <m>n=k</m>.</p></hint>
       <answer><m>\sum_{i=1}^k i^2=\frac{k(k+1)(2k+1)}{6}</m></answer></exercise>
 
-      <exercise><statement><p>Suppose you want to prove <m>\sum_{i=1}^n i^2=\frac{n(n+1)(2n+1)}{6}</m>. What should you show in the induction step?</p></statement>
+      <exercise label="DMT_induction_CYU_pfindssumi2"><statement><p>Suppose you want to prove <m>\sum_{i=1}^n i^2=\frac{n(n+1)(2n+1)}{6}</m>. What should you show in the induction step?</p></statement>
+      <response />
+      <hint><p>Let <m>n=k+1</m>.</p></hint>
       <answer><m>\sum_{i=1}^{k+1} i^2=\frac{(k+1)(k+2)(2(k+1)+1)}{6}=\frac{(k+1)(k+2)(2k+3)}{6}</m></answer></exercise>
 
       
 
-      <exercise><statement><p>Consider <m>\sum_{i=1}^{k} i^3</m>. What is the <m>k+1</m> term in the sum?</p></statement>
+      <exercise label="DMT_induction_CYU_sumi3kp1term"><statement><p>Consider <m>\sum_{i=1}^{k} i^3</m>. What is the <m>k+1</m> term in the sum?</p></statement>
+      <response />
       <answer><m>(k+1)^3</m></answer></exercise>
 
-      <exercise><statement><p>Consider <m>\sum_{i=1}^{k} \frac{1}{i+1}</m>. What is the <m>k+1</m> term in the sum?</p></statement>
+      <exercise label="DMT_induction_CYU_sum1dkp2kp1term"><statement><p>Consider <m>\sum_{i=1}^{k} \frac{1}{i+1}</m>. What is the <m>k+1</m> term in the sum?</p></statement>
+      <response />
       <answer><m>\frac{1}{k+2}</m></answer></exercise>
 
     

@@ -62,8 +62,39 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.0.0dev3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runtime.71ffd81c0faeb38b.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.e543e0dd19670ae2.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.1f1f63d2cda36a4d.css">
 </head>
-<body class="pretext book ignore-math">
+<body id="DiscreteMathText" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" href=""></a><div class="title-container">
 <h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
@@ -549,221 +580,245 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="directproof4-1"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.1</span> <span class="title">Direct Proof and Counterexample</span>
 </h2>
-<div class="para" id="p-693">Before starting proof techniques, we introduce a few mathematical definitons. Keep in mind, mathematical definitions are constructed to provide a common language for proofs. They are intended to provide rigor and precision. They are <em class="emphasis">not</em> intended to provide conceptual understanding. You need to develop conceptual understanding of the terms apart from the definition. However, we need to rely on definitions to provide structure for our proofs.</div>
+<div class="para" id="p-832">Before starting proof techniques, we introduce a few mathematical definitons. Keep in mind, mathematical definitions are constructed to provide a common language for proofs. They are intended to provide rigor and precision. They are <em class="emphasis">not</em> intended to provide conceptual understanding. You need to develop conceptual understanding of the terms apart from the definition. However, we need to rely on definitions to provide structure for our proofs.</div>
 <article class="definition definition-like" id="definition-20"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-694">An integer, <span class="process-math">\(n\text{,}\)</span> is <dfn class="terminology">even</dfn> if it has the form <span class="process-math">\(n=2k\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span>
+<div class="para" id="p-833">An integer, <span class="process-math">\(n\text{,}\)</span> is <dfn class="terminology">even</dfn> if it has the form <span class="process-math">\(n=2k\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span>
 </div></article><article class="definition definition-like" id="definition-21"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-695">An integer <span class="process-math">\(n\text{,}\)</span> is <dfn class="terminology">odd</dfn> if it has the form <span class="process-math">\(n=2k+1\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span>
-</div></article><div class="para" id="p-696">You are probably familiar, generally, with even numbers such as 2, 4, 6, 8, and odd numbers such as 3, 5, 7, 9. But the next example uses the definitions to look at more examples.</div>
+<div class="para" id="p-834">An integer <span class="process-math">\(n\text{,}\)</span> is <dfn class="terminology">odd</dfn> if it has the form <span class="process-math">\(n=2k+1\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span>
+</div></article><div class="para" id="p-835">You are probably familiar, generally, with even numbers such as 2, 4, 6, 8, and odd numbers such as 3, 5, 7, 9. But the next example uses the definitions to look at more examples.</div>
 <article class="example example-like" id="E_evenodd"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_evenodd"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Even or Odd.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_evenodd"><article class="example example-like"> <div class="para" id="p-697">Is -5 even or odd?</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-90" id="answer-90"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-90"><div class="answer solution-like">
-<span class="process-math">\(-5=2(-3)+1\)</span> where <span class="process-math">\(-3\in \mathbb{Z}\text{.}\)</span> Thus, -5 is odd.</div></div> <div class="para" id="p-698">Is 0 even or odd?</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-91" id="answer-91"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-91"><div class="answer solution-like">
-<span class="process-math">\(0=2(0)\)</span> where <span class="process-math">\(0\in \mathbb{Z}\text{.}\)</span> Thus, 0 is even.</div></div> <div class="para" id="p-699">Let <span class="process-math">\(a, b\in \mathbb{Z}\text{.}\)</span> Is <span class="process-math">\(6a^2b\)</span> even or odd?</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-92" id="answer-92"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-92"><div class="answer solution-like">
-<span class="process-math">\(6a^2b=2(3a^2b)\)</span> where <span class="process-math">\(3a^2b\in \mathbb{Z}\text{.}\)</span> Thus <span class="process-math">\(6a^2b\)</span> is even.</div></div> <div class="para" id="p-700">Let <span class="process-math">\(a, b\in \mathbb{Z}\text{.}\)</span> Is <span class="process-math">\(20a-6b+1\)</span> even or odd?</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-93" id="answer-93"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-93"><div class="answer solution-like">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_evenodd"><article class="example example-like"> <div class="para" id="p-836">Is -5 even or odd?</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-90" id="answer-90"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-90"><div class="answer solution-like">
+<span class="process-math">\(-5=2(-3)+1\)</span> where <span class="process-math">\(-3\in \mathbb{Z}\text{.}\)</span> Thus, -5 is odd.</div></div> <div class="para" id="p-837">Is 0 even or odd?</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-91" id="answer-91"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-91"><div class="answer solution-like">
+<span class="process-math">\(0=2(0)\)</span> where <span class="process-math">\(0\in \mathbb{Z}\text{.}\)</span> Thus, 0 is even.</div></div> <div class="para" id="p-838">Let <span class="process-math">\(a, b\in \mathbb{Z}\text{.}\)</span> Is <span class="process-math">\(6a^2b\)</span> even or odd?</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-92" id="answer-92"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-92"><div class="answer solution-like">
+<span class="process-math">\(6a^2b=2(3a^2b)\)</span> where <span class="process-math">\(3a^2b\in \mathbb{Z}\text{.}\)</span> Thus <span class="process-math">\(6a^2b\)</span> is even.</div></div> <div class="para" id="p-839">Let <span class="process-math">\(a, b\in \mathbb{Z}\text{.}\)</span> Is <span class="process-math">\(20a-6b+1\)</span> even or odd?</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-93" id="answer-93"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-93"><div class="answer solution-like">
 <span class="process-math">\(20a-6b+1=2(10a-3b)+1\)</span> where <span class="process-math">\(10a-3b\in \mathbb{Z}\text{.}\)</span> Thus <span class="process-math">\(20a-6b+1\)</span> is odd.</div></div></article></div>
 <article class="activity project-like" id="activity-55"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.1</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-27"><div class="para" id="p-701">Let <span class="process-math">\(a, b\)</span> be integers. Determine if each of the following are always even, always odd, or sometimes even/ sometimes odd.</div></div>
+<div class="introduction" id="introduction-27"><div class="para" id="p-840">Let <span class="process-math">\(a, b\)</span> be integers. Determine if each of the following are always even, always odd, or sometimes even/ sometimes odd.</div></div>
 <article class="task exercise-like" id="task-76"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <span class="process-math">\(12ab^3\)</span></article><article class="task exercise-like" id="task-77"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <span class="process-math">\(3ab\)</span></article><article class="task exercise-like" id="task-78"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <span class="process-math">\(10b^2-4ab+1\)</span></article><article class="task exercise-like" id="task-79"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <span class="process-math">\(4b+3\)</span></article><article class="task exercise-like" id="task-80"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<span class="process-math">\(5a+3b\)</span></article></article><div class="para" id="p-702">We've now seen several examples of even/ odd integers. Are there integers which are both even and odd? Can an integer be neither even nor odd? The answer to both questions is no. However, proving that every integer is even or odd (and not both), is pretty challenging, and we won't try to do it, yet. We will use this fact, though, so if we know an integer is not even, then it must be odd, and vice versa.</div>
+<span class="process-math">\(5a+3b\)</span></article></article><div class="para" id="p-841">We've now seen several examples of even/ odd integers. Are there integers which are both even and odd? Can an integer be neither even nor odd? The answer to both questions is no. However, proving that every integer is even or odd (and not both), is pretty challenging, and we won't try to do it, yet. We will use this fact, though, so if we know an integer is not even, then it must be odd, and vice versa.</div>
 <article class="definition definition-like" id="definition-22"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-703">An integer, <span class="process-math">\(n\text{,}\)</span> is <dfn class="terminology">prime</dfn> if <span class="process-math">\(n&gt;1\)</span> and, for all positive integers <span class="process-math">\(r, s\text{,}\)</span> if  <span class="process-math">\(n=rs\)</span> then <span class="process-math">\(r=1\)</span> or <span class="process-math">\(s=1\text{.}\)</span>
+<div class="para" id="p-842">An integer, <span class="process-math">\(n\text{,}\)</span> is <dfn class="terminology">prime</dfn> if <span class="process-math">\(n&gt;1\)</span> and, for all positive integers <span class="process-math">\(r, s\text{,}\)</span> if  <span class="process-math">\(n=rs\)</span> then <span class="process-math">\(r=1\)</span> or <span class="process-math">\(s=1\text{.}\)</span>
 </div></article><article class="definition definition-like" id="definition-23"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1.5</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-704">An integer, <span class="process-math">\(n\text{,}\)</span> is <dfn class="terminology">composite</dfn> if <span class="process-math">\(n&gt;1\)</span> and <span class="process-math">\(n=rs\)</span> for some positive integers <span class="process-math">\(r, s\)</span> with <span class="process-math">\(r\neq 1\)</span> and <span class="process-math">\(s\neq 1\text{.}\)</span>
+<div class="para" id="p-843">An integer, <span class="process-math">\(n\text{,}\)</span> is <dfn class="terminology">composite</dfn> if <span class="process-math">\(n&gt;1\)</span> and <span class="process-math">\(n=rs\)</span> for some positive integers <span class="process-math">\(r, s\)</span> with <span class="process-math">\(r\neq 1\)</span> and <span class="process-math">\(s\neq 1\text{.}\)</span>
 </div></article><article class="example example-like" id="E_primecomposite"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_primecomposite"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Prime or Composite.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_primecomposite"><article class="example example-like"> <div class="para" id="p-705">Is 1 prime?</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-94" id="answer-94"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-94"><div class="answer solution-like">No. The definiton requires <span class="process-math">\(n&gt;1\text{.}\)</span>
-</div></div> <div class="para" id="p-706">Is 1 composite?</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-95" id="answer-95"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-95"><div class="answer solution-like">No. Again, the definiton requires <span class="process-math">\(n&gt;1\text{.}\)</span>
-</div></div> <div class="para" id="p-707">Is 121 prime?</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-96" id="answer-96"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-96"><div class="answer solution-like">No. <span class="process-math">\(121=(11)(11)\text{.}\)</span> Thus, 121 is composite.</div></div> <div class="para" id="p-708">Let <span class="process-math">\(a\in \mathbb{Z}\text{.}\)</span> Is <span class="process-math">\(3a\)</span> composite?</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-97" id="answer-97"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-97"><div class="answer solution-like">It depends. If <span class="process-math">\(a=1\)</span> then, no. We would need <span class="process-math">\(a&gt;1\)</span> for <span class="process-math">\(3a\)</span> to be composite.</div></div></article></div>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_primecomposite"><article class="example example-like"> <div class="para" id="p-844">Is 1 prime?</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-94" id="answer-94"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-94"><div class="answer solution-like">No. The definiton requires <span class="process-math">\(n&gt;1\text{.}\)</span>
+</div></div> <div class="para" id="p-845">Is 1 composite?</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-95" id="answer-95"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-95"><div class="answer solution-like">No. Again, the definiton requires <span class="process-math">\(n&gt;1\text{.}\)</span>
+</div></div> <div class="para" id="p-846">Is 121 prime?</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-96" id="answer-96"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-96"><div class="answer solution-like">No. <span class="process-math">\(121=(11)(11)\text{.}\)</span> Thus, 121 is composite.</div></div> <div class="para" id="p-847">Let <span class="process-math">\(a\in \mathbb{Z}\text{.}\)</span> Is <span class="process-math">\(3a\)</span> composite?</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-97" id="answer-97"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-97"><div class="answer solution-like">It depends. If <span class="process-math">\(a=1\)</span> then, no. We would need <span class="process-math">\(a&gt;1\)</span> for <span class="process-math">\(3a\)</span> to be composite.</div></div></article></div>
 <article class="activity project-like" id="activity-56"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.2</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-28"><div class="para" id="p-709">Consider the statement “for all positive integers <span class="process-math">\(r\)</span> and <span class="process-math">\(s\text{,}\)</span> if <span class="process-math">\(n=rs\)</span> then <span class="process-math">\(r=1\)</span> or <span class="process-math">\(s=1\)</span>” from the definition for a prime number.</div></div>
+<div class="introduction" id="introduction-28"><div class="para" id="p-848">Consider the statement “for all positive integers <span class="process-math">\(r\)</span> and <span class="process-math">\(s\text{,}\)</span> if <span class="process-math">\(n=rs\)</span> then <span class="process-math">\(r=1\)</span> or <span class="process-math">\(s=1\)</span>” from the definition for a prime number.</div></div>
 <article class="task exercise-like" id="task-81"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-710">Write the statement symbolically using quantifiers and connectives.</div></article><article class="task exercise-like" id="task-82"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-711">Write the negation of the statement symbolically.</div></article><article class="task exercise-like" id="task-83"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-712">How is the negation related to the definition of a composite number? Is every integer either prime or composite?</div></article></article><div class="para" id="p-713">We state our first proof technique.</div>
+<div class="para" id="p-849">Write the statement symbolically using quantifiers and connectives.</div></article><article class="task exercise-like" id="task-82"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-850">Write the negation of the statement symbolically.</div></article><article class="task exercise-like" id="task-83"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-851">How is the negation related to the definition of a composite number? Is every integer either prime or composite?</div></article></article><div class="para" id="p-852">We state our first proof technique.</div>
 <article class="assemblage assemblage-like" id="B_pfbyexample"><h3 class="heading"><span class="title">Proving Existential Statements.</span></h3>
-<div class="para logical" id="p-714">
+<div class="para logical" id="p-853">
 <div class="para">To prove <span class="process-math">\(\exists x\in D, Q(x)\)</span>
 </div>
 <ol class="decimal">
-<li id="li-217"><div class="para" id="p-715">Find <span class="process-math">\(x\in D\)</span> making, <span class="process-math">\(Q(x)\)</span> true. Note, this step may happen as scratchwork, not part of your proof.</div></li>
-<li id="li-218"><div class="para" id="p-716">For your proof, state <span class="process-math">\(x\text{.}\)</span>
+<li id="li-217"><div class="para" id="p-854">Find <span class="process-math">\(x\in D\)</span> making, <span class="process-math">\(Q(x)\)</span> true. Note, this step may happen as scratchwork, not part of your proof.</div></li>
+<li id="li-218"><div class="para" id="p-855">For your proof, state <span class="process-math">\(x\text{.}\)</span>
 </div></li>
-<li id="li-219"><div class="para" id="p-717">Show <span class="process-math">\(x\in D\)</span> and <span class="process-math">\(Q(x)\)</span> is true.</div></li>
+<li id="li-219"><div class="para" id="p-856">Show <span class="process-math">\(x\in D\)</span> and <span class="process-math">\(Q(x)\)</span> is true.</div></li>
 </ol>
 </div>
-<div class="para" id="p-718">This type of proof is called a <dfn class="terminology">constructive proof of existence</dfn>
+<div class="para" id="p-857">This type of proof is called a <dfn class="terminology">constructive proof of existence</dfn>
 </div></article><article class="example example-like" id="E_existentproof1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_existentproof1"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Existential Proof.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_existentproof1"><article class="example example-like"> <div class="para" id="p-719">Prove <span class="process-math">\(\exists n\in\mathbb{Z}\)</span> such that <span class="process-math">\(20=2n\text{.}\)</span>
-</div> <article class="hiddenproof" id="proof-1"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-1"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof"><div class="para" id="p-720">Let <span class="process-math">\(n=10\text{.}\)</span> Then <span class="process-math">\(n\in \mathbb{Z}\)</span> and <span class="process-math">\(2(10)=20\text{.}\)</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_existentproof1"><article class="example example-like"> <div class="para" id="p-858">Prove <span class="process-math">\(\exists n\in\mathbb{Z}\)</span> such that <span class="process-math">\(20=2n\text{.}\)</span>
+</div> <article class="hiddenproof" id="proof-1"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-1"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof"><div class="para" id="p-859">Let <span class="process-math">\(n=10\text{.}\)</span> Then <span class="process-math">\(n\in \mathbb{Z}\)</span> and <span class="process-math">\(2(10)=20\text{.}\)</span>
 </div></article></div></article></div>
 <article class="example example-like" id="E_existentproof2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_existentproof2"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Another Existential Proof.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_existentproof2"><article class="example example-like"> <div class="para" id="p-721">Let <span class="process-math">\(n\in \mathbb{Z}\text{.}\)</span> Prove <span class="process-math">\(\exists m\in\mathbb{Z}\)</span> such that <span class="process-math">\(m&gt;n\text{.}\)</span>
-</div> <article class="hiddenproof" id="proof-2"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-2"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-2"><article class="hiddenproof"><div class="para" id="p-722">Let <span class="process-math">\(m=n+1\text{.}\)</span> Then <span class="process-math">\(n+1\in \mathbb{Z}\)</span> since <span class="process-math">\(n\in \mathbb{Z}\)</span> and <span class="process-math">\(n+1&gt;n\text{.}\)</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_existentproof2"><article class="example example-like"> <div class="para" id="p-860">Let <span class="process-math">\(n\in \mathbb{Z}\text{.}\)</span> Prove <span class="process-math">\(\exists m\in\mathbb{Z}\)</span> such that <span class="process-math">\(m&gt;n\text{.}\)</span>
+</div> <article class="hiddenproof" id="proof-2"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-2"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-2"><article class="hiddenproof"><div class="para" id="p-861">Let <span class="process-math">\(m=n+1\text{.}\)</span> Then <span class="process-math">\(n+1\in \mathbb{Z}\)</span> since <span class="process-math">\(n\in \mathbb{Z}\)</span> and <span class="process-math">\(n+1&gt;n\text{.}\)</span>
 </div></article></div></article></div>
 <article class="activity project-like" id="activity-57"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-723">Let <span class="process-math">\(r, s\in \mathbb{Z}\text{.}\)</span> Prove there exists <span class="process-math">\(k\in \mathbb{Z}\)</span> such that <span class="process-math">\(3k=12r+15s\text{.}\)</span>
-</div></article><div class="para" id="p-724">There are other ways to prove existence. One common way is a proof by contradiction, which we will see later in <a href="contradiction4-5.html" class="internal" title="Section 4.5: Proof by Contradiction and Contrapositive">Section 4.5</a>. There are several examples of existence proofs in calculus where it can be shown that something exists without constructing a specific value. For example, take a look at a proof of Rolle's Theorem, the Mean Value Theorem, the Extreme Value Theorem, or the Taylor Remainder Theorem (Calc II).</div>
-<div class="para" id="p-725">Since the negation of a universal statement is an existential statement, we disprove a universal statements with a <dfn class="terminology">counterexample</dfn>.</div>
+<div class="para" id="p-862">Let <span class="process-math">\(r, s\in \mathbb{Z}\text{.}\)</span> Prove there exists <span class="process-math">\(k\in \mathbb{Z}\)</span> such that <span class="process-math">\(3k=12r+15s\text{.}\)</span>
+</div></article><div class="para" id="p-863">There are other ways to prove existence. One common way is a proof by contradiction, which we will see later in <a href="contradiction4-5.html" class="internal" title="Section 4.5: Proof by Contradiction and Contrapositive">Section 4.5</a>. There are several examples of existence proofs in calculus where it can be shown that something exists without constructing a specific value. For example, take a look at a proof of Rolle's Theorem, the Mean Value Theorem, the Extreme Value Theorem, or the Taylor Remainder Theorem (Calc II).</div>
+<div class="para" id="p-864">Since the negation of a universal statement is an existential statement, we disprove a universal statements with a <dfn class="terminology">counterexample</dfn>.</div>
 <article class="assemblage assemblage-like" id="B_counterexample"><h3 class="heading"><span class="title">Counterexamples.</span></h3>
-<div class="para logical" id="p-726">
+<div class="para logical" id="p-865">
 <div class="para">To disprove the statement <span class="process-math">\(\forall x\in D, P(x)\rightarrow Q(x)\)</span>
 </div>
 <ol class="decimal">
-<li id="li-220"><div class="para" id="p-727">Find the negation of the statement: <span class="process-math">\(\exists x\in D, P(x)\wedge \sim Q(x)\text{.}\)</span>
+<li id="li-220"><div class="para" id="p-866">Find the negation of the statement: <span class="process-math">\(\exists x\in D, P(x)\wedge \sim Q(x)\text{.}\)</span>
 </div></li>
-<li id="li-221"><div class="para" id="p-728">Find <span class="process-math">\(x\in D\)</span> making, <span class="process-math">\(P(x)\)</span> true and <span class="process-math">\(Q(x)\)</span> false. Note, this step may happen as scratchwork, not part of your counterexample.</div></li>
-<li id="li-222"><div class="para" id="p-729">For your counterexample, state <span class="process-math">\(x\text{.}\)</span>
+<li id="li-221"><div class="para" id="p-867">Find <span class="process-math">\(x\in D\)</span> making, <span class="process-math">\(P(x)\)</span> true and <span class="process-math">\(Q(x)\)</span> false. Note, this step may happen as scratchwork, not part of your counterexample.</div></li>
+<li id="li-222"><div class="para" id="p-868">For your counterexample, state <span class="process-math">\(x\text{.}\)</span>
 </div></li>
-<li id="li-223"><div class="para" id="p-730">Show <span class="process-math">\(x\in D\text{,}\)</span> <span class="process-math">\(P(x)\)</span> is true and <span class="process-math">\(Q(x)\)</span> is false.</div></li>
+<li id="li-223"><div class="para" id="p-869">Show <span class="process-math">\(x\in D\text{,}\)</span> <span class="process-math">\(P(x)\)</span> is true and <span class="process-math">\(Q(x)\)</span> is false.</div></li>
 </ol>
-</div></article><div class="para" id="p-731">A counterexample is really just an existence proof of the negation. But since we are showing the original statement is false, we usually just call it a counterexample to the (original) statement.</div>
+</div></article><div class="para" id="p-870">A counterexample is really just an existence proof of the negation. But since we are showing the original statement is false, we usually just call it a counterexample to the (original) statement.</div>
 <article class="example example-like" id="E_counterex1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_counterex1"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Counterexample.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_counterex1"><article class="example example-like"> <div class="para" id="p-732">Disprove the statement: Every prime number, <span class="process-math">\(p\text{,}\)</span> is odd.</div> <div class="para" id="p-733">Let <span class="process-math">\(p=2\text{.}\)</span> Then <span class="process-math">\(2\)</span> is prime and <span class="process-math">\(2\)</span> is not odd.</div></article></div>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_counterex1"><article class="example example-like"> <div class="para" id="p-871">Disprove the statement: Every prime number, <span class="process-math">\(p\text{,}\)</span> is odd.</div> <div class="para" id="p-872">Let <span class="process-math">\(p=2\text{.}\)</span> Then <span class="process-math">\(2\)</span> is prime and <span class="process-math">\(2\)</span> is not odd.</div></article></div>
 <article class="activity project-like" id="activity-58"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-734">Give a counterexample to show the following statement is false: For all <span class="process-math">\(a, b\in \mathbb{R}\)</span> if <span class="process-math">\(a^2=b^2\)</span> then <span class="process-math">\(a=b\text{.}\)</span>
-</div></article><div class="para" id="p-735">One of the most common mathematical statements is the universal conditional. We will see several techniques for proving <span class="process-math">\(\forall x\in D, P(x)\rightarrow Q(x)\text{.}\)</span> The first method, method of exhaustion, is very limited, but worth mentioning.</div>
+<div class="para" id="p-873">Give a counterexample to show the following statement is false: For all <span class="process-math">\(a, b\in \mathbb{R}\)</span> if <span class="process-math">\(a^2=b^2\)</span> then <span class="process-math">\(a=b\text{.}\)</span>
+</div></article><div class="para" id="p-874">One of the most common mathematical statements is the universal conditional. We will see several techniques for proving <span class="process-math">\(\forall x\in D, P(x)\rightarrow Q(x)\text{.}\)</span> The first method, method of exhaustion, is very limited, but worth mentioning.</div>
 <article class="assemblage assemblage-like" id="B_mothofexhaust"><h3 class="heading"><span class="title">Method of Exhaustion.</span></h3>
-<div class="para logical" id="p-736">
+<div class="para logical" id="p-875">
 <div class="para">To prove <span class="process-math">\(\forall x\in D, P(x)\rightarrow Q(x)\text{,}\)</span> where <span class="process-math">\(D\)</span> is a finite set:</div>
-<ul class="disc"><li id="li-224"><div class="para" id="p-737">For each specific <span class="process-math">\(a\in D\)</span> where <span class="process-math">\(P(a)\)</span> is true, show <span class="process-math">\(Q(a)\)</span> is true.</div></li></ul>
+<ul class="disc"><li id="li-224"><div class="para" id="p-876">For each specific <span class="process-math">\(a\in D\)</span> where <span class="process-math">\(P(a)\)</span> is true, show <span class="process-math">\(Q(a)\)</span> is true.</div></li></ul>
 </div></article><article class="example example-like" id="E_pfbyexhaustion"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_pfbyexhaustion"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Method of Exaustion.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_pfbyexhaustion"><article class="example example-like"> <div class="para" id="p-738">Prove for all <span class="process-math">\(n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n\)</span> is even and <span class="process-math">\(4\leq n\leq 16\text{,}\)</span> then <span class="process-math">\(n\)</span> can be written as the sum of prime numbers.</div> <article class="hiddenproof" id="proof-3"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-3"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof"><div class="para" id="p-739">We can find all the integers that are even and <span class="process-math">\(4\leq n\leq 16\text{.}\)</span> This is the set <span class="process-math">\(\{4, 6, 8, 10, 12, 14, 16\}\text{.}\)</span> For each of these numbers we can demonstrate a way to write them as the sum of primes: <span class="process-math">\(4=2+2, 6=3+3, 8=3+5, 10=3+7, 12=5+7, 14=7+7, 16=11+5\text{.}\)</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_pfbyexhaustion"><article class="example example-like"> <div class="para" id="p-877">Prove for all <span class="process-math">\(n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n\)</span> is even and <span class="process-math">\(4\leq n\leq 16\text{,}\)</span> then <span class="process-math">\(n\)</span> can be written as the sum of prime numbers.</div> <article class="hiddenproof" id="proof-3"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-3"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof"><div class="para" id="p-878">We can find all the integers that are even and <span class="process-math">\(4\leq n\leq 16\text{.}\)</span> This is the set <span class="process-math">\(\{4, 6, 8, 10, 12, 14, 16\}\text{.}\)</span> For each of these numbers we can demonstrate a way to write them as the sum of primes: <span class="process-math">\(4=2+2, 6=3+3, 8=3+5, 10=3+7, 12=5+7, 14=7+7, 16=11+5\text{.}\)</span>
 </div></article></div></article></div>
-<div class="para" id="p-740">The method of exhaustion only works if we can show the statement for every <span class="process-math">\(x\in D\text{.}\)</span> But if <span class="process-math">\(D\)</span> is infinite, we need to use a more general method.</div>
+<div class="para" id="p-879">The method of exhaustion only works if we can show the statement for every <span class="process-math">\(x\in D\text{.}\)</span> But if <span class="process-math">\(D\)</span> is infinite, we need to use a more general method.</div>
 <article class="assemblage assemblage-like" id="B_directproof"><h3 class="heading"><span class="title">Method of Direct Proof.</span></h3>
-<div class="para logical" id="p-741">
+<div class="para logical" id="p-880">
 <div class="para">To prove <span class="process-math">\(\forall x\in D, P(x)\rightarrow Q(x)\text{:}\)</span>
 </div>
 <ul class="disc">
-<li id="li-225"><div class="para" id="p-742">Let <span class="process-math">\(x\in D\)</span> (make sure this is a variable, or generic, <span class="process-math">\(x\text{,}\)</span> not a specific value).</div></li>
-<li id="li-226"><div class="para" id="p-743">Assume <span class="process-math">\(P(x)\)</span> is true.</div></li>
-<li id="li-227"><div class="para" id="p-744">Show <span class="process-math">\(Q(x)\)</span> is true.</div></li>
+<li id="li-225"><div class="para" id="p-881">Let <span class="process-math">\(x\in D\)</span> (make sure this is a variable, or generic, <span class="process-math">\(x\text{,}\)</span> not a specific value).</div></li>
+<li id="li-226"><div class="para" id="p-882">Assume <span class="process-math">\(P(x)\)</span> is true.</div></li>
+<li id="li-227"><div class="para" id="p-883">Show <span class="process-math">\(Q(x)\)</span> is true.</div></li>
 </ul>
 </div></article><article class="example example-like" id="E_dpconsecnumevenodd"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_dpconsecnumevenodd"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.11</span><span class="period">.</span><span class="space"> </span><span class="title">Direct Proof.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_dpconsecnumevenodd"><article class="example example-like"> <div class="para" id="p-745">Prove for all <span class="process-math">\(x \in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(x\)</span> is even, then <span class="process-math">\(x+1\)</span> is odd.</div> <article class="hiddenproof" id="proof-4"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-4"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof"><div class="para" id="p-746">Let <span class="process-math">\(x\)</span> be even. Then by definition, <span class="process-math">\(x=2k\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span> Then <span class="process-math">\(x+1=2k+1\)</span> where <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span> Which means <span class="process-math">\(x+1\)</span> is odd.</div></article></div></article></div>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_dpconsecnumevenodd"><article class="example example-like"> <div class="para" id="p-884">Prove for all <span class="process-math">\(x \in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(x\)</span> is even, then <span class="process-math">\(x+1\)</span> is odd.</div> <article class="hiddenproof" id="proof-4"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-4"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof"><div class="para" id="p-885">Let <span class="process-math">\(x\)</span> be even. Then by definition, <span class="process-math">\(x=2k\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span> Then <span class="process-math">\(x+1=2k+1\)</span> where <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span> Which means <span class="process-math">\(x+1\)</span> is odd.</div></article></div></article></div>
 <article class="example example-like" id="E_dpsumevens"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_dpsumevens"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.12</span><span class="period">.</span><span class="space"> </span><span class="title">Sum of Even Numbers.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_dpsumevens"><article class="example example-like"> <div class="para" id="p-747">Prove the sum of two even integers is even.</div> <div class="para" id="p-748">Note, this statement is not obviously in the form of an if...then. We often have to translate statements into a more formal statement before proving them. Translation:</div> <div class="para" id="p-749">Prove for all <span class="process-math">\(a, b\in \mathbb{Z}\)</span> if <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are even, then <span class="process-math">\(a+b\)</span> is even.</div> <article class="hiddenproof" id="proof-5"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-5"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-5"><article class="hiddenproof"><div class="para" id="p-750">Let <span class="process-math">\(a, b\)</span> be even. Then by definition, <span class="process-math">\(a=2k\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\)</span> and <span class="process-math">\(b=2j\)</span> for some <span class="process-math">\(j\in \mathbb{Z}\text{.}\)</span> (Note, we cannot use <span class="process-math">\(k\)</span> for both <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> as they likely are two different numbers.) Then <span class="process-math">\(a+b=2k+2j=2(k+j)\)</span> where <span class="process-math">\(k+j\in \mathbb{Z}\text{.}\)</span> Which means <span class="process-math">\(a+b\)</span> is even.</div></article></div></article></div>
-<div class="para logical" id="p-751">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_dpsumevens"><article class="example example-like"> <div class="para" id="p-886">Prove the sum of two even integers is even.</div> <div class="para" id="p-887">Note, this statement is not obviously in the form of an if...then. We often have to translate statements into a more formal statement before proving them. Translation:</div> <div class="para" id="p-888">Prove for all <span class="process-math">\(a, b\in \mathbb{Z}\)</span> if <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are even, then <span class="process-math">\(a+b\)</span> is even.</div> <article class="hiddenproof" id="proof-5"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-5"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-5"><article class="hiddenproof"><div class="para" id="p-889">Let <span class="process-math">\(a, b\)</span> be even. Then by definition, <span class="process-math">\(a=2k\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\)</span> and <span class="process-math">\(b=2j\)</span> for some <span class="process-math">\(j\in \mathbb{Z}\text{.}\)</span> (Note, we cannot use <span class="process-math">\(k\)</span> for both <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> as they likely are two different numbers.) Then <span class="process-math">\(a+b=2k+2j=2(k+j)\)</span> where <span class="process-math">\(k+j\in \mathbb{Z}\text{.}\)</span> Which means <span class="process-math">\(a+b\)</span> is even.</div></article></div></article></div>
+<div class="para logical" id="p-890">
 <div class="para">Some proof writing advice:</div>
 <ul class="disc">
-<li id="li-228"><div class="para" id="p-752">Make the proof self-contained. Try not to reference many other mathematical facts. Many proofs in this course will rely entirely on definitions.</div></li>
-<li id="li-229"><div class="para" id="p-753">Use complete sentences. Even equations have a sentence structure. Your proof should be able to be read in sentences.</div></li>
-<li id="li-230"><div class="para" id="p-754">Give reasons. Connect your statements together.</div></li>
-<li id="li-231"><div class="para" id="p-755">Include words. Often using a word is better that using a symbol. Many proofs have no symbols in them at all.</div></li>
-<li id="li-232"><div class="para" id="p-756">The audience for your proofs is not the instructor. Think of the audience as being your peers in the course or even yourself in a few weeks (or months) when you might have forgotten the specific content. Write so you will know what you meant later.</div></li>
-<li id="li-233"><div class="para" id="p-757">The goal of a proof is to write a clear, easy to follow, argument--not to just get to the end. The “answer” is the proof itself. Use space, start a new line, set equations on their own line.</div></li>
-<li id="li-234"><div class="para" id="p-758">Never feel that you have to be able to know what the end of the proof will look like before you can start. Write proofs  one step at a time. Start with what you know. See if you can do one thing. See if you can do another thing. Look at where you want to go. Do not try to see the whole picture at once. This is also good advice for reading a proof.</div></li>
+<li id="li-228"><div class="para" id="p-891">Make the proof self-contained. Try not to reference many other mathematical facts. Many proofs in this course will rely entirely on definitions.</div></li>
+<li id="li-229"><div class="para" id="p-892">Use complete sentences. Even equations have a sentence structure. Your proof should be able to be read in sentences.</div></li>
+<li id="li-230"><div class="para" id="p-893">Give reasons. Connect your statements together.</div></li>
+<li id="li-231"><div class="para" id="p-894">Include words. Often using a word is better that using a symbol. Many proofs have no symbols in them at all.</div></li>
+<li id="li-232"><div class="para" id="p-895">The audience for your proofs is not the instructor. Think of the audience as being your peers in the course or even yourself in a few weeks (or months) when you might have forgotten the specific content. Write so you will know what you meant later.</div></li>
+<li id="li-233"><div class="para" id="p-896">The goal of a proof is to write a clear, easy to follow, argument--not to just get to the end. The “answer” is the proof itself. Use space, start a new line, set equations on their own line.</div></li>
+<li id="li-234"><div class="para" id="p-897">Never feel that you have to be able to know what the end of the proof will look like before you can start. Write proofs  one step at a time. Start with what you know. See if you can do one thing. See if you can do another thing. Look at where you want to go. Do not try to see the whole picture at once. This is also good advice for reading a proof.</div></li>
 </ul>
 </div>
-<div class="para logical" id="p-759">
+<div class="para logical" id="p-898">
 <div class="para">Some common proof-writing errors:</div>
 <ul class="disc">
-<li id="li-235"><div class="para" id="p-760">Using an example for a proof. If you need to prove a statement for all <span class="process-math">\(x\text{,}\)</span> it is not nough to show it for an example.</div></li>
-<li id="li-236"><div class="para" id="p-761">Using the same variable to represent two different things.</div></li>
-<li id="li-237"><div class="para" id="p-762">Jumping to conclusions. Giving inadequate reasons. This often occur if you rely on additional mathematical ideas or don't connect your ideas to each other.</div></li>
-<li id="li-238"><div class="para" id="p-763">Assuming what you need to prove. This is a big one. This most often occurs when there is confusion about conditional statements. Be careful about identifying the “if” and the “then” in a statement.</div></li>
+<li id="li-235"><div class="para" id="p-899">Using an example for a proof. If you need to prove a statement for all <span class="process-math">\(x\text{,}\)</span> it is not nough to show it for an example.</div></li>
+<li id="li-236"><div class="para" id="p-900">Using the same variable to represent two different things.</div></li>
+<li id="li-237"><div class="para" id="p-901">Jumping to conclusions. Giving inadequate reasons. This often occur if you rely on additional mathematical ideas or don't connect your ideas to each other.</div></li>
+<li id="li-238"><div class="para" id="p-902">Assuming what you need to prove. This is a big one. This most often occurs when there is confusion about conditional statements. Be careful about identifying the “if” and the “then” in a statement.</div></li>
 </ul>
 </div>
-<div class="para" id="p-764">Often in math we need to identify whether a statement is true or false, so that we know whether we need to prove the true statement or disprove the false one.</div>
+<div class="para" id="p-903">Often in math we need to identify whether a statement is true or false, so that we know whether we need to prove the true statement or disprove the false one.</div>
 <article class="example example-like" id="provedisproveprime"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-provedisproveprime"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.13</span><span class="period">.</span><span class="space"> </span><span class="title">Prove or Disprove.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-provedisproveprime"><article class="example example-like"> <div class="para" id="p-765">Prove or disprove there exists a positive integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(n^2+3n+2\)</span> is prime.</div> <div class="para" id="p-766">Since we need to try to decide if the statement is true or false, first try some examples.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-98" id="answer-98"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-98"><div class="answer solution-like"><div class="displaymath process-math" id="md-2">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-provedisproveprime"><article class="example example-like"> <div class="para" id="p-904">Prove or disprove there exists a positive integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(n^2+3n+2\)</span> is prime.</div> <div class="para" id="p-905">Since we need to try to decide if the statement is true or false, first try some examples.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-98" id="answer-98"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-98"><div class="answer solution-like"><div class="displaymath process-math" id="md-2">
 \begin{gather*}
 n=1; n^2+3n+2=6; \textrm{not prime}\\
 n=5; n^2+3n+2=42; \textrm{not prime}\\
 n=8; n^2+3n+2=90; \textrm{not prime}
 \end{gather*}
-</div></div></div> <div class="para" id="p-767">After trying several examples, we might guess that it is false. If we want to disprove the statement then we need to prove the negation. Find the negation of the statement.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-99" id="answer-99"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-99"><div class="answer solution-like"><div class="para" id="p-768">For all positive integers <span class="process-math">\(n, n^2+3n+2\)</span> is not prime (is composite).</div></div></div> <div class="para" id="p-769">So we need to show that for a general <span class="process-math">\(n\)</span> we can always write <span class="process-math">\(n^2+3n+2\)</span> as a product of <span class="process-math">\(r, s\)</span> with <span class="process-math">\(r, s\neq 1\text{.}\)</span>
-</div> <div class="para" id="p-770">We can try to factor the expression: <span class="process-math">\(n^2+3n+2=(n+2)(n+1)\text{.}\)</span>
-</div> <div class="para" id="p-771">Let <span class="process-math">\(r=n+2, s=n+1\text{.}\)</span> We need to show that <span class="process-math">\(r, s\neq 1\text{.}\)</span> Since <span class="process-math">\(n&gt;0, n+2&gt;2\)</span> and <span class="process-math">\(n+1&gt;1\text{.}\)</span> Thus <span class="process-math">\(r, s\neq 1\text{.}\)</span> Therefore, <span class="process-math">\(n^2+3n+2\)</span> is not prime.</div></article></div>
+</div></div></div> <div class="para" id="p-906">After trying several examples, we might guess that it is false. If we want to disprove the statement then we need to prove the negation. Find the negation of the statement.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-99" id="answer-99"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-99"><div class="answer solution-like"><div class="para" id="p-907">For all positive integers <span class="process-math">\(n, n^2+3n+2\)</span> is not prime (is composite).</div></div></div> <div class="para" id="p-908">So we need to show that for a general <span class="process-math">\(n\)</span> we can always write <span class="process-math">\(n^2+3n+2\)</span> as a product of <span class="process-math">\(r, s\)</span> with <span class="process-math">\(r, s\neq 1\text{.}\)</span>
+</div> <div class="para" id="p-909">We can try to factor the expression: <span class="process-math">\(n^2+3n+2=(n+2)(n+1)\text{.}\)</span>
+</div> <div class="para" id="p-910">Let <span class="process-math">\(r=n+2, s=n+1\text{.}\)</span> We need to show that <span class="process-math">\(r, s\neq 1\text{.}\)</span> Since <span class="process-math">\(n&gt;0, n+2&gt;2\)</span> and <span class="process-math">\(n+1&gt;1\text{.}\)</span> Thus <span class="process-math">\(r, s\neq 1\text{.}\)</span> Therefore, <span class="process-math">\(n^2+3n+2\)</span> is not prime.</div></article></div>
 <article class="activity project-like" id="activity-59"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.5</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-29"><div class="para" id="p-772">Prove or disprove the following statements.</div></div>
+<div class="introduction" id="introduction-29"><div class="para" id="p-911">Prove or disprove the following statements.</div></div>
 <article class="task exercise-like" id="task-84"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-773">If <span class="process-math">\(n\)</span> is even, then <span class="process-math">\(5n\)</span> is even.</div></article><article class="task exercise-like" id="task-85"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-774">If <span class="process-math">\(n\)</span> is odd, then <span class="process-math">\(5n+1\)</span> is odd.</div></article><article class="task exercise-like" id="task-86"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-775">If <span class="process-math">\(n\)</span> and <span class="process-math">\(m\)</span> are odd, then their product, <span class="process-math">\(nm\text{,}\)</span>  is odd.</div></article></article><section class="reading-questions" id="reading-questions-11"><h3 class="heading hide-type">
+<div class="para" id="p-912">If <span class="process-math">\(n\)</span> is even, then <span class="process-math">\(5n\)</span> is even.</div></article><article class="task exercise-like" id="task-85"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-913">If <span class="process-math">\(n\)</span> is odd, then <span class="process-math">\(5n+1\)</span> is odd.</div></article><article class="task exercise-like" id="task-86"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-914">If <span class="process-math">\(n\)</span> and <span class="process-math">\(m\)</span> are odd, then their product, <span class="process-math">\(nm\text{,}\)</span>  is odd.</div></article></article><section class="reading-questions" id="reading-questions-11"><h3 class="heading hide-type">
 <span class="type">Reading Questions</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-131"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-776">True or false: <span class="process-math">\(\forall n\in \mathbb{Z}, 5n+3\)</span> is odd.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-100" id="answer-100"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-100"><div class="answer solution-like">False.</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-132"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-777">True or false: <span class="process-math">\(\forall n\in \mathbb{Z}, 5n+3\)</span> is even.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-101" id="answer-101"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-101"><div class="answer solution-like">False.</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-133"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-778">True or false: <span class="process-math">\(\forall n\in \mathbb{Z}, 2n+7\)</span> is odd.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-102" id="answer-102"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-102"><div class="answer solution-like">True.</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-134"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-779">True or false: <span class="process-math">\(\forall n\in \mathbb{Z}, 4n+12\)</span> is even.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-103" id="answer-103"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-103"><div class="answer solution-like">True.</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-135"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-780">True or false: <span class="process-math">\(\forall n\in \mathbb{Z},\)</span> if <span class="process-math">\(n\)</span> is even, then <span class="process-math">\(n^2\)</span> is even.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-104" id="answer-104"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-104"><div class="answer solution-like">True.</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-136"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-781">True or False: 99 is composite.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-105" id="answer-105"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-105"><div class="answer solution-like">True.</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-137"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-782">True or False: -99 is composite.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-106" id="answer-106"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-106"><div class="answer solution-like">False.</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-138"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="p-783">True or false: <span class="process-math">\(\forall n\in \mathbb{Z}, n^2+1\)</span> is prime.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-107" id="answer-107"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-107"><div class="answer solution-like">False.</div></div>
-</div></article></section><section class="exercises" id="exercises-11"><h3 class="heading hide-type">
+<article class="exercise exercise-like" id="DMT_direct_CYU_5np3odd"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_direct_CYU_5np3odd">
+<div class="para" id="p-915">True or false: <span class="process-math">\(\forall n\in \mathbb{Z}, 5n+3\)</span> is odd.</div>
+<li data-component="answer" id="DMT_direct_CYU_5np3odd_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="DMT_direct_CYU_5np3odd_opt_t">
+<li data-component="answer" id="DMT_direct_CYU_5np3odd_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="DMT_direct_CYU_5np3odd_opt_f">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_direct_CYU_5np3even"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_direct_CYU_5np3even">
+<div class="para" id="p-916">True or false: <span class="process-math">\(\forall n\in \mathbb{Z}, 5n+3\)</span> is even.</div>
+<li data-component="answer" id="DMT_direct_CYU_5np3even_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="DMT_direct_CYU_5np3even_opt_t">
+<li data-component="answer" id="DMT_direct_CYU_5np3even_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="DMT_direct_CYU_5np3even_opt_f">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_direct_CYU_2np7odd"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_direct_CYU_2np7odd">
+<div class="para" id="p-917">True or false: <span class="process-math">\(\forall n\in \mathbb{Z}, 2n+7\)</span> is odd.</div>
+<li data-component="answer" id="DMT_direct_CYU_2np7odd_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="DMT_direct_CYU_2np7odd_opt_t">
+<li data-component="answer" id="DMT_direct_CYU_2np7odd_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="DMT_direct_CYU_2np7odd_opt_f">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_direct_CYU_4np12even"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_direct_CYU_4np12even">
+<div class="para" id="p-918">True or false: <span class="process-math">\(\forall n\in \mathbb{Z}, 4n+12\)</span> is even.</div>
+<li data-component="answer" id="DMT_direct_CYU_4np12even_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="DMT_direct_CYU_4np12even_opt_t">
+<li data-component="answer" id="DMT_direct_CYU_4np12even_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="DMT_direct_CYU_4np12even_opt_f">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_direct_CYU_n2even"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_direct_CYU_n2even">
+<div class="para" id="p-919">True or false: <span class="process-math">\(\forall n\in \mathbb{Z},\)</span> if <span class="process-math">\(n\)</span> is even, then <span class="process-math">\(n^2\)</span> is even.</div>
+<li data-component="answer" id="DMT_direct_CYU_n2even_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="DMT_direct_CYU_n2even_opt_t">
+<li data-component="answer" id="DMT_direct_CYU_n2even_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="DMT_direct_CYU_n2even_opt_f">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_direct_CYU_99comp"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_direct_CYU_99comp">
+<div class="para" id="p-920">True or false: 99 is composite.</div>
+<li data-component="answer" id="DMT_direct_CYU_99comp_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="DMT_direct_CYU_99comp_opt_t">
+<li data-component="answer" id="DMT_direct_CYU_99comp_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="DMT_direct_CYU_99comp_opt_f">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_direct_CYU_neg99comp"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_direct_CYU_neg99comp">
+<div class="para" id="p-921">True or false: -99 is composite.</div>
+<li data-component="answer" id="DMT_direct_CYU_neg99comp_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="DMT_direct_CYU_neg99comp_opt_t">
+<li data-component="answer" id="DMT_direct_CYU_neg99comp_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="DMT_direct_CYU_neg99comp_opt_f">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_direct_CYU_n2p1prime"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_direct_CYU_n2p1prime">
+<div class="para" id="p-922">True or false: <span class="process-math">\(\forall n\in \mathbb{Z}, n^2+1\)</span> is prime.</div>
+<li data-component="answer" id="DMT_direct_CYU_n2p1prime_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="DMT_direct_CYU_n2p1prime_opt_t">
+<li data-component="answer" id="DMT_direct_CYU_n2p1prime_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="DMT_direct_CYU_n2p1prime_opt_f">
+</ul></div></div></article></section><section class="exercises" id="exercises-11"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="exercise-139"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-784">Use the definitions of even, odd, prime, and composite to justify your answer to each of the following questions. Let <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> be integers.</div> <ol class="lower-alpha">
-<li id="li-239"><div class="para" id="p-785">Is <span class="process-math">\(6m+8n\)</span> even?</div></li>
-<li id="li-240"><div class="para" id="p-786">Is <span class="process-math">\(10mn +7\)</span> odd?</div></li>
-<li id="li-241"><div class="para" id="p-787">If <span class="process-math">\(m&gt;n&gt;0\text{,}\)</span> is <span class="process-math">\(m^2-n^2\)</span> composite?</div></li>
+<div class="para" id="p-923">Use the definitions of even, odd, prime, and composite to justify your answer to each of the following questions. Let <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> be integers.</div> <ol class="lower-alpha">
+<li id="li-239"><div class="para" id="p-924">Is <span class="process-math">\(6m+8n\)</span> even?</div></li>
+<li id="li-240"><div class="para" id="p-925">Is <span class="process-math">\(10mn +7\)</span> odd?</div></li>
+<li id="li-241"><div class="para" id="p-926">If <span class="process-math">\(m&gt;n&gt;0\text{,}\)</span> is <span class="process-math">\(m^2-n^2\)</span> composite?</div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-140"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-788">Prove there are integers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> such that <span class="process-math">\(m&gt;1\)</span> and <span class="process-math">\(n&gt;1\)</span> and <span class="process-math">\(\frac{1}{n}+\frac{1}{m}\)</span> is an integer.</div></article><article class="exercise exercise-like" id="exercise-141"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-789">Prove there is an integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(2n^2-5n+2\)</span> is prime.</div></article><article class="exercise exercise-like" id="exercise-142"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-790">Disprove by giving a counterexample: For all real numbers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> if <span class="process-math">\(a&lt;b\)</span> then <span class="process-math">\(a^2&lt;b^2\text{.}\)</span>
+<div class="para" id="p-927">Prove there are integers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> such that <span class="process-math">\(m&gt;1\)</span> and <span class="process-math">\(n&gt;1\)</span> and <span class="process-math">\(\frac{1}{n}+\frac{1}{m}\)</span> is an integer.</div></article><article class="exercise exercise-like" id="exercise-141"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-928">Prove there is an integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(2n^2-5n+2\)</span> is prime.</div></article><article class="exercise exercise-like" id="exercise-142"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="p-929">Disprove by giving a counterexample: For all real numbers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> if <span class="process-math">\(a&lt;b\)</span> then <span class="process-math">\(a^2&lt;b^2\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-143"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-791">Disprove by giving a counterexample: For all integers, <span class="process-math">\(m\)</span> and <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(2m+n\)</span> is odd then <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> are both odd.</div></article><article class="exercise exercise-like" id="exercise-144"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-792">Find the mistakes in the following “proof.”</div> <div class="para" id="p-793">
-<dfn class="terminology">Theorem:</dfn> For all integers <span class="process-math">\(k\text{,}\)</span> if <span class="process-math">\(k&gt;0\)</span> then <span class="process-math">\(k^2+2k+1\)</span> is composite.</div> <div class="para" id="p-794">
+<div class="para" id="p-930">Disprove by giving a counterexample: For all integers, <span class="process-math">\(m\)</span> and <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(2m+n\)</span> is odd then <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> are both odd.</div></article><article class="exercise exercise-like" id="exercise-144"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="p-931">Find the mistakes in the following “proof.”</div> <div class="para" id="p-932">
+<dfn class="terminology">Theorem:</dfn> For all integers <span class="process-math">\(k\text{,}\)</span> if <span class="process-math">\(k&gt;0\)</span> then <span class="process-math">\(k^2+2k+1\)</span> is composite.</div> <div class="para" id="p-933">
 <dfn class="terminology">“Proof”:</dfn> For <span class="process-math">\(k=2\text{,}\)</span> <span class="process-math">\(k^2+2k+1=2^2+2\cdot 2 +1=9\text{.}\)</span> But <span class="process-math">\(9=3\cdot 3\text{,}\)</span> and so 9 is composite. Hence the theorem is true.</div></article><article class="exercise exercise-like" id="exercise-145"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-795">Find the mistakes in the following “proof.”</div> <div class="para" id="p-796">
-<dfn class="terminology">Theorem:</dfn> The difference between any odd integer and any even integer is odd.</div> <div class="para logical" id="p-797">
+<div class="para" id="p-934">Find the mistakes in the following “proof.”</div> <div class="para" id="p-935">
+<dfn class="terminology">Theorem:</dfn> The difference between any odd integer and any even integer is odd.</div> <div class="para logical" id="p-936">
 <div class="para">
 <dfn class="terminology">“Proof”:</dfn> Suppose <span class="process-math">\(n\)</span> is an odd integer, and <span class="process-math">\(m\)</span> is an even integer. By definition of odd, <span class="process-math">\(n=2k+1\)</span> where <span class="process-math">\(k\)</span> is an integer, and by definition of even <span class="process-math">\(m=2k\)</span> where <span class="process-math">\(k\)</span> is an integer. Then</div>
 <div class="displaymath process-math">
@@ -773,14 +828,14 @@ n-m=2k+1-2k=1.
 </div>
 <div class="para">Since 1 is odd the difference between an odd integer and and even integer is odd.</div>
 </div></article><article class="exercise exercise-like" id="exercise-146"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="p-798">Prove the difference of any even integer minus any odd integer is odd.</div></article><article class="exercise exercise-like" id="exercise-147"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<div class="para" id="p-799">Prove the sum of any two odd integers is even.</div></article><article class="exercise exercise-like" id="exercise-148"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
-<div class="para" id="p-800">Prove the following statement is false: There exists an integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(6n^2+27\)</span> is prime.</div></article><article class="exercise exercise-like" id="exercise-149"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
-<div class="para" id="p-801">For the following problems determine if they are true of false. Prove the true statements and provide counterexamples for the false statements.</div> <ol class="lower-alpha">
-<li id="li-242"><div class="para" id="p-802">The product of any even integer and any integer is even.</div></li>
-<li id="li-243"><div class="para" id="p-803">For all integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n\)</span> is prime then <span class="process-math">\((-1)^n=-1\text{.}\)</span>
+<div class="para" id="p-937">Prove the difference of any even integer minus any odd integer is odd.</div></article><article class="exercise exercise-like" id="exercise-147"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="para" id="p-938">Prove the sum of any two odd integers is even.</div></article><article class="exercise exercise-like" id="exercise-148"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="para" id="p-939">Prove the following statement is false: There exists an integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(6n^2+27\)</span> is prime.</div></article><article class="exercise exercise-like" id="exercise-149"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="para" id="p-940">For the following problems determine if they are true of false. Prove the true statements and provide counterexamples for the false statements.</div> <ol class="lower-alpha">
+<li id="li-242"><div class="para" id="p-941">The product of any even integer and any integer is even.</div></li>
+<li id="li-243"><div class="para" id="p-942">For all integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n\)</span> is prime then <span class="process-math">\((-1)^n=-1\text{.}\)</span>
 </div></li>
-<li id="li-244"><div class="para" id="p-804">For all integers <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(n^2-n+11\)</span> is a prime number.</div></li>
+<li id="li-244"><div class="para" id="p-943">For all integers <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(n^2-n+11\)</span> is a prime number.</div></li>
 </ol></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="chapter4.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="rationals4-2.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
@@ -789,5 +844,13 @@ n-m=2k+1-2k=1.
 <div id="ptx-page-footer">
 <a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12894193;
+var sc_invisible=1;
+var sc_security="e67c59eb";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12894193/0/e67c59eb/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
 </body>
 </html>

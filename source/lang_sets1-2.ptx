@@ -133,42 +133,54 @@
 
 <reading-questions>
       <title>Check Your Understanding</title>
-      <p>Let <m>A=\{2, 4, 6, 8, 10\}</m>.</p>
-      <exercise><statement><p>True or False: <m>4\in A</m>.</p></statement>
-      <answer>True</answer></exercise>
+      <!--<p>Let <m>A=\{2, 4, 6, 8, 10\}</m>.</p>-->
+      <exercise label="DMT_introsets_CYU_4in"><statement correct="yes"><p>Let <m>A=\{2, 4, 6, 8, 10\}</m>, then <m>4\in A</m>.</p></statement>
+      <answer>True</answer>
+    </exercise>
 
-      <exercise><statement><p>True or False: <m>0\notin A</m>.</p></statement>
-      <answer>True</answer></exercise>
+      <exercise label="DMT_introsets_CYU_0nin"><statement correct="yes"><p>Let <m>A=\{2, 4, 6, 8, 10\}</m>, then <m>0\notin A</m>.</p></statement>
+      <answer>True</answer>
+    </exercise>
 
-      <exercise><statement><p>True or False: <m>\{4\}\in A</m>.</p></statement>
-      <answer>False</answer></exercise>
+      <exercise label="DMT_introsets_CYU_s4in"><statement correct="no"><p>Let <m>A=\{2, 4, 6, 8, 10\}</m>, then <m>\{4\}\in A</m>.</p></statement>
+      <answer>False</answer>
+    </exercise>
 
-      <exercise><statement><p>True or False: <m>\{2, 4\}\in A</m>.</p></statement>
-      <answer>False</answer></exercise>
+      <exercise label="DMT_introsets_CYU_24in"><statement correct="no"><p>Let <m>A=\{2, 4, 6, 8, 10\}</m>, then <m>\{2, 4\}\in A</m>.</p></statement>
+      <answer>False</answer>
+    </exercise>
 
-       <exercise><statement><p>True or False: <m>\{2, 4\}\subseteq A</m>.</p></statement>
-      <answer>True</answer></exercise>
+       <exercise label="DMT_introsets_CYU_24ss"><statement correct="yes"><p>Let <m>A=\{2, 4, 6, 8, 10\}</m>, then <m>\{2, 4\}\subseteq A</m>.</p></statement>
+      <answer>True</answer>
+    </exercise>
 
-       <exercise><statement><p>True or False: <m>\{2, 3, 4\}\subseteq A</m>.</p></statement>
-      <answer>False</answer></exercise>
+       <exercise label="DMT_introsets_CYU_234ss"><statement correct="no"><p>Let <m>A=\{2, 4, 6, 8, 10\}</m>, then <m>\{2, 3, 4\}\subseteq A</m>.</p></statement>
+      <answer>False</answer>
+    </exercise>
 
-      <exercise><statement><p>True or False: <m>\{0, 2, 6\}\nsubseteq A</m>.</p></statement>
-      <answer>True</answer></exercise>
+      <exercise label="DMT_introsets_CYU_026nss"><statement correct="yes"><p>Let <m>A=\{2, 4, 6, 8, 10\}</m>, then <m>\{0, 2, 6\}\nsubseteq A</m>.</p></statement>
+      <answer>True</answer>
+    </exercise>
 
-      <exercise><statement><p>True or False: <m>\{2, 4, 6, 8, 10\}\subseteq A</m>.</p></statement>
-      <answer>True</answer></exercise>
+      <exercise label="DMT_introsets_CYU_2468ss"><statement correct="yes"><p>Let <m>A=\{2, 4, 6, 8, 10\}</m>, then <m>\{2, 4, 6, 8, 10\}\subseteq A</m>.</p></statement>
+      <answer>True</answer>
+    </exercise>
 
-      <exercise><statement><p>True or False: <m>6\in A\times A</m>.</p></statement>
-      <answer>False</answer></exercise>
+      <exercise label="DMT_introsets_CYU_6inAA"><statement correct="no"><p>Let <m>A=\{2, 4, 6, 8, 10\}</m>, then <m>6\in A\times A</m>.</p></statement>
+      <answer>False</answer>
+    </exercise>
 
-      <exercise><statement><p>True or False: <m>(2, 4)\in A\times A</m>.</p></statement>
-      <answer>True</answer></exercise>
+      <exercise label="DMT_introsets_CYU_24inAA"><statement correct="yes"><p>Let <m>A=\{2, 4, 6, 8, 10\}</m>, then <m>(2, 4)\in A\times A</m>.</p></statement>
+      <answer>True</answer>
+    </exercise>
 
-      <exercise><statement><p>True or False: <m>\{2, 4\}\subseteq A\times A</m>.</p></statement>
-      <answer>False</answer></exercise>
+      <exercise label="DMT_introsets_CYU_24ssAA"><statement correct="no"><p>Let <m>A=\{2, 4, 6, 8, 10\}</m>, then <m>\{2, 4\}\subseteq A\times A</m>.</p></statement>
+      <answer>False</answer>
+    </exercise>
 
-      <exercise><statement><p>True or False: <m>\{(2, 2), (4, 6), (10, 4)\}\subseteq A\times A</m>.</p></statement>
-      <answer>True</answer></exercise>
+      <exercise label="DMT_introsets_CYU_pairsssAA"><statement correct="yes"><p>Let <m>A=\{2, 4, 6, 8, 10\}</m>, then <m>\{(2, 2), (4, 6), (10, 4)\}\subseteq A\times A</m>.</p></statement>
+      <answer>True</answer>
+    </exercise>
 
     </reading-questions>
 

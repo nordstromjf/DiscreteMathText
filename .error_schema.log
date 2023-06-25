@@ -1,4 +1,4 @@
-/Users/jennifernordstrom/pretextbooks/discrete-CLI/source/main.ptx:55:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element biography, got colophon
-/Users/jennifernordstrom/pretextbooks/discrete-CLI/source/main.ptx:38:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element subtitle there
-/Users/jennifernordstrom/pretextbooks/discrete-CLI/source/main.ptx:36:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element book failed to validate content
+/Users/jennifernordstrom/pretextbooks/discrete-CLI/source/main.ptx:56:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element biography, got colophon
+/Users/jennifernordstrom/pretextbooks/discrete-CLI/source/main.ptx:39:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element subtitle there
+/Users/jennifernordstrom/pretextbooks/discrete-CLI/source/main.ptx:37:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element book failed to validate content
 /Users/jennifernordstrom/pretextbooks/discrete-CLI/source/main.ptx:3:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element docinfo, got pretext

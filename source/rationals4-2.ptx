@@ -79,34 +79,37 @@ Resulting in <m>123=999x</m>. Now we just solve for <m>x</m>: <m>x=123/999</m>.<
     <reading-questions>
       <title>Check Your Understanding</title>
       
-      <exercise><statement><p>True or false: <m>-9</m> is rational.</p></statement>
+      <exercise label="DMT_rational_CYU_neg9rat"><statement correct="yes"><p>True or false: <m>-9</m> is rational.</p></statement>
       <answer>True.</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>-\frac{6}{13}</m> is rational.</p></statement>
+      <exercise label="DMT_rational_CYU_neg6d13rat"><statement correct="yes"><p>True or false: <m>-\frac{6}{13}</m> is rational.</p></statement>
       <answer>True.</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>0.\overline{3}</m> is rational.</p></statement>
+      <exercise label="DMT_rational_CYU_pt3rptrat"><statement correct="yes"><p>True or false: <m>0.\overline{3}</m> is rational.</p></statement>
       <answer>True.</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>\frac{6}{0}</m> is rational.</p></statement>
+      <exercise label="DMT_rational_CYU_6d0rat"><statement correct="no"><p>True or false: <m>\frac{6}{0}</m> is rational.</p></statement>
       <answer>False.</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>\frac{6}{0}</m> is irrational.</p></statement>
+      <exercise label="DMT_rational_CYU_6d0irrat"><statement correct="no"><p>True or false: <m>\frac{6}{0}</m> is irrational.</p></statement>
+      <feedback><p><m>\frac{6}{0}</m> is not a real number.</p></feedback>
       <answer>False. Not a real number.</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>14.5467</m> is rational.</p></statement>
+      <exercise label="DMT_rational_CYU_14pt5467rat"><statement correct="yes"><p>True or false: <m>14.5467</m> is rational.</p></statement>
       <answer>True.</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>49.1122\overline{45}</m> is rational.</p></statement>
+      <exercise label="DMT_rational_CYU_49pt45rptrat"><statement correct="yes"><p>True or false: <m>49.1122\overline{45}</m> is rational.</p></statement>
       <answer>True.</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>0.\overline{9}</m> is rational.</p></statement>
+      <exercise label="DMT_rational_CYU_pt9rptrat"><statement correct="yes"><p>True or false: <m>0.\overline{9}</m> is rational.</p></statement>
       <answer>True.</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>\sqrt{3}</m> is rational.</p></statement>
+      <exercise label="DMT_rational_CYU_sqrt2rat"><statement correct="no"><p>True or false: <m>\sqrt{3}</m> is rational.</p></statement>
+      <feedback><p>Although this is false, we need more proof techniques to prove it.</p> </feedback>
       <answer>False. But hard to prove right now.</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>\sqrt{4}</m> is rational.</p></statement>
+      <exercise label="DMT_rational_CYU_sqrt4rat"><statement correct="yes"><p>True or false: <m>\sqrt{4}</m> is rational.</p></statement>
+      <feedback><p><m>\sqrt{4}=2</m></p></feedback>
       <answer>True. <m>\sqrt{4}=2.</m></answer></exercise>
 
       

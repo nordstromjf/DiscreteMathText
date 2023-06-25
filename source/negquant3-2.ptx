@@ -97,19 +97,66 @@
     <reading-questions>
       <title>Check Your Understanding</title>
     
-      <exercise><statement><p>Write the negation of <m>\forall n\in \mathbb{Z}, n>0</m>.</p></statement>
+      <exercise label="DMT_negquant_CYU_forall"><statement><p>Determine the negation of <m>\forall n\in \mathbb{Z}, n>0</m>.</p></statement>
+      <choices randomize="yes">
+      <choice correct="yes"><statement><p><m>\exists n\in \mathbb{Z}, n\leq 0.</m></p></statement>
+      </choice>
+      <choice><statement><p><m>\exists n\in \mathbb{Z}, n> 0.</m></p></statement>
+     </choice>
+      <choice><statement><p><m>\forall n\in \mathbb{Z}, n\leq 0.</m></p></statement>
+      </choice>
+      <choice><statement><p><m>\forall n\in \mathbb{Z}, n> 0.</m></p></statement></choice>
+    </choices>
       <answer><m>\exists n\in \mathbb{Z}, n\leq 0.</m></answer></exercise>
 
-      <exercise><statement><p>Write the negation of <m>\forall n\in \mathbb{Z}</m>, if <m>n>0</m> then <m>n^3>0</m>.</p></statement>
+      <exercise label="DMT_negquant_CYU_forallcond"><statement><p>Determine the negation of <m>\forall n\in \mathbb{Z}</m>, if <m>n>0</m> then <m>n^3>0</m>.</p></statement>
+      <choices randomize="yes">
+      <choice><statement><p><m>\exists n\in \mathbb{Z}</m>, if <m>n\leq 0</m> then <m>n^3\leq 0</m></p></statement>
+     </choice>
+      <choice><statement><p><m>\exists n\in \mathbb{Z}</m>, <m>n\leq 0</m> and <m>n^3\leq 0.</m></p></statement>
+      </choice>
+      <choice correct="yes"><statement><p><m>\exists n\in \mathbb{Z}</m>, <m>n>0</m> and <m>n^3\leq 0.</m></p></statement>
+      </choice>
+      <choice><statement><p><m>\forall n\in \mathbb{Z}</m>, if <m>n\leq 0</m> then <m>n^3\leq 0</m></p></statement></choice>
+    </choices>
       <answer><m>\exists n\in \mathbb{Z}</m>, <m>n>0</m> and <m>n^3\leq 0.</m></answer></exercise>
 
-      <exercise><statement><p>Write the negation of <m>\exists n\in \mathbb{Z}</m>, <m>n>5</m> and <m>n^2\leq 10</m>.</p></statement>
+      <exercise label="DMT_negquant_CYU_existand"><statement><p>Determine the negation of <m>\exists n\in \mathbb{Z}</m>, <m>n>5</m> and <m>n^2\leq 10</m>.</p></statement>
+      <choices randomize="yes">
+      <choice correct="yes"><statement><p><m>\forall n\in \mathbb{Z}</m>, <m>n\leq 5</m> or <m>n^2> 10.</m></p></statement>
+      </choice>
+      <choice><statement><p><m>\forall n\in \mathbb{Z}</m>, <m>n\leq 5</m> and <m>n^2> 10.</m></p></statement>
+     </choice>
+      <choice><statement><p><m>\forall n\in \mathbb{Z}</m>, <m>n >5</m> or <m>n^2\leq 10.</m></p></statement>
+      </choice>\<choice><statement><p><m>\exists n\in \mathbb{Z}</m>, <m>n >5</m> or <m>n^2\leq 10.</m></p></statement>
+      </choice>
+      <choice><statement><p><m>\exists n\in \mathbb{Z}</m>, <m>n\leq 5</m> and <m>n^2> 10.</m></p></statement></choice>
+    </choices>
       <answer><m>\forall n\in \mathbb{Z}</m>, <m>n\leq 5</m> or <m>n^2> 10.</m></answer></exercise>
 
-      <exercise><statement><p>Write the negation of <m>\exists n\in \mathbb{Z}</m>, such that if <m>n^2>4</m> then <m>n>2</m> or <m>n&lt;-2.</m></p></statement>
+      <exercise label="DMT_negquant_CYU_existcond"><statement><p>Determine the negation of <m>\exists n\in \mathbb{Z}</m>, such that if <m>n^2>4</m> then <m>n>2</m> or <m>n&lt;-2.</m></p></statement>
+      <choices randomize="yes">
+       <choice><statement><p><m>\forall n\in \mathbb{Z}</m>, if <m>n^2\leq 4</m> then <m>n\leq 2</m> or <m>n\geq -2.</m></p></statement>
+     </choice>
+      <choice><statement><p><m>\forall n\in \mathbb{Z}</m>, if <m>n^2\leq 4</m> then <m>-2\leq n\leq 2.</m></p></statement>
+      </choice>
+       <choice correct="yes"><statement><p><m>\forall n\in \mathbb{Z}</m>, <m>n^2>4</m> and <m>-2\leq n\leq 2.</m></p></statement>
+      </choice>
+      <choice><statement><p><m>\forall n\in \mathbb{Z}</m>, <m>n^2\leq 4</m> and <m>-2\leq n\leq 2.</m></p></statement></choice>
+    <choice><statement><p><m>\forall n\in \mathbb{Z}</m>, <m>n^2\leq 4</m> and <m>n\leq 2</m> or <m>n\geq -2.</m></p></statement></choice>
+    </choices>
       <answer><m>\forall n\in \mathbb{Z}</m>, <m>n^2>4</m> and <m>n\leq 2</m> and <m>n\geq -2.</m> Note, we can also write this as <m>\forall n\in \mathbb{Z}</m>, <m>n^2>4</m> and <m>-2\leq n\leq 2.</m></answer></exercise>
 
-      <exercise><statement><p>Write the contrapositive of <m>\forall n\in \mathbb{Z}</m>, if <m>n>0</m> then <m>n^3>0</m>.</p></statement>
+      <exercise label="DMT_negquant_CYU_contraall"><statement><p>Determine the contrapositive of <m>\forall n\in \mathbb{Z}</m>, if <m>n>0</m> then <m>n^3>0</m>.</p></statement>
+      <choices randomize="yes">
+      <choice><statement><p><m>\exists n\in \mathbb{Z}</m>, if <m>n^3\leq 0</m> then <m>n\leq 0.</m></p></statement>
+     </choice>
+      <choice><statement><p><m>\forall n\in \mathbb{Z}</m>, if <m>n\leq 0</m> then <m>n^3\leq 0.</m></p></statement>
+      </choice>
+      <choice><statement><p><m>\exists n\in \mathbb{Z}</m>, if <m>n\leq 0</m> then <m>n^3\leq 0.</m></p></statement></choice>
+      <choice correct="yes"><statement><p><m>\forall n\in \mathbb{Z}</m>, if <m>n^3\leq 0</m> then <m>n\leq 0.</m></p></statement>
+      </choice>
+    </choices>
       <answer><m>\forall n\in \mathbb{Z}</m>, if <m>n^3\leq 0</m> then <m>n\leq 0.</m></answer></exercise>
 
       

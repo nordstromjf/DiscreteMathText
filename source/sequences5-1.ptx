@@ -164,31 +164,40 @@ We read <m>\sum_{k=1}^{n}a_k</m><notation><usage><m>\sum_{k=1}^{n}a_k</m></usage
     <reading-questions>
       <title>Check Your Understanding</title>
       
-      <exercise><statement><p>Write the terms of <m>\frac{k+1}{k+3}, 0\leq k\leq 4</m>.</p></statement>
+      <exercise label="DMT_sequence_CYU_termskp1dkp3"><statement><p>Write the terms of <m>\frac{k+1}{k+3}, 0\leq k\leq 4</m>.</p></statement>
+      <response />
       <answer><m>\frac{1}{3}, \frac{2}{4}, \frac{3}{5}, \frac{4}{6}, \frac{5}{7}</m></answer></exercise>
 
-      <exercise><statement><p>Write the terms of <m>\frac{(-1)^k}{2k}, 1\leq k\leq 6</m>.</p></statement>
+      <exercise label="DMT_sequence_CYU_termsaltd2k"><statement><p>Write the terms of <m>\frac{(-1)^k}{2k}, 1\leq k\leq 6</m>.</p></statement>
+      <response />
       <answer><m>\frac{-1}{2}, \frac{1}{4}, \frac{-1}{6}, \frac{1}{8}, \frac{-1}{10}, \frac{1}{12}</m></answer></exercise>
 
-      <exercise><statement><p>Write the terms of <m>\frac{(-1)^kk}{2}, 1\leq k\leq 4</m>.</p></statement>
+      <exercise label="DMT_sequence_CYU_termsaltkd2"><statement><p>Write the terms of <m>\frac{(-1)^kk}{2}, 1\leq k\leq 4</m>.</p></statement>
+      <response />
       <answer><m>\frac{-1}{2}, \frac{2}{2}, \frac{-3}{2}, \frac{4}{2}</m></answer></exercise>
 
-      <exercise><statement><p>Write out the summation notation as a sum of terms: <m>\sum_{k=1}^4 2k-1</m></p></statement>
+      <exercise label="DMT_sequence_CYU_sum42km1"><statement><p>Write out the summation notation as a sum of terms: <m>\sum_{k=1}^4 2k-1</m></p></statement>
+      <response />
       <answer><m>1+3+5+7</m></answer></exercise>
 
-      <exercise><statement><p>Write out the summation notation as a sum of terms: <m>\sum_{k=1}^n k^3</m></p></statement>
+      <exercise label="DMT_sequence_CYU_sumnk3"><statement><p>Write out the summation notation as a sum of terms: <m>\sum_{k=1}^n k^3</m></p></statement>
+      <response />
       <answer><m>1^3+2^3+3^3+\cdots+n^3</m></answer></exercise>
 
-      <exercise><statement><p>Write out the summation notation as a sum of terms: <m>\sum_{k=1}^{n+1} k^3</m></p></statement>
+      <exercise label="DMT_sequence_CYU_sumnp1k3"><statement><p>Write out the summation notation as a sum of terms: <m>\sum_{k=1}^{n+1} k^3</m></p></statement>
+      <response />
       <answer><m>1^3+2^3+3^3+\cdots+(n+1)^3</m></answer></exercise>
 
-      <exercise><statement><p>Write out the summation notation as a sum of terms: <m>\sum_{k=1}^4 \frac{(-1)^k}{k}</m></p></statement>
+      <exercise label="DMT_sequence_CYU_sum4altdk"><statement><p>Write out the summation notation as a sum of terms: <m>\sum_{k=1}^4 \frac{(-1)^k}{k}</m></p></statement>
+      <response />
       <answer><m>(-1/1)+(1/2)+(-1/3)+(1/4)</m></answer></exercise>
 
-      <exercise><statement><p>Write out the summation notation as a sum of terms: <m>\sum_{k=1}^n \frac{(-1)^k}{k}</m></p></statement>
+      <exercise label="DMT_sequence_CYU_sumnaltdk"><statement><p>Write out the summation notation as a sum of terms: <m>\sum_{k=1}^n \frac{(-1)^k}{k}</m></p></statement>
+      <response />
       <answer><m>(-1/1)+(1/2)+(-1/3)\cdots+((-1)^n/n)</m></answer></exercise>
 
-      <exercise><statement><p>Write out the summation notation as a sum of terms: <m>\sum_{k=1}^{n+1} \frac{(-1)^k}{k}</m></p></statement>
+      <exercise label="DMT_sequence_CYU_sumnp1altdk"><statement><p>Write out the summation notation as a sum of terms: <m>\sum_{k=1}^{n+1} \frac{(-1)^k}{k}</m></p></statement>
+      <response />
       <answer><m>(-1/1)+(1/2)+(-1/3)\cdots+((-1)^{n+1}/(n+1))</m></answer></exercise>
 
     

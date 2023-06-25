@@ -156,21 +156,27 @@ Thus, <m>2(k+1)+1&lt; 2^{k+1}</m>, which is what we wanted to show.
     <reading-questions>
       <title>Check Your Understanding</title>
 
-      <exercise><statement><p>Suppose you want to prove <m>8\mid 3^{2n}-1</m>. Show the statement holds for <m>n=0</m>.</p></statement>
+      <exercise label="DMT_moreind_CYU_8divn0"><statement><p>Suppose you want to prove <m>8\mid 3^{2n}-1</m>. Show the statement holds for <m>n=0</m>.</p></statement>
+      <response />
+      <hint><p>Remember to just start with <m>3^{2n}-1</m>. Do not assume 8 divides it.</p></hint>
       <answer><p><m>3^{0}-1=0</m> and <m>8\mid 0</m>.</p></answer></exercise>
 
-      <exercise><statement><p>Suppose you want to prove <m>8\mid 3^{2n}-1</m>. Show the statement holds for <m>n=1</m>.</p></statement>
+      <exercise label="DMT_moreind_CYU_8divn1"><statement><p>Suppose you want to prove <m>8\mid 3^{2n}-1</m>. Show the statement holds for <m>n=1</m>.</p></statement>
+      <response />
+      <hint><p>Remember to just start with <m>3^{2n}-1</m>. Do not assume 8 divides it.</p></hint>
       <answer><p><m>3^{2}-1=8</m> and <m>8\mid 8</m>.</p></answer></exercise>
 
-      <exercise><statement><p>Suppose you want to prove <m>8\mid 3^{2n}-1</m>. What should you assume in the induction step?</p></statement>
+      <exercise label="DMT_moreind_CYU_8divinda"><statement><p>Suppose you want to prove <m>8\mid 3^{2n}-1</m>. What should you assume in the induction step?</p></statement>
+      <response />
       <answer><m>8\mid 3^{2k}-1</m></answer></exercise>
 
-      <exercise><statement><p>Suppose you want to prove <m>8\mid 3^{2n}-1</m>. What should you show in the induction step?</p></statement>
+      <exercise label="DMT_moreind_CYU_8divinds"><statement><p>Suppose you want to prove <m>8\mid 3^{2n}-1</m>. What should you show in the induction step?</p></statement>
+      <response />
       <answer><m>8\mid 3^{2(k+1)}-1</m></answer></exercise>
 
-      
-
-      <exercise><statement><p>If you know <m>8\mid 3^{2k}-1</m>, rewrite <m>3^{2(k+1)}-1</m> so that it is a sum of terms that are multiples of 8.</p></statement>
+      <exercise label="DMT_moreind_CYU_8divmult8"><statement><p>If you know <m>8\mid 3^{2k}-1</m>, rewrite <m>3^{2(k+1)}-1</m> so that it is a sum of terms that are multiples of 8.</p></statement>
+      <response />
+      <hint><p>Be careful with the algebra, especially with rules of exponents. It is also helpful to notice that <m>3^2=9=8+1</m>.</p></hint>
       <answer><m>3^{2(k+1)}-1=3^{2k+2}-1=3^23^{2k}-1=(8+1)3^{2k}-1=(3^{2k}-1)+8(3^{2k})</m></answer></exercise>
 
 

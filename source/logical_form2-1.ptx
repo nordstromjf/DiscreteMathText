@@ -277,7 +277,94 @@
 
     <reading-questions>
       <title>Check Your Understanding</title>
-      <exercise><statement><p>Give the truth-table for <m>\sim(\sim p \vee q)</m>. </p></statement>
+      <exercise label="DMT_truthtable_CYU_notor"><statement><p>Fill in the truth-table for <m>\sim(\sim p \vee q)</m>.</p>
+      <p><tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>\sim(\sim p\vee q)</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell><var width="1" /></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell><var width="1" /></cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell><var width="1" /></cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell><var width="1" /></cell>
+            </row>
+    </tabular></p></statement>
+    <setup><var>
+      <condition string="F">
+        <feedback><p>Correct</p></feedback>
+      </condition>
+      
+       <condition string="T">
+        <feedback><p>Try again.</p></feedback>
+      </condition>
+      
+       <condition string=".*">
+        <feedback><p>Use T or F.</p></feedback>
+      </condition>
+      
+    </var>
+    <var>
+      <condition string="T">
+        <feedback><p>Correct</p></feedback>
+      </condition>
+      
+       <condition string="F">
+        <feedback><p>Try again.</p></feedback>
+      </condition>
+      
+       <condition string=".*">
+        <feedback><p>Use T or F.</p></feedback>
+      </condition>
+      
+    </var>
+    <var>
+      <condition string="F">
+        <feedback><p>Correct</p></feedback>
+      </condition>
+      
+       <condition string="T">
+        <feedback><p>Try again.</p></feedback>
+      </condition>
+      
+       <condition string=".*">
+        <feedback><p>Use T or F.</p></feedback>
+      </condition>
+      
+    </var>
+    <var>
+      <condition string="F">
+        <feedback><p>Correct</p></feedback>
+      </condition>
+      
+       <condition string="T">
+        <feedback><p>Try again.</p></feedback>
+      </condition>
+      
+       <condition string=".*">
+        <feedback><p>Use T or F.</p></feedback>
+      </condition>
+      
+    </var>
+    </setup>
       <answer><tabular top="minor" left="minor">
               <col halign="center" right="minor"/>
               <col halign="center" right="medium"/>
@@ -307,9 +394,97 @@
               <cell>F</cell>
               <cell>F</cell>
             </row>
-    </tabular></answer></exercise>
+    </tabular></answer>
+    </exercise>
 
-      <exercise><statement><p>Give the truth-table for <m>(p\ \vee \sim q)</m>. </p></statement>
+      <exercise label="DMT_truthtable_CYU_or"><statement><p>Fill in the truth-table for <m>(p\ \vee \sim q)</m>. </p>
+      <p><tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>(p\ \vee \sim q)</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell><var width="1" /></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell><var width="1" /></cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell><var width="1" /></cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell><var width="1" /></cell>
+            </row>
+    </tabular></p></statement>
+    <setup><var>
+      <condition string="T">
+        <feedback><p>Correct</p></feedback>
+      </condition>
+      
+       <condition string="F">
+        <feedback><p>Try again.</p></feedback>
+      </condition>
+      
+       <condition string=".*">
+        <feedback><p>Use T or F.</p></feedback>
+      </condition>
+      
+    </var>
+    <var>
+      <condition string="T">
+        <feedback><p>Correct</p></feedback>
+      </condition>
+      
+       <condition string="F">
+        <feedback><p>Try again.</p></feedback>
+      </condition>
+      
+       <condition string=".*">
+        <feedback><p>Use T or F.</p></feedback>
+      </condition>
+      
+    </var>
+    <var>
+      <condition string="F">
+        <feedback><p>Correct</p></feedback>
+      </condition>
+      
+       <condition string="T">
+        <feedback><p>Try again.</p></feedback>
+      </condition>
+      
+       <condition string=".*">
+        <feedback><p>Use T or F.</p></feedback>
+      </condition>
+      
+    </var>
+    <var>
+      <condition string="T">
+        <feedback><p>Correct</p></feedback>
+      </condition>
+      
+       <condition string="F">
+        <feedback><p>Try again.</p></feedback>
+      </condition>
+      
+       <condition string=".*">
+        <feedback><p>Use T or F.</p></feedback>
+      </condition>
+      
+    </var>
+    </setup>
       <answer><tabular top="minor" left="minor">
               <col halign="center" right="minor"/>
               <col halign="center" right="medium"/>
@@ -322,26 +497,113 @@
             <row bottom="minor">
               <cell>T</cell>
               <cell>T</cell>
-              <cell>T</cell>
+              <cell><var width="1" /></cell>
             </row>
             <row bottom="minor">
               <cell>T</cell>
               <cell>F</cell>
-              <cell>T</cell>
+              <cell><var width="1" /></cell>
             </row>
             <row bottom="minor">
               <cell>F</cell>
               <cell>T</cell>
-              <cell>F</cell>
+              <cell><var width="1" /></cell>
             </row>
             <row bottom="minor">
               <cell>F</cell>
               <cell>F</cell>
-              <cell>T</cell>
+              <cell><var width="1" /></cell>
             </row>
     </tabular></answer></exercise>
 
-    <exercise><statement><p>Give the truth-table for <m>(p\ \wedge \sim q)</m>. </p></statement>
+    <exercise label="DMT_truthtable_CYU_and"><statement><p>Fill in the truth-table for <m>(p\ \wedge \sim q)</m>. </p>
+      <p><tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>(p\ \wedge \sim q)</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell><var width="1" /></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell><var width="1" /></cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell><var width="1" /></cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell><var width="1" /></cell>
+            </row>
+    </tabular></p></statement>
+        <setup><var>
+      <condition string="F">
+        <feedback><p>Correct</p></feedback>
+      </condition>
+      
+       <condition string="T">
+        <feedback><p>Try again.</p></feedback>
+      </condition>
+      
+       <condition string=".*">
+        <feedback><p>Use T or F.</p></feedback>
+      </condition>
+      
+    </var>
+    <var>
+      <condition string="T">
+        <feedback><p>Correct</p></feedback>
+      </condition>
+      
+       <condition string="F">
+        <feedback><p>Try again.</p></feedback>
+      </condition>
+      
+       <condition string=".*">
+        <feedback><p>Use T or F.</p></feedback>
+      </condition>
+      
+    </var>
+    <var>
+      <condition string="F">
+        <feedback><p>Correct</p></feedback>
+      </condition>
+      
+       <condition string="T">
+        <feedback><p>Try again.</p></feedback>
+      </condition>
+      
+       <condition string=".*">
+        <feedback><p>Use T or F.</p></feedback>
+      </condition>
+      
+    </var>
+    <var>
+      <condition string="F">
+        <feedback><p>Correct</p></feedback>
+      </condition>
+      
+       <condition string="T">
+        <feedback><p>Try again.</p></feedback>
+      </condition>
+      
+       <condition string=".*">
+        <feedback><p>Use T or F.</p></feedback>
+      </condition>
+      
+    </var>
+    </setup>
       <answer><tabular top="minor" left="minor">
               <col halign="center" right="minor"/>
               <col halign="center" right="medium"/>
@@ -373,8 +635,22 @@
             </row>
     </tabular></answer></exercise>
 
-    <exercise><statement><p>Are any of the three statements in the above exercises logically equivalent?</p></statement>
-      <answer><p>Yes, <m>\sim(\sim p\vee q)</m> is logically equivalent to <m>(p\ \wedge \sim q)</m>.</p></answer>
+    <exercise label="DMT_truthtable_CYU_logequiv"><statement><p>Which of the three statements in the above exercises are logically equivalent?</p></statement>
+    <choices randomize="yes">
+      <choice>
+        <statement><p><m>\sim(\sim p\vee q)</m> is logically equivalent to <m>(p\ \vee \sim q)</m></p></statement>
+      </choice>
+      <choice correct="yes">
+        <statement><p><m>\sim(\sim p\vee q)</m> is logically equivalent to <m>(p\ \wedge \sim q)</m></p></statement>
+      </choice>
+      <choice>
+        <statement><p><m>(p\ \vee \sim q)</m> is logically equivalent to <m>(p\ \wedge \sim q)</m></p></statement>
+      </choice>
+      <choice>
+        <statement><p>None of the statements are logically equivalent.</p></statement>
+      </choice>
+    </choices>
+      <answer><p><m>\sim(\sim p\vee q)</m> is logically equivalent to <m>(p\ \wedge \sim q)</m></p></answer>
     </exercise>
 
     </reading-questions>

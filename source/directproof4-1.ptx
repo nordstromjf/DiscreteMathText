@@ -207,28 +207,28 @@
     <reading-questions>
       <title>Check Your Understanding</title>
       
-      <exercise><statement><p>True or false: <m>\forall n\in \mathbb{Z}, 5n+3</m> is odd.</p></statement>
+      <exercise label="DMT_direct_CYU_5np3odd"><statement correct="no"><p>True or false: <m>\forall n\in \mathbb{Z}, 5n+3</m> is odd.</p></statement>
       <answer>False.</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>\forall n\in \mathbb{Z}, 5n+3</m> is even.</p></statement>
+      <exercise label="DMT_direct_CYU_5np3even"><statement correct="no"><p>True or false: <m>\forall n\in \mathbb{Z}, 5n+3</m> is even.</p></statement>
       <answer>False.</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>\forall n\in \mathbb{Z}, 2n+7</m> is odd.</p></statement>
+      <exercise label="DMT_direct_CYU_2np7odd"><statement correct="yes"><p>True or false: <m>\forall n\in \mathbb{Z}, 2n+7</m> is odd.</p></statement>
       <answer>True.</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>\forall n\in \mathbb{Z}, 4n+12</m> is even.</p></statement>
+      <exercise label="DMT_direct_CYU_4np12even"><statement correct="yes"><p>True or false: <m>\forall n\in \mathbb{Z}, 4n+12</m> is even.</p></statement>
       <answer>True.</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>\forall n\in \mathbb{Z},</m> if <m>n</m> is even, then <m>n^2</m> is even.</p></statement>
+      <exercise label="DMT_direct_CYU_n2even"><statement correct="yes"><p>True or false: <m>\forall n\in \mathbb{Z},</m> if <m>n</m> is even, then <m>n^2</m> is even.</p></statement>
       <answer>True.</answer></exercise>
 
-      <exercise><statement><p>True or False: 99 is composite.</p></statement>
+      <exercise label="DMT_direct_CYU_99comp"><statement correct="yes"><p>True or false: 99 is composite.</p></statement>
       <answer>True.</answer></exercise>
 
-      <exercise><statement><p>True or False: -99 is composite.</p></statement>
+      <exercise label="DMT_direct_CYU_neg99comp"><statement correct="no"><p>True or false: -99 is composite.</p></statement>
       <answer>False.</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>\forall n\in \mathbb{Z}, n^2+1</m> is prime.</p></statement>
+      <exercise label="DMT_direct_CYU_n2p1prime"><statement correct="no"><p>True or false: <m>\forall n\in \mathbb{Z}, n^2+1</m> is prime.</p></statement>
       <answer>False.</answer></exercise>
 
       

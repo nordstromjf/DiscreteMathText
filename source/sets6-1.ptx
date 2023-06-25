@@ -244,45 +244,121 @@
     <reading-questions>
       <title>Check Your Understanding</title>
 
-      <p>Let <m>A=\{2, 4, 6, 8\}, B=\{3, 4\}, C=\{1, 2, 4\}, D=\{0, 1\}</m></p>
+      <!--<p>Let <m>A=\{2, 4, 6, 8\}, B=\{3, 4\}, C=\{1, 2, 4\}, D=\{0, 1\}</m></p>-->
+
+      <exercise label="DMT_sets_CYU_matchingsets"><statement>
+        <p>Let <m>A=\{2, 4, 6, 8\}, B=\{3, 4\}, C=\{1, 2, 4\}, D=\{0, 1\}</m></p>
+        <p>Match each set with its elements.</p> 
+        </statement>
+        <matches>
+          <match order="1">
+            <premise><m>A\cap C</m></premise>
+            <response><m>\{2, 4\}</m></response>
+          </match>
+          <match order="2">
+            <premise><m>B\cap D</m></premise>
+            <response><m>\emptyset</m></response>
+          </match>
+          <match order="3">
+            <premise><m>A\cup C</m></premise>
+            <response><m>\{1, 2, 4, 6, 8\}</m></response>
+          </match>
+          <match order="4">
+            <premise><m>B\cup D</m></premise>
+            <response><m>\{0, 1, 3, 4\}</m></response>
+          </match>
+          <match order="5">
+            <premise><m>A-C</m></premise>
+            <response><m>\{6, 8\}</m></response>
+          </match>
+          <match order="6">
+            <premise><m>B-D</m></premise>
+            <response><m>\{3, 4\}</m></response>
+          </match>
+          <match order="7">
+            <premise><m>B\times D</m></premise>
+            <response><m>\{(3, 0), (3, 1), (4, 0), (4, 1)\}</m></response>
+          </match>
+          <match order="8">
+            <premise><m>B\times B</m></premise>
+            <response><m>\{(3, 3), (3, 4), (4, 4), (4, 3)\}</m></response>
+          </match>
+        </matches>
+      </exercise>
       
-      <exercise><statement><p>Find  <m>A\cap C</m>.</p></statement>
+     <!-- <exercise label="DMT_sets_CYU_AcapC"><statement>
+        <p>Let <m>A=\{2, 4, 6, 8\},  C=\{1, 2, 4\}.</m></p>
+        <p>Find  <m>A\cap C</m>.</p></statement>
+        <response />
       <answer><m>\{2, 4\}</m></answer></exercise>
 
-      <exercise><statement><p>Find  <m>B\cap D</m>.</p></statement>
+      <exercise label="DMT_sets_CYU_BcapD"><statement>
+        <p>Let <m>B=\{3, 4\}, D=\{0, 1\}.</m></p>
+        <p>Find  <m>B\cap D</m>.</p></statement>
+        <response />
       <answer><m>\emptyset</m></answer></exercise>
 
-      <exercise><statement><p>Find  <m>A\cup C</m>.</p></statement>
+      <exercise label="DMT_sets_CYU_AcupC"><statement>
+        <p>Let <m>A=\{2, 4, 6, 8\}, C=\{1, 2, 4\}.</m></p>
+        <p>Find  <m>A\cup C</m>.</p></statement>
+        <response />
       <answer><m>\{1, 2, 4, 6, 8\}</m></answer></exercise>
 
-      <exercise><statement><p>Find  <m>B\cup D</m>.</p></statement>
+      <exercise label="DMT_sets_CYU_BcupD"><statement>
+        <p>Let <m>B=\{3, 4\}, D=\{0, 1\}.</m></p>
+        <p>Find  <m>B\cup D</m>.</p></statement>
+        <response />
       <answer><m>\{0, 1, 3, 4\}</m></answer></exercise>
 
-      <exercise><statement><p>Find  <m>A-C</m>.</p></statement>
+      <exercise label="DMT_sets_CYU_AminusC"><statement>
+        <p>Let <m>A=\{2, 4, 6, 8\}, C=\{1, 2, 4\}.</m></p>
+        <p>Find  <m>A-C</m>.</p></statement>
+        <response />
       <answer><m>\{6, 8\}</m></answer></exercise>
 
-      <exercise><statement><p>Find  <m>B-D</m>.</p></statement>
+      <exercise label="DMT_sets_CYU_BminusD"><statement>
+        <p>Let <m>B=\{3, 4\}, D=\{0, 1\}.</m></p>
+        <p>Find  <m>B-D</m>.</p></statement>
+        <response />
       <answer><m>\{3, 4\}</m></answer></exercise>
 
-      <exercise><statement><p>Find  <m>B\times D</m>.</p></statement>
+      <exercise label="DMT_sets_CYU_BtimesD"><statement>
+        <p>Let <m>B=\{3, 4\}, D=\{0, 1\}.</m></p>
+        <p>Find  <m>B\times D</m>.</p></statement>
       <answer><m>\{(3, 0), (3, 1), (4, 0), (4, 1)\}</m></answer></exercise>
 
-      <exercise><statement><p>Find  <m>B\times C</m>.</p></statement>
-      <answer><m>\{(3, 1), (3, 2), (3, 4), (4, 1), (4, 2), (4, 4)\}</m></answer></exercise>
+      <exercise label="DMT_sets_CYU_BtimesC"><statement>
+        <p>Let <m>B=\{3, 4\}, C=\{1, 2, 4\}.</m></p>
+        <p>Find  <m>B\times C</m>.</p></statement>
+      <answer><m>\{(3, 1), (3, 2), (3, 4), (4, 1), (4, 2), (4, 4)\}</m></answer></exercise>-->
 
-      <exercise><statement><p>True or false: <m>B\times D=D\times B</m>.</p></statement>
+      <exercise label="DMT_sets_CYU_BDeqDB"><statement correct="no">
+        <p>Let <m>B=\{3, 4\}, D=\{0, 1\}.</m></p>
+        <p>True or false: <m>B\times D=D\times B</m>.</p></statement>
       <answer><p>False.</p></answer></exercise>
       
-      <exercise><statement><p>True or false:  <m>B-D=D-B</m>.</p></statement>
+      <exercise label="DMT_sets_CYU_BmDeqDmB"><statement correct="no">
+        <p>Let <m>B=\{3, 4\}, D=\{0, 1\}.</m></p>
+        <p>True or false:  <m>B-D=D-B</m>.</p></statement>
       <answer><p>False.</p></answer></exercise>
 
-      <exercise><statement><p>True or false:  <m>A\cup C= C\cup A</m>.</p></statement>
+      <exercise label="DMT_sets_CYU_AcupCeqCcupA"><statement correct="yes">
+        <p>Let <m>A=\{2, 4, 6, 8\}, C=\{1, 2, 4\}.</m></p>
+        <p>True or false:  <m>A\cup C= C\cup A</m>.</p></statement>
       <answer><p>True.</p></answer></exercise>
 
-      <exercise><statement><p>Find  <m>\mathcal{P}(B)</m>.</p></statement>
+      <exercise label="DMT_sets_CYU_powerB"><statement>
+        <p>Let <m>B=\{3, 4\}.</m>
+        Find  <m>\mathcal{P}(B)</m>.</p></statement>
+        <response />
+        <hint><p>The elements of the power set are subsets of <m>B</m>.</p></hint>
       <answer><m>\{\emptyset, \{3\}, \{4\}, \{3, 4\}\}</m></answer></exercise>
 
-      <exercise><statement><p>Give a partition of <m>A</m>.</p></statement>
+      <exercise label="DMT_sets_CYU_partA"><statement>
+        <p>Let <m>A=\{2, 4, 6, 8\}.</m>
+        Give a partition of <m>A</m>.</p></statement>
+        <response />
+        <hint><p>Lots of subsets work, they just need to be disjoint and the union is all of <m>A</m>.</p></hint>
       <answer><p>Lots of subsets work, they just need to be disjoint and the union is all of <m>A</m>. For example, <m>A_1=\{2, 6\}, A_2=\{4, 8\}.</m></p></answer></exercise>
     
 

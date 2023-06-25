@@ -329,7 +329,68 @@
       <title>Check Your Understanding</title>
       
 
-      <exercise><statement><p>Use a truth-table to show the converse error is an invalid argument.</p></statement>
+      <exercise label="DMT_valid_CYU_converror"><statement><p>The following is the truth-table for an argument with converse error.</p>
+      <p><tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <col halign="center" right="minor"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>p\rightarrow q</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>p</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+            </row>
+    </tabular></p>
+    <p>Which row of the truth-table shows us the argument is invalid?</p></statement>
+    <choices randomize="no">
+      <choice>
+        <statement><p>Row 1</p></statement>
+        <feedback><p>To be invalid, you do want to look for true premises, but what should the conclusion be?</p></feedback>
+      </choice>
+      <choice >
+        <statement><p>Row 2</p></statement>
+        <feedback><p>To be invalid, you want to look for true premises.</p></feedback>
+      </choice>
+      <choice correct="yes">
+        <statement><p>Row 3</p></statement>
+        <feedback><p>In the third row we have true premises and a false conclusion, thus the argument is invalid.</p></feedback>
+      </choice>
+      <choice>
+        <statement><p>Row 4</p></statement>
+        <feedback><p>To be invalid, you want to look for true premises.</p></feedback>
+      </choice>
+    </choices>
       <answer>
       <tabular top="minor" left="minor">
               <col halign="center" right="minor"/>
@@ -375,12 +436,20 @@
     </tabular>
     <p>We can see in the third row we have true premises and a false conclusion. Thus it is invalid.</p></answer></exercise>
 
-<exercise><statement><p>Use a truth-table to determine if the following argument is valid or invalid.</p>
+<exercise label="DMT_valid_CYU_validornot"><statement><p>Use a truth-table to determine if the following argument is valid or invalid.</p>
       <p><tabular>
       <row><cell><m>p\vee q</m></cell></row>
        <row bottom="medium"><cell><m>\sim p</m></cell></row>
       <row><cell><m>\therefore\ </m><m>\sim q</m></cell></row>
     </tabular></p></statement>
+    <choices randomize="no">
+      <choice correct="yes"><statement><p>The argument is valid.</p></statement>
+      <feedback><p>The third row of the truth-table is the only one with all true premises. In this case the conclusion is true. Thus it is valid.</p></feedback></choice>
+      <choice><statement><p>The argument is invalid.</p></statement>
+     <feedback><p>In the truth-table is it possible to have all the premises be true while the conclusion is false?</p></feedback></choice>
+      <choice><statement><p>I am unable to determine if the argument is valid or invalid.</p></statement>
+      <feedback><p>In the truth-table look for all rows in which all the premises are true. Is is possible to have a false conclusion (invalid), or must the conclusion be true (valid)?</p></feedback></choice>
+    </choices>
       <answer>
       <tabular top="minor" left="minor">
               <col halign="center" right="minor"/>
@@ -425,11 +494,11 @@
             </row>
     </tabular>
     <p>The third row is the only one with all true premises. In this case the conclusion is true. Thus it is valid.</p></answer></exercise>
-      <exercise><statement><p>True or False: A valid argument can have false premises and a true conclusion.</p></statement><answer>True</answer></exercise>
-      <exercise><statement><p>True or False: An invalid argument can have true premises and a true conclusion.</p></statement><answer>True</answer></exercise>
-      <exercise><statement><p>True or False: A valid argument can have true premises and a false conclusion.</p></statement><answer>False</answer></exercise>
-      <exercise><statement><p>True or False: A sound argument can have false premises and a true conclusion.</p></statement><answer>False</answer></exercise>
-      <exercise><statement><p>True or False: A sound argument can have true premises and a false conclusion.</p></statement><answer>False</answer></exercise>
+      <exercise label="DMT_valid_CYU_vFT"><statement correct="yes"><p>True or False: A valid argument can have false premises and a true conclusion.</p></statement><answer>True</answer></exercise>
+      <exercise label="DMT_valid_CYU_iTT"><statement correct="yes"><p>True or False: An invalid argument can have true premises and a true conclusion.</p></statement><answer>True</answer></exercise>
+      <exercise label="DMT_valid_CYU_vTF"><statement correct="no"><p>True or False: A valid argument can have true premises and a false conclusion.</p></statement><answer>False</answer></exercise>
+      <exercise label="DMT_valid_CYU_sFT"><statement correct="no"><p>True or False: A sound argument can have false premises and a true conclusion.</p></statement><answer>False</answer></exercise>
+      <exercise label="DMT_valid_CYU_sTF"><statement correct="no"><p>True or False: A sound argument can have true premises and a false conclusion.</p></statement><answer>False</answer></exercise>
 
     </reading-questions>
 

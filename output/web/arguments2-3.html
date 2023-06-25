@@ -62,8 +62,39 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.0.0dev3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runtime.71ffd81c0faeb38b.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.e543e0dd19670ae2.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.1f1f63d2cda36a4d.css">
 </head>
-<body class="pretext book ignore-math">
+<body id="DiscreteMathText" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" href=""></a><div class="title-container">
 <h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
@@ -549,26 +580,26 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="arguments2-3"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Valid and Invalid Arguments</span>
 </h2>
-<div class="para" id="p-327">We've been looking at logical statements, and now we want to be able to put statements together to form logical arguments. Just like with the statements, we are going to be concerned more about the structure of an argument than the specific content.</div>
-<div class="para" id="p-328">An <dfn class="terminology">argument</dfn> consists of premises and a conclusion. You must have at least one premise, but can have as many as you like. You have exactly one conclusion.</div>
+<div class="para" id="p-404">We've been looking at logical statements, and now we want to be able to put statements together to form logical arguments. Just like with the statements, we are going to be concerned more about the structure of an argument than the specific content.</div>
+<div class="para" id="p-405">An <dfn class="terminology">argument</dfn> consists of premises and a conclusion. You must have at least one premise, but can have as many as you like. You have exactly one conclusion.</div>
 <article class="assemblage assemblage-like" id="B_formargument"><h3 class="heading"><span class="title">General Form of an Argument.</span></h3>
-<div class="para" id="p-329">
+<div class="para" id="p-406">
 <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines">A</td></tr>
 <tr><td class="l m b2 r0 l0 t0 lines">B</td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines">
 <span class="process-math">\(\therefore\ \)</span>C</td></tr>
-</table></div> Statements A and B are the <dfn class="terminology">premises</dfn>, and statement C is the <dfn class="terminology">conclusion</dfn>. The symbol <span class="process-math">\(\ \therefore\ \)</span> is read “therefore.”</div></article><div class="para" id="p-330">Since an argument is just a list of statements, we need some structure for what makes a “good” argument.</div>
+</table></div> Statements A and B are the <dfn class="terminology">premises</dfn>, and statement C is the <dfn class="terminology">conclusion</dfn>. The symbol <span class="process-math">\(\ \therefore\ \)</span> is read “therefore.”</div></article><div class="para" id="p-407">Since an argument is just a list of statements, we need some structure for what makes a “good” argument.</div>
 <article class="definition definition-like" id="D_valid"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-331">An argument is <dfn class="terminology">valid</dfn> if whenever the premises are true, the conclusion must be true.</div></article><article class="definition definition-like" id="D_invalid"><h3 class="heading">
+<div class="para" id="p-408">An argument is <dfn class="terminology">valid</dfn> if whenever the premises are true, the conclusion must be true.</div></article><article class="definition definition-like" id="D_invalid"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-332">An argument is <dfn class="terminology">invalid</dfn> if it is possible for the premises to be true and the conclusion false.</div></article><div class="para" id="p-333">It is really important to note that validity of an argument does not depend on the actual truth or falsity of the statements. To decide if an argument is valid, we construct a truth-table for the premises and conclusion. Then we check for whether there is a case where the premises are true and the conclusion false.</div>
+<div class="para" id="p-409">An argument is <dfn class="terminology">invalid</dfn> if it is possible for the premises to be true and the conclusion false.</div></article><div class="para" id="p-410">It is really important to note that validity of an argument does not depend on the actual truth or falsity of the statements. To decide if an argument is valid, we construct a truth-table for the premises and conclusion. Then we check for whether there is a case where the premises are true and the conclusion false.</div>
 <article class="example example-like" id="E_validarg"><a href="" data-knowl="" class="id-ref example-knowl original has-tabular" data-refid="hk-E_validarg"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Valid Argument.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_validarg"><article class="example example-like"><div class="para" id="p-334">Decide whether the following argument is valid or invalid. <div class="tabular-box natural-width"><table class="tabular">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_validarg"><article class="example example-like"><div class="para" id="p-411">Decide whether the following argument is valid or invalid. <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(p\wedge q\)</span></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines">
 <span class="process-math">\(\therefore\ \)</span><span class="process-math">\(p\)</span>
@@ -605,10 +636,10 @@ window.MathJax = {
 <td class="c m b1 r1 l0 t0 lines">F</td>
 </tr>
 </table></div></figure>
-</div> <div class="para" id="p-335">Since we are looking for where the premise is true, we only need to look at the first row (in bold). In this case, the conclusion is also true. Thus, whenever to premises are true the conclusion must be true. Hence, the argument is valid.</div></article></div>
+</div> <div class="para" id="p-412">Since we are looking for where the premise is true, we only need to look at the first row (in bold). In this case, the conclusion is also true. Thus, whenever to premises are true the conclusion must be true. Hence, the argument is valid.</div></article></div>
 <article class="example example-like" id="E_invalidarg"><a href="" data-knowl="" class="id-ref example-knowl original has-tabular" data-refid="hk-E_invalidarg"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Invalid Argument.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_invalidarg"><article class="example example-like"><div class="para" id="p-336">Decide whether the following argument is valid or invalid. <div class="tabular-box natural-width"><table class="tabular">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_invalidarg"><article class="example example-like"><div class="para" id="p-413">Decide whether the following argument is valid or invalid. <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(p\vee q\)</span></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines">
 <span class="process-math">\(\therefore\ \)</span><span class="process-math">\(p\)</span>
@@ -645,11 +676,11 @@ window.MathJax = {
 <td class="c m b1 r1 l0 t0 lines">F</td>
 </tr>
 </table></div></figure>
-</div> <div class="para" id="p-337">The first three rows all have true premises. However, in the case that <span class="process-math">\(p\)</span> is false and <span class="process-math">\(q\)</span> is true, the premise is true while the conclusion is false. Thus, it is possible to have true premises and a false conclusion. Hence, the argument is invalid.</div></article></div>
+</div> <div class="para" id="p-414">The first three rows all have true premises. However, in the case that <span class="process-math">\(p\)</span> is false and <span class="process-math">\(q\)</span> is true, the premise is true while the conclusion is false. Thus, it is possible to have true premises and a false conclusion. Hence, the argument is invalid.</div></article></div>
 <article class="activity project-like" id="activity-30"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-338">Use a truth-table to determine if the following argument is valid or invalid. <div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="p-415">Use a truth-table to determine if the following argument is valid or invalid. <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(p\rightarrow q\)</span></td></tr>
 <tr><td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\sim q\)</span></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines">
@@ -659,7 +690,7 @@ window.MathJax = {
 </div></article><article class="activity project-like" id="activity-31"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-339">Use a truth-table to determine if the following argument is valid or invalid. <div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="p-416">Use a truth-table to determine if the following argument is valid or invalid. <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(p\rightarrow q\)</span></td></tr>
 <tr><td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\sim p\)</span></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines">
@@ -669,7 +700,7 @@ window.MathJax = {
 </div></article><article class="activity project-like" id="activity-32"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-340">Use a truth-table to determine if the following argument is valid or invalid. <div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="p-417">Use a truth-table to determine if the following argument is valid or invalid. <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(p\ \vee q\)</span></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(p\rightarrow r\)</span></td></tr>
 <tr><td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(q\rightarrow r\)</span></td></tr>
@@ -679,22 +710,22 @@ window.MathJax = {
 </table></div>
 </div></article><article class="example example-like" id="E_argsentences"><a href="" data-knowl="" class="id-ref example-knowl original has-tabular" data-refid="hk-E_argsentences"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.7</span><span class="period">.</span><span class="space"> </span><span class="title">An Argument with False Premises and False Conclusion.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_argsentences"><article class="example example-like"> <div class="para" id="p-341">Let's look at a more specific example:</div> <div class="para" id="p-342"><div class="tabular-box natural-width"><table class="tabular">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_argsentences"><article class="example example-like"> <div class="para" id="p-418">Let's look at a more specific example:</div> <div class="para" id="p-419"><div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b2 r0 l0 t0 lines">The sun is purple and the sun sets in the west.</td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines">Therefore, the sun is purple.</td></tr>
-</table></div></div> <div class="para" id="p-343">Although the two statements are false, the argument is still valid. It has the form of <a href="" class="xref" data-knowl="./knowl/E_validarg.html" title="Example 2.3.3: Valid Argument">Example 2.3.3</a>, which we determined was valid. But if we think about the definition of validity, we should be able to see that it would be impossible to have the premise be true while the conclusion is false.</div></article></div>
+</table></div></div> <div class="para" id="p-420">Although the two statements are false, the argument is still valid. It has the form of <a href="" class="xref" data-knowl="./knowl/E_validarg.html" title="Example 2.3.3: Valid Argument">Example 2.3.3</a>, which we determined was valid. But if we think about the definition of validity, we should be able to see that it would be impossible to have the premise be true while the conclusion is false.</div></article></div>
 <article class="activity project-like" id="A_possibleforms"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-11"><div class="para" id="p-344">If possible, give an example of an argument (in sentences, not variables) that meets the given criteria. If it is not possible, just state that it is not possible.</div></div>
+<div class="introduction" id="introduction-11"><div class="para" id="p-421">If possible, give an example of an argument (in sentences, not variables) that meets the given criteria. If it is not possible, just state that it is not possible.</div></div>
 <article class="task exercise-like" id="task-30"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-345">A valid argument that has false premises and a true conclusion.</div></article><article class="task exercise-like" id="task-31"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-346">An invalid argument that has false premises and a true conclusion.</div></article><article class="task exercise-like" id="task-32"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-347">A valid argument that has true premises and a true conclusion.</div></article><article class="task exercise-like" id="task-33"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="p-348">An invalid argument that has true premises and a true conclusion.</div></article><article class="task exercise-like" id="task-34"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="p-349">A valid argument that has true premises and a false conclusion.</div></article><article class="task exercise-like" id="task-35"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="p-350">An invalid argument that has true premises and a false conclusion.</div></article></article><article class="assemblage assemblage-like" id="B_commonvalid"><h3 class="heading"><span class="title">Some Common Forms for Valid Arguments.</span></h3>
-<div class="para" id="p-351">Modus ponens: <div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="p-422">A valid argument that has false premises and a true conclusion.</div></article><article class="task exercise-like" id="task-31"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-423">An invalid argument that has false premises and a true conclusion.</div></article><article class="task exercise-like" id="task-32"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-424">A valid argument that has true premises and a true conclusion.</div></article><article class="task exercise-like" id="task-33"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="p-425">An invalid argument that has true premises and a true conclusion.</div></article><article class="task exercise-like" id="task-34"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="p-426">A valid argument that has true premises and a false conclusion.</div></article><article class="task exercise-like" id="task-35"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="p-427">An invalid argument that has true premises and a false conclusion.</div></article></article><article class="assemblage assemblage-like" id="B_commonvalid"><h3 class="heading"><span class="title">Some Common Forms for Valid Arguments.</span></h3>
+<div class="para" id="p-428">Modus ponens: <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(p\rightarrow q\)</span></td></tr>
 <tr><td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(p\)</span></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines">
@@ -702,7 +733,7 @@ window.MathJax = {
 </td></tr>
 </table></div>
 </div>
-<div class="para" id="p-352">Modus tollens: <div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="p-429">Modus tollens: <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(p\rightarrow q\)</span></td></tr>
 <tr><td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\sim q\)</span></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines">
@@ -710,7 +741,7 @@ window.MathJax = {
 </td></tr>
 </table></div>
 </div>
-<div class="para" id="p-353">Transitivity: <div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="p-430">Transitivity: <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(p\rightarrow q\)</span></td></tr>
 <tr><td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(q\rightarrow r\)</span></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines">
@@ -719,7 +750,7 @@ window.MathJax = {
 </table></div>
 </div></article><article class="example example-like" id="E_transitivearg"><a href="" data-knowl="" class="id-ref example-knowl original has-tabular" data-refid="hk-E_transitivearg"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Validity of Transitivity.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_transitivearg"><article class="example example-like"><div class="para" id="p-354">We will show that transitivity is a valid argument using a truth-table. <figure class="table table-like" id="T_transitivityarg"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.3.9<span class="period">.</span></span><span class="space"> </span>Truth-table for transitivity.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_transitivearg"><article class="example example-like"><div class="para" id="p-431">We will show that transitivity is a valid argument using a truth-table. <figure class="table table-like" id="T_transitivityarg"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.3.9<span class="period">.</span></span><span class="space"> </span>Truth-table for transitivity.</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r1 l1 t1 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r1 l0 t1 lines"><span class="process-math">\(q\)</span></td>
@@ -793,9 +824,9 @@ window.MathJax = {
 <td class="c m b1 r1 l0 t0 lines"><em class="alert">T</em></td>
 </tr>
 </table></div></figure>
-</div> <div class="para" id="p-355">Looking at the rows where both premises are true (in bold), we can see that the conclusion must be true. Thus, the argument is valid.</div></article></div>
+</div> <div class="para" id="p-432">Looking at the rows where both premises are true (in bold), we can see that the conclusion must be true. Thus, the argument is valid.</div></article></div>
 <article class="assemblage assemblage-like" id="B_commoninvalid"><h3 class="heading"><span class="title">Some Common Invalid Arguments.</span></h3>
-<div class="para" id="p-356">Converse error: <div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="p-433">Converse error: <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(p\rightarrow q\)</span></td></tr>
 <tr><td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(q\)</span></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines">
@@ -803,29 +834,27 @@ window.MathJax = {
 </td></tr>
 </table></div>
 </div>
-<div class="para" id="p-357">Inverse error: <div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="p-434">Inverse error: <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\sim p\rightarrow q\)</span></td></tr>
 <tr><td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(p\)</span></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines">
 <span class="process-math">\(\therefore\ \)</span><span class="process-math">\(\sim q\)</span>
 </td></tr>
 </table></div>
-</div></article><div class="para" id="p-358">Since it is possible to have a valid argument with a false conclusion, but we'd like our arguments to have true conclusions, we need something more to have a “good” argument.</div>
+</div></article><div class="para" id="p-435">Since it is possible to have a valid argument with a false conclusion, but we'd like our arguments to have true conclusions, we need something more to have a “good” argument.</div>
 <article class="definition definition-like" id="D_sound"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.10</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-359">An argument is <dfn class="terminology">sound</dfn> if it is valid and all the premises are true.</div></article><div class="para" id="p-360">Since a valid argument cannot have true premises and a false conclusion, if the premises are actually true, then the argument must have a true conclusion. Note, soundness of an argument <em class="emphasis">does</em> depend on the actual content of the statements.</div>
+<div class="para" id="p-436">An argument is <dfn class="terminology">sound</dfn> if it is valid and all the premises are true.</div></article><div class="para" id="p-437">Since a valid argument cannot have true premises and a false conclusion, if the premises are actually true, then the argument must have a true conclusion. Note, soundness of an argument <em class="emphasis">does</em> depend on the actual content of the statements.</div>
 <article class="activity project-like" id="activity-34"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-361">Which or your arguments in <a href="" class="xref" data-knowl="./knowl/A_possibleforms.html" title="Activity 2.3.4">Activity 2.3.4</a> are sound?</div></article><section class="reading-questions" id="reading-questions-6"><h3 class="heading hide-type">
+<div class="para" id="p-438">Which or your arguments in <a href="" class="xref" data-knowl="./knowl/A_possibleforms.html" title="Activity 2.3.4">Activity 2.3.4</a> are sound?</div></article><section class="reading-questions" id="reading-questions-6"><h3 class="heading hide-type">
 <span class="type">Reading Questions</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-66"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-362">Use a truth-table to show the converse error is an invalid argument.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original has-tabular" data-refid="hk-answer-39" id="answer-39"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-39"><div class="answer solution-like">
-<div class="tabular-box natural-width"><table class="tabular">
+<article class="exercise exercise-like" id="DMT_valid_CYU_converror"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="DMT_valid_CYU_converror" data-multipleanswers="false">
+<div class="para" id="p-439">The following is the truth-table for an argument with converse error.</div> <div class="para" id="p-440"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r1 l1 t1 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t1 lines"><span class="process-math">\(q\)</span></td>
@@ -861,109 +890,98 @@ window.MathJax = {
 <td class="c m b1 r1 l0 t0 lines">F</td>
 <td class="c m b1 r1 l0 t0 lines">F</td>
 </tr>
-</table></div> <div class="para" id="p-363">We can see in the third row we have true premises and a false conclusion. Thus it is invalid.</div>
-</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-67"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-364">Use a truth-table to determine if the following argument is valid or invalid.</div> <div class="para" id="p-365"><div class="tabular-box natural-width"><table class="tabular">
+</table></div></div> <div class="para" id="p-441">Which row of the truth-table shows us the argument is invalid?</div>
+<li data-component="answer" id="DMT_valid_CYU_converror_opt_a"><div class="para" id="p-442">Row 1</div></li>
+<li data-component="feedback" id="DMT_valid_CYU_converror_opt_a"><div class="para" id="p-443">To be invalid, you do want to look for true premises, but what should the conclusion be?</div></li>
+<li data-component="answer" id="DMT_valid_CYU_converror_opt_b"><div class="para" id="p-444">Row 2</div></li>
+<li data-component="feedback" id="DMT_valid_CYU_converror_opt_b"><div class="para" id="p-445">To be invalid, you want to look for true premises.</div></li>
+<li data-component="answer" id="DMT_valid_CYU_converror_opt_c" data-correct=""><div class="para" id="p-446">Row 3</div></li>
+<li data-component="feedback" id="DMT_valid_CYU_converror_opt_c"><div class="para" id="p-447">In the third row we have true premises and a false conclusion, thus the argument is invalid.</div></li>
+<li data-component="answer" id="DMT_valid_CYU_converror_opt_d"><div class="para" id="p-448">Row 4</div></li>
+<li data-component="feedback" id="DMT_valid_CYU_converror_opt_d"><div class="para" id="p-449">To be invalid, you want to look for true premises.</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_valid_CYU_validornot"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="DMT_valid_CYU_validornot" data-multipleanswers="false">
+<div class="para" id="p-451">Use a truth-table to determine if the following argument is valid or invalid.</div> <div class="para" id="p-452"><div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(p\vee q\)</span></td></tr>
 <tr><td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\sim p\)</span></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines">
 <span class="process-math">\(\therefore\ \)</span><span class="process-math">\(\sim q\)</span>
 </td></tr>
 </table></div></div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original has-tabular" data-refid="hk-answer-40" id="answer-40"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-40"><div class="answer solution-like">
-<div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="c m b2 r1 l1 t1 lines"><span class="process-math">\(p\)</span></td>
-<td class="c m b2 r2 l0 t1 lines"><span class="process-math">\(q\)</span></td>
-<td class="c m b2 r1 l0 t1 lines"><span class="process-math">\(p\vee q\)</span></td>
-<td class="c m b2 r1 l0 t1 lines"><span class="process-math">\(\sim p\)</span></td>
-<td class="c m b2 r1 l0 t1 lines"><span class="process-math">\(q\)</span></td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">T</td>
-<td class="c m b1 r2 l0 t0 lines">T</td>
-<td class="c m b1 r1 l0 t0 lines">T</td>
-<td class="c m b1 r1 l0 t0 lines">F</td>
-<td class="c m b1 r1 l0 t0 lines">T</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">T</td>
-<td class="c m b1 r2 l0 t0 lines">F</td>
-<td class="c m b1 r1 l0 t0 lines">T</td>
-<td class="c m b1 r1 l0 t0 lines">F</td>
-<td class="c m b1 r1 l0 t0 lines">F</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">F</td>
-<td class="c m b1 r2 l0 t0 lines">T</td>
-<td class="c m b1 r1 l0 t0 lines">T</td>
-<td class="c m b1 r1 l0 t0 lines">T</td>
-<td class="c m b1 r1 l0 t0 lines">T</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">F</td>
-<td class="c m b1 r2 l0 t0 lines">F</td>
-<td class="c m b1 r1 l0 t0 lines">F</td>
-<td class="c m b1 r1 l0 t0 lines">T</td>
-<td class="c m b1 r1 l0 t0 lines">F</td>
-</tr>
-</table></div> <div class="para" id="p-366">The third row is the only one with all true premises. In this case the conclusion is true. Thus it is valid.</div>
-</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-68"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-367">True or False: A valid argument can have false premises and a true conclusion.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-41" id="answer-41"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-41"><div class="answer solution-like">True</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-69"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-368">True or False: An invalid argument can have true premises and a true conclusion.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-42" id="answer-42"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-42"><div class="answer solution-like">True</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-70"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-369">True or False: A valid argument can have true premises and a false conclusion.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-43" id="answer-43"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-43"><div class="answer solution-like">False</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-71"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-370">True or False: A sound argument can have false premises and a true conclusion.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-44" id="answer-44"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-44"><div class="answer solution-like">False</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-72"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-371">True or False: A sound argument can have true premises and a false conclusion.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-45" id="answer-45"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-45"><div class="answer solution-like">False</div></div>
-</div></article></section><section class="exercises" id="exercises-6"><h3 class="heading hide-type">
+<li data-component="answer" id="DMT_valid_CYU_validornot_opt_a" data-correct=""><div class="para" id="p-453">The argument is valid.</div></li>
+<li data-component="feedback" id="DMT_valid_CYU_validornot_opt_a"><div class="para" id="p-454">The third row of the truth-table is the only one with all true premises. In this case the conclusion is true. Thus it is valid.</div></li>
+<li data-component="answer" id="DMT_valid_CYU_validornot_opt_b"><div class="para" id="p-455">The argument is invalid.</div></li>
+<li data-component="feedback" id="DMT_valid_CYU_validornot_opt_b"><div class="para" id="p-456">In the truth-table is it possible to have all the premises be true while the conclusion is false?</div></li>
+<li data-component="answer" id="DMT_valid_CYU_validornot_opt_c"><div class="para" id="p-457">I am unable to determine if the argument is valid or invalid.</div></li>
+<li data-component="feedback" id="DMT_valid_CYU_validornot_opt_c"><div class="para" id="p-458">In the truth-table look for all rows in which all the premises are true. Is is possible to have a false conclusion (invalid), or must the conclusion be true (valid)?</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_valid_CYU_vFT"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_valid_CYU_vFT">
+<div class="para" id="p-460">True or False: A valid argument can have false premises and a true conclusion.</div>
+<li data-component="answer" id="DMT_valid_CYU_vFT_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="DMT_valid_CYU_vFT_opt_t">
+<li data-component="answer" id="DMT_valid_CYU_vFT_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="DMT_valid_CYU_vFT_opt_f">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_valid_CYU_iTT"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_valid_CYU_iTT">
+<div class="para" id="p-461">True or False: An invalid argument can have true premises and a true conclusion.</div>
+<li data-component="answer" id="DMT_valid_CYU_iTT_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="DMT_valid_CYU_iTT_opt_t">
+<li data-component="answer" id="DMT_valid_CYU_iTT_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="DMT_valid_CYU_iTT_opt_f">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_valid_CYU_vTF"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_valid_CYU_vTF">
+<div class="para" id="p-462">True or False: A valid argument can have true premises and a false conclusion.</div>
+<li data-component="answer" id="DMT_valid_CYU_vTF_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="DMT_valid_CYU_vTF_opt_t">
+<li data-component="answer" id="DMT_valid_CYU_vTF_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="DMT_valid_CYU_vTF_opt_f">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_valid_CYU_sFT"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_valid_CYU_sFT">
+<div class="para" id="p-463">True or False: A sound argument can have false premises and a true conclusion.</div>
+<li data-component="answer" id="DMT_valid_CYU_sFT_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="DMT_valid_CYU_sFT_opt_t">
+<li data-component="answer" id="DMT_valid_CYU_sFT_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="DMT_valid_CYU_sFT_opt_f">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_valid_CYU_sTF"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_valid_CYU_sTF">
+<div class="para" id="p-464">True or False: A sound argument can have true premises and a false conclusion.</div>
+<li data-component="answer" id="DMT_valid_CYU_sTF_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="DMT_valid_CYU_sTF_opt_t">
+<li data-component="answer" id="DMT_valid_CYU_sTF_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="DMT_valid_CYU_sTF_opt_f">
+</ul></div></div></article></section><section class="exercises" id="exercises-6"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="exercise-73"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-372">Use a truth-table to determine if the following argument is valid or invalid. Indicate the premises and conclusion on your table. Clearly state your conclusion and explain how your truth-table supports your conclusion.</div> <div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="p-465">Use a truth-table to determine if the following argument is valid or invalid. Indicate the premises and conclusion on your table. Clearly state your conclusion and explain how your truth-table supports your conclusion.</div> <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(p\)</span></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(p\rightarrow q\)</span></td></tr>
 <tr><td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\sim q\ \vee r\)</span></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\therefore r\)</span></td></tr>
 </table></div></article><article class="exercise exercise-like" id="exercise-74"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-373">Use a truth-table to determine if the following argument is valid or invalid. Indicate the premises and conclusion on your table. Clearly state your conclusion and explain how your truth-table supports your conclusion.</div> <div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="p-466">Use a truth-table to determine if the following argument is valid or invalid. Indicate the premises and conclusion on your table. Clearly state your conclusion and explain how your truth-table supports your conclusion.</div> <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\((p\ \wedge q)\rightarrow \sim r\)</span></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(p\ \vee \sim q\)</span></td></tr>
 <tr><td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\sim q\rightarrow p\)</span></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\therefore \sim r\)</span></td></tr>
 </table></div></article><article class="exercise exercise-like" id="exercise-75"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-374">Use a truth-table to show that the following argument is valid. Indicate the premises and conclusion on your table. Explain how your truth-table supports your conclusion.</div> <div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="p-467">Use a truth-table to show that the following argument is valid. Indicate the premises and conclusion on your table. Explain how your truth-table supports your conclusion.</div> <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(p \ \vee q\)</span></td></tr>
 <tr><td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\sim p\)</span></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\therefore q\)</span></td></tr>
 </table></div></article><article class="exercise exercise-like" id="exercise-76"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-375">Use a truth-table to show that the following argument (modus tollens) is valid. Indicate the premises and conclusion on your table. Explain how your truth-table supports your conclusion.</div> <div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="p-468">Use a truth-table to show that the following argument (modus tollens) is valid. Indicate the premises and conclusion on your table. Explain how your truth-table supports your conclusion.</div> <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(p\rightarrow q\)</span></td></tr>
 <tr><td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\sim q\)</span></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\therefore \sim p\)</span></td></tr>
 </table></div></article><article class="exercise exercise-like" id="exercise-77"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-376">Use a truth-table to show that the following argument (also known as proof by cases) is valid. Indicate the premises and conclusion on your table. Explain how your truth-table supports your conclusion.</div> <div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="p-469">Use a truth-table to show that the following argument (also known as proof by cases) is valid. Indicate the premises and conclusion on your table. Explain how your truth-table supports your conclusion.</div> <div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(p\ \vee q\)</span></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(p\rightarrow r\)</span></td></tr>
 <tr><td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(q\rightarrow r\)</span></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\therefore r\)</span></td></tr>
 </table></div></article><article class="exercise exercise-like" id="exercise-78"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-377">Determine whether the following arguments are valid or invalid. If they are invalid, determine it they exhibit the converse error or the inverse error. Rewrite each argument using symbols to help determine validity.</div> <div class="para logical" id="p-378"><ol class="lower-alpha">
+<div class="para" id="p-470">Determine whether the following arguments are valid or invalid. If they are invalid, determine it they exhibit the converse error or the inverse error. Rewrite each argument using symbols to help determine validity.</div> <div class="para logical" id="p-471"><ol class="lower-alpha">
 <li id="li-122"><div class="tabular-box natural-width"><table class="tabular">
 <tr><td class="l m b0 r0 l0 t0 lines">If Jules solved this problem correctly, then Jules obtained the answer <span class="process-math">\(\pi\text{.}\)</span>
 </td></tr>
@@ -979,7 +997,7 @@ window.MathJax = {
 <span class="process-math">\(\therefore\)</span> The product of these two numbers is not divisible by 6.</td></tr>
 </table></div></li>
 </ol></div></article><article class="exercise exercise-like" id="exercise-79"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-379">Explain in your own words what distinguishes a valid form of argument from an invalid one.</div></article></section></section></div>
+<div class="para" id="p-472">Explain in your own words what distinguishes a valid form of argument from an invalid one.</div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="conditional2-2.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="chapter3.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
@@ -987,5 +1005,13 @@ window.MathJax = {
 <div id="ptx-page-footer">
 <a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12894193;
+var sc_invisible=1;
+var sc_security="e67c59eb";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12894193/0/e67c59eb/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
 </body>
 </html>

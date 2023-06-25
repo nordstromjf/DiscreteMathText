@@ -12,8 +12,48 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">One of the things we want to be able to do is to translate English (or mathematical) sentences into logical statements. We have to be careful about how common phrases are really hidden “and”s. For example, “<span class="process-math">\(p\)</span> but <span class="process-math">\(q\)</span>” is really <span class="process-math">\(p\wedge q\text{.}\)</span> Similarly, “neither <span class="process-math">\(p\)</span> nor <span class="process-math">\(q\)</span>” is really <span class="process-math">\(\sim p\ \wedge \sim q\text{.}\)</span>
-</div>
+<div class="para"><figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.1.5<span class="period">.</span></span><span class="space"> </span>Truth-table for <span class="process-math">\(\sim p\vee q\)</span> and <span class="process-math">\(\sim (p\vee q)\text{.}\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r1 l1 t1 lines"><span class="process-math">\(p\)</span></td>
+<td class="c m b2 r2 l0 t1 lines"><span class="process-math">\(q\)</span></td>
+<td class="c m b2 r1 l0 t1 lines"><span class="process-math">\(\sim p\)</span></td>
+<td class="c m b2 r1 l0 t1 lines"><span class="process-math">\(\sim p \vee q\)</span></td>
+<td class="c m b2 r1 l0 t1 lines"><span class="process-math">\(p \vee q\)</span></td>
+<td class="c m b2 r1 l0 t1 lines"><span class="process-math">\(\sim (p \vee q)\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">T</td>
+<td class="c m b1 r2 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">F</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">T</td>
+<td class="c m b1 r2 l0 t0 lines">F</td>
+<td class="c m b1 r1 l0 t0 lines">F</td>
+<td class="c m b1 r1 l0 t0 lines">F</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">F</td>
+<td class="c m b1 r2 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">F</td>
+<td class="c m b1 r2 l0 t0 lines">F</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">F</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+</tr>
+</table></div></figure></div>
 <span class="incontext"><a href="logical_form2-1.html#p-227" class="internal">in-context</a></span>
 </body>
 </html>

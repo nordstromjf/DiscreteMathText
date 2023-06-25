@@ -62,8 +62,39 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.0.0dev3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runtime.71ffd81c0faeb38b.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.e543e0dd19670ae2.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.1f1f63d2cda36a4d.css">
 </head>
-<body class="pretext book ignore-math">
+<body id="DiscreteMathText" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" href=""></a><div class="title-container">
 <h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
@@ -549,12 +580,12 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="divisibility4-3"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.3</span> <span class="title">Divisibility</span>
 </h2>
-<div class="para" id="p-862">In this section we introduce the idea of divisibility for integers. It is important to understand that this concept involves only integers and is not the same thing as division. Divisibility is a property while division is an operation.</div>
+<div class="para" id="p-1004">In this section we introduce the idea of divisibility for integers. It is important to understand that this concept involves only integers and is not the same thing as division. Divisibility is a property while division is an operation.</div>
 <article class="definition definition-like" id="definition-26"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.3.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-863">Let <span class="process-math">\(n, d\in \mathbb{Z}\text{.}\)</span> Then <span class="process-math">\(n\)</span> is <dfn class="terminology">divisible</dfn> by <span class="process-math">\(d\)</span> if <span class="process-math">\(n=dk\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span>
-</div></article><div class="para logical" id="p-864">
+<div class="para" id="p-1005">Let <span class="process-math">\(n, d\in \mathbb{Z}\text{.}\)</span> Then <span class="process-math">\(n\)</span> is <dfn class="terminology">divisible</dfn> by <span class="process-math">\(d\)</span> if <span class="process-math">\(n=dk\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span>
+</div></article><div class="para logical" id="p-1006">
 <div class="para">If <span class="process-math">\(n=dk\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\)</span> we can also say</div>
 <ul class="disc">
 <li id="li-254"><div class="para" id="p-derived-li-254">
@@ -571,11 +602,11 @@ window.MathJax = {
 </div></li>
 </ul>
 </div>
-<div class="para" id="p-865">We use the notation <span class="process-math">\(d\mid n\)</span>, read “<span class="process-math">\(d\)</span> divides <span class="process-math">\(n\text{.}\)</span>”</div>
-<div class="para" id="p-866">
+<div class="para" id="p-1007">We use the notation <span class="process-math">\(d\mid n\)</span>, read “<span class="process-math">\(d\)</span> divides <span class="process-math">\(n\text{.}\)</span>”</div>
+<div class="para" id="p-1008">
 <em class="alert">Warning:</em> <span class="process-math">\(d\mid n\)</span> is a relationship between two integers. It is a statement that is either true or false. It does <em class="emphasis">not</em> equal a number. It is <em class="emphasis">not</em> the same thing as a fraction. It is not an equation, but it can be translated to the equation <span class="process-math">\(n=dk\)</span> for some integer <span class="process-math">\(k\text{.}\)</span>
 </div>
-<div class="para logical" id="p-867">
+<div class="para logical" id="p-1009">
 <div class="para">It is important to look at the special case when <span class="process-math">\(n\)</span> or <span class="process-math">\(d\)</span> is 0.</div>
 <ul class="disc">
 <li id="li-258"><div class="para" id="p-derived-li-258">
@@ -589,78 +620,78 @@ window.MathJax = {
 </div>
 <article class="example example-like" id="E_divides"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_divides"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Finding Divisors.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_divides"><article class="example example-like"> <div class="para" id="p-868">Find the divisors of 6.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-122" id="answer-122"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-122"><div class="answer solution-like">1, 2, 3, 6, -1, -2, -3, -6</div></div> <div class="para" id="p-869">Find the divisors of 5.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-123" id="answer-123"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-123"><div class="answer solution-like">1, 5, -1, -5</div></div> <div class="para" id="p-870">Find the divisors of 1.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-124" id="answer-124"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-124"><div class="answer solution-like">1, -1</div></div></article></div>
-<div class="para" id="p-871">If <span class="process-math">\(d\)</span> does not divide <span class="process-math">\(n\text{,}\)</span> then for every <span class="process-math">\(k\in \mathbb{Z}, n\neq dk\text{.}\)</span> This can be difficult to show in general, but if <span class="process-math">\(n\)</span> and <span class="process-math">\(d\)</span> are specific integers, you could show <span class="process-math">\(\frac{n}{d}\)</span> is not an integer. This is the <em class="emphasis">only</em> time a fraction can show up in proofs about divibilty.</div>
-<div class="para" id="p-872">We use the notation <span class="process-math">\(d\nmid n\)</span> for <span class="process-math">\(d\)</span> does not divide <span class="process-math">\(n\text{.}\)</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_divides"><article class="example example-like"> <div class="para" id="p-1010">Find the divisors of 6.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-122" id="answer-122"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-122"><div class="answer solution-like">1, 2, 3, 6, -1, -2, -3, -6</div></div> <div class="para" id="p-1011">Find the divisors of 5.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-123" id="answer-123"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-123"><div class="answer solution-like">1, 5, -1, -5</div></div> <div class="para" id="p-1012">Find the divisors of 1.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-124" id="answer-124"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-124"><div class="answer solution-like">1, -1</div></div></article></div>
+<div class="para" id="p-1013">If <span class="process-math">\(d\)</span> does not divide <span class="process-math">\(n\text{,}\)</span> then for every <span class="process-math">\(k\in \mathbb{Z}, n\neq dk\text{.}\)</span> This can be difficult to show in general, but if <span class="process-math">\(n\)</span> and <span class="process-math">\(d\)</span> are specific integers, you could show <span class="process-math">\(\frac{n}{d}\)</span> is not an integer. This is the <em class="emphasis">only</em> time a fraction can show up in proofs about divibilty.</div>
+<div class="para" id="p-1014">We use the notation <span class="process-math">\(d\nmid n\)</span> for <span class="process-math">\(d\)</span> does not divide <span class="process-math">\(n\text{.}\)</span>
 </div>
 <article class="example example-like" id="E_TFdivides"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_TFdivides"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Determining Divisibility.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_TFdivides"><article class="example example-like"> <div class="para" id="p-873">True or false: <span class="process-math">\(8\mid 24\text{.}\)</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_TFdivides"><article class="example example-like"> <div class="para" id="p-1015">True or false: <span class="process-math">\(8\mid 24\text{.}\)</span>
 </div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-125" id="answer-125"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-125"><div class="answer solution-like">True, <span class="process-math">\(24=8(3)\text{.}\)</span>
-</div></div> <div class="para" id="p-874">True or false: <span class="process-math">\(8\mid 4\text{.}\)</span>
+</div></div> <div class="para" id="p-1016">True or false: <span class="process-math">\(8\mid 4\text{.}\)</span>
 </div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-126" id="answer-126"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-126"><div class="answer solution-like">False, <span class="process-math">\(4=8(k)\)</span> has no integer solutions since <span class="process-math">\(k=1/2\text{.}\)</span>
-</div></div> <div class="para" id="p-875">True or false: <span class="process-math">\(8\mid 10\text{.}\)</span>
+</div></div> <div class="para" id="p-1017">True or false: <span class="process-math">\(8\mid 10\text{.}\)</span>
 </div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-127" id="answer-127"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-127"><div class="answer solution-like">False, <span class="process-math">\(10=8(k)\)</span> has no integer solutions since <span class="process-math">\(k=5/4\text{.}\)</span>
-</div></div> <div class="para" id="p-876">True or false: <span class="process-math">\(8\mid -8\text{.}\)</span>
+</div></div> <div class="para" id="p-1018">True or false: <span class="process-math">\(8\mid -8\text{.}\)</span>
 </div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-128" id="answer-128"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-128"><div class="answer solution-like">True, <span class="process-math">\(-8=8(-1)\text{.}\)</span>
-</div></div> <div class="para" id="p-877">True or false: <span class="process-math">\(-2\mid 8\text{.}\)</span>
+</div></div> <div class="para" id="p-1019">True or false: <span class="process-math">\(-2\mid 8\text{.}\)</span>
 </div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-129" id="answer-129"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-129"><div class="answer solution-like">True, <span class="process-math">\(8=-2(-4)\text{.}\)</span>
-</div></div> <div class="para" id="p-878">True or false: <span class="process-math">\(1\mid 4\text{.}\)</span>
+</div></div> <div class="para" id="p-1020">True or false: <span class="process-math">\(1\mid 4\text{.}\)</span>
 </div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-130" id="answer-130"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-130"><div class="answer solution-like">True, <span class="process-math">\(4=1(4)\text{.}\)</span>
-</div></div> <div class="para" id="p-879">True or false: <span class="process-math">\(8\mid 0\text{.}\)</span>
+</div></div> <div class="para" id="p-1021">True or false: <span class="process-math">\(8\mid 0\text{.}\)</span>
 </div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-131" id="answer-131"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-131"><div class="answer solution-like">True, <span class="process-math">\(0=8(0)\text{.}\)</span>
-</div></div> <div class="para" id="p-880">True or false: <span class="process-math">\(4\mid 1\text{.}\)</span>
+</div></div> <div class="para" id="p-1022">True or false: <span class="process-math">\(4\mid 1\text{.}\)</span>
 </div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-132" id="answer-132"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">8</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-132"><div class="answer solution-like">False, <span class="process-math">\(1=4(k)\)</span> has no integer solutions since <span class="process-math">\(k=1/4\text{.}\)</span>
-</div></div> <div class="para" id="p-881">True or false: <span class="process-math">\(0\mid 8\text{.}\)</span>
+</div></div> <div class="para" id="p-1023">True or false: <span class="process-math">\(0\mid 8\text{.}\)</span>
 </div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-133" id="answer-133"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">9</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-133"><div class="answer solution-like">False, <span class="process-math">\(8=0(k)\)</span> has no integer solutions.</div></div></article></div>
 <article class="activity project-like" id="activity-62"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.1</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-32"><div class="para" id="p-882">Determine if the following divisibility statements are true or false, and justify your answer.</div></div>
+<div class="introduction" id="introduction-32"><div class="para" id="p-1024">Determine if the following divisibility statements are true or false, and justify your answer.</div></div>
 <article class="task exercise-like" id="task-93"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <span class="process-math">\(3\mid 10\)</span></article><article class="task exercise-like" id="task-94"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <span class="process-math">\(3\mid 0\)</span></article><article class="task exercise-like" id="task-95"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <span class="process-math">\(3\mid 36\)</span></article><article class="task exercise-like" id="task-96"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <span class="process-math">\(12\mid 4\)</span></article><article class="task exercise-like" id="task-97"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<span class="process-math">\(0\mid 4\)</span></article></article><div class="para" id="p-883">Now, let's use the definition of divisibility to prove a more general theorem.</div>
+<span class="process-math">\(0\mid 4\)</span></article></article><div class="para" id="p-1025">Now, let's use the definition of divisibility to prove a more general theorem.</div>
 <article class="theorem theorem-like" id="T_transdivides"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-884">For all integers, <span class="process-math">\(a, b, c\text{,}\)</span> if  <span class="process-math">\(a\mid b\)</span> and <span class="process-math">\(b\mid c\text{,}\)</span> then <span class="process-math">\(a\mid c\text{.}\)</span>
-</div></article><article class="hiddenproof" id="proof-8"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-8"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-8"><article class="hiddenproof"><div class="para" id="p-885">Let <span class="process-math">\(a, b, c\in \mathbb{Z}\text{.}\)</span> Assume <span class="process-math">\(a\mid b\)</span> and <span class="process-math">\(b\mid c\text{.}\)</span> Then by definition, <span class="process-math">\(b=ak\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\)</span> and <span class="process-math">\(c=bj\)</span> for some <span class="process-math">\(j\in \mathbb{Z}\text{.}\)</span> Substituting the first equation into the second, <span class="process-math">\(c=(ak)j=a(kj)\text{.}\)</span> Since <span class="process-math">\(kj\in\mathbb{Z}\text{,}\)</span> <span class="process-math">\(a\mid c\text{.}\)</span>
+<div class="para" id="p-1026">For all integers, <span class="process-math">\(a, b, c\text{,}\)</span> if  <span class="process-math">\(a\mid b\)</span> and <span class="process-math">\(b\mid c\text{,}\)</span> then <span class="process-math">\(a\mid c\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-8"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-8"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-8"><article class="hiddenproof"><div class="para" id="p-1027">Let <span class="process-math">\(a, b, c\in \mathbb{Z}\text{.}\)</span> Assume <span class="process-math">\(a\mid b\)</span> and <span class="process-math">\(b\mid c\text{.}\)</span> Then by definition, <span class="process-math">\(b=ak\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\)</span> and <span class="process-math">\(c=bj\)</span> for some <span class="process-math">\(j\in \mathbb{Z}\text{.}\)</span> Substituting the first equation into the second, <span class="process-math">\(c=(ak)j=a(kj)\text{.}\)</span> Since <span class="process-math">\(kj\in\mathbb{Z}\text{,}\)</span> <span class="process-math">\(a\mid c\text{.}\)</span>
 </div></article></div>
 <article class="activity project-like" id="activity-63"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-886">Prove if 15 divides <span class="process-math">\(n\text{,}\)</span> then 5 divides <span class="process-math">\(n\text{.}\)</span>
+<div class="para" id="p-1028">Prove if 15 divides <span class="process-math">\(n\text{,}\)</span> then 5 divides <span class="process-math">\(n\text{.}\)</span>
 </div></article><article class="activity project-like" id="activity-64"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-887">Prove or disprove if 6 divides <span class="process-math">\(n\text{,}\)</span> then 12 divides <span class="process-math">\(n\text{.}\)</span>
+<div class="para" id="p-1029">Prove or disprove if 6 divides <span class="process-math">\(n\text{,}\)</span> then 12 divides <span class="process-math">\(n\text{.}\)</span>
 </div></article><article class="activity project-like" id="activity-65"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-888">Prove if <span class="process-math">\(d\mid n\)</span> and <span class="process-math">\(d\mid m\text{,}\)</span> then <span class="process-math">\(d\mid (n+m)\text{.}\)</span>
-</div></article><div class="para" id="p-889">Now that we have the concept of divisibility, we can look at some bigger mathematical theorems involving divisibility by primes.</div>
+<div class="para" id="p-1030">Prove if <span class="process-math">\(d\mid n\)</span> and <span class="process-math">\(d\mid m\text{,}\)</span> then <span class="process-math">\(d\mid (n+m)\text{.}\)</span>
+</div></article><div class="para" id="p-1031">Now that we have the concept of divisibility, we can look at some bigger mathematical theorems involving divisibility by primes.</div>
 <article class="theorem theorem-like" id="T_divbyprime"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.5</span><span class="period">.</span>
-</h3>Any integer <span class="process-math">\(n&gt;1\)</span> is divisible by a prime.</article><article class="hiddenproof" id="proof-9"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-9"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-9"><article class="hiddenproof"><div class="para" id="p-890">We will divide this proof into two cases, where <span class="process-math">\(n\)</span> is prime and where <span class="process-math">\(n\)</span> is composite.</div> <div class="para" id="p-891">Case 1: <span class="process-math">\(n\)</span> is prime. We can see that <span class="process-math">\(n\mid n\text{.}\)</span> Since <span class="process-math">\(\text{}\)</span> is prime, <span class="process-math">\(n\)</span> is divisible by a prime.</div> <div class="para" id="p-892">Case 2: <span class="process-math">\(n\)</span> is composite. Then <span class="process-math">\(n=r_0s_0\)</span> where <span class="process-math">\(1&lt; r_0 &lt; n\text{,}\)</span> and <span class="process-math">\(r_0, s_0\in \mathbb{Z}\text{.}\)</span> If <span class="process-math">\(r_0\)</span> is prime, then <span class="process-math">\(n\)</span> is divisible by a prime.</div> <div class="para" id="p-893">If <span class="process-math">\(r_0\)</span> is not prime, then <span class="process-math">\(r_0=r_1s_1\)</span> where <span class="process-math">\(1&lt; r_1 &lt; r_0\text{,}\)</span> and <span class="process-math">\(r_1, s_1\in \mathbb{Z}\text{.}\)</span> If <span class="process-math">\(r_1\)</span> is prime, then <span class="process-math">\(n=r_1s_1s_0\)</span> and <span class="process-math">\(n\)</span> is divisible by a prime.</div> <div class="para" id="p-894">Similarly, if <span class="process-math">\(r_1\)</span> is not prime, then <span class="process-math">\(r_1=r_2s_2\)</span> where <span class="process-math">\(1&lt; r_2 &lt; r_1 &lt; r_0\text{,}\)</span> and <span class="process-math">\(r_2, s_2\in \mathbb{Z}\text{,}\)</span> etc.</div> <div class="para" id="p-895">We can keep applying this process to get <span class="process-math">\(n=r_ks_k\cdots s_0\)</span> with <span class="process-math">\(1&lt; r_k &lt;\cdots&lt; r_1 &lt; r_0\text{,}\)</span> and <span class="process-math">\(r_k, s_k\in \mathbb{Z}\text{.}\)</span>
-</div> <div class="para" id="p-896">If at any point <span class="process-math">\(r_k\)</span> is prime, then we are done, as we have found a prime divisor of <span class="process-math">\(n\text{.}\)</span> We know that there cannot be infinitely many non-prime <span class="process-math">\(r_k\)</span> since there are only finitely many integers between 1 and <span class="process-math">\(n\text{.}\)</span> Thus, the process must terminate with a prime divisor of <span class="process-math">\(n\text{.}\)</span> Hence, every integer is divisible by a prime.</div></article></div>
-<div class="para" id="p-897">We now state a big theorem in discrete mathematics, but leave the proof for later. This theorem is more commonly called the Fundamental Theorem of Arthmetic.</div>
+</h3>Any integer <span class="process-math">\(n&gt;1\)</span> is divisible by a prime.</article><article class="hiddenproof" id="proof-9"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-9"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-9"><article class="hiddenproof"><div class="para" id="p-1032">We will divide this proof into two cases, where <span class="process-math">\(n\)</span> is prime and where <span class="process-math">\(n\)</span> is composite.</div> <div class="para" id="p-1033">Case 1: <span class="process-math">\(n\)</span> is prime. We can see that <span class="process-math">\(n\mid n\text{.}\)</span> Since <span class="process-math">\(\text{}\)</span> is prime, <span class="process-math">\(n\)</span> is divisible by a prime.</div> <div class="para" id="p-1034">Case 2: <span class="process-math">\(n\)</span> is composite. Then <span class="process-math">\(n=r_0s_0\)</span> where <span class="process-math">\(1&lt; r_0 &lt; n\text{,}\)</span> and <span class="process-math">\(r_0, s_0\in \mathbb{Z}\text{.}\)</span> If <span class="process-math">\(r_0\)</span> is prime, then <span class="process-math">\(n\)</span> is divisible by a prime.</div> <div class="para" id="p-1035">If <span class="process-math">\(r_0\)</span> is not prime, then <span class="process-math">\(r_0=r_1s_1\)</span> where <span class="process-math">\(1&lt; r_1 &lt; r_0\text{,}\)</span> and <span class="process-math">\(r_1, s_1\in \mathbb{Z}\text{.}\)</span> If <span class="process-math">\(r_1\)</span> is prime, then <span class="process-math">\(n=r_1s_1s_0\)</span> and <span class="process-math">\(n\)</span> is divisible by a prime.</div> <div class="para" id="p-1036">Similarly, if <span class="process-math">\(r_1\)</span> is not prime, then <span class="process-math">\(r_1=r_2s_2\)</span> where <span class="process-math">\(1&lt; r_2 &lt; r_1 &lt; r_0\text{,}\)</span> and <span class="process-math">\(r_2, s_2\in \mathbb{Z}\text{,}\)</span> etc.</div> <div class="para" id="p-1037">We can keep applying this process to get <span class="process-math">\(n=r_ks_k\cdots s_0\)</span> with <span class="process-math">\(1&lt; r_k &lt;\cdots&lt; r_1 &lt; r_0\text{,}\)</span> and <span class="process-math">\(r_k, s_k\in \mathbb{Z}\text{.}\)</span>
+</div> <div class="para" id="p-1038">If at any point <span class="process-math">\(r_k\)</span> is prime, then we are done, as we have found a prime divisor of <span class="process-math">\(n\text{.}\)</span> We know that there cannot be infinitely many non-prime <span class="process-math">\(r_k\)</span> since there are only finitely many integers between 1 and <span class="process-math">\(n\text{.}\)</span> Thus, the process must terminate with a prime divisor of <span class="process-math">\(n\text{.}\)</span> Hence, every integer is divisible by a prime.</div></article></div>
+<div class="para" id="p-1039">We now state a big theorem in discrete mathematics, but leave the proof for later. This theorem is more commonly called the Fundamental Theorem of Arthmetic.</div>
 <article class="theorem theorem-like" id="T_FTofArith"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Unique Factorization Theorem.</span>
 </h3>
-<div class="para" id="p-898">Given any integer <span class="process-math">\(n&gt;1\)</span> there exists a positive integer <span class="process-math">\(k\text{,}\)</span> distinct primes <span class="process-math">\(p_1, p_2, \ldots, p_k\text{,}\)</span> and positive integers <span class="process-math">\(e_1, e_2, \ldots e_k\text{,}\)</span> such that <span class="process-math">\(n=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}\text{.}\)</span> This factorization of <span class="process-math">\(n\)</span> into powers of primes is unique except for the order of the factors.</div></article><div class="para" id="p-899">The decomposition into powers of primes, <span class="process-math">\(n=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}\text{,}\)</span> is called the <dfn class="terminology">standard form</dfn> of the prime factorization.</div>
+<div class="para" id="p-1040">Given any integer <span class="process-math">\(n&gt;1\)</span> there exists a positive integer <span class="process-math">\(k\text{,}\)</span> distinct primes <span class="process-math">\(p_1, p_2, \ldots, p_k\text{,}\)</span> and positive integers <span class="process-math">\(e_1, e_2, \ldots e_k\text{,}\)</span> such that <span class="process-math">\(n=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}\text{.}\)</span> This factorization of <span class="process-math">\(n\)</span> into powers of primes is unique except for the order of the factors.</div></article><div class="para" id="p-1041">The decomposition into powers of primes, <span class="process-math">\(n=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}\text{,}\)</span> is called the <dfn class="terminology">standard form</dfn> of the prime factorization.</div>
 <article class="definition definition-like" id="D_factorial"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.3.7</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-900">Let <span class="process-math">\(n\)</span> be an integer <span class="process-math">\(n\geq 1\text{.}\)</span> Then the <dfn class="terminology">factorial</dfn> of <span class="process-math">\(n\)</span> is given by <span class="process-math">\(n!=(n)(n-1)(n-2)\cdots(2)(1)\text{.}\)</span>
-</div></article><div class="para" id="p-901">For example, <span class="process-math">\(5!=5(4)(3)(2)(1)=120\text{.}\)</span>
+<div class="para" id="p-1042">Let <span class="process-math">\(n\)</span> be an integer <span class="process-math">\(n\geq 1\text{.}\)</span> Then the <dfn class="terminology">factorial</dfn> of <span class="process-math">\(n\)</span> is given by <span class="process-math">\(n!=(n)(n-1)(n-2)\cdots(2)(1)\text{.}\)</span>
+</div></article><div class="para" id="p-1043">For example, <span class="process-math">\(5!=5(4)(3)(2)(1)=120\text{.}\)</span>
 </div>
 <article class="example example-like" id="E_primefactorization"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_primefactorization"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Prime Factorization.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_primefactorization"><article class="example example-like"> <div class="para" id="p-902">Find the prime factorization of 252 in standard form.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-134" id="answer-134"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-134"><div class="answer solution-like"><span class="process-math">\(252=(2^2)(3^2)(7)\text{.}\)</span></div></div> <div class="para" id="p-903">Find the prime factorization of 17 in standard form.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-135" id="answer-135"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-135"><div class="answer solution-like">
-<span class="process-math">\(17\text{,}\)</span> since it is prime.</div></div> <div class="para" id="p-904">Find the prime factorization of 195 in standard form.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-136" id="answer-136"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-136"><div class="answer solution-like"><span class="process-math">\(195=(3)(5)(13)\text{.}\)</span></div></div> <div class="para" id="p-905">Find the prime factorization of <span class="process-math">\(8!\)</span> in standard form.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-137" id="answer-137"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-137"><div class="answer solution-like"><div class="displaymath process-math" id="md-4">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_primefactorization"><article class="example example-like"> <div class="para" id="p-1044">Find the prime factorization of 252 in standard form.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-134" id="answer-134"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-134"><div class="answer solution-like"><span class="process-math">\(252=(2^2)(3^2)(7)\text{.}\)</span></div></div> <div class="para" id="p-1045">Find the prime factorization of 17 in standard form.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-135" id="answer-135"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-135"><div class="answer solution-like">
+<span class="process-math">\(17\text{,}\)</span> since it is prime.</div></div> <div class="para" id="p-1046">Find the prime factorization of 195 in standard form.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-136" id="answer-136"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-136"><div class="answer solution-like"><span class="process-math">\(195=(3)(5)(13)\text{.}\)</span></div></div> <div class="para" id="p-1047">Find the prime factorization of <span class="process-math">\(8!\)</span> in standard form.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-137" id="answer-137"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-137"><div class="answer solution-like"><div class="displaymath process-math" id="md-4">
 \begin{align*}
 8!=(8)(7)(6)(5)(4)(3)(2)(1)\\
 &amp;=(2^3)(7)(2\cdot 3)(5)(2^2)(3)(2)\\
@@ -670,132 +701,168 @@ window.MathJax = {
 <article class="activity project-like" id="activity-66"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.5</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-906">Give the prime factorization of 600 in standard form.</div></article><article class="activity project-like" id="activity-67"><h3 class="heading">
+<div class="para" id="p-1048">Give the prime factorization of 600 in standard form.</div></article><article class="activity project-like" id="activity-67"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.6</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-907">Give the prime factorization of <span class="process-math">\(9!\)</span> (9 factorial). Is 10 a factor of <span class="process-math">\(9!\text{?}\)</span> Is <span class="process-math">\(10^2\text{?}\)</span>
-</div></article><div class="para" id="p-908">
+<div class="para" id="p-1049">Give the prime factorization of <span class="process-math">\(9!\)</span> (9 factorial). Is 10 a factor of <span class="process-math">\(9!\text{?}\)</span> Is <span class="process-math">\(10^2\text{?}\)</span>
+</div></article><div class="para" id="p-1050">
 <a href="" class="xref" data-knowl="./knowl/T_FTofArith.html" title="Theorem 4.3.6: Unique Factorization Theorem">Theorem 4.3.6</a> is more powerful than it may seem. Although you have probably found prime factorizations before, you may not have thought much about the fact that they are unique. Consider the statement <span class="process-math">\(3\mid 2^{101}\text{.}\)</span> Is this true or false? Well, since <span class="process-math">\(2^{101}\)</span> is a prime factorization, the only prime divisor it has is 2. Thus, <span class="process-math">\(3\mid 2^{101}\)</span> is false. If you have the prime factorization of an integer, then you know exactly which primes (and which powers of primes) divide the integer.</div>
 <article class="activity project-like" id="activity-68"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.7</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-33"><div class="para" id="p-909">Determine if the follwing are true or false. Give a reason for your answer.</div></div>
+<div class="introduction" id="introduction-33"><div class="para" id="p-1051">Determine if the follwing are true or false. Give a reason for your answer.</div></div>
 <article class="task exercise-like" id="task-98"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-910">5 divides <span class="process-math">\(3^{600}\text{.}\)</span>
+<div class="para" id="p-1052">5 divides <span class="process-math">\(3^{600}\text{.}\)</span>
 </div></article><article class="task exercise-like" id="task-99"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-911">6 divides <span class="process-math">\(3^{600}\text{.}\)</span>
+<div class="para" id="p-1053">6 divides <span class="process-math">\(3^{600}\text{.}\)</span>
 </div></article><article class="task exercise-like" id="task-100"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-912">9 divides <span class="process-math">\(3^{600}\text{.}\)</span>
+<div class="para" id="p-1054">9 divides <span class="process-math">\(3^{600}\text{.}\)</span>
 </div></article><article class="task exercise-like" id="task-101"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="p-913">300 divides <span class="process-math">\(3^{600}\text{.}\)</span>
+<div class="para" id="p-1055">300 divides <span class="process-math">\(3^{600}\text{.}\)</span>
 </div></article></article><section class="reading-questions" id="reading-questions-13"><h3 class="heading hide-type">
 <span class="type">Reading Questions</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-167"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-914">True or false: <span class="process-math">\(6\mid 24\text{.}\)</span>
+<article class="exercise exercise-like" id="DMT_divis_CYU_6div24"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_divis_CYU_6div24">
+<div class="para" id="p-1056">True or false: <span class="process-math">\(6\mid 24\text{.}\)</span>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-138" id="answer-138"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-138"><div class="answer solution-like">True.</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-168"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-915">True or false: <span class="process-math">\(1\mid 9\text{.}\)</span>
+<li data-component="answer" id="DMT_divis_CYU_6div24_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="DMT_divis_CYU_6div24_opt_t">
+<li data-component="answer" id="DMT_divis_CYU_6div24_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="DMT_divis_CYU_6div24_opt_f">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_divis_CYU_1div9"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_divis_CYU_1div9">
+<div class="para" id="p-1057">True or false: <span class="process-math">\(1\mid 9\text{.}\)</span>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-139" id="answer-139"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-139"><div class="answer solution-like">True.</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-169"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-916">True or false: <span class="process-math">\(0\mid 9\text{.}\)</span>
+<li data-component="answer" id="DMT_divis_CYU_1div9_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="DMT_divis_CYU_1div9_opt_t">
+<li data-component="answer" id="DMT_divis_CYU_1div9_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="DMT_divis_CYU_1div9_opt_f">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_divis_CYU_0div9"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_divis_CYU_0div9">
+<div class="para" id="p-1058">True or false: <span class="process-math">\(0\mid 9\text{.}\)</span>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-140" id="answer-140"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-140"><div class="answer solution-like">False.</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-170"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-917">True or false: <span class="process-math">\(6\mid 3\text{.}\)</span>
+<li data-component="answer" id="DMT_divis_CYU_0div9_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="DMT_divis_CYU_0div9_opt_t">
+<li data-component="answer" id="DMT_divis_CYU_0div9_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="DMT_divis_CYU_0div9_opt_f">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_divis_CYU_6div3"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_divis_CYU_6div3">
+<div class="para" id="p-1059">True or false: <span class="process-math">\(6\mid 3\text{.}\)</span>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-141" id="answer-141"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-141"><div class="answer solution-like">False.</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-171"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-918">True or false: <span class="process-math">\(6\mid 6\text{.}\)</span>
+<li data-component="answer" id="DMT_divis_CYU_6div3_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="DMT_divis_CYU_6div3_opt_t">
+<li data-component="answer" id="DMT_divis_CYU_6div3_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="DMT_divis_CYU_6div3_opt_f">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_divis_CYU_6div6"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_divis_CYU_6div6">
+<div class="para" id="p-1060">True or false: <span class="process-math">\(6\mid 6\text{.}\)</span>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-142" id="answer-142"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-142"><div class="answer solution-like">True.</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-172"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-919">True or false: <span class="process-math">\(6\mid -30\text{.}\)</span>
+<li data-component="answer" id="DMT_divis_CYU_6div6_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="DMT_divis_CYU_6div6_opt_t">
+<li data-component="answer" id="DMT_divis_CYU_6div6_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="DMT_divis_CYU_6div6_opt_f">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_divis_CYU_6divneg30"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_divis_CYU_6divneg30">
+<div class="para" id="p-1061">True or false: <span class="process-math">\(6\mid -30\text{.}\)</span>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-143" id="answer-143"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-143"><div class="answer solution-like">True.</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-173"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-920">True or false: <span class="process-math">\(6\mid 0\text{.}\)</span>
+<li data-component="answer" id="DMT_divis_CYU_6divneg30_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="DMT_divis_CYU_6divneg30_opt_t">
+<li data-component="answer" id="DMT_divis_CYU_6divneg30_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="DMT_divis_CYU_6divneg30_opt_f">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_divis_CYU_6div0"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_divis_CYU_6div0">
+<div class="para" id="p-1062">True or false: <span class="process-math">\(6\mid 0\text{.}\)</span>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-144" id="answer-144"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-144"><div class="answer solution-like">True.</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-174"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="p-921">True or false: <span class="process-math">\(6\mid 21\text{.}\)</span>
+<li data-component="answer" id="DMT_divis_CYU_6div0_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="DMT_divis_CYU_6div0_opt_t">
+<li data-component="answer" id="DMT_divis_CYU_6div0_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="DMT_divis_CYU_6div0_opt_f">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_divis_CYU_6div21"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_divis_CYU_6div21">
+<div class="para" id="p-1063">True or false: <span class="process-math">\(6\mid 21\text{.}\)</span>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-145" id="answer-145"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-145"><div class="answer solution-like">False.</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-175"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<div class="para" id="p-922">True or false: <span class="process-math">\(5\mid 3^{56}\text{.}\)</span>
+<li data-component="answer" id="DMT_divis_CYU_6div21_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="DMT_divis_CYU_6div21_opt_t">
+<li data-component="answer" id="DMT_divis_CYU_6div21_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="DMT_divis_CYU_6div21_opt_f">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_divis_CYU_5div3sup56"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_divis_CYU_5div3sup56">
+<div class="para" id="p-1064">True or false: <span class="process-math">\(5\mid 3^{56}\text{.}\)</span>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-146" id="answer-146"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-146"><div class="answer solution-like">False.</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-176"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
-<div class="para" id="p-923">True or false: <span class="process-math">\(6\mid 3^{10}2^{5}5^{9}\text{.}\)</span>
+<li data-component="answer" id="DMT_divis_CYU_5div3sup56_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="DMT_divis_CYU_5div3sup56_opt_t">
+<li data-component="answer" id="DMT_divis_CYU_5div3sup56_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="DMT_divis_CYU_5div3sup56_opt_f">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_divis_CYU_6div3sup102sup5"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_divis_CYU_6div3sup102sup5">
+<div class="para" id="p-1065">True or false: <span class="process-math">\(6\mid 3^{10}2^{5}5^{9}\text{.}\)</span>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-147" id="answer-147"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-147"><div class="answer solution-like">True.</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-177"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
-<div class="para" id="p-924">Give the prime factorization for <span class="process-math">\(7!\text{.}\)</span>
+<li data-component="answer" id="DMT_divis_CYU_6div3sup102sup5_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="DMT_divis_CYU_6div3sup102sup5_opt_t">
+<li data-component="answer" id="DMT_divis_CYU_6div3sup102sup5_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="DMT_divis_CYU_6div3sup102sup5_opt_f">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_divis_CYU_factor7fac"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="para" id="p-1066">Give the prime factorization for <span class="process-math">\(7!\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="DMT_divis_CYU_10div7fac"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_divis_CYU_10div7fac">
+<div class="para" id="p-1067">True or false: <span class="process-math">\(10\mid 7!\text{.}\)</span>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-148" id="answer-148"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-148"><div class="answer solution-like"><span class="process-math">\(7!=(7)(6)(5)(4)(3)(2)(1)=(7)(2\cdot 3)(5)(2\cdot 2)(3)(2)(1)=(2^4)(3^2)(5)(7)\text{.}\)</span></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-178"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
-<div class="para" id="p-925">True or false: <span class="process-math">\(10\mid 7!\text{.}\)</span>
+<li data-component="answer" id="DMT_divis_CYU_10div7fac_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="DMT_divis_CYU_10div7fac_opt_t">
+<li data-component="answer" id="DMT_divis_CYU_10div7fac_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="DMT_divis_CYU_10div7fac_opt_f">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_divis_CYU_100div7fac"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_divis_CYU_100div7fac">
+<div class="para" id="p-1068">True or false: <span class="process-math">\(100\mid 7!\text{.}\)</span>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-149" id="answer-149"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-149"><div class="answer solution-like">True.</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-179"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
-<div class="para" id="p-926">True or false: <span class="process-math">\(100\mid 7!\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-150" id="answer-150"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-150"><div class="answer solution-like">False, <span class="process-math">\(100=2^25^2\text{,}\)</span> so <span class="process-math">\(7!\)</span> would need a factor of <span class="process-math">\(5^2\text{.}\)</span>
-</div></div>
-</div></article></section><section class="exercises" id="exercises-13"><h3 class="heading hide-type">
+<li data-component="answer" id="DMT_divis_CYU_100div7fac_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="DMT_divis_CYU_100div7fac_opt_t"><div class="para" id="p-1069">
+<span class="process-math">\(100=2^25^2\text{,}\)</span> so <span class="process-math">\(7!\)</span> would need a factor of <span class="process-math">\(5^2\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="DMT_divis_CYU_100div7fac_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="DMT_divis_CYU_100div7fac_opt_f"><div class="para" id="p-1069">
+<span class="process-math">\(100=2^25^2\text{,}\)</span> so <span class="process-math">\(7!\)</span> would need a factor of <span class="process-math">\(5^2\text{.}\)</span>
+</div></li>
+</ul></div></div></article></section><section class="exercises" id="exercises-13"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="exercise-180"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-927">Determine if the following statements are true or false. Justify your answer.</div> <ol class="lower-alpha">
-<li id="li-261"><div class="para" id="p-928"><span class="process-math">\(\displaystyle 5\mid 0\)</span></div></li>
-<li id="li-262"><div class="para" id="p-929">
+<div class="para" id="p-1070">Determine if the following statements are true or false. Justify your answer.</div> <ol class="lower-alpha">
+<li id="li-261"><div class="para" id="p-1071"><span class="process-math">\(\displaystyle 5\mid 0\)</span></div></li>
+<li id="li-262"><div class="para" id="p-1072">
 <span class="process-math">\(-3\)</span> is a factor of 66</div></li>
-<li id="li-263"><div class="para" id="p-930"><span class="process-math">\(\displaystyle 13\mid 73\)</span></div></li>
+<li id="li-263"><div class="para" id="p-1073"><span class="process-math">\(\displaystyle 13\mid 73\)</span></div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-181"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-931">Let <span class="process-math">\(n\in \mathbb{Z}\text{.}\)</span> Determine if the following statements are true or false. Justify your answer.</div> <ol class="lower-alpha">
-<li id="li-264"><div class="para" id="p-932">3 divides <span class="process-math">\((3n+1)(3n+2)(3n+3)\text{.}\)</span>
+<div class="para" id="p-1074">Let <span class="process-math">\(n\in \mathbb{Z}\text{.}\)</span> Determine if the following statements are true or false. Justify your answer.</div> <ol class="lower-alpha">
+<li id="li-264"><div class="para" id="p-1075">3 divides <span class="process-math">\((3n+1)(3n+2)(3n+3)\text{.}\)</span>
 </div></li>
-<li id="li-265"><div class="para" id="p-933">
+<li id="li-265"><div class="para" id="p-1076">
 <span class="process-math">\(6n(2n+10)\)</span> is divisible by 4.</div></li>
-<li id="li-266"><div class="para" id="p-934">100 divides <span class="process-math">\((5n)^2(8n+24).\)</span>
+<li id="li-266"><div class="para" id="p-1077">100 divides <span class="process-math">\((5n)^2(8n+24).\)</span>
 </div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-182"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-935">Show that the following statement is false: For all integers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> if <span class="process-math">\(3\mid (a+b)\)</span> then <span class="process-math">\(3\mid (a-b)\text{.}\)</span>
+<div class="para" id="p-1078">Show that the following statement is false: For all integers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> if <span class="process-math">\(3\mid (a+b)\)</span> then <span class="process-math">\(3\mid (a-b)\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-183"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para logical" id="p-936">
+<div class="para logical" id="p-1079">
 <div class="para">Recall that the standard factored form of an integer is a product of powers of a prime, as in <a href="" class="xref" data-knowl="./knowl/T_FTofArith.html" title="Theorem 4.3.6: Unique Factorization Theorem">Theorem 4.3.6</a>.</div>
 <ol class="lower-alpha">
-<li id="li-267"><div class="para" id="p-937">Write <span class="process-math">\(6!\)</span> in standard factored form.</div></li>
-<li id="li-268"><div class="para" id="p-938">Write <span class="process-math">\(20!\)</span> in standard factored form.</div></li>
-<li id="li-269"><div class="para" id="p-939">Without computing the value of <span class="process-math">\((20!)^2\)</span> determine how many zeros are at the end of this number when written in decimal form. Justify your answer.</div></li>
+<li id="li-267"><div class="para" id="p-1080">Write <span class="process-math">\(6!\)</span> in standard factored form.</div></li>
+<li id="li-268"><div class="para" id="p-1081">Write <span class="process-math">\(20!\)</span> in standard factored form.</div></li>
+<li id="li-269"><div class="para" id="p-1082">Without computing the value of <span class="process-math">\((20!)^2\)</span> determine how many zeros are at the end of this number when written in decimal form. Justify your answer.</div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-5" id="hint-5"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-5"><div class="hint solution-like"><div class="para" id="p-940">For (c), What prime factors correspond to zeros at the end of a number?</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-5" id="hint-5"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-5"><div class="hint solution-like"><div class="para" id="p-1083">For (c), What prime factors correspond to zeros at the end of a number?</div></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-184"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-941">Prove, using the definition of divisibility, for all integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\text{,}\)</span> if <span class="process-math">\(a\mid b\)</span> and <span class="process-math">\(a\mid c\)</span> then <span class="process-math">\(a\mid (b+c)\text{.}\)</span>
+<div class="para" id="p-1084">Prove, using the definition of divisibility, for all integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\text{,}\)</span> if <span class="process-math">\(a\mid b\)</span> and <span class="process-math">\(a\mid c\)</span> then <span class="process-math">\(a\mid (b+c)\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-185"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-942">Prove or disprove: The product of any two even integers is a multiple of 4.</div></article><article class="exercise exercise-like" id="exercise-186"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-943">Prove or disprove: For all integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\text{,}\)</span> if <span class="process-math">\(ab\mid c\)</span> then <span class="process-math">\(a\mid c\)</span> and <span class="process-math">\(b\mid c\text{.}\)</span>
+<div class="para" id="p-1085">Prove or disprove: The product of any two even integers is a multiple of 4.</div></article><article class="exercise exercise-like" id="exercise-186"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="p-1086">Prove or disprove: For all integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\text{,}\)</span> if <span class="process-math">\(ab\mid c\)</span> then <span class="process-math">\(a\mid c\)</span> and <span class="process-math">\(b\mid c\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-187"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="p-944">Prove or disprove: For all integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\text{,}\)</span> if <span class="process-math">\(a\mid bc\)</span> then <span class="process-math">\(a\mid b\)</span> or <span class="process-math">\(a\mid c\text{.}\)</span>
+<div class="para" id="p-1087">Prove or disprove: For all integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\text{,}\)</span> if <span class="process-math">\(a\mid bc\)</span> then <span class="process-math">\(a\mid b\)</span> or <span class="process-math">\(a\mid c\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-188"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<div class="para" id="p-945">Prove or disprove: For all integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\text{,}\)</span> if <span class="process-math">\(a\)</span> is a factor of <span class="process-math">\(c\)</span> then <span class="process-math">\(ab\)</span> is a factor of <span class="process-math">\(c\text{.}\)</span>
+<div class="para" id="p-1088">Prove or disprove: For all integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\text{,}\)</span> if <span class="process-math">\(a\)</span> is a factor of <span class="process-math">\(c\)</span> then <span class="process-math">\(ab\)</span> is a factor of <span class="process-math">\(c\text{.}\)</span>
 </div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="rationals4-2.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="cases4-4.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
@@ -804,5 +871,13 @@ window.MathJax = {
 <div id="ptx-page-footer">
 <a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12894193;
+var sc_invisible=1;
+var sc_security="e67c59eb";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12894193/0/e67c59eb/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
 </body>
 </html>

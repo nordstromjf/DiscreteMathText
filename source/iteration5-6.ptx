@@ -155,19 +155,24 @@ Therefore, by induction, <m>F_n=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}
     <reading-questions>
       <title>Check Your Understanding</title>
 
-      <exercise><statement><p>Find a recurrence relation for <m>3, 6, 12, 24, 48, \ldots</m>.</p></statement>
+      <exercise label="DMT_iterat_CYU_rr3612"><statement><p>Find a recurrence relation for <m>3, 6, 12, 24, 48, \ldots</m>.</p></statement>
+      <response />
       <answer><p><m>a_0=3, a_k=2a_{k-1}</m></p></answer></exercise>
 
-      <exercise><statement><p>Find an explicit formula for <m>3, 6, 12, 24, 48, \ldots</m>.</p></statement>
+      <exercise label="DMT_iterat_CYU_exp3612"><statement><p>Find an explicit formula for <m>3, 6, 12, 24, 48, \ldots</m>.</p></statement>
+      <response />
       <answer><p><m>a_n=3\cdot 2^n, n\geq 0</m></p></answer></exercise>
 
-      <exercise><statement><p>Find a recurrence relation for <m>2, 6, 10, 14, 18, \ldots</m>.</p></statement>
+      <exercise label="DMT_iterat_CYU_rr2610"><statement><p>Find a recurrence relation for <m>2, 6, 10, 14, 18, \ldots</m>.</p></statement>
+      <response />
       <answer><p><m>a_0=2, a_k=a_{k-1}+4</m></p></answer></exercise>
 
-      <exercise><statement><p>Find an explicit formula for <m>2, 6, 10, 14, 18, \ldots</m>.</p></statement>
+      <exercise label="DMT_iterat_CYU_exp2610"><statement><p>Find an explicit formula for <m>2, 6, 10, 14, 18, \ldots</m>.</p></statement>
+      <response />
       <answer><p><m>a_n=2+ 4n, n\geq 0</m></p></answer></exercise>
 
-      <exercise><statement><p>Simplify <m>\biggl(\frac{1-\sqrt{5}}{2}\biggr)^2</m>.</p></statement>
+      <exercise label="DMT_iterat_CYU_simpgrat2"><statement><p>Simplify <m>\biggl(\frac{1-\sqrt{5}}{2}\biggr)^2</m>.</p></statement>
+      <response />
       <answer><p><m>\biggl(\frac{1-\sqrt{5}}{2}\biggr)\biggl(\frac{1-\sqrt{5}}{2}\biggr)=\biggl(\frac{1-2\sqrt{5}+5}{4}\biggr)=\biggl(\frac{6-2\sqrt{5}}{4}\biggr)=\biggl(\frac{3-\sqrt{5}}{2}\biggr).</m></p></answer></exercise>
 
     

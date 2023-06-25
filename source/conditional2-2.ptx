@@ -169,7 +169,21 @@ So a statement such as <q><m>p</m> is necessary and sufficient for <m>q</m></q> 
 
     <reading-questions>
       <title>Check Your Understanding</title>
-      <exercise><statement><p>What is the negation of <m>p\rightarrow q</m>? Check your answer with a truth-table.</p></statement>
+      <exercise label="DMT_cond_CYU_negcond"><statement><p>What is the negation of <m>p\rightarrow q</m>? Check your answer with a truth-table.</p></statement>
+      <choices randomize="yes">
+      <choice>
+        <statement><p><m>\sim p\vee q</m></p></statement>
+      </choice>
+      <choice correct="yes">
+        <statement><p><m>p\ \wedge \sim q</m></p></statement>
+      </choice>
+      <choice>
+        <statement><p><m>\sim p\ \rightarrow \sim q</m></p></statement>
+      </choice>
+      <choice>
+        <statement><p><m>\sim q\ \rightarrow \sim p</m></p></statement>
+      </choice>
+    </choices>
       <answer><p><m>p\ \wedge \sim q</m></p>
       <tabular top="minor" left="minor">
               <col halign="center" right="minor"/>
@@ -202,7 +216,94 @@ So a statement such as <q><m>p</m> is necessary and sufficient for <m>q</m></q> 
             </row>
     </tabular></answer></exercise>
 
-      <exercise><statement><p>Give the truth-table for <m>\sim p\rightarrow \sim q</m>. </p></statement>
+      <exercise label="DMT_cond_CYU_ttnotpthennotq"><statement><p>Fill in the truth-table for <m>\sim p\rightarrow \sim q</m>. </p>
+      <p><tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>\sim p\rightarrow \sim q</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell><var width="1" /></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell><var width="1" /></cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell><var width="1" /></cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell><var width="1" /></cell>
+            </row>
+    </tabular></p></statement>
+    <setup><var>
+      <condition string="T">
+        <feedback><p>Correct</p></feedback>
+      </condition>
+      
+       <condition string="F">
+        <feedback><p>Try again.</p></feedback>
+      </condition>
+      
+       <condition string=".*">
+        <feedback><p>Use T or F.</p></feedback>
+      </condition>
+      
+    </var>
+    <var>
+      <condition string="T">
+        <feedback><p>Correct</p></feedback>
+      </condition>
+      
+       <condition string="F">
+        <feedback><p>Try again.</p></feedback>
+      </condition>
+      
+       <condition string=".*">
+        <feedback><p>Use T or F.</p></feedback>
+      </condition>
+      
+    </var>
+    <var>
+      <condition string="F">
+        <feedback><p>Correct</p></feedback>
+      </condition>
+      
+       <condition string="T">
+        <feedback><p>Try again.</p></feedback>
+      </condition>
+      
+       <condition string=".*">
+        <feedback><p>Use T or F.</p></feedback>
+      </condition>
+      
+    </var>
+    <var>
+      <condition string="T">
+        <feedback><p>Correct</p></feedback>
+      </condition>
+      
+       <condition string="F">
+        <feedback><p>Try again.</p></feedback>
+      </condition>
+      
+       <condition string=".*">
+        <feedback><p>Use T or F.</p></feedback>
+      </condition>
+      
+    </var>
+    </setup>
       <answer><tabular top="minor" left="minor">
               <col halign="center" right="minor"/>
               <col halign="center" right="medium"/>
@@ -234,10 +335,98 @@ So a statement such as <q><m>p</m> is necessary and sufficient for <m>q</m></q> 
             </row>
     </tabular></answer></exercise>
 
-    <exercise><statement>Using your truth-table from the previous question, explain why <m>\sim p\rightarrow \sim q</m> is NOT the negation of <m>p\rightarrow q</m>.</statement>
+    <exercise label="DMT_cond_CYU_notnegcond"><statement>Using the truth-table for <m>\sim p\rightarrow \sim q</m>, explain why <m>\sim p\rightarrow \sim q</m> is <em>not</em> the negation of <m>p\rightarrow q</m>.</statement>
+    <response />
     <answer>The truth-tables are not the same. </answer></exercise>
 
-    <exercise><statement><p>Give the truth-table for <m>\sim p \leftrightarrow q</m>. </p></statement>
+    <exercise label="DMT_cond_CYU_ttiff"><statement><p>Fill in the truth-table for <m>\sim p \leftrightarrow q</m>. </p>
+      <p><tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>\sim p \leftrightarrow q</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell><var width="1" /></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell><var width="1" /></cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell><var width="1" /></cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell><var width="1" /></cell>
+            </row>
+    </tabular></p></statement>
+        <setup><var>
+      <condition string="F">
+        <feedback><p>Correct</p></feedback>
+      </condition>
+      
+       <condition string="T">
+        <feedback><p>Try again.</p></feedback>
+      </condition>
+      
+       <condition string=".*">
+        <feedback><p>Use T or F.</p></feedback>
+      </condition>
+      
+    </var>
+    <var>
+      <condition string="T">
+        <feedback><p>Correct</p></feedback>
+      </condition>
+      
+       <condition string="F">
+        <feedback><p>Try again.</p></feedback>
+      </condition>
+      
+       <condition string=".*">
+        <feedback><p>Use T or F.</p></feedback>
+      </condition>
+      
+    </var>
+    <var>
+      <condition string="T">
+        <feedback><p>Correct</p></feedback>
+      </condition>
+      
+       <condition string="F">
+        <feedback><p>Try again.</p></feedback>
+      </condition>
+      
+       <condition string=".*">
+        <feedback><p>Use T or F.</p></feedback>
+      </condition>
+      
+    </var>
+    <var>
+      <condition string="F">
+        <feedback><p>Correct</p></feedback>
+      </condition>
+      
+       <condition string="T">
+        <feedback><p>Try again.</p></feedback>
+      </condition>
+      
+       <condition string=".*">
+        <feedback><p>Use T or F.</p></feedback>
+      </condition>
+      
+    </var>
+    </setup>
       <answer><tabular top="minor" left="minor">
               <col halign="center" right="minor"/>
               <col halign="center" right="medium"/>

@@ -81,39 +81,122 @@ This is always a direct proof. Do not use induction. We will see induction in th
     <reading-questions>
       <title>Check Your Understanding</title>
 
-      <exercise><statement><p>Find the first 4 terms of the sequence: <m>a_n=5a_{n-1}-4, a_1=2</m>.</p></statement>
+      <exercise label="DMT_recursive_CYU_5anm1m4"><statement><p>Find the 4th term of the sequence: <m>a_n=5a_{n-1}-4, a_1=2</m>.</p>
+      <p><var width="4" /></p></statement>
+      <setup>
+        <var>
+          <condition number="126">
+            <feedback><p>Correct</p></feedback>
+          </condition>
+          <condition number="26">
+            <feedback><p>You found the third term.</p></feedback>
+          </condition>
+          <condition number="626">
+            <feedback><p>You found the fifth term.</p></feedback>
+          </condition>
+          <condition string=".*">
+            <feedback><p>The first two terms are 2, 6.</p></feedback>
+          </condition>
+        </var>
+      </setup>
+      
       <answer><p>2, 6, 26, 126</p></answer></exercise>
 
-      <exercise><statement><p>Find the first 4 terms of the sequence: <m>a_n=\frac{a_{n-1}}{a_{n-2}}, a_{0}=1, a_1=2</m>.</p></statement>
+      <exercise label="DMT_recursive_CYU_anm1danm2"><statement><p>Find the 4th term of the sequence: <m>a_n=\frac{a_{n-1}}{a_{n-2}}, a_{0}=1, a_1=2</m>.</p>
+    <p><var width="4" /></p></statement>
+      <setup>
+        <var>
+          <condition number="1">
+            <feedback><p>Correct</p></feedback>
+          </condition>
+          <condition number="2">
+            <feedback><p>You found the third term.</p></feedback>
+          </condition>
+          <condition string=".*">
+            <feedback><p>The first two terms are 1, 2.</p></feedback>
+          </condition>
+        </var>
+      </setup>
       <answer><p>1, 2, 2, 1</p></answer></exercise>
 
-     <exercise><statement><p>Find the first 4 terms of the sequence: <m>a_n=n^2+n, n\geq 1</m>.</p></statement>
+     <exercise label="DMT_recursive_CYU_n2pn"><statement><p>Find the 4th term of the sequence: <m>a_n=n^2+n, n\geq 1</m>.</p>
+   <p><var width="4" /></p></statement>
+     <setup>
+        <var>
+          <condition number="20">
+            <feedback><p>Correct</p></feedback>
+          </condition>
+          <condition number="12">
+            <feedback><p>You found the third term.</p></feedback>
+          </condition>
+          <condition string=".*">
+            <feedback><p>The first two terms are 2, 6.</p></feedback>
+          </condition>
+        </var>
+      </setup>
       <answer><p>2, 6, 12, 20</p></answer></exercise>
 
-      <exercise><statement><p>Find the first 4 terms of the sequence: <m>a_n=n+a_{n-1}, a_1=1</m>.</p></statement>
+      <exercise label="DMT_recursive_CYU_npanm1"><statement><p>Find the 4th term of the sequence: <m>a_n=n+a_{n-1}, a_1=1</m>.</p>
+    <p><var width="4" /></p></statement>
+      <setup>
+        <var>
+          <condition number="10">
+            <feedback><p>Correct</p></feedback>
+          </condition>
+          <condition number="6">
+            <feedback><p>You found the third term.</p></feedback>
+          </condition>
+          <condition string=".*">
+            <feedback><p>The first two terms are 1, 3.</p></feedback>
+          </condition>
+        </var>
+      </setup>
       <answer><p>1, 3, 6, 10</p></answer></exercise>
 
       
 
-      <exercise><statement><p>Determine if the following sequence is explicitly defined or recursively defined: <m>a_n=5a_{n-1}-4, a_1=2</m>.</p></statement>
+      <exercise label="DMT_recursive_CYU_er5anm1m4"><statement><p>Determine if the following sequence is explicitly defined or recursively defined: <m>a_n=5a_{n-1}-4, a_1=2</m>.</p></statement>
+      <choices>
+        <choice><statement><p>Explicitly defined</p></statement></choice>
+        <choice correct="yes"><statement><p>Recursively defined</p></statement></choice>
+      </choices>
       <answer><p>Recursively defined.</p></answer></exercise>
 
-      <exercise><statement><p>Determine if the following sequence is explicitly defined or recursively defined: <m>a_n=\frac{a_{n-1}}{a_{n-2}}, a_{0}=1, a_1=2</m>.</p></statement>
+      <exercise label="DMT_recursive_CYU_eranm1danm2"><statement><p>Determine if the following sequence is explicitly defined or recursively defined: <m>a_n=\frac{a_{n-1}}{a_{n-2}}, a_{0}=1, a_1=2</m>.</p></statement>
+       <choices>
+        <choice><statement><p>Explicitly defined</p></statement></choice>
+        <choice correct="yes"><statement><p>Recursively defined</p></statement></choice>
+      </choices>
       <answer><p>Recursively defined.</p></answer></exercise>
 
-      <exercise><statement><p>Determine if the following sequence is explicitly defined or recursively defined: <m>a_n=n^2+n, n\geq 1</m>.</p></statement>
+      <exercise label="DMT_recursive_CYU_ern2pn"><statement><p>Determine if the following sequence is explicitly defined or recursively defined: <m>a_n=n^2+n, n\geq 1</m>.</p></statement>
+       <choices>
+        <choice correct="yes"><statement><p>Explicitly defined</p></statement></choice>
+        <choice><statement><p>Recursively defined</p></statement></choice>
+      </choices>
       <answer><p>Explicitly defined.</p></answer></exercise>
 
-      <exercise><statement><p>Determine if the following sequence is explicitly defined or recursively defined: <m>a_n=n+a_{n-1}, a_1=1</m>.</p></statement>
+      <exercise label="DMT_recursive_CYU_ernpanm1"><statement><p>Determine if the following sequence is explicitly defined or recursively defined: <m>a_n=n+a_{n-1}, a_1=1</m>.</p></statement>
+      <choices>
+        <choice><statement><p>Explicitly defined</p></statement></choice>
+        <choice correct="yes"><statement><p>Recursively defined</p></statement></choice>
+      </choices>
+
       <answer><p>Recursively defined.</p></answer></exercise>
 
-      <exercise><statement><p>Let <m>a_n=2n+1, n\geq 0</m>. Show this sequence satisfies the recurrence relation <m>a_k=a_{k-1}+2</m>.</p></statement>
+      <exercise label="DMT_recursive_CYU_2np1showrec"><statement><p>Let <m>a_n=2n+1, n\geq 0</m>. Show this sequence satisfies the recurrence relation <m>a_k=a_{k-1}+2</m>.</p></statement>
+      <response />
+      <hint><p>This is a LHS/RHS proof showing the recurrence relation is true when you assume <m>a_n=2n+1</m>. In particular, you know <m>a_k=2k+1</m> and <m>a_{k-1}=2(k-1)+1</m>.</p></hint>
       <answer><p>LHS: <m>a_k=2k+1</m>. RHS: <m>a_{k-1}+2=2(k-1)+1+2=2k+1</m>.</p></answer></exercise>
 
-      <exercise><statement><p>Let <m>a_n=2n, n\geq 0</m>. Show this sequence satisfies the recurrence relation <m>a_k=a_{k-1}+2</m>.</p></statement>
+      <exercise label="DMT_recursive_CYU_2nshowrec"><statement><p>Let <m>a_n=2n, n\geq 0</m>. Show this sequence satisfies the recurrence relation <m>a_k=a_{k-1}+2</m>.</p></statement>
+      <response />
+      <hint><p>This is a LHS/RHS proof showing the recurrence relation is true when you assume <m>a_n=2n</m>. In particular, you know <m>a_k=2k</m> and <m>a_{k-1}=2(k-1)</m>.</p></hint>
       <answer><p>LHS: <m>a_k=2k</m>. RHS: <m>a_{k-1}+2=2(k-1)+2=2k</m>.</p></answer></exercise>
 
-      <exercise><statement><p>Let <m>a_n=2n+d, n\geq 0</m>. Show this sequence satisfies the recurrence relation <m>a_k=a_{k-1}+2</m>.</p></statement>
+      <exercise label="DMT_recursive_CYU_2npdshowrec"><statement><p>Let <m>a_n=2n+d, n\geq 0</m>. Show this sequence satisfies the recurrence relation <m>a_k=a_{k-1}+2</m>.</p></statement>
+      <response />
+      <hint><p>This is a LHS/RHS proof showing the recurrence relation is true when you assume <m>a_n=2n+d</m>. In particular, you know <m>a_k=2k+d</m> and <m>a_{k-1}=2(k-1)+d</m>.</p></hint>
       <answer><p>LHS: <m>a_k=2k+d</m>. RHS: <m>a_{k-1}+2=2(k-1)+d+2=2k+d</m>.</p></answer></exercise>
 
       

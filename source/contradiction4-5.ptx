@@ -93,31 +93,40 @@
     <reading-questions>
       <title>Check Your Understanding</title>
 
-      <exercise><statement><p>Give the negation for the statement: There does not exist a greatest odd integer.</p></statement>
+      <exercise label="DMT_contrad_CYU_negnoexistodd"><statement><p>Give the negation for the statement: There does not exist a greatest odd integer.</p></statement>
+      <response />
       <answer><p>There exists a greatest odd integer.</p></answer></exercise>
       
-      <exercise><statement><p>Give the negation for the statement: For all real numbers <m>r</m>, if <m>r</m> is not rational then <m>3r</m> is not rational.</p></statement>
+      <exercise label="DMT_contrad_CYU_negunivcondrat"><statement><p>Give the negation for the statement: For all real numbers <m>r</m>, if <m>r</m> is not rational then <m>3r</m> is not rational.</p></statement>
+      <response />
       <answer><p>There exists a real number <m>r</m> such that <m>r</m> is rational and <m>3r</m> is not rational.</p></answer></exercise>
 
-      <exercise><statement><p>Suppose you want to prove the following statement by contradiction: For all real numbers <m>r</m>, if <m>r</m> is not rational then <m>3r</m> is not rational. What should you assume? What should you show?</p></statement>
+      <exercise label="DMT_contrad_CYU_ascontraunivcondrat"><statement><p>Suppose you want to prove the following statement by contradiction: For all real numbers <m>r</m>, if <m>r</m> is not rational then <m>3r</m> is not rational. What should you assume? What should you show?</p></statement>
+      <response />
       <answer><p>Assume: there exists a real number <m>r</m> such that <m>r</m> is rational and <m>3r</m> is not rational. Show: any contradiction.</p></answer></exercise>
 
-      <exercise><statement><p>Give the contrapositive for the statement: For all real numbers <m>r</m>, if <m>r</m> is not rational then <m>3r</m> is not rational.</p></statement>
+      <exercise label="DMT_contrad_CYU_conposunivcondrat"><statement><p>Give the contrapositive for the statement: For all real numbers <m>r</m>, if <m>r</m> is not rational then <m>3r</m> is not rational.</p></statement>
+      <response />
       <answer><p>For all real numbers <m>r</m> if <m>3r</m> is rational then <m>r</m> is rational.</p></answer></exercise>
 
-      <exercise><statement><p>Suppose you want to prove the following statement by contrapositive: For all real numbers <m>r</m>, if <m>r</m> is not rational then <m>3r</m> is not rational. What should you assume? What should you show?</p></statement>
+      <exercise label="DMT_contrad_CYU_asconposunivcondrat"><statement><p>Suppose you want to prove the following statement by contrapositive: For all real numbers <m>r</m>, if <m>r</m> is not rational then <m>3r</m> is not rational. What should you assume? What should you show?</p></statement>
+      <response />
       <answer><p>Assume: <m>r</m> is real, <m>3r</m> is rational. Show: <m>r</m> is rational.</p></answer></exercise>
 
-       <exercise><statement><p>Give the negation for the statement: For all integers <m>n</m> and primes <m>p</m>, if  <m>p\mid n^2</m>  then <m>p \mid n</m>.</p></statement>
+       <exercise label="DMT_contrad_CYU_negprmdiv"><statement><p>Give the negation for the statement: For all integers <m>n</m> and primes <m>p</m>, if  <m>p\mid n^2</m>  then <m>p \mid n</m>.</p></statement>
+       <response />
       <answer><p>There exists an integer <m>n</m> and a prime <m>p</m> such that <m>p\mid n^2</m> and <m>p\nmid n</m>.</p></answer></exercise>
 
-      <exercise><statement><p>Suppose you want to prove the following statement by contradiction: For all integers <m>n</m> and primes <m>p</m>, if  <m>p\mid n^2</m>  then <m>p \mid n</m>. What should you assume? What should you show?</p></statement>
+      <exercise label="DMT_contrad_CYU_ascontraprmdiv"><statement><p>Suppose you want to prove the following statement by contradiction: For all integers <m>n</m> and primes <m>p</m>, if  <m>p\mid n^2</m>  then <m>p \mid n</m>. What should you assume? What should you show?</p></statement>
+      <response />
       <answer><p>Assume: there exists an integer <m>n</m> and a prime <m>p</m> such that <m>p\mid n^2</m> and <m>p\nmid n</m>. Show any contradiction. </p></answer></exercise>
 
-      <exercise><statement><p>Give the contrapositive for the statement: For all integers <m>n</m> and primes <m>p</m>, if  <m>p\mid n^2</m>  then <m>p \mid n</m>.</p></statement>
+      <exercise label="DMT_contrad_CYU_conposprmdiv"><statement><p>Give the contrapositive for the statement: For all integers <m>n</m> and primes <m>p</m>, if  <m>p\mid n^2</m>  then <m>p \mid n</m>.</p></statement>
+      <response />
       <answer><p>For all integers <m>n</m> if <m>p \nmid n</m> then <m>p\nmid n^2</m>.</p></answer></exercise>
 
-       <exercise><statement><p>Suppose you want to prove the following statement by contrapositive: For all integers <m>n</m> and primes <m>p</m>, if  <m>p\mid n^2</m>  then <m>p \mid n</m>. What should you assume? What should you show?</p></statement>
+       <exercise label="DMT_contrad_CYU_asconposprmdiv"><statement><p>Suppose you want to prove the following statement by contrapositive: For all integers <m>n</m> and primes <m>p</m>, if  <m>p\mid n^2</m>  then <m>p \mid n</m>. What should you assume? What should you show?</p></statement>
+       <response />
       <answer><p>Assume: <m>n</m> is an integer, <m>p</m> is prime, and <m>p\nmid n</m>. Show: <m>p \nmid n^2</m>. </p></answer></exercise>
 
 

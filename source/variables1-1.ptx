@@ -46,17 +46,46 @@
 
     <reading-questions>
       <title>Check Your Understanding</title>
-      <exercise><statement><p>Consider the statement "If it is Tuesday, then we will have pizza for lunch." Which type of statement is this? </p></statement>
-      <answer>Conditional</answer></exercise>
+      <exercise label="DMT_variables_CYU_if-Tues-type"><statement><p>Consider the statement "If it is Tuesday, then we will have pizza for lunch." Which type of statement is this? </p></statement>
+      <choices randomize="yes">
+        <choice>
+          <statement><p>Universal</p></statement>
+        </choice>
+        <choice correct="yes">
+          <statement><p>Conditional</p></statement>
+        </choice>
+        <choice>
+          <statement><p>Existential</p></statement>
+        </choice>
+      </choices>
 
-      <exercise><statement><p>Consider the statement "If it is Tuesday, then we will have pizza for lunch." Rewrite this statement as a universal statement. </p></statement>
-      <answer>Every Tuesday we will have pizza for lunch.</answer></exercise>
+      <answer>Conditional</answer>
+      </exercise>
 
-      <exercise><statement><p>Consider the statement "Every differentiable function is continuous." Which type of statement is this? </p></statement>
-      <answer>Universal</answer></exercise>
+      <exercise label="DMT_variables_CYU_if-Tues-rewrite"><statement><p>Consider the statement "If it is Tuesday, then we will have pizza for lunch." Rewrite this statement as a universal statement. </p></statement>
+      <response />
+      <answer>Every Tuesday we will have pizza for lunch.</answer>
+    </exercise>
 
-       <exercise><statement><p>Consider the statement "Every differentiable function is continuous." Rewrite this statement as a conditional statement.</p></statement>
-      <answer>If a function is differentiable, then it is continuous.</answer></exercise>
+      <exercise label="DMT_variables_CYU_every-diff-type"><statement><p>Consider the statement "Every differentiable function is continuous." Which type of statement is this? </p></statement>
+      <choices randomize="yes">
+        <choice correct="yes">
+          <statement><p>Universal</p></statement>
+        </choice>
+        <choice>
+          <statement><p>Conditional</p></statement>
+        </choice>
+        <choice>
+          <statement><p>Existential</p></statement>
+        </choice>
+      </choices>
+      <answer>Universal</answer>
+      </exercise>
+
+       <exercise label="DMT_variables_CYU_every-diff-rewrite"><statement><p>Consider the statement "Every differentiable function is continuous." Rewrite this statement as a conditional statement.</p></statement>
+       <response />
+      <answer>If a function is differentiable, then it is continuous.</answer>
+    </exercise>
 
     </reading-questions>
 

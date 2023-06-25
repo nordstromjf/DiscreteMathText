@@ -273,25 +273,37 @@
       <title>Check Your Understanding</title>
       
 
-      <exercise><statement><p>Determine whether the following argument is valid or invalid.
+      <exercise label="DMT_argquant_CYU_zsRsRz"><statement><p>Determine whether the following argument is valid or invalid.
           <tabular>
             <row><cell>All zebras have stripes.</cell></row>
             <row bottom="minor"><cell>Rex has stripes.</cell></row>
             <row><cell><m>\therefore\ </m> Rex is a zebra.</cell></row>
           </tabular>
       </p></statement>
+      <choices randomize="no">
+      <choice ><statement><p>The argument is valid.</p></statement>
+      </choice>
+      <choice correct="yes"><statement><p>The argument is invalid.</p></statement>
+     </choice>
+   </choices>
       <answer><p>Invalid.</p></answer></exercise>
 
-      <exercise><statement><p>Determine whether the following argument is valid or invalid.
+      <exercise label="DMT_argquant_CYU_zsLnsLnz"><statement><p>Determine whether the following argument is valid or invalid.
           <tabular>
             <row><cell>All zebras have stripes.</cell></row>
             <row bottom="minor"><cell>Lily does not have stripes.</cell></row>
             <row><cell><m>\therefore\ </m> Lily is not a zebra.</cell></row>
           </tabular>
       </p></statement>
+      <choices randomize="no">
+      <choice correct="yes"><statement><p>The argument is valid.</p></statement>
+      </choice>
+      <choice ><statement><p>The argument is invalid.</p></statement>
+     </choice>
+   </choices>
       <answer><p>Valid.</p></answer></exercise>
 
-      <exercise><statement><p>Determine whether the following argument is valid or invalid.
+      <exercise label="DMT_argquant_CYU_zszaRsRa"><statement><p>Determine whether the following argument is valid or invalid.
           <tabular>
             <row><cell>All zebras have stripes.</cell></row>
             <row><cell>All zebras are animals.</cell></row>
@@ -299,33 +311,57 @@
             <row><cell><m>\therefore\ </m> Rex is an animal.</cell></row>
           </tabular>
       </p></statement>
+      <choices randomize="no">
+      <choice ><statement><p>The argument is valid.</p></statement>
+      </choice>
+      <choice correct="yes"><statement><p>The argument is invalid.</p></statement>
+     </choice>
+   </choices>
       <answer><p>Invalid.</p></answer></exercise>
 
-      <exercise><statement><p>Determine whether the following argument is valid or invalid.
+      <exercise label="DMT_argquant_CYU_zsasza"><statement><p>Determine whether the following argument is valid or invalid.
           <tabular>
             <row><cell>All zebras have stripes.</cell></row>
             <row bottom="minor"><cell>All animals have stripes.</cell></row>
             <row><cell><m>\therefore\ </m> All zebras are animals.</cell></row>
           </tabular>
       </p></statement>
+      <choices randomize="no">
+      <choice ><statement><p>The argument is valid.</p></statement>
+      </choice>
+      <choice correct="yes"><statement><p>The argument is invalid.</p></statement>
+     </choice>
+   </choices>
       <answer><p>Invalid.</p></answer></exercise>
 
-      <exercise><statement><p>Determine whether the following argument is valid or invalid.
+      <exercise label="DMT_argquant_CYU_zssaza"><statement><p>Determine whether the following argument is valid or invalid.
           <tabular>
             <row><cell>All zebras have stripes.</cell></row>
             <row bottom="minor"><cell>All things with stripes are animals.</cell></row>
             <row><cell><m>\therefore\ </m> All zebras are animals.</cell></row>
           </tabular>
       </p></statement>
+      <choices randomize="no">
+      <choice correct="yes"><statement><p>The argument is valid.</p></statement>
+      </choice>
+      <choice ><statement><p>The argument is invalid.</p></statement>
+     </choice>
+   </choices>
       <answer><p>Valid.</p></answer></exercise>
 
-      <exercise><statement><p>Determine whether the following argument is valid or invalid.
+      <exercise label="DMT_argquant_CYU_zaaszs"><statement><p>Determine whether the following argument is valid or invalid.
           <tabular>
             <row><cell>All zebras are animals.</cell></row>
             <row bottom="minor"><cell>All animals have stripes.</cell></row>
             <row><cell><m>\therefore\ </m> All zebras have stripes.</cell></row>
           </tabular>
       </p></statement>
+      <choices randomize="no">
+      <choice correct="yes"><statement><p>The argument is valid.</p></statement>
+      </choice>
+      <choice ><statement><p>The argument is invalid.</p></statement>
+     </choice>
+   </choices>
       <answer><p>Valid.</p></answer></exercise>
 
 

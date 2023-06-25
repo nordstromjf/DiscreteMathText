@@ -97,23 +97,29 @@
     <reading-questions>
       <title>Check Your Understanding</title>
       
-      <exercise><statement><p>Write the negation of <m>\forall x\in \mathbb{R}, \exists y\in \mathbb{R}, xy>0</m>.</p></statement>
+      <exercise label="DMT_multquant_CYU_allexistsnegpos"><statement><p>Write the negation of <m>\forall x\in \mathbb{R}, \exists y\in \mathbb{R}, xy>0</m>.</p></statement>
+      <response />
       <answer><m>\exists x\in \mathbb{R}, \forall y\in \mathbb{R}, xy\leq 0</m></answer></exercise>
 
-      <exercise><statement><p>True or False: <m>\forall x\in \mathbb{R}, \exists y\in \mathbb{R}, xy>0</m>.</p></statement>
-      <answer>False. If <m>y=0</m>, no <m>x</m> will have <m>xy>0</m></answer></exercise>
+      <exercise label="DMT_multquant_CYU_allexistspos"><statement correct="no"><p>True or False: <m>\forall x\in \mathbb{R}, \exists y\in \mathbb{R}, xy>0</m>.</p></statement>
+      <feedback><p>If <m>x=0</m>, no <m>y</m> will have <m>xy>0</m>.</p></feedback>
+      <answer>False. If <m>x=0</m>, no <m>y</m> will have <m>xy>0</m></answer></exercise>
 
-      <exercise><statement><p>Write the negation of <m>\exists x\in \mathbb{R}, \forall y\in \mathbb{R}, xy>0</m>.</p></statement>
+      <exercise label="DMT_multquant_CYU_existallnegpos"><statement><p>Write the negation of <m>\exists x\in \mathbb{R}, \forall y\in \mathbb{R}, xy>0</m>.</p></statement>
+      <response />
       <answer><m>\forall x\in \mathbb{R}, \exists y\in \mathbb{R}, xy\leq 0</m></answer></exercise>
 
-      <exercise><statement><p>True or False: <m>\exists x\in \mathbb{R}, \forall y\in \mathbb{R}, xy>0</m>.</p></statement>
+      <exercise label="DMT_multquant_CYU_existallpos"><statement correct="no"><p>True or False: <m>\exists x\in \mathbb{R}, \forall y\in \mathbb{R}, xy>0</m>.</p></statement>
+      <feedback><p>No matter which <m>x</m> you choose, <m>y=-x</m> will have <m>xy\leq 0</m>.</p></feedback>
       <answer>False. No matter which <m>x</m> you choose, <m>y=-x</m> will have <m>xy\leq 0</m></answer></exercise>
 
 
-      <exercise><statement><p>Write the negation of <m>\forall n\in \{\textrm{even integers}\}, \exists k\in \mathbb{Z}, n=2k</m>.</p></statement>
+      <exercise label="DMT_multquant_CYU_allexistsnegeven"><statement><p>Write the negation of <m>\forall n\in \{\textrm{even integers}\}, \exists k\in \mathbb{Z}, n=2k</m>.</p></statement>
+      <response />
       <answer><m>\exists n\in \{\textrm{even integers}\}, \forall k\in \mathbb{Z}, n\neq 2k</m></answer></exercise>
 
-      <exercise><statement><p>True or False: <m>\forall n\in \{\textrm{even integers}\}, \exists k\in \mathbb{Z}, n=2k</m>.</p></statement>
+      <exercise label="DMT_multquant_CYU_allexistseven"><statement correct="yes"><p>True or False: <m>\forall n\in \{\textrm{even integers}\}, \exists k\in \mathbb{Z}, n=2k</m>.</p></statement>
+      <feedback><p>Every even integer is 2 times an integer.</p></feedback>
       <answer>True. Every even integer is 2 times an integer.</answer></exercise>
 
       
