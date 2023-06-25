@@ -62,8 +62,39 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.0.0dev3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runtime.71ffd81c0faeb38b.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.e543e0dd19670ae2.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.1f1f63d2cda36a4d.css">
 </head>
-<body class="pretext book ignore-math">
+<body id="DiscreteMathText" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" href=""></a><div class="title-container">
 <h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
@@ -549,46 +580,46 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="cases4-4"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.4</span> <span class="title">Proof by Cases</span>
 </h2>
-<div class="para" id="p-946">In this section we will learn another proof technique, proof by cases. We will also see another big discrete math theorem, the Quotient-Remainder Theorem.</div>
-<div class="para" id="p-947">In the last section, we looked at the idea of divisibility. Remember, this is a relationship between two integers, not actual division. We will continue to focus on integers. One of the issues with division of integers is that if you divide two integers, you no longer necessarily have an integer. What if the only numbers we are allowed to use are integers? Can we still somehow think of division? Well, yes, this is in fact how you were probably introduced to division long ago. When you were first learning arithmetic, you only worked with integers.</div>
-<div class="para" id="p-948">Suppose you want to divide 10 by 5. This is easy, <span class="process-math">\(10\div 5=2\text{.}\)</span> But what if you want to divide 10 by 4? Now 4 does not “go evenly” into 10 (in other words, 4 does not divide 10). In this case, we get a remainder. In particular, 4 “goes into” 10 two times with a remainder of 2. Or, <span class="process-math">\(10\div 4\)</span> has quotient 2 and remainder 2.</div>
-<div class="para" id="p-949">OK, we want to formalize this idea of division, making sure we are only using integers. We know 5 divides 10, since <span class="process-math">\(10=5(2)\text{.}\)</span> Can we do the same sort of thing for 10 and 4? Almost. In this case, <span class="process-math">\(10=4(2)+2\text{.}\)</span>
+<div class="para" id="p-1089">In this section we will learn another proof technique, proof by cases. We will also see another big discrete math theorem, the Quotient-Remainder Theorem.</div>
+<div class="para" id="p-1090">In the last section, we looked at the idea of divisibility. Remember, this is a relationship between two integers, not actual division. We will continue to focus on integers. One of the issues with division of integers is that if you divide two integers, you no longer necessarily have an integer. What if the only numbers we are allowed to use are integers? Can we still somehow think of division? Well, yes, this is in fact how you were probably introduced to division long ago. When you were first learning arithmetic, you only worked with integers.</div>
+<div class="para" id="p-1091">Suppose you want to divide 10 by 5. This is easy, <span class="process-math">\(10\div 5=2\text{.}\)</span> But what if you want to divide 10 by 4? Now 4 does not “go evenly” into 10 (in other words, 4 does not divide 10). In this case, we get a remainder. In particular, 4 “goes into” 10 two times with a remainder of 2. Or, <span class="process-math">\(10\div 4\)</span> has quotient 2 and remainder 2.</div>
+<div class="para" id="p-1092">OK, we want to formalize this idea of division, making sure we are only using integers. We know 5 divides 10, since <span class="process-math">\(10=5(2)\text{.}\)</span> Can we do the same sort of thing for 10 and 4? Almost. In this case, <span class="process-math">\(10=4(2)+2\text{.}\)</span>
 </div>
-<div class="para" id="p-950">In general, given any integers <span class="process-math">\(n, d\)</span> with <span class="process-math">\(d\neq 0\text{,}\)</span> we can find integers <span class="process-math">\(q, r\)</span> with <span class="process-math">\(n=dq+r\text{.}\)</span> In general, <span class="process-math">\(q, r\)</span> are not unique. For example,  <span class="process-math">\(10=4(1)+6\text{,}\)</span> and <span class="process-math">\(10=4(-2)+18\text{,}\)</span> and <span class="process-math">\(10=4(4)-6\text{.}\)</span> But as we noted, we want to think of <span class="process-math">\(r\)</span> as the remainder. If we are more specific about conditions on the remainder, then <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> are unique.</div>
+<div class="para" id="p-1093">In general, given any integers <span class="process-math">\(n, d\)</span> with <span class="process-math">\(d\neq 0\text{,}\)</span> we can find integers <span class="process-math">\(q, r\)</span> with <span class="process-math">\(n=dq+r\text{.}\)</span> In general, <span class="process-math">\(q, r\)</span> are not unique. For example,  <span class="process-math">\(10=4(1)+6\text{,}\)</span> and <span class="process-math">\(10=4(-2)+18\text{,}\)</span> and <span class="process-math">\(10=4(4)-6\text{.}\)</span> But as we noted, we want to think of <span class="process-math">\(r\)</span> as the remainder. If we are more specific about conditions on the remainder, then <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> are unique.</div>
 <article class="theorem theorem-like" id="T_divisionalgorthm"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">The Quotient-Remainder Theorem.</span>
 </h3>
-<div class="para" id="p-951">Given any integer <span class="process-math">\(n\)</span> and any positive integer <span class="process-math">\(d\text{,}\)</span> there exist unique integers <span class="process-math">\(q, r\)</span> such that <span class="process-math">\(n=dq+r\)</span> and <span class="process-math">\(0\leq r &lt; d\text{.}\)</span>
-</div></article><div class="para" id="p-952">We say <span class="process-math">\(q\)</span> is the <dfn class="terminology">quotient</dfn> and <span class="process-math">\(r\)</span> is the <dfn class="terminology">remainder</dfn> when <span class="process-math">\(n\)</span> is divided by <span class="process-math">\(d\text{.}\)</span>
+<div class="para" id="p-1094">Given any integer <span class="process-math">\(n\)</span> and any positive integer <span class="process-math">\(d\text{,}\)</span> there exist unique integers <span class="process-math">\(q, r\)</span> such that <span class="process-math">\(n=dq+r\)</span> and <span class="process-math">\(0\leq r &lt; d\text{.}\)</span>
+</div></article><div class="para" id="p-1095">We say <span class="process-math">\(q\)</span> is the <dfn class="terminology">quotient</dfn> and <span class="process-math">\(r\)</span> is the <dfn class="terminology">remainder</dfn> when <span class="process-math">\(n\)</span> is divided by <span class="process-math">\(d\text{.}\)</span>
 </div>
-<div class="para" id="p-953">We will see the existence part of the proof in <a href="stronginduction5-4.html" class="internal" title="Section 5.4: Strong Induction">Section 5.4</a>.</div>
-<div class="para" id="p-954">This theorem is usually called the Division Algorithm. We won't use that name here since it can be confusing. In particular, the Division Algorithm is not really an algorithm.</div>
-<div class="para" id="p-955">Some important observations: the remainder <em class="emphasis">must</em> be nonnegative. It can be 0. This is what happens when <span class="process-math">\(d\mid n\text{.}\)</span> Although <span class="process-math">\(n\)</span> can be <em class="emphasis">any</em> integer, we will limit <span class="process-math">\(d\)</span> to being positive. The Quotient-Remainder Theorem can be extended to any <span class="process-math">\(d\neq 0\text{,}\)</span> but we will just need <span class="process-math">\(d&gt;0\)</span> in this class.</div>
+<div class="para" id="p-1096">We will see the existence part of the proof in <a href="stronginduction5-4.html" class="internal" title="Section 5.4: Strong Induction">Section 5.4</a>.</div>
+<div class="para" id="p-1097">This theorem is usually called the Division Algorithm. We won't use that name here since it can be confusing. In particular, the Division Algorithm is not really an algorithm.</div>
+<div class="para" id="p-1098">Some important observations: the remainder <em class="emphasis">must</em> be nonnegative. It can be 0. This is what happens when <span class="process-math">\(d\mid n\text{.}\)</span> Although <span class="process-math">\(n\)</span> can be <em class="emphasis">any</em> integer, we will limit <span class="process-math">\(d\)</span> to being positive. The Quotient-Remainder Theorem can be extended to any <span class="process-math">\(d\neq 0\text{,}\)</span> but we will just need <span class="process-math">\(d&gt;0\)</span> in this class.</div>
 <article class="example example-like" id="E_divalgform"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_divalgform"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Finding Quotients and Remainders.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_divalgform"><article class="example example-like"> <div class="para" id="p-956">Let <span class="process-math">\(n=15, d=7\text{,}\)</span> Find the quotient and remainder <span class="process-math">\(q, r\text{.}\)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-151" id="answer-151"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-151"><div class="answer solution-like"><span class="process-math">\(15=7(2)+1; q=2, r=1\)</span></div></div> <div class="para" id="p-957">Let <span class="process-math">\(n=28, d=7\text{,}\)</span> Find the quotient and remainder <span class="process-math">\(q, r\text{.}\)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-152" id="answer-152"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-152"><div class="answer solution-like"><span class="process-math">\(28=7(4)+0; q=4, r=0\)</span></div></div> <div class="para" id="p-958">Let <span class="process-math">\(n=9, d=12\text{,}\)</span> Find the quotient and remainder <span class="process-math">\(q, r\text{.}\)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-153" id="answer-153"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-153"><div class="answer solution-like"><span class="process-math">\(9=12(0)+9; q=0, r=9\)</span></div></div> <div class="para" id="p-959">Let <span class="process-math">\(n=-17, d=5\text{,}\)</span> Find the quotient and remainder <span class="process-math">\(q, r\text{.}\)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-154" id="answer-154"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-154"><div class="answer solution-like"><span class="process-math">\(-17=5(-4)+3; q=-4, r=3\)</span></div></div> <div class="para" id="p-960">Let <span class="process-math">\(n=0, d=7\text{,}\)</span> Find the quotient and remainder <span class="process-math">\(q, r\text{.}\)</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_divalgform"><article class="example example-like"> <div class="para" id="p-1099">Let <span class="process-math">\(n=15, d=7\text{,}\)</span> Find the quotient and remainder <span class="process-math">\(q, r\text{.}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-151" id="answer-151"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-151"><div class="answer solution-like"><span class="process-math">\(15=7(2)+1; q=2, r=1\)</span></div></div> <div class="para" id="p-1100">Let <span class="process-math">\(n=28, d=7\text{,}\)</span> Find the quotient and remainder <span class="process-math">\(q, r\text{.}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-152" id="answer-152"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-152"><div class="answer solution-like"><span class="process-math">\(28=7(4)+0; q=4, r=0\)</span></div></div> <div class="para" id="p-1101">Let <span class="process-math">\(n=9, d=12\text{,}\)</span> Find the quotient and remainder <span class="process-math">\(q, r\text{.}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-153" id="answer-153"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-153"><div class="answer solution-like"><span class="process-math">\(9=12(0)+9; q=0, r=9\)</span></div></div> <div class="para" id="p-1102">Let <span class="process-math">\(n=-17, d=5\text{,}\)</span> Find the quotient and remainder <span class="process-math">\(q, r\text{.}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-154" id="answer-154"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-154"><div class="answer solution-like"><span class="process-math">\(-17=5(-4)+3; q=-4, r=3\)</span></div></div> <div class="para" id="p-1103">Let <span class="process-math">\(n=0, d=7\text{,}\)</span> Find the quotient and remainder <span class="process-math">\(q, r\text{.}\)</span>
 </div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-155" id="answer-155"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-155"><div class="answer solution-like"><span class="process-math">\(0=7(0)+0; q=0, r=0\)</span></div></div></article></div>
 <article class="activity project-like" id="activity-69"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.4.1</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-34"><div class="para" id="p-961">For the given <span class="process-math">\(n\)</span> and <span class="process-math">\(d\text{,}\)</span> find <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> as in the Quotient-Remainder Theorem.</div></div>
+<div class="introduction" id="introduction-34"><div class="para" id="p-1104">For the given <span class="process-math">\(n\)</span> and <span class="process-math">\(d\text{,}\)</span> find <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> as in the Quotient-Remainder Theorem.</div></div>
 <article class="task exercise-like" id="task-102"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-962">
+<div class="para" id="p-1105">
 <span class="process-math">\(n=20\)</span> and <span class="process-math">\(d=8\)</span>
 </div></article><article class="task exercise-like" id="task-103"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-963">
+<div class="para" id="p-1106">
 <span class="process-math">\(n=45\)</span> and <span class="process-math">\(d=9\)</span>
 </div></article><article class="task exercise-like" id="task-104"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-964">
+<div class="para" id="p-1107">
 <span class="process-math">\(n=8\)</span> and <span class="process-math">\(d=12\)</span>
 </div></article><article class="task exercise-like" id="task-105"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="p-965">
+<div class="para" id="p-1108">
 <span class="process-math">\(n=-15\)</span> and <span class="process-math">\(d=7\)</span>
-</div></article></article><div class="para logical" id="p-966">
+</div></article></article><div class="para logical" id="p-1109">
 <div class="para">In computer science it is useful to have functions that give the quotient (div) and remainder (mod). The common notation is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -603,44 +634,44 @@ n \text{ mod } d=r.
 <div class="para">For example, <span class="process-math">\(20 \text{ div } 3=6\)</span> and <span class="process-math">\(20 \text{ mod } 3=2\text{.}\)</span>
 </div>
 </div>
-<div class="para" id="p-967">We can use the Quotient-Remainder Theorem to find <dfn class="terminology">representations of the integers</dfn> by grouping integers with the same remainder.</div>
-<div class="para" id="p-968">For example, if we let <span class="process-math">\(d=2\text{,}\)</span> what are the possible remainders? In this case, <span class="process-math">\(r=0\)</span> or <span class="process-math">\(r=1\text{.}\)</span> Thus, there are two possible forms for <span class="process-math">\(n\text{:}\)</span> <span class="process-math">\(n=2q+0\)</span> or <span class="process-math">\(n=2q+1\text{.}\)</span> We see that these are the two forms corresponding to <span class="process-math">\(n\)</span> being even or odd. Now, as a corollary of the Quotient-Remainder, we have that every integer must be even or odd.</div>
-<div class="para" id="p-969">We can use the Quotient-Remainder Theorem to get other forms, as well. For example, if <span class="process-math">\(d=4\text{,}\)</span> the possible forms are <span class="process-math">\(n=4q+0, n=4q+1, n=4q+2\)</span> or <span class="process-math">\(n=4q+3\text{.}\)</span> We can use these forms to get different <dfn class="terminology">cases</dfn> for the integers.</div>
+<div class="para" id="p-1110">We can use the Quotient-Remainder Theorem to find <dfn class="terminology">representations of the integers</dfn> by grouping integers with the same remainder.</div>
+<div class="para" id="p-1111">For example, if we let <span class="process-math">\(d=2\text{,}\)</span> what are the possible remainders? In this case, <span class="process-math">\(r=0\)</span> or <span class="process-math">\(r=1\text{.}\)</span> Thus, there are two possible forms for <span class="process-math">\(n\text{:}\)</span> <span class="process-math">\(n=2q+0\)</span> or <span class="process-math">\(n=2q+1\text{.}\)</span> We see that these are the two forms corresponding to <span class="process-math">\(n\)</span> being even or odd. Now, as a corollary of the Quotient-Remainder, we have that every integer must be even or odd.</div>
+<div class="para" id="p-1112">We can use the Quotient-Remainder Theorem to get other forms, as well. For example, if <span class="process-math">\(d=4\text{,}\)</span> the possible forms are <span class="process-math">\(n=4q+0, n=4q+1, n=4q+2\)</span> or <span class="process-math">\(n=4q+3\text{.}\)</span> We can use these forms to get different <dfn class="terminology">cases</dfn> for the integers.</div>
 <article class="assemblage assemblage-like" id="B_pfcases"><h3 class="heading"><span class="title">Proof by Cases.</span></h3>
-<div class="para logical" id="p-970">
+<div class="para logical" id="p-1113">
 <div class="para">To prove <span class="process-math">\(\forall x\in D, P(x)\)</span> by cases,</div>
 <ol class="decimal">
-<li id="li-270"><div class="para" id="p-971">Break <span class="process-math">\(D\)</span> into smaller subsets, <span class="process-math">\(D_1, D_2, \ldots D_k\text{.}\)</span> Make sure every element in <span class="process-math">\(D\)</span> is in one of the subsets.</div></li>
+<li id="li-270"><div class="para" id="p-1114">Break <span class="process-math">\(D\)</span> into smaller subsets, <span class="process-math">\(D_1, D_2, \ldots D_k\text{.}\)</span> Make sure every element in <span class="process-math">\(D\)</span> is in one of the subsets.</div></li>
 <li id="li-271">
-<div class="para" id="p-972">Prove each case separately. Make sure you state each case clearly.</div>
-<div class="para" id="p-973">Case 1: <span class="process-math">\(x\in D_1\)</span>
+<div class="para" id="p-1115">Prove each case separately. Make sure you state each case clearly.</div>
+<div class="para" id="p-1116">Case 1: <span class="process-math">\(x\in D_1\)</span>
 </div>
-<div class="para" id="p-974">Proof of <span class="process-math">\(P(x)\text{.}\)</span>
+<div class="para" id="p-1117">Proof of <span class="process-math">\(P(x)\text{.}\)</span>
 </div>
-<div class="para" id="p-975">Case 2: <span class="process-math">\(x\in D_2\)</span>
+<div class="para" id="p-1118">Case 2: <span class="process-math">\(x\in D_2\)</span>
 </div>
-<div class="para" id="p-976">Proof of <span class="process-math">\(P(x)\text{.}\)</span>
+<div class="para" id="p-1119">Proof of <span class="process-math">\(P(x)\text{.}\)</span>
 </div>
-<div class="para" id="p-977">etc.</div>
+<div class="para" id="p-1120">etc.</div>
 </li>
-<li id="li-272"><div class="para" id="p-978">Conclude <span class="process-math">\(P(x)\)</span> holds for all <span class="process-math">\(x\in D\text{.}\)</span>
+<li id="li-272"><div class="para" id="p-1121">Conclude <span class="process-math">\(P(x)\)</span> holds for all <span class="process-math">\(x\in D\text{.}\)</span>
 </div></li>
 </ol>
-</div></article><div class="para" id="p-979">In choosing your subsets, make sure you cover all the elements of <span class="process-math">\(D\text{.}\)</span> Your subsets do not need to be similar. For example, one set could be all the nonzero integers and the other just the set with 0.</div>
-<div class="para" id="p-980">We saw an example in <a href="" class="xref" data-knowl="./knowl/T_divbyprime.html" title="Theorem 4.3.5">Theorem 4.3.5</a>, where we broke <span class="process-math">\(D\)</span> into the set of primes and the set of composites.</div>
+</div></article><div class="para" id="p-1122">In choosing your subsets, make sure you cover all the elements of <span class="process-math">\(D\text{.}\)</span> Your subsets do not need to be similar. For example, one set could be all the nonzero integers and the other just the set with 0.</div>
+<div class="para" id="p-1123">We saw an example in <a href="" class="xref" data-knowl="./knowl/T_divbyprime.html" title="Theorem 4.3.5">Theorem 4.3.5</a>, where we broke <span class="process-math">\(D\)</span> into the set of primes and the set of composites.</div>
 <article class="example example-like" id="E_casesconsec"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_casesconsec"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Proof by Cases.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_casesconsec"><article class="example example-like"> <div class="para" id="p-981">Prove given any two consecutive integers, one is even and one is odd.</div> <article class="hiddenproof" id="proof-10"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-10"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-10"><article class="hiddenproof"><div class="para" id="p-982">Let <span class="process-math">\(n\)</span> and <span class="process-math">\(n+1\)</span> be consecutive integers.</div> <div class="para" id="p-983">Case 1: Let <span class="process-math">\(n\)</span> be even. Then <span class="process-math">\(n=2k\)</span> for some <span class="process-math">\(k\in\mathbb{Z}\text{.}\)</span> Then <span class="process-math">\(n+1=2k+1\)</span>  for <span class="process-math">\(k\in\mathbb{Z}\text{.}\)</span> Hence <span class="process-math">\(n+1\)</span> is odd.</div> <div class="para" id="p-984">Case 2: Let <span class="process-math">\(n\)</span> be odd. Then <span class="process-math">\(n=2k+1\)</span> for some <span class="process-math">\(k\in\mathbb{Z}\text{.}\)</span> Then <span class="process-math">\(n+1=2k+2=2(k+1)\)</span>  for <span class="process-math">\(k+1\in\mathbb{Z}\text{.}\)</span> Hence <span class="process-math">\(n+1\)</span> is even.</div> <div class="para" id="p-985">Thus, for any two consecutive integers, one is even and one is odd.</div></article></div></article></div>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_casesconsec"><article class="example example-like"> <div class="para" id="p-1124">Prove given any two consecutive integers, one is even and one is odd.</div> <article class="hiddenproof" id="proof-10"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-10"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-10"><article class="hiddenproof"><div class="para" id="p-1125">Let <span class="process-math">\(n\)</span> and <span class="process-math">\(n+1\)</span> be consecutive integers.</div> <div class="para" id="p-1126">Case 1: Let <span class="process-math">\(n\)</span> be even. Then <span class="process-math">\(n=2k\)</span> for some <span class="process-math">\(k\in\mathbb{Z}\text{.}\)</span> Then <span class="process-math">\(n+1=2k+1\)</span>  for <span class="process-math">\(k\in\mathbb{Z}\text{.}\)</span> Hence <span class="process-math">\(n+1\)</span> is odd.</div> <div class="para" id="p-1127">Case 2: Let <span class="process-math">\(n\)</span> be odd. Then <span class="process-math">\(n=2k+1\)</span> for some <span class="process-math">\(k\in\mathbb{Z}\text{.}\)</span> Then <span class="process-math">\(n+1=2k+2=2(k+1)\)</span>  for <span class="process-math">\(k+1\in\mathbb{Z}\text{.}\)</span> Hence <span class="process-math">\(n+1\)</span> is even.</div> <div class="para" id="p-1128">Thus, for any two consecutive integers, one is even and one is odd.</div></article></div></article></div>
 <article class="activity project-like" id="activity-70"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.4.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-986">Prove for all integers <span class="process-math">\(m\)</span> and  <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(m+n\)</span> and <span class="process-math">\(m-n\)</span> are either both even or both odd.</div>
+<div class="para" id="p-1129">Prove for all integers <span class="process-math">\(m\)</span> and  <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(m+n\)</span> and <span class="process-math">\(m-n\)</span> are either both even or both odd.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-6" id="hint-6"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-6"><div class="hint solution-like"><div class="para" id="p-987">There are four cases, depending on whether <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> are even or odd.</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-6" id="hint-6"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-6"><div class="hint solution-like"><div class="para" id="p-1130">There are four cases, depending on whether <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> are even or odd.</div></div></div>
 </div></article><article class="activity project-like" id="activity-71"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.4.3</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-988">
+<div class="para logical" id="p-1131">
 <div class="para">Recall the absolute value function is defined as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -654,11 +685,11 @@ x, \amp\text{if $x\geq 0$;}\\
 <div class="para">Prove for all <span class="process-math">\(x\in \mathbb{R}\text{,}\)</span> <span class="process-math">\(|x|=|-x|\text{.}\)</span> What would appropriate cases be?</div>
 </div></article><article class="example example-like" id="E_morecases"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_morecases"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">More Cases.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_morecases"><article class="example example-like"> <div class="para" id="p-989">Prove that the square of any odd integer has the form <span class="process-math">\(8m+1\)</span> for some <span class="process-math">\(m\in \mathbb{Z}\text{.}\)</span>
-</div> <div class="para" id="p-990">First, let's try to just prove this directly.</div> <div class="para" id="p-991">Let <span class="process-math">\(n\)</span> be odd. Then <span class="process-math">\(n=2k+1, k\in\mathbb{Z}\text{.}\)</span> Thus, <span class="process-math">\(n^2=(2k+1)^2=4k^2+4k+1\text{.}\)</span>
-</div> <div class="para" id="p-992">It is not clear <span class="process-math">\(n^2\)</span> has the form <span class="process-math">\(8m+1\text{.}\)</span>
-</div> <div class="para" id="p-993">If we try using some cases, we may get a bit more to work with. We know any integer has the form <span class="process-math">\(4k, 4k+1, 4k+2,\)</span> or <span class="process-math">\(4k+3\text{.}\)</span> But only <span class="process-math">\(4k+1\)</span> and <span class="process-math">\(4k+3\)</span> are odd. Thus, we can try cases with <span class="process-math">\(n=4k+1\)</span> and <span class="process-math">\(n=4k+3\text{.}\)</span>
-</div> <article class="hiddenproof" id="proof-11"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-11"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-11"><article class="hiddenproof"><div class="para" id="p-994">Let <span class="process-math">\(n\)</span> be odd.</div> <div class="para logical" id="p-995">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_morecases"><article class="example example-like"> <div class="para" id="p-1132">Prove that the square of any odd integer has the form <span class="process-math">\(8m+1\)</span> for some <span class="process-math">\(m\in \mathbb{Z}\text{.}\)</span>
+</div> <div class="para" id="p-1133">First, let's try to just prove this directly.</div> <div class="para" id="p-1134">Let <span class="process-math">\(n\)</span> be odd. Then <span class="process-math">\(n=2k+1, k\in\mathbb{Z}\text{.}\)</span> Thus, <span class="process-math">\(n^2=(2k+1)^2=4k^2+4k+1\text{.}\)</span>
+</div> <div class="para" id="p-1135">It is not clear <span class="process-math">\(n^2\)</span> has the form <span class="process-math">\(8m+1\text{.}\)</span>
+</div> <div class="para" id="p-1136">If we try using some cases, we may get a bit more to work with. We know any integer has the form <span class="process-math">\(4k, 4k+1, 4k+2,\)</span> or <span class="process-math">\(4k+3\text{.}\)</span> But only <span class="process-math">\(4k+1\)</span> and <span class="process-math">\(4k+3\)</span> are odd. Thus, we can try cases with <span class="process-math">\(n=4k+1\)</span> and <span class="process-math">\(n=4k+3\text{.}\)</span>
+</div> <article class="hiddenproof" id="proof-11"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-11"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-11"><article class="hiddenproof"><div class="para" id="p-1137">Let <span class="process-math">\(n\)</span> be odd.</div> <div class="para logical" id="p-1138">
 <div class="para">Case 1: Let <span class="process-math">\(n=4k+1\)</span> for some <span class="process-math">\(k\in\mathbb{Z}\text{.}\)</span> Then</div>
 <div class="displaymath process-math" id="md-5">
 \begin{align*}
@@ -669,7 +700,7 @@ n^2&amp;=(4k+1)^2\\
 </div>
 <div class="para">for some <span class="process-math">\(2k^2+k\in\mathbb{Z}\text{.}\)</span> Let <span class="process-math">\(m=2k^2+k\text{.}\)</span> Then <span class="process-math">\(n\)</span> has the form <span class="process-math">\(8m+1, m\in \mathbb{Z}\text{.}\)</span>
 </div>
-</div> <div class="para logical" id="p-996">
+</div> <div class="para logical" id="p-1139">
 <div class="para">Case 2: Let <span class="process-math">\(n=4k+3\)</span> for some <span class="process-math">\(k\in\mathbb{Z}\text{.}\)</span> Then</div>
 <div class="displaymath process-math" id="md-6">
 \begin{align*}
@@ -682,12 +713,12 @@ n^2&amp;=(4k+3)^2\\
 </div>
 <div class="para">for some <span class="process-math">\(2k^2+3k+1\in\mathbb{Z}\text{.}\)</span> Let <span class="process-math">\(m=2k^2+3k+1\text{.}\)</span> Then <span class="process-math">\(n\)</span> has the form <span class="process-math">\(8m+1, m\in \mathbb{Z}\text{.}\)</span>
 </div>
-</div> <div class="para" id="p-997">Thus, any odd integer has the form <span class="process-math">\(8m+1\text{.}\)</span>
-</div></article></div> <div class="para" id="p-998">Note, what this theorem really says is that the square of an odd integer must have remainder 1 when divided by 8. That might be a little surprising.</div></article></div>
+</div> <div class="para" id="p-1140">Thus, any odd integer has the form <span class="process-math">\(8m+1\text{.}\)</span>
+</div></article></div> <div class="para" id="p-1141">Note, what this theorem really says is that the square of an odd integer must have remainder 1 when divided by 8. That might be a little surprising.</div></article></div>
 <article class="activity project-like" id="A_casesfor3"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.4.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-999">Use the Quotient Remainder Theorem to find the possible forms of an integer when <span class="process-math">\(d=3\text{.}\)</span>
+<div class="para" id="p-1142">Use the Quotient Remainder Theorem to find the possible forms of an integer when <span class="process-math">\(d=3\text{.}\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-7" id="hint-7"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-7"><div class="hint solution-like">What are the possible values for <span class="process-math">\(r\text{?}\)</span>
@@ -695,79 +726,73 @@ n^2&amp;=(4k+3)^2\\
 </div></article><article class="activity project-like" id="activity-73"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.4.5</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1000">Prove the product of any two consecutive integers has the form <span class="process-math">\(3k\)</span> or <span class="process-math">\(3k+2\)</span> for some integer <span class="process-math">\(k\text{.}\)</span>
+<div class="para" id="p-1143">Prove the product of any two consecutive integers has the form <span class="process-math">\(3k\)</span> or <span class="process-math">\(3k+2\)</span> for some integer <span class="process-math">\(k\text{.}\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-8" id="hint-8"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-8"><div class="hint solution-like">Use the cases in <a href="" class="xref" data-knowl="./knowl/A_casesfor3.html" title="Activity 4.4.4">Activity 4.4.4</a>.</div></div>
 </div></article><section class="reading-questions" id="reading-questions-14"><h3 class="heading hide-type">
 <span class="type">Reading Questions</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-189"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1001">Find the quotient and remainder if <span class="process-math">\(n=34, d=6\text{.}\)</span>
+<article class="exercise exercise-like" id="DMT_cases_CYU_n34d6qr"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><div data-component="fillintheblank" data-question_label="" id="DMT_cases_CYU_n34d6qr">
+<div class="para" id="p-1144">Find the quotient and remainder if <span class="process-math">\(n=34, d=6\text{.}\)</span>
+</div> <div class="para" id="p-1145">Quotient:<input type="text" placeholder="Number" size="3">, Remainder:<input type="text" placeholder="Number" size="3">
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-156" id="answer-156"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-156"><div class="answer solution-like">
-<span class="process-math">\(34=6(5)+4\text{;}\)</span> quotient: 5; remainder: 4</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-190"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-1002">Find the quotient and remainder if <span class="process-math">\(n=34, d=2\text{.}\)</span>
+<script type="application/json">[[{"number": [5, 5], "feedback": "<div class=\"para\" id=\"p-1146\">Correct<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-1147\">Find 34=6q+r.<\/div>"}], [{"number": [4, 4], "feedback": "<div class=\"para\" id=\"p-1148\">Correct<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-1149\">Make sure <span class=\"process-math\">\\(0\\leq r < 6\\)<\/span><\/div>"}]]</script>
+</div></div></div></article><article class="exercise exercise-like" id="DMT_cases_CYU_n34d2qr"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><div data-component="fillintheblank" data-question_label="" id="DMT_cases_CYU_n34d2qr">
+<div class="para" id="p-1150">Find the quotient and remainder if <span class="process-math">\(n=34, d=2\text{.}\)</span>
+</div> <div class="para" id="p-1151">Quotient:<input type="text" placeholder="Number" size="3">, Remainder:<input type="text" placeholder="Number" size="3">
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-157" id="answer-157"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-157"><div class="answer solution-like">
-<span class="process-math">\(34=2(17)+0\text{;}\)</span> quotient: 17; remainder: 0</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-191"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-1003">Find the quotient and remainder if <span class="process-math">\(n=-34, d=6\text{.}\)</span>
+<script type="application/json">[[{"number": [17, 17], "feedback": "<div class=\"para\" id=\"p-1152\">Correct<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-1153\">Find 34=2q+r.<\/div>"}], [{"number": [0, 0], "feedback": "<div class=\"para\" id=\"p-1154\">Correct<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-1155\">Make sure <span class=\"process-math\">\\(0\\leq r < 2\\)<\/span><\/div>"}]]</script>
+</div></div></div></article><article class="exercise exercise-like" id="DMT_cases_CYU_nneg34d6qr"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><div data-component="fillintheblank" data-question_label="" id="DMT_cases_CYU_nneg34d6qr">
+<div class="para" id="p-1156">Find the quotient and remainder if <span class="process-math">\(n=-34, d=6\text{.}\)</span>
+</div> <div class="para" id="p-1157">Quotient:<input type="text" placeholder="Number" size="3">, Remainder:<input type="text" placeholder="Number" size="3">
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-158" id="answer-158"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-158"><div class="answer solution-like">
-<span class="process-math">\(-34=6(-6)+2\text{;}\)</span> quotient: -6; remainder: 2</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-192"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-1004">Find the quotient and remainder if <span class="process-math">\(n=4, d=10\text{.}\)</span>
+<script type="application/json">[[{"number": [-6, -6], "feedback": "<div class=\"para\" id=\"p-1158\">Correct<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-1159\">Find -34=6q+r.<\/div>"}], [{"number": [2, 2], "feedback": "<div class=\"para\" id=\"p-1160\">Correct<\/div>"}, {"number": [-4, -4], "feedback": "<div class=\"para\" id=\"p-1161\">Remember the remainder must be positive.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-1162\">Make sure <span class=\"process-math\">\\(0\\leq r < 6\\)<\/span><\/div>"}]]</script>
+</div></div></div></article><article class="exercise exercise-like" id="DMT_cases_CYU_n4d10qr"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><div data-component="fillintheblank" data-question_label="" id="DMT_cases_CYU_n4d10qr">
+<div class="para" id="p-1163">Find the quotient and remainder if <span class="process-math">\(n=4, d=10\text{.}\)</span>
+</div> <div class="para" id="p-1164">Quotient:<input type="text" placeholder="Number" size="3">, Remainder:<input type="text" placeholder="Number" size="3">
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-159" id="answer-159"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-159"><div class="answer solution-like">
-<span class="process-math">\(4=10(0)+4\text{;}\)</span> quotient: 0; remainder: 4</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-193"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-1005">Find the quotient and remainder if <span class="process-math">\(n=-40, d=12\text{.}\)</span>
+<script type="application/json">[[{"number": [0, 0], "feedback": "<div class=\"para\" id=\"p-1165\">Correct<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-1166\">Find 4=10q+r.<\/div>"}], [{"number": [4, 4], "feedback": "<div class=\"para\" id=\"p-1167\">Correct<\/div>"}, {"number": [-6, -6], "feedback": "<div class=\"para\" id=\"p-1168\">Remember the remainder must be positive.<\/div>"}, {"number": [14, 14], "feedback": "<div class=\"para\" id=\"p-1169\">Remember the remainder must be less than <span class=\"process-math\">\\(10\\text{.}\\)<\/span><\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-1170\">Make sure <span class=\"process-math\">\\(0\\leq r < 10\\)<\/span><\/div>"}]]</script>
+</div></div></div></article><article class="exercise exercise-like" id="DMT_cases_CYU_n40d12qr"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><div data-component="fillintheblank" data-question_label="" id="DMT_cases_CYU_n40d12qr">
+<div class="para" id="p-1171">Find the quotient and remainder if <span class="process-math">\(n=-40, d=12\text{.}\)</span>
+</div> <div class="para" id="p-1172">Quotient:<input type="text" placeholder="Number" size="3">, Remainder:<input type="text" placeholder="Number" size="3">
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-160" id="answer-160"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-160"><div class="answer solution-like">
-<span class="process-math">\(-40=12(-4)+8\text{;}\)</span> quotient: -4; remainder: 8</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-194"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-1006">Review: Give the negation of <span class="process-math">\(\forall x\in D, P(x)\rightarrow Q(x)\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-161" id="answer-161"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-161"><div class="answer solution-like"><span class="process-math">\(\exists x\in D, P(x)\wedge \sim Q(x)\)</span></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-195"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-1007">Review: Give the contrapositive of <span class="process-math">\(\forall x\in D, P(x)\rightarrow Q(x)\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-162" id="answer-162"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-162"><div class="answer solution-like"><span class="process-math">\(\forall x\in D, \sim Q(x)\rightarrow \sim P(x)\)</span></div></div>
+<script type="application/json">[[{"number": [-4, -4], "feedback": "<div class=\"para\" id=\"p-1173\">Correct<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-1174\">Find -40=12q+r.<\/div>"}], [{"number": [8, 8], "feedback": "<div class=\"para\" id=\"p-1175\">Correct<\/div>"}, {"number": [-4, -4], "feedback": "<div class=\"para\" id=\"p-1176\">Remember the remainder must be positive.<\/div>"}, {"number": [20, 20], "feedback": "<div class=\"para\" id=\"p-1177\">Remember the remainder must be less than <span class=\"process-math\">\\(12\\text{.}\\)<\/span><\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-1178\">Make sure <span class=\"process-math\">\\(0\\leq r < 12\\)<\/span><\/div>"}]]</script>
+</div></div></div></article><article class="exercise exercise-like" id="DMT_cases_CYU_revnegunivcond"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="p-1179">Review: Give the negation of <span class="process-math">\(\forall x\in D, P(x)\rightarrow Q(x)\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="DMT_cases_CYU_revcontrunivcond"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="p-1180">Review: Give the contrapositive of <span class="process-math">\(\forall x\in D, P(x)\rightarrow Q(x)\text{.}\)</span>
 </div></article></section><section class="exercises" id="exercises-14"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="exercise-196"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1008">For the given <span class="process-math">\(n\)</span> and <span class="process-math">\(d\text{,}\)</span> find <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> such that <span class="process-math">\(n=dq+r\)</span> with <span class="process-math">\(0\leq r&lt;d\)</span> (as in the Quotient-Remainder Theorem).</div> <ol class="lower-alpha">
-<li id="li-273"><div class="para" id="p-1009">
+<div class="para" id="p-1181">For the given <span class="process-math">\(n\)</span> and <span class="process-math">\(d\text{,}\)</span> find <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> such that <span class="process-math">\(n=dq+r\)</span> with <span class="process-math">\(0\leq r&lt;d\)</span> (as in the Quotient-Remainder Theorem).</div> <ol class="lower-alpha">
+<li id="li-273"><div class="para" id="p-1182">
 <span class="process-math">\(n=36\)</span> and <span class="process-math">\(d=40\)</span>
 </div></li>
-<li id="li-274"><div class="para" id="p-1010">
+<li id="li-274"><div class="para" id="p-1183">
 <span class="process-math">\(n=-45\)</span> and <span class="process-math">\(d=11\)</span>
 </div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-197"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-1011">Evaluate <span class="process-math">\(28\)</span> div <span class="process-math">\(5\)</span> and <span class="process-math">\(28\)</span> mod <span class="process-math">\(5\text{.}\)</span>
+<div class="para" id="p-1184">Evaluate <span class="process-math">\(28\)</span> div <span class="process-math">\(5\)</span> and <span class="process-math">\(28\)</span> mod <span class="process-math">\(5\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-198"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-1012">Suppose <span class="process-math">\(d\)</span> is a positive integer and <span class="process-math">\(n\)</span> is any integer. If <span class="process-math">\(d\mid n\text{,}\)</span> what is the remainder when the Quotient-Remainder Theorem is applied to <span class="process-math">\(n\)</span> with divisor <span class="process-math">\(d\text{?}\)</span>
+<div class="para" id="p-1185">Suppose <span class="process-math">\(d\)</span> is a positive integer and <span class="process-math">\(n\)</span> is any integer. If <span class="process-math">\(d\mid n\text{,}\)</span> what is the remainder when the Quotient-Remainder Theorem is applied to <span class="process-math">\(n\)</span> with divisor <span class="process-math">\(d\text{?}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-199"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-1013">Prove for all integers <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(n^2-n+3\)</span> is odd.</div></article><article class="exercise exercise-like" id="exercise-200"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-1014">Let <span class="process-math">\(n\in \mathbb{Z}\text{.}\)</span> Prove if <span class="process-math">\(n\)</span> has remainder 3 when divided by 5, then <span class="process-math">\(n^2\)</span> has remainder 4 when divided by 5.</div>
+<div class="para" id="p-1186">Prove for all integers <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(n^2-n+3\)</span> is odd.</div></article><article class="exercise exercise-like" id="exercise-200"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="p-1187">Let <span class="process-math">\(n\in \mathbb{Z}\text{.}\)</span> Prove if <span class="process-math">\(n\)</span> has remainder 3 when divided by 5, then <span class="process-math">\(n^2\)</span> has remainder 4 when divided by 5.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-9" id="hint-9"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-9"><div class="hint solution-like"><div class="para" id="p-1015">Think Quotient-Remainder Theorem.</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-9" id="hint-9"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-9"><div class="hint solution-like"><div class="para" id="p-1188">Think Quotient-Remainder Theorem.</div></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-201"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-1016">Let <span class="process-math">\(a, b\in \mathbb{Z}\text{.}\)</span> Prove if <span class="process-math">\(a\)</span> has remainder 5 when divided by 7 and <span class="process-math">\(b\)</span> has remainder 6 when divided by 7, then <span class="process-math">\(ab\)</span> has remainder 2 when divided by 7.</div>
+<div class="para" id="p-1189">Let <span class="process-math">\(a, b\in \mathbb{Z}\text{.}\)</span> Prove if <span class="process-math">\(a\)</span> has remainder 5 when divided by 7 and <span class="process-math">\(b\)</span> has remainder 6 when divided by 7, then <span class="process-math">\(ab\)</span> has remainder 2 when divided by 7.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-10" id="hint-10"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-10"><div class="hint solution-like"><div class="para" id="p-1017">Think Quotient-Remainder Theorem.</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-10" id="hint-10"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-10"><div class="hint solution-like"><div class="para" id="p-1190">Think Quotient-Remainder Theorem.</div></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-202"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-1018">Prove the square of of any integer has the form <span class="process-math">\(4k\)</span> or <span class="process-math">\(4k+1\)</span> for some integer <span class="process-math">\(k\text{.}\)</span>
+<div class="para" id="p-1191">Prove the square of of any integer has the form <span class="process-math">\(4k\)</span> or <span class="process-math">\(4k+1\)</span> for some integer <span class="process-math">\(k\text{.}\)</span>
 </div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="divisibility4-3.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="contradiction4-5.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
@@ -776,5 +801,13 @@ n^2&amp;=(4k+3)^2\\
 <div id="ptx-page-footer">
 <a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12894193;
+var sc_invisible=1;
+var sc_security="e67c59eb";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12894193/0/e67c59eb/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
 </body>
 </html>

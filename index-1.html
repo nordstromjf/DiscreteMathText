@@ -62,8 +62,39 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.0.0dev3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runtime.71ffd81c0faeb38b.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.e543e0dd19670ae2.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.1f1f63d2cda36a4d.css">
 </head>
-<body class="pretext book ignore-math">
+<body id="DiscreteMathText" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" href=""></a><div class="title-container">
 <h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
@@ -559,18 +590,18 @@ window.MathJax = {
 <div class="indexitem">addition rule<span class="indexknowl">, <a href="additionrule9-3.html" class="internal" title="Section 9.3: Addition Rule">Section</a> <a href="" class="xref" data-knowl="./knowl/B_addrule.html" title="Assemblage: Addition Rule">Assemblage</a></span>
 </div>
 <div class="indexitem">adjacent</div>
-<div class="subindexitem">edges<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2827.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">edges<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3067.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">vertices<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2824.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">vertices<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3064.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">ancestor</div>
 <div class="subindexitem">of a vertex<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-784.html" title="Item">Item</a></span>
 </div>
 <div class="indexitem">argument<span class="indexknowl">, <a href="arguments2-3.html" class="internal" title="Section 2.3: Valid and Invalid Arguments">Section</a> <a href="" class="xref" data-knowl="./knowl/B_formargument.html" title="Assemblage: General Form of an Argument">Assemblage</a></span>
 </div>
-<div class="subindexitem">quantifier<span class="indexknowl">, <a href="argumentsquant3-4.html" class="internal" title="Section 3.4: Arguments with Quantifiers">Section</a> <a href="" class="xref" data-knowl="./knowl/p-633.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">quantifier<span class="indexknowl">, <a href="argumentsquant3-4.html" class="internal" title="Section 3.4: Arguments with Quantifiers">Section</a> <a href="" class="xref" data-knowl="./knowl/p-760.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">arrow diagram<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1859.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">arrow diagram<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2099.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">arthmetic sequence<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_arithseq.html" title="Definition 5.6.2">Definition</a></span>
 </div>
@@ -578,17 +609,17 @@ window.MathJax = {
 <div class="indexletter" id="indexletter-b">
 <div class="indexitem">bijection<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_ontotoonecorrespondence.html" title="Definition 7.2.12">Definition</a>. <span class="seealso"><em>See also</em> one-to-one correspondence</span></span>
 </div>
-<div class="indexitem">binary tree<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3006.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">binary tree<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3246.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">full<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3007.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">full<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3247.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">binomial<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2772.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">binomial<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3012.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">binomial coefficient<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2766.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">binomial coefficient<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3006.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">Binomial Theorem<span class="indexknowl">, <a href="binomial9-6.html" class="internal" title="Section 9.6: Binomial Theorem">Section</a> <a href="" class="xref" data-knowl="./knowl/T_binomial.html" title="Theorem 9.6.4: Binomial Theorem">Theorem</a></span>
 </div>
-<div class="indexitem">bit string<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2454.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">bit string<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2694.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">branch vertex<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_leaf.html" title="Definition 10.3.7">Definition</a></span>
 </div>
@@ -612,18 +643,18 @@ window.MathJax = {
 </div>
 <div class="subindexitem">simple<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-761.html" title="Item">Item</a></span>
 </div>
-<div class="subindexitem">trivial<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2925.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">trivial<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3165.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">circuit-free graph<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_circuitfree.html" title="Definition 10.3.1">Definition</a></span>
 </div>
 <div class="indexitem">closed form</div>
-<div class="subindexitem">sum<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1273.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-2783.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">sum<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1453.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/p-3023.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">closed walk<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-759.html" title="Item">Item</a></span>
 </div>
 <div class="indexitem">codomain<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_function.html" title="Definition 7.1.1">Definition</a></span>
 </div>
-<div class="subindexitem">relation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-157.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">relation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-162.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">combination<span class="indexknowl">, <a href="combinations9-5.html" class="internal" title="Section 9.5: Combinations">Section</a> <a href="" class="xref" data-knowl="./knowl/D_combination.html" title="Definition 9.5.1">Definition</a></span>
 </div>
@@ -645,7 +676,7 @@ window.MathJax = {
 </div>
 <div class="subindexitem">statement<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-9.html" title="Item: Conditional Statements">Item</a> <a href="conditional2-2.html" class="internal" title="Section 2.2: Conditional Statements">Section</a></span>
 </div>
-<div class="indexitem">congruent mod <span class="process-math">\(d\)</span><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_mod.html" title="Definition 8.3.2">Definition</a> <a href="" class="xref" data-knowl="./knowl/p-2299.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">congruent mod <span class="process-math">\(d\)</span><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_mod.html" title="Definition 8.3.2">Definition</a> <a href="" class="xref" data-knowl="./knowl/p-2539.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">connected</div>
 <div class="subindexitem">graph<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_connectedgraph.html" title="Definition 10.2.6">Definition</a></span>
@@ -684,14 +715,14 @@ window.MathJax = {
 </div>
 <div class="subindexitem">quantifier<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/B_universalerror.html" title="Assemblage: Invalid Arguments with Quantifiers">Assemblage</a></span>
 </div>
-<div class="indexitem">counterexample<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-725.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/B_counterexample.html" title="Assemblage: Counterexamples">Assemblage</a></span>
+<div class="indexitem">counterexample<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-864.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/B_counterexample.html" title="Assemblage: Counterexamples">Assemblage</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-d">
 <div class="indexitem">degree</div>
 <div class="subindexitem">of a vertex<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_degree.html" title="Definition 10.1.14">Definition</a></span>
 </div>
-<div class="indexitem">DeMorgan's Laws<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-240.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">DeMorgan's Laws<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-244.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">descendant</div>
 <div class="subindexitem">of a vertex<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-785.html" title="Item">Item</a></span>
@@ -719,25 +750,25 @@ window.MathJax = {
 </div>
 <div class="subindexitem">for a quantified statement<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/definition-13.html" title="Definition 3.1.1">Definition</a></span>
 </div>
-<div class="subindexitem">relation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-157.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">relation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-162.html" title="Paragraph">Paragraph</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-e">
-<div class="indexitem">edge<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2818.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/D_graphterms.html" title="Definition 10.1.2">Definition</a></span>
+<div class="indexitem">edge<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3058.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/D_graphterms.html" title="Definition 10.1.2">Definition</a></span>
 </div>
-<div class="subindexitem">adjacent<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2827.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">adjacent<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3067.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">parallel<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2822.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">parallel<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3062.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">empty graph<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2829.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">empty graph<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3069.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">empty set<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1563.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">empty set<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1803.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">proof<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/B_pfempty.html" title="Assemblage: Proving a Set is Empty">Assemblage</a></span>
 </div>
 <div class="indexitem">endpoints of an edge<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_graphterms.html" title="Definition 10.1.2">Definition</a></span>
 </div>
-<div class="indexitem">equivalence class<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2226.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">equivalence class<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2466.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">equivalence relation<span class="indexknowl">, <a href="equivalencerelations8-3.html" class="internal" title="Section 8.3: Equivalence Relations">Section</a> <a href="" class="xref" data-knowl="./knowl/D_equivrel.html" title="Definition 8.3.1">Definition</a></span>
 </div>
@@ -767,7 +798,7 @@ window.MathJax = {
 <div class="indexletter" id="indexletter-f">
 <div class="indexitem">factor<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-255.html" title="Item">Item</a></span>
 </div>
-<div class="indexitem">factorial<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_factorial.html" title="Definition 4.3.7">Definition</a> <a href="" class="xref" data-knowl="./knowl/p-1183.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">factorial<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_factorial.html" title="Definition 4.3.7">Definition</a> <a href="" class="xref" data-knowl="./knowl/p-1363.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">Fibonacci sequence<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/E_fibonaccidef.html" title="Example 5.5.3: The Fibonacci Sequence">Example</a></span>
 </div>
@@ -789,9 +820,9 @@ window.MathJax = {
 <div class="indexletter" id="indexletter-g">
 <div class="indexitem">geometric sequence<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_geomseq.html" title="Definition 5.6.3">Definition</a></span>
 </div>
-<div class="indexitem">geometric sum<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1262.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">geometric sum<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1442.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">graph<span class="indexknowl">, <a href="graphs10-1.html" class="internal" title="Section 10.1: Graphs">Section</a> <a href="" class="xref" data-knowl="./knowl/p-2818.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">graph<span class="indexknowl">, <a href="graphs10-1.html" class="internal" title="Section 10.1: Graphs">Section</a> <a href="" class="xref" data-knowl="./knowl/p-3058.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">circuit<span class="indexknowl">, <a href="pathscircuits10-2.html" class="internal" title="Section 10.2: Paths and Circuits">Section</a></span>
 </div>
@@ -821,7 +852,7 @@ window.MathJax = {
 <div class="indexitem">image<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_image.html" title="Definition 7.1.6">Definition</a></span>
 </div>
 <div class="indexitem">incident</div>
-<div class="subindexitem">edge<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2826.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">edge<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3066.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">inclusion-exclusion rule<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/T_inclusionexclusion.html" title="Theorem 9.3.2: Inclusion-Exclusion Rule">Theorem</a></span>
 </div>
@@ -833,19 +864,19 @@ window.MathJax = {
 </div>
 <div class="indexitem">integer<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-40.html" title="Item">Item</a></span>
 </div>
-<div class="subindexitem">remainder representation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-967.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">remainder representation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1110.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">internal vertex<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_leaf.html" title="Definition 10.3.7">Definition</a></span>
 </div>
 <div class="indexitem">intersection</div>
 <div class="subindexitem">of sets<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_setintersection.html" title="Definition 6.1.6">Definition</a></span>
 </div>
-<div class="indexitem">invalid argument<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_invalid.html" title="Definition 2.3.2">Definition</a> <a href="" class="xref" data-knowl="./knowl/p-633.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">invalid argument<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_invalid.html" title="Definition 2.3.2">Definition</a> <a href="" class="xref" data-knowl="./knowl/p-760.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">inverse</div>
 <div class="subindexitem">function<span class="indexknowl">, <a href="onetooneonto7-2.html" class="internal" title="Section 7.2: One-to-One, Onto, Inverse Functions">Section</a></span>
 </div>
-<div class="subindexitem">image<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1851.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">image<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2091.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">of conditional<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-114.html" title="Item">Item</a></span>
 </div>
@@ -855,11 +886,11 @@ window.MathJax = {
 </div>
 <div class="subindexitem">quantifier<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/B_universalerror.html" title="Assemblage: Invalid Arguments with Quantifiers">Assemblage</a></span>
 </div>
-<div class="indexitem">inverse function<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1974.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">inverse function<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2214.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">irrational number<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/definition-25.html" title="Definition 4.2.2">Definition</a></span>
 </div>
-<div class="indexitem">isolated vertex<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2828.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">isolated vertex<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3068.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">iteration<span class="indexknowl">, <a href="iteration5-6.html" class="internal" title="Section 5.6: Solving Recurrence Relations by Iteration">Section</a></span>
 </div>
@@ -872,19 +903,19 @@ window.MathJax = {
 <div class="indexitem">level</div>
 <div class="subindexitem">of vertex<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-779.html" title="Item">Item</a></span>
 </div>
-<div class="indexitem">logical argument<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-208.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">logical argument<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-212.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">logical equivalence<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_logequiv.html" title="Definition 2.1.10">Definition</a> <a href="" class="xref" data-knowl="./knowl/B_logicalequivalences.html" title="Assemblage: Summary of Logical Equivalences">Assemblage</a></span>
 </div>
-<div class="indexitem">logical statement<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-208.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">logical statement<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-212.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">loop<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2823.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">loop<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3063.html" title="Paragraph">Paragraph</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-m">
 <div class="indexitem">mathematical induction<span class="indexknowl">, <a href="induction5-2.html" class="internal" title="Section 5.2: Mathematical Induction">Section</a> <a href="moreinduction5-3.html" class="internal" title="Section 5.3: More Mathematical Induction">Section</a></span>
 </div>
-<div class="indexitem">modular arithmetic<span class="indexknowl">, <a href="modarith8-4.html" class="internal" title="Section 8.4: Modular Arithmetic">Section</a> <a href="" class="xref" data-knowl="./knowl/p-2333.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">modular arithmetic<span class="indexknowl">, <a href="modarith8-4.html" class="internal" title="Section 8.4: Modular Arithmetic">Section</a> <a href="" class="xref" data-knowl="./knowl/p-2573.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">modus ponens<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/B_commonvalid.html" title="Assemblage: Some Common Forms for Valid Arguments">Assemblage</a></span>
 </div>
@@ -907,7 +938,7 @@ window.MathJax = {
 </div>
 <div class="subindexitem">of conditional<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-111.html" title="Item 2">Item</a></span>
 </div>
-<div class="indexitem">null string<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2454.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">null string<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2694.html" title="Paragraph">Paragraph</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-o">
@@ -925,9 +956,9 @@ window.MathJax = {
 </div>
 </div>
 <div class="indexletter" id="indexletter-p">
-<div class="indexitem">pairwise disjoint sets<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1605.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">pairwise disjoint sets<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1845.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">parallel edges<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2822.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">parallel edges<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3062.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">parent</div>
 <div class="subindexitem">of a vertex<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-782.html" title="Item">Item</a></span>
@@ -944,24 +975,24 @@ window.MathJax = {
 </div>
 <div class="subindexitem">generalized<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/T_genpigeonhole.html" title="Theorem 9.4.4: Generalized Pigeonhole Principle">Theorem</a></span>
 </div>
-<div class="indexitem">power set<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_powerset.html" title="Definition 6.1.13">Definition</a> <a href="" class="xref" data-knowl="./knowl/p-1781.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">power set<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_powerset.html" title="Definition 6.1.13">Definition</a> <a href="" class="xref" data-knowl="./knowl/p-2021.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">predicate<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-396.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">predicate<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-489.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">preimage<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_preimage.html" title="Definition 7.1.7">Definition</a> <a href="" class="xref" data-knowl="./knowl/p-1851.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">preimage<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_preimage.html" title="Definition 7.1.7">Definition</a> <a href="" class="xref" data-knowl="./knowl/p-2091.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">premise<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/B_formargument.html" title="Assemblage: General Form of an Argument">Assemblage</a></span>
 </div>
 <div class="indexitem">prime<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/definition-22.html" title="Definition 4.1.4">Definition</a></span>
 </div>
 <div class="indexitem">prime factorization</div>
-<div class="subindexitem">standard form<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-899.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">standard form<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1041.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">probability<span class="indexknowl">, <a href="probability9-1.html" class="internal" title="Section 9.1: Probability">Section</a></span>
 </div>
 <div class="indexitem">product<span class="indexknowl">, <a href="sequences5-1.html" class="internal" title="Section 5.1: Sequences">Section</a></span>
 </div>
-<div class="indexitem">product notation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1175.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">product notation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1355.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">product of sets<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_prodofsets.html" title="Definition 1.2.6">Definition</a></span>
 </div>
@@ -990,9 +1021,9 @@ window.MathJax = {
 </div>
 <div class="subindexitem">universal<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-124.html" title="Item: Universal quantifier">Item</a></span>
 </div>
-<div class="indexitem">quotient<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-952.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">quotient<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1095.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">Quotient-Remainder Theorem<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1398.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/T_divisionalgorthm.html" title="Theorem 4.4.1: The Quotient-Remainder Theorem">Theorem</a></span>
+<div class="indexitem">Quotient-Remainder Theorem<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1605.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/T_divisionalgorthm.html" title="Theorem 4.4.1: The Quotient-Remainder Theorem">Theorem</a></span>
 </div>
 <div class="subindexitem">proof<span class="indexknowl">, <a href="stronginduction5-4.html" class="internal" title="Section 5.4: Strong Induction">Section</a></span>
 </div>
@@ -1004,7 +1035,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">real number<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-39.html" title="Item">Item</a></span>
 </div>
-<div class="indexitem">recurrence relation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1432.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">recurrence relation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1644.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">iteration<span class="indexknowl">, <a href="iteration5-6.html" class="internal" title="Section 5.6: Solving Recurrence Relations by Iteration">Section</a></span>
 </div>
@@ -1012,7 +1043,7 @@ window.MathJax = {
 </div>
 <div class="subindexitem">proof of explicit formula<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/B_pfexplictformula.html" title="Assemblage: Proving a Recursive Sequence Satisfies an Explicit Formula">Assemblage</a></span>
 </div>
-<div class="indexitem">recursively defined sequence<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1424.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">recursively defined sequence<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1636.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">reflexive<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-534.html" title="Item 1">Item</a></span>
 </div>
@@ -1020,9 +1051,9 @@ window.MathJax = {
 </div>
 <div class="indexitem">relation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/definition-4.html" title="Definition 1.3.1">Definition</a> <a href="relations8-1.html" class="internal" title="Section 8.1: Relations on Sets">Section</a> <a href="" class="xref" data-knowl="./knowl/D_relation.html" title="Definition 8.1.1">Definition</a> <a href="rstrelations8-2.html" class="internal" title="Section 8.2: Reflexive, Symmetric, Transitive Properties">Section</a></span>
 </div>
-<div class="subindexitem">codomain<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-157.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">codomain<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-162.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">domain<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-157.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">domain<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-162.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">equivalence<span class="indexknowl">, <a href="equivalencerelations8-3.html" class="internal" title="Section 8.3: Equivalence Relations">Section</a></span>
 </div>
@@ -1034,11 +1065,11 @@ window.MathJax = {
 </div>
 <div class="subindexitem">transitive<span class="indexknowl">, <a href="rstrelations8-2.html" class="internal" title="Section 8.2: Reflexive, Symmetric, Transitive Properties">Section</a></span>
 </div>
-<div class="indexitem">remainder<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-952.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">remainder<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1095.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">residue<span class="indexknowl">, <a href="modarith8-4.html" class="internal" title="Section 8.4: Modular Arithmetic">Section</a></span>
 </div>
-<div class="indexitem">rooted tree<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2999.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">rooted tree<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3239.html" title="Paragraph">Paragraph</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-s">
@@ -1054,17 +1085,17 @@ window.MathJax = {
 </div>
 <div class="subindexitem">geometric<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_geomseq.html" title="Definition 5.6.3">Definition</a></span>
 </div>
-<div class="subindexitem">index<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1140.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">index<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1320.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">initial term<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1140.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">initial term<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1320.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">recursive<span class="indexknowl">, <a href="recursion5-5.html" class="internal" title="Section 5.5: Defining Sequences Recursively">Section</a></span>
 </div>
 <div class="subindexitem">recursive formula proof<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/B_summaryrecursiveexplicit.html" title="Assemblage: Summary of Techniques for Sequences">Assemblage</a></span>
 </div>
-<div class="subindexitem">term<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1140.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">term<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1320.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">set<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-58.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">set<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-64.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">complement<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_setcomplement.html" title="Definition 6.1.10">Definition</a></span>
 </div>
@@ -1076,7 +1107,7 @@ window.MathJax = {
 </div>
 <div class="subindexitem">intersection<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_setintersection.html" title="Definition 6.1.6">Definition</a></span>
 </div>
-<div class="subindexitem">pairwise disjoint<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1605.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">pairwise disjoint<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1845.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">proof of equality<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/B_pfsetequality.html" title="Assemblage: Proving Set Equality">Assemblage</a></span>
 </div>
@@ -1084,7 +1115,7 @@ window.MathJax = {
 </div>
 <div class="subindexitem">union<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_setunion.html" title="Definition 6.1.4">Definition</a></span>
 </div>
-<div class="subindexitem">universal<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1563.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">universal<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1803.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">set roster notation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/E_roster.html" title="Example 1.2.1: Set roster notation">Example</a></span>
 </div>
@@ -1097,7 +1128,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">simple circuit<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-761.html" title="Item">Item</a></span>
 </div>
-<div class="indexitem">simple graph<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2846.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">simple graph<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3086.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">statement</div>
 <div class="subindexitem">existential<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_existstatement.html" title="Definition 3.1.7">Definition</a></span>
@@ -1106,11 +1137,11 @@ window.MathJax = {
 </div>
 <div class="subindexitem">universal conditional<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_univcondstate.html" title="Definition 3.1.9">Definition</a></span>
 </div>
-<div class="subindexitem">vacuously true<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-511.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">vacuously true<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-613.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">string<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2454.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">string<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2694.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">binary<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2454.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">binary<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2694.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">strong induction<span class="indexknowl">, <a href="stronginduction5-4.html" class="internal" title="Section 5.4: Strong Induction">Section</a> <a href="" class="xref" data-knowl="./knowl/B_strongind.html" title="Assemblage: Stong Induction">Assemblage</a></span>
 </div>
@@ -1130,10 +1161,10 @@ window.MathJax = {
 </div>
 <div class="indexitem">sum<span class="indexknowl">, <a href="sequences5-1.html" class="internal" title="Section 5.1: Sequences">Section</a></span>
 </div>
-<div class="subindexitem">closed form<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2783.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">closed form<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3023.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">summation</div>
-<div class="subindexitem">closed form<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1273.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">closed form<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1453.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">summation notation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/B_sumnotation.html" title="Assemblage: Summation Notation">Assemblage</a></span>
 </div>
@@ -1157,18 +1188,18 @@ window.MathJax = {
 </div>
 <div class="subindexitem">proof<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/B_pfRST.html" title="Assemblage: Proving Reflexive, Symmetric, Transitive Properties">Assemblage</a></span>
 </div>
-<div class="indexitem">transitive closure<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2127.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">transitive closure<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2367.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">tree<span class="indexknowl">, <a href="trees10-3.html" class="internal" title="Section 10.3: Trees">Section</a> <a href="" class="xref" data-knowl="./knowl/D_tree.html" title="Definition 10.3.2">Definition</a></span>
 </div>
 <div class="subindexitem">height<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-780.html" title="Item">Item</a></span>
 </div>
-<div class="subindexitem">rooted<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2999.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">rooted<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3239.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">truth set</div>
 <div class="subindexitem">for a predicate<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/definition-14.html" title="Definition 3.1.4">Definition</a></span>
 </div>
-<div class="indexitem">truth-table<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-215.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">truth-table<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-219.html" title="Paragraph">Paragraph</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-u">
@@ -1194,19 +1225,19 @@ window.MathJax = {
 </div>
 </div>
 <div class="indexletter" id="indexletter-v">
-<div class="indexitem">vacuously true<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-511.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">vacuously true<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-613.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">valid argument<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_valid.html" title="Definition 2.3.1">Definition</a> <a href="" class="xref" data-knowl="./knowl/p-633.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">valid argument<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/D_valid.html" title="Definition 2.3.1">Definition</a> <a href="" class="xref" data-knowl="./knowl/p-760.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">variable<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-11.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">Venn diagram<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/B_commnVenn.html" title="Assemblage: Venn Diagrams for Common Statements">Assemblage</a></span>
 </div>
-<div class="subindexitem">quantified argument<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-639.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">quantified argument<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-766.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">vertex<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2818.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/D_graphterms.html" title="Definition 10.1.2">Definition</a></span>
+<div class="indexitem">vertex<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3058.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/D_graphterms.html" title="Definition 10.1.2">Definition</a></span>
 </div>
-<div class="subindexitem">adjacent<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2824.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">adjacent<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3064.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">ancestor<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-784.html" title="Item">Item</a></span>
 </div>
@@ -1230,9 +1261,9 @@ window.MathJax = {
 </div>
 <div class="subindexitem">closed<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-759.html" title="Item">Item</a></span>
 </div>
-<div class="subindexitem">trivial<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2925.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">trivial<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-3165.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">well-defined function<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1885.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">well-defined function<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-2125.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">Well-Ordering Principle<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/T_wellordering.html" title="Theorem 5.4.3: Well-Ordering Principle">Theorem</a></span>
 </div>
@@ -1244,5 +1275,13 @@ window.MathJax = {
 <div id="ptx-page-footer">
 <a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12894193;
+var sc_invisible=1;
+var sc_security="e67c59eb";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12894193/0/e67c59eb/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
 </body>
 </html>

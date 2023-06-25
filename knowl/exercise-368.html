@@ -12,10 +12,53 @@
 </head>
 <body class="ignore-math">
 <article class="exercise exercise-like"><h4 class="heading">
-<span class="type">Reading Question</span><span class="space"> </span><span class="codenumber">7<span class="period">.</span></span>
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">5<span class="period">.</span></span>
 </h4>
-<div class="para">True or false:  If <span class="process-math">\(A\subseteq B\cup C\text{,}\)</span> then <span class="process-math">\(A\subseteq B\)</span> or <span class="process-math">\(A\subseteq C\text{.}\)</span>
+<div class="para logical">
+<div class="para">Supply a reason for each step in the algebraic proof of the statement: For all sets <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\text{,}\)</span>
 </div>
-<div class="solutions"><a href="" class="answer-knowl original" data-knowl="./knowl/answer-280-hidden.html" title="Answer 6.3.7.1"><span class="type">Answer</span><span class="period">.</span></a></div></article><span class="incontext"><a href="algebraicsets6-3.html#exercise-368" class="internal">in-context</a></span>
+<div class="displaymath process-math">
+\begin{equation*}
+(A\cup B)- (C-A)=A\cup(B-C).
+\end{equation*}
+</div>
+</div> <div class="para">
+<dfn class="terminology">Proof:</dfn> Suppose <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\)</span> are sets. Then</div> <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\((A\cup B)-(C-A)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=(A\cup B)\cap(C-A)^C\)</span></td>
+<td class="r m b0 r0 l0 t0 lines">by ___</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=(A\cup B)\cap(C\cap A^C)^C\)</span></td>
+<td class="r m b0 r0 l0 t0 lines">by ___</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=(A\cup B)\cap (A^C\cap C)^C\)</span></td>
+<td class="r m b0 r0 l0 t0 lines">by ___</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=(A\cup B)\cap ((A^C)^C\cup C^C)\)</span></td>
+<td class="r m b0 r0 l0 t0 lines">by ___</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=(A\cup B)\cap (A\cup C^C)\)</span></td>
+<td class="r m b0 r0 l0 t0 lines">by ___</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=A\cup( B\cap  C^C)\)</span></td>
+<td class="r m b0 r0 l0 t0 lines">by ___</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=A\cup( B-  C)\)</span></td>
+<td class="r m b0 r0 l0 t0 lines">by ___</td>
+</tr>
+</table></div></article><span class="incontext"><a href="algebraicsets6-3.html#exercise-368" class="internal">in-context</a></span>
 </body>
 </html>

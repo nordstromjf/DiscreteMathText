@@ -62,8 +62,39 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.0.0dev3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runtime.71ffd81c0faeb38b.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.e543e0dd19670ae2.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.1f1f63d2cda36a4d.css">
 </head>
-<body class="pretext book ignore-math">
+<body id="DiscreteMathText" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" href=""></a><div class="title-container">
 <h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
@@ -549,16 +580,16 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="conditional2-2"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">Conditional Statements</span>
 </h2>
-<div class="para" id="p-269">In this section we introduce a new connective.</div>
-<div class="para" id="p-270">A conditional statement, as we saw in <a href="variables1-1.html" class="internal" title="Section 1.1: Variables and Statements">Section 1.1</a>, has the form “if <span class="process-math">\(p\)</span> then <span class="process-math">\(q\text{.}\)</span>” We use the connective <span class="process-math">\(p\rightarrow q\)</span> for conditional statements.</div>
+<div class="para" id="p-316">In this section we introduce a new connective.</div>
+<div class="para" id="p-317">A conditional statement, as we saw in <a href="variables1-1.html" class="internal" title="Section 1.1: Variables and Statements">Section 1.1</a>, has the form “if <span class="process-math">\(p\)</span> then <span class="process-math">\(q\text{.}\)</span>” We use the connective <span class="process-math">\(p\rightarrow q\)</span> for conditional statements.</div>
 <article class="assemblage assemblage-like" id="B_condconnective"><h3 class="heading"><span class="title">Logical Connective: IF...THEN.</span></h3>
-<div class="para logical" id="p-271"><ul class="disc"><li id="li-109">
+<div class="para logical" id="p-318"><ul class="disc"><li id="li-109">
 <span class="heading"><span class="title">Conditional.</span></span><div class="para" id="p-derived-li-109"> IF THEN. Notation: <span class="process-math">\(p\rightarrow q\)</span>, read as “if <span class="process-math">\(p\)</span> then <span class="process-math">\(q\text{.}\)</span>”</div>
-</li></ul></div></article><div class="para" id="p-272">Before looking at the truth-table, we need to understand when an if...then... statement is true or false. This is actually trickier than it seems.</div>
+</li></ul></div></article><div class="para" id="p-319">Before looking at the truth-table, we need to understand when an if...then... statement is true or false. This is actually trickier than it seems.</div>
 <article class="example example-like" id="E_condstatement"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_condstatement"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Conditional Statement.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_condstatement"><article class="example example-like"> <div class="para" id="p-273">Suppose I say to you “If it rains tomorrow, then class is cancelled.” When would you accuse me of lying to you? For example, if it doesn't rain and we have class, would you have thought my statement false? No. Now, you might not think my statement is true, either. But remember, statements must be either true or false. So if it is not false, then it is true.</div> <div class="para" id="p-274">Now, what if it doesn't rain, but I cancel class anyway? Would I have lied? No, I didn't tell you I wouldn't cancel class. So, again, this would be a true statement.</div> <div class="para" id="p-275">The only time you could accuse me of having made a false statement is if it rains and we don't cancel class. If we think of “it rains tomorrow” as <span class="process-math">\(p\)</span> and “class is cancelled” as <span class="process-math">\(q\text{,}\)</span> then the only time the statement is false is when <span class="process-math">\(p\)</span> is true and <span class="process-math">\(q\)</span> is false.</div></article></div>
-<div class="para" id="p-276"><figure class="table table-like" id="T_ttconditional"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.2<span class="period">.</span></span><span class="space"> </span>Truth-table for <span class="process-math">\(p\rightarrow q\text{.}\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_condstatement"><article class="example example-like"> <div class="para" id="p-320">Suppose I say to you “If it rains tomorrow, then class is cancelled.” When would you accuse me of lying to you? For example, if it doesn't rain and we have class, would you have thought my statement false? No. Now, you might not think my statement is true, either. But remember, statements must be either true or false. So if it is not false, then it is true.</div> <div class="para" id="p-321">Now, what if it doesn't rain, but I cancel class anyway? Would I have lied? No, I didn't tell you I wouldn't cancel class. So, again, this would be a true statement.</div> <div class="para" id="p-322">The only time you could accuse me of having made a false statement is if it rains and we don't cancel class. If we think of “it rains tomorrow” as <span class="process-math">\(p\)</span> and “class is cancelled” as <span class="process-math">\(q\text{,}\)</span> then the only time the statement is false is when <span class="process-math">\(p\)</span> is true and <span class="process-math">\(q\)</span> is false.</div></article></div>
+<div class="para" id="p-323"><figure class="table table-like" id="T_ttconditional"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.2<span class="period">.</span></span><span class="space"> </span>Truth-table for <span class="process-math">\(p\rightarrow q\text{.}\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r1 l1 t1 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t1 lines"><span class="process-math">\(q\)</span></td>
@@ -585,39 +616,39 @@ window.MathJax = {
 <td class="c m b1 r1 l0 t0 lines">T</td>
 </tr>
 </table></div></figure></div>
-<div class="para" id="p-277">To better understand the truth or falsity of a conditional, let's look at another example.</div>
+<div class="para" id="p-324">To better understand the truth or falsity of a conditional, let's look at another example.</div>
 <article class="example example-like" id="E_mathcond"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_mathcond"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">A Mathematical Conditional Statement.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_mathcond"><article class="example example-like"> <div class="para" id="p-278">Consider the mathematical statement “If <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x^2&gt;4\)</span>”. Do you agree this is a true mathematical statement?</div> <div class="para" id="p-279">Let <span class="process-math">\(p\)</span> be <span class="process-math">\(x&gt;2\)</span> and <span class="process-math">\(q\)</span> be <span class="process-math">\(x^2&gt;4\text{.}\)</span> Consider all the cases of <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> being true or false.</div> <div class="para" id="p-280">For example, if <span class="process-math">\(x=5, x^2=25\text{,}\)</span> then we have the case where <span class="process-math">\(p\)</span> is true and <span class="process-math">\(q\)</span> is true.</div> <div class="para" id="p-281">If <span class="process-math">\(x=-5, x^2=25\text{,}\)</span> then we have the case where <span class="process-math">\(p\)</span> is false and <span class="process-math">\(q\)</span> is true. But remember, the original statement is still true!</div> <div class="para" id="p-282">If <span class="process-math">\(x=1, x^2=1\text{,}\)</span> then we have the case where <span class="process-math">\(p\)</span> is false and <span class="process-math">\(q\)</span> is false. But again, the original statement is still true.</div> <div class="para" id="p-283">It will be impossible to find an <span class="process-math">\(x\)</span> that makes <span class="process-math">\(x&gt;2\)</span> true and <span class="process-math">\(x^2&gt;4\)</span> false. Thus, we never have the case where the conditional is false.</div></article></div>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_mathcond"><article class="example example-like"> <div class="para" id="p-325">Consider the mathematical statement “If <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x^2&gt;4\)</span>”. Do you agree this is a true mathematical statement?</div> <div class="para" id="p-326">Let <span class="process-math">\(p\)</span> be <span class="process-math">\(x&gt;2\)</span> and <span class="process-math">\(q\)</span> be <span class="process-math">\(x^2&gt;4\text{.}\)</span> Consider all the cases of <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> being true or false.</div> <div class="para" id="p-327">For example, if <span class="process-math">\(x=5, x^2=25\text{,}\)</span> then we have the case where <span class="process-math">\(p\)</span> is true and <span class="process-math">\(q\)</span> is true.</div> <div class="para" id="p-328">If <span class="process-math">\(x=-5, x^2=25\text{,}\)</span> then we have the case where <span class="process-math">\(p\)</span> is false and <span class="process-math">\(q\)</span> is true. But remember, the original statement is still true!</div> <div class="para" id="p-329">If <span class="process-math">\(x=1, x^2=1\text{,}\)</span> then we have the case where <span class="process-math">\(p\)</span> is false and <span class="process-math">\(q\)</span> is false. But again, the original statement is still true.</div> <div class="para" id="p-330">It will be impossible to find an <span class="process-math">\(x\)</span> that makes <span class="process-math">\(x&gt;2\)</span> true and <span class="process-math">\(x^2&gt;4\)</span> false. Thus, we never have the case where the conditional is false.</div></article></div>
 <article class="activity project-like" id="activity-22"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-284">Give an example of a conditional statement, not one of the examples from above. Write in your own words why <span class="process-math">\(p\rightarrow q\)</span> must be true whenever <span class="process-math">\(p\)</span> is false.</div></article><div class="para" id="p-285">In a conditional statement <span class="process-math">\(p\rightarrow q\text{,}\)</span> we call <span class="process-math">\(p\)</span> the <dfn class="terminology">hypothesis</dfn>, and <span class="process-math">\(q\)</span> the <dfn class="terminology">conclusion</dfn>.</div>
+<div class="para" id="p-331">Give an example of a conditional statement, not one of the examples from above. Write in your own words why <span class="process-math">\(p\rightarrow q\)</span> must be true whenever <span class="process-math">\(p\)</span> is false.</div></article><div class="para" id="p-332">In a conditional statement <span class="process-math">\(p\rightarrow q\text{,}\)</span> we call <span class="process-math">\(p\)</span> the <dfn class="terminology">hypothesis</dfn>, and <span class="process-math">\(q\)</span> the <dfn class="terminology">conclusion</dfn>.</div>
 <article class="activity project-like" id="activity-23"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-286">Use a truth-table to show <span class="process-math">\(\sim(p \rightarrow q)\)</span> is logically equivalent to <span class="process-math">\(p\ \wedge\sim q\text{.}\)</span> This is the rule for negating an if...then. Like DeMorgan's Law, it is worth committing to memory.</div></article><article class="assemblage assemblage-like" id="B_equivconditional"><h3 class="heading"><span class="title">Logical Equivalences for Conditionals.</span></h3>
-<div class="para logical" id="p-287"><ol class="decimal">
+<div class="para" id="p-333">Use a truth-table to show <span class="process-math">\(\sim(p \rightarrow q)\)</span> is logically equivalent to <span class="process-math">\(p\ \wedge\sim q\text{.}\)</span> This is the rule for negating an if...then. Like DeMorgan's Law, it is worth committing to memory.</div></article><article class="assemblage assemblage-like" id="B_equivconditional"><h3 class="heading"><span class="title">Logical Equivalences for Conditionals.</span></h3>
+<div class="para logical" id="p-334"><ol class="decimal">
 <li id="li-110"><div class="para" id="p-derived-li-110"><span class="process-math">\(\displaystyle p\rightarrow q\equiv \sim p\ \vee q\)</span></div></li>
 <li id="li-111"><div class="para" id="p-derived-li-111"><span class="process-math">\(\sim(p\rightarrow q)\equiv p\ \wedge \sim q\)</span></div></li>
-</ol></div></article><div class="para" id="p-288">The second equivalence is the <dfn class="terminology">negation of the conditional</dfn>. It is going to be really important that we understand that the negation of a conditional is <em class="emphasis">not</em> a conditional itself.</div>
+</ol></div></article><div class="para" id="p-335">The second equivalence is the <dfn class="terminology">negation of the conditional</dfn>. It is going to be really important that we understand that the negation of a conditional is <em class="emphasis">not</em> a conditional itself.</div>
 <article class="activity project-like" id="activity-24"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-289">Give the truth-table for <span class="process-math">\(q\rightarrow p\text{.}\)</span> Is it equivalent to <span class="process-math">\(p\rightarrow q\text{?}\)</span> The statement <span class="process-math">\(q\rightarrow p\)</span> is the <dfn class="terminology">converse</dfn> of <span class="process-math">\(p\rightarrow q\text{.}\)</span>
+<div class="para" id="p-336">Give the truth-table for <span class="process-math">\(q\rightarrow p\text{.}\)</span> Is it equivalent to <span class="process-math">\(p\rightarrow q\text{?}\)</span> The statement <span class="process-math">\(q\rightarrow p\)</span> is the <dfn class="terminology">converse</dfn> of <span class="process-math">\(p\rightarrow q\text{.}\)</span>
 </div></article><article class="activity project-like" id="activity-25"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-290">Give the truth-table for <span class="process-math">\(\sim q\rightarrow \sim p\text{.}\)</span> Is it equivalent to <span class="process-math">\(p\rightarrow q\text{?}\)</span> The statement <span class="process-math">\(\sim q\rightarrow \sim p\)</span> is the <dfn class="terminology">contrapositive</dfn> of <span class="process-math">\(p\rightarrow q\text{.}\)</span>
+<div class="para" id="p-337">Give the truth-table for <span class="process-math">\(\sim q\rightarrow \sim p\text{.}\)</span> Is it equivalent to <span class="process-math">\(p\rightarrow q\text{?}\)</span> The statement <span class="process-math">\(\sim q\rightarrow \sim p\)</span> is the <dfn class="terminology">contrapositive</dfn> of <span class="process-math">\(p\rightarrow q\text{.}\)</span>
 </div></article><article class="activity project-like" id="activity-26"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-291">What is the contrapositive of <span class="process-math">\(q\rightarrow p\text{?}\)</span> This is also called the <dfn class="terminology">inverse</dfn> of <span class="process-math">\(p\rightarrow q\text{.}\)</span>
-</div></article><div class="para" id="p-292">We summarize the previous activities in the following definition.</div>
+<div class="para" id="p-338">What is the contrapositive of <span class="process-math">\(q\rightarrow p\text{?}\)</span> This is also called the <dfn class="terminology">inverse</dfn> of <span class="process-math">\(p\rightarrow q\text{.}\)</span>
+</div></article><div class="para" id="p-339">We summarize the previous activities in the following definition.</div>
 <article class="definition definition-like" id="definition-9"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-293">
+<div class="para logical" id="p-340">
 <div class="para">A conditional statement <span class="process-math">\(p\rightarrow q\)</span> has</div>
 <ul class="disc">
 <li id="li-112"><div class="para" id="p-derived-li-112">
@@ -632,21 +663,21 @@ window.MathJax = {
 </ul>
 </div></article><article class="example example-like" id="E_contrpositive"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_contrpositive"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Contrapositive and Converse.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_contrpositive"><article class="example example-like"> <div class="para" id="p-294">Consider the statement: If <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x^2&gt;4\text{.}\)</span> What is the contrapositive of this statement? What is the converse?</div> <div class="para" id="p-295">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_contrpositive"><article class="example example-like"> <div class="para" id="p-341">Consider the statement: If <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x^2&gt;4\text{.}\)</span> What is the contrapositive of this statement? What is the converse?</div> <div class="para" id="p-342">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-34" id="answer-34"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-34"><div class="answer solution-like">Contrapositive: If <span class="process-math">\(x^2\leq 4\)</span> then <span class="process-math">\(x\leq 2\text{;}\)</span> Converse: If <span class="process-math">\(x^2&gt;4\)</span> then <span class="process-math">\(x&gt;2\text{.}\)</span>
 </div></div>
 </div></article></div>
 <article class="activity project-like" id="activity-27"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-296">Give the truth-table for <span class="process-math">\((p \rightarrow q) \wedge (q\rightarrow p)\text{.}\)</span>
-</div></article><div class="para" id="p-297">The statement <span class="process-math">\((p \rightarrow q) \wedge (q\rightarrow p)\)</span> is useful in mathematics, but it is not very concise. We can simplify this statement by introducing an additional logical connective.</div>
+<div class="para" id="p-343">Give the truth-table for <span class="process-math">\((p \rightarrow q) \wedge (q\rightarrow p)\text{.}\)</span>
+</div></article><div class="para" id="p-344">The statement <span class="process-math">\((p \rightarrow q) \wedge (q\rightarrow p)\)</span> is useful in mathematics, but it is not very concise. We can simplify this statement by introducing an additional logical connective.</div>
 <article class="assemblage assemblage-like" id="B_bicondconn"><h3 class="heading"><span class="title">Logical Connective: IF AND ONLY IF.</span></h3>
-<div class="para logical" id="p-298"><ul class="disc"><li id="li-115">
+<div class="para logical" id="p-345"><ul class="disc"><li id="li-115">
 <span class="heading"><span class="title">Biconditional.</span></span><div class="para" id="p-derived-li-115"> IF AND ONLY IF. Notation: <span class="process-math">\(p\leftrightarrow q\text{,}\)</span> read as "<span class="process-math">\(p\)</span> if and only if <span class="process-math">\(q\text{.}\)</span>"</div>
-</li></ul></div></article><div class="para" id="p-299">The biconditional is really just the combination of two conditionals: <span class="process-math">\(p\rightarrow q\)</span> and <span class="process-math">\(q\rightarrow p\text{.}\)</span> In particular, <span class="process-math">\(p\leftrightarrow q\equiv (p\rightarrow q)\wedge (q\rightarrow p)\text{.}\)</span>
+</li></ul></div></article><div class="para" id="p-346">The biconditional is really just the combination of two conditionals: <span class="process-math">\(p\rightarrow q\)</span> and <span class="process-math">\(q\rightarrow p\text{.}\)</span> In particular, <span class="process-math">\(p\leftrightarrow q\equiv (p\rightarrow q)\wedge (q\rightarrow p)\text{.}\)</span>
 </div>
-<div class="para" id="p-300"><figure class="table table-like" id="T_ttbicond"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.6<span class="period">.</span></span><span class="space"> </span>Truth-table for <span class="process-math">\(p\leftrightarrow q\text{.}\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="p-347"><figure class="table table-like" id="T_ttbicond"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.6<span class="period">.</span></span><span class="space"> </span>Truth-table for <span class="process-math">\(p\leftrightarrow q\text{.}\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r1 l1 t1 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t1 lines"><span class="process-math">\(q\)</span></td>
@@ -676,16 +707,16 @@ window.MathJax = {
 <article class="activity project-like" id="activity-28"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.7</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-301">Explain, in your own words, how to decide when <span class="process-math">\(p \leftrightarrow q\)</span> is true or false.</div></article><article class="activity project-like" id="activity-29"><h3 class="heading">
+<div class="para" id="p-348">Explain, in your own words, how to decide when <span class="process-math">\(p \leftrightarrow q\)</span> is true or false.</div></article><article class="activity project-like" id="activity-29"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.8</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-302">We read the biconditional <span class="process-math">\(p \leftrightarrow q\)</span> as “<span class="process-math">\(p\)</span> if and only if <span class="process-math">\(q\text{.}\)</span>” Determine which of the two statements <span class="process-math">\(p \rightarrow q\)</span> and <span class="process-math">\(q\rightarrow p\)</span> is equivalent to “<span class="process-math">\(p\)</span> if <span class="process-math">\(q\)</span>” and which is “<span class="process-math">\(p\)</span> only if <span class="process-math">\(q\text{.}\)</span>” Think about when each statement should be true (or false).</div></article><div class="para logical" id="p-303">
+<div class="para" id="p-349">We read the biconditional <span class="process-math">\(p \leftrightarrow q\)</span> as “<span class="process-math">\(p\)</span> if and only if <span class="process-math">\(q\text{.}\)</span>” Determine which of the two statements <span class="process-math">\(p \rightarrow q\)</span> and <span class="process-math">\(q\rightarrow p\)</span> is equivalent to “<span class="process-math">\(p\)</span> if <span class="process-math">\(q\)</span>” and which is “<span class="process-math">\(p\)</span> only if <span class="process-math">\(q\text{.}\)</span>” Think about when each statement should be true (or false).</div></article><div class="para logical" id="p-350">
 <div class="para">In mathematics we might see statements such as “<span class="process-math">\(p\)</span> is necessary for <span class="process-math">\(q\)</span>” or “<span class="process-math">\(p\)</span> is sufficient for <span class="process-math">\(q\)</span>”. These are really conditional statements.</div>
 <ul class="disc">
-<li id="li-116"><div class="para" id="p-304">
+<li id="li-116"><div class="para" id="p-351">
 <span class="process-math">\(p\)</span> is <dfn class="terminology">sufficient</dfn> for <span class="process-math">\(q\)</span> means <span class="process-math">\(p\rightarrow q\text{.}\)</span>
 </div></li>
-<li id="li-117"><div class="para" id="p-305">
+<li id="li-117"><div class="para" id="p-352">
 <span class="process-math">\(p\)</span> is <dfn class="terminology">necessary</dfn> for <span class="process-math">\(q\)</span> means <span class="process-math">\(\sim p\rightarrow \sim q\text{,}\)</span> which is equivalent to <span class="process-math">\(q\rightarrow p\text{.}\)</span>
 </div></li>
 </ul>
@@ -695,43 +726,21 @@ window.MathJax = {
 <section class="reading-questions" id="reading-questions-5"><h3 class="heading hide-type">
 <span class="type">Reading Questions</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-53"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-306">What is the negation of <span class="process-math">\(p\rightarrow q\text{?}\)</span> Check your answer with a truth-table.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original has-tabular" data-refid="hk-answer-35" id="answer-35"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-35"><div class="answer solution-like">
-<div class="para" id="p-307"><span class="process-math">\(p\ \wedge \sim q\)</span></div> <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="c m b2 r1 l1 t1 lines"><span class="process-math">\(p\)</span></td>
-<td class="c m b2 r2 l0 t1 lines"><span class="process-math">\(q\)</span></td>
-<td class="c m b2 r1 l0 t1 lines"><span class="process-math">\(p\ \wedge \sim q\)</span></td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">T</td>
-<td class="c m b1 r2 l0 t0 lines">T</td>
-<td class="c m b1 r1 l0 t0 lines">F</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">T</td>
-<td class="c m b1 r2 l0 t0 lines">F</td>
-<td class="c m b1 r1 l0 t0 lines">T</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">F</td>
-<td class="c m b1 r2 l0 t0 lines">T</td>
-<td class="c m b1 r1 l0 t0 lines">F</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">F</td>
-<td class="c m b1 r2 l0 t0 lines">F</td>
-<td class="c m b1 r1 l0 t0 lines">F</td>
-</tr>
-</table></div>
-</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-54"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-308">Give the truth-table for <span class="process-math">\(\sim p\rightarrow \sim q\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original has-tabular" data-refid="hk-answer-36" id="answer-36"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-36"><div class="answer solution-like"><div class="tabular-box natural-width"><table class="tabular">
+<article class="exercise exercise-like" id="DMT_cond_CYU_negcond"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="DMT_cond_CYU_negcond" data-multipleanswers="false" data-random="">
+<div class="para" id="p-353">What is the negation of <span class="process-math">\(p\rightarrow q\text{?}\)</span> Check your answer with a truth-table.</div>
+<li data-component="answer" id="DMT_cond_CYU_negcond_opt_a"><div class="para" id="p-354"><span class="process-math">\(\sim p\vee q\)</span></div></li>
+<li data-component="feedback" id="DMT_cond_CYU_negcond_opt_a">
+<li data-component="answer" id="DMT_cond_CYU_negcond_opt_b" data-correct=""><div class="para" id="p-355"><span class="process-math">\(p\ \wedge \sim q\)</span></div></li>
+<li data-component="feedback" id="DMT_cond_CYU_negcond_opt_b">
+<li data-component="answer" id="DMT_cond_CYU_negcond_opt_c"><div class="para" id="p-356"><span class="process-math">\(\sim p\ \rightarrow \sim q\)</span></div></li>
+<li data-component="feedback" id="DMT_cond_CYU_negcond_opt_c">
+<li data-component="answer" id="DMT_cond_CYU_negcond_opt_d"><div class="para" id="p-357"><span class="process-math">\(\sim q\ \rightarrow \sim p\)</span></div></li>
+<li data-component="feedback" id="DMT_cond_CYU_negcond_opt_d">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_cond_CYU_ttnotpthennotq"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><div data-component="fillintheblank" data-question_label="" id="DMT_cond_CYU_ttnotpthennotq">
+<div class="para" id="p-359">Fill in the truth-table for <span class="process-math">\(\sim p\rightarrow \sim q\text{.}\)</span>
+</div> <div class="para" id="p-360"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r1 l1 t1 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t1 lines"><span class="process-math">\(q\)</span></td>
@@ -740,31 +749,29 @@ window.MathJax = {
 <tr>
 <td class="c m b1 r1 l1 t0 lines">T</td>
 <td class="c m b1 r2 l0 t0 lines">T</td>
-<td class="c m b1 r1 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines"><input type="text" placeholder="Text" size="1"></td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">T</td>
 <td class="c m b1 r2 l0 t0 lines">F</td>
-<td class="c m b1 r1 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines"><input type="text" placeholder="Text" size="1"></td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">F</td>
 <td class="c m b1 r2 l0 t0 lines">T</td>
-<td class="c m b1 r1 l0 t0 lines">F</td>
+<td class="c m b1 r1 l0 t0 lines"><input type="text" placeholder="Text" size="1"></td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">F</td>
 <td class="c m b1 r2 l0 t0 lines">F</td>
-<td class="c m b1 r1 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines"><input type="text" placeholder="Text" size="1"></td>
 </tr>
-</table></div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-55"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>Using your truth-table from the previous question, explain why <span class="process-math">\(\sim p\rightarrow \sim q\)</span> is NOT the negation of <span class="process-math">\(p\rightarrow q\text{.}\)</span><div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-37" id="answer-37"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-37"><div class="answer solution-like">The truth-tables are not the same.</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-56"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-309">Give the truth-table for <span class="process-math">\(\sim p \leftrightarrow q\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original has-tabular" data-refid="hk-answer-38" id="answer-38"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-38"><div class="answer solution-like"><div class="tabular-box natural-width"><table class="tabular">
+</table></div></div>
+<script type="application/json">[[{"regex": "^\\s*T\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-361\">Correct<\/div>"}, {"regex": "^\\s*F\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-362\">Try again.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-363\">Use T or F.<\/div>"}], [{"regex": "^\\s*T\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-364\">Correct<\/div>"}, {"regex": "^\\s*F\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-365\">Try again.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-366\">Use T or F.<\/div>"}], [{"regex": "^\\s*F\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-367\">Correct<\/div>"}, {"regex": "^\\s*T\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-368\">Try again.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-369\">Use T or F.<\/div>"}], [{"regex": "^\\s*T\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-370\">Correct<\/div>"}, {"regex": "^\\s*F\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-371\">Try again.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-372\">Use T or F.<\/div>"}]]</script>
+</div></div></div></article><article class="exercise exercise-like" id="DMT_cond_CYU_notnegcond"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>Using the truth-table for <span class="process-math">\(\sim p\rightarrow \sim q\text{,}\)</span> explain why <span class="process-math">\(\sim p\rightarrow \sim q\)</span> is <em class="emphasis">not</em> the negation of <span class="process-math">\(p\rightarrow q\text{.}\)</span></article><article class="exercise exercise-like" id="DMT_cond_CYU_ttiff"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><div data-component="fillintheblank" data-question_label="" id="DMT_cond_CYU_ttiff">
+<div class="para" id="p-373">Fill in the truth-table for <span class="process-math">\(\sim p \leftrightarrow q\text{.}\)</span>
+</div> <div class="para" id="p-374"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r1 l1 t1 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t1 lines"><span class="process-math">\(q\)</span></td>
@@ -773,48 +780,49 @@ window.MathJax = {
 <tr>
 <td class="c m b1 r1 l1 t0 lines">T</td>
 <td class="c m b1 r2 l0 t0 lines">T</td>
-<td class="c m b1 r1 l0 t0 lines">F</td>
+<td class="c m b1 r1 l0 t0 lines"><input type="text" placeholder="Text" size="1"></td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">T</td>
 <td class="c m b1 r2 l0 t0 lines">F</td>
-<td class="c m b1 r1 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines"><input type="text" placeholder="Text" size="1"></td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">F</td>
 <td class="c m b1 r2 l0 t0 lines">T</td>
-<td class="c m b1 r1 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines"><input type="text" placeholder="Text" size="1"></td>
 </tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">F</td>
 <td class="c m b1 r2 l0 t0 lines">F</td>
-<td class="c m b1 r1 l0 t0 lines">F</td>
+<td class="c m b1 r1 l0 t0 lines"><input type="text" placeholder="Text" size="1"></td>
 </tr>
-</table></div></div></div>
-</div></article></section><section class="exercises" id="exercises-5"><h3 class="heading hide-type">
+</table></div></div>
+<script type="application/json">[[{"regex": "^\\s*F\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-375\">Correct<\/div>"}, {"regex": "^\\s*T\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-376\">Try again.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-377\">Use T or F.<\/div>"}], [{"regex": "^\\s*T\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-378\">Correct<\/div>"}, {"regex": "^\\s*F\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-379\">Try again.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-380\">Use T or F.<\/div>"}], [{"regex": "^\\s*T\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-381\">Correct<\/div>"}, {"regex": "^\\s*F\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-382\">Try again.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-383\">Use T or F.<\/div>"}], [{"regex": "^\\s*F\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-384\">Correct<\/div>"}, {"regex": "^\\s*T\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-385\">Try again.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-386\">Use T or F.<\/div>"}]]</script>
+</div></div></div></article></section><section class="exercises" id="exercises-5"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="exercise-57"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-310">Give the truth-table for <span class="process-math">\((p\ \wedge \sim q) \rightarrow r\text{.}\)</span>
+<div class="para" id="p-387">Give the truth-table for <span class="process-math">\((p\ \wedge \sim q) \rightarrow r\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-58"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-311">Give the truth-table for <span class="process-math">\((p\rightarrow r) \leftrightarrow (q\rightarrow r)\text{.}\)</span>
+<div class="para" id="p-388">Give the truth-table for <span class="process-math">\((p\rightarrow r) \leftrightarrow (q\rightarrow r)\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-59"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-312">Use a truth truth-table to show the logical equivalence <span class="process-math">\((p \rightarrow q)\equiv (\sim p\ \vee q)\text{.}\)</span>
+<div class="para" id="p-389">Use a truth truth-table to show the logical equivalence <span class="process-math">\((p \rightarrow q)\equiv (\sim p\ \vee q)\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-60"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-313">Use a truth truth-table to show the logical equivalence <span class="process-math">\(\sim (p \rightarrow q)\equiv (p\ \wedge \sim q)\text{.}\)</span>
+<div class="para" id="p-390">Use a truth truth-table to show the logical equivalence <span class="process-math">\(\sim (p \rightarrow q)\equiv (p\ \wedge \sim q)\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-61"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-314">Write each of the following statements in symbolic form and determine whether they are logically equivalent. Include a truth-table and clearly state your conclusion.</div> <div class="para" id="p-315">If you paid full price, you didn’t buy it at Powell’s Books.</div> <div class="para" id="p-316">You didn’t buy it at Powell’s Books or you paid full price.</div></article><article class="exercise exercise-like" id="exercise-62"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-317">Write each of the following statements in symbolic form and determine whether they are logically equivalent. Include a truth-table and clearly state your conclusion.</div> <div class="para" id="p-318">If 2 is a factor of <span class="process-math">\(n\)</span> and 3 is a factor of <span class="process-math">\(n\text{,}\)</span> then 6 is a factor of <span class="process-math">\(n\text{.}\)</span>
-</div> <div class="para" id="p-319">2 is not a factor of <span class="process-math">\(n\)</span> or 3 is not a factor of <span class="process-math">\(n\)</span> or 6 is a factor of <span class="process-math">\(n\text{.}\)</span>
+<div class="para" id="p-391">Write each of the following statements in symbolic form and determine whether they are logically equivalent. Include a truth-table and clearly state your conclusion.</div> <div class="para" id="p-392">If you paid full price, you didn’t buy it at Powell’s Books.</div> <div class="para" id="p-393">You didn’t buy it at Powell’s Books or you paid full price.</div></article><article class="exercise exercise-like" id="exercise-62"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="p-394">Write each of the following statements in symbolic form and determine whether they are logically equivalent. Include a truth-table and clearly state your conclusion.</div> <div class="para" id="p-395">If 2 is a factor of <span class="process-math">\(n\)</span> and 3 is a factor of <span class="process-math">\(n\text{,}\)</span> then 6 is a factor of <span class="process-math">\(n\text{.}\)</span>
+</div> <div class="para" id="p-396">2 is not a factor of <span class="process-math">\(n\)</span> or 3 is not a factor of <span class="process-math">\(n\)</span> or 6 is a factor of <span class="process-math">\(n\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-63"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-320">Write the negation (in English) of each of the following statements.</div> <ol class="lower-alpha">
-<li id="li-118"><div class="para" id="p-321">If <span class="process-math">\(P\)</span> is a square, then <span class="process-math">\(P\)</span> is a rectangle.</div></li>
-<li id="li-119"><div class="para" id="p-322">If the decimal expansion of <span class="process-math">\(r\)</span> is terminating, then <span class="process-math">\(r\)</span> is rational.</div></li>
-<li id="li-120"><div class="para" id="p-323">If <span class="process-math">\(x\)</span> is nonnegative, then <span class="process-math">\(x\)</span> is positive or <span class="process-math">\(x\)</span> is 0.</div></li>
-<li id="li-121"><div class="para" id="p-324">If <span class="process-math">\(n\)</span> is divisible by 6, then <span class="process-math">\(n\)</span> is divisible by 2 and <span class="process-math">\(n\)</span> is divisible by 3.</div></li>
+<div class="para" id="p-397">Write the negation (in English) of each of the following statements.</div> <ol class="lower-alpha">
+<li id="li-118"><div class="para" id="p-398">If <span class="process-math">\(P\)</span> is a square, then <span class="process-math">\(P\)</span> is a rectangle.</div></li>
+<li id="li-119"><div class="para" id="p-399">If the decimal expansion of <span class="process-math">\(r\)</span> is terminating, then <span class="process-math">\(r\)</span> is rational.</div></li>
+<li id="li-120"><div class="para" id="p-400">If <span class="process-math">\(x\)</span> is nonnegative, then <span class="process-math">\(x\)</span> is positive or <span class="process-math">\(x\)</span> is 0.</div></li>
+<li id="li-121"><div class="para" id="p-401">If <span class="process-math">\(n\)</span> is divisible by 6, then <span class="process-math">\(n\)</span> is divisible by 2 and <span class="process-math">\(n\)</span> is divisible by 3.</div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-64"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="p-325">Use a truth-table to show that the conditional statement <span class="process-math">\(p\rightarrow q\)</span> is not equivalent to its inverse.</div></article><article class="exercise exercise-like" id="exercise-65"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<div class="para" id="p-326">If statements <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> are logically equivalent, then the statement <span class="process-math">\(P\leftrightarrow Q\)</span> is a tautology. Conversely, if <span class="process-math">\(P\leftrightarrow Q\)</span> is a tautology, then <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> are logically equivalent. Convert the logical equivalence <span class="process-math">\(p\rightarrow (q\rightarrow r)\equiv (p\ \wedge q)\rightarrow r\)</span> to a statement using <span class="process-math">\(\leftrightarrow\)</span> and use a truth-table to verify the statement is a tautology.</div></article></section></section></div>
+<div class="para" id="p-402">Use a truth-table to show that the conditional statement <span class="process-math">\(p\rightarrow q\)</span> is not equivalent to its inverse.</div></article><article class="exercise exercise-like" id="exercise-65"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="para" id="p-403">If statements <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> are logically equivalent, then the statement <span class="process-math">\(P\leftrightarrow Q\)</span> is a tautology. Conversely, if <span class="process-math">\(P\leftrightarrow Q\)</span> is a tautology, then <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> are logically equivalent. Convert the logical equivalence <span class="process-math">\(p\rightarrow (q\rightarrow r)\equiv (p\ \wedge q)\rightarrow r\)</span> to a statement using <span class="process-math">\(\leftrightarrow\)</span> and use a truth-table to verify the statement is a tautology.</div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="logical_form2-1.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="arguments2-3.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
@@ -822,5 +830,13 @@ window.MathJax = {
 <div id="ptx-page-footer">
 <a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12894193;
+var sc_invisible=1;
+var sc_security="e67c59eb";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12894193/0/e67c59eb/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
 </body>
 </html>

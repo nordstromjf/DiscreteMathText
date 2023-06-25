@@ -62,8 +62,39 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.0.0dev3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runtime.71ffd81c0faeb38b.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.e543e0dd19670ae2.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.1f1f63d2cda36a4d.css">
 </head>
-<body class="pretext book ignore-math">
+<body id="DiscreteMathText" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" href=""></a><div class="title-container">
 <h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
@@ -549,11 +580,11 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="morecontradiction4-6"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.6</span> <span class="title">More Proof by Contradiction and Contrapositive</span>
 </h2>
-<div class="para" id="p-1082">In this section we will use contradiction and contrapositive to prove two classical theorems in mathematics.</div>
-<div class="para" id="p-1083">In <a href="" class="xref" data-knowl="./knowl/A_n2evenneven.html" title="Activity 4.5.2">Activity 4.5.2</a> you used contrapositive to prove if <span class="process-math">\(n^2\)</span> is even, then <span class="process-math">\(n\)</span> is even. This statement is an important step in our first big theorem. We state it here formally as a lemma.</div>
+<div class="para" id="p-1255">In this section we will use contradiction and contrapositive to prove two classical theorems in mathematics.</div>
+<div class="para" id="p-1256">In <a href="" class="xref" data-knowl="./knowl/A_n2evenneven.html" title="Activity 4.5.2">Activity 4.5.2</a> you used contrapositive to prove if <span class="process-math">\(n^2\)</span> is even, then <span class="process-math">\(n\)</span> is even. This statement is an important step in our first big theorem. We state it here formally as a lemma.</div>
 <article class="lemma theorem-like" id="L_nsquaredeven"><h3 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.6.1</span><span class="period">.</span>
-</h3>Let <span class="process-math">\(n\in \mathbb{Z}\text{.}\)</span> If <span class="process-math">\(n^2\)</span> is even, then <span class="process-math">\(n\)</span> is even.</article><article class="hiddenproof" id="proof-14"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-14"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-14"><article class="hiddenproof"><div class="para logical" id="p-1084">
+</h3>Let <span class="process-math">\(n\in \mathbb{Z}\text{.}\)</span> If <span class="process-math">\(n^2\)</span> is even, then <span class="process-math">\(n\)</span> is even.</article><article class="hiddenproof" id="proof-14"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-14"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-14"><article class="hiddenproof"><div class="para logical" id="p-1257">
 <div class="para">We will prove this by contrapositive. Assume <span class="process-math">\(n\)</span> is odd. Show <span class="process-math">\(n^2\)</span> is odd. Since <span class="process-math">\(n\)</span> is odd, <span class="process-math">\(n=2k+1\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -565,8 +596,8 @@ n^2=(2k+1)^2=4k^2+4k+1=2(2k^2+2k)+1.
 <article class="theorem theorem-like" id="T_roottwoirrational"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.6.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1085">
-<span class="process-math">\(\sqrt{2}\)</span> is irrational.</div></article><article class="hiddenproof" id="proof-15"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-15"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-15"><article class="hiddenproof"><div class="para" id="p-1086">We will prove this by contradiction. Assume <span class="process-math">\(\sqrt{2}\)</span> is rational. Then <span class="process-math">\(\sqrt{2}=\frac{p}{q}\)</span> with <span class="process-math">\(p, q\in\mathbb{Z}, q\neq 0\text{.}\)</span> We will additionally assume <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> have no common factors. [Note, this additional assumption just makes the proof simpler. You should convince yourself that it is reasonable to add this assumption--that given any fraction, we can always reduce so <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> have no common factors.]</div> <div class="para logical" id="p-1087">
+<div class="para" id="p-1258">
+<span class="process-math">\(\sqrt{2}\)</span> is irrational.</div></article><article class="hiddenproof" id="proof-15"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-15"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-15"><article class="hiddenproof"><div class="para" id="p-1259">We will prove this by contradiction. Assume <span class="process-math">\(\sqrt{2}\)</span> is rational. Then <span class="process-math">\(\sqrt{2}=\frac{p}{q}\)</span> with <span class="process-math">\(p, q\in\mathbb{Z}, q\neq 0\text{.}\)</span> We will additionally assume <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> have no common factors. [Note, this additional assumption just makes the proof simpler. You should convince yourself that it is reasonable to add this assumption--that given any fraction, we can always reduce so <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> have no common factors.]</div> <div class="para logical" id="p-1260">
 <div class="para">Now, using algebra on the equations,</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/L_nsquaredeven.html" id="md-7">
 \begin{align*}
@@ -576,7 +607,7 @@ n^2=(2k+1)^2=4k^2+4k+1=2(2k^2+2k)+1.
 \end{align*}
 </div>
 <div class="para">Since <span class="process-math">\(q^2\in\mathbb{Z}\text{,}\)</span> <span class="process-math">\(p^2\)</span> must be even. Then by <a href="" class="xref" data-knowl="./knowl/L_nsquaredeven.html" title="Lemma 4.6.1">Lemma 4.6.1</a>, <span class="process-math">\(p\)</span> must be even.</div>
-</div> <div class="para logical" id="p-1088">
+</div> <div class="para logical" id="p-1261">
 <div class="para">Since <span class="process-math">\(p\)</span> is even, <span class="process-math">\(p=2k\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span> Thus, we can substitute into the above equation.</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/L_nsquaredeven.html" id="md-8">
 \begin{align*}
@@ -586,39 +617,39 @@ q^2&amp;=2k^2.
 \end{align*}
 </div>
 <div class="para">Since <span class="process-math">\(k^2\in\mathbb{Z}\text{,}\)</span> <span class="process-math">\(q^2\)</span> must be even. Then by <a href="" class="xref" data-knowl="./knowl/L_nsquaredeven.html" title="Lemma 4.6.1">Lemma 4.6.1</a>, <span class="process-math">\(q\)</span> must be even.</div>
-</div> <div class="para" id="p-1089">But now we have <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> both even, which means they both have a common factor of 2. This contradicts our assumption that <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> have no common factors. Since we reached a contradiction, we can conclude that <span class="process-math">\(\sqrt{2}\)</span> is irrational.</div></article></div>
-<div class="para" id="p-1090">Make sure you can read through the above proof and follow from one step to the next.</div>
+</div> <div class="para" id="p-1262">But now we have <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> both even, which means they both have a common factor of 2. This contradicts our assumption that <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> have no common factors. Since we reached a contradiction, we can conclude that <span class="process-math">\(\sqrt{2}\)</span> is irrational.</div></article></div>
+<div class="para" id="p-1263">Make sure you can read through the above proof and follow from one step to the next.</div>
 <article class="activity project-like" id="A_squarediv3"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.6.1</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-37"><div class="para" id="p-1091">In <a href="" class="xref" data-knowl="./knowl/L_nsquaredeven.html" title="Lemma 4.6.1">Lemma 4.6.1</a> and <a href="" class="xref" data-knowl="./knowl/A_n2evenneven.html" title="Activity 4.5.2">Activity 4.5.2</a>, we proved if <span class="process-math">\(n^2\)</span> is even then <span class="process-math">\(n\)</span> is even. Now suppose you want to prove if <span class="process-math">\(n^2\)</span> is divisible by 3 then <span class="process-math">\(n\)</span> is divisible by 3.</div></div>
+<div class="introduction" id="introduction-37"><div class="para" id="p-1264">In <a href="" class="xref" data-knowl="./knowl/L_nsquaredeven.html" title="Lemma 4.6.1">Lemma 4.6.1</a> and <a href="" class="xref" data-knowl="./knowl/A_n2evenneven.html" title="Activity 4.5.2">Activity 4.5.2</a>, we proved if <span class="process-math">\(n^2\)</span> is even then <span class="process-math">\(n\)</span> is even. Now suppose you want to prove if <span class="process-math">\(n^2\)</span> is divisible by 3 then <span class="process-math">\(n\)</span> is divisible by 3.</div></div>
 <article class="task exercise-like" id="task-115"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-1092">To prove the statement by contrapositive, what should you assume?</div></article><article class="task exercise-like" id="task-116"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-1093">To prove the statement by contrapositive, what should you show?</div></article><article class="task exercise-like" id="task-117"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-1094">The problem with now giving a direct proof of the contrapositive, is that we need to know what we mean by “<span class="process-math">\(n\)</span> is not divisible by 3.” Recall the Quotient-Remainder Theorem, <a href="" class="xref" data-knowl="./knowl/T_divisionalgorthm.html" title="Theorem 4.4.1: The Quotient-Remainder Theorem">Theorem 4.4.1</a>. If <span class="process-math">\(n\)</span> is not divisible by 3, what are the possible forms for <span class="process-math">\(n\text{?}\)</span>
+<div class="para" id="p-1265">To prove the statement by contrapositive, what should you assume?</div></article><article class="task exercise-like" id="task-116"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-1266">To prove the statement by contrapositive, what should you show?</div></article><article class="task exercise-like" id="task-117"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-1267">The problem with now giving a direct proof of the contrapositive, is that we need to know what we mean by “<span class="process-math">\(n\)</span> is not divisible by 3.” Recall the Quotient-Remainder Theorem, <a href="" class="xref" data-knowl="./knowl/T_divisionalgorthm.html" title="Theorem 4.4.1: The Quotient-Remainder Theorem">Theorem 4.4.1</a>. If <span class="process-math">\(n\)</span> is not divisible by 3, what are the possible forms for <span class="process-math">\(n\text{?}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-11" id="hint-11"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-11"><div class="hint solution-like"><div class="para" id="p-1095">Think of the forms for <span class="process-math">\(n=3q+r\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-11" id="hint-11"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-11"><div class="hint solution-like"><div class="para" id="p-1268">Think of the forms for <span class="process-math">\(n=3q+r\text{.}\)</span>
 </div></div></div>
 </div></article><article class="task exercise-like" id="task-118"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="p-1096">Now write a proof by cases using the cases for <span class="process-math">\(n\)</span> from (c) to show if <span class="process-math">\(n\)</span> is not divisible by 3, then <span class="process-math">\(n^2\)</span> is not divisible by 3.</div></article></article><div class="para" id="p-1097">Our second classical theorem is to prove there are infinitely many prime numbers. We previously proved there are infinitely many integers. In that proof, if we had a biggest integer, <span class="process-math">\(N\text{,}\)</span> we were able to construct an integer that was greater than <span class="process-math">\(N\text{,}\)</span> namely <span class="process-math">\(N+1\text{.}\)</span> However, primes are not that nice. If you were to list out several prime numbers, it would be impossible to find a pattern for the “next” prime. Sometimes primes are close together, like 17 and 19, and sometimes they are far apart. In fact, it is possible to prove that we can find a list of <span class="process-math">\(n\)</span> consecutive integers where none of the consecutive integers are prime for any positive integer <span class="process-math">\(n\text{.}\)</span> This means there are arbitrarily long sequences of consecutive integers with no primes, or there are primes that are arbitrarily far apart.</div>
-<div class="para" id="p-1098">First we need to understand a bit more about divisibilty with primes.</div>
+<div class="para" id="p-1269">Now write a proof by cases using the cases for <span class="process-math">\(n\)</span> from (c) to show if <span class="process-math">\(n\)</span> is not divisible by 3, then <span class="process-math">\(n^2\)</span> is not divisible by 3.</div></article></article><div class="para" id="p-1270">Our second classical theorem is to prove there are infinitely many prime numbers. We previously proved there are infinitely many integers. In that proof, if we had a biggest integer, <span class="process-math">\(N\text{,}\)</span> we were able to construct an integer that was greater than <span class="process-math">\(N\text{,}\)</span> namely <span class="process-math">\(N+1\text{.}\)</span> However, primes are not that nice. If you were to list out several prime numbers, it would be impossible to find a pattern for the “next” prime. Sometimes primes are close together, like 17 and 19, and sometimes they are far apart. In fact, it is possible to prove that we can find a list of <span class="process-math">\(n\)</span> consecutive integers where none of the consecutive integers are prime for any positive integer <span class="process-math">\(n\text{.}\)</span> This means there are arbitrarily long sequences of consecutive integers with no primes, or there are primes that are arbitrarily far apart.</div>
+<div class="para" id="p-1271">First we need to understand a bit more about divisibilty with primes.</div>
 <article class="activity project-like" id="A_divprimes"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.6.2</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-38"><div class="para" id="p-1099">Consider the statement: For all <span class="process-math">\(a\in \mathbb{Z}\)</span> and primes <span class="process-math">\(p\text{,}\)</span> if <span class="process-math">\(p\mid a\)</span> then <span class="process-math">\(p \nmid (a+1)\text{.}\)</span>
+<div class="introduction" id="introduction-38"><div class="para" id="p-1272">Consider the statement: For all <span class="process-math">\(a\in \mathbb{Z}\)</span> and primes <span class="process-math">\(p\text{,}\)</span> if <span class="process-math">\(p\mid a\)</span> then <span class="process-math">\(p \nmid (a+1)\text{.}\)</span>
 </div></div>
 <article class="task exercise-like" id="task-119"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-1100">Write the contrapositive of the statement.</div></article><article class="task exercise-like" id="task-120"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-1101">Write the negation of the statement.</div></article><article class="task exercise-like" id="task-121"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-1102">Based on the contrapositive and the negation, which seem easier to use in a proof?</div></article><article class="task exercise-like" id="task-122"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="p-1103">Assume <span class="process-math">\(p\mid a\)</span> and <span class="process-math">\(p \mid (a+1)\text{.}\)</span> Can you find a contradiction?</div></article><article class="task exercise-like" id="task-123"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="p-1104">If you were able to find a contradiction, try to write a careful proof by contradiction for the statement.</div></article></article><div class="para" id="p-1105">The statement in <a href="" class="xref" data-knowl="./knowl/A_divprimes.html" title="Activity 4.6.2">Activity 4.6.2</a> is an important lemma for proving there are infinitely many primes.</div>
+<div class="para" id="p-1273">Write the contrapositive of the statement.</div></article><article class="task exercise-like" id="task-120"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-1274">Write the negation of the statement.</div></article><article class="task exercise-like" id="task-121"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-1275">Based on the contrapositive and the negation, which seem easier to use in a proof?</div></article><article class="task exercise-like" id="task-122"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="p-1276">Assume <span class="process-math">\(p\mid a\)</span> and <span class="process-math">\(p \mid (a+1)\text{.}\)</span> Can you find a contradiction?</div></article><article class="task exercise-like" id="task-123"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="p-1277">If you were able to find a contradiction, try to write a careful proof by contradiction for the statement.</div></article></article><div class="para" id="p-1278">The statement in <a href="" class="xref" data-knowl="./knowl/A_divprimes.html" title="Activity 4.6.2">Activity 4.6.2</a> is an important lemma for proving there are infinitely many primes.</div>
 <article class="lemma theorem-like" id="L_primedivplus1"><h3 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.6.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1106">For all <span class="process-math">\(n\in\mathbb{Z}\)</span> and all primes <span class="process-math">\(p\text{,}\)</span> if <span class="process-math">\(p\mid n\)</span> then <span class="process-math">\(p\nmid n+1\text{.}\)</span>
-</div></article><article class="hiddenproof" id="proof-16"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-16"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-16"><article class="hiddenproof"><div class="para logical" id="p-1107">
+<div class="para" id="p-1279">For all <span class="process-math">\(n\in\mathbb{Z}\)</span> and all primes <span class="process-math">\(p\text{,}\)</span> if <span class="process-math">\(p\mid n\)</span> then <span class="process-math">\(p\nmid n+1\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-16"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-16"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-16"><article class="hiddenproof"><div class="para logical" id="p-1280">
 <div class="para">We will prove this by contradiction. Let <span class="process-math">\(n\in\mathbb{Z}\text{,}\)</span> <span class="process-math">\(p\)</span> prime. Assume <span class="process-math">\(p\mid n\)</span> and <span class="process-math">\(p\mid n+1\text{.}\)</span> Since <span class="process-math">\(p\mid n\text{,}\)</span> <span class="process-math">\(n=pk\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span> Since <span class="process-math">\(p\mid n+1\text{,}\)</span> <span class="process-math">\(n+1=pj\)</span> for some <span class="process-math">\(j\in \mathbb{Z}\text{.}\)</span> Thus,</div>
 <div class="displaymath process-math" id="md-9">
 \begin{align*}
@@ -632,80 +663,91 @@ pk+1&amp;=pj\\
 <article class="theorem theorem-like" id="T_infmanyprimes"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.6.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1108">There are infinitely many primes.</div></article><article class="hiddenproof" id="proof-17"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-17"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-17"><article class="hiddenproof"><div class="para" id="p-1109">Assume there are finitely many primes. Since there are finitely many, we can list them all, say, <span class="process-math">\(p_1, p_2, \ldots, p_n\text{.}\)</span> Now let <span class="process-math">\(N=p_1\cdot p_2\cdot p_3\cdots p_n\text{,}\)</span> the product of all the primes. Consider <span class="process-math">\(N+1\text{.}\)</span> We know <span class="process-math">\(p_i\mid N\)</span> for each prime <span class="process-math">\(p_i\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/L_primedivplus1.html" title="Lemma 4.6.3">Lemma 4.6.3</a>, <span class="process-math">\(p_i\nmid N+1\text{.}\)</span> This means <span class="process-math">\(N+1\)</span> is an integer greater than 1 with no prime divisor, which contradicts <a href="" class="xref" data-knowl="./knowl/T_divbyprime.html" title="Theorem 4.3.5">Theorem 4.3.5</a>.</div></article></div>
+<div class="para" id="p-1281">There are infinitely many primes.</div></article><article class="hiddenproof" id="proof-17"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-17"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-17"><article class="hiddenproof"><div class="para" id="p-1282">Assume there are finitely many primes. Since there are finitely many, we can list them all, say, <span class="process-math">\(p_1, p_2, \ldots, p_n\text{.}\)</span> Now let <span class="process-math">\(N=p_1\cdot p_2\cdot p_3\cdots p_n\text{,}\)</span> the product of all the primes. Consider <span class="process-math">\(N+1\text{.}\)</span> We know <span class="process-math">\(p_i\mid N\)</span> for each prime <span class="process-math">\(p_i\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/L_primedivplus1.html" title="Lemma 4.6.3">Lemma 4.6.3</a>, <span class="process-math">\(p_i\nmid N+1\text{.}\)</span> This means <span class="process-math">\(N+1\)</span> is an integer greater than 1 with no prime divisor, which contradicts <a href="" class="xref" data-knowl="./knowl/T_divbyprime.html" title="Theorem 4.3.5">Theorem 4.3.5</a>.</div></article></div>
 <section class="reading-questions" id="reading-questions-16"><h3 class="heading hide-type">
 <span class="type">Reading Questions</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-218"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1110">Let <span class="process-math">\(n\in\mathbb{Z}\text{.}\)</span> Give the contrapositive for the statement: if <span class="process-math">\(3\mid n^2\text{,}\)</span> then <span class="process-math">\(3 \mid n\text{.}\)</span>
+<article class="exercise exercise-like" id="DMT_morecont_CYU_conpos3div"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-1283">Let <span class="process-math">\(n\in\mathbb{Z}\text{.}\)</span> Give the contrapositive for the statement: if <span class="process-math">\(3\mid n^2\text{,}\)</span> then <span class="process-math">\(3 \mid n\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="DMT_morecont_CYU_cases3ndiv"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-1285">Suppose you are given that <span class="process-math">\(3\nmid n\text{.}\)</span> Use the Quotient-Remainder Theorem (<a href="" class="xref" data-knowl="./knowl/T_divisionalgorthm.html" title="Theorem 4.4.1: The Quotient-Remainder Theorem">Theorem 4.4.1</a>) to list the possible cases for <span class="process-math">\(n\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-172" id="answer-172"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-172"><div class="answer solution-like"><div class="para" id="p-1111">If <span class="process-math">\(3\nmid n\)</span> then <span class="process-math">\(3\nmid n^2\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-12" id="hint-12"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-12"><div class="hint solution-like"><div class="para" id="p-1286">What are the possible values for the remainder, <span class="process-math">\(r\text{?}\)</span>
 </div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-219"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-1112">Suppose you are given that <span class="process-math">\(3\nmid n\text{.}\)</span> Use the Quotient-Remainder Theorem (<a href="" class="xref" data-knowl="./knowl/T_divisionalgorthm.html" title="Theorem 4.4.1: The Quotient-Remainder Theorem">Theorem 4.4.1</a>) to list the possible cases for <span class="process-math">\(n\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="DMT_morecont_CYU_case3qp1"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-1288">If <span class="process-math">\(n=3q+1\)</span> for some <span class="process-math">\(q\in \mathbb{Z}\text{,}\)</span> show <span class="process-math">\(3\nmid n^2\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-173" id="answer-173"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-173"><div class="answer solution-like"><div class="para" id="p-1113">We know from the Quotient-Remainder Theorem, <span class="process-math">\(n=3q+r\text{,}\)</span> with <span class="process-math">\(r=0, 1, 2\text{.}\)</span> Since <span class="process-math">\(3\nmid n\)</span> the only possible forms are <span class="process-math">\(n=3q+1, n=3q+2\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-13" id="hint-13"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-13"><div class="hint solution-like"><div class="para" id="p-1289">Multiply out <span class="process-math">\(n^2=(3q+1)^2\text{.}\)</span>
 </div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-220"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-1114">If <span class="process-math">\(n=3q+1\)</span> for some <span class="process-math">\(q\in \mathbb{Z}\text{,}\)</span> show <span class="process-math">\(3\nmid n^2\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="DMT_morecont_CYU_case3qp2"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="p-1291">If <span class="process-math">\(n=3q+2\)</span> for some <span class="process-math">\(q\in \mathbb{Z}\text{,}\)</span> show <span class="process-math">\(3\nmid n^2\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-174" id="answer-174"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-174"><div class="answer solution-like"><div class="para" id="p-1115">
-<span class="process-math">\(n^2=(3q+1)^2=9q^2+6q+1=3(3q^2+2q)+1\text{.}\)</span> Since <span class="process-math">\(n^2\)</span> has remainder 1, <span class="process-math">\(3\nmid n^2\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-14" id="hint-14"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-14"><div class="hint solution-like"><div class="para" id="p-1292">Multiply out <span class="process-math">\(n^2=(3q+2)^2\text{.}\)</span>
 </div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-221"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-1116">If <span class="process-math">\(n=3q+2\)</span> for some <span class="process-math">\(q\in \mathbb{Z}\text{,}\)</span> show <span class="process-math">\(3\nmid n^2\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="DMT_morecont_CYU_sqrtnirr"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_morecont_CYU_sqrtnirr">
+<div class="para" id="p-1294">True or false: for every <span class="process-math">\(n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(\sqrt{n}\)</span> is irrational.</div>
+<li data-component="answer" id="DMT_morecont_CYU_sqrtnirr_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="DMT_morecont_CYU_sqrtnirr_opt_t"><div class="para" id="p-1295">
+<span class="process-math">\(\sqrt{4}=2\)</span> is rational.</div></li>
+<li data-component="answer" id="DMT_morecont_CYU_sqrtnirr_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="DMT_morecont_CYU_sqrtnirr_opt_f"><div class="para" id="p-1295">
+<span class="process-math">\(\sqrt{4}=2\)</span> is rational.</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_morecont_CYU_4divn2"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_morecont_CYU_4divn2">
+<div class="para" id="p-1297">True or false: if <span class="process-math">\(4\mid n^2\text{,}\)</span> then <span class="process-math">\(4\mid n\text{.}\)</span>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-175" id="answer-175"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-175"><div class="answer solution-like"><div class="para" id="p-1117">
-<span class="process-math">\(n^2=(3q+2)^2=9q^2+12q+4=3(3q^2+4q+1)+1\text{.}\)</span> Since <span class="process-math">\(n^2\)</span> has remainder 1, <span class="process-math">\(3\nmid n^2\text{.}\)</span>
-</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-222"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-1118">True or false: for every <span class="process-math">\(n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(\sqrt{n}\)</span> is irrational.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-176" id="answer-176"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-176"><div class="answer solution-like"><div class="para" id="p-1119">False. <span class="process-math">\(\sqrt{4}=2\)</span> is rational.</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-223"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-1120">True or false: if <span class="process-math">\(4\mid n^2\text{,}\)</span> then <span class="process-math">\(4\mid n\text{.}\)</span>
+<li data-component="answer" id="DMT_morecont_CYU_4divn2_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="DMT_morecont_CYU_4divn2_opt_t"><div class="para" id="p-1298">Try <span class="process-math">\(n=2\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="DMT_morecont_CYU_4divn2_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="DMT_morecont_CYU_4divn2_opt_f"><div class="para" id="p-1298">Try <span class="process-math">\(n=2\text{.}\)</span>
+</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_morecont_CYU_ndivnmp1"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_morecont_CYU_ndivnmp1">
+<div class="para" id="p-1300">True or false: for all <span class="process-math">\(n, m\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n\mid m\text{,}\)</span> then <span class="process-math">\(n\nmid m+1\text{.}\)</span>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-177" id="answer-177"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-177"><div class="answer solution-like"><div class="para" id="p-1121">False. Try <span class="process-math">\(n=2\text{.}\)</span>
-</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-224"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-1122">True or false: for all <span class="process-math">\(n, m\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n\mid m\text{,}\)</span> then <span class="process-math">\(n\nmid m+1\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-178" id="answer-178"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-178"><div class="answer solution-like"><div class="para" id="p-1123">False. Try <span class="process-math">\(n=1\text{.}\)</span>
-</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-225"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="p-1124">True or false: for all <span class="process-math">\(n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n!+1\)</span> is prime.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-179" id="answer-179"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-179"><div class="answer solution-like"><div class="para" id="p-1125">False. Try <span class="process-math">\(n=5\text{.}\)</span>
-</div></div></div>
-</div></article></section><section class="exercises" id="exercises-16"><h3 class="heading hide-type">
+<li data-component="answer" id="DMT_morecont_CYU_ndivnmp1_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="DMT_morecont_CYU_ndivnmp1_opt_t"><div class="para" id="p-1301">Try <span class="process-math">\(n=1\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="DMT_morecont_CYU_ndivnmp1_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="DMT_morecont_CYU_ndivnmp1_opt_f"><div class="para" id="p-1301">Try <span class="process-math">\(n=1\text{.}\)</span>
+</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_morecont_CYU_nfacp1prm"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_morecont_CYU_nfacp1prm">
+<div class="para" id="p-1303">True or false: for all <span class="process-math">\(n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n!+1\)</span> is prime.</div>
+<li data-component="answer" id="DMT_morecont_CYU_nfacp1prm_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="DMT_morecont_CYU_nfacp1prm_opt_t"><div class="para" id="p-1304">Try <span class="process-math">\(n=5\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="DMT_morecont_CYU_nfacp1prm_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="DMT_morecont_CYU_nfacp1prm_opt_f"><div class="para" id="p-1304">Try <span class="process-math">\(n=5\text{.}\)</span>
+</div></li>
+</ul></div></div></article></section><section class="exercises" id="exercises-16"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="exercise-226"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1126">Prove or disprove <span class="process-math">\(\sqrt{4}\)</span> is irrational.</div></article><article class="exercise exercise-like" id="exercise-227"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-1127">Prove or disprove the difference of any two irrational numbers is irrational.</div></article><article class="exercise exercise-like" id="exercise-228"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-1128">Prove or disprove if <span class="process-math">\(r\)</span> is any rational number and <span class="process-math">\(s\)</span> is any irrational number, then <span class="process-math">\(r/s\)</span> is irrational.</div></article><article class="exercise exercise-like" id="exercise-229"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-1129">Prove or disprove the product of any two irrational numbers is irrational.</div></article><article class="exercise exercise-like" id="exercise-230"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-1130">Give an example to show that if <span class="process-math">\(d\)</span> is not prime and <span class="process-math">\(n^2\)</span> is divisible by <span class="process-math">\(d\text{,}\)</span> then <span class="process-math">\(n\)</span> need not be divisible by <span class="process-math">\(d\text{.}\)</span>
+<div class="para" id="p-1306">Prove or disprove <span class="process-math">\(\sqrt{4}\)</span> is irrational.</div></article><article class="exercise exercise-like" id="exercise-227"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-1307">Prove or disprove the difference of any two irrational numbers is irrational.</div></article><article class="exercise exercise-like" id="exercise-228"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-1308">Prove or disprove if <span class="process-math">\(r\)</span> is any rational number and <span class="process-math">\(s\)</span> is any irrational number, then <span class="process-math">\(r/s\)</span> is irrational.</div></article><article class="exercise exercise-like" id="exercise-229"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="p-1309">Prove or disprove the product of any two irrational numbers is irrational.</div></article><article class="exercise exercise-like" id="exercise-230"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="p-1310">Give an example to show that if <span class="process-math">\(d\)</span> is not prime and <span class="process-math">\(n^2\)</span> is divisible by <span class="process-math">\(d\text{,}\)</span> then <span class="process-math">\(n\)</span> need not be divisible by <span class="process-math">\(d\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-231"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para logical" id="p-1131">
+<div class="para logical" id="p-1311">
 <div class="para">Adapt the proofs of  <a href="" class="xref" data-knowl="./knowl/L_nsquaredeven.html" title="Lemma 4.6.1">Lemma 4.6.1</a> and <a href="" class="xref" data-knowl="./knowl/T_roottwoirrational.html" title="Theorem 4.6.2">Theorem 4.6.2</a> to prove the followng statements.</div>
 <ol class="lower-alpha">
-<li id="li-297"><div class="para" id="p-1132">Prove that for all integers <span class="process-math">\(a\text{,}\)</span> if <span class="process-math">\(a^3\)</span> is even then <span class="process-math">\(a\)</span> is even.</div></li>
-<li id="li-298"><div class="para" id="p-1133">Prove that <span class="process-math">\(\sqrt[3]{2}\)</span> is irrational.</div></li>
+<li id="li-297"><div class="para" id="p-1312">Prove that for all integers <span class="process-math">\(a\text{,}\)</span> if <span class="process-math">\(a^3\)</span> is even then <span class="process-math">\(a\)</span> is even.</div></li>
+<li id="li-298"><div class="para" id="p-1313">Prove that <span class="process-math">\(\sqrt[3]{2}\)</span> is irrational.</div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-12" id="hint-12"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-12"><div class="hint solution-like">For (b), adapt the steps in the proof that <span class="process-math">\(\sqrt{2}\)</span> is irrational to <span class="process-math">\(\sqrt[3]{2}\)</span> and use (a).</div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-15" id="hint-15"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-15"><div class="hint solution-like">For (b), adapt the steps in the proof that <span class="process-math">\(\sqrt{2}\)</span> is irrational to <span class="process-math">\(\sqrt[3]{2}\)</span> and use (a).</div></div>
 </div></article><article class="exercise exercise-like" id="exercise-232"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-1134">Prove <span class="process-math">\(\sqrt{3}\)</span> is irrational.</div>
+<div class="para" id="p-1314">Prove <span class="process-math">\(\sqrt{3}\)</span> is irrational.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-13" id="hint-13"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-13"><div class="hint solution-like">You might find <a href="" class="xref" data-knowl="./knowl/A_squarediv3.html" title="Activity 4.6.1">Activity 4.6.1</a> very helpful.</div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-16" id="hint-16"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-16"><div class="hint solution-like">You might find <a href="" class="xref" data-knowl="./knowl/A_squarediv3.html" title="Activity 4.6.1">Activity 4.6.1</a> very helpful.</div></div>
 </div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="contradiction4-5.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="chapter5.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
@@ -714,5 +756,13 @@ pk+1&amp;=pj\\
 <div id="ptx-page-footer">
 <a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12894193;
+var sc_invisible=1;
+var sc_security="e67c59eb";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12894193/0/e67c59eb/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
 </body>
 </html>

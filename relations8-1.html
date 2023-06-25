@@ -62,8 +62,39 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.0.0dev3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runtime.71ffd81c0faeb38b.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.e543e0dd19670ae2.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.1f1f63d2cda36a4d.css">
 </head>
-<body class="pretext book ignore-math">
+<body id="DiscreteMathText" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" href=""></a><div class="title-container">
 <h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
@@ -549,18 +580,18 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="relations8-1"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">8.1</span> <span class="title">Relations on Sets</span>
 </h2>
-<div class="para" id="p-2029">We first saw relations in <a href="lang_relations1-3.html" class="internal" title="Section 1.3: Introduction to Relations and Functions">Section 1.3</a>. In this section we revisit the definition, look at several examples, and connect the idea of a function to a relation.</div>
+<div class="para" id="p-2269">We first saw relations in <a href="lang_relations1-3.html" class="internal" title="Section 1.3: Introduction to Relations and Functions">Section 1.3</a>. In this section we revisit the definition, look at several examples, and connect the idea of a function to a relation.</div>
 <article class="definition definition-like" id="D_relation"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.1.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-2030">A <dfn class="terminology">relation</dfn>, <span class="process-math">\(R\text{,}\)</span> on <span class="process-math">\(A\times B\text{,}\)</span> is a set of ordered pairs in <span class="process-math">\(A\times B\text{.}\)</span>
-</div></article><div class="para" id="p-2031">Simply put, a relation is just a subset, <span class="process-math">\(R\text{,}\)</span> of <span class="process-math">\(A\times B\text{.}\)</span>
+<div class="para" id="p-2270">A <dfn class="terminology">relation</dfn>, <span class="process-math">\(R\text{,}\)</span> on <span class="process-math">\(A\times B\text{,}\)</span> is a set of ordered pairs in <span class="process-math">\(A\times B\text{.}\)</span>
+</div></article><div class="para" id="p-2271">Simply put, a relation is just a subset, <span class="process-math">\(R\text{,}\)</span> of <span class="process-math">\(A\times B\text{.}\)</span>
 </div>
-<div class="para" id="p-2032">We often use the notation <span class="process-math">\(x R y\)</span> to mean “<span class="process-math">\(x\)</span> is related to <span class="process-math">\(y\text{.}\)</span>” In particular, <span class="process-math">\((x, y)\in R\)</span> if and only if <span class="process-math">\(x R y\text{.}\)</span>
+<div class="para" id="p-2272">We often use the notation <span class="process-math">\(x R y\)</span> to mean “<span class="process-math">\(x\)</span> is related to <span class="process-math">\(y\text{.}\)</span>” In particular, <span class="process-math">\((x, y)\in R\)</span> if and only if <span class="process-math">\(x R y\text{.}\)</span>
 </div>
 <article class="example example-like" id="E_relationsasset"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_relationsasset"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Relation Defined by a Set.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_relationsasset"><article class="example example-like"> <div class="para logical" id="p-2033">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_relationsasset"><article class="example example-like"> <div class="para logical" id="p-2273">
 <div class="para">Let <span class="process-math">\(A=\{1, 2, 3, 4\}\text{,}\)</span> <span class="process-math">\(B=\{1, 3, 5\}\)</span> define the relation on <span class="process-math">\(A\times B\)</span> by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -571,20 +602,20 @@ R=\{(1, 1), (1, 5), (3, 5), (2, 1), (4, 3)\}.
 </div></article></div>
 <article class="example example-like" id="E_lessthan"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_lessthan"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Relation Defined by Less Than.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_lessthan"><article class="example example-like"> <div class="para" id="p-2034">We can also define relations with familiar mathematical relationships.</div> <div class="para logical" id="p-2035">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_lessthan"><article class="example example-like"> <div class="para" id="p-2274">We can also define relations with familiar mathematical relationships.</div> <div class="para logical" id="p-2275">
 <div class="para">Let <span class="process-math">\(A=\{1, 2, 3, 4\}\text{,}\)</span> <span class="process-math">\(B=\{1, 3, 5\}\)</span> define the relation on <span class="process-math">\(A\times B\)</span> by</div>
 <div class="displaymath process-math">
 \begin{equation*}
 x R y \Leftrightarrow x&lt; y.
 \end{equation*}
 </div>
-</div> <div class="para" id="p-2036">Find the set of ordered pairs for <span class="process-math">\(R\text{.}\)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-310" id="answer-310"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-310"><div class="answer solution-like"><span class="process-math">\(R=\{(1, 3), (1, 5), (2, 3), (2, 5), (3, 5), (4, 5)\}\)</span></div></div></article></div>
-<div class="para" id="p-2037">As with functions, we can draw an arrow diagram from <span class="process-math">\(A\)</span> to <span class="process-math">\(B\)</span> representing the relationship. We have an arrow from <span class="process-math">\(a\)</span> to <span class="process-math">\(b\)</span> if <span class="process-math">\(aRb\text{,}\)</span> or <span class="process-math">\((a, b)\in R\text{.}\)</span>
+</div> <div class="para" id="p-2276">Find the set of ordered pairs for <span class="process-math">\(R\text{.}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-302" id="answer-302"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-302"><div class="answer solution-like"><span class="process-math">\(R=\{(1, 3), (1, 5), (2, 3), (2, 5), (3, 5), (4, 5)\}\)</span></div></div></article></div>
+<div class="para" id="p-2277">As with functions, we can draw an arrow diagram from <span class="process-math">\(A\)</span> to <span class="process-math">\(B\)</span> representing the relationship. We have an arrow from <span class="process-math">\(a\)</span> to <span class="process-math">\(b\)</span> if <span class="process-math">\(aRb\text{,}\)</span> or <span class="process-math">\((a, b)\in R\text{.}\)</span>
 </div>
-<div class="para" id="p-2038">The arrow diagram for the relation “a&lt; b”, given in <a href="" class="xref" data-knowl="./knowl/E_relationsasset.html" title="Example 8.1.2: Relation Defined by a Set">Example 8.1.2</a> is given in the following figure.</div>
+<div class="para" id="p-2278">The arrow diagram for the relation “a&lt; b”, given in <a href="" class="xref" data-knowl="./knowl/E_relationsasset.html" title="Example 8.1.2: Relation Defined by a Set">Example 8.1.2</a> is given in the following figure.</div>
 <figure class="figure figure-like" id="F_arrowdiaglessthan"><div class="image-box" style="width: 10%; margin-left: 45%; margin-right: 45%;"><img src="generated/latex-image/ltgraph.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.1.4<span class="period">.</span></span><span class="space"> </span>Arrow diagram for less than.</figcaption></figure><div class="para logical" id="p-2039">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.1.4<span class="period">.</span></span><span class="space"> </span>Arrow diagram for less than.</figcaption></figure><div class="para logical" id="p-2279">
 <div class="para">A function is a relation. Let <span class="process-math">\(f:A\rightarrow B, f(a)=b\text{.}\)</span> Then define <span class="process-math">\(R\)</span> by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -592,11 +623,11 @@ x R y \Leftrightarrow x&lt; y.
 \end{equation*}
 </div>
 </div>
-<div class="para" id="p-2040">We can see that <a href="" class="xref" data-knowl="./knowl/E_lessthan.html" title="Example 8.1.3: Relation Defined by Less Than">Example 8.1.3</a> is not a function since an element of <span class="process-math">\(A\)</span> can map to two different elements of <span class="process-math">\(B\text{:}\)</span> <span class="process-math">\((1, 3), (1, 5)\text{.}\)</span>
+<div class="para" id="p-2280">We can see that <a href="" class="xref" data-knowl="./knowl/E_lessthan.html" title="Example 8.1.3: Relation Defined by Less Than">Example 8.1.3</a> is not a function since an element of <span class="process-math">\(A\)</span> can map to two different elements of <span class="process-math">\(B\text{:}\)</span> <span class="process-math">\((1, 3), (1, 5)\text{.}\)</span>
 </div>
 <article class="example example-like" id="E_fnasrelation"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_fnasrelation"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">A Function as a Relation.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_fnasrelation"><article class="example example-like"> <div class="para logical" id="p-2041">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_fnasrelation"><article class="example example-like"> <div class="para logical" id="p-2281">
 <div class="para">Let <span class="process-math">\(f:\mathbb{Z}\rightarrow\mathbb{Z}\)</span> be given by <span class="process-math">\(f(n)=n^2\text{.}\)</span> Let <span class="process-math">\(F\)</span> be the relation given by <span class="process-math">\(f\text{:}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -604,15 +635,15 @@ x R y \Leftrightarrow x&lt; y.
 (a, b)\in F \Leftrightarrow f(a)=b.
 \end{equation*}
 </div>
-</div> <div class="para" id="p-2042">True or false: <span class="process-math">\((1, 1)\in F\text{.}\)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-311" id="answer-311"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-311"><div class="answer solution-like"><div class="para" id="p-2043">True</div></div></div> <div class="para" id="p-2044">True or false: <span class="process-math">\((3, 9)\in F\text{.}\)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-312" id="answer-312"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-312"><div class="answer solution-like"><div class="para" id="p-2045">True</div></div></div> <div class="para" id="p-2046">True or false: <span class="process-math">\((9, 3)\in F\text{.}\)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-313" id="answer-313"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-313"><div class="answer solution-like"><div class="para" id="p-2047">False</div></div></div> <div class="para" id="p-2048">True or false: <span class="process-math">\((-2, 4)\in F\text{.}\)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-314" id="answer-314"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-314"><div class="answer solution-like"><div class="para" id="p-2049">True</div></div></div> <div class="para" id="p-2050">True or false: <span class="process-math">\((2, -4)\in F\text{.}\)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-315" id="answer-315"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-315"><div class="answer solution-like"><div class="para" id="p-2051">False</div></div></div> <div class="para" id="p-2052">True or false: <span class="process-math">\((1, 3)\in F\text{.}\)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-316" id="answer-316"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-316"><div class="answer solution-like"><div class="para" id="p-2053">False</div></div></div></article></div>
+</div> <div class="para" id="p-2282">True or false: <span class="process-math">\((1, 1)\in F\text{.}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-303" id="answer-303"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-303"><div class="answer solution-like"><div class="para" id="p-2283">True</div></div></div> <div class="para" id="p-2284">True or false: <span class="process-math">\((3, 9)\in F\text{.}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-304" id="answer-304"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-304"><div class="answer solution-like"><div class="para" id="p-2285">True</div></div></div> <div class="para" id="p-2286">True or false: <span class="process-math">\((9, 3)\in F\text{.}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-305" id="answer-305"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-305"><div class="answer solution-like"><div class="para" id="p-2287">False</div></div></div> <div class="para" id="p-2288">True or false: <span class="process-math">\((-2, 4)\in F\text{.}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-306" id="answer-306"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-306"><div class="answer solution-like"><div class="para" id="p-2289">True</div></div></div> <div class="para" id="p-2290">True or false: <span class="process-math">\((2, -4)\in F\text{.}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-307" id="answer-307"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-307"><div class="answer solution-like"><div class="para" id="p-2291">False</div></div></div> <div class="para" id="p-2292">True or false: <span class="process-math">\((1, 3)\in F\text{.}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-308" id="answer-308"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-308"><div class="answer solution-like"><div class="para" id="p-2293">False</div></div></div></article></div>
 <article class="assemblage assemblage-like" id="B_functionisrelation"><h3 class="heading"><span class="title">Determining if a Relation Is a Function.</span></h3>
-<div class="para logical" id="p-2054">
+<div class="para logical" id="p-2294">
 <div class="para">A relation is a function if the following two properties hold:</div>
 <ol class="decimal">
 <li id="li-515"><div class="para" id="p-derived-li-515">For every <span class="process-math">\(a\in A\)</span> there must be a <span class="process-math">\(b\in B\)</span> related to <span class="process-math">\(a\text{.}\)</span>
@@ -621,7 +652,7 @@ x R y \Leftrightarrow x&lt; y.
 </div></li>
 </ol>
 </div>
-<div class="para logical" id="p-2055">
+<div class="para logical" id="p-2295">
 <div class="para">We can translate this idea into the ordered pair notation:</div>
 <ol class="decimal">
 <li id="li-517"><div class="para" id="p-derived-li-517">For every <span class="process-math">\(a\in A\)</span> there must be a <span class="process-math">\(b\in B\)</span> such that  <span class="process-math">\((a, b)\in F\text{.}\)</span>
@@ -632,23 +663,23 @@ x R y \Leftrightarrow x&lt; y.
 </div></article><article class="definition definition-like" id="D_inverserelation"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.1.6</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-2056">
+<div class="para logical" id="p-2296">
 <div class="para">Let <span class="process-math">\(R\)</span> be a relation on <span class="process-math">\(A\times B\text{.}\)</span> The  <dfn class="terminology">inverse relation</dfn>, <span class="process-math">\(R^{-1}\text{,}\)</span> on <span class="process-math">\(B\times A\)</span> is</div>
 <div class="displaymath process-math">
 \begin{equation*}
 R^{-1}=\{(b, a)\in B\times A : (a, b)\in R\}.
 \end{equation*}
 </div>
-</div></article><div class="para" id="p-2057">In other words, <span class="process-math">\((a, b)\in R\)</span> if and only if <span class="process-math">\((b, a)\in R^{-1}\text{.}\)</span>
+</div></article><div class="para" id="p-2297">In other words, <span class="process-math">\((a, b)\in R\)</span> if and only if <span class="process-math">\((b, a)\in R^{-1}\text{.}\)</span>
 </div>
 <article class="example example-like" id="E_invereserel"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_invereserel"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Inverse Relation.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_invereserel"><article class="example example-like"><div class="para" id="p-2058">Let  <span class="process-math">\(R=\{(1, 3), (1, 5), (2, 3), (2, 5), (3, 5), (4, 5)\}\text{.}\)</span> This is the relation in <a href="" class="xref" data-knowl="./knowl/E_lessthan.html" title="Example 8.1.3: Relation Defined by Less Than">Example 8.1.3</a>.</div> <div class="para" id="p-2059">Find <span class="process-math">\(R^{-1}\text{.}\)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-317" id="answer-317"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-317"><div class="answer solution-like"><span class="process-math">\(\{(3, 1), (5, 1), (3, 2), (5, 2), (5, 3), (5, 4)\}\)</span></div></div></article></div>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_invereserel"><article class="example example-like"><div class="para" id="p-2298">Let  <span class="process-math">\(R=\{(1, 3), (1, 5), (2, 3), (2, 5), (3, 5), (4, 5)\}\text{.}\)</span> This is the relation in <a href="" class="xref" data-knowl="./knowl/E_lessthan.html" title="Example 8.1.3: Relation Defined by Less Than">Example 8.1.3</a>.</div> <div class="para" id="p-2299">Find <span class="process-math">\(R^{-1}\text{.}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-309" id="answer-309"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-309"><div class="answer solution-like"><span class="process-math">\(\{(3, 1), (5, 1), (3, 2), (5, 2), (5, 3), (5, 4)\}\)</span></div></div></article></div>
 <article class="activity project-like" id="activity-131"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.1.1</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-65"><div class="para logical" id="p-2060">
+<div class="introduction" id="introduction-65"><div class="para logical" id="p-2300">
 <div class="para">Let <span class="process-math">\(A=\{1, 2, 3, 4\}\)</span> and <span class="process-math">\(B=\{0, 1\}\text{.}\)</span> Define the relation from <span class="process-math">\(A\)</span> to <span class="process-math">\(B\)</span> by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -657,25 +688,25 @@ R^{-1}=\{(b, a)\in B\times A : (a, b)\in R\}.
 </div>
 </div></div>
 <article class="task exercise-like" id="task-189"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-2061">Find the set of ordered pairs given by this relation.</div></article><article class="task exercise-like" id="task-190"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-2062">Draw the arrow diagram for this relation.</div></article><article class="task exercise-like" id="task-191"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-2063">Give the inverse relation for <span class="process-math">\(R\text{.}\)</span> Remember, it is a set of ordered pairs.</div></article><article class="task exercise-like" id="task-192"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="p-2064">Is the relation <span class="process-math">\(R\)</span> a function?</div></article></article><article class="definition definition-like" id="D_relonA"><h3 class="heading">
+<div class="para" id="p-2301">Find the set of ordered pairs given by this relation.</div></article><article class="task exercise-like" id="task-190"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-2302">Draw the arrow diagram for this relation.</div></article><article class="task exercise-like" id="task-191"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-2303">Give the inverse relation for <span class="process-math">\(R\text{.}\)</span> Remember, it is a set of ordered pairs.</div></article><article class="task exercise-like" id="task-192"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="p-2304">Is the relation <span class="process-math">\(R\)</span> a function?</div></article></article><article class="definition definition-like" id="D_relonA"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.1.8</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-2065">A <dfn class="terminology">relation on <span class="process-math">\(A\)</span></dfn> is a relation on <span class="process-math">\(A\times A\text{.}\)</span> We also say a relation from <span class="process-math">\(A\)</span> to <span class="process-math">\(A\text{.}\)</span>
-</div></article><div class="para" id="p-2066">We can use a directed graph to represent a relation on <span class="process-math">\(A\text{.}\)</span> We label the vertices with the elements from <span class="process-math">\(A\)</span> and draw and arrow from <span class="process-math">\(a\)</span> to <span class="process-math">\(b\)</span> if <span class="process-math">\(aRb\text{.}\)</span> Note, if <span class="process-math">\(aRa\text{,}\)</span> then we get a “loop” at <span class="process-math">\(a\text{.}\)</span>
+<div class="para" id="p-2305">A <dfn class="terminology">relation on <span class="process-math">\(A\)</span></dfn> is a relation on <span class="process-math">\(A\times A\text{.}\)</span> We also say a relation from <span class="process-math">\(A\)</span> to <span class="process-math">\(A\text{.}\)</span>
+</div></article><div class="para" id="p-2306">We can use a directed graph to represent a relation on <span class="process-math">\(A\text{.}\)</span> We label the vertices with the elements from <span class="process-math">\(A\)</span> and draw and arrow from <span class="process-math">\(a\)</span> to <span class="process-math">\(b\)</span> if <span class="process-math">\(aRb\text{.}\)</span> Note, if <span class="process-math">\(aRa\text{,}\)</span> then we get a “loop” at <span class="process-math">\(a\text{.}\)</span>
 </div>
 <article class="example example-like" id="E_dirgraphrelation"><a href="" data-knowl="" class="id-ref example-knowl original has-image" data-refid="hk-E_dirgraphrelation"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Directed Graph of a Relation.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_dirgraphrelation"><article class="example example-like"> <div class="para" id="p-2067">Let <span class="process-math">\(A=\{1, 2, 3\}\text{.}\)</span> Let <span class="process-math">\(R=\{(x, y) : x&lt; y\}\text{.}\)</span> Then we get the following directed graph for <span class="process-math">\(R\text{.}\)</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_dirgraphrelation"><article class="example example-like"> <div class="para" id="p-2307">Let <span class="process-math">\(A=\{1, 2, 3\}\text{.}\)</span> Let <span class="process-math">\(R=\{(x, y) : x&lt; y\}\text{.}\)</span> Then we get the following directed graph for <span class="process-math">\(R\text{.}\)</span>
 </div> <figure class="figure figure-like" id="F_digraphlessthan"><div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/latex-image/gdlessthan.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.1.10<span class="period">.</span></span><span class="space"> </span>Directed graph for less than.</figcaption></figure> <div class="para" id="p-2068">If we now want the relations for less than or equal to, <span class="process-math">\(R=\{(x, y) : x\leq y\}\text{,}\)</span> we have the following directed graph.</div> <figure class="figure figure-like" id="F_digraphlessthaneq"><div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/latex-image/gdlessthaneq.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.1.10<span class="period">.</span></span><span class="space"> </span>Directed graph for less than.</figcaption></figure> <div class="para" id="p-2308">If we now want the relations for less than or equal to, <span class="process-math">\(R=\{(x, y) : x\leq y\}\text{,}\)</span> we have the following directed graph.</div> <figure class="figure figure-like" id="F_digraphlessthaneq"><div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/latex-image/gdlessthaneq.svg" role="img" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.1.11<span class="period">.</span></span><span class="space"> </span>Directed graph for less than or equal.</figcaption></figure></article></div>
 <article class="activity project-like" id="activity-132"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.1.2</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-66"><div class="para logical" id="p-2069">
+<div class="introduction" id="introduction-66"><div class="para logical" id="p-2309">
 <div class="para">Let <span class="process-math">\(A=\{0, 1, 2, 3, 4, 5\}\text{.}\)</span>  Define the relation on <span class="process-math">\(A\)</span> by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -684,13 +715,13 @@ R^{-1}=\{(b, a)\in B\times A : (a, b)\in R\}.
 </div>
 </div></div>
 <article class="task exercise-like" id="task-193"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-2070">Find the set of ordered pairs given by this relation.</div></article><article class="task exercise-like" id="task-194"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-2071">Draw the directed graph for this relation.</div></article><article class="task exercise-like" id="task-195"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-2072">Give the inverse relation for <span class="process-math">\(R\text{.}\)</span> Remember, it is a set of ordered pairs.</div></article><article class="task exercise-like" id="task-196"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="p-2073">Is the relation <span class="process-math">\(R\)</span> a function?</div></article></article><article class="activity project-like" id="activity-133"><h3 class="heading">
+<div class="para" id="p-2310">Find the set of ordered pairs given by this relation.</div></article><article class="task exercise-like" id="task-194"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-2311">Draw the directed graph for this relation.</div></article><article class="task exercise-like" id="task-195"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-2312">Give the inverse relation for <span class="process-math">\(R\text{.}\)</span> Remember, it is a set of ordered pairs.</div></article><article class="task exercise-like" id="task-196"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="p-2313">Is the relation <span class="process-math">\(R\)</span> a function?</div></article></article><article class="activity project-like" id="activity-133"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.1.3</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-67"><div class="para logical" id="p-2074">
+<div class="introduction" id="introduction-67"><div class="para logical" id="p-2314">
 <div class="para">Let <span class="process-math">\(A=\{0, 1, 2, 3, 4, 5\}\text{.}\)</span>  Define the relation on <span class="process-math">\(A\)</span> by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -699,42 +730,36 @@ R^{-1}=\{(b, a)\in B\times A : (a, b)\in R\}.
 </div>
 </div></div>
 <article class="task exercise-like" id="task-197"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-2075">Find the set of ordered pairs given by this relation.</div></article><article class="task exercise-like" id="task-198"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-2076">Draw the directed graph for this relation.</div></article><article class="task exercise-like" id="task-199"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-2077">Give the inverse relation for <span class="process-math">\(R\text{.}\)</span>
+<div class="para" id="p-2315">Find the set of ordered pairs given by this relation.</div></article><article class="task exercise-like" id="task-198"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-2316">Draw the directed graph for this relation.</div></article><article class="task exercise-like" id="task-199"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-2317">Give the inverse relation for <span class="process-math">\(R\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-24" id="hint-24"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-24"><div class="hint solution-like"><div class="para" id="p-2078">Remember, it is a set of ordered pairs.</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-38" id="hint-38"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-38"><div class="hint solution-like"><div class="para" id="p-2318">Remember, it is a set of ordered pairs.</div></div></div>
 </div></article><article class="task exercise-like" id="task-200"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="p-2079">Is the relation <span class="process-math">\(R\)</span> a function?</div></article></article><section class="reading-questions" id="reading-questions-28"><h3 class="heading hide-type">
+<div class="para" id="p-2319">Is the relation <span class="process-math">\(R\)</span> a function?</div></article></article><section class="reading-questions" id="reading-questions-28"><h3 class="heading hide-type">
 <span class="type">Reading Questions</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
-<div class="para" id="p-2080">Let <span class="process-math">\(A=\{1, 2, 3\}, B=\{2, 4, 6, 8\}, C=\{0, 1\}\text{.}\)</span>
+<div class="para" id="p-2320">Let <span class="process-math">\(A=\{1, 2, 3\}, B=\{2, 4, 6, 8\}, C=\{0, 1\}\text{.}\)</span>
 </div>
-<article class="exercise exercise-like" id="exercise-418"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para logical" id="p-2081">
+<article class="exercise exercise-like" id="exercise-411"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para logical" id="p-2321">
 <div class="para">Give the ordered pairs for the relation on <span class="process-math">\(A\times B\)</span> given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
 a R b \Leftrightarrow a\geq b
 \end{equation*}
 </div>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-318" id="answer-318"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-318"><div class="answer solution-like"><span class="process-math">\(\{(2, 2), (3, 2)\}\)</span></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-419"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para logical" id="p-2082">
+</div></article><article class="exercise exercise-like" id="exercise-412"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para logical" id="p-2322">
 <div class="para">Give the ordered pairs for the relation on <span class="process-math">\(C\)</span> given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
 a R b \Leftrightarrow a+b \text{ is even}
 \end{equation*}
 </div>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-319" id="answer-319"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-319"><div class="answer solution-like"><span class="process-math">\(\{(0, 0), (1, 1)\}\)</span></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-420"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para logical" id="p-2083">
+</div></article><article class="exercise exercise-like" id="exercise-413"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para logical" id="p-2323">
 <div class="para">True or false: the relation on <span class="process-math">\(A\times B\)</span> given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -743,11 +768,8 @@ a R b \Leftrightarrow a\geq b
 </div>
 <div class="para">is a function from <span class="process-math">\(A\)</span> to <span class="process-math">\(B\text{.}\)</span>
 </div>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-320" id="answer-320"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-320"><div class="answer solution-like">False</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-421"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para logical" id="p-2084">
+</div></article><article class="exercise exercise-like" id="exercise-414"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para logical" id="p-2324">
 <div class="para">True or false: the relation on <span class="process-math">\(C\)</span> given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -756,50 +778,41 @@ a R b \Leftrightarrow a+b \text{ is even}
 </div>
 <div class="para">is a function on <span class="process-math">\(C\text{.}\)</span>
 </div>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-321" id="answer-321"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-321"><div class="answer solution-like">True</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-422"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para logical" id="p-2085">
+</div></article><article class="exercise exercise-like" id="exercise-415"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para logical" id="p-2325">
 <div class="para">Give the ordered pairs for the relation on <span class="process-math">\(B\)</span> given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
 a R b \Leftrightarrow a\mid b
 \end{equation*}
 </div>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-322" id="answer-322"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-322"><div class="answer solution-like"><span class="process-math">\(\{(2, 2), (2, 4), (2, 6), (2, 8), (4, 4), (4, 8), (6, 6), (8, 8)\}\)</span></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-423"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para logical" id="p-2086">
+</div></article><article class="exercise exercise-like" id="exercise-416"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para logical" id="p-2326">
 <div class="para">Give the ordered pairs for the inverse relation, <span class="process-math">\(R^{-1}\)</span> on <span class="process-math">\(B\)</span> when <span class="process-math">\(R\)</span> is given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
 a R b \Leftrightarrow a\mid b
 \end{equation*}
 </div>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-323" id="answer-323"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-323"><div class="answer solution-like"><span class="process-math">\(\{(2, 2), (4, 2), (6, 2), (8, 2), (4, 4), (8, 4), (6, 6), (8, 8)\}\)</span></div></div>
 </div></article></section><section class="exercises" id="exercises-28"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-424"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-2087">Define the <dfn class="terminology">congruence modulo 3</dfn> relation, <span class="process-math">\(T\text{,}\)</span> on <span class="process-math">\(\mathbb{Z}\)</span> by</div> <div class="para logical" id="p-2088"><div class="displaymath process-math">
+<article class="exercise exercise-like" id="exercise-417"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-2327">Define the <dfn class="terminology">congruence modulo 3</dfn> relation, <span class="process-math">\(T\text{,}\)</span> on <span class="process-math">\(\mathbb{Z}\)</span> by</div> <div class="para logical" id="p-2328"><div class="displaymath process-math">
 \begin{equation*}
 m\ T\ n \iff 3\mid (m-n).
 \end{equation*}
 </div></div> <ol class="lower-alpha">
-<li id="li-519"><div class="para" id="p-2089">Is <span class="process-math">\(10\ T\ 1\text{?}\)</span> Is <span class="process-math">\(1\ T\ 10\text{?}\)</span> Is <span class="process-math">\((2, 2)\in T\text{?}\)</span> Is <span class="process-math">\((8, 1)\in T\text{?}\)</span>
+<li id="li-519"><div class="para" id="p-2329">Is <span class="process-math">\(10\ T\ 1\text{?}\)</span> Is <span class="process-math">\(1\ T\ 10\text{?}\)</span> Is <span class="process-math">\((2, 2)\in T\text{?}\)</span> Is <span class="process-math">\((8, 1)\in T\text{?}\)</span>
 </div></li>
-<li id="li-520"><div class="para" id="p-2090">List five integers <span class="process-math">\(n\)</span> such that <span class="process-math">\(n\ T\ 0\text{.}\)</span>
+<li id="li-520"><div class="para" id="p-2330">List five integers <span class="process-math">\(n\)</span> such that <span class="process-math">\(n\ T\ 0\text{.}\)</span>
 </div></li>
-<li id="li-521"><div class="para" id="p-2091">List five integers <span class="process-math">\(n\)</span> such that <span class="process-math">\(n\ T\ 1\text{.}\)</span>
+<li id="li-521"><div class="para" id="p-2331">List five integers <span class="process-math">\(n\)</span> such that <span class="process-math">\(n\ T\ 1\text{.}\)</span>
 </div></li>
-<li id="li-522"><div class="para" id="p-2092">List five integers <span class="process-math">\(n\)</span> such that <span class="process-math">\(n\ T\ 2\text{.}\)</span>
+<li id="li-522"><div class="para" id="p-2332">List five integers <span class="process-math">\(n\)</span> such that <span class="process-math">\(n\ T\ 2\text{.}\)</span>
 </div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-425"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para logical" id="p-2093">
+</ol></article><article class="exercise exercise-like" id="exercise-418"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para logical" id="p-2333">
 <div class="para">Let <span class="process-math">\(X=\{a, b, c\}\)</span> and <span class="process-math">\({\cal P}(X)\)</span> be the power set of <span class="process-math">\(X\text{.}\)</span> Define the relation <span class="process-math">\(R\)</span> on <span class="process-math">\({\cal P}(X)\)</span> by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -807,28 +820,28 @@ A \ R\ B \iff A \text{ has the same number of elements as } B.
 \end{equation*}
 </div>
 </div> <ol class="lower-alpha">
-<li id="li-523"><div class="para" id="p-2094">Is <span class="process-math">\(\{a, b\}\ R\ \{b, c\}\text{?}\)</span>
+<li id="li-523"><div class="para" id="p-2334">Is <span class="process-math">\(\{a, b\}\ R\ \{b, c\}\text{?}\)</span>
 </div></li>
-<li id="li-524"><div class="para" id="p-2095">Is <span class="process-math">\(\{a\}\ R\ \{a, b\}\text{?}\)</span>
+<li id="li-524"><div class="para" id="p-2335">Is <span class="process-math">\(\{a\}\ R\ \{a, b\}\text{?}\)</span>
 </div></li>
-<li id="li-525"><div class="para" id="p-2096">Is <span class="process-math">\(\{c\}\ R\ \{b\}\text{?}\)</span>
+<li id="li-525"><div class="para" id="p-2336">Is <span class="process-math">\(\{c\}\ R\ \{b\}\text{?}\)</span>
 </div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-426"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-2097">Define the relation, <span class="process-math">\(S\text{,}\)</span> on <span class="process-math">\(\mathbb{Z}\)</span> by</div> <div class="para logical" id="p-2098"><div class="displaymath process-math">
+</ol></article><article class="exercise exercise-like" id="exercise-419"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-2337">Define the relation, <span class="process-math">\(S\text{,}\)</span> on <span class="process-math">\(\mathbb{Z}\)</span> by</div> <div class="para logical" id="p-2338"><div class="displaymath process-math">
 \begin{equation*}
 m\ S\ n \iff 5\mid (m^2-n^2).
 \end{equation*}
 </div></div> <ol class="lower-alpha">
-<li id="li-526"><div class="para" id="p-2099">Is <span class="process-math">\(1\ S\ (-9)\text{?}\)</span>
+<li id="li-526"><div class="para" id="p-2339">Is <span class="process-math">\(1\ S\ (-9)\text{?}\)</span>
 </div></li>
-<li id="li-527"><div class="para" id="p-2100">Is <span class="process-math">\(2\ S\ 13\text{?}\)</span>
+<li id="li-527"><div class="para" id="p-2340">Is <span class="process-math">\(2\ S\ 13\text{?}\)</span>
 </div></li>
-<li id="li-528"><div class="para" id="p-2101">Is <span class="process-math">\(2\ S\ (-8)\text{?}\)</span>
+<li id="li-528"><div class="para" id="p-2341">Is <span class="process-math">\(2\ S\ (-8)\text{?}\)</span>
 </div></li>
-<li id="li-529"><div class="para" id="p-2102">Is <span class="process-math">\((-8)\ S\ 2\text{?}\)</span>
+<li id="li-529"><div class="para" id="p-2342">Is <span class="process-math">\((-8)\ S\ 2\text{?}\)</span>
 </div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-427"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para logical" id="p-2103">
+</ol></article><article class="exercise exercise-like" id="exercise-420"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para logical" id="p-2343">
 <div class="para">Let <span class="process-math">\(A=\{3, 4, 5\}\)</span> and <span class="process-math">\(B=\{4, 5, 6\}\)</span> and let <span class="process-math">\(R\)</span> be the “less than” relation. That is, for all <span class="process-math">\((x, y)\in A\times B\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -837,12 +850,12 @@ x\ R\ y \iff x&lt;y.
 \end{equation*}
 </div>
 </div> <ol class="lower-alpha">
-<li id="li-530"><div class="para" id="p-2104">Find the set of ordered pairs in <span class="process-math">\(R\text{.}\)</span>
+<li id="li-530"><div class="para" id="p-2344">Find the set of ordered pairs in <span class="process-math">\(R\text{.}\)</span>
 </div></li>
-<li id="li-531"><div class="para" id="p-2105">Find the set of ordered pairs in <span class="process-math">\(R^{-1}\text{.}\)</span>
+<li id="li-531"><div class="para" id="p-2345">Find the set of ordered pairs in <span class="process-math">\(R^{-1}\text{.}\)</span>
 </div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-428"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para logical" id="p-2106">
+</ol></article><article class="exercise exercise-like" id="exercise-421"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para logical" id="p-2346">
 <div class="para">Let <span class="process-math">\(A=\{3, 4, 5\}\)</span> and <span class="process-math">\(B=\{4, 5, 6\}\)</span> and let <span class="process-math">\(S\)</span> be the “divides” relation. That is, for all <span class="process-math">\((x, y)\in A\times B\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -851,12 +864,12 @@ x\ S\ y \iff x\mid y.
 \end{equation*}
 </div>
 </div> <ol class="lower-alpha">
-<li id="li-532"><div class="para" id="p-2107">Find the set of ordered pairs in <span class="process-math">\(S\text{.}\)</span>
+<li id="li-532"><div class="para" id="p-2347">Find the set of ordered pairs in <span class="process-math">\(S\text{.}\)</span>
 </div></li>
-<li id="li-533"><div class="para" id="p-2108">Find the set of ordered pairs in <span class="process-math">\(S^{-1}\text{.}\)</span>
+<li id="li-533"><div class="para" id="p-2348">Find the set of ordered pairs in <span class="process-math">\(S^{-1}\text{.}\)</span>
 </div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-429"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para logical" id="p-2109">
+</ol></article><article class="exercise exercise-like" id="exercise-422"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para logical" id="p-2349">
 <div class="para">Let <span class="process-math">\(A=\{a, b, c, d\}\text{.}\)</span> Define the relation <span class="process-math">\(R\)</span> on <span class="process-math">\(A\)</span> by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -865,8 +878,8 @@ R=\{(a, b), (a, c), (b, c), (d, d)\}\text{.}
 </div>
 <div class="para">Draw the directed graph for <span class="process-math">\(R\text{.}\)</span>
 </div>
-</div></article><article class="exercise exercise-like" id="exercise-430"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para logical" id="p-2110">
+</div></article><article class="exercise exercise-like" id="exercise-423"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para logical" id="p-2350">
 <div class="para">Let <span class="process-math">\(A=\{2, 3, 4, 5, 6, 7, 8\}\text{.}\)</span> Define the relation <span class="process-math">\(S\)</span> on <span class="process-math">\(A\)</span> by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -875,8 +888,8 @@ x\ S\ y \iff x\mid y.
 </div>
 <div class="para">Draw the directed graph for <span class="process-math">\(R\text{.}\)</span>
 </div>
-</div></article><article class="exercise exercise-like" id="exercise-431"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para logical" id="p-2111">
+</div></article><article class="exercise exercise-like" id="exercise-424"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para logical" id="p-2351">
 <div class="para">Let <span class="process-math">\(A=\{2, 3, 4, 5, 6, 7, 8\}\text{.}\)</span> Define the relation <span class="process-math">\(T\)</span> on <span class="process-math">\(A\)</span> by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -893,5 +906,13 @@ x\ T\ y \iff 3\mid (x-y).
 <div id="ptx-page-footer">
 <a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12894193;
+var sc_invisible=1;
+var sc_security="e67c59eb";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12894193/0/e67c59eb/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
 </body>
 </html>

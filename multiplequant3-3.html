@@ -62,8 +62,39 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.0.0dev3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runtime.71ffd81c0faeb38b.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.e543e0dd19670ae2.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.1f1f63d2cda36a4d.css">
 </head>
-<body class="pretext book ignore-math">
+<body id="DiscreteMathText" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" href=""></a><div class="title-container">
 <h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
@@ -549,67 +580,67 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="multiplequant3-3"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.3</span> <span class="title">Statements with Multiple Quantifiers</span>
 </h2>
-<div class="para" id="p-554">Many statements in mathematics involve multple quantifiers. For example, “For all real numbers <span class="process-math">\(x\text{,}\)</span> there exists a real number <span class="process-math">\(y\)</span> with <span class="process-math">\(x+y=0\text{.}\)</span>” These statements, though frequent in math courses, represent some of the most complicated types of statements to understand. In this section we will try to understand the general structure of such statements.</div>
-<div class="para" id="p-555">Let's look at the various ways we could have statements with two quantifiers. Since we have two quantifiers, we will have two variables. Thus, our predicate will now involve both variables. We can use the notation <span class="process-math">\(P(x, y)\)</span> to mean a statement about <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span>
+<div class="para" id="p-678">Many statements in mathematics involve multple quantifiers. For example, “For all real numbers <span class="process-math">\(x\text{,}\)</span> there exists a real number <span class="process-math">\(y\)</span> with <span class="process-math">\(x+y=0\text{.}\)</span>” These statements, though frequent in math courses, represent some of the most complicated types of statements to understand. In this section we will try to understand the general structure of such statements.</div>
+<div class="para" id="p-679">Let's look at the various ways we could have statements with two quantifiers. Since we have two quantifiers, we will have two variables. Thus, our predicate will now involve both variables. We can use the notation <span class="process-math">\(P(x, y)\)</span> to mean a statement about <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span>
 </div>
 <ul class="disc">
 <li id="li-179">
-<div class="para" id="p-556"><span class="process-math">\(\forall x\in D, \exists y\in E, P(x, y)\text{.}\)</span></div>
-<div class="para" id="p-557">This means we can find a <span class="process-math">\(y\)</span> in <span class="process-math">\(E\)</span> that makes <span class="process-math">\(P(x, y)\)</span> true for each <span class="process-math">\(x\)</span> in <span class="process-math">\(D\text{.}\)</span> In such statements <span class="process-math">\(y\)</span> will often depend on <span class="process-math">\(x\text{.}\)</span>
+<div class="para" id="p-680"><span class="process-math">\(\forall x\in D, \exists y\in E, P(x, y)\text{.}\)</span></div>
+<div class="para" id="p-681">This means we can find a <span class="process-math">\(y\)</span> in <span class="process-math">\(E\)</span> that makes <span class="process-math">\(P(x, y)\)</span> true for each <span class="process-math">\(x\)</span> in <span class="process-math">\(D\text{.}\)</span> In such statements <span class="process-math">\(y\)</span> will often depend on <span class="process-math">\(x\text{.}\)</span>
 </div>
 </li>
 <li id="li-180">
-<div class="para" id="p-558"><span class="process-math">\(\exists x\in D, \forall y\in E, P(x, y)\text{.}\)</span></div>
-<div class="para" id="p-559">The order of the quantifiers matters. This means we can find a <em class="emphasis">single</em> <span class="process-math">\(x\)</span> in <span class="process-math">\(D\)</span> that makes <span class="process-math">\(P(x, y)\)</span> true for every <span class="process-math">\(y\)</span> in <span class="process-math">\(E\text{.}\)</span> In such statements <span class="process-math">\(x\)</span> does not depend on <span class="process-math">\(y\text{.}\)</span> The same <span class="process-math">\(x\)</span> must work for all the <span class="process-math">\(y\)</span>'s.</div>
+<div class="para" id="p-682"><span class="process-math">\(\exists x\in D, \forall y\in E, P(x, y)\text{.}\)</span></div>
+<div class="para" id="p-683">The order of the quantifiers matters. This means we can find a <em class="emphasis">single</em> <span class="process-math">\(x\)</span> in <span class="process-math">\(D\)</span> that makes <span class="process-math">\(P(x, y)\)</span> true for every <span class="process-math">\(y\)</span> in <span class="process-math">\(E\text{.}\)</span> In such statements <span class="process-math">\(x\)</span> does not depend on <span class="process-math">\(y\text{.}\)</span> The same <span class="process-math">\(x\)</span> must work for all the <span class="process-math">\(y\)</span>'s.</div>
 </li>
 <li id="li-181">
-<div class="para" id="p-560"><span class="process-math">\(\forall x\in D, \forall y\in E, P(x, y)\text{.}\)</span></div>
-<div class="para" id="p-561">This means <span class="process-math">\(P(x, y)\)</span> is true for all <span class="process-math">\(x\in D\)</span> and for all <span class="process-math">\(y\in E\text{.}\)</span>
+<div class="para" id="p-684"><span class="process-math">\(\forall x\in D, \forall y\in E, P(x, y)\text{.}\)</span></div>
+<div class="para" id="p-685">This means <span class="process-math">\(P(x, y)\)</span> is true for all <span class="process-math">\(x\in D\)</span> and for all <span class="process-math">\(y\in E\text{.}\)</span>
 </div>
 </li>
 <li id="li-182">
-<div class="para" id="p-562"><span class="process-math">\(\exists x\in D, \exists y\in E, P(x, y)\text{.}\)</span></div>
-<div class="para" id="p-563">This means <span class="process-math">\(P(x, y)\)</span> is true for for at least one <span class="process-math">\(x\in D\)</span> and at least one <span class="process-math">\(y\in E\text{.}\)</span>
+<div class="para" id="p-686"><span class="process-math">\(\exists x\in D, \exists y\in E, P(x, y)\text{.}\)</span></div>
+<div class="para" id="p-687">This means <span class="process-math">\(P(x, y)\)</span> is true for for at least one <span class="process-math">\(x\in D\)</span> and at least one <span class="process-math">\(y\in E\text{.}\)</span>
 </div>
 </li>
 </ul>
 <article class="example example-like" id="E_multquant1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_multquant1"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Statements with Multiple Quantifiers.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_multquant1"><article class="example example-like"> <div class="para" id="p-564">Let <span class="process-math">\(x, y\in\mathbb{R}\text{.}\)</span> Determine whether the following statements are true or false.</div>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_multquant1"><article class="example example-like"> <div class="para" id="p-688">Let <span class="process-math">\(x, y\in\mathbb{R}\text{.}\)</span> Determine whether the following statements are true or false.</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \forall x, \exists y, x+y=5.
 \end{equation*}
 </div>
-<div class="para" id="p-565">For any <span class="process-math">\(x\)</span> can you always find a corresponding <span class="process-math">\(y\)</span> with <span class="process-math">\(x+y=5\text{?}\)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-69" id="answer-69"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-69"><div class="answer solution-like"><div class="para" id="p-566">Yes, for each <span class="process-math">\(x\)</span> let <span class="process-math">\(y=5-x\text{.}\)</span> So the statement is true.</div></div></div>
+<div class="para" id="p-689">For any <span class="process-math">\(x\)</span> can you always find a corresponding <span class="process-math">\(y\)</span> with <span class="process-math">\(x+y=5\text{?}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-69" id="answer-69"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-69"><div class="answer solution-like"><div class="para" id="p-690">Yes, for each <span class="process-math">\(x\)</span> let <span class="process-math">\(y=5-x\text{.}\)</span> So the statement is true.</div></div></div>
 <div class="displaymath process-math">
 \begin{equation*}
 \exists x, \forall y, x+y=5.
 \end{equation*}
 </div>
-<div class="para" id="p-567">Is there a single <span class="process-math">\(x\)</span> that works for all <span class="process-math">\(y\text{?}\)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-70" id="answer-70"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-70"><div class="answer solution-like"><div class="para" id="p-568">No, no single <span class="process-math">\(x\)</span> will always have <span class="process-math">\(x+y=5\text{.}\)</span> So the statement is false.</div></div></div></article></div>
+<div class="para" id="p-691">Is there a single <span class="process-math">\(x\)</span> that works for all <span class="process-math">\(y\text{?}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-70" id="answer-70"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-70"><div class="answer solution-like"><div class="para" id="p-692">No, no single <span class="process-math">\(x\)</span> will always have <span class="process-math">\(x+y=5\text{.}\)</span> So the statement is false.</div></div></div></article></div>
 <article class="activity project-like" id="activity-47"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-19"><div class="para" id="p-569">Let <span class="process-math">\(x, y\in \mathbb{Z}^{nonneg}\text{.}\)</span> Determine if each statement is true or false. Give a reason for your answer.</div></div>
+<div class="introduction" id="introduction-19"><div class="para" id="p-693">Let <span class="process-math">\(x, y\in \mathbb{Z}^{nonneg}\text{.}\)</span> Determine if each statement is true or false. Give a reason for your answer.</div></div>
 <article class="task exercise-like" id="task-55"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-570"><span class="process-math">\(\forall x\ \exists y, x &lt; y\text{.}\)</span></div></article><article class="task exercise-like" id="task-56"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-571"><span class="process-math">\(\exists y\ \forall x, x &lt; y\text{.}\)</span></div></article><article class="task exercise-like" id="task-57"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-572"><span class="process-math">\(\exists x\ \forall y, x &lt; y\text{.}\)</span></div></article><article class="task exercise-like" id="task-58"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="p-573"><span class="process-math">\(\forall y\ \exists x, x &lt; y\text{.}\)</span></div></article><article class="task exercise-like" id="task-59"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="p-574"><span class="process-math">\(\exists x\ \exists y, x &lt; y\text{.}\)</span></div></article><article class="task exercise-like" id="task-60"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="p-575"><span class="process-math">\(\forall x\ \forall y, x &lt; y\text{.}\)</span></div></article></article><div class="para" id="p-576">Although we won't study the mathematical context of the following example in this class, it is a classic example in mathematics of a statement with multiple quantifiers and a conditional. It is so important that it is the subject of one set of math bike racks in front of Taylor Hall!</div>
+<div class="para" id="p-694"><span class="process-math">\(\forall x\ \exists y, x &lt; y\text{.}\)</span></div></article><article class="task exercise-like" id="task-56"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-695"><span class="process-math">\(\exists y\ \forall x, x &lt; y\text{.}\)</span></div></article><article class="task exercise-like" id="task-57"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-696"><span class="process-math">\(\exists x\ \forall y, x &lt; y\text{.}\)</span></div></article><article class="task exercise-like" id="task-58"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="p-697"><span class="process-math">\(\forall y\ \exists x, x &lt; y\text{.}\)</span></div></article><article class="task exercise-like" id="task-59"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="p-698"><span class="process-math">\(\exists x\ \exists y, x &lt; y\text{.}\)</span></div></article><article class="task exercise-like" id="task-60"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="p-699"><span class="process-math">\(\forall x\ \forall y, x &lt; y\text{.}\)</span></div></article></article><div class="para" id="p-700">Although we won't study the mathematical context of the following example in this class, it is a classic example in mathematics of a statement with multiple quantifiers and a conditional. It is so important that it is the subject of one set of math bike racks in front of Taylor Hall!</div>
 <article class="example example-like" id="E_deflimit"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_deflimit"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Definition of a Limit.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_deflimit"><article class="example example-like"> <div class="para" id="p-577">The definition of the limit of a function: For every <span class="process-math">\(\epsilon&gt;0\text{,}\)</span> there exists a <span class="process-math">\(\delta&gt;0\)</span> such that if <span class="process-math">\(|x-a|&lt;\delta\)</span> then <span class="process-math">\(|f(x)-L|&lt;\epsilon\text{.}\)</span> Or in symbols, <span class="process-math">\(\forall\epsilon&gt;0, \exists\delta&gt;0, |x-a|&lt;\delta\rightarrow |f(x)-L|&lt;\epsilon\text{.}\)</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_deflimit"><article class="example example-like"> <div class="para" id="p-701">The definition of the limit of a function: For every <span class="process-math">\(\epsilon&gt;0\text{,}\)</span> there exists a <span class="process-math">\(\delta&gt;0\)</span> such that if <span class="process-math">\(|x-a|&lt;\delta\)</span> then <span class="process-math">\(|f(x)-L|&lt;\epsilon\text{.}\)</span> Or in symbols, <span class="process-math">\(\forall\epsilon&gt;0, \exists\delta&gt;0, |x-a|&lt;\delta\rightarrow |f(x)-L|&lt;\epsilon\text{.}\)</span>
 </div></article></div>
-<div class="para" id="p-578">Now, we want to be able to negate statements with multiple quantifiers. There is nothing really new here, we just negate our quantified statements as we did for single quantifiers.</div>
+<div class="para" id="p-702">Now, we want to be able to negate statements with multiple quantifiers. There is nothing really new here, we just negate our quantified statements as we did for single quantifiers.</div>
 <article class="assemblage assemblage-like" id="B_negmultquant"><h3 class="heading"><span class="title">Negating Statements with Multiple Quantifiers.</span></h3>
-<div class="para" id="p-579">The negation of <span class="process-math">\(\forall x\in D, \exists y\in E, P(x, y)\)</span> is <span class="process-math">\(\exists x\in D, \forall y\in E, \sim P(x, y)\text{;}\)</span>
+<div class="para" id="p-703">The negation of <span class="process-math">\(\forall x\in D, \exists y\in E, P(x, y)\)</span> is <span class="process-math">\(\exists x\in D, \forall y\in E, \sim P(x, y)\text{;}\)</span>
 </div>
-<div class="para logical" id="p-580">
+<div class="para logical" id="p-704">
 <div class="para">In notation,</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -617,9 +648,9 @@ window.MathJax = {
 \end{equation*}
 </div>
 </div>
-<div class="para" id="p-581">The negation of <span class="process-math">\(\exists x\in D, \forall y\in E, P(x, y)\)</span> is <span class="process-math">\(\forall x\in D, \exists y\in E, \sim P(x, y)\text{;}\)</span>
+<div class="para" id="p-705">The negation of <span class="process-math">\(\exists x\in D, \forall y\in E, P(x, y)\)</span> is <span class="process-math">\(\forall x\in D, \exists y\in E, \sim P(x, y)\text{;}\)</span>
 </div>
-<div class="para logical" id="p-582">
+<div class="para logical" id="p-706">
 <div class="para">In notation,</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -627,9 +658,9 @@ window.MathJax = {
 \end{equation*}
 </div>
 </div>
-<div class="para" id="p-583">The negation of <span class="process-math">\(\forall x\in D, \forall y\in E, P(x, y)\)</span> is <span class="process-math">\(\exists x\in D, \exists y\in E, \sim P(x, y)\text{;}\)</span>
+<div class="para" id="p-707">The negation of <span class="process-math">\(\forall x\in D, \forall y\in E, P(x, y)\)</span> is <span class="process-math">\(\exists x\in D, \exists y\in E, \sim P(x, y)\text{;}\)</span>
 </div>
-<div class="para logical" id="p-584">
+<div class="para logical" id="p-708">
 <div class="para">In notation,</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -637,9 +668,9 @@ window.MathJax = {
 \end{equation*}
 </div>
 </div>
-<div class="para" id="p-585">The negation of <span class="process-math">\(\exists x\in D, \exists y\in E, P(x, y)\)</span> is <span class="process-math">\(\forall x\in D, \forall y\in E, \sim P(x, y)\text{;}\)</span>
+<div class="para" id="p-709">The negation of <span class="process-math">\(\exists x\in D, \exists y\in E, P(x, y)\)</span> is <span class="process-math">\(\forall x\in D, \forall y\in E, \sim P(x, y)\text{;}\)</span>
 </div>
-<div class="para logical" id="p-586">
+<div class="para logical" id="p-710">
 <div class="para">In notation,</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -648,133 +679,135 @@ window.MathJax = {
 </div>
 </div></article><article class="example example-like" id="E_negdeflimit"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_negdeflimit"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Negating the Definition of a Limit.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_negdeflimit"><article class="example example-like"> <div class="para" id="p-587">If you take Elementary Analysis, you will need to be able to negate the definition of the limit from <a href="" class="xref" data-knowl="./knowl/E_deflimit.html" title="Example 3.3.2: Definition of a Limit">Example 3.3.2</a>. Negate “For every <span class="process-math">\(\epsilon&gt;0\text{,}\)</span> there exists a <span class="process-math">\(\delta&gt;0\)</span> such that if <span class="process-math">\(|x-a|&lt;\delta\)</span> then <span class="process-math">\(|f(x)-L|&lt;\epsilon\text{.}\)</span>” Hint: Our statement has the form <span class="process-math">\(\forall \epsilon, \exists \delta, P(\delta)\rightarrow Q(\epsilon).\)</span> So the negation has the form <span class="process-math">\(\exists \epsilon, \forall \delta, P(\delta)\wedge \sim Q(\epsilon).\)</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_negdeflimit"><article class="example example-like"> <div class="para" id="p-711">If you take Elementary Analysis, you will need to be able to negate the definition of the limit from <a href="" class="xref" data-knowl="./knowl/E_deflimit.html" title="Example 3.3.2: Definition of a Limit">Example 3.3.2</a>. Negate “For every <span class="process-math">\(\epsilon&gt;0\text{,}\)</span> there exists a <span class="process-math">\(\delta&gt;0\)</span> such that if <span class="process-math">\(|x-a|&lt;\delta\)</span> then <span class="process-math">\(|f(x)-L|&lt;\epsilon\text{.}\)</span>” Hint: Our statement has the form <span class="process-math">\(\forall \epsilon, \exists \delta, P(\delta)\rightarrow Q(\epsilon).\)</span> So the negation has the form <span class="process-math">\(\exists \epsilon, \forall \delta, P(\delta)\wedge \sim Q(\epsilon).\)</span>
 </div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-71" id="answer-71"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-71"><div class="answer solution-like"><span class="process-math">\(\exists\epsilon&gt;0, \forall\delta&gt;0, |x-a|&lt;\delta\wedge |f(x)-L|\geq\epsilon\text{.}\)</span></div></div></article></div>
 <article class="activity project-like" id="activity-48"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-20"><div class="para" id="p-588">Write the negation of the following statements. Then determine whether the original statment is true or false.</div></div>
+<div class="introduction" id="introduction-20"><div class="para" id="p-712">Write the negation of the following statements. Then determine whether the original statment is true or false.</div></div>
 <article class="task exercise-like" id="task-61"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-589">There exists an integer <span class="process-math">\(n\)</span> such that for all integers <span class="process-math">\(m,\ nm=0\text{.}\)</span>
+<div class="para" id="p-713">There exists an integer <span class="process-math">\(n\)</span> such that for all integers <span class="process-math">\(m,\ nm=0\text{.}\)</span>
 </div></article><article class="task exercise-like" id="task-62"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-590">For every integer <span class="process-math">\(n\)</span> there exists an integer <span class="process-math">\(m\)</span> such that <span class="process-math">\(nm=0\text{.}\)</span>
+<div class="para" id="p-714">For every integer <span class="process-math">\(n\)</span> there exists an integer <span class="process-math">\(m\)</span> such that <span class="process-math">\(nm=0\text{.}\)</span>
 </div></article></article><article class="activity project-like" id="activity-49"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.3</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-21"><div class="para" id="p-591">Write the negation of the following statements. Then determine whether the original statment is true of false.</div></div>
+<div class="introduction" id="introduction-21"><div class="para" id="p-715">Write the negation of the following statements. Then determine whether the original statment is true of false.</div></div>
 <article class="task exercise-like" id="task-63"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-592">There exists an integer <span class="process-math">\(n\)</span> such that for all integers <span class="process-math">\(m,\ n+m=0\text{.}\)</span>
+<div class="para" id="p-716">There exists an integer <span class="process-math">\(n\)</span> such that for all integers <span class="process-math">\(m,\ n+m=0\text{.}\)</span>
 </div></article><article class="task exercise-like" id="task-64"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-593">For every integer <span class="process-math">\(n\)</span> there exists an integer <span class="process-math">\(m\)</span> such that <span class="process-math">\(n+m=0\text{.}\)</span>
+<div class="para" id="p-717">For every integer <span class="process-math">\(n\)</span> there exists an integer <span class="process-math">\(m\)</span> such that <span class="process-math">\(n+m=0\text{.}\)</span>
 </div></article></article><article class="example example-like" id="E_translatingmult"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_translatingmult"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Translating Statements with Multiple Quantifiers.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_translatingmult"><article class="example example-like"> <div class="para" id="p-594">Let <span class="process-math">\(L(x, y)\)</span> be “<span class="process-math">\(x\)</span> loves <span class="process-math">\(y\)</span>”. Translate each of the following statements using quantifiers and variables.</div> <div class="para" id="p-595">Someone loves everyone.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-72" id="answer-72"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-72"><div class="answer solution-like"><span class="process-math">\(\exists x, \forall y, L(x, y).\)</span></div></div> <div class="para" id="p-596">Someone is loved by everyone.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-73" id="answer-73"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-73"><div class="answer solution-like"><span class="process-math">\(\exists x, \forall y, L(y, x).\)</span></div></div> <div class="para" id="p-597">Everyone loves someone.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-74" id="answer-74"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-74"><div class="answer solution-like"><span class="process-math">\(\forall x, \exists y, L(x, y).\)</span></div></div> <div class="para" id="p-598">Everyone is loved by someone.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-75" id="answer-75"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-75"><div class="answer solution-like"><span class="process-math">\(\forall x, \exists y, L(y, x).\)</span></div></div></article></div>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_translatingmult"><article class="example example-like"> <div class="para" id="p-718">Let <span class="process-math">\(L(x, y)\)</span> be “<span class="process-math">\(x\)</span> loves <span class="process-math">\(y\)</span>”. Translate each of the following statements using quantifiers and variables.</div> <div class="para" id="p-719">Someone loves everyone.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-72" id="answer-72"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-72"><div class="answer solution-like"><span class="process-math">\(\exists x, \forall y, L(x, y).\)</span></div></div> <div class="para" id="p-720">Someone is loved by everyone.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-73" id="answer-73"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-73"><div class="answer solution-like"><span class="process-math">\(\exists x, \forall y, L(y, x).\)</span></div></div> <div class="para" id="p-721">Everyone loves someone.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-74" id="answer-74"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-74"><div class="answer solution-like"><span class="process-math">\(\forall x, \exists y, L(x, y).\)</span></div></div> <div class="para" id="p-722">Everyone is loved by someone.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-75" id="answer-75"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-75"><div class="answer solution-like"><span class="process-math">\(\forall x, \exists y, L(y, x).\)</span></div></div></article></div>
 <section class="reading-questions" id="reading-questions-9"><h3 class="heading hide-type">
 <span class="type">Reading Questions</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-107"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-599">Write the negation of <span class="process-math">\(\forall x\in \mathbb{R}, \exists y\in \mathbb{R}, xy&gt;0\text{.}\)</span>
+<article class="exercise exercise-like" id="DMT_multquant_CYU_allexistsnegpos"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-723">Write the negation of <span class="process-math">\(\forall x\in \mathbb{R}, \exists y\in \mathbb{R}, xy&gt;0\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="DMT_multquant_CYU_allexistspos"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_multquant_CYU_allexistspos">
+<div class="para" id="p-724">True or False: <span class="process-math">\(\forall x\in \mathbb{R}, \exists y\in \mathbb{R}, xy&gt;0\text{.}\)</span>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-76" id="answer-76"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-76"><div class="answer solution-like"><span class="process-math">\(\exists x\in \mathbb{R}, \forall y\in \mathbb{R}, xy\leq 0\)</span></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-108"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-600">True or False: <span class="process-math">\(\forall x\in \mathbb{R}, \exists y\in \mathbb{R}, xy&gt;0\text{.}\)</span>
+<li data-component="answer" id="DMT_multquant_CYU_allexistspos_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="DMT_multquant_CYU_allexistspos_opt_t"><div class="para" id="p-725">If <span class="process-math">\(x=0\text{,}\)</span> no <span class="process-math">\(y\)</span> will have <span class="process-math">\(xy&gt;0\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="DMT_multquant_CYU_allexistspos_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="DMT_multquant_CYU_allexistspos_opt_f"><div class="para" id="p-725">If <span class="process-math">\(x=0\text{,}\)</span> no <span class="process-math">\(y\)</span> will have <span class="process-math">\(xy&gt;0\text{.}\)</span>
+</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_multquant_CYU_existallnegpos"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-726">Write the negation of <span class="process-math">\(\exists x\in \mathbb{R}, \forall y\in \mathbb{R}, xy&gt;0\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="DMT_multquant_CYU_existallpos"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_multquant_CYU_existallpos">
+<div class="para" id="p-727">True or False: <span class="process-math">\(\exists x\in \mathbb{R}, \forall y\in \mathbb{R}, xy&gt;0\text{.}\)</span>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-77" id="answer-77"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-77"><div class="answer solution-like">False. If <span class="process-math">\(y=0\text{,}\)</span> no <span class="process-math">\(x\)</span> will have <span class="process-math">\(xy&gt;0\)</span>
-</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-109"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-601">Write the negation of <span class="process-math">\(\exists x\in \mathbb{R}, \forall y\in \mathbb{R}, xy&gt;0\text{.}\)</span>
+<li data-component="answer" id="DMT_multquant_CYU_existallpos_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="DMT_multquant_CYU_existallpos_opt_t"><div class="para" id="p-728">No matter which <span class="process-math">\(x\)</span> you choose, <span class="process-math">\(y=-x\)</span> will have <span class="process-math">\(xy\leq 0\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="DMT_multquant_CYU_existallpos_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="DMT_multquant_CYU_existallpos_opt_f"><div class="para" id="p-728">No matter which <span class="process-math">\(x\)</span> you choose, <span class="process-math">\(y=-x\)</span> will have <span class="process-math">\(xy\leq 0\text{.}\)</span>
+</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_multquant_CYU_allexistsnegeven"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="p-729">Write the negation of <span class="process-math">\(\forall n\in \{\textrm{even integers}\}, \exists k\in \mathbb{Z}, n=2k\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="DMT_multquant_CYU_allexistseven"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_multquant_CYU_allexistseven">
+<div class="para" id="p-730">True or False: <span class="process-math">\(\forall n\in \{\textrm{even integers}\}, \exists k\in \mathbb{Z}, n=2k\text{.}\)</span>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-78" id="answer-78"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-78"><div class="answer solution-like"><span class="process-math">\(\forall x\in \mathbb{R}, \exists y\in \mathbb{R}, xy\leq 0\)</span></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-110"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-602">True or False: <span class="process-math">\(\exists x\in \mathbb{R}, \forall y\in \mathbb{R}, xy&gt;0\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-79" id="answer-79"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-79"><div class="answer solution-like">False. No matter which <span class="process-math">\(x\)</span> you choose, <span class="process-math">\(y=-x\)</span> will have <span class="process-math">\(xy\leq 0\)</span>
-</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-111"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-603">Write the negation of <span class="process-math">\(\forall n\in \{\textrm{even integers}\}, \exists k\in \mathbb{Z}, n=2k\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-80" id="answer-80"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-80"><div class="answer solution-like"><span class="process-math">\(\exists n\in \{\textrm{even integers}\}, \forall k\in \mathbb{Z}, n\neq 2k\)</span></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-112"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-604">True or False: <span class="process-math">\(\forall n\in \{\textrm{even integers}\}, \exists k\in \mathbb{Z}, n=2k\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-81" id="answer-81"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-81"><div class="answer solution-like">True. Every even integer is 2 times an integer.</div></div>
-</div></article></section><section class="exercises" id="exercises-9"><h3 class="heading hide-type">
+<li data-component="answer" id="DMT_multquant_CYU_allexistseven_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="DMT_multquant_CYU_allexistseven_opt_t"><div class="para" id="p-731">Every even integer is 2 times an integer.</div></li>
+<li data-component="answer" id="DMT_multquant_CYU_allexistseven_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="DMT_multquant_CYU_allexistseven_opt_f"><div class="para" id="p-731">Every even integer is 2 times an integer.</div></li>
+</ul></div></div></article></section><section class="exercises" id="exercises-9"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="exercise-113"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-605">Let <span class="process-math">\(D=E=\{-2, -1, 0, 1, 2\}\text{.}\)</span> Explain why each of the following statements are true.</div> <ol class="lower-alpha">
-<li id="li-183"><div class="para" id="p-606">
+<div class="para" id="p-732">Let <span class="process-math">\(D=E=\{-2, -1, 0, 1, 2\}\text{.}\)</span> Explain why each of the following statements are true.</div> <ol class="lower-alpha">
+<li id="li-183"><div class="para" id="p-733">
 <span class="process-math">\(\forall x\in D,\ \exists y \in E\text{,}\)</span> such that <span class="process-math">\(x+y=0\text{.}\)</span>
 </div></li>
-<li id="li-184"><div class="para" id="p-607">
+<li id="li-184"><div class="para" id="p-734">
 <span class="process-math">\(\exists x\in D\)</span> such that <span class="process-math">\(\forall y\in E, x+y=y\text{.}\)</span>
 </div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-114"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-608">Let <span class="process-math">\(D=E=\{-2, -1, 0, 1, 2\}\text{.}\)</span> Write the negations for each of the following statements and determine which is true, the given statement or the negation.</div> <ol class="lower-alpha">
-<li id="li-185"><div class="para" id="p-609">
+<div class="para" id="p-735">Let <span class="process-math">\(D=E=\{-2, -1, 0, 1, 2\}\text{.}\)</span> Write the negations for each of the following statements and determine which is true, the given statement or the negation.</div> <ol class="lower-alpha">
+<li id="li-185"><div class="para" id="p-736">
 <span class="process-math">\(\forall x\in D,\ \exists y \in E\text{,}\)</span> such that <span class="process-math">\(x+y=1\text{.}\)</span>
 </div></li>
-<li id="li-186"><div class="para" id="p-610">
+<li id="li-186"><div class="para" id="p-737">
 <span class="process-math">\(\exists x\in D\)</span> such that <span class="process-math">\(\forall y\in E, x+y=-y\text{.}\)</span>
 </div></li>
-<li id="li-187"><div class="para" id="p-611">
+<li id="li-187"><div class="para" id="p-738">
 <span class="process-math">\(\forall x\in D,\ \exists y \in E\text{,}\)</span> such that <span class="process-math">\(xy\geq y\text{.}\)</span>
 </div></li>
-<li id="li-188"><div class="para" id="p-612">
+<li id="li-188"><div class="para" id="p-739">
 <span class="process-math">\(\exists x\in D\)</span> such that <span class="process-math">\(\forall y\in E, x\leq y\text{.}\)</span>
 </div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-115"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-613">For each of the following, (1) rewrite the statement in English without the symbols <span class="process-math">\(\forall\)</span> or <span class="process-math">\(\exists\)</span> or variables. Then (2) indicate whether the statement is true or false.</div> <ol class="lower-alpha">
-<li id="li-189"><div class="para" id="p-614">
+<div class="para" id="p-740">For each of the following, (1) rewrite the statement in English without the symbols <span class="process-math">\(\forall\)</span> or <span class="process-math">\(\exists\)</span> or variables. Then (2) indicate whether the statement is true or false.</div> <ol class="lower-alpha">
+<li id="li-189"><div class="para" id="p-741">
 <span class="process-math">\(\forall\)</span> real numbers <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(\exists\)</span> a real number <span class="process-math">\(y\)</span> such that <span class="process-math">\(x+y=0\text{.}\)</span>
 </div></li>
-<li id="li-190"><div class="para" id="p-615">
+<li id="li-190"><div class="para" id="p-742">
 <span class="process-math">\(\exists\)</span> a real number <span class="process-math">\(y\)</span> such that <span class="process-math">\(\forall\)</span> real numbers <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(x+y=0\text{.}\)</span>
 </div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-116"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-616">For each of the following, (1) rewrite the statement in English without the symbols <span class="process-math">\(\forall\)</span> or <span class="process-math">\(\exists\)</span> or variables. Express your answer as simply as possible. Then (2) write the negation for each statement.</div> <ol class="lower-alpha">
-<li id="li-191"><div class="para" id="p-617">
+<div class="para" id="p-743">For each of the following, (1) rewrite the statement in English without the symbols <span class="process-math">\(\forall\)</span> or <span class="process-math">\(\exists\)</span> or variables. Express your answer as simply as possible. Then (2) write the negation for each statement.</div> <ol class="lower-alpha">
+<li id="li-191"><div class="para" id="p-744">
 <span class="process-math">\(\forall\)</span> colors <span class="process-math">\(C\text{,}\)</span> <span class="process-math">\(\exists\)</span> a candy <span class="process-math">\(A\)</span> such that <span class="process-math">\(A\)</span> is colored <span class="process-math">\(C\text{.}\)</span>
 </div></li>
-<li id="li-192"><div class="para" id="p-618">
+<li id="li-192"><div class="para" id="p-745">
 <span class="process-math">\(\forall\)</span> odd integers <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(\exists\)</span> an integer <span class="process-math">\(k\)</span> such that <span class="process-math">\(n=2k+1\text{.}\)</span>
 </div></li>
-<li id="li-193"><div class="para" id="p-619">
+<li id="li-193"><div class="para" id="p-746">
 <span class="process-math">\(\exists\)</span> a real number <span class="process-math">\(u\)</span> such that <span class="process-math">\(\forall\)</span> real numbers <span class="process-math">\(v\text{,}\)</span> <span class="process-math">\(uv=v\text{.}\)</span>
 </div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-117"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-620">For each of the following, (1) write a new statement by interchanging the symbols <span class="process-math">\(\forall\)</span> and <span class="process-math">\(\exists\text{.}\)</span> Then (2) state which is true: the given statement, the interchanged statement, neither, or both.</div> <ol class="lower-alpha">
-<li id="li-194"><div class="para" id="p-621">
+<div class="para" id="p-747">For each of the following, (1) write a new statement by interchanging the symbols <span class="process-math">\(\forall\)</span> and <span class="process-math">\(\exists\text{.}\)</span> Then (2) state which is true: the given statement, the interchanged statement, neither, or both.</div> <ol class="lower-alpha">
+<li id="li-194"><div class="para" id="p-748">
 <span class="process-math">\(\forall x\in \mathbb{R}\text{,}\)</span> <span class="process-math">\(\exists y\in \mathbb{R}\)</span> such that <span class="process-math">\(x&lt;y\text{.}\)</span>
 </div></li>
-<li id="li-195"><div class="para" id="p-622">
+<li id="li-195"><div class="para" id="p-749">
 <span class="process-math">\(\exists x\in \mathbb{R}\)</span> such that <span class="process-math">\(\forall y\in \mathbb{R}^-\)</span> (the set of negative real numbers), <span class="process-math">\(x&gt;y\text{.}\)</span>
 </div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-118"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-623">For each of the following statements, (1) rewrite the statement formally using quantifiers and variables, and (2) write the negation for the statement.</div> <ol class="lower-alpha">
-<li id="li-196"><div class="para" id="p-624">Everybody trusts somebody.</div></li>
-<li id="li-197"><div class="para" id="p-625">Any even integer equals twice some integer.</div></li>
+<div class="para" id="p-750">For each of the following statements, (1) rewrite the statement formally using quantifiers and variables, and (2) write the negation for the statement.</div> <ol class="lower-alpha">
+<li id="li-196"><div class="para" id="p-751">Everybody trusts somebody.</div></li>
+<li id="li-197"><div class="para" id="p-752">Any even integer equals twice some integer.</div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-119"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-626">Determine whether the following statements are true or false. Give a sentence or two explaining your answer.</div> <ol class="lower-alpha">
-<li id="li-198"><div class="para" id="p-627">
+<div class="para" id="p-753">Determine whether the following statements are true or false. Give a sentence or two explaining your answer.</div> <ol class="lower-alpha">
+<li id="li-198"><div class="para" id="p-754">
 <span class="process-math">\(\forall x\in \mathbb{Z}^+\text{,}\)</span> <span class="process-math">\(\exists y\in \mathbb{Z}^+\)</span> such that <span class="process-math">\(x=y+1\text{.}\)</span>
 </div></li>
-<li id="li-199"><div class="para" id="p-628">
+<li id="li-199"><div class="para" id="p-755">
 <span class="process-math">\(\forall x\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(\exists y\in \mathbb{Z}\)</span> such that <span class="process-math">\(x=y+1\text{.}\)</span>
 </div></li>
-<li id="li-200"><div class="para" id="p-629">
+<li id="li-200"><div class="para" id="p-756">
 <span class="process-math">\(\exists x\in \mathbb{R}\text{,}\)</span> such that <span class="process-math">\(\forall y\in \mathbb{R}\text{,}\)</span> <span class="process-math">\(x=y+1\text{.}\)</span>
 </div></li>
-<li id="li-201"><div class="para" id="p-630">
+<li id="li-201"><div class="para" id="p-757">
 <span class="process-math">\(\forall x\in \mathbb{R}^+\text{,}\)</span> <span class="process-math">\(\exists y\in \mathbb{R}^+\)</span> such that <span class="process-math">\(xy=1\text{.}\)</span>
 </div></li>
-<li id="li-202"><div class="para" id="p-631">
+<li id="li-202"><div class="para" id="p-758">
 <span class="process-math">\(\forall x\in \mathbb{R}\text{,}\)</span> <span class="process-math">\(\exists y\in \mathbb{R}\)</span> such that <span class="process-math">\(xy=1\text{.}\)</span>
 </div></li>
 </ol></article></section></section></div>
@@ -785,5 +818,13 @@ window.MathJax = {
 <div id="ptx-page-footer">
 <a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12894193;
+var sc_invisible=1;
+var sc_security="e67c59eb";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12894193/0/e67c59eb/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
 </body>
 </html>

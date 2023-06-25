@@ -62,8 +62,39 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.0.0dev3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runtime.71ffd81c0faeb38b.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.e543e0dd19670ae2.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.1f1f63d2cda36a4d.css">
 </head>
-<body class="pretext book ignore-math">
+<body id="DiscreteMathText" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" href=""></a><div class="title-container">
 <h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
@@ -549,27 +580,27 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="probability9-1"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">9.1</span> <span class="title">Probability</span>
 </h2>
-<div class="para" id="p-2383">Let <span class="process-math">\(S\)</span> be a set of possible outcomes, called a <dfn class="terminology">sample space</dfn>. Let <span class="process-math">\(E\)</span> be a subset of <span class="process-math">\(S\)</span> with some property. We call <span class="process-math">\(E\)</span> an <dfn class="terminology">event</dfn>.</div>
-<div class="para" id="p-2384">The <dfn class="terminology">probability</dfn> of event <span class="process-math">\(E\text{,}\)</span> <span class="process-math">\(P(E)\text{,}\)</span> is the number of outcomes in <span class="process-math">\(E\)</span> divided by the total number of outcomes in <span class="process-math">\(S\text{.}\)</span>
+<div class="para" id="p-2623">Let <span class="process-math">\(S\)</span> be a set of possible outcomes, called a <dfn class="terminology">sample space</dfn>. Let <span class="process-math">\(E\)</span> be a subset of <span class="process-math">\(S\)</span> with some property. We call <span class="process-math">\(E\)</span> an <dfn class="terminology">event</dfn>.</div>
+<div class="para" id="p-2624">The <dfn class="terminology">probability</dfn> of event <span class="process-math">\(E\text{,}\)</span> <span class="process-math">\(P(E)\text{,}\)</span> is the number of outcomes in <span class="process-math">\(E\)</span> divided by the total number of outcomes in <span class="process-math">\(S\text{.}\)</span>
 </div>
-<div class="para" id="p-2385">Let <span class="process-math">\(N(E)\)</span> be the number of elements in <span class="process-math">\(E\text{.}\)</span> Similarly, <span class="process-math">\(N(S)\text{,}\)</span> is the number of outcomes in <span class="process-math">\(S\text{.}\)</span>
+<div class="para" id="p-2625">Let <span class="process-math">\(N(E)\)</span> be the number of elements in <span class="process-math">\(E\text{.}\)</span> Similarly, <span class="process-math">\(N(S)\text{,}\)</span> is the number of outcomes in <span class="process-math">\(S\text{.}\)</span>
 </div>
-<div class="para" id="p-2386">In notation, <span class="process-math">\(P(E)=\frac{N(E)}{N(S)}\text{.}\)</span>
+<div class="para" id="p-2626">In notation, <span class="process-math">\(P(E)=\frac{N(E)}{N(S)}\text{.}\)</span>
 </div>
 <article class="example example-like" id="E_probcards"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_probcards"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Finding Probability of an Event.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_probcards"><article class="example example-like"> <div class="para" id="p-2387">A standard deck of playing cards has 52 cards. Each card has a suit and a value. The deck has four suits: hearts, diamonds, spades, clubs. Each suit has 13 values: Ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, King. The spades and clubs are called “black” cards, the hearts and diamonds are called “red” cards.</div> <div class="para" id="p-2388">Find the probability you randomly choose a club from the deck.</div> <div class="para" id="p-2389">Note, <span class="process-math">\(E\)</span> is the set of clubs, <span class="process-math">\(S\)</span> is the set of cards.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-366" id="answer-366"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-366"><div class="answer solution-like"><span class="process-math">\(P(E)=\frac{13}{52}=\frac{1}{4}\)</span></div></div> <div class="para" id="p-2390">Find the probability you randomly choose a red card from the deck.</div> <div class="para" id="p-2391">Note, <span class="process-math">\(E\)</span> is the set of hearts and diamonds, <span class="process-math">\(S\)</span> is the set of cards.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-367" id="answer-367"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-367"><div class="answer solution-like"><span class="process-math">\(P(E)=\frac{26}{52}=\frac{1}{2}\)</span></div></div> <div class="para" id="p-2392">Find the probability you randomly choose a 2 from the deck.</div> <div class="para" id="p-2393">Note, <span class="process-math">\(E\)</span> is the set of 2's, <span class="process-math">\(S\)</span> is the set of cards.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-368" id="answer-368"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-368"><div class="answer solution-like"><span class="process-math">\(P(E)=\frac{4}{52}=\frac{1}{13}\)</span></div></div></article></div>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_probcards"><article class="example example-like"> <div class="para" id="p-2627">A standard deck of playing cards has 52 cards. Each card has a suit and a value. The deck has four suits: hearts, diamonds, spades, clubs. Each suit has 13 values: Ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, King. The spades and clubs are called “black” cards, the hearts and diamonds are called “red” cards.</div> <div class="para" id="p-2628">Find the probability you randomly choose a club from the deck.</div> <div class="para" id="p-2629">Note, <span class="process-math">\(E\)</span> is the set of clubs, <span class="process-math">\(S\)</span> is the set of cards.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-358" id="answer-358"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-358"><div class="answer solution-like"><span class="process-math">\(P(E)=\frac{13}{52}=\frac{1}{4}\)</span></div></div> <div class="para" id="p-2630">Find the probability you randomly choose a red card from the deck.</div> <div class="para" id="p-2631">Note, <span class="process-math">\(E\)</span> is the set of hearts and diamonds, <span class="process-math">\(S\)</span> is the set of cards.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-359" id="answer-359"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-359"><div class="answer solution-like"><span class="process-math">\(P(E)=\frac{26}{52}=\frac{1}{2}\)</span></div></div> <div class="para" id="p-2632">Find the probability you randomly choose a 2 from the deck.</div> <div class="para" id="p-2633">Note, <span class="process-math">\(E\)</span> is the set of 2's, <span class="process-math">\(S\)</span> is the set of cards.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-360" id="answer-360"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-360"><div class="answer solution-like"><span class="process-math">\(P(E)=\frac{4}{52}=\frac{1}{13}\)</span></div></div></article></div>
 <article class="activity project-like" id="activity-148"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.1.1</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-78"><div class="para" id="p-2394">Suppose you toss a fair coin two times.</div></div>
+<div class="introduction" id="introduction-78"><div class="para" id="p-2634">Suppose you toss a fair coin two times.</div></div>
 <article class="task exercise-like" id="task-234"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-2395">List all the possible outcomes.</div></article><article class="task exercise-like" id="task-235"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-2396">What is the probability that you get exactly 2 heads?</div></article><article class="task exercise-like" id="task-236"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-2397">What is the probability that you get exactly 1 head?</div></article></article><div class="para" id="p-2398">In order to calculate a probability, we need to be able to count <dfn class="terminology">equally-likely</dfn> events. Just because there are, say, 3 outcomes, that doesn't mean all the outcomes are equally-likely. For example, the Linfied football team could win, lose, or tie a game. Given the team's winning streak, the three outcomes are not equally-likely. They have a much higher probability of winning than just 1/3.</div>
-<div class="para" id="p-2399">Thus, the focus for the rest of the chapter will be on counting events. Once we can count outcomes, it is straight-forward to find the probability.</div>
-<div class="para" id="p-2400">Before moving on, though, we will state a few useful facts about probabilities.</div>
-<div class="para logical" id="p-2401"><ul class="disc">
+<div class="para" id="p-2635">List all the possible outcomes.</div></article><article class="task exercise-like" id="task-235"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-2636">What is the probability that you get exactly 2 heads?</div></article><article class="task exercise-like" id="task-236"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-2637">What is the probability that you get exactly 1 head?</div></article></article><div class="para" id="p-2638">In order to calculate a probability, we need to be able to count <dfn class="terminology">equally-likely</dfn> events. Just because there are, say, 3 outcomes, that doesn't mean all the outcomes are equally-likely. For example, the Linfied football team could win, lose, or tie a game. Given the team's winning streak, the three outcomes are not equally-likely. They have a much higher probability of winning than just 1/3.</div>
+<div class="para" id="p-2639">Thus, the focus for the rest of the chapter will be on counting events. Once we can count outcomes, it is straight-forward to find the probability.</div>
+<div class="para" id="p-2640">Before moving on, though, we will state a few useful facts about probabilities.</div>
+<div class="para logical" id="p-2641"><ul class="disc">
 <li id="li-603"><div class="para" id="p-derived-li-603">
 <span class="process-math">\(P(E)\)</span> is always a number between 0 and 1. The probability can be 0.5. It cannot be 50%</div></li>
 <li id="li-604"><div class="para" id="p-derived-li-604">
@@ -580,57 +611,42 @@ window.MathJax = {
 <section class="reading-questions" id="reading-questions-32"><h3 class="heading hide-type">
 <span class="type">Reading Questions</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-485"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-2402">In a standard deck of cards, find the probability of randomly drawing an Ace.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-369" id="answer-369"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-369"><div class="answer solution-like"><span class="process-math">\(\frac{4}{52}\)</span></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-486"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-2403">In a standard deck of cards, find the probability of randomly drawing a face card (Jack, Queen, King).</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-370" id="answer-370"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-370"><div class="answer solution-like"><span class="process-math">\(\frac{12}{52}\)</span></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-487"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-2404">In a standard deck of cards, find the probability of randomly drawing an even numbered card.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-371" id="answer-371"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-371"><div class="answer solution-like"><span class="process-math">\(\frac{20}{52}\)</span></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-488"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-2405">An urn contains 3 red balls, 2 green balls, 4 multicolored balls. Find the probability of drawing a green ball.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-372" id="answer-372"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-372"><div class="answer solution-like"><span class="process-math">\(\frac{2}{9}\)</span></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-489"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-2406">An urn contains 3 red balls, 2 green balls, 4 multicolored balls. Find the probability of drawing a solid colored ball.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-373" id="answer-373"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-373"><div class="answer solution-like"><span class="process-math">\(\frac{5}{9}\)</span></div></div>
-</div></article></section><section class="exercises" id="exercises-32"><h3 class="heading hide-type">
+<article class="exercise exercise-like" id="exercise-478"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-2642">In a standard deck of cards, find the probability of randomly drawing an Ace.</div></article><article class="exercise exercise-like" id="exercise-479"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-2643">In a standard deck of cards, find the probability of randomly drawing a face card (Jack, Queen, King).</div></article><article class="exercise exercise-like" id="exercise-480"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-2644">In a standard deck of cards, find the probability of randomly drawing an even numbered card.</div></article><article class="exercise exercise-like" id="exercise-481"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="p-2645">An urn contains 3 red balls, 2 green balls, 4 multicolored balls. Find the probability of drawing a green ball.</div></article><article class="exercise exercise-like" id="exercise-482"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="p-2646">An urn contains 3 red balls, 2 green balls, 4 multicolored balls. Find the probability of drawing a solid colored ball.</div></article></section><section class="exercises" id="exercises-32"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-490"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-2407">Assume the sample space is a standard deck of 52 cards. Suppose you choose a random card from the deck.</div> <ol class="lower-alpha">
-<li id="li-606"><div class="para" id="p-2408">List all the possible outcomes of the card being red and not a face card.</div></li>
-<li id="li-607"><div class="para" id="p-2409">Calculate the probability of the event in (a).</div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-491"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-2410">Assume the sample space is a standard deck of 52 cards. Suppose you choose a random card from the deck.</div> <ol class="lower-alpha">
-<li id="li-608"><div class="para" id="p-2411">List all the possible outcomes of the card being black and having an even number on it.</div></li>
-<li id="li-609"><div class="para" id="p-2412">Calculate the probability of the event in (a).</div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-492"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-2413">Assume the sample space is the possible rolls of a pair of dice, one blue die and one red die.</div> <ol class="lower-alpha">
-<li id="li-610"><div class="para" id="p-2414">List all the possible outcomes where the sum of the numbers showing face up is 8.</div></li>
-<li id="li-611"><div class="para" id="p-2415">Calculate the probability of the event in (a).</div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-493"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-2416">Assume the sample space is the possible rolls of a pair of dice, one blue die and one red die.</div> <ol class="lower-alpha">
-<li id="li-612"><div class="para" id="p-2417">List all the possible outcomes where the sum of the numbers showing face up is at most 6.</div></li>
-<li id="li-613"><div class="para" id="p-2418">Calculate the probability of the event in (a).</div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-494"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-2419">Suppose a coin is tossed four times and the side showing face up on each toss is noted. Suppose also that heads and tails are equally-likely for the coin.</div> <ol class="lower-alpha">
-<li id="li-614"><div class="para" id="p-2420">List the 16 elements in the sample space as sequences of heads and tails.</div></li>
-<li id="li-615"><div class="para" id="p-2421">List the set of outcomes and the probability for the event of exactly one toss resulting in a head.</div></li>
-<li id="li-616"><div class="para" id="p-2422">List the set of outcomes and the probability for the event that at least two tosses result in a head.</div></li>
-<li id="li-617"><div class="para" id="p-2423">List the set of outcomes and the probability for the event that no toss results in a head.</div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-495"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-2424">Suppose that on a true/false exam you have no idea about the answers to three questions. You choose your answers randomly and therefore have a 50-50 chance of being correct on any one question. For example, let <span class="process-math">\(CCW\)</span> indicate that you were correct on the first two questions but wrong on the third.</div> <ol class="lower-alpha">
-<li id="li-618"><div class="para" id="p-2425">List all the elements of the sample space as the possible sequences of <span class="process-math">\(C\)</span> and <span class="process-math">\(W\)</span> for the three questions.</div></li>
-<li id="li-619"><div class="para" id="p-2426">List the set of outcomes and the probability for the event that exactly one answer is correct.</div></li>
-<li id="li-620"><div class="para" id="p-2427">List the set of outcomes and the probability for the event that at least two answers are correct.</div></li>
-<li id="li-621"><div class="para" id="p-2428">List the set of outcomes and the probability for the event that no answers are correct.</div></li>
+<article class="exercise exercise-like" id="exercise-483"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-2647">Assume the sample space is a standard deck of 52 cards. Suppose you choose a random card from the deck.</div> <ol class="lower-alpha">
+<li id="li-606"><div class="para" id="p-2648">List all the possible outcomes of the card being red and not a face card.</div></li>
+<li id="li-607"><div class="para" id="p-2649">Calculate the probability of the event in (a).</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-484"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-2650">Assume the sample space is a standard deck of 52 cards. Suppose you choose a random card from the deck.</div> <ol class="lower-alpha">
+<li id="li-608"><div class="para" id="p-2651">List all the possible outcomes of the card being black and having an even number on it.</div></li>
+<li id="li-609"><div class="para" id="p-2652">Calculate the probability of the event in (a).</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-485"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-2653">Assume the sample space is the possible rolls of a pair of dice, one blue die and one red die.</div> <ol class="lower-alpha">
+<li id="li-610"><div class="para" id="p-2654">List all the possible outcomes where the sum of the numbers showing face up is 8.</div></li>
+<li id="li-611"><div class="para" id="p-2655">Calculate the probability of the event in (a).</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-486"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="p-2656">Assume the sample space is the possible rolls of a pair of dice, one blue die and one red die.</div> <ol class="lower-alpha">
+<li id="li-612"><div class="para" id="p-2657">List all the possible outcomes where the sum of the numbers showing face up is at most 6.</div></li>
+<li id="li-613"><div class="para" id="p-2658">Calculate the probability of the event in (a).</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-487"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="p-2659">Suppose a coin is tossed four times and the side showing face up on each toss is noted. Suppose also that heads and tails are equally-likely for the coin.</div> <ol class="lower-alpha">
+<li id="li-614"><div class="para" id="p-2660">List the 16 elements in the sample space as sequences of heads and tails.</div></li>
+<li id="li-615"><div class="para" id="p-2661">List the set of outcomes and the probability for the event of exactly one toss resulting in a head.</div></li>
+<li id="li-616"><div class="para" id="p-2662">List the set of outcomes and the probability for the event that at least two tosses result in a head.</div></li>
+<li id="li-617"><div class="para" id="p-2663">List the set of outcomes and the probability for the event that no toss results in a head.</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-488"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="p-2664">Suppose that on a true/false exam you have no idea about the answers to three questions. You choose your answers randomly and therefore have a 50-50 chance of being correct on any one question. For example, let <span class="process-math">\(CCW\)</span> indicate that you were correct on the first two questions but wrong on the third.</div> <ol class="lower-alpha">
+<li id="li-618"><div class="para" id="p-2665">List all the elements of the sample space as the possible sequences of <span class="process-math">\(C\)</span> and <span class="process-math">\(W\)</span> for the three questions.</div></li>
+<li id="li-619"><div class="para" id="p-2666">List the set of outcomes and the probability for the event that exactly one answer is correct.</div></li>
+<li id="li-620"><div class="para" id="p-2667">List the set of outcomes and the probability for the event that at least two answers are correct.</div></li>
+<li id="li-621"><div class="para" id="p-2668">List the set of outcomes and the probability for the event that no answers are correct.</div></li>
 </ol></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="chapter9.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="multrule9-2.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
@@ -639,5 +655,13 @@ window.MathJax = {
 <div id="ptx-page-footer">
 <a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12894193;
+var sc_invisible=1;
+var sc_security="e67c59eb";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12894193/0/e67c59eb/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
 </body>
 </html>

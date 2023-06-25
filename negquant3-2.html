@@ -62,8 +62,39 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.0.0dev3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runtime.71ffd81c0faeb38b.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.e543e0dd19670ae2.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.1f1f63d2cda36a4d.css">
 </head>
-<body class="pretext book ignore-math">
+<body id="DiscreteMathText" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" href=""></a><div class="title-container">
 <h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
@@ -549,12 +580,12 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="negquant3-2"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.2</span> <span class="title">Negating Quantified Statements</span>
 </h2>
-<div class="para" id="p-481">In this section we will look at how to negate statements involving quantifiers.</div>
-<div class="para" id="p-482">If you look back at the Check your Understanding questions in <a href="quantifiersI3-1.html" class="internal" title="Section 3.1: Quantifiers">Section 3.1</a>, you should notice that both <span class="process-math">\(\forall x\in D, P(x)\)</span> and <span class="process-math">\(\forall x\in D, \sim P(x)\)</span> were false, which means they are not negations of each other. Similarly, both <span class="process-math">\(\exists x\in D, P(x)\)</span> and <span class="process-math">\(\exists x \in D, \sim P(x)\)</span> were true. In general, the two statements won't necessarily have the same truth values, but the examples were chosen to make sure we can see that they are not negations of each other.</div>
+<div class="para" id="p-583">In this section we will look at how to negate statements involving quantifiers.</div>
+<div class="para" id="p-584">If you look back at the Check your Understanding questions in <a href="quantifiersI3-1.html" class="internal" title="Section 3.1: Quantifiers">Section 3.1</a>, you should notice that both <span class="process-math">\(\forall x\in D, P(x)\)</span> and <span class="process-math">\(\forall x\in D, \sim P(x)\)</span> were false, which means they are not negations of each other. Similarly, both <span class="process-math">\(\exists x\in D, P(x)\)</span> and <span class="process-math">\(\exists x \in D, \sim P(x)\)</span> were true. In general, the two statements won't necessarily have the same truth values, but the examples were chosen to make sure we can see that they are not negations of each other.</div>
 <article class="assemblage assemblage-like" id="B_negquantstate"><h3 class="heading"><span class="title">Negating Quantified Statements.</span></h3>
-<div class="para" id="p-483">The negation of <span class="process-math">\(\forall x\in D, P(x)\)</span> is <span class="process-math">\(\exists x\in D, \sim P(x)\text{.}\)</span>
+<div class="para" id="p-585">The negation of <span class="process-math">\(\forall x\in D, P(x)\)</span> is <span class="process-math">\(\exists x\in D, \sim P(x)\text{.}\)</span>
 </div>
-<div class="para logical" id="p-484">
+<div class="para logical" id="p-586">
 <div class="para">In notation:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -562,29 +593,29 @@ window.MathJax = {
 \end{equation*}
 </div>
 </div>
-<div class="para" id="p-485">The negation of <span class="process-math">\(\exists x\in D, P(x)\)</span> is <span class="process-math">\(\forall x\in D, \sim P(x)\text{.}\)</span>
+<div class="para" id="p-587">The negation of <span class="process-math">\(\exists x\in D, P(x)\)</span> is <span class="process-math">\(\forall x\in D, \sim P(x)\text{.}\)</span>
 </div>
-<div class="para logical" id="p-486">
+<div class="para logical" id="p-588">
 <div class="para">In notation:</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \sim(\exists x\in D, P(x))\equiv \forall x\in D, \sim P(x).
 \end{equation*}
 </div>
-</div></article><div class="para" id="p-487">We can think of negation as switching the quantifier and negating <span class="process-math">\(P(x)\text{,}\)</span> but it will be really helpful if we can understand <em class="emphasis">why</em> this is the negation. Thinking about negating a “for all” statement, we need the statement to not be true for all things, which means it must be false for something, Thus, there exists something making <span class="process-math">\(\sim P(x)\)</span> true. Thinking about negating a “there exists” statement, we need there not to exist anything making <span class="process-math">\(P(x)\)</span> true, which means <span class="process-math">\(P(x)\)</span> must be false for everything. Thus, everything makes <span class="process-math">\(\sim P(x)\)</span> true.</div>
+</div></article><div class="para" id="p-589">We can think of negation as switching the quantifier and negating <span class="process-math">\(P(x)\text{,}\)</span> but it will be really helpful if we can understand <em class="emphasis">why</em> this is the negation. Thinking about negating a “for all” statement, we need the statement to not be true for all things, which means it must be false for something, Thus, there exists something making <span class="process-math">\(\sim P(x)\)</span> true. Thinking about negating a “there exists” statement, we need there not to exist anything making <span class="process-math">\(P(x)\)</span> true, which means <span class="process-math">\(P(x)\)</span> must be false for everything. Thus, everything makes <span class="process-math">\(\sim P(x)\)</span> true.</div>
 <article class="example example-like" id="E_negquant1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_negquant1"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Negating a Quantified Statement.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_negquant1"><article class="example example-like"> <div class="para" id="p-488">Negate the statement: For all primes <span class="process-math">\(p\text{,}\)</span> <span class="process-math">\(p\)</span> is odd. Is this statement true or false?</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-62" id="answer-62"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-62"><div class="answer solution-like"><div class="para" id="p-489">There exist a prime <span class="process-math">\(p\)</span> such that <span class="process-math">\(p\)</span> is not odd. The original statement is false, since we can find an even prime (<span class="process-math">\(p=2\)</span>).</div></div></div> <div class="para" id="p-490">Negate the statement: There exists a real number <span class="process-math">\(x\text{,}\)</span> such that <span class="process-math">\(x^2&lt; 0\text{.}\)</span> Is this statement true or false?</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-63" id="answer-63"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-63"><div class="answer solution-like"><div class="para" id="p-491">For all real numbers <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(x^2\geq 0\text{.}\)</span> The original statement is false, since the negation is true.</div></div></div></article></div>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_negquant1"><article class="example example-like"> <div class="para" id="p-590">Negate the statement: For all primes <span class="process-math">\(p\text{,}\)</span> <span class="process-math">\(p\)</span> is odd. Is this statement true or false?</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-62" id="answer-62"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-62"><div class="answer solution-like"><div class="para" id="p-591">There exist a prime <span class="process-math">\(p\)</span> such that <span class="process-math">\(p\)</span> is not odd. The original statement is false, since we can find an even prime (<span class="process-math">\(p=2\)</span>).</div></div></div> <div class="para" id="p-592">Negate the statement: There exists a real number <span class="process-math">\(x\text{,}\)</span> such that <span class="process-math">\(x^2&lt; 0\text{.}\)</span> Is this statement true or false?</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-63" id="answer-63"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-63"><div class="answer solution-like"><div class="para" id="p-593">For all real numbers <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(x^2\geq 0\text{.}\)</span> The original statement is false, since the negation is true.</div></div></div></article></div>
 <article class="activity project-like" id="A_simpleneg"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-14"><div class="para" id="p-492">Write the negation of the following statements (in English).</div></div>
+<div class="introduction" id="introduction-14"><div class="para" id="p-594">Write the negation of the following statements (in English).</div></div>
 <article class="task exercise-like" id="task-39"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-493">For all integers <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(\sqrt{n}\)</span> is an integer.</div></article><article class="task exercise-like" id="task-40"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-494">There exists an integer <span class="process-math">\(n\text{,}\)</span> such that <span class="process-math">\(n^2=5\text{.}\)</span>
-</div></article></article><div class="para" id="p-495">Many of our quantified statements may have predicates involving other logical connectives. So it is going to be important to remember how to negate "and"s, "or"s, and "if...then"s. The following summarizes the rules we have already seen for negating statements with connectives</div>
+<div class="para" id="p-595">For all integers <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(\sqrt{n}\)</span> is an integer.</div></article><article class="task exercise-like" id="task-40"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-596">There exists an integer <span class="process-math">\(n\text{,}\)</span> such that <span class="process-math">\(n^2=5\text{.}\)</span>
+</div></article></article><div class="para" id="p-597">Many of our quantified statements may have predicates involving other logical connectives. So it is going to be important to remember how to negate "and"s, "or"s, and "if...then"s. The following summarizes the rules we have already seen for negating statements with connectives</div>
 <article class="assemblage assemblage-like" id="B_negconnectives"><h3 class="heading"><span class="title">Negations of Logical Statements.</span></h3>
-<div class="para logical" id="p-496"><ul class="disc">
+<div class="para logical" id="p-598"><ul class="disc">
 <li id="li-160">
 <span class="heading"><span class="title">AND statement.</span></span><div class="para" id="p-derived-li-160"> <span class="process-math">\(\sim(p\wedge q)\equiv \sim p\ \vee \sim q\text{.}\)</span> This is DeMorgan's Law.</div>
 </li>
@@ -605,132 +636,199 @@ window.MathJax = {
 </ul></div></article><article class="activity project-like" id="A_complexneg"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-15"><div class="para" id="p-497">Write the negation of the following statements (in English).</div></div>
+<div class="introduction" id="introduction-15"><div class="para" id="p-599">Write the negation of the following statements (in English).</div></div>
 <article class="task exercise-like" id="task-41"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-498">There exists an integer <span class="process-math">\(n\text{,}\)</span> such that <span class="process-math">\(1 &lt; n &lt; 2\text{.}\)</span>
+<div class="para" id="p-600">There exists an integer <span class="process-math">\(n\text{,}\)</span> such that <span class="process-math">\(1 &lt; n &lt; 2\text{.}\)</span>
 </div></article><article class="task exercise-like" id="task-42"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-499">For all real numbers  <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x+5&gt;7\text{.}\)</span>
+<div class="para" id="p-601">For all real numbers  <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x+5&gt;7\text{.}\)</span>
 </div></article><article class="task exercise-like" id="task-43"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-500">For all functions <span class="process-math">\(f\text{,}\)</span> if <span class="process-math">\(f\)</span> is continuous, then <span class="process-math">\(f\)</span> is differentiable.</div></article></article><div class="para" id="p-501">Recall from <a href="conditional2-2.html" class="internal" title="Section 2.2: Conditional Statements">Section 2.2</a> the contapositive of <span class="process-math">\(p\rightarrow q\)</span> is <span class="process-math">\(\sim q\rightarrow p\text{.}\)</span> We can use this to define the contrapositive of a universal conditional statement.</div>
+<div class="para" id="p-602">For all functions <span class="process-math">\(f\text{,}\)</span> if <span class="process-math">\(f\)</span> is continuous, then <span class="process-math">\(f\)</span> is differentiable.</div></article></article><div class="para" id="p-603">Recall from <a href="conditional2-2.html" class="internal" title="Section 2.2: Conditional Statements">Section 2.2</a> the contapositive of <span class="process-math">\(p\rightarrow q\)</span> is <span class="process-math">\(\sim q\rightarrow p\text{.}\)</span> We can use this to define the contrapositive of a universal conditional statement.</div>
 <article class="definition definition-like" id="D_contrapositiveuc"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-502">The universal conditional statement <span class="process-math">\(\forall x\in D, P(x)\rightarrow Q(x)\)</span> has <dfn class="terminology">contrapositive</dfn> <span class="process-math">\(\forall x\in D, \sim Q(x)\rightarrow \sim P(x)\text{.}\)</span>
-</div></article><div class="para" id="p-503">Similarly, the converse of <span class="process-math">\(p\rightarrow q\)</span> is <span class="process-math">\(q\rightarrow p\text{.}\)</span>
+<div class="para" id="p-604">The universal conditional statement <span class="process-math">\(\forall x\in D, P(x)\rightarrow Q(x)\)</span> has <dfn class="terminology">contrapositive</dfn> <span class="process-math">\(\forall x\in D, \sim Q(x)\rightarrow \sim P(x)\text{.}\)</span>
+</div></article><div class="para" id="p-605">Similarly, the converse of <span class="process-math">\(p\rightarrow q\)</span> is <span class="process-math">\(q\rightarrow p\text{.}\)</span>
 </div>
 <article class="definition definition-like" id="D_converseuc"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-504">The universal conditional statement <span class="process-math">\(\forall x\in D, P(x)\rightarrow Q(x)\)</span> has <dfn class="terminology">converse</dfn> <span class="process-math">\(\forall x\in D, Q(x)\rightarrow P(x)\text{.}\)</span>
+<div class="para" id="p-606">The universal conditional statement <span class="process-math">\(\forall x\in D, P(x)\rightarrow Q(x)\)</span> has <dfn class="terminology">converse</dfn> <span class="process-math">\(\forall x\in D, Q(x)\rightarrow P(x)\text{.}\)</span>
 </div></article><article class="activity project-like" id="A_contrapos1"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-16"><div class="para" id="p-505">Consider the statement “For all real numbers  <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\((x+1)(x-2)&gt;0\)</span> then <span class="process-math">\(x &lt; -1\)</span> or <span class="process-math">\(x&gt;2\text{.}\)</span>”</div></div>
+<div class="introduction" id="introduction-16"><div class="para" id="p-607">Consider the statement “For all real numbers  <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\((x+1)(x-2)&gt;0\)</span> then <span class="process-math">\(x &lt; -1\)</span> or <span class="process-math">\(x&gt;2\text{.}\)</span>”</div></div>
 <article class="task exercise-like" id="task-44"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-506">Write the negation of the statement.</div></article><article class="task exercise-like" id="task-45"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-507">Write the contrapositive of the statement.</div></article></article><article class="activity project-like" id="A_contrapos2"><h3 class="heading">
+<div class="para" id="p-608">Write the negation of the statement.</div></article><article class="task exercise-like" id="task-45"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-609">Write the contrapositive of the statement.</div></article></article><article class="activity project-like" id="A_contrapos2"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.4</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-17"><div class="para" id="p-508">Consider the statement “For all integers  <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n\)</span> has a factor of 15, then <span class="process-math">\(n\)</span> has a factor of 3 and <span class="process-math">\(n\)</span> has a factor of 5.”</div></div>
+<div class="introduction" id="introduction-17"><div class="para" id="p-610">Consider the statement “For all integers  <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n\)</span> has a factor of 15, then <span class="process-math">\(n\)</span> has a factor of 3 and <span class="process-math">\(n\)</span> has a factor of 5.”</div></div>
 <article class="task exercise-like" id="task-46"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-509">Write the negation of the statement.</div></article><article class="task exercise-like" id="task-47"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-510">Write the contrapositive of the statement.</div></article></article><div class="para" id="p-511">The relationship between “for all” and “there exists” can be used to show some surprising things. What happens if our domain, <span class="process-math">\(D\text{,}\)</span> has nothing in it? In particular, let <span class="process-math">\(D=\emptyset\text{,}\)</span> the empty set. Is <span class="process-math">\(\forall x\in D, P(x)\)</span> true or false? Well, let's look at the negation: <span class="process-math">\(\exists x\in D, \sim P(x)\text{.}\)</span> Now the negation <em class="emphasis">must</em> be false since <span class="process-math">\(D\)</span> has nothing in it, so there can't exist something in <span class="process-math">\(D\)</span> making <span class="process-math">\(\sim P(x)\)</span> true. Since the negation is false, the original statement is true! We say <span class="process-math">\(\forall x\in D, P(x)\)</span> is <dfn class="terminology">vacuously</dfn> true.</div>
+<div class="para" id="p-611">Write the negation of the statement.</div></article><article class="task exercise-like" id="task-47"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-612">Write the contrapositive of the statement.</div></article></article><div class="para" id="p-613">The relationship between “for all” and “there exists” can be used to show some surprising things. What happens if our domain, <span class="process-math">\(D\text{,}\)</span> has nothing in it? In particular, let <span class="process-math">\(D=\emptyset\text{,}\)</span> the empty set. Is <span class="process-math">\(\forall x\in D, P(x)\)</span> true or false? Well, let's look at the negation: <span class="process-math">\(\exists x\in D, \sim P(x)\text{.}\)</span> Now the negation <em class="emphasis">must</em> be false since <span class="process-math">\(D\)</span> has nothing in it, so there can't exist something in <span class="process-math">\(D\)</span> making <span class="process-math">\(\sim P(x)\)</span> true. Since the negation is false, the original statement is true! We say <span class="process-math">\(\forall x\in D, P(x)\)</span> is <dfn class="terminology">vacuously</dfn> true.</div>
 <article class="example example-like" id="E_vacuouslytrue"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_vacuouslytrue"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Vacuously True Statement.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_vacuouslytrue"><article class="example example-like"> <div class="para" id="p-512">Consider the statement “For all llamas, <span class="process-math">\(L\text{,}\)</span> in Discrete Math, <span class="process-math">\(L\)</span> is getting an A.” The negation is “There exists a llama, <span class="process-math">\(L\text{,}\)</span> in Discrete Math, such that  <span class="process-math">\(L\)</span> is not getting an A.” Since no such llama exists, the negation is false. Making the original true. So every llama in Discrete is getting an A.</div></article></div>
-<div class="para" id="p-513">As one additional note, it can be helpful in deciding if your negation is correct by finding the truth value of both the original and the negation. They should have opposite values. Similarly, if you need to determine the truth value of a complex statement, it might be easier to find the truth value of the negation.</div>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_vacuouslytrue"><article class="example example-like"> <div class="para" id="p-614">Consider the statement “For all llamas, <span class="process-math">\(L\text{,}\)</span> in Discrete Math, <span class="process-math">\(L\)</span> is getting an A.” The negation is “There exists a llama, <span class="process-math">\(L\text{,}\)</span> in Discrete Math, such that  <span class="process-math">\(L\)</span> is not getting an A.” Since no such llama exists, the negation is false. Making the original true. So every llama in Discrete is getting an A.</div></article></div>
+<div class="para" id="p-615">As one additional note, it can be helpful in deciding if your negation is correct by finding the truth value of both the original and the negation. They should have opposite values. Similarly, if you need to determine the truth value of a complex statement, it might be easier to find the truth value of the negation.</div>
 <article class="activity project-like" id="activity-46"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.5</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-18"><div class="para" id="p-514">Determine if each of the following statements are true or false. It may be helpful to look at the negations you founds in the above activities, <a href="" class="xref" data-knowl="./knowl/A_simpleneg.html" title="Activity 3.2.1">Activity 3.2.1</a>, <a href="" class="xref" data-knowl="./knowl/A_complexneg.html" title="Activity 3.2.2">Activity 3.2.2</a>, <a href="" class="xref" data-knowl="./knowl/A_contrapos1.html" title="Activity 3.2.3">Activity 3.2.3</a>, and <a href="" class="xref" data-knowl="./knowl/A_contrapos2.html" title="Activity 3.2.4">Activity 3.2.4</a>.</div></div>
+<div class="introduction" id="introduction-18"><div class="para" id="p-616">Determine if each of the following statements are true or false. It may be helpful to look at the negations you founds in the above activities, <a href="" class="xref" data-knowl="./knowl/A_simpleneg.html" title="Activity 3.2.1">Activity 3.2.1</a>, <a href="" class="xref" data-knowl="./knowl/A_complexneg.html" title="Activity 3.2.2">Activity 3.2.2</a>, <a href="" class="xref" data-knowl="./knowl/A_contrapos1.html" title="Activity 3.2.3">Activity 3.2.3</a>, and <a href="" class="xref" data-knowl="./knowl/A_contrapos2.html" title="Activity 3.2.4">Activity 3.2.4</a>.</div></div>
 <article class="task exercise-like" id="task-48"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-515">For all integers <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(\sqrt{n}\)</span> is an integer.</div></article><article class="task exercise-like" id="task-49"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-516">There exists an integer <span class="process-math">\(n\text{,}\)</span> such that <span class="process-math">\(n^2=5\text{.}\)</span>
+<div class="para" id="p-617">For all integers <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(\sqrt{n}\)</span> is an integer.</div></article><article class="task exercise-like" id="task-49"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-618">There exists an integer <span class="process-math">\(n\text{,}\)</span> such that <span class="process-math">\(n^2=5\text{.}\)</span>
 </div></article><article class="task exercise-like" id="task-50"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-517">There exists an integer <span class="process-math">\(n\text{,}\)</span> such that <span class="process-math">\(1 &lt; n &lt; 2\text{.}\)</span>
+<div class="para" id="p-619">There exists an integer <span class="process-math">\(n\text{,}\)</span> such that <span class="process-math">\(1 &lt; n &lt; 2\text{.}\)</span>
 </div></article><article class="task exercise-like" id="task-51"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="p-518">For all real numbers  <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x+5&gt;7\text{.}\)</span>
+<div class="para" id="p-620">For all real numbers  <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x+5&gt;7\text{.}\)</span>
 </div></article><article class="task exercise-like" id="task-52"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="p-519">For all functions <span class="process-math">\(f\text{,}\)</span> if <span class="process-math">\(f\)</span> is continuous, then <span class="process-math">\(f\)</span> is differentiable.</div></article><article class="task exercise-like" id="task-53"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="p-520">For all real numbers  <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\((x+1)(x-2)&gt;0\)</span> then <span class="process-math">\(x &lt; -1\)</span> or <span class="process-math">\(x&gt;2\text{.}\)</span>
+<div class="para" id="p-621">For all functions <span class="process-math">\(f\text{,}\)</span> if <span class="process-math">\(f\)</span> is continuous, then <span class="process-math">\(f\)</span> is differentiable.</div></article><article class="task exercise-like" id="task-53"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="p-622">For all real numbers  <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\((x+1)(x-2)&gt;0\)</span> then <span class="process-math">\(x &lt; -1\)</span> or <span class="process-math">\(x&gt;2\text{.}\)</span>
 </div></article><article class="task exercise-like" id="task-54"><h4 class="heading"><span class="codenumber">(g)</span></h4>
-<div class="para" id="p-521">For all integers  <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n\)</span> has a factor of 15, then <span class="process-math">\(n\)</span> has a factor of 3 and <span class="process-math">\(n\)</span> has a factor of 5.</div></article></article><section class="reading-questions" id="reading-questions-8"><h3 class="heading hide-type">
+<div class="para" id="p-623">For all integers  <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n\)</span> has a factor of 15, then <span class="process-math">\(n\)</span> has a factor of 3 and <span class="process-math">\(n\)</span> has a factor of 5.</div></article></article><section class="reading-questions" id="reading-questions-8"><h3 class="heading hide-type">
 <span class="type">Reading Questions</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-95"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-522">Write the negation of <span class="process-math">\(\forall n\in \mathbb{Z}, n&gt;0\text{.}\)</span>
+<article class="exercise exercise-like" id="DMT_negquant_CYU_forall"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="DMT_negquant_CYU_forall" data-multipleanswers="false" data-random="">
+<div class="para" id="p-624">Determine the negation of <span class="process-math">\(\forall n\in \mathbb{Z}, n&gt;0\text{.}\)</span>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-64" id="answer-64"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-64"><div class="answer solution-like"><span class="process-math">\(\exists n\in \mathbb{Z}, n\leq 0.\)</span></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-96"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-523">Write the negation of <span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n&gt;0\)</span> then <span class="process-math">\(n^3&gt;0\text{.}\)</span>
+<li data-component="answer" id="DMT_negquant_CYU_forall_opt_a" data-correct=""><div class="para" id="p-625"><span class="process-math">\(\exists n\in \mathbb{Z}, n\leq 0.\)</span></div></li>
+<li data-component="feedback" id="DMT_negquant_CYU_forall_opt_a">
+<li data-component="answer" id="DMT_negquant_CYU_forall_opt_b"><div class="para" id="p-626"><span class="process-math">\(\exists n\in \mathbb{Z}, n&gt; 0.\)</span></div></li>
+<li data-component="feedback" id="DMT_negquant_CYU_forall_opt_b">
+<li data-component="answer" id="DMT_negquant_CYU_forall_opt_c"><div class="para" id="p-627"><span class="process-math">\(\forall n\in \mathbb{Z}, n\leq 0.\)</span></div></li>
+<li data-component="feedback" id="DMT_negquant_CYU_forall_opt_c">
+<li data-component="answer" id="DMT_negquant_CYU_forall_opt_d"><div class="para" id="p-628"><span class="process-math">\(\forall n\in \mathbb{Z}, n&gt; 0.\)</span></div></li>
+<li data-component="feedback" id="DMT_negquant_CYU_forall_opt_d">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_negquant_CYU_forallcond"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="DMT_negquant_CYU_forallcond" data-multipleanswers="false" data-random="">
+<div class="para" id="p-629">Determine the negation of <span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n&gt;0\)</span> then <span class="process-math">\(n^3&gt;0\text{.}\)</span>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-65" id="answer-65"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-65"><div class="answer solution-like">
+<li data-component="answer" id="DMT_negquant_CYU_forallcond_opt_a"><div class="para" id="p-630">
+<span class="process-math">\(\exists n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n\leq 0\)</span> then <span class="process-math">\(n^3\leq 0\)</span>
+</div></li>
+<li data-component="feedback" id="DMT_negquant_CYU_forallcond_opt_a">
+<li data-component="answer" id="DMT_negquant_CYU_forallcond_opt_b"><div class="para" id="p-631">
+<span class="process-math">\(\exists n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n\leq 0\)</span> and <span class="process-math">\(n^3\leq 0.\)</span>
+</div></li>
+<li data-component="feedback" id="DMT_negquant_CYU_forallcond_opt_b">
+<li data-component="answer" id="DMT_negquant_CYU_forallcond_opt_c" data-correct=""><div class="para" id="p-632">
 <span class="process-math">\(\exists n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n&gt;0\)</span> and <span class="process-math">\(n^3\leq 0.\)</span>
-</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-97"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-524">Write the negation of <span class="process-math">\(\exists n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n&gt;5\)</span> and <span class="process-math">\(n^2\leq 10\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="DMT_negquant_CYU_forallcond_opt_c">
+<li data-component="answer" id="DMT_negquant_CYU_forallcond_opt_d"><div class="para" id="p-633">
+<span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n\leq 0\)</span> then <span class="process-math">\(n^3\leq 0\)</span>
+</div></li>
+<li data-component="feedback" id="DMT_negquant_CYU_forallcond_opt_d">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_negquant_CYU_existand"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="DMT_negquant_CYU_existand" data-multipleanswers="false" data-random="">
+<div class="para" id="p-634">Determine the negation of <span class="process-math">\(\exists n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n&gt;5\)</span> and <span class="process-math">\(n^2\leq 10\text{.}\)</span>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-66" id="answer-66"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-66"><div class="answer solution-like">
+<li data-component="answer" id="DMT_negquant_CYU_existand_opt_a" data-correct=""><div class="para" id="p-635">
 <span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n\leq 5\)</span> or <span class="process-math">\(n^2&gt; 10.\)</span>
-</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-98"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-525">Write the negation of <span class="process-math">\(\exists n\in \mathbb{Z}\text{,}\)</span> such that if <span class="process-math">\(n^2&gt;4\)</span> then <span class="process-math">\(n&gt;2\)</span> or <span class="process-math">\(n&lt;-2.\)</span>
+</div></li>
+<li data-component="feedback" id="DMT_negquant_CYU_existand_opt_a">
+<li data-component="answer" id="DMT_negquant_CYU_existand_opt_b"><div class="para" id="p-636">
+<span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n\leq 5\)</span> and <span class="process-math">\(n^2&gt; 10.\)</span>
+</div></li>
+<li data-component="feedback" id="DMT_negquant_CYU_existand_opt_b">
+<li data-component="answer" id="DMT_negquant_CYU_existand_opt_c"><div class="para" id="p-637">
+<span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n &gt;5\)</span> or <span class="process-math">\(n^2\leq 10.\)</span>
+</div></li>
+<li data-component="feedback" id="DMT_negquant_CYU_existand_opt_c">
+<li data-component="answer" id="DMT_negquant_CYU_existand_opt_d"><div class="para" id="p-638">
+<span class="process-math">\(\exists n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n &gt;5\)</span> or <span class="process-math">\(n^2\leq 10.\)</span>
+</div></li>
+<li data-component="feedback" id="DMT_negquant_CYU_existand_opt_d">
+<li data-component="answer" id="DMT_negquant_CYU_existand_opt_e"><div class="para" id="p-639">
+<span class="process-math">\(\exists n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n\leq 5\)</span> and <span class="process-math">\(n^2&gt; 10.\)</span>
+</div></li>
+<li data-component="feedback" id="DMT_negquant_CYU_existand_opt_e">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_negquant_CYU_existcond"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="DMT_negquant_CYU_existcond" data-multipleanswers="false" data-random="">
+<div class="para" id="p-640">Determine the negation of <span class="process-math">\(\exists n\in \mathbb{Z}\text{,}\)</span> such that if <span class="process-math">\(n^2&gt;4\)</span> then <span class="process-math">\(n&gt;2\)</span> or <span class="process-math">\(n&lt;-2.\)</span>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-67" id="answer-67"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-67"><div class="answer solution-like">
-<span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n^2&gt;4\)</span> and <span class="process-math">\(n\leq 2\)</span> and <span class="process-math">\(n\geq -2.\)</span> Note, we can also write this as <span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n^2&gt;4\)</span> and <span class="process-math">\(-2\leq n\leq 2.\)</span>
-</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-99"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-526">Write the contrapositive of <span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n&gt;0\)</span> then <span class="process-math">\(n^3&gt;0\text{.}\)</span>
+<li data-component="answer" id="DMT_negquant_CYU_existcond_opt_a"><div class="para" id="p-641">
+<span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n^2\leq 4\)</span> then <span class="process-math">\(n\leq 2\)</span> or <span class="process-math">\(n\geq -2.\)</span>
+</div></li>
+<li data-component="feedback" id="DMT_negquant_CYU_existcond_opt_a">
+<li data-component="answer" id="DMT_negquant_CYU_existcond_opt_b"><div class="para" id="p-642">
+<span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n^2\leq 4\)</span> then <span class="process-math">\(-2\leq n\leq 2.\)</span>
+</div></li>
+<li data-component="feedback" id="DMT_negquant_CYU_existcond_opt_b">
+<li data-component="answer" id="DMT_negquant_CYU_existcond_opt_c" data-correct=""><div class="para" id="p-643">
+<span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n^2&gt;4\)</span> and <span class="process-math">\(-2\leq n\leq 2.\)</span>
+</div></li>
+<li data-component="feedback" id="DMT_negquant_CYU_existcond_opt_c">
+<li data-component="answer" id="DMT_negquant_CYU_existcond_opt_d"><div class="para" id="p-644">
+<span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n^2\leq 4\)</span> and <span class="process-math">\(-2\leq n\leq 2.\)</span>
+</div></li>
+<li data-component="feedback" id="DMT_negquant_CYU_existcond_opt_d">
+<li data-component="answer" id="DMT_negquant_CYU_existcond_opt_e"><div class="para" id="p-645">
+<span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n^2\leq 4\)</span> and <span class="process-math">\(n\leq 2\)</span> or <span class="process-math">\(n\geq -2.\)</span>
+</div></li>
+<li data-component="feedback" id="DMT_negquant_CYU_existcond_opt_e">
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_negquant_CYU_contraall"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="DMT_negquant_CYU_contraall" data-multipleanswers="false" data-random="">
+<div class="para" id="p-646">Determine the contrapositive of <span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n&gt;0\)</span> then <span class="process-math">\(n^3&gt;0\text{.}\)</span>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-68" id="answer-68"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-68"><div class="answer solution-like">
+<li data-component="answer" id="DMT_negquant_CYU_contraall_opt_a"><div class="para" id="p-647">
+<span class="process-math">\(\exists n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n^3\leq 0\)</span> then <span class="process-math">\(n\leq 0.\)</span>
+</div></li>
+<li data-component="feedback" id="DMT_negquant_CYU_contraall_opt_a">
+<li data-component="answer" id="DMT_negquant_CYU_contraall_opt_b"><div class="para" id="p-648">
+<span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n\leq 0\)</span> then <span class="process-math">\(n^3\leq 0.\)</span>
+</div></li>
+<li data-component="feedback" id="DMT_negquant_CYU_contraall_opt_b">
+<li data-component="answer" id="DMT_negquant_CYU_contraall_opt_c"><div class="para" id="p-649">
+<span class="process-math">\(\exists n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n\leq 0\)</span> then <span class="process-math">\(n^3\leq 0.\)</span>
+</div></li>
+<li data-component="feedback" id="DMT_negquant_CYU_contraall_opt_c">
+<li data-component="answer" id="DMT_negquant_CYU_contraall_opt_d" data-correct=""><div class="para" id="p-650">
 <span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n^3\leq 0\)</span> then <span class="process-math">\(n\leq 0.\)</span>
-</div></div>
-</div></article></section><section class="exercises" id="exercises-8"><h3 class="heading hide-type">
+</div></li>
+<li data-component="feedback" id="DMT_negquant_CYU_contraall_opt_d">
+</ul></div></div></article></section><section class="exercises" id="exercises-8"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="exercise-100"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-527">Which of the following is a negation for “All discrete math students are athletic”? More than one answer may be correct.</div> <ol class="lower-alpha">
-<li id="li-164"><div class="para" id="p-528">There is a discrete math student who is nonathletic.</div></li>
-<li id="li-165"><div class="para" id="p-529">All discrete math students are nonathletic.</div></li>
-<li id="li-166"><div class="para" id="p-530">There is an athletic person who is a discrete math student.</div></li>
-<li id="li-167"><div class="para" id="p-531">No discrete math students are athletic.</div></li>
-<li id="li-168"><div class="para" id="p-532">Some discrete math students are nonathletic.</div></li>
-<li id="li-169"><div class="para" id="p-533">No athletic people are discrete math students.</div></li>
+<div class="para" id="p-651">Which of the following is a negation for “All discrete math students are athletic”? More than one answer may be correct.</div> <ol class="lower-alpha">
+<li id="li-164"><div class="para" id="p-652">There is a discrete math student who is nonathletic.</div></li>
+<li id="li-165"><div class="para" id="p-653">All discrete math students are nonathletic.</div></li>
+<li id="li-166"><div class="para" id="p-654">There is an athletic person who is a discrete math student.</div></li>
+<li id="li-167"><div class="para" id="p-655">No discrete math students are athletic.</div></li>
+<li id="li-168"><div class="para" id="p-656">Some discrete math students are nonathletic.</div></li>
+<li id="li-169"><div class="para" id="p-657">No athletic people are discrete math students.</div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-101"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-534">Write an informal negation for each of the following statements. Be careful to avoid negations that are ambiguous.</div> <ol class="lower-alpha">
-<li id="li-170"><div class="para" id="p-535">All dogs are friendly.</div></li>
-<li id="li-171"><div class="para" id="p-536">All people are happy.</div></li>
-<li id="li-172"><div class="para" id="p-537">Some apples are red.</div></li>
-<li id="li-173"><div class="para" id="p-538">Some teams are undefeated.</div></li>
+<div class="para" id="p-658">Write an informal negation for each of the following statements. Be careful to avoid negations that are ambiguous.</div> <ol class="lower-alpha">
+<li id="li-170"><div class="para" id="p-659">All dogs are friendly.</div></li>
+<li id="li-171"><div class="para" id="p-660">All people are happy.</div></li>
+<li id="li-172"><div class="para" id="p-661">Some apples are red.</div></li>
+<li id="li-173"><div class="para" id="p-662">Some teams are undefeated.</div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-102"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-539">Write a negation for each of the following statements.</div> <ol class="lower-alpha">
-<li id="li-174"><div class="para" id="p-540">Any valid argument has a true conclusion.</div></li>
-<li id="li-175"><div class="para" id="p-541">Every real number is positive, negative, or zero.</div></li>
+<div class="para" id="p-663">Write a negation for each of the following statements.</div> <ol class="lower-alpha">
+<li id="li-174"><div class="para" id="p-664">Any valid argument has a true conclusion.</div></li>
+<li id="li-175"><div class="para" id="p-665">Every real number is positive, negative, or zero.</div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-103"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-542">Write the negation of each of the statements.</div> <ol class="lower-alpha">
-<li id="li-176"><div class="para" id="p-543">
+<div class="para" id="p-666">Write the negation of each of the statements.</div> <ol class="lower-alpha">
+<li id="li-176"><div class="para" id="p-667">
 <span class="process-math">\(\forall\)</span> real numbers <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\(x&gt;3\)</span> then <span class="process-math">\(x^2&gt;9\text{.}\)</span>
 </div></li>
-<li id="li-177"><div class="para" id="p-544">
+<li id="li-177"><div class="para" id="p-668">
 <span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n\)</span> is prime then <span class="process-math">\(n\)</span> is odd or <span class="process-math">\(n=2\text{.}\)</span>
 </div></li>
-<li id="li-178"><div class="para" id="p-545">
+<li id="li-178"><div class="para" id="p-669">
 <span class="process-math">\(\forall\)</span> integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n\)</span> is divisible by 6, then <span class="process-math">\(n\)</span> is divisible by 2 and <span class="process-math">\(n\)</span> is divisible by 3.</div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-104"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-546">Determine whether the proposed negation is correct. If it is not, write a correct negation.</div> <div class="para" id="p-547">
-<em class="emphasis">Statement:</em> The sum of any two irrational numbers is irrational.</div> <div class="para" id="p-548">
+<div class="para" id="p-670">Determine whether the proposed negation is correct. If it is not, write a correct negation.</div> <div class="para" id="p-671">
+<em class="emphasis">Statement:</em> The sum of any two irrational numbers is irrational.</div> <div class="para" id="p-672">
 <em class="emphasis">Proposed negation:</em> The sum of any two irrational numbers is rational.</div></article><article class="exercise exercise-like" id="exercise-105"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-549">Determine whether the proposed negation is correct. If it is not, write a correct negation.</div> <div class="para" id="p-550">
-<em class="emphasis">Statement:</em> For all integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n^2\)</span> is even then <span class="process-math">\(n\)</span> is even.</div> <div class="para" id="p-551">
+<div class="para" id="p-673">Determine whether the proposed negation is correct. If it is not, write a correct negation.</div> <div class="para" id="p-674">
+<em class="emphasis">Statement:</em> For all integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n^2\)</span> is even then <span class="process-math">\(n\)</span> is even.</div> <div class="para" id="p-675">
 <em class="emphasis">Proposed negation:</em> For all integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n^2\)</span> is even, then <span class="process-math">\(n\)</span> is not even.</div></article><article class="exercise exercise-like" id="exercise-106"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-552">Consider the following sequence of digits: 2300204. A person claims that all of the 1’s in the sequence are to the left of all of the 0’s in the sequence. Is this true? Justify your answer.</div>
+<div class="para" id="p-676">Consider the following sequence of digits: 2300204. A person claims that all of the 1’s in the sequence are to the left of all of the 0’s in the sequence. Is this true? Justify your answer.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><div class="para" id="p-553">Write the claim formally and write a formal negation for it. Is the negation true or false?</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><div class="para" id="p-677">Write the claim formally and write a formal negation for it. Is the negation true or false?</div></div></div>
 </div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="quantifiersI3-1.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="multiplequant3-3.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
@@ -739,5 +837,13 @@ window.MathJax = {
 <div id="ptx-page-footer">
 <a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12894193;
+var sc_invisible=1;
+var sc_security="e67c59eb";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12894193/0/e67c59eb/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
 </body>
 </html>

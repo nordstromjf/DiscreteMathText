@@ -11,8 +11,28 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">Use an element argument to prove for all sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> <span class="process-math">\((A\cap B)^C=(A^C\cup B^C)\text{.}\)</span> Be sure to write what you want to assume and what you want to show.</div>
-<span class="incontext"><a href="propertiesofsets6-2.html#p-1759" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">Proof of induction step: By the recursive definition of the sequence, <span class="process-math">\(F_{k+1}=F_{k}+F_{k-1}\text{.}\)</span> Thus,</div>
+<div class="displaymath process-math">
+\begin{align*}
+F_{k+1}&amp;=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k+1}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k+1}\biggr]+
+\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k}\biggr]\\
+&amp;=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k+1}+\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k}-
+\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k+1}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k}\biggr]\\
+&amp;=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k}\biggl(\frac{1+\sqrt{5}}{2}+1\biggr)-
+\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k}\biggl(\frac{1-\sqrt{5}}{2}+1\biggr)\biggr]\\
+&amp;=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k}\biggl(\frac{3+\sqrt{5}}{2}\biggr)-
+\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k}\biggl(\frac{3-\sqrt{5}}{2}\biggr)\biggr]\\
+&amp;=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k}\biggl(\frac{1+\sqrt{5}}{2}\biggr)^2-
+\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k}\biggl(\frac{1-\sqrt{5}}{2}\biggr)^2\biggr]\\
+&amp;=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k+2}-
+\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k+2}\biggr]
+\end{align*}
+</div>
+<div class="para">Therefore, by induction, <span class="process-math">\(F_n=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{n+1}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{n+1}\biggr]\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="iteration5-6.html#p-1759" class="internal">in-context</a></span>
 </body>
 </html>

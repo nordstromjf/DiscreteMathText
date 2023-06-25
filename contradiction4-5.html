@@ -62,8 +62,39 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.0.0dev3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runtime.71ffd81c0faeb38b.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.e543e0dd19670ae2.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.1f1f63d2cda36a4d.css">
 </head>
-<body class="pretext book ignore-math">
+<body id="DiscreteMathText" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" href=""></a><div class="title-container">
 <h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
@@ -549,17 +580,17 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="contradiction4-5"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.5</span> <span class="title">Proof by Contradiction and Contrapositive</span>
 </h2>
-<div class="para" id="p-1019">In this section we will learn two new proof techniques, contradiction and contrapositive. Both proof techniques rely on being able to negate mathematical statements.</div>
-<div class="para" id="p-1020">As we add more proof techniques, it is important to realize that you are not expected to know which technique to use when you start a proof. Proof-writing often takes some trial and error. First try a direct proof, if you get stuck, you may think about whether breaking your set into cases will  help, or whether negating a statement will make it easier to use. It is also quite possible that different methods can be used to prove the same statement.</div>
+<div class="para" id="p-1192">In this section we will learn two new proof techniques, contradiction and contrapositive. Both proof techniques rely on being able to negate mathematical statements.</div>
+<div class="para" id="p-1193">As we add more proof techniques, it is important to realize that you are not expected to know which technique to use when you start a proof. Proof-writing often takes some trial and error. First try a direct proof, if you get stuck, you may think about whether breaking your set into cases will  help, or whether negating a statement will make it easier to use. It is also quite possible that different methods can be used to prove the same statement.</div>
 <article class="assemblage assemblage-like" id="B_pfcontradiction"><h3 class="heading"><span class="title">Method of Proof by Contradiction.</span></h3>
-<div class="para logical" id="p-1021"><ol class="decimal">
-<li id="li-275"><div class="para" id="p-1022">Assume the statement to be proved is false. Or, assume the negation is true.</div></li>
-<li id="li-276"><div class="para" id="p-1023">Show you reach some logical contradiction.</div></li>
-<li id="li-277"><div class="para" id="p-1024">Conclude the original statement is true.</div></li>
+<div class="para logical" id="p-1194"><ol class="decimal">
+<li id="li-275"><div class="para" id="p-1195">Assume the statement to be proved is false. Or, assume the negation is true.</div></li>
+<li id="li-276"><div class="para" id="p-1196">Show you reach some logical contradiction.</div></li>
+<li id="li-277"><div class="para" id="p-1197">Conclude the original statement is true.</div></li>
 </ol></div></article><article class="example example-like" id="E_nogreatinteger"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_nogreatinteger"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.5.1</span><span class="period">.</span><span class="space"> </span><span class="title">There Is No Greatest Integer.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_nogreatinteger"><article class="example example-like"> <div class="para" id="p-1025">Prove there is no greatest integer.</div> <article class="hiddenproof" id="proof-12"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-12"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-12"><article class="hiddenproof"><div class="para" id="p-1026">By contradiction. Assume there is a greatest integer. Call this greatest integer <span class="process-math">\(N\text{.}\)</span> Now consider <span class="process-math">\(N+1\text{.}\)</span> Since <span class="process-math">\(N\)</span> is an integer, <span class="process-math">\(N+1\)</span> is an integer. We can see that <span class="process-math">\(N+1&gt;N\text{,}\)</span> which contradicts that <span class="process-math">\(N\)</span> was the greatest. Therefore, there is no greatest integer.</div></article></div></article></div>
-<div class="para logical" id="p-1027">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_nogreatinteger"><article class="example example-like"> <div class="para" id="p-1198">Prove there is no greatest integer.</div> <article class="hiddenproof" id="proof-12"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-12"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-12"><article class="hiddenproof"><div class="para" id="p-1199">By contradiction. Assume there is a greatest integer. Call this greatest integer <span class="process-math">\(N\text{.}\)</span> Now consider <span class="process-math">\(N+1\text{.}\)</span> Since <span class="process-math">\(N\)</span> is an integer, <span class="process-math">\(N+1\)</span> is an integer. We can see that <span class="process-math">\(N+1&gt;N\text{,}\)</span> which contradicts that <span class="process-math">\(N\)</span> was the greatest. Therefore, there is no greatest integer.</div></article></div></article></div>
+<div class="para logical" id="p-1200">
 <div class="para">Since contradiction relies on negating statements, recall the following negations:</div>
 <ul class="disc">
 <li id="li-278"><div class="para" id="p-derived-li-278">
@@ -576,38 +607,38 @@ window.MathJax = {
 <article class="activity project-like" id="activity-74"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.5.1</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-35"><div class="para" id="p-1028">Consider the statement: The sum of a rational number and an irrational number is irrational.</div></div>
+<div class="introduction" id="introduction-35"><div class="para" id="p-1201">Consider the statement: The sum of a rational number and an irrational number is irrational.</div></div>
 <article class="task exercise-like" id="task-106"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-1029">Try to determine if the statement is true or false by trying examples and looking for a counterexample.</div></article><article class="task exercise-like" id="task-107"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-1030">Write the statement using variables and quantifiers.</div></article><article class="task exercise-like" id="task-108"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-1031">Write the negation of the statement.</div></article><article class="task exercise-like" id="task-109"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="p-1032">Now assume the negation is true and find a contradiction.</div></article><article class="task exercise-like" id="task-110"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="p-1033">The work in (d) is your scratch work. Write a careful proof by contradiction to show the original statement is true.</div></article></article><div class="para" id="p-1034">Recall from <a href="conditional2-2.html" class="internal" title="Section 2.2: Conditional Statements">Section 2.2</a> that a conditional, <span class="process-math">\(p\rightarrow q\text{,}\)</span> and its contrapositive, <span class="process-math">\(\sim q\rightarrow \sim p\text{,}\)</span> are logically equivalent. This means we can prove the contrapositive rather than the original statement.</div>
+<div class="para" id="p-1202">Try to determine if the statement is true or false by trying examples and looking for a counterexample.</div></article><article class="task exercise-like" id="task-107"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-1203">Write the statement using variables and quantifiers.</div></article><article class="task exercise-like" id="task-108"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-1204">Write the negation of the statement.</div></article><article class="task exercise-like" id="task-109"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="p-1205">Now assume the negation is true and find a contradiction.</div></article><article class="task exercise-like" id="task-110"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="p-1206">The work in (d) is your scratch work. Write a careful proof by contradiction to show the original statement is true.</div></article></article><div class="para" id="p-1207">Recall from <a href="conditional2-2.html" class="internal" title="Section 2.2: Conditional Statements">Section 2.2</a> that a conditional, <span class="process-math">\(p\rightarrow q\text{,}\)</span> and its contrapositive, <span class="process-math">\(\sim q\rightarrow \sim p\text{,}\)</span> are logically equivalent. This means we can prove the contrapositive rather than the original statement.</div>
 <article class="assemblage assemblage-like" id="B_pfcontrapositive"><h3 class="heading"><span class="title">Method of Proof by Contrapositive.</span></h3>
-<div class="para logical" id="p-1035"><ol class="decimal">
-<li id="li-281"><div class="para" id="p-1036">Write the statement to be proved in the form <span class="process-math">\(\forall x\in D\text{,}\)</span> if <span class="process-math">\(P(x)\)</span> then <span class="process-math">\(Q(x)\text{.}\)</span>
+<div class="para logical" id="p-1208"><ol class="decimal">
+<li id="li-281"><div class="para" id="p-1209">Write the statement to be proved in the form <span class="process-math">\(\forall x\in D\text{,}\)</span> if <span class="process-math">\(P(x)\)</span> then <span class="process-math">\(Q(x)\text{.}\)</span>
 </div></li>
-<li id="li-282"><div class="para" id="p-1037">Write the contrapositive of the statement: <span class="process-math">\(\forall x\in D\text{,}\)</span> if <span class="process-math">\(\sim Q(x)\)</span> then <span class="process-math">\(\sim P(x)\text{.}\)</span>
+<li id="li-282"><div class="para" id="p-1210">Write the contrapositive of the statement: <span class="process-math">\(\forall x\in D\text{,}\)</span> if <span class="process-math">\(\sim Q(x)\)</span> then <span class="process-math">\(\sim P(x)\text{.}\)</span>
 </div></li>
-<li id="li-283"><div class="para" id="p-1038">Prove the contrapositive directly: assume <span class="process-math">\(\sim Q(x)\text{,}\)</span> show <span class="process-math">\(\sim P(x)\text{.}\)</span>
+<li id="li-283"><div class="para" id="p-1211">Prove the contrapositive directly: assume <span class="process-math">\(\sim Q(x)\text{,}\)</span> show <span class="process-math">\(\sim P(x)\text{.}\)</span>
 </div></li>
 </ol></div></article><article class="example example-like" id="E_contrapositiveproof"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_contrapositiveproof"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.5.2</span><span class="period">.</span><span class="space"> </span><span class="title">A Divisibility Proof by Contrapositive.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_contrapositiveproof"><article class="example example-like"> <div class="para" id="p-1039">Prove for all <span class="process-math">\(a, b, c\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(a \nmid bc\)</span> then <span class="process-math">\(a \nmid b\text{.}\)</span>
-</div> <div class="para" id="p-1040">This statement has contrapositive: For all <span class="process-math">\(a, b, c\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(a \mid b\)</span> then <span class="process-math">\(a \mid bc\text{.}\)</span>
-</div> <article class="hiddenproof" id="proof-13"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-13"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-13"><article class="hiddenproof"><div class="para" id="p-1041">By contrapositive. Let <span class="process-math">\(a, b, c\in \mathbb{Z}\text{.}\)</span> Assume <span class="process-math">\(a \mid b\text{.}\)</span> This means <span class="process-math">\(b=ak\)</span> for some <span class="process-math">\(k\in\mathbb{Z}\text{.}\)</span> Then <span class="process-math">\(bc=(ak)c=a(kc)\text{,}\)</span> where <span class="process-math">\(kc \in \mathbb{Z}\text{.}\)</span> Thus, <span class="process-math">\(a \mid bc\text{.}\)</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_contrapositiveproof"><article class="example example-like"> <div class="para" id="p-1212">Prove for all <span class="process-math">\(a, b, c\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(a \nmid bc\)</span> then <span class="process-math">\(a \nmid b\text{.}\)</span>
+</div> <div class="para" id="p-1213">This statement has contrapositive: For all <span class="process-math">\(a, b, c\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(a \mid b\)</span> then <span class="process-math">\(a \mid bc\text{.}\)</span>
+</div> <article class="hiddenproof" id="proof-13"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-13"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-13"><article class="hiddenproof"><div class="para" id="p-1214">By contrapositive. Let <span class="process-math">\(a, b, c\in \mathbb{Z}\text{.}\)</span> Assume <span class="process-math">\(a \mid b\text{.}\)</span> This means <span class="process-math">\(b=ak\)</span> for some <span class="process-math">\(k\in\mathbb{Z}\text{.}\)</span> Then <span class="process-math">\(bc=(ak)c=a(kc)\text{,}\)</span> where <span class="process-math">\(kc \in \mathbb{Z}\text{.}\)</span> Thus, <span class="process-math">\(a \mid bc\text{.}\)</span>
 </div></article></div></article></div>
 <article class="activity project-like" id="A_n2evenneven"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.5.2</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-36"><div class="para" id="p-1042">Consider the statement: For all integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n^2\)</span> is even then <span class="process-math">\(n\)</span> is even.</div></div>
+<div class="introduction" id="introduction-36"><div class="para" id="p-1215">Consider the statement: For all integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n^2\)</span> is even then <span class="process-math">\(n\)</span> is even.</div></div>
 <article class="task exercise-like" id="task-111"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-1043">Write the contrapositive of the statement.</div></article><article class="task exercise-like" id="task-112"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-1044">To prove the statement by contrapositive, what should you assume?</div></article><article class="task exercise-like" id="task-113"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-1045">To prove the statement by contrapositive, what should you show?</div></article><article class="task exercise-like" id="task-114"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="p-1046">Give a direct proof of the contrapositive. You have now proven the original statement by contrapositive.</div></article></article><div class="para" id="p-1047">Since we can use either contradiction or contrapositive on statements of the form <span class="process-math">\(p\rightarrow q\text{,}\)</span> the following comparison may be helpful.</div>
+<div class="para" id="p-1216">Write the contrapositive of the statement.</div></article><article class="task exercise-like" id="task-112"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-1217">To prove the statement by contrapositive, what should you assume?</div></article><article class="task exercise-like" id="task-113"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-1218">To prove the statement by contrapositive, what should you show?</div></article><article class="task exercise-like" id="task-114"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="p-1219">Give a direct proof of the contrapositive. You have now proven the original statement by contrapositive.</div></article></article><div class="para" id="p-1220">Since we can use either contradiction or contrapositive on statements of the form <span class="process-math">\(p\rightarrow q\text{,}\)</span> the following comparison may be helpful.</div>
 <article class="assemblage assemblage-like" id="B_compcontradiction"><h3 class="heading"><span class="title">Comparing Contradiction and Contrapositive.</span></h3>
-<div class="para logical" id="p-1048">
+<div class="para logical" id="p-1221">
 <div class="para">Contradiction with <span class="process-math">\(p\rightarrow q\text{:}\)</span>
 </div>
 <ul class="disc">
@@ -618,7 +649,7 @@ window.MathJax = {
 <li id="li-287"><div class="para" id="p-derived-li-287">With contradiction you get to assume more, but it is less clear what you want to show.</div></li>
 </ul>
 </div>
-<div class="para logical" id="p-1049">
+<div class="para logical" id="p-1222">
 <div class="para">Contrapositive with <span class="process-math">\(p\rightarrow q\text{:}\)</span>
 </div>
 <ul class="disc">
@@ -631,67 +662,37 @@ window.MathJax = {
 </div></article><section class="reading-questions" id="reading-questions-15"><h3 class="heading hide-type">
 <span class="type">Reading Questions</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-203"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1050">Give the negation for the statement: There does not exist a greatest odd integer.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-163" id="answer-163"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-163"><div class="answer solution-like"><div class="para" id="p-1051">There exists a greatest odd integer.</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-204"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-1052">Give the negation for the statement: For all real numbers <span class="process-math">\(r\text{,}\)</span> if <span class="process-math">\(r\)</span> is not rational then <span class="process-math">\(3r\)</span> is not rational.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-164" id="answer-164"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-164"><div class="answer solution-like"><div class="para" id="p-1053">There exists a real number <span class="process-math">\(r\)</span> such that <span class="process-math">\(r\)</span> is rational and <span class="process-math">\(3r\)</span> is not rational.</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-205"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-1054">Suppose you want to prove the following statement by contradiction: For all real numbers <span class="process-math">\(r\text{,}\)</span> if <span class="process-math">\(r\)</span> is not rational then <span class="process-math">\(3r\)</span> is not rational. What should you assume? What should you show?</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-165" id="answer-165"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-165"><div class="answer solution-like"><div class="para" id="p-1055">Assume: there exists a real number <span class="process-math">\(r\)</span> such that <span class="process-math">\(r\)</span> is rational and <span class="process-math">\(3r\)</span> is not rational. Show: any contradiction.</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-206"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-1056">Give the contrapositive for the statement: For all real numbers <span class="process-math">\(r\text{,}\)</span> if <span class="process-math">\(r\)</span> is not rational then <span class="process-math">\(3r\)</span> is not rational.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-166" id="answer-166"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-166"><div class="answer solution-like"><div class="para" id="p-1057">For all real numbers <span class="process-math">\(r\)</span> if <span class="process-math">\(3r\)</span> is rational then <span class="process-math">\(r\)</span> is rational.</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-207"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-1058">Suppose you want to prove the following statement by contrapositive: For all real numbers <span class="process-math">\(r\text{,}\)</span> if <span class="process-math">\(r\)</span> is not rational then <span class="process-math">\(3r\)</span> is not rational. What should you assume? What should you show?</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-167" id="answer-167"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-167"><div class="answer solution-like"><div class="para" id="p-1059">Assume: <span class="process-math">\(r\)</span> is real, <span class="process-math">\(3r\)</span> is rational. Show: <span class="process-math">\(r\)</span> is rational.</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-208"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-1060">Give the negation for the statement: For all integers <span class="process-math">\(n\)</span> and primes <span class="process-math">\(p\text{,}\)</span> if  <span class="process-math">\(p\mid n^2\)</span>  then <span class="process-math">\(p \mid n\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-168" id="answer-168"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-168"><div class="answer solution-like"><div class="para" id="p-1061">There exists an integer <span class="process-math">\(n\)</span> and a prime <span class="process-math">\(p\)</span> such that <span class="process-math">\(p\mid n^2\)</span> and <span class="process-math">\(p\nmid n\text{.}\)</span>
-</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-209"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-1062">Suppose you want to prove the following statement by contradiction: For all integers <span class="process-math">\(n\)</span> and primes <span class="process-math">\(p\text{,}\)</span> if  <span class="process-math">\(p\mid n^2\)</span>  then <span class="process-math">\(p \mid n\text{.}\)</span> What should you assume? What should you show?</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-169" id="answer-169"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-169"><div class="answer solution-like"><div class="para" id="p-1063">Assume: there exists an integer <span class="process-math">\(n\)</span> and a prime <span class="process-math">\(p\)</span> such that <span class="process-math">\(p\mid n^2\)</span> and <span class="process-math">\(p\nmid n\text{.}\)</span> Show any contradiction.</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-210"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="p-1064">Give the contrapositive for the statement: For all integers <span class="process-math">\(n\)</span> and primes <span class="process-math">\(p\text{,}\)</span> if  <span class="process-math">\(p\mid n^2\)</span>  then <span class="process-math">\(p \mid n\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-170" id="answer-170"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-170"><div class="answer solution-like"><div class="para" id="p-1065">For all integers <span class="process-math">\(n\)</span> if <span class="process-math">\(p \nmid n\)</span> then <span class="process-math">\(p\nmid n^2\text{.}\)</span>
-</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-211"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<div class="para" id="p-1066">Suppose you want to prove the following statement by contrapositive: For all integers <span class="process-math">\(n\)</span> and primes <span class="process-math">\(p\text{,}\)</span> if  <span class="process-math">\(p\mid n^2\)</span>  then <span class="process-math">\(p \mid n\text{.}\)</span> What should you assume? What should you show?</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-171" id="answer-171"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-171"><div class="answer solution-like"><div class="para" id="p-1067">Assume: <span class="process-math">\(n\)</span> is an integer, <span class="process-math">\(p\)</span> is prime, and <span class="process-math">\(p\nmid n\text{.}\)</span> Show: <span class="process-math">\(p \nmid n^2\text{.}\)</span>
-</div></div></div>
-</div></article></section><section class="exercises" id="exercises-15"><h3 class="heading hide-type">
+<article class="exercise exercise-like" id="DMT_contrad_CYU_negnoexistodd"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-1223">Give the negation for the statement: There does not exist a greatest odd integer.</div></article><article class="exercise exercise-like" id="DMT_contrad_CYU_negunivcondrat"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-1225">Give the negation for the statement: For all real numbers <span class="process-math">\(r\text{,}\)</span> if <span class="process-math">\(r\)</span> is not rational then <span class="process-math">\(3r\)</span> is not rational.</div></article><article class="exercise exercise-like" id="DMT_contrad_CYU_ascontraunivcondrat"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-1227">Suppose you want to prove the following statement by contradiction: For all real numbers <span class="process-math">\(r\text{,}\)</span> if <span class="process-math">\(r\)</span> is not rational then <span class="process-math">\(3r\)</span> is not rational. What should you assume? What should you show?</div></article><article class="exercise exercise-like" id="DMT_contrad_CYU_conposunivcondrat"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="p-1229">Give the contrapositive for the statement: For all real numbers <span class="process-math">\(r\text{,}\)</span> if <span class="process-math">\(r\)</span> is not rational then <span class="process-math">\(3r\)</span> is not rational.</div></article><article class="exercise exercise-like" id="DMT_contrad_CYU_asconposunivcondrat"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="p-1231">Suppose you want to prove the following statement by contrapositive: For all real numbers <span class="process-math">\(r\text{,}\)</span> if <span class="process-math">\(r\)</span> is not rational then <span class="process-math">\(3r\)</span> is not rational. What should you assume? What should you show?</div></article><article class="exercise exercise-like" id="DMT_contrad_CYU_negprmdiv"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="p-1233">Give the negation for the statement: For all integers <span class="process-math">\(n\)</span> and primes <span class="process-math">\(p\text{,}\)</span> if  <span class="process-math">\(p\mid n^2\)</span>  then <span class="process-math">\(p \mid n\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="DMT_contrad_CYU_ascontraprmdiv"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="p-1235">Suppose you want to prove the following statement by contradiction: For all integers <span class="process-math">\(n\)</span> and primes <span class="process-math">\(p\text{,}\)</span> if  <span class="process-math">\(p\mid n^2\)</span>  then <span class="process-math">\(p \mid n\text{.}\)</span> What should you assume? What should you show?</div></article><article class="exercise exercise-like" id="DMT_contrad_CYU_conposprmdiv"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para" id="p-1237">Give the contrapositive for the statement: For all integers <span class="process-math">\(n\)</span> and primes <span class="process-math">\(p\text{,}\)</span> if  <span class="process-math">\(p\mid n^2\)</span>  then <span class="process-math">\(p \mid n\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="DMT_contrad_CYU_asconposprmdiv"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="para" id="p-1239">Suppose you want to prove the following statement by contrapositive: For all integers <span class="process-math">\(n\)</span> and primes <span class="process-math">\(p\text{,}\)</span> if  <span class="process-math">\(p\mid n^2\)</span>  then <span class="process-math">\(p \mid n\text{.}\)</span> What should you assume? What should you show?</div></article></section><section class="exercises" id="exercises-15"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="exercise-212"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1068">Is <span class="process-math">\(\frac{1}{0}\)</span> an irrational number? Explain.</div></article><article class="exercise exercise-like" id="exercise-213"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-1069">Consider the statement: For all integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n^2\)</span> is odd then <span class="process-math">\(n\)</span> is odd.</div> <ol class="lower-alpha">
-<li id="li-291"><div class="para" id="p-1070">Write what you would assume and what you would need to show to prove this statement by contradiction.</div></li>
-<li id="li-292"><div class="para" id="p-1071">Write what you would assume and what you would need to show to prove this statement by contrapositive.</div></li>
+<div class="para" id="p-1241">Is <span class="process-math">\(\frac{1}{0}\)</span> an irrational number? Explain.</div></article><article class="exercise exercise-like" id="exercise-213"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-1242">Consider the statement: For all integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n^2\)</span> is odd then <span class="process-math">\(n\)</span> is odd.</div> <ol class="lower-alpha">
+<li id="li-291"><div class="para" id="p-1243">Write what you would assume and what you would need to show to prove this statement by contradiction.</div></li>
+<li id="li-292"><div class="para" id="p-1244">Write what you would assume and what you would need to show to prove this statement by contrapositive.</div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-214"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-1072">
-<dfn class="terminology">A Test to Determine if a Number is Prime:</dfn> Given any integer <span class="process-math">\(n&gt;1\text{,}\)</span> to test whether <span class="process-math">\(n\)</span> is prime check to see if it is divisible by a prime number less than or equal to <span class="process-math">\(\sqrt{n}\text{.}\)</span> If it is not divisible by any prime less than or equal to <span class="process-math">\(\sqrt{n}\text{,}\)</span> then <span class="process-math">\(n\)</span> is prime.</div> <div class="para" id="p-1073">Use this test to determine if the following numbers are prime or not.</div> <ol class="lower-alpha">
-<li id="li-293"><div class="para" id="p-1074">527</div></li>
-<li id="li-294"><div class="para" id="p-1075">613</div></li>
+<div class="para" id="p-1245">
+<dfn class="terminology">A Test to Determine if a Number is Prime:</dfn> Given any integer <span class="process-math">\(n&gt;1\text{,}\)</span> to test whether <span class="process-math">\(n\)</span> is prime check to see if it is divisible by a prime number less than or equal to <span class="process-math">\(\sqrt{n}\text{.}\)</span> If it is not divisible by any prime less than or equal to <span class="process-math">\(\sqrt{n}\text{,}\)</span> then <span class="process-math">\(n\)</span> is prime.</div> <div class="para" id="p-1246">Use this test to determine if the following numbers are prime or not.</div> <ol class="lower-alpha">
+<li id="li-293"><div class="para" id="p-1247">527</div></li>
+<li id="li-294"><div class="para" id="p-1248">613</div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-215"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-1076">Carefully write the negation of each statement then prove the statement by contradiction.</div> <ol class="lower-alpha">
-<li id="li-295"><div class="para" id="p-1077">There is no greatest even integer.</div></li>
-<li id="li-296"><div class="para" id="p-1078">There is no least positive rational number.</div></li>
+<div class="para" id="p-1249">Carefully write the negation of each statement then prove the statement by contradiction.</div> <ol class="lower-alpha">
+<li id="li-295"><div class="para" id="p-1250">There is no greatest even integer.</div></li>
+<li id="li-296"><div class="para" id="p-1251">There is no least positive rational number.</div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-216"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-1079">Prove by contradiction: If <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are rational numbers, <span class="process-math">\(b\neq 0\text{,}\)</span> and <span class="process-math">\(r\)</span> an irrational number, then <span class="process-math">\(a+br\)</span> is irrational.</div></article><article class="exercise exercise-like" id="exercise-217"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-1080">Prove the following statement in two ways: (a) by contrapositive and (b) by contradiction.</div> <div class="para" id="p-1081">For all integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n^2\)</span> is odd then <span class="process-math">\(n\)</span> is odd.</div></article></section></section></div>
+<div class="para" id="p-1252">Prove by contradiction: If <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are rational numbers, <span class="process-math">\(b\neq 0\text{,}\)</span> and <span class="process-math">\(r\)</span> an irrational number, then <span class="process-math">\(a+br\)</span> is irrational.</div></article><article class="exercise exercise-like" id="exercise-217"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="p-1253">Prove the following statement in two ways: (a) by contrapositive and (b) by contradiction.</div> <div class="para" id="p-1254">For all integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n^2\)</span> is odd then <span class="process-math">\(n\)</span> is odd.</div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="cases4-4.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="morecontradiction4-6.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
@@ -699,5 +700,13 @@ window.MathJax = {
 <div id="ptx-page-footer">
 <a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12894193;
+var sc_invisible=1;
+var sc_security="e67c59eb";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12894193/0/e67c59eb/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
 </body>
 </html>

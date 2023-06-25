@@ -62,8 +62,39 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.0.0dev3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runtime.71ffd81c0faeb38b.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.e543e0dd19670ae2.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.1f1f63d2cda36a4d.css">
 </head>
-<body class="pretext book ignore-math">
+<body id="DiscreteMathText" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" href=""></a><div class="title-container">
 <h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
@@ -549,9 +580,9 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="stronginduction5-4"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.4</span> <span class="title">Strong Induction</span>
 </h2>
-<div class="para" id="p-1348">In this section we look at a variation on induction called strong induction. This is really just regular induction except we make a stronger assumption in the induction hypothesis. It is possible that we need to show more than one base case as well, but for the moment we will just look at how and why we may need to change the assumption.</div>
+<div class="para" id="p-1555">In this section we look at a variation on induction called strong induction. This is really just regular induction except we make a stronger assumption in the induction hypothesis. It is possible that we need to show more than one base case as well, but for the moment we will just look at how and why we may need to change the assumption.</div>
 <article class="assemblage assemblage-like" id="B_strongind"><h3 class="heading"><span class="title">Stong Induction.</span></h3>
-<div class="para logical" id="p-1349">
+<div class="para logical" id="p-1556">
 <div class="para">Let <span class="process-math">\(P(n)\)</span> be a property defined for integers <span class="process-math">\(n\text{.}\)</span> If</div>
 <ol class="decimal">
 <li id="li-330"><div class="para" id="p-derived-li-330">
@@ -560,11 +591,11 @@ window.MathJax = {
 </ol>
 <div class="para">then we can conclude <span class="process-math">\(P(n)\)</span> is true for all <span class="process-math">\(n\geq 1\text{.}\)</span>
 </div>
-</div></article><div class="para" id="p-1350">As in the previous sections on induction, we will assume <span class="process-math">\(n\in \mathbb{Z}\text{.}\)</span>
+</div></article><div class="para" id="p-1557">As in the previous sections on induction, we will assume <span class="process-math">\(n\in \mathbb{Z}\text{.}\)</span>
 </div>
-<div class="para" id="p-1351">Strong induction requires a change in how we write our induction assumption, so we need a slight change to our standard structure for a strong induction proof.</div>
+<div class="para" id="p-1558">Strong induction requires a change in how we write our induction assumption, so we need a slight change to our standard structure for a strong induction proof.</div>
 <article class="assemblage assemblage-like" id="B_structurestronind"><h3 class="heading"><span class="title">Structure of a Strong Induction Proof.</span></h3>
-<div class="para logical" id="p-1352"><ol class="decimal">
+<div class="para logical" id="p-1559"><ol class="decimal">
 <li id="li-332">
 <span class="heading"><span class="title">Base Step.</span></span><div class="para" id="p-derived-li-332"> Assume <span class="process-math">\(P(1)\)</span> is true.</div>
 </li>
@@ -572,28 +603,28 @@ window.MathJax = {
 <span class="heading"><span class="title">Induction Step.</span></span><div class="para" id="p-derived-li-333"> Assume <span class="process-math">\(P(i)\)</span> is true for all <span class="process-math">\(1\leq i\leq k\text{.}\)</span> Show <span class="process-math">\(P(k+1)\)</span> is true.</div>
 </li>
 </ol></div>
-<div class="para" id="p-1353">For now, we can use <span class="process-math">\(a=1\)</span> in the base step and just do one base step as before. But we might need to show, say, <span class="process-math">\(P(1)\)</span> and <span class="process-math">\(P(2)\text{.}\)</span>
-</div></article><div class="para" id="p-1354">The only real difference between strong induction and regular induction is that instead of assuming <span class="process-math">\(P(k)\text{,}\)</span> we assume <span class="process-math">\(P(1), P(2), \ldots P(k)\text{.}\)</span> In notation, this is <span class="process-math">\(P(i)\)</span> for all <span class="process-math">\(1\leq i\leq k\text{.}\)</span>
+<div class="para" id="p-1560">For now, we can use <span class="process-math">\(a=1\)</span> in the base step and just do one base step as before. But we might need to show, say, <span class="process-math">\(P(1)\)</span> and <span class="process-math">\(P(2)\text{.}\)</span>
+</div></article><div class="para" id="p-1561">The only real difference between strong induction and regular induction is that instead of assuming <span class="process-math">\(P(k)\text{,}\)</span> we assume <span class="process-math">\(P(1), P(2), \ldots P(k)\text{.}\)</span> In notation, this is <span class="process-math">\(P(i)\)</span> for all <span class="process-math">\(1\leq i\leq k\text{.}\)</span>
 </div>
-<div class="para" id="p-1355">Why can we change the assumption? Well, remember how induction works, first we show <span class="process-math">\(P(1)\text{,}\)</span> then the induction step gets us to <span class="process-math">\(P(2)\text{,}\)</span> which then gets us to <span class="process-math">\(P(3)\text{,}\)</span> etc. But once we get to, say, <span class="process-math">\(P(4)\text{,}\)</span> we already know <span class="process-math">\(P(1), P(2), P(3)\text{.}\)</span> Thus, we may as well assume we have <span class="process-math">\(P(i)\)</span> for everything up to <span class="process-math">\(P(k)\text{.}\)</span>
+<div class="para" id="p-1562">Why can we change the assumption? Well, remember how induction works, first we show <span class="process-math">\(P(1)\text{,}\)</span> then the induction step gets us to <span class="process-math">\(P(2)\text{,}\)</span> which then gets us to <span class="process-math">\(P(3)\text{,}\)</span> etc. But once we get to, say, <span class="process-math">\(P(4)\text{,}\)</span> we already know <span class="process-math">\(P(1), P(2), P(3)\text{.}\)</span> Thus, we may as well assume we have <span class="process-math">\(P(i)\)</span> for everything up to <span class="process-math">\(P(k)\text{.}\)</span>
 </div>
-<div class="para" id="p-1356">To see the necessity of a stronger assumption, we revisit <a href="" class="xref" data-knowl="./knowl/T_divbyprime.html" title="Theorem 4.3.5">Theorem 4.3.5</a>, by using induction to prove every integer <span class="process-math">\(n&gt;1\)</span> is divisible by a prime. First we will attempt to use regular induction and see why it isn't enough.</div>
+<div class="para" id="p-1563">To see the necessity of a stronger assumption, we revisit <a href="" class="xref" data-knowl="./knowl/T_divbyprime.html" title="Theorem 4.3.5">Theorem 4.3.5</a>, by using induction to prove every integer <span class="process-math">\(n&gt;1\)</span> is divisible by a prime. First we will attempt to use regular induction and see why it isn't enough.</div>
 <article class="example example-like" id="E_divbyprimeregular"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_divbyprimeregular"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Trying Regular Induction.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_divbyprimeregular"><article class="example example-like"> <div class="para" id="p-1357">Prove for all integers <span class="process-math">\(n&gt;1\text{,}\)</span> <span class="process-math">\(n\)</span> is divisible by a prime.</div> <div class="para" id="p-1358">First we try to do the proof using regular induction.</div> <article class="hiddenproof" id="proof-23"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-23"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-23"><article class="hiddenproof"><div class="para" id="p-1359">Base Step: Let <span class="process-math">\(n=2\text{.}\)</span> Then <span class="process-math">\(2\mid 2\)</span> and 2 is prime.</div> <div class="para" id="p-1360">Thus, <span class="process-math">\(n\)</span> is divisible by a prime.</div> <div class="para" id="p-1361">Induction Step:</div> <div class="para" id="p-1362">Assume <span class="process-math">\(k\)</span> is divisible by a prime for some <span class="process-math">\(k\geq 2\text{.}\)</span>
-</div> <div class="para" id="p-1363">Show <span class="process-math">\(k+1\)</span> is divisible by a prime.</div> <div class="para" id="p-1364">“Proof” of induction step:</div> <div class="para" id="p-1365">Case 1: <span class="process-math">\(k+1\)</span> is prime. Now, <span class="process-math">\(k+1\mid k+1\)</span> and hence <span class="process-math">\(k+1\)</span> is divisible by a prime.</div> <div class="para" id="p-1366">Case 2: <span class="process-math">\(k+1\)</span> is not prime. This is were we get stuck, since although we know <span class="process-math">\(k\)</span> is divisible by a prime, that doesn't tell us anything about <span class="process-math">\(k+1\text{.}\)</span> In fact, we showed that any prime dividing <span class="process-math">\(k\)</span> <em class="emphasis">cannot</em> divide <span class="process-math">\(k+1\text{.}\)</span>
-</div> <div class="para" id="p-1367">Thus, regular induction is not going to work for this proof.</div></article></div></article></div>
-<div class="para" id="p-1368">Now we can show how to do the proof with strong induction.</div>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_divbyprimeregular"><article class="example example-like"> <div class="para" id="p-1564">Prove for all integers <span class="process-math">\(n&gt;1\text{,}\)</span> <span class="process-math">\(n\)</span> is divisible by a prime.</div> <div class="para" id="p-1565">First we try to do the proof using regular induction.</div> <article class="hiddenproof" id="proof-23"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-23"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-23"><article class="hiddenproof"><div class="para" id="p-1566">Base Step: Let <span class="process-math">\(n=2\text{.}\)</span> Then <span class="process-math">\(2\mid 2\)</span> and 2 is prime.</div> <div class="para" id="p-1567">Thus, <span class="process-math">\(n\)</span> is divisible by a prime.</div> <div class="para" id="p-1568">Induction Step:</div> <div class="para" id="p-1569">Assume <span class="process-math">\(k\)</span> is divisible by a prime for some <span class="process-math">\(k\geq 2\text{.}\)</span>
+</div> <div class="para" id="p-1570">Show <span class="process-math">\(k+1\)</span> is divisible by a prime.</div> <div class="para" id="p-1571">“Proof” of induction step:</div> <div class="para" id="p-1572">Case 1: <span class="process-math">\(k+1\)</span> is prime. Now, <span class="process-math">\(k+1\mid k+1\)</span> and hence <span class="process-math">\(k+1\)</span> is divisible by a prime.</div> <div class="para" id="p-1573">Case 2: <span class="process-math">\(k+1\)</span> is not prime. This is were we get stuck, since although we know <span class="process-math">\(k\)</span> is divisible by a prime, that doesn't tell us anything about <span class="process-math">\(k+1\text{.}\)</span> In fact, we showed that any prime dividing <span class="process-math">\(k\)</span> <em class="emphasis">cannot</em> divide <span class="process-math">\(k+1\text{.}\)</span>
+</div> <div class="para" id="p-1574">Thus, regular induction is not going to work for this proof.</div></article></div></article></div>
+<div class="para" id="p-1575">Now we can show how to do the proof with strong induction.</div>
 <article class="example example-like" id="E_divbyprimestrong"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_divbyprimestrong"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Strong Induction.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_divbyprimestrong"><article class="example example-like"> <div class="para" id="p-1369">Prove for all integers <span class="process-math">\(n&gt;1\text{,}\)</span> <span class="process-math">\(n\)</span> is divisible by a prime.</div> <div class="para" id="p-1370">The only change in the structure is to the induction assumption.</div> <article class="hiddenproof" id="proof-24"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-24"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-24"><article class="hiddenproof"><div class="para" id="p-1371">Base Step: Let <span class="process-math">\(n=2\text{.}\)</span> Then <span class="process-math">\(2\mid 2\)</span> and 2 is prime.</div> <div class="para" id="p-1372">Thus, <span class="process-math">\(n\)</span> is divisible by a prime.</div> <div class="para" id="p-1373">Induction Step:</div> <div class="para" id="p-1374">Assume <span class="process-math">\(i\)</span> is divisible by a prime for all <span class="process-math">\(2\leq i\leq k\)</span> and for some <span class="process-math">\(k\geq 2\text{.}\)</span>
-</div> <div class="para" id="p-1375">Show <span class="process-math">\(k+1\)</span> is divisible by a prime.</div> <div class="para" id="p-1376">Proof of induction step:</div> <div class="para" id="p-1377">Case 1: <span class="process-math">\(k+1\)</span> is prime. Now, <span class="process-math">\(k+1\mid k+1\)</span> and hence <span class="process-math">\(k+1\)</span> is divisible by a prime.</div> <div class="para" id="p-1378">Case 2: <span class="process-math">\(k+1\)</span> is not prime. Thus <span class="process-math">\(k+1=ab\)</span> where <span class="process-math">\(1&lt; a &lt; k+1\text{.}\)</span> Then <span class="process-math">\(2\leq a\leq k\text{.}\)</span> By our induction assumption, <span class="process-math">\(a\)</span> must be divisible by a prime. Since <span class="process-math">\(a\mid k+1\)</span> and <span class="process-math">\(a\)</span> is divisible by a prime, <span class="process-math">\(k+1\)</span> is divisible by a prime.</div> <div class="para" id="p-1379">Thus, by induction, every <span class="process-math">\(n&gt;1\)</span> is divisible by a prime.</div></article></div></article></div>
-<div class="para" id="p-1380">In regular induction, we use that we know the statement holds for <span class="process-math">\(k\)</span> to get that it holds for <span class="process-math">\(k+1\text{.}\)</span> Strong induction is useful when we need to use some smaller case (not just <span class="process-math">\(k\)</span>) to get the statement for <span class="process-math">\(k+1\text{.}\)</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_divbyprimestrong"><article class="example example-like"> <div class="para" id="p-1576">Prove for all integers <span class="process-math">\(n&gt;1\text{,}\)</span> <span class="process-math">\(n\)</span> is divisible by a prime.</div> <div class="para" id="p-1577">The only change in the structure is to the induction assumption.</div> <article class="hiddenproof" id="proof-24"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-24"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-24"><article class="hiddenproof"><div class="para" id="p-1578">Base Step: Let <span class="process-math">\(n=2\text{.}\)</span> Then <span class="process-math">\(2\mid 2\)</span> and 2 is prime.</div> <div class="para" id="p-1579">Thus, <span class="process-math">\(n\)</span> is divisible by a prime.</div> <div class="para" id="p-1580">Induction Step:</div> <div class="para" id="p-1581">Assume <span class="process-math">\(i\)</span> is divisible by a prime for all <span class="process-math">\(2\leq i\leq k\)</span> and for some <span class="process-math">\(k\geq 2\text{.}\)</span>
+</div> <div class="para" id="p-1582">Show <span class="process-math">\(k+1\)</span> is divisible by a prime.</div> <div class="para" id="p-1583">Proof of induction step:</div> <div class="para" id="p-1584">Case 1: <span class="process-math">\(k+1\)</span> is prime. Now, <span class="process-math">\(k+1\mid k+1\)</span> and hence <span class="process-math">\(k+1\)</span> is divisible by a prime.</div> <div class="para" id="p-1585">Case 2: <span class="process-math">\(k+1\)</span> is not prime. Thus <span class="process-math">\(k+1=ab\)</span> where <span class="process-math">\(1&lt; a &lt; k+1\text{.}\)</span> Then <span class="process-math">\(2\leq a\leq k\text{.}\)</span> By our induction assumption, <span class="process-math">\(a\)</span> must be divisible by a prime. Since <span class="process-math">\(a\mid k+1\)</span> and <span class="process-math">\(a\)</span> is divisible by a prime, <span class="process-math">\(k+1\)</span> is divisible by a prime.</div> <div class="para" id="p-1586">Thus, by induction, every <span class="process-math">\(n&gt;1\)</span> is divisible by a prime.</div></article></div></article></div>
+<div class="para" id="p-1587">In regular induction, we use that we know the statement holds for <span class="process-math">\(k\)</span> to get that it holds for <span class="process-math">\(k+1\text{.}\)</span> Strong induction is useful when we need to use some smaller case (not just <span class="process-math">\(k\)</span>) to get the statement for <span class="process-math">\(k+1\text{.}\)</span>
 </div>
 <article class="activity project-like" id="activity-92"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.4.1</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-48"><div class="para logical" id="p-1381">
+<div class="introduction" id="introduction-48"><div class="para logical" id="p-1588">
 <div class="para">Let <span class="process-math">\(a_0, a_1, a_2,  \ldots\)</span> be the sequence defined as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -607,17 +638,17 @@ a_k=a_{k-1}+a_{k-2}+a_{k-3}, k\geq3.
 </div>
 </div></div>
 <article class="task exercise-like" id="task-145"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-1382">Write out the first 6 terms of the sequence.</div></article><article class="task exercise-like" id="task-146"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-1383">Convince yourself that for the first six terms of the sequence, <span class="process-math">\(a_n\leq 3^n\text{.}\)</span>
+<div class="para" id="p-1589">Write out the first 6 terms of the sequence.</div></article><article class="task exercise-like" id="task-146"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-1590">Convince yourself that for the first six terms of the sequence, <span class="process-math">\(a_n\leq 3^n\text{.}\)</span>
 </div></article><article class="task exercise-like" id="task-147"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-1384">Now try to write a standard induction proof to prove <span class="process-math">\(a_n\leq 3^n\)</span> for all <span class="process-math">\(n\geq 0\text{.}\)</span> Does anything go wrong?</div></article><article class="task exercise-like" id="task-148"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="p-1385">The proof requires strong induction. For the base step, how many previous terms do you need before you can first compute <span class="process-math">\(a_k\)</span> using the formula provided in defining the sequence? You need to show the base step for each of these initial terms since the induction won't apply to them. Check the base step for each of these terms.</div></article><article class="task exercise-like" id="task-149"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="p-1386">Write the “assume” and “show” statements for the inductive step. Make sure your “assume” statement is in the form for strong induction.</div></article><article class="task exercise-like" id="task-150"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="p-1387">Now prove the inductive step.</div></article></article><div class="para" id="p-1388">For the remainder of the section, we are going to switch gears a bit, a prove the existence part of the Quotient-Remainder Theorem. Before we do that we need the Well-Ordering Principle, which we will state without a proof.</div>
+<div class="para" id="p-1591">Now try to write a standard induction proof to prove <span class="process-math">\(a_n\leq 3^n\)</span> for all <span class="process-math">\(n\geq 0\text{.}\)</span> Does anything go wrong?</div></article><article class="task exercise-like" id="task-148"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="p-1592">The proof requires strong induction. For the base step, how many previous terms do you need before you can first compute <span class="process-math">\(a_k\)</span> using the formula provided in defining the sequence? You need to show the base step for each of these initial terms since the induction won't apply to them. Check the base step for each of these terms.</div></article><article class="task exercise-like" id="task-149"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="p-1593">Write the “assume” and “show” statements for the inductive step. Make sure your “assume” statement is in the form for strong induction.</div></article><article class="task exercise-like" id="task-150"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="p-1594">Now prove the inductive step.</div></article></article><div class="para" id="p-1595">For the remainder of the section, we are going to switch gears a bit, a prove the existence part of the Quotient-Remainder Theorem. Before we do that we need the Well-Ordering Principle, which we will state without a proof.</div>
 <article class="theorem theorem-like" id="T_wellordering"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Well-Ordering Principle.</span>
 </h3>
-<div class="para" id="p-1389">Let <span class="process-math">\(S\)</span> be a set containing one or more integers, all of which are greater than some fixed integer. Then <span class="process-math">\(S\)</span> has a least element.</div></article><div class="para logical" id="p-1390">
+<div class="para" id="p-1596">Let <span class="process-math">\(S\)</span> be a set containing one or more integers, all of which are greater than some fixed integer. Then <span class="process-math">\(S\)</span> has a least element.</div></article><div class="para logical" id="p-1597">
 <div class="para">To check that the Well-Ordering Principle applies, you need to check three things:</div>
 <ol class="decimal">
 <li id="li-334"><div class="para" id="p-derived-li-334"><span class="process-math">\(\displaystyle S\neq \emptyset\)</span></div></li>
@@ -627,7 +658,7 @@ a_k=a_{k-1}+a_{k-2}+a_{k-3}, k\geq3.
 </div>
 <article class="example example-like" id="E_wop"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_wop"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Well-Ordering Principle.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_wop"><article class="example example-like"> <div class="para logical" id="p-1391">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_wop"><article class="example example-like"> <div class="para logical" id="p-1598">
 <div class="para">First note that the Well-Ordering Principle does not apply if the set is not integers. For example,</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -635,7 +666,7 @@ a_k=a_{k-1}+a_{k-2}+a_{k-3}, k\geq3.
 \end{equation*}
 </div>
 <div class="para">This is not a subset of the integers and does not have a least element, even though every element is greater than 0.</div>
-</div> <div class="para logical" id="p-1392">
+</div> <div class="para logical" id="p-1599">
 <div class="para">Now consider <span class="process-math">\(S=\{2k+1 : k\geq 0\}\text{.}\)</span> Check each of the conditions.</div>
 <ol class="decimal">
 <li id="li-337"><div class="para" id="p-derived-li-337">
@@ -651,11 +682,11 @@ a_k=a_{k-1}+a_{k-2}+a_{k-3}, k\geq3.
 <article class="activity project-like" id="activity-93"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.4.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1393">Let <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span> Do the conditions of the Well-Ordering Principle apply to <span class="process-math">\(S=\{2k: k\geq 3\}?\)</span>
+<div class="para" id="p-1600">Let <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span> Do the conditions of the Well-Ordering Principle apply to <span class="process-math">\(S=\{2k: k\geq 3\}?\)</span>
 </div></article><article class="activity project-like" id="activity-94"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.4.3</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-1394">
+<div class="para logical" id="p-1601">
 <div class="para">Let <span class="process-math">\(k, j\in \mathbb{Z}\text{.}\)</span> Do the conditions of the Well-Ordering Principle apply to</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -665,28 +696,28 @@ S=\{2k+3j: 2k+3j\geq 0\}?
 </div></article><article class="activity project-like" id="activity-95"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.4.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1395">Do the conditions of the Well-Ordering Principle apply to <span class="process-math">\(S=\{r\in \mathbb{Q}: r\geq 0\}?\)</span>
+<div class="para" id="p-1602">Do the conditions of the Well-Ordering Principle apply to <span class="process-math">\(S=\{r\in \mathbb{Q}: r\geq 0\}?\)</span>
 </div></article><article class="activity project-like" id="activity-96"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.4.5</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-1396">
+<div class="para logical" id="p-1603">
 <div class="para">Let <span class="process-math">\(n, d\in \mathbb{Z}\text{,}\)</span> and <span class="process-math">\(d&gt;0\text{.}\)</span> Do the conditions of the Well-Ordering Principle apply to</div>
 <div class="displaymath process-math">
 \begin{equation*}
 S=\{n-dk: n-dk\geq 0\}?
 \end{equation*}
 </div>
-</div></article><div class="para" id="p-1397">We now prove the existence part of the Quotient-Remainder Theorem.</div>
-<div class="para" id="p-1398">
+</div></article><div class="para" id="p-1604">We now prove the existence part of the Quotient-Remainder Theorem.</div>
+<div class="para" id="p-1605">
 <a href="" class="xref" data-knowl="./knowl/T_divisionalgorthm.html" title="Theorem 4.4.1: The Quotient-Remainder Theorem">Theorem 4.4.1</a>: Given any <span class="process-math">\(n, d\in \mathbb{Z}\)</span> with <span class="process-math">\(d&gt;0\text{,}\)</span> there exist <span class="process-math">\(q, r\)</span> such that <span class="process-math">\(n=dq+r\)</span> and <span class="process-math">\(0\leq r&lt; d\text{.}\)</span>
 </div>
-<article class="hiddenproof" id="proof-25"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-25"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-25"><article class="hiddenproof"><div class="para" id="p-1399">Let <span class="process-math">\(S=\{n-dk : n-dk\geq 0, k\in\mathbb{Z}\}\text{.}\)</span> Show <span class="process-math">\(S\)</span> satisfies the Well-Ordering Principle. Clearly <span class="process-math">\(S\)</span> is a set of integers, and by definition, every element is greater than or equal to 0. So we just need to show that <span class="process-math">\(S\neq\emptyset\text{.}\)</span>
-</div> <div class="para" id="p-1400">If <span class="process-math">\(n\geq 0\text{,}\)</span> we can let <span class="process-math">\(k=0\text{.}\)</span> Then <span class="process-math">\(n-dk=n\geq 0\text{.}\)</span> Hence <span class="process-math">\(n\in S\text{.}\)</span>
-</div> <div class="para" id="p-1401">If <span class="process-math">\(n&lt; 0\text{,}\)</span> let <span class="process-math">\(k=n\text{.}\)</span> Then <span class="process-math">\(n-dn=n(1-d)\text{.}\)</span> But <span class="process-math">\(n&lt; 0\)</span> and <span class="process-math">\(1-d\leq 0\text{.}\)</span> Thus, <span class="process-math">\(n-dn\geq 0\text{.}\)</span> Hence <span class="process-math">\(n-dn\in S\text{.}\)</span>
-</div> <div class="para" id="p-1402">Thus, <span class="process-math">\(S\)</span> is nonempty and satisfies the conditions of the Well-Ordering Principle. Hence, <span class="process-math">\(S\)</span> has a least element. Call it <span class="process-math">\(r\text{.}\)</span>
-</div> <div class="para" id="p-1403">Since <span class="process-math">\(r\in S\text{,}\)</span> <span class="process-math">\(r=n-dk\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span> Let <span class="process-math">\(k=q\text{.}\)</span> Then <span class="process-math">\(r=n-dq\text{,}\)</span> and so <span class="process-math">\(n=dq+r\text{.}\)</span>
-</div> <div class="para" id="p-1404">We just need to show that <span class="process-math">\(0\leq r&lt; d\text{.}\)</span> Well, <span class="process-math">\(r\geq 0\)</span> since <span class="process-math">\(r\in S\text{.}\)</span>
-</div> <div class="para logical" id="p-1405">
+<article class="hiddenproof" id="proof-25"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-25"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-25"><article class="hiddenproof"><div class="para" id="p-1606">Let <span class="process-math">\(S=\{n-dk : n-dk\geq 0, k\in\mathbb{Z}\}\text{.}\)</span> Show <span class="process-math">\(S\)</span> satisfies the Well-Ordering Principle. Clearly <span class="process-math">\(S\)</span> is a set of integers, and by definition, every element is greater than or equal to 0. So we just need to show that <span class="process-math">\(S\neq\emptyset\text{.}\)</span>
+</div> <div class="para" id="p-1607">If <span class="process-math">\(n\geq 0\text{,}\)</span> we can let <span class="process-math">\(k=0\text{.}\)</span> Then <span class="process-math">\(n-dk=n\geq 0\text{.}\)</span> Hence <span class="process-math">\(n\in S\text{.}\)</span>
+</div> <div class="para" id="p-1608">If <span class="process-math">\(n&lt; 0\text{,}\)</span> let <span class="process-math">\(k=n\text{.}\)</span> Then <span class="process-math">\(n-dn=n(1-d)\text{.}\)</span> But <span class="process-math">\(n&lt; 0\)</span> and <span class="process-math">\(1-d\leq 0\text{.}\)</span> Thus, <span class="process-math">\(n-dn\geq 0\text{.}\)</span> Hence <span class="process-math">\(n-dn\in S\text{.}\)</span>
+</div> <div class="para" id="p-1609">Thus, <span class="process-math">\(S\)</span> is nonempty and satisfies the conditions of the Well-Ordering Principle. Hence, <span class="process-math">\(S\)</span> has a least element. Call it <span class="process-math">\(r\text{.}\)</span>
+</div> <div class="para" id="p-1610">Since <span class="process-math">\(r\in S\text{,}\)</span> <span class="process-math">\(r=n-dk\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span> Let <span class="process-math">\(k=q\text{.}\)</span> Then <span class="process-math">\(r=n-dq\text{,}\)</span> and so <span class="process-math">\(n=dq+r\text{.}\)</span>
+</div> <div class="para" id="p-1611">We just need to show that <span class="process-math">\(0\leq r&lt; d\text{.}\)</span> Well, <span class="process-math">\(r\geq 0\)</span> since <span class="process-math">\(r\in S\text{.}\)</span>
+</div> <div class="para logical" id="p-1612">
 <div class="para">We will use contradiction to show <span class="process-math">\(r&lt; d\text{.}\)</span> Assume <span class="process-math">\(r\geq d\text{.}\)</span> Then</div>
 <div class="displaymath process-math" id="md-22">
 \begin{align*}
@@ -701,31 +732,46 @@ n-d(q+1)&amp;=n-dq-d\\
 <section class="reading-questions" id="reading-questions-20"><h3 class="heading hide-type">
 <span class="type">Reading Questions</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-278"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1406">True or false: <span class="process-math">\(S=\{\frac{3n+1}{4} : n\in \mathbb{Z}, n\geq 0\}\)</span> satisfies the conditions of the Well-Ordering Principle.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-218" id="answer-218"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-218"><div class="answer solution-like"><div class="para" id="p-1407">False, the elements aren't all integers.</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-279"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-1408">True or false: <span class="process-math">\(S=\{3n : n\in \mathbb{Z}, n\geq 0\}\)</span> satisfies the conditions of the Well-Ordering Principle.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-219" id="answer-219"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-219"><div class="answer solution-like"><div class="para" id="p-1409">True.</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-280"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-1410">True or false: <span class="process-math">\(S=\{-n : n\in \mathbb{Z}, n\geq 0\}\)</span> satisfies the conditions of the Well-Ordering Principle.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-220" id="answer-220"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-220"><div class="answer solution-like"><div class="para" id="p-1411">False, the elements aren't all greater that some integer.</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-281"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-1412">True or false: <span class="process-math">\(S=\{3n-k : n,k\in \mathbb{Z}, 3n-k\geq 0\}\)</span> satisfies the conditions of the Well-Ordering Principle.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-221" id="answer-221"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-221"><div class="answer solution-like"><div class="para" id="p-1413">True.</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-282"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-1414">True or false: <span class="process-math">\(S=\{(-1)^n : n\in \mathbb{Z}\}\)</span> satisfies the conditions of the Well-Ordering Principle.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-222" id="answer-222"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-222"><div class="answer solution-like"><div class="para" id="p-1415">True.</div></div></div>
-</div></article></section><section class="exercises" id="exercises-20"><h3 class="heading hide-type">
+<article class="exercise exercise-like" id="DMT_strongind_CYU_3np1wop"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_strongind_CYU_3np1wop">
+<div class="para" id="p-1613">True or false: <span class="process-math">\(S=\{\frac{3n+1}{4} : n\in \mathbb{Z}, n\geq 0\}\)</span> satisfies the conditions of the Well-Ordering Principle.</div>
+<li data-component="answer" id="DMT_strongind_CYU_3np1wop_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="DMT_strongind_CYU_3np1wop_opt_t"><div class="para" id="p-1614">The elements aren't all integers.</div></li>
+<li data-component="answer" id="DMT_strongind_CYU_3np1wop_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="DMT_strongind_CYU_3np1wop_opt_f"><div class="para" id="p-1614">The elements aren't all integers.</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_strongind_CYU_3nwop"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_strongind_CYU_3nwop">
+<div class="para" id="p-1616">True or false: <span class="process-math">\(S=\{3n : n\in \mathbb{Z}, n\geq 0\}\)</span> satisfies the conditions of the Well-Ordering Principle.</div>
+<li data-component="answer" id="DMT_strongind_CYU_3nwop_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="DMT_strongind_CYU_3nwop_opt_t"><div class="para" id="p-1617">Check that the set satifies the three conditions.</div></li>
+<li data-component="answer" id="DMT_strongind_CYU_3nwop_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="DMT_strongind_CYU_3nwop_opt_f"><div class="para" id="p-1617">Check that the set satifies the three conditions.</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_strongind_CYU_negnwop"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_strongind_CYU_negnwop">
+<div class="para" id="p-1619">True or false: <span class="process-math">\(S=\{-n : n\in \mathbb{Z}, n\geq 0\}\)</span> satisfies the conditions of the Well-Ordering Principle.</div>
+<li data-component="answer" id="DMT_strongind_CYU_negnwop_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="DMT_strongind_CYU_negnwop_opt_t"><div class="para" id="p-1620">The elements aren't all greater that some integer.</div></li>
+<li data-component="answer" id="DMT_strongind_CYU_negnwop_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="DMT_strongind_CYU_negnwop_opt_f"><div class="para" id="p-1620">The elements aren't all greater that some integer.</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_strongind_CYU_3npmkwop"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_strongind_CYU_3npmkwop">
+<div class="para" id="p-1622">True or false: <span class="process-math">\(S=\{3n-k : n,k\in \mathbb{Z}, 3n-k\geq 0\}\)</span> satisfies the conditions of the Well-Ordering Principle.</div>
+<li data-component="answer" id="DMT_strongind_CYU_3npmkwop_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="DMT_strongind_CYU_3npmkwop_opt_t"><div class="para" id="p-1623">Check that the set satifies the three conditions.</div></li>
+<li data-component="answer" id="DMT_strongind_CYU_3npmkwop_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="DMT_strongind_CYU_3npmkwop_opt_f"><div class="para" id="p-1623">Check that the set satifies the three conditions.</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_strongind_CYU_alt1wop"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_strongind_CYU_alt1wop">
+<div class="para" id="p-1625">True or false: <span class="process-math">\(S=\{(-1)^n : n\in \mathbb{Z}\}\)</span> satisfies the conditions of the Well-Ordering Principle.</div>
+<li data-component="answer" id="DMT_strongind_CYU_alt1wop_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="DMT_strongind_CYU_alt1wop_opt_t"><div class="para" id="p-1626">Check that the set satifies the three conditions.</div></li>
+<li data-component="answer" id="DMT_strongind_CYU_alt1wop_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="DMT_strongind_CYU_alt1wop_opt_f"><div class="para" id="p-1626">Check that the set satifies the three conditions.</div></li>
+</ul></div></div></article></section><section class="exercises" id="exercises-20"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="exercise-283"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para logical" id="p-1416">
+<div class="para logical" id="p-1628">
 <div class="para">Let <span class="process-math">\(a_1, a_2, a_3,  \ldots\)</span> be the sequence defined as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -737,9 +783,9 @@ a_1=1, a_2=3,
 a_k=a_{k-2}+2a_{k-1}, k\geq3.
 \end{equation*}
 </div>
-</div> <div class="para" id="p-1417">Prove that <span class="process-math">\(a_n\)</span> is odd for all integers <span class="process-math">\(n \geq 1\text{.}\)</span>
+</div> <div class="para" id="p-1629">Prove that <span class="process-math">\(a_n\)</span> is odd for all integers <span class="process-math">\(n \geq 1\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-284"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para logical" id="p-1418">
+<div class="para logical" id="p-1630">
 <div class="para">Let <span class="process-math">\(b_1, b_2, b_3,  \ldots\)</span> be the sequence defined as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -751,9 +797,9 @@ b_1=4, b_2=12,
 b_k=b_{k-2}+b_{k-1}, k\geq3.
 \end{equation*}
 </div>
-</div> <div class="para" id="p-1419">Prove that <span class="process-math">\(b_n\)</span> is divisible by 4 for all integers <span class="process-math">\(n \geq 1\text{.}\)</span>
+</div> <div class="para" id="p-1631">Prove that <span class="process-math">\(b_n\)</span> is divisible by 4 for all integers <span class="process-math">\(n \geq 1\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-285"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para logical" id="p-1420">
+<div class="para logical" id="p-1632">
 <div class="para">Let <span class="process-math">\(c_1, c_2, c_3,  \ldots\)</span> be the sequence defined as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -765,9 +811,9 @@ c_1=3, c_2=5,
 c_k=3c_{k-1}-2c_{k-2}, k\geq3.
 \end{equation*}
 </div>
-</div> <div class="para" id="p-1421">Prove that <span class="process-math">\(c_n=2^n+1\)</span> for all integers <span class="process-math">\(n \geq 1\text{.}\)</span>
+</div> <div class="para" id="p-1633">Prove that <span class="process-math">\(c_n=2^n+1\)</span> for all integers <span class="process-math">\(n \geq 1\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-286"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para logical" id="p-1422">
+<div class="para logical" id="p-1634">
 <div class="para">Let <span class="process-math">\(a_1, a_3, a_3,  \ldots\)</span> be the sequence defined as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -779,7 +825,7 @@ a_1=1, a_2=3,
 a_k=a_{k-1}+a_{k-2}, k\geq3.
 \end{equation*}
 </div>
-</div> <div class="para" id="p-1423">Use strong induction to prove that <span class="process-math">\(a_n\leq \Bigl(\frac{7}{4}\Bigr)^n\)</span> or all integers <span class="process-math">\(n \geq 1\text{.}\)</span>
+</div> <div class="para" id="p-1635">Use strong induction to prove that <span class="process-math">\(a_n\leq \Bigl(\frac{7}{4}\Bigr)^n\)</span> or all integers <span class="process-math">\(n \geq 1\text{.}\)</span>
 </div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="moreinduction5-3.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="recursion5-5.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
@@ -788,5 +834,13 @@ a_k=a_{k-1}+a_{k-2}, k\geq3.
 <div id="ptx-page-footer">
 <a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12894193;
+var sc_invisible=1;
+var sc_security="e67c59eb";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12894193/0/e67c59eb/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
 </body>
 </html>

@@ -62,8 +62,39 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.0.0dev3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runtime.71ffd81c0faeb38b.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.e543e0dd19670ae2.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.1f1f63d2cda36a4d.css">
 </head>
-<body class="pretext book ignore-math">
+<body id="DiscreteMathText" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" href=""></a><div class="title-container">
 <h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
@@ -549,32 +580,32 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="quantifiersI3-1"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.1</span> <span class="title">Quantifiers</span>
 </h2>
-<div class="para" id="p-381">We want to be able to use variables in statements. For example, <span class="process-math">\(x+3/2=4\)</span> is not a statement since it has no truth value. However, if we say, “there exists <span class="process-math">\(x\)</span> such that <span class="process-math">\(x+3/2=4\)</span>” or “for all <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(x+3/2=4\text{,}\)</span>” and we know what set <span class="process-math">\(x\)</span> belongs to, then we can decide whether these statements are true or false.</div>
+<div class="para" id="p-474">We want to be able to use variables in statements. For example, <span class="process-math">\(x+3/2=4\)</span> is not a statement since it has no truth value. However, if we say, “there exists <span class="process-math">\(x\)</span> such that <span class="process-math">\(x+3/2=4\)</span>” or “for all <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(x+3/2=4\text{,}\)</span>” and we know what set <span class="process-math">\(x\)</span> belongs to, then we can decide whether these statements are true or false.</div>
 <article class="definition definition-like" id="definition-13"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-382">The <dfn class="terminology">domain</dfn> for a quantified statement is the set of possible values for a variable in a quantified statement.</div></article><div class="para" id="p-383">In order to determine whether a statement is true of false, we first need to know the domain.</div>
+<div class="para" id="p-475">The <dfn class="terminology">domain</dfn> for a quantified statement is the set of possible values for a variable in a quantified statement.</div></article><div class="para" id="p-476">In order to determine whether a statement is true of false, we first need to know the domain.</div>
 <article class="example example-like" id="E_domainqexist1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_domainqexist1"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Domain and Existential Statements.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_domainqexist1"><article class="example example-like"> <div class="para" id="p-384">Let <span class="process-math">\(D=\mathbb{Z}\text{.}\)</span> Determine whether the statement “there exists <span class="process-math">\(x\in D\)</span> such that <span class="process-math">\(x+3/2=4\)</span>” is true or false.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-46" id="answer-46"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-46"><div class="answer solution-like"><div class="para" id="p-385">Since <span class="process-math">\(x=5/2\)</span> is the only value satisfying the equation, but <span class="process-math">\(x\notin \mathbb{Z}\text{,}\)</span> the statement is false.</div></div></div> <div class="para" id="p-386">Let <span class="process-math">\(D=\mathbb{R}\text{.}\)</span> Determine whether the statement “there exists <span class="process-math">\(x\in D\)</span> such that <span class="process-math">\(x+3/2=4\)</span>” is true or false.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-47" id="answer-47"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-47"><div class="answer solution-like"><div class="para" id="p-387">Since <span class="process-math">\(x=5/2\)</span> is the only value satisfying the equation, and <span class="process-math">\(x\in \mathbb{R}\text{,}\)</span> the statement is true.</div></div></div> <div class="para" id="p-388">Let <span class="process-math">\(D=\{5/2\}\text{.}\)</span> Determine whether the statement “there exists <span class="process-math">\(x\in D\)</span> such that <span class="process-math">\(x+3/2=4\)</span>” is true or false.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-48" id="answer-48"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-48"><div class="answer solution-like"><div class="para" id="p-389">Since <span class="process-math">\(x=5/2\)</span> is the only value satisfying the equation, and <span class="process-math">\(x\in D\text{,}\)</span> the statement is true.</div></div></div></article></div>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_domainqexist1"><article class="example example-like"> <div class="para" id="p-477">Let <span class="process-math">\(D=\mathbb{Z}\text{.}\)</span> Determine whether the statement “there exists <span class="process-math">\(x\in D\)</span> such that <span class="process-math">\(x+3/2=4\)</span>” is true or false.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-46" id="answer-46"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-46"><div class="answer solution-like"><div class="para" id="p-478">Since <span class="process-math">\(x=5/2\)</span> is the only value satisfying the equation, but <span class="process-math">\(x\notin \mathbb{Z}\text{,}\)</span> the statement is false.</div></div></div> <div class="para" id="p-479">Let <span class="process-math">\(D=\mathbb{R}\text{.}\)</span> Determine whether the statement “there exists <span class="process-math">\(x\in D\)</span> such that <span class="process-math">\(x+3/2=4\)</span>” is true or false.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-47" id="answer-47"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-47"><div class="answer solution-like"><div class="para" id="p-480">Since <span class="process-math">\(x=5/2\)</span> is the only value satisfying the equation, and <span class="process-math">\(x\in \mathbb{R}\text{,}\)</span> the statement is true.</div></div></div> <div class="para" id="p-481">Let <span class="process-math">\(D=\{5/2\}\text{.}\)</span> Determine whether the statement “there exists <span class="process-math">\(x\in D\)</span> such that <span class="process-math">\(x+3/2=4\)</span>” is true or false.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-48" id="answer-48"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-48"><div class="answer solution-like"><div class="para" id="p-482">Since <span class="process-math">\(x=5/2\)</span> is the only value satisfying the equation, and <span class="process-math">\(x\in D\text{,}\)</span> the statement is true.</div></div></div></article></div>
 <article class="example example-like" id="E_domainquniversal1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_domainquniversal1"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Domain and Universal Statements.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_domainquniversal1"><article class="example example-like"> <div class="para" id="p-390">Let <span class="process-math">\(D=\mathbb{Z}\text{.}\)</span> Determine whether the statement “for all <span class="process-math">\(x\in D\text{,}\)</span> <span class="process-math">\(x+3/2=4\)</span>” is true or false.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-49" id="answer-49"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-49"><div class="answer solution-like"><div class="para" id="p-391">Since <span class="process-math">\(x=5/2\)</span> is the only value satisfying the equation, certainly every integer does not satisfy the equation. The statement is false.</div></div></div> <div class="para" id="p-392">Let <span class="process-math">\(D=\mathbb{R}\text{.}\)</span> Determine whether the statement “for all <span class="process-math">\(x\in D\text{,}\)</span> <span class="process-math">\(x+3/2=4\)</span>” is true or false.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-50" id="answer-50"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-50"><div class="answer solution-like"><div class="para" id="p-393">Since <span class="process-math">\(x=5/2\)</span> is the only value satisfying the equation, certainly every real number does not satisfy the equation. The statement is false.</div></div></div> <div class="para" id="p-394">Let <span class="process-math">\(D=\{5/2\}\text{.}\)</span> Determine whether the statement “for all <span class="process-math">\(x\in D\text{,}\)</span> <span class="process-math">\(x+3/2=4\)</span>” is true or false.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-51" id="answer-51"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-51"><div class="answer solution-like"><div class="para" id="p-395">Since <span class="process-math">\(x=5/2\)</span> satisfies the equation, and is the only value in <span class="process-math">\(D\text{,}\)</span> the statement is true.</div></div></div></article></div>
-<div class="para" id="p-396">We want to be able to work with generic statements, like <span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{,}\)</span> but also with variables. Instead of <span class="process-math">\(p\)</span> we will use <span class="process-math">\(P(x)\text{.}\)</span> An expression, <span class="process-math">\(P(x)\text{,}\)</span> represents some property or expression about <span class="process-math">\(x\text{.}\)</span> We call <span class="process-math">\(P(x)\)</span> the <dfn class="terminology">predicate</dfn>.</div>
-<div class="para" id="p-397">In our above examples, <span class="process-math">\(P(x)\)</span> is <span class="process-math">\(x+3/2=4\text{.}\)</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_domainquniversal1"><article class="example example-like"> <div class="para" id="p-483">Let <span class="process-math">\(D=\mathbb{Z}\text{.}\)</span> Determine whether the statement “for all <span class="process-math">\(x\in D\text{,}\)</span> <span class="process-math">\(x+3/2=4\)</span>” is true or false.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-49" id="answer-49"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-49"><div class="answer solution-like"><div class="para" id="p-484">Since <span class="process-math">\(x=5/2\)</span> is the only value satisfying the equation, certainly every integer does not satisfy the equation. The statement is false.</div></div></div> <div class="para" id="p-485">Let <span class="process-math">\(D=\mathbb{R}\text{.}\)</span> Determine whether the statement “for all <span class="process-math">\(x\in D\text{,}\)</span> <span class="process-math">\(x+3/2=4\)</span>” is true or false.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-50" id="answer-50"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-50"><div class="answer solution-like"><div class="para" id="p-486">Since <span class="process-math">\(x=5/2\)</span> is the only value satisfying the equation, certainly every real number does not satisfy the equation. The statement is false.</div></div></div> <div class="para" id="p-487">Let <span class="process-math">\(D=\{5/2\}\text{.}\)</span> Determine whether the statement “for all <span class="process-math">\(x\in D\text{,}\)</span> <span class="process-math">\(x+3/2=4\)</span>” is true or false.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-51" id="answer-51"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-51"><div class="answer solution-like"><div class="para" id="p-488">Since <span class="process-math">\(x=5/2\)</span> satisfies the equation, and is the only value in <span class="process-math">\(D\text{,}\)</span> the statement is true.</div></div></div></article></div>
+<div class="para" id="p-489">We want to be able to work with generic statements, like <span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{,}\)</span> but also with variables. Instead of <span class="process-math">\(p\)</span> we will use <span class="process-math">\(P(x)\text{.}\)</span> An expression, <span class="process-math">\(P(x)\text{,}\)</span> represents some property or expression about <span class="process-math">\(x\text{.}\)</span> We call <span class="process-math">\(P(x)\)</span> the <dfn class="terminology">predicate</dfn>.</div>
+<div class="para" id="p-490">In our above examples, <span class="process-math">\(P(x)\)</span> is <span class="process-math">\(x+3/2=4\text{.}\)</span>
 </div>
-<div class="para" id="p-398">Our properties don't just need to be mathematical, though. For example we could have a predicate such as <span class="process-math">\(P(x)\)</span> is “<span class="process-math">\(x\)</span> is a math major.” In this case our domain could be the set of students at Linfield or the set of students in Discrete Math.</div>
-<div class="para" id="p-399">One goal with quantified statements is to be able to for which values in the domain they are true.</div>
+<div class="para" id="p-491">Our properties don't just need to be mathematical, though. For example we could have a predicate such as <span class="process-math">\(P(x)\)</span> is “<span class="process-math">\(x\)</span> is a math major.” In this case our domain could be the set of students at Linfield or the set of students in Discrete Math.</div>
+<div class="para" id="p-492">One goal with quantified statements is to be able to for which values in the domain they are true.</div>
 <article class="definition definition-like" id="definition-14"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-400">The <dfn class="terminology">truth set</dfn> for a predicate, <span class="process-math">\(P(x)\text{,}\)</span> is the set of values for <span class="process-math">\(x\)</span> that make <span class="process-math">\(P(x)\)</span> true.</div></article><article class="example example-like" id="E_truthsets"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_truthsets"><h3 class="heading">
+<div class="para" id="p-493">The <dfn class="terminology">truth set</dfn> for a predicate, <span class="process-math">\(P(x)\text{,}\)</span> is the set of values for <span class="process-math">\(x\)</span> that make <span class="process-math">\(P(x)\)</span> true.</div></article><article class="example example-like" id="E_truthsets"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_truthsets"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Finding Truth Sets.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_truthsets"><article class="example example-like"> <div class="para" id="p-401">Find the  truth set for <span class="process-math">\(P(x)\)</span> given by <span class="process-math">\(x+3/2=4\text{.}\)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-52" id="answer-52"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-52"><div class="answer solution-like"><div class="para" id="p-402">Since <span class="process-math">\(x=5/2\)</span> is the only value satisfying the equation, the tuth set is <span class="process-math">\(\{5/2\}\text{.}\)</span>
-</div></div></div> <div class="para" id="p-403">Find the  truth set for <span class="process-math">\(P(x)\)</span> given by <span class="process-math">\(x\)</span> is even.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-53" id="answer-53"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-53"><div class="answer solution-like"><div class="para" id="p-404">The truth set is the set of all even numbers.</div></div></div></article></div>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_truthsets"><article class="example example-like"> <div class="para" id="p-494">Find the  truth set for <span class="process-math">\(P(x)\)</span> given by <span class="process-math">\(x+3/2=4\text{.}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-52" id="answer-52"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-52"><div class="answer solution-like"><div class="para" id="p-495">Since <span class="process-math">\(x=5/2\)</span> is the only value satisfying the equation, the tuth set is <span class="process-math">\(\{5/2\}\text{.}\)</span>
+</div></div></div> <div class="para" id="p-496">Find the  truth set for <span class="process-math">\(P(x)\)</span> given by <span class="process-math">\(x\)</span> is even.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-53" id="answer-53"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-53"><div class="answer solution-like"><div class="para" id="p-497">The truth set is the set of all even numbers.</div></div></div></article></div>
 <article class="assemblage assemblage-like" id="B_quantifiers"><h3 class="heading"><span class="title">Quantifiers.</span></h3>
-<div class="para logical" id="p-405"><ul class="disc">
+<div class="para logical" id="p-498"><ul class="disc">
 <li id="li-124">
 <span class="heading"><span class="title">Universal quantifier.</span></span><div class="para" id="p-derived-li-124"> <span class="process-math">\(\forall\)</span>, read as “for all” or  “for every.”</div>
 </li>
@@ -584,112 +615,131 @@ window.MathJax = {
 </ul></div></article><article class="definition definition-like" id="D_univstatement"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.6</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-406">A <dfn class="terminology">universal statement</dfn> has the form <span class="process-math">\(\forall x\in D, P(x)\text{.}\)</span>
-</div></article><div class="para" id="p-407">To show a universal statement is <em class="alert">true</em>, you need to show all values in <span class="process-math">\(D\)</span> make <span class="process-math">\(P(x)\)</span> true. If your set is small, you can do this just by showing <span class="process-math">\(P(x)\)</span> is true for each <span class="process-math">\(x\)</span> (method of exhaustion). If <span class="process-math">\(D\)</span> is infinite, however, we will need more general techniques.</div>
-<div class="para" id="p-408">To show a universal statement is <em class="alert">false</em>, you just need to find one value in <span class="process-math">\(D\)</span> which makes <span class="process-math">\(P(x)\)</span> false (counterexample).</div>
+<div class="para" id="p-499">A <dfn class="terminology">universal statement</dfn> has the form <span class="process-math">\(\forall x\in D, P(x)\text{.}\)</span>
+</div></article><div class="para" id="p-500">To show a universal statement is <em class="alert">true</em>, you need to show all values in <span class="process-math">\(D\)</span> make <span class="process-math">\(P(x)\)</span> true. If your set is small, you can do this just by showing <span class="process-math">\(P(x)\)</span> is true for each <span class="process-math">\(x\)</span> (method of exhaustion). If <span class="process-math">\(D\)</span> is infinite, however, we will need more general techniques.</div>
+<div class="para" id="p-501">To show a universal statement is <em class="alert">false</em>, you just need to find one value in <span class="process-math">\(D\)</span> which makes <span class="process-math">\(P(x)\)</span> false (counterexample).</div>
 <article class="activity project-like" id="activity-35"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-409">Let <span class="process-math">\(D=\{2, 3, 4, 5\}\text{.}\)</span> Show the following statement is true: <span class="process-math">\(\forall x\in {D}, x^2&gt;2\text{.}\)</span>
+<div class="para" id="p-502">Let <span class="process-math">\(D=\{2, 3, 4, 5\}\text{.}\)</span> Show the following statement is true: <span class="process-math">\(\forall x\in {D}, x^2&gt;2\text{.}\)</span>
 </div></article><article class="activity project-like" id="activity-36"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-410">Let <span class="process-math">\(D=\{2, 3, 4, 5\}\text{.}\)</span> Show the following statement is false: <span class="process-math">\(\forall x\in D, x^2 &lt; 20\text{.}\)</span>
+<div class="para" id="p-503">Let <span class="process-math">\(D=\{2, 3, 4, 5\}\text{.}\)</span> Show the following statement is false: <span class="process-math">\(\forall x\in D, x^2 &lt; 20\text{.}\)</span>
 </div></article><article class="definition definition-like" id="D_existstatement"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.7</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-411">An <dfn class="terminology">existential statement</dfn> has the form <span class="process-math">\(\exists x\in D, P(x)\text{.}\)</span>
-</div></article><div class="para" id="p-412">To show an existential statement is <em class="alert">true</em>, you just need to find one value in <span class="process-math">\(D\)</span> which makes <span class="process-math">\(P(x)\)</span> true.</div>
-<div class="para" id="p-413">To show an existential statement is <em class="alert">false</em>, you need to show all values in <span class="process-math">\(D\)</span> make <span class="process-math">\(P(x)\)</span> false, or no values make it true. If your set is small, you can do this just by showing <span class="process-math">\(P(x)\)</span> is false for each <span class="process-math">\(x\text{.}\)</span> If <span class="process-math">\(D\)</span> is infinite, however, we will need more general techniques.</div>
+<div class="para" id="p-504">An <dfn class="terminology">existential statement</dfn> has the form <span class="process-math">\(\exists x\in D, P(x)\text{.}\)</span>
+</div></article><div class="para" id="p-505">To show an existential statement is <em class="alert">true</em>, you just need to find one value in <span class="process-math">\(D\)</span> which makes <span class="process-math">\(P(x)\)</span> true.</div>
+<div class="para" id="p-506">To show an existential statement is <em class="alert">false</em>, you need to show all values in <span class="process-math">\(D\)</span> make <span class="process-math">\(P(x)\)</span> false, or no values make it true. If your set is small, you can do this just by showing <span class="process-math">\(P(x)\)</span> is false for each <span class="process-math">\(x\text{.}\)</span> If <span class="process-math">\(D\)</span> is infinite, however, we will need more general techniques.</div>
 <article class="activity project-like" id="activity-37"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-414">Show the following statement is true: <span class="process-math">\(\exists x\in \mathbb{R}, 2x^2+1=5\text{.}\)</span>
+<div class="para" id="p-507">Show the following statement is true: <span class="process-math">\(\exists x\in \mathbb{R}, 2x^2+1=5\text{.}\)</span>
 </div></article><article class="activity project-like" id="activity-38"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-415">Show the following statement is false: <span class="process-math">\(\exists x\in \mathbb{Z}, 3x+5=6\text{.}\)</span>
+<div class="para" id="p-508">Show the following statement is false: <span class="process-math">\(\exists x\in \mathbb{Z}, 3x+5=6\text{.}\)</span>
 </div></article><article class="example example-like" id="E_translating"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_translating"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Translating Statements.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_translating"><article class="example example-like"> <div class="para" id="p-416">Translate the statement using quantifiers and variables, “All positive real numbers have square roots greater than zero.”</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-54" id="answer-54"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-54"><div class="answer solution-like"><span class="process-math">\(\forall x\in \mathbb{R}^+, \sqrt{x}&gt;0.\)</span></div></div> <div class="para" id="p-417">Translate the statement using quantifiers and variables, “Nobody's perfect.”</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-55" id="answer-55"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-55"><div class="answer solution-like"><div class="para" id="p-418">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_translating"><article class="example example-like"> <div class="para" id="p-509">Translate the statement using quantifiers and variables, “All positive real numbers have square roots greater than zero.”</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-54" id="answer-54"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-54"><div class="answer solution-like"><span class="process-math">\(\forall x\in \mathbb{R}^+, \sqrt{x}&gt;0.\)</span></div></div> <div class="para" id="p-510">Translate the statement using quantifiers and variables, “Nobody's perfect.”</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-55" id="answer-55"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-55"><div class="answer solution-like"><div class="para" id="p-511">
 <span class="process-math">\(\forall x\in \{\textrm{people}\}, x\)</span> is not perfect.</div></div></div></article></div>
 <article class="activity project-like" id="activity-39"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.5</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-419">Write the following statement formally using quantifiers and variables: Every differentiable function is continuous.</div></article><div class="para" id="p-420">Recall universal conditional statements from <a href="variables1-1.html" class="internal" title="Section 1.1: Variables and Statements">Section 1.1</a>.</div>
+<div class="para" id="p-512">Write the following statement formally using quantifiers and variables: Every differentiable function is continuous.</div></article><div class="para" id="p-513">Recall universal conditional statements from <a href="variables1-1.html" class="internal" title="Section 1.1: Variables and Statements">Section 1.1</a>.</div>
 <article class="definition definition-like" id="D_univcondstate"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.9</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-421">A <dfn class="terminology">universal conditional statement</dfn> has the form  <span class="process-math">\(\forall x\in D\text{,}\)</span> if <span class="process-math">\(P(x)\)</span> then <span class="process-math">\(Q(x)\text{.}\)</span> In symbols, we can write a universal conditional as <span class="process-math">\(\forall x\in D, P(x)\rightarrow Q(x).\)</span>
+<div class="para" id="p-514">A <dfn class="terminology">universal conditional statement</dfn> has the form  <span class="process-math">\(\forall x\in D\text{,}\)</span> if <span class="process-math">\(P(x)\)</span> then <span class="process-math">\(Q(x)\text{.}\)</span> In symbols, we can write a universal conditional as <span class="process-math">\(\forall x\in D, P(x)\rightarrow Q(x).\)</span>
 </div></article><article class="example example-like" id="E_univcond"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_univcond"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Universal Conditional Statement.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_univcond"><article class="example example-like"> <div class="para" id="p-422">Translate the statement using quantifiers and variables, “If an integer is even then it is divisible by 2.”</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-56" id="answer-56"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-56"><div class="answer solution-like"><div class="para" id="p-423">Let <span class="process-math">\(P(x)\)</span> be “<span class="process-math">\(x\)</span> is even” and <span class="process-math">\(Q(x)\)</span> be “<span class="process-math">\(x\)</span> is divisible by 2.” <span class="process-math">\(\forall x\in \mathbb{Z}, P(x)\rightarrow Q(x)\text{.}\)</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_univcond"><article class="example example-like"> <div class="para" id="p-515">Translate the statement using quantifiers and variables, “If an integer is even then it is divisible by 2.”</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-56" id="answer-56"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-56"><div class="answer solution-like"><div class="para" id="p-516">Let <span class="process-math">\(P(x)\)</span> be “<span class="process-math">\(x\)</span> is even” and <span class="process-math">\(Q(x)\)</span> be “<span class="process-math">\(x\)</span> is divisible by 2.” <span class="process-math">\(\forall x\in \mathbb{Z}, P(x)\rightarrow Q(x)\text{.}\)</span>
 </div></div></div></article></div>
 <article class="activity project-like" id="activity-40"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.6</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-424">Write the following statement formally as a universal conditional: Every differentiable function is continuous.</div></article><article class="activity project-like" id="activity-41"><h3 class="heading">
+<div class="para" id="p-517">Write the following statement formally as a universal conditional: Every differentiable function is continuous.</div></article><article class="activity project-like" id="activity-41"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.7</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-13"><div class="para" id="p-425">Write the following statements formally using quantifiers and variables.</div></div>
+<div class="introduction" id="introduction-13"><div class="para" id="p-518">Write the following statements formally using quantifiers and variables.</div></div>
 <article class="task exercise-like" id="task-36"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-426">Some even integers are negative.</div></article><article class="task exercise-like" id="task-37"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-427">Everyone makes mistakes.</div></article><article class="task exercise-like" id="task-38"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-428">Someone will get an A.</div></article></article><section class="reading-questions" id="reading-questions-7"><h3 class="heading hide-type">
+<div class="para" id="p-519">Some even integers are negative.</div></article><article class="task exercise-like" id="task-37"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-520">Everyone makes mistakes.</div></article><article class="task exercise-like" id="task-38"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-521">Someone will get an A.</div></article></article><section class="reading-questions" id="reading-questions-7"><h3 class="heading hide-type">
 <span class="type">Reading Questions</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
-<div class="para" id="p-429">Let <span class="process-math">\(D=\mathbb{Z}\text{.}\)</span> Let <span class="process-math">\(P(x)\)</span> be “<span class="process-math">\(x^2\)</span> is even.” Determine whether each of the following statements are true or false.</div>
-<article class="exercise exercise-like" id="exercise-80"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-430"><span class="process-math">\(\forall x\in D, P(x).\)</span></div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-57" id="answer-57"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-57"><div class="answer solution-like">False. It is not true that every square is even. For example, <span class="process-math">\(3^2=9\)</span> is odd.</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-81"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-431"><span class="process-math">\(\exists x\in D, P(x).\)</span></div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-58" id="answer-58"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-58"><div class="answer solution-like">True. For example, <span class="process-math">\(2^2=4\)</span> is even.</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-82"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-432"><span class="process-math">\(\forall x\in D, \sim P(x).\)</span></div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-59" id="answer-59"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-59"><div class="answer solution-like">False. It is not true that every square is not even.</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-83"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-433"><span class="process-math">\(\exists x\in D, \sim P(x).\)</span></div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-60" id="answer-60"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-60"><div class="answer solution-like">True. There exists a square which is not even.</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-84"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-434"><span class="process-math">\(\sim(\forall x\in D, P(x)).\)</span></div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-61" id="answer-61"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-61"><div class="answer solution-like">True. This is the negation of (1), so must be true.</div></div>
-</div></article></section><section class="exercises" id="exercises-7"><h3 class="heading hide-type">
+<article class="exercise exercise-like" id="DMT_quant_CYU_forall"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_quant_CYU_forall">
+<div class="para" id="p-522">Let <span class="process-math">\(D=\mathbb{Z}\text{.}\)</span> Let <span class="process-math">\(P(x)\)</span> be “<span class="process-math">\(x^2\)</span> is even.”</div> <div class="para" id="p-523">True or False: <span class="process-math">\(\forall x\in D, P(x).\)</span>
+</div>
+<li data-component="answer" id="DMT_quant_CYU_forall_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="DMT_quant_CYU_forall_opt_t"><div class="para" id="p-524">It is not true that every square is even. For example, <span class="process-math">\(3^2=9\)</span> is odd.</div></li>
+<li data-component="answer" id="DMT_quant_CYU_forall_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="DMT_quant_CYU_forall_opt_f"><div class="para" id="p-524">It is not true that every square is even. For example, <span class="process-math">\(3^2=9\)</span> is odd.</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_quant_CYU_exists"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_quant_CYU_exists">
+<div class="para" id="p-525">Let <span class="process-math">\(D=\mathbb{Z}\text{.}\)</span> Let <span class="process-math">\(P(x)\)</span> be “<span class="process-math">\(x^2\)</span> is even.”</div> <div class="para" id="p-526">True or False: <span class="process-math">\(\exists x\in D, P(x).\)</span>
+</div>
+<li data-component="answer" id="DMT_quant_CYU_exists_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="DMT_quant_CYU_exists_opt_t"><div class="para" id="p-527">For example, <span class="process-math">\(2^2=4\)</span> is even.</div></li>
+<li data-component="answer" id="DMT_quant_CYU_exists_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="DMT_quant_CYU_exists_opt_f"><div class="para" id="p-527">For example, <span class="process-math">\(2^2=4\)</span> is even.</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_quant_CYU_forallnot"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_quant_CYU_forallnot">
+<div class="para" id="p-528">Let <span class="process-math">\(D=\mathbb{Z}\text{.}\)</span> Let <span class="process-math">\(P(x)\)</span> be “<span class="process-math">\(x^2\)</span> is even.”</div> <div class="para" id="p-529">True or False: <span class="process-math">\(\forall x\in D, \sim P(x).\)</span>
+</div>
+<li data-component="answer" id="DMT_quant_CYU_forallnot_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="DMT_quant_CYU_forallnot_opt_t"><div class="para" id="p-530">It is not true that every square is not even.</div></li>
+<li data-component="answer" id="DMT_quant_CYU_forallnot_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="DMT_quant_CYU_forallnot_opt_f"><div class="para" id="p-530">It is not true that every square is not even.</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_quant_CYU_existsnot"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_quant_CYU_existsnot">
+<div class="para" id="p-531">Let <span class="process-math">\(D=\mathbb{Z}\text{.}\)</span> Let <span class="process-math">\(P(x)\)</span> be “<span class="process-math">\(x^2\)</span> is even.”</div> <div class="para" id="p-532">True or False: <span class="process-math">\(\exists x\in D, \sim P(x).\)</span>
+</div>
+<li data-component="answer" id="DMT_quant_CYU_existsnot_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="DMT_quant_CYU_existsnot_opt_t"><div class="para" id="p-533">There exists a square which is not even.</div></li>
+<li data-component="answer" id="DMT_quant_CYU_existsnot_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="DMT_quant_CYU_existsnot_opt_f"><div class="para" id="p-533">There exists a square which is not even.</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="DMT_quant_CYU_notforall"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_quant_CYU_notforall">
+<div class="para" id="p-534">Let <span class="process-math">\(D=\mathbb{Z}\text{.}\)</span> Let <span class="process-math">\(P(x)\)</span> be “<span class="process-math">\(x^2\)</span> is even.”</div> <div class="para" id="p-535">True or False: <span class="process-math">\(\sim(\forall x\in D, P(x)).\)</span>
+</div>
+<li data-component="answer" id="DMT_quant_CYU_notforall_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="DMT_quant_CYU_notforall_opt_t"><div class="para" id="p-536">This is the negation of <span class="process-math">\(\forall x\in D, P(x)\text{,}\)</span> which was false, so it must be true.</div></li>
+<li data-component="answer" id="DMT_quant_CYU_notforall_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="DMT_quant_CYU_notforall_opt_f"><div class="para" id="p-536">This is the negation of <span class="process-math">\(\forall x\in D, P(x)\text{,}\)</span> which was false, so it must be true.</div></li>
+</ul></div></div></article></section><section class="exercises" id="exercises-7"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="exercise-85"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-435">Let <span class="process-math">\(P(x)\)</span> be the predicate “<span class="process-math">\(x&gt;1/x\text{.}\)</span>”</div> <ol class="lower-alpha">
-<li id="li-126"><div class="para" id="p-436">Write <span class="process-math">\(P(2), P(1/2), P(-1), P(-1/2)\text{,}\)</span> and <span class="process-math">\(P(-8)\text{.}\)</span> Indicate which of these is true and which is false.</div></li>
-<li id="li-127"><div class="para" id="p-437">Let the domain be the set <span class="process-math">\(\mathbb{R}\text{.}\)</span> Find the truth set of <span class="process-math">\(P(x)\text{.}\)</span>
+<div class="para" id="p-537">Let <span class="process-math">\(P(x)\)</span> be the predicate “<span class="process-math">\(x&gt;1/x\text{.}\)</span>”</div> <ol class="lower-alpha">
+<li id="li-126"><div class="para" id="p-538">Write <span class="process-math">\(P(2), P(1/2), P(-1), P(-1/2)\text{,}\)</span> and <span class="process-math">\(P(-8)\text{.}\)</span> Indicate which of these is true and which is false.</div></li>
+<li id="li-127"><div class="para" id="p-539">Let the domain be the set <span class="process-math">\(\mathbb{R}\text{.}\)</span> Find the truth set of <span class="process-math">\(P(x)\text{.}\)</span>
 </div></li>
-<li id="li-128"><div class="para" id="p-438">Let the domain be the set <span class="process-math">\(\mathbb{R}^+\)</span> of all positive real numbers. Find the truth set of <span class="process-math">\(P(x)\text{.}\)</span>
+<li id="li-128"><div class="para" id="p-540">Let the domain be the set <span class="process-math">\(\mathbb{R}^+\)</span> of all positive real numbers. Find the truth set of <span class="process-math">\(P(x)\text{.}\)</span>
 </div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-86"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-439">Let <span class="process-math">\(Q(x, y)\)</span> be the predicate “If <span class="process-math">\(x&lt;y\)</span> then <span class="process-math">\(x^2&lt;y^2\)</span>” with domain for both <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> being <span class="process-math">\(\mathbb{R}\text{.}\)</span>
+<div class="para" id="p-541">Let <span class="process-math">\(Q(x, y)\)</span> be the predicate “If <span class="process-math">\(x&lt;y\)</span> then <span class="process-math">\(x^2&lt;y^2\)</span>” with domain for both <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> being <span class="process-math">\(\mathbb{R}\text{.}\)</span>
 </div> <ol class="lower-alpha">
-<li id="li-129"><div class="para" id="p-440">Explain why <span class="process-math">\(Q(x, y)\)</span> is false if <span class="process-math">\(x=-4\)</span> and <span class="process-math">\(y=2\text{.}\)</span>
+<li id="li-129"><div class="para" id="p-542">Explain why <span class="process-math">\(Q(x, y)\)</span> is false if <span class="process-math">\(x=-4\)</span> and <span class="process-math">\(y=2\text{.}\)</span>
 </div></li>
-<li id="li-130"><div class="para" id="p-441">Give values different from those in part (a) for which <span class="process-math">\(Q(x, y)\)</span> is false.</div></li>
-<li id="li-131"><div class="para" id="p-442">Explain why <span class="process-math">\(Q(x, y)\)</span> is true if <span class="process-math">\(x=2\)</span> and <span class="process-math">\(y=4\text{.}\)</span>
+<li id="li-130"><div class="para" id="p-543">Give values different from those in part (a) for which <span class="process-math">\(Q(x, y)\)</span> is false.</div></li>
+<li id="li-131"><div class="para" id="p-544">Explain why <span class="process-math">\(Q(x, y)\)</span> is true if <span class="process-math">\(x=2\)</span> and <span class="process-math">\(y=4\text{.}\)</span>
 </div></li>
-<li id="li-132"><div class="para" id="p-443">Give values different from those in part (c) for which <span class="process-math">\(Q(x, y)\)</span> is true.</div></li>
+<li id="li-132"><div class="para" id="p-545">Give values different from those in part (c) for which <span class="process-math">\(Q(x, y)\)</span> is true.</div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-87"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-444">Give a counter example to show the following statement is false.</div> <div class="para logical" id="p-445"><div class="displaymath process-math">
+<div class="para" id="p-546">Give a counter example to show the following statement is false.</div> <div class="para logical" id="p-547"><div class="displaymath process-math">
 \begin{equation*}
 \forall a \in \mathbb{Z}, (a-1)/a \text{ is not an integer.}
 \end{equation*}
 </div></div></article><article class="exercise exercise-like" id="exercise-88"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-446">Give a counter example to show the following statement is false.</div> <div class="para logical" id="p-447"><div class="displaymath process-math">
+<div class="para" id="p-548">Give a counter example to show the following statement is false.</div> <div class="para logical" id="p-549"><div class="displaymath process-math">
 \begin{equation*}
 \forall a \text{ real numbers } x \text{ and } y, \sqrt{x+y}=\sqrt{x}+\sqrt{y}.
 \end{equation*}
 </div></div></article><article class="exercise exercise-like" id="exercise-89"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para logical" id="p-448">
+<div class="para logical" id="p-550">
 <div class="para">Which of the following are equivalent ways of expressing the statement</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -697,16 +747,16 @@ window.MathJax = {
 \end{equation*}
 </div>
 </div> <ol class="lower-alpha">
-<li id="li-133"><div class="para" id="p-449">There is at least one real number whose square is 2.</div></li>
-<li id="li-134"><div class="para" id="p-450">The square of each real number is 2.</div></li>
-<li id="li-135"><div class="para" id="p-451">Some real numbers have square 2.</div></li>
-<li id="li-136"><div class="para" id="p-452">The number <span class="process-math">\(x\)</span> has square 2, for some real number <span class="process-math">\(x\text{.}\)</span>
+<li id="li-133"><div class="para" id="p-551">There is at least one real number whose square is 2.</div></li>
+<li id="li-134"><div class="para" id="p-552">The square of each real number is 2.</div></li>
+<li id="li-135"><div class="para" id="p-553">Some real numbers have square 2.</div></li>
+<li id="li-136"><div class="para" id="p-554">The number <span class="process-math">\(x\)</span> has square 2, for some real number <span class="process-math">\(x\text{.}\)</span>
 </div></li>
-<li id="li-137"><div class="para" id="p-453">If <span class="process-math">\(x\)</span> is a real number, then <span class="process-math">\(x^2=2\text{.}\)</span>
+<li id="li-137"><div class="para" id="p-555">If <span class="process-math">\(x\)</span> is a real number, then <span class="process-math">\(x^2=2\text{.}\)</span>
 </div></li>
-<li id="li-138"><div class="para" id="p-454">Some real number has square 2.</div></li>
+<li id="li-138"><div class="para" id="p-556">Some real number has square 2.</div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-90"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para logical" id="p-455">
+<div class="para logical" id="p-557">
 <div class="para">Which of the following are equivalent ways of expressing the statement</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -714,42 +764,42 @@ window.MathJax = {
 \end{equation*}
 </div>
 </div> <ol class="lower-alpha">
-<li id="li-139"><div class="para" id="p-456">If the square of an integer is even, then that integer is even</div></li>
-<li id="li-140"><div class="para" id="p-457">All integers have even squares and are even.</div></li>
-<li id="li-141"><div class="para" id="p-458">Given any integer whose square is even, that integer is itself even.</div></li>
-<li id="li-142"><div class="para" id="p-459">For all integers, there are some whose square is even.</div></li>
-<li id="li-143"><div class="para" id="p-460">Any integer with an even square is even.</div></li>
-<li id="li-144"><div class="para" id="p-461">All even integers have even squares.</div></li>
+<li id="li-139"><div class="para" id="p-558">If the square of an integer is even, then that integer is even</div></li>
+<li id="li-140"><div class="para" id="p-559">All integers have even squares and are even.</div></li>
+<li id="li-141"><div class="para" id="p-560">Given any integer whose square is even, that integer is itself even.</div></li>
+<li id="li-142"><div class="para" id="p-561">For all integers, there are some whose square is even.</div></li>
+<li id="li-143"><div class="para" id="p-562">Any integer with an even square is even.</div></li>
+<li id="li-144"><div class="para" id="p-563">All even integers have even squares.</div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-91"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-462">Rewrite the following statements using the form “<span class="process-math">\(\forall\)</span>____<span class="process-math">\(x\text{,}\)</span>____.”</div> <ol class="lower-alpha">
-<li id="li-145"><div class="para" id="p-463">Every real number is positive, negative, or zero.</div></li>
-<li id="li-146"><div class="para" id="p-464">No irrational numbers are integers.</div></li>
+<div class="para" id="p-564">Rewrite the following statements using the form “<span class="process-math">\(\forall\)</span>____<span class="process-math">\(x\text{,}\)</span>____.”</div> <ol class="lower-alpha">
+<li id="li-145"><div class="para" id="p-565">Every real number is positive, negative, or zero.</div></li>
+<li id="li-146"><div class="para" id="p-566">No irrational numbers are integers.</div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-92"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="p-465">Let <span class="process-math">\(D\)</span> be the set of all students at Linfield University, and let <span class="process-math">\(M(s)\)</span> be “<span class="process-math">\(s\)</span> is a math major,” let <span class="process-math">\(C(s)\)</span> be “<span class="process-math">\(s\)</span> is a computer science major,” and let <span class="process-math">\(P(s)\)</span> be “<span class="process-math">\(s\)</span> is a physics major.” Express each of the following statements using quantifiers, variables, and the predicates <span class="process-math">\(M(s), C(s), P(s)\text{.}\)</span>
+<div class="para" id="p-567">Let <span class="process-math">\(D\)</span> be the set of all students at Linfield University, and let <span class="process-math">\(M(s)\)</span> be “<span class="process-math">\(s\)</span> is a math major,” let <span class="process-math">\(C(s)\)</span> be “<span class="process-math">\(s\)</span> is a computer science major,” and let <span class="process-math">\(P(s)\)</span> be “<span class="process-math">\(s\)</span> is a physics major.” Express each of the following statements using quantifiers, variables, and the predicates <span class="process-math">\(M(s), C(s), P(s)\text{.}\)</span>
 </div> <ol class="lower-alpha">
-<li id="li-147"><div class="para" id="p-466">There is a physics major who is a math major.</div></li>
-<li id="li-148"><div class="para" id="p-467">Every computer science major is a math major.</div></li>
-<li id="li-149"><div class="para" id="p-468">No computer science majors are physics majors.</div></li>
-<li id="li-150"><div class="para" id="p-469">Some computer science majors are also math majors.</div></li>
-<li id="li-151"><div class="para" id="p-470">Some computer science majors are physics majors and some are not.</div></li>
+<li id="li-147"><div class="para" id="p-568">There is a physics major who is a math major.</div></li>
+<li id="li-148"><div class="para" id="p-569">Every computer science major is a math major.</div></li>
+<li id="li-149"><div class="para" id="p-570">No computer science majors are physics majors.</div></li>
+<li id="li-150"><div class="para" id="p-571">Some computer science majors are also math majors.</div></li>
+<li id="li-151"><div class="para" id="p-572">Some computer science majors are physics majors and some are not.</div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-93"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<div class="para" id="p-471">Let <span class="process-math">\(\mathbb{R}\)</span> be the domain of the predicate variable <span class="process-math">\(x\text{.}\)</span> Which of the following are true and which are false? Give counter examples for the statements that are false.</div> <ol class="lower-alpha">
-<li id="li-152"><div class="para" id="p-472">If <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x&gt;1\text{.}\)</span>
+<div class="para" id="p-573">Let <span class="process-math">\(\mathbb{R}\)</span> be the domain of the predicate variable <span class="process-math">\(x\text{.}\)</span> Which of the following are true and which are false? Give counter examples for the statements that are false.</div> <ol class="lower-alpha">
+<li id="li-152"><div class="para" id="p-574">If <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x&gt;1\text{.}\)</span>
 </div></li>
-<li id="li-153"><div class="para" id="p-473">If <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x^2&gt;4\text{.}\)</span>
+<li id="li-153"><div class="para" id="p-575">If <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x^2&gt;4\text{.}\)</span>
 </div></li>
-<li id="li-154"><div class="para" id="p-474">If <span class="process-math">\(x^2&gt;4\)</span> then <span class="process-math">\(x&gt;2\text{.}\)</span>
+<li id="li-154"><div class="para" id="p-576">If <span class="process-math">\(x^2&gt;4\)</span> then <span class="process-math">\(x&gt;2\text{.}\)</span>
 </div></li>
-<li id="li-155"><div class="para" id="p-475">If <span class="process-math">\(x^2&gt;4\)</span> then <span class="process-math">\(|x|&gt;2\text{.}\)</span>
+<li id="li-155"><div class="para" id="p-577">If <span class="process-math">\(x^2&gt;4\)</span> then <span class="process-math">\(|x|&gt;2\text{.}\)</span>
 </div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-94"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
-<div class="para" id="p-476">Let the domain of <span class="process-math">\(x\)</span> be the set <span class="process-math">\(D\)</span> of objects discussed in mathematics courses, and let Real(<span class="process-math">\(x\)</span>) be “<span class="process-math">\(x\)</span> is a real number,” Pos(<span class="process-math">\(x\)</span>) be “<span class="process-math">\(x\)</span> is a positive real number,” Neg(<span class="process-math">\(x\)</span>) be “<span class="process-math">\(x\)</span> is a negative real number,” and Int(<span class="process-math">\(x\)</span>) be “<span class="process-math">\(x\)</span> is an integer.” Rewrite each statement without using quantifiers or variables. Indicate which statements are true and which are false.</div> <ol class="lower-alpha">
-<li id="li-156"><div class="para" id="p-477">Pos(0)</div></li>
-<li id="li-157"><div class="para" id="p-478">
+<div class="para" id="p-578">Let the domain of <span class="process-math">\(x\)</span> be the set <span class="process-math">\(D\)</span> of objects discussed in mathematics courses, and let Real(<span class="process-math">\(x\)</span>) be “<span class="process-math">\(x\)</span> is a real number,” Pos(<span class="process-math">\(x\)</span>) be “<span class="process-math">\(x\)</span> is a positive real number,” Neg(<span class="process-math">\(x\)</span>) be “<span class="process-math">\(x\)</span> is a negative real number,” and Int(<span class="process-math">\(x\)</span>) be “<span class="process-math">\(x\)</span> is an integer.” Rewrite each statement without using quantifiers or variables. Indicate which statements are true and which are false.</div> <ol class="lower-alpha">
+<li id="li-156"><div class="para" id="p-579">Pos(0)</div></li>
+<li id="li-157"><div class="para" id="p-580">
 <span class="process-math">\(\forall x\text{,}\)</span> Real(<span class="process-math">\(x\)</span>) <span class="process-math">\(\wedge\)</span> Neg(<span class="process-math">\(x\)</span>) <span class="process-math">\(\rightarrow\)</span> Pos(<span class="process-math">\(-x\)</span>).</div></li>
-<li id="li-158"><div class="para" id="p-479">
+<li id="li-158"><div class="para" id="p-581">
 <span class="process-math">\(\forall x\text{,}\)</span> Int(<span class="process-math">\(x\)</span>) <span class="process-math">\(\rightarrow\)</span> Real(<span class="process-math">\(x\)</span>).</div></li>
-<li id="li-159"><div class="para" id="p-480">
+<li id="li-159"><div class="para" id="p-582">
 <span class="process-math">\(\exists x\)</span> such that Real(<span class="process-math">\(x\)</span>) <span class="process-math">\(\wedge\)</span> <span class="process-math">\(\sim\)</span>Int(<span class="process-math">\(x\)</span>).</div></li>
 </ol></article></section></section></div>
 <div class="ptx-content-footer">
@@ -759,5 +809,13 @@ window.MathJax = {
 <div id="ptx-page-footer">
 <a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12894193;
+var sc_invisible=1;
+var sc_security="e67c59eb";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12894193/0/e67c59eb/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
 </body>
 </html>

@@ -62,8 +62,39 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.0.0dev3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runtime.71ffd81c0faeb38b.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.e543e0dd19670ae2.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.1f1f63d2cda36a4d.css">
 </head>
-<body class="pretext book ignore-math">
+<body id="DiscreteMathText" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" href=""></a><div class="title-container">
 <h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
@@ -549,10 +580,10 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="propertiesofsets6-2"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.2</span> <span class="title">Properties of Sets</span>
 </h2>
-<div class="para" id="p-1698">Now that we have defined operations on sets such as union and intersection, we can look at various properties of these operations. In the last section we saw that intersection involves an “and” statement, while union involves an “or.” As we work with these properties we will be able to see connections between properties of sets and the logical connectives we saw in <a href="chapter2.html" class="internal" title="Chapter 2: Logic">Chapter 2</a>.</div>
-<div class="para" id="p-1699">One of our goals in this section is to learn how to prove properties such as the following subset relations.</div>
+<div class="para" id="p-1938">Now that we have defined operations on sets such as union and intersection, we can look at various properties of these operations. In the last section we saw that intersection involves an “and” statement, while union involves an “or.” As we work with these properties we will be able to see connections between properties of sets and the logical connectives we saw in <a href="chapter2.html" class="internal" title="Chapter 2: Logic">Chapter 2</a>.</div>
+<div class="para" id="p-1939">One of our goals in this section is to learn how to prove properties such as the following subset relations.</div>
 <article class="assemblage assemblage-like" id="B_ssrelations"><h3 class="heading"><span class="title">Subset Relations.</span></h3>
-<div class="para logical" id="p-1700"><ol class="decimal">
+<div class="para logical" id="p-1940"><ol class="decimal">
 <li id="li-416"><div class="para" id="p-derived-li-416">
 <span class="process-math">\(A\cap B\subseteq A\text{;}\)</span> <span class="process-math">\(A\cap B\subseteq B\text{.}\)</span>
 </div></li>
@@ -563,10 +594,10 @@ window.MathJax = {
 <span class="heading"><span class="title">Transitivity.</span></span><div class="para" id="p-derived-li-418"> If <span class="process-math">\(A\subseteq B\)</span> and  <span class="process-math">\(B\subseteq C\)</span> then <span class="process-math">\(A\subseteq C\text{.}\)</span>
 </div>
 </li>
-</ol></div></article><div class="para" id="p-1701">Recall from <a href="" class="xref" data-knowl="./knowl/D_subset.html" title="Definition 6.1.1">Definition 6.1.1</a>, we can think of the statement <span class="process-math">\(X\subseteq Y\)</span> as the conditional statement, if <span class="process-math">\(x\in X\)</span> then <span class="process-math">\(x\in Y\text{.}\)</span>
+</ol></div></article><div class="para" id="p-1941">Recall from <a href="" class="xref" data-knowl="./knowl/D_subset.html" title="Definition 6.1.1">Definition 6.1.1</a>, we can think of the statement <span class="process-math">\(X\subseteq Y\)</span> as the conditional statement, if <span class="process-math">\(x\in X\)</span> then <span class="process-math">\(x\in Y\text{.}\)</span>
 </div>
 <article class="assemblage assemblage-like" id="B_pfsubset"><h3 class="heading"><span class="title">Proving Subset.</span></h3>
-<div class="para logical" id="p-1702">
+<div class="para logical" id="p-1942">
 <div class="para">To prove <span class="process-math">\(X\subseteq Y\text{:}\)</span>
 </div>
 <ul class="disc">
@@ -575,9 +606,9 @@ window.MathJax = {
 <li id="li-420"><div class="para" id="p-derived-li-420">Show <span class="process-math">\(x\in Y\text{.}\)</span>
 </div></li>
 </ul>
-</div></article><div class="para" id="p-1703">Based in their definitions from <a href="sets6-1.html" class="internal" title="Section 6.1: Set Theory">Section 6.1</a>, we can translate other sets into logical statements, as well. These translations are how we will prove properites of sets using elements.</div>
+</div></article><div class="para" id="p-1943">Based in their definitions from <a href="sets6-1.html" class="internal" title="Section 6.1: Set Theory">Section 6.1</a>, we can translate other sets into logical statements, as well. These translations are how we will prove properites of sets using elements.</div>
 <article class="assemblage assemblage-like" id="B_tranlationsforsets"><h3 class="heading"><span class="title">Translating Set Statements to Logical Statements.</span></h3>
-<div class="para logical" id="p-1704"><ul class="disc">
+<div class="para logical" id="p-1944"><ul class="disc">
 <li id="li-421"><div class="para" id="p-derived-li-421">
 <span class="process-math">\(x \in X\cup Y\)</span> if and only if <span class="process-math">\(x\in X\)</span> or <span class="process-math">\(x\in Y\)</span>
 </div></li>
@@ -595,21 +626,21 @@ window.MathJax = {
 </div></li>
 </ul></div></article><article class="example example-like" id="E_subsetprop"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_subsetprop"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Proving a Subset Property.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_subsetprop"><article class="example example-like"> <div class="para" id="p-1705">Prove <span class="process-math">\(A\cap B\subseteq A\text{.}\)</span>
-</div> <article class="hiddenproof" id="proof-29"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-29"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-29"><article class="hiddenproof"><div class="para" id="p-1706">Let <span class="process-math">\(x\in A\cap B\text{.}\)</span> Then <span class="process-math">\(x\in A\)</span> and <span class="process-math">\(x\in B\text{.}\)</span> Thus, <span class="process-math">\(x\in A\text{.}\)</span>
-</div> <div class="para" id="p-1707">Therefore, <span class="process-math">\(A\cap B\subseteq A\text{.}\)</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_subsetprop"><article class="example example-like"> <div class="para" id="p-1945">Prove <span class="process-math">\(A\cap B\subseteq A\text{.}\)</span>
+</div> <article class="hiddenproof" id="proof-29"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-29"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-29"><article class="hiddenproof"><div class="para" id="p-1946">Let <span class="process-math">\(x\in A\cap B\text{.}\)</span> Then <span class="process-math">\(x\in A\)</span> and <span class="process-math">\(x\in B\text{.}\)</span> Thus, <span class="process-math">\(x\in A\text{.}\)</span>
+</div> <div class="para" id="p-1947">Therefore, <span class="process-math">\(A\cap B\subseteq A\text{.}\)</span>
 </div></article></div></article></div>
 <article class="activity project-like" id="activity-113"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.2.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1708">Prove <span class="process-math">\(A\cap B\subseteq B\text{.}\)</span> Be sure to write what you want to assume and what you want to  show.</div></article><article class="activity project-like" id="activity-114"><h3 class="heading">
+<div class="para" id="p-1948">Prove <span class="process-math">\(A\cap B\subseteq B\text{.}\)</span> Be sure to write what you want to assume and what you want to  show.</div></article><article class="activity project-like" id="activity-114"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.2.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1709">Prove <span class="process-math">\(B\subseteq A\cup B\text{.}\)</span> Be sure to write what you want to assume and what you want to  show.</div></article><article class="activity project-like" id="activity-115"><h3 class="heading">
+<div class="para" id="p-1949">Prove <span class="process-math">\(B\subseteq A\cup B\text{.}\)</span> Be sure to write what you want to assume and what you want to  show.</div></article><article class="activity project-like" id="activity-115"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.2.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1710">Prove if <span class="process-math">\(A\subseteq B\)</span> and <span class="process-math">\(B\subseteq C\)</span> then <span class="process-math">\(A\subseteq C\text{.}\)</span> Be sure to write what you want to assume and what you want to  show.</div></article><article class="assemblage assemblage-like" id="B_pfsetequality"><h3 class="heading"><span class="title">Proving Set Equality.</span></h3>
-<div class="para logical" id="p-1711">
+<div class="para" id="p-1950">Prove if <span class="process-math">\(A\subseteq B\)</span> and <span class="process-math">\(B\subseteq C\)</span> then <span class="process-math">\(A\subseteq C\text{.}\)</span> Be sure to write what you want to assume and what you want to  show.</div></article><article class="assemblage assemblage-like" id="B_pfsetequality"><h3 class="heading"><span class="title">Proving Set Equality.</span></h3>
+<div class="para logical" id="p-1951">
 <div class="para">To prove <span class="process-math">\(X=Y\)</span> show</div>
 <ol class="decimal">
 <li id="li-426"><div class="para" id="p-derived-li-426">
@@ -620,30 +651,30 @@ window.MathJax = {
 </ol>
 </div></article><article class="example example-like" id="E_DeMorgans"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_DeMorgans"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Proving Two Sets are Equal.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_DeMorgans"><article class="example example-like"> <div class="para" id="p-1712">Prove <span class="process-math">\(A\cup(B\cap C)=(A\cup B)\cap (A\cup C)\text{.}\)</span>
-</div> <article class="hiddenproof" id="proof-30"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-30"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-30"><article class="hiddenproof"><div class="para" id="p-1713">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_DeMorgans"><article class="example example-like"> <div class="para" id="p-1952">Prove <span class="process-math">\(A\cup(B\cap C)=(A\cup B)\cap (A\cup C)\text{.}\)</span>
+</div> <article class="hiddenproof" id="proof-30"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-30"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-30"><article class="hiddenproof"><div class="para" id="p-1953">
 <span class="process-math">\((\subseteq)\text{:}\)</span> Let <span class="process-math">\(x\in A\cup(B\cap C)\text{.}\)</span> Then <span class="process-math">\(x\in A\)</span> or <span class="process-math">\(x\in B\cap C\text{.}\)</span>
-</div> <div class="para" id="p-1714">Case 1: <span class="process-math">\(x\in A\text{.}\)</span> Then <span class="process-math">\(x\in A\cup B\)</span> by the second subset relation. Similarly, <span class="process-math">\(x\in A\cup C\text{.}\)</span> Thus, <span class="process-math">\(x\in A\cup B\)</span> and <span class="process-math">\(x\in A\cup C\text{.}\)</span>
-</div> <div class="para" id="p-1715">Therefore, <span class="process-math">\(x\in (A\cup B) \cap (A\cup C)\text{.}\)</span>
-</div> <div class="para" id="p-1716">Case 2: <span class="process-math">\(x\in B\cap C\text{.}\)</span> Then <span class="process-math">\(x\in B\)</span>  and <span class="process-math">\(x\in C\text{.}\)</span> Then <span class="process-math">\(x\in A\cup B\)</span> and <span class="process-math">\(x\in A\cup C\)</span> by the second subset relation. Thus, <span class="process-math">\(x\in A\cup B\)</span> and <span class="process-math">\(x\in A\cup C\text{.}\)</span>
-</div> <div class="para" id="p-1717">Therefore, <span class="process-math">\(x\in (A\cup B) \cap (A\cup C)\text{.}\)</span>
-</div> <div class="para" id="p-1718">
+</div> <div class="para" id="p-1954">Case 1: <span class="process-math">\(x\in A\text{.}\)</span> Then <span class="process-math">\(x\in A\cup B\)</span> by the second subset relation. Similarly, <span class="process-math">\(x\in A\cup C\text{.}\)</span> Thus, <span class="process-math">\(x\in A\cup B\)</span> and <span class="process-math">\(x\in A\cup C\text{.}\)</span>
+</div> <div class="para" id="p-1955">Therefore, <span class="process-math">\(x\in (A\cup B) \cap (A\cup C)\text{.}\)</span>
+</div> <div class="para" id="p-1956">Case 2: <span class="process-math">\(x\in B\cap C\text{.}\)</span> Then <span class="process-math">\(x\in B\)</span>  and <span class="process-math">\(x\in C\text{.}\)</span> Then <span class="process-math">\(x\in A\cup B\)</span> and <span class="process-math">\(x\in A\cup C\)</span> by the second subset relation. Thus, <span class="process-math">\(x\in A\cup B\)</span> and <span class="process-math">\(x\in A\cup C\text{.}\)</span>
+</div> <div class="para" id="p-1957">Therefore, <span class="process-math">\(x\in (A\cup B) \cap (A\cup C)\text{.}\)</span>
+</div> <div class="para" id="p-1958">
 <span class="process-math">\((\supseteq)\text{:}\)</span> Let <span class="process-math">\(x\in (A\cup B)\cap (A\cup C)\text{.}\)</span> Then <span class="process-math">\(x\in A\cup B\)</span> and <span class="process-math">\(x\in A\cup C\text{.}\)</span>
-</div> <div class="para" id="p-1719">Case 1: <span class="process-math">\(x\in A\text{.}\)</span> Then <span class="process-math">\(x\in A\cup (B\cap C)\)</span> by the second subset relation (since we can do the union with <em class="emphasis">any</em> set).</div> <div class="para" id="p-1720">Case 2: <span class="process-math">\(x\notin A\text{.}\)</span> Since <span class="process-math">\(x\in A\cup B\)</span>  by assumption, <span class="process-math">\(x\in A\)</span> or <span class="process-math">\(x\in B\text{.}\)</span> Since <span class="process-math">\(x\notin A\text{,}\)</span> <span class="process-math">\(x\in B\text{.}\)</span>
-</div> <div class="para" id="p-1721">Similarly,  since <span class="process-math">\(x\in A\cup C\text{,}\)</span> and <span class="process-math">\(x\notin A\text{,}\)</span> <span class="process-math">\(x\in C\text{.}\)</span> Thus, <span class="process-math">\(x\in B\cap C\text{.}\)</span>
-</div> <div class="para" id="p-1722">Therefore, <span class="process-math">\(x\in A\cup (B\cap C)\)</span> (again by the second subset relation).</div></article></div></article></div>
-<div class="para" id="p-1723">The proofs in <a href="" class="xref" data-knowl="./knowl/E_subsetprop.html" title="Example 6.2.1: Proving a Subset Property">Example 6.2.1</a> and <a href="" class="xref" data-knowl="./knowl/E_DeMorgans.html" title="Example 6.2.2: Proving Two Sets are Equal">Example 6.2.2</a> are called <dfn class="terminology">element arguments.</dfn> This type of proof uses elements and the definitions of sets and subsets. You start with <span class="process-math">\(x\)</span> being an element of the set of interest, use what you know about the set to then get <span class="process-math">\(x\)</span> as an element of another set. This technique generalizes to sets in all different mathematical contexts.</div>
-<div class="para" id="p-1724">The next theorem shows that the empty set is a subset of every set.</div>
+</div> <div class="para" id="p-1959">Case 1: <span class="process-math">\(x\in A\text{.}\)</span> Then <span class="process-math">\(x\in A\cup (B\cap C)\)</span> by the second subset relation (since we can do the union with <em class="emphasis">any</em> set).</div> <div class="para" id="p-1960">Case 2: <span class="process-math">\(x\notin A\text{.}\)</span> Since <span class="process-math">\(x\in A\cup B\)</span>  by assumption, <span class="process-math">\(x\in A\)</span> or <span class="process-math">\(x\in B\text{.}\)</span> Since <span class="process-math">\(x\notin A\text{,}\)</span> <span class="process-math">\(x\in B\text{.}\)</span>
+</div> <div class="para" id="p-1961">Similarly,  since <span class="process-math">\(x\in A\cup C\text{,}\)</span> and <span class="process-math">\(x\notin A\text{,}\)</span> <span class="process-math">\(x\in C\text{.}\)</span> Thus, <span class="process-math">\(x\in B\cap C\text{.}\)</span>
+</div> <div class="para" id="p-1962">Therefore, <span class="process-math">\(x\in A\cup (B\cap C)\)</span> (again by the second subset relation).</div></article></div></article></div>
+<div class="para" id="p-1963">The proofs in <a href="" class="xref" data-knowl="./knowl/E_subsetprop.html" title="Example 6.2.1: Proving a Subset Property">Example 6.2.1</a> and <a href="" class="xref" data-knowl="./knowl/E_DeMorgans.html" title="Example 6.2.2: Proving Two Sets are Equal">Example 6.2.2</a> are called <dfn class="terminology">element arguments.</dfn> This type of proof uses elements and the definitions of sets and subsets. You start with <span class="process-math">\(x\)</span> being an element of the set of interest, use what you know about the set to then get <span class="process-math">\(x\)</span> as an element of another set. This technique generalizes to sets in all different mathematical contexts.</div>
+<div class="para" id="p-1964">The next theorem shows that the empty set is a subset of every set.</div>
 <article class="theorem theorem-like" id="T_emptyset"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.2.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1725">For all sets <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(\emptyset\subseteq A\text{.}\)</span>
-</div></article><article class="hiddenproof" id="proof-31"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-31"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-31"><article class="hiddenproof"><div class="para" id="p-1726">By contradiction, assume there exists a set <span class="process-math">\(A\)</span> such that <span class="process-math">\(\emptyset\nsubseteq A\text{.}\)</span>
-</div> <div class="para" id="p-1727">This means there exists <span class="process-math">\(x\in \emptyset\)</span> such that <span class="process-math">\(x\notin A\text{.}\)</span> But we cannot have <span class="process-math">\(x\in \emptyset\text{.}\)</span> Hence, we have a contradiction. Therefore, <span class="process-math">\(\emptyset\subseteq A\text{.}\)</span>
+<div class="para" id="p-1965">For all sets <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(\emptyset\subseteq A\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-31"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-31"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-31"><article class="hiddenproof"><div class="para" id="p-1966">By contradiction, assume there exists a set <span class="process-math">\(A\)</span> such that <span class="process-math">\(\emptyset\nsubseteq A\text{.}\)</span>
+</div> <div class="para" id="p-1967">This means there exists <span class="process-math">\(x\in \emptyset\)</span> such that <span class="process-math">\(x\notin A\text{.}\)</span> But we cannot have <span class="process-math">\(x\in \emptyset\text{.}\)</span> Hence, we have a contradiction. Therefore, <span class="process-math">\(\emptyset\subseteq A\text{.}\)</span>
 </div></article></div>
-<div class="para" id="p-1728">There are many times in mathematics that we need to prove that a set is empty. We might need do do this if we need sets to be disjoint, or if we need to prove that there are no elements with a particular property. The common method for proving a set is empty is to use contradiction. Note, usually if we want to prove <span class="process-math">\(A=B\text{,}\)</span> we show both subsets (<span class="process-math">\(A\subseteq B\text{,}\)</span> <span class="process-math">\(B\subseteq A\)</span>), but we just showed <span class="process-math">\(\emptyset\subseteq A\text{,}\)</span> always. So we just need to show <span class="process-math">\(A\subseteq \emptyset\text{.}\)</span> We do this by contradiction.</div>
+<div class="para" id="p-1968">There are many times in mathematics that we need to prove that a set is empty. We might need do do this if we need sets to be disjoint, or if we need to prove that there are no elements with a particular property. The common method for proving a set is empty is to use contradiction. Note, usually if we want to prove <span class="process-math">\(A=B\text{,}\)</span> we show both subsets (<span class="process-math">\(A\subseteq B\text{,}\)</span> <span class="process-math">\(B\subseteq A\)</span>), but we just showed <span class="process-math">\(\emptyset\subseteq A\text{,}\)</span> always. So we just need to show <span class="process-math">\(A\subseteq \emptyset\text{.}\)</span> We do this by contradiction.</div>
 <article class="assemblage assemblage-like" id="B_pfempty"><h3 class="heading"><span class="title">Proving a Set is Empty.</span></h3>
-<div class="para logical" id="p-1729">
+<div class="para logical" id="p-1969">
 <div class="para">To show <span class="process-math">\(A=\emptyset\text{:}\)</span>
 </div>
 <ul class="disc">
@@ -653,17 +684,17 @@ window.MathJax = {
 </ul>
 </div></article><article class="example example-like" id="E_provesetisempty"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_provesetisempty"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Proving a Set is Empty.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_provesetisempty"><article class="example example-like"> <div class="para" id="p-1730">Prove <span class="process-math">\(U^{C}=\emptyset\text{,}\)</span> where <span class="process-math">\(U\)</span> is the universal set. <article class="hiddenproof" id="proof-32"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-32"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-32"><article class="hiddenproof"><div class="para" id="p-1731">Let <span class="process-math">\(x\in U^{C}\text{.}\)</span> Then <span class="process-math">\(x\notin U\text{.}\)</span> But since <span class="process-math">\(U\)</span> contains everything, <span class="process-math">\(x\in U\text{,}\)</span> which is a contradiction. Therefore, <span class="process-math">\(U^{C}=\emptyset\text{.}\)</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_provesetisempty"><article class="example example-like"> <div class="para" id="p-1970">Prove <span class="process-math">\(U^{C}=\emptyset\text{,}\)</span> where <span class="process-math">\(U\)</span> is the universal set. <article class="hiddenproof" id="proof-32"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-32"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-32"><article class="hiddenproof"><div class="para" id="p-1971">Let <span class="process-math">\(x\in U^{C}\text{.}\)</span> Then <span class="process-math">\(x\notin U\text{.}\)</span> But since <span class="process-math">\(U\)</span> contains everything, <span class="process-math">\(x\in U\text{,}\)</span> which is a contradiction. Therefore, <span class="process-math">\(U^{C}=\emptyset\text{.}\)</span>
 </div></article></div>
 </div></article></div>
 <article class="activity project-like" id="activity-116"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.2.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1732">Prove <span class="process-math">\(A\cap A^C=\emptyset\text{.}\)</span> Be sure to write what you want to assume and what you want to show.</div></article><article class="activity project-like" id="activity-117"><h3 class="heading">
+<div class="para" id="p-1972">Prove <span class="process-math">\(A\cap A^C=\emptyset\text{.}\)</span> Be sure to write what you want to assume and what you want to show.</div></article><article class="activity project-like" id="activity-117"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.2.5</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1733">Prove if <span class="process-math">\(A\subseteq B\)</span> then <span class="process-math">\(A\cup C\subseteq B\cup C\text{.}\)</span> Note, you need to show <span class="process-math">\(A\cup C\subseteq B\cup C\text{.}\)</span> So how do you show a subset? What set should you assume  <span class="process-math">\(x\)</span> is in?</div></article><article class="assemblage assemblage-like" id="L_SetIdent"><h3 class="heading"><span class="title">Summary of Set Identities.</span></h3>
-<div class="para logical" id="p-1734">
+<div class="para" id="p-1973">Prove if <span class="process-math">\(A\subseteq B\)</span> then <span class="process-math">\(A\cup C\subseteq B\cup C\text{.}\)</span> Note, you need to show <span class="process-math">\(A\cup C\subseteq B\cup C\text{.}\)</span> So how do you show a subset? What set should you assume  <span class="process-math">\(x\)</span> is in?</div></article><article class="assemblage assemblage-like" id="L_SetIdent"><h3 class="heading"><span class="title">Summary of Set Identities.</span></h3>
+<div class="para logical" id="p-1974">
 <div class="para">Let <span class="process-math">\(U\)</span> be the universal set, and <span class="process-math">\(A, B\text{,}\)</span> and <span class="process-math">\(C\)</span> subsets of the universal set.</div>
 <ol class="decimal">
 <li id="li-430">
@@ -718,90 +749,63 @@ window.MathJax = {
 </div></article><section class="reading-questions" id="reading-questions-24"><h3 class="heading hide-type">
 <span class="type">Reading Questions</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
-<div class="para" id="p-1735">Let <span class="process-math">\(A, B, C\)</span> be sets and <span class="process-math">\(U\)</span> be the universal set.</div>
-<article class="exercise exercise-like" id="exercise-342"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1736">True or false: <span class="process-math">\(A\cap C=C\cap A\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-265" id="answer-265"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-265"><div class="answer solution-like">True</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-343"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-1737">True or false: <span class="process-math">\(A\cap(B\cup C)=(A\cap B)\cup (A\cap C)\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-266" id="answer-266"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-266"><div class="answer solution-like">True</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-344"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-1738">True or false: <span class="process-math">\(A\cap(B\cup C)=(A\cap B)\cup C\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-267" id="answer-267"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-267"><div class="answer solution-like">False</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-345"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-1739">True or false: <span class="process-math">\(A\cup \emptyset=\emptyset\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-268" id="answer-268"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-268"><div class="answer solution-like">False</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-346"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-1740">True or false: <span class="process-math">\((A\cup B)^C=A^C\cup B^C\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-269" id="answer-269"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-269"><div class="answer solution-like">False</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-347"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-1741">True or false:  <span class="process-math">\(B-A=A-B\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-270" id="answer-270"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-270"><div class="answer solution-like"><div class="para" id="p-1742">False</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-348"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-1743">True or false:  <span class="process-math">\(\emptyset\subseteq U\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-271" id="answer-271"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-271"><div class="answer solution-like"><div class="para" id="p-1744">True</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-349"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="p-1745">True or false:  <span class="process-math">\(A\subseteq A\cup(B\cap C)\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-272" id="answer-272"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-272"><div class="answer solution-like"><div class="para" id="p-1746">True</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-350"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<div class="para" id="p-1747">True or false:  <span class="process-math">\(B\subseteq A\cup(B\cap C)\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-273" id="answer-273"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-273"><div class="answer solution-like"><div class="para" id="p-1748">False</div></div></div>
+<div class="para" id="p-1975">Let <span class="process-math">\(A, B, C\)</span> be sets and <span class="process-math">\(U\)</span> be the universal set.</div>
+<article class="exercise exercise-like" id="exercise-335"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-1976">True or false: <span class="process-math">\(A\cap C=C\cap A\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-336"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-1977">True or false: <span class="process-math">\(A\cap(B\cup C)=(A\cap B)\cup (A\cap C)\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-337"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-1978">True or false: <span class="process-math">\(A\cap(B\cup C)=(A\cap B)\cup C\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-338"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="p-1979">True or false: <span class="process-math">\(A\cup \emptyset=\emptyset\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-339"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="p-1980">True or false: <span class="process-math">\((A\cup B)^C=A^C\cup B^C\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-340"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="p-1981">True or false:  <span class="process-math">\(B-A=A-B\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-341"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="p-1983">True or false:  <span class="process-math">\(\emptyset\subseteq U\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-342"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para" id="p-1985">True or false:  <span class="process-math">\(A\subseteq A\cup(B\cap C)\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-343"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="para" id="p-1987">True or false:  <span class="process-math">\(B\subseteq A\cup(B\cap C)\text{.}\)</span>
 </div></article></section><section class="exercises" id="exercises-24"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-351"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1749">Fill in the blanks.</div> <ol class="lower-alpha">
-<li id="li-442"><div class="para" id="p-1750">To say that an element is in <span class="process-math">\(A\cap(B\cup C)\)</span> means that it is in ___ and in ___.</div></li>
-<li id="li-443"><div class="para" id="p-1751">To say that an element is in <span class="process-math">\((A\cap B)\cup C\)</span> means that it is in ___ or in ___.</div></li>
-<li id="li-444"><div class="para" id="p-1752">To say that an element is in <span class="process-math">\(A-(B\cap C)\)</span> means that it is in ___ and not in ___.</div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-352"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-1753">Illustrate the distributive laws by drawing the Venn diagrams for the given sets.</div> <ol class="lower-alpha">
-<li id="li-445"><div class="para" id="p-1754">
+<article class="exercise exercise-like" id="exercise-344"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-1989">Fill in the blanks.</div> <ol class="lower-alpha">
+<li id="li-442"><div class="para" id="p-1990">To say that an element is in <span class="process-math">\(A\cap(B\cup C)\)</span> means that it is in ___ and in ___.</div></li>
+<li id="li-443"><div class="para" id="p-1991">To say that an element is in <span class="process-math">\((A\cap B)\cup C\)</span> means that it is in ___ or in ___.</div></li>
+<li id="li-444"><div class="para" id="p-1992">To say that an element is in <span class="process-math">\(A-(B\cap C)\)</span> means that it is in ___ and not in ___.</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-345"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-1993">Illustrate the distributive laws by drawing the Venn diagrams for the given sets.</div> <ol class="lower-alpha">
+<li id="li-445"><div class="para" id="p-1994">
 <span class="process-math">\(A\cup (B\cap C)\)</span> and <span class="process-math">\((A\cup B)\cap (A\cup C)\)</span>
 </div></li>
-<li id="li-446"><div class="para" id="p-1755">
+<li id="li-446"><div class="para" id="p-1995">
 <span class="process-math">\(A\cap (B\cup C)\)</span> and  <span class="process-math">\((A\cap B)\cup (A\cap C)\)</span>
 </div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-353"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-1756">Illustrate DeMorgan's laws by drawing the Venn diagrams for the given sets.</div> <ol class="lower-alpha">
-<li id="li-447"><div class="para" id="p-1757">
+</ol></article><article class="exercise exercise-like" id="exercise-346"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-1996">Illustrate DeMorgan's laws by drawing the Venn diagrams for the given sets.</div> <ol class="lower-alpha">
+<li id="li-447"><div class="para" id="p-1997">
 <span class="process-math">\((A\cup B)^C\)</span> and <span class="process-math">\((A^C\cap B^C)\)</span>
 </div></li>
-<li id="li-448"><div class="para" id="p-1758">
+<li id="li-448"><div class="para" id="p-1998">
 <span class="process-math">\((A\cap B)^C\)</span> and  <span class="process-math">\((A^C\cup B^C)\)</span>
 </div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-354"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-1759">Use an element argument to prove for all sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> <span class="process-math">\((A\cap B)^C=(A^C\cup B^C)\text{.}\)</span> Be sure to write what you want to assume and what you want to show.</div></article><article class="exercise exercise-like" id="exercise-355"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-1760">Use an element argument to prove for all sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> <span class="process-math">\((A\cap B)\cup(A\cap B^C)=A\text{.}\)</span> Be sure to write what you want to assume and what you want to show.</div></article><article class="exercise exercise-like" id="exercise-356"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-1761">Use an element argument to prove for all sets <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\text{,}\)</span> if <span class="process-math">\(A\subseteq B\)</span> then <span class="process-math">\((A\cap C)\subseteq (B\cap C)\text{.}\)</span> Be sure to write what you want to assume and what you want to show.</div></article><article class="exercise exercise-like" id="exercise-357"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-1762">Use an element argument to prove for all sets <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\text{,}\)</span> if <span class="process-math">\(A\subseteq B\)</span> then <span class="process-math">\((A\cup C)\subseteq (B\cup C)\text{.}\)</span> Be sure to write what you want to assume and what you want to show.</div></article><article class="exercise exercise-like" id="exercise-358"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="p-1763">Use an element argument to prove for all sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> if <span class="process-math">\(A\subseteq B\)</span> then <span class="process-math">\(B^C\subseteq A^C\text{.}\)</span> Be sure to write what you want to assume and what you want to show.</div></article><article class="exercise exercise-like" id="exercise-359"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<div class="para" id="p-1764">Use an element argument to prove for all sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> <span class="process-math">\((A\cap B)\cap (A\cap B^C)=\emptyset\text{.}\)</span>
+</ol></article><article class="exercise exercise-like" id="exercise-347"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="p-1999">Use an element argument to prove for all sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> <span class="process-math">\((A\cap B)^C=(A^C\cup B^C)\text{.}\)</span> Be sure to write what you want to assume and what you want to show.</div></article><article class="exercise exercise-like" id="exercise-348"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="p-2000">Use an element argument to prove for all sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> <span class="process-math">\((A\cap B)\cup(A\cap B^C)=A\text{.}\)</span> Be sure to write what you want to assume and what you want to show.</div></article><article class="exercise exercise-like" id="exercise-349"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="p-2001">Use an element argument to prove for all sets <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\text{,}\)</span> if <span class="process-math">\(A\subseteq B\)</span> then <span class="process-math">\((A\cap C)\subseteq (B\cap C)\text{.}\)</span> Be sure to write what you want to assume and what you want to show.</div></article><article class="exercise exercise-like" id="exercise-350"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="p-2002">Use an element argument to prove for all sets <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\text{,}\)</span> if <span class="process-math">\(A\subseteq B\)</span> then <span class="process-math">\((A\cup C)\subseteq (B\cup C)\text{.}\)</span> Be sure to write what you want to assume and what you want to show.</div></article><article class="exercise exercise-like" id="exercise-351"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para" id="p-2003">Use an element argument to prove for all sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> if <span class="process-math">\(A\subseteq B\)</span> then <span class="process-math">\(B^C\subseteq A^C\text{.}\)</span> Be sure to write what you want to assume and what you want to show.</div></article><article class="exercise exercise-like" id="exercise-352"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="para" id="p-2004">Use an element argument to prove for all sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> <span class="process-math">\((A\cap B)\cap (A\cap B^C)=\emptyset\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-21" id="hint-21"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-21"><div class="hint solution-like">Proving a set is the empty set often involves a proof by contradiction.</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-360"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
-<div class="para" id="p-1765">Use an element argument to prove for all sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> if <span class="process-math">\(A\subseteq B\)</span> then <span class="process-math">\(A\cap B^C=\emptyset\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-361"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
-<div class="para" id="p-1766">Use an element argument to prove for all sets <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\text{,}\)</span> if <span class="process-math">\(A\subseteq B\)</span> and <span class="process-math">\(B\cap C=\emptyset\)</span> then <span class="process-math">\(A\cap C=\emptyset\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-35" id="hint-35"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-35"><div class="hint solution-like">Proving a set is the empty set often involves a proof by contradiction.</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-353"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="para" id="p-2005">Use an element argument to prove for all sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> if <span class="process-math">\(A\subseteq B\)</span> then <span class="process-math">\(A\cap B^C=\emptyset\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-354"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="para" id="p-2006">Use an element argument to prove for all sets <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\text{,}\)</span> if <span class="process-math">\(A\subseteq B\)</span> and <span class="process-math">\(B\cap C=\emptyset\)</span> then <span class="process-math">\(A\cap C=\emptyset\text{.}\)</span>
 </div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sets6-1.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="algebraicsets6-3.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
@@ -810,5 +814,13 @@ window.MathJax = {
 <div id="ptx-page-footer">
 <a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12894193;
+var sc_invisible=1;
+var sc_security="e67c59eb";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12894193/0/e67c59eb/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
 </body>
 </html>

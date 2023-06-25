@@ -62,8 +62,39 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.0.0dev3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runtime.71ffd81c0faeb38b.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.e543e0dd19670ae2.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.1f1f63d2cda36a4d.css">
 </head>
-<body class="pretext book ignore-math">
+<body id="DiscreteMathText" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" href=""></a><div class="title-container">
 <h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
@@ -549,14 +580,14 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="algebraicsets6-3"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.3</span> <span class="title">Algebraic Proofs and Counterexamples</span>
 </h2>
-<div class="para" id="p-1767">The proofs we did in the last section involved looking at elements in sets. We could translate statements about sets into logical statement such as “and”s, “or”s, and conditionals. This allowed us to prove many other properties of sets, such as DeMorgan's Laws. But now that we have these properties, we can use them to prove new properties in a more algebraic way.</div>
-<div class="para" id="p-1768">First we look at how to disprove statements involving sets. As we saw in <a href="directproof4-1.html" class="internal" title="Section 4.1: Direct Proof and Counterexample">Section 4.1</a>, we can disprove a statement with a counterexample.</div>
-<div class="para" id="p-1769">To prove a statement is false, give a specific counterexample. This means defining specific sets for which the property fails. If you are trying to decide if a statement is true or false, you can experiment with small sets, or you can draw a Venn diagram. The Venn diagram itself is <em class="emphasis">not</em> a proof or a counterexample. But it can help you decide which you should be trying to find.</div>
+<div class="para" id="p-2007">The proofs we did in the last section involved looking at elements in sets. We could translate statements about sets into logical statement such as “and”s, “or”s, and conditionals. This allowed us to prove many other properties of sets, such as DeMorgan's Laws. But now that we have these properties, we can use them to prove new properties in a more algebraic way.</div>
+<div class="para" id="p-2008">First we look at how to disprove statements involving sets. As we saw in <a href="directproof4-1.html" class="internal" title="Section 4.1: Direct Proof and Counterexample">Section 4.1</a>, we can disprove a statement with a counterexample.</div>
+<div class="para" id="p-2009">To prove a statement is false, give a specific counterexample. This means defining specific sets for which the property fails. If you are trying to decide if a statement is true or false, you can experiment with small sets, or you can draw a Venn diagram. The Venn diagram itself is <em class="emphasis">not</em> a proof or a counterexample. But it can help you decide which you should be trying to find.</div>
 <article class="example example-like" id="E_setcounterexample"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_setcounterexample"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Finding a Counterexample.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_setcounterexample"><article class="example example-like"><div class="para" id="p-1770">Prove or disprove <span class="process-math">\(\forall A, B, C,\)</span> if <span class="process-math">\(A\nsubseteq B\)</span> and <span class="process-math">\(B\nsubseteq C\text{,}\)</span> then <span class="process-math">\(A\nsubseteq C\text{.}\)</span>
-</div> <div class="para" id="p-1771">This statement is false. Our counterexample should satisfy the negation of the statement: <span class="process-math">\(A\nsubseteq B, B\nsubseteq C\text{,}\)</span> and <span class="process-math">\(A\subseteq C\text{.}\)</span> Find small sets that satisfy the negation.</div> <div class="para" id="p-1772">For example, we can try <span class="process-math">\(A=\{1, 2\}, B=\{4, 5\}, C=\{1, 2, 3\}\text{.}\)</span> Then <span class="process-math">\(A\nsubseteq B, B\nsubseteq C\text{,}\)</span> and <span class="process-math">\(A\subseteq C\text{.}\)</span> Thus, we have a counterexample.</div></article></div>
-<div class="para logical" id="p-1773">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_setcounterexample"><article class="example example-like"><div class="para" id="p-2010">Prove or disprove <span class="process-math">\(\forall A, B, C,\)</span> if <span class="process-math">\(A\nsubseteq B\)</span> and <span class="process-math">\(B\nsubseteq C\text{,}\)</span> then <span class="process-math">\(A\nsubseteq C\text{.}\)</span>
+</div> <div class="para" id="p-2011">This statement is false. Our counterexample should satisfy the negation of the statement: <span class="process-math">\(A\nsubseteq B, B\nsubseteq C\text{,}\)</span> and <span class="process-math">\(A\subseteq C\text{.}\)</span> Find small sets that satisfy the negation.</div> <div class="para" id="p-2012">For example, we can try <span class="process-math">\(A=\{1, 2\}, B=\{4, 5\}, C=\{1, 2, 3\}\text{.}\)</span> Then <span class="process-math">\(A\nsubseteq B, B\nsubseteq C\text{,}\)</span> and <span class="process-math">\(A\subseteq C\text{.}\)</span> Thus, we have a counterexample.</div></article></div>
+<div class="para logical" id="p-2013">
 <div class="para">Advice for finding counterexamples:</div>
 <ul class="disc">
 <li id="li-449"><div class="para" id="p-derived-li-449">Write the negation of the statement so you can make sure your sets satisfy the appropriate conditions.</div></li>
@@ -565,10 +596,10 @@ window.MathJax = {
 <li id="li-452"><div class="para" id="p-derived-li-452">If you need counterexamples that involve set complements, it is helpful to define a small universal set such as <span class="process-math">\(U=\{1, 2, 3, 4, 5, 6\}\text{.}\)</span> Then if <span class="process-math">\(A=\{1, 2, 3\}\text{,}\)</span> <span class="process-math">\(A^C=\{4, 5, 6\}\text{,}\)</span> which is easier to work with than,  say, all the integers except 1, 2, 3.</div></li>
 </ul>
 </div>
-<div class="para" id="p-1774">Now we want to be able to use the list of properties from the end of the previous section, <a href="" class="xref" data-knowl="./knowl/L_SetIdent.html" title="Assemblage: Summary of Set Identities">Summary of Set Identities</a>, to prove statements algebraically. In this case, we do not need to use elements, but we can use properties such as the distributive property or DeMorgan's Laws to rewrite our sets.</div>
+<div class="para" id="p-2014">Now we want to be able to use the list of properties from the end of the previous section, <a href="" class="xref" data-knowl="./knowl/L_SetIdent.html" title="Assemblage: Summary of Set Identities">Summary of Set Identities</a>, to prove statements algebraically. In this case, we do not need to use elements, but we can use properties such as the distributive property or DeMorgan's Laws to rewrite our sets.</div>
 <article class="example example-like" id="E_algebraicproof"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_algebraicproof"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Algebraic Set Theory Proof.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_algebraicproof"><article class="example example-like"> <div class="para" id="p-1775">Prove <span class="process-math">\(A-(A\cap B)=A-B\)</span> using properties of sets.</div> <article class="hiddenproof" id="proof-33"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-33"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-33"><article class="hiddenproof"><div class="displaymath process-math" id="md-26">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_algebraicproof"><article class="example example-like"> <div class="para" id="p-2015">Prove <span class="process-math">\(A-(A\cap B)=A-B\)</span> using properties of sets.</div> <article class="hiddenproof" id="proof-33"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-33"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-33"><article class="hiddenproof"><div class="displaymath process-math" id="md-26">
 \begin{align*}
 A-(A\cap B) &amp;= A\cap(A\cap B)^C \ \ \text{ Set Difference Law}\\
 &amp;= A\cap(A^C\cup B^C) \ \ \text{ DeMorgan's Law}\\
@@ -581,26 +612,26 @@ A-(A\cap B) &amp;= A\cap(A\cap B)^C \ \ \text{ Set Difference Law}\\
 <article class="activity project-like" id="activity-118"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.3.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1776">Use identities from the <a href="" class="xref" data-knowl="./knowl/L_SetIdent.html" title="Assemblage: Summary of Set Identities">Summary of Set Identities</a> to prove for all sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> <span class="process-math">\(A\cup(B-A)=A\cup B\)</span>
+<div class="para" id="p-2016">Use identities from the <a href="" class="xref" data-knowl="./knowl/L_SetIdent.html" title="Assemblage: Summary of Set Identities">Summary of Set Identities</a> to prove for all sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> <span class="process-math">\(A\cup(B-A)=A\cup B\)</span>
 </div></article><article class="activity project-like" id="activity-119"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.3.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1777">Prove or disprove for all sets <span class="process-math">\(A, B\)</span> and <span class="process-math">\(C\text{,}\)</span> <span class="process-math">\(A-(B-C)=(A-B)-C\text{.}\)</span>
+<div class="para" id="p-2017">Prove or disprove for all sets <span class="process-math">\(A, B\)</span> and <span class="process-math">\(C\text{,}\)</span> <span class="process-math">\(A-(B-C)=(A-B)-C\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-22" id="hint-22"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-22"><div class="hint solution-like"><div class="para" id="p-1778">To decide if a statement is true or false, draw a Venn diagram for each side of the equality.  If the two diagrams are the same, provide a proof. If the two diagrams are different, provide a specific counterexample.</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-36" id="hint-36"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-36"><div class="hint solution-like"><div class="para" id="p-2018">To decide if a statement is true or false, draw a Venn diagram for each side of the equality.  If the two diagrams are the same, provide a proof. If the two diagrams are different, provide a specific counterexample.</div></div></div>
 </div></article><article class="activity project-like" id="activity-120"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.3.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1779">Prove or disprove for all sets <span class="process-math">\(A, B\)</span> and <span class="process-math">\(C\text{,}\)</span> if <span class="process-math">\(A\subseteq B\)</span> then <span class="process-math">\(A\cap(B\cap C)^{C}=\emptyset\text{.}\)</span>
+<div class="para" id="p-2019">Prove or disprove for all sets <span class="process-math">\(A, B\)</span> and <span class="process-math">\(C\text{,}\)</span> if <span class="process-math">\(A\subseteq B\)</span> then <span class="process-math">\(A\cap(B\cap C)^{C}=\emptyset\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-23" id="hint-23"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-23"><div class="hint solution-like"><div class="para" id="p-1780">It might be easier to define a small universal set for this one.</div></div></div>
-</div></article><div class="para" id="p-1781">Recall the power set of a set <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(\mathcal{P}(A)\)</span>, is the set of all subsets of <span class="process-math">\(A\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-37" id="hint-37"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-37"><div class="hint solution-like"><div class="para" id="p-2020">It might be easier to define a small universal set for this one.</div></div></div>
+</div></article><div class="para" id="p-2021">Recall the power set of a set <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(\mathcal{P}(A)\)</span>, is the set of all subsets of <span class="process-math">\(A\text{.}\)</span>
 </div>
 <article class="example example-like" id="E_powersetproof"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_powersetproof"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Power Set Proof.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_powersetproof"><article class="example example-like"> <div class="para logical" id="p-1782">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_powersetproof"><article class="example example-like"> <div class="para logical" id="p-2022">
 <div class="para">Prove for all sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -609,18 +640,18 @@ A-(A\cap B) &amp;= A\cap(A\cap B)^C \ \ \text{ Set Difference Law}\\
 \end{equation*}
 </div>
 <div class="para">
-<article class="hiddenproof" id="proof-34"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-34"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-34"><article class="hiddenproof"><div class="para" id="p-1783">Since we need to show two sets are equal we need to show both subsets. We should also note that elements of power sets are sets.</div> <div class="para" id="p-1784">
+<article class="hiddenproof" id="proof-34"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-34"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-34"><article class="hiddenproof"><div class="para" id="p-2023">Since we need to show two sets are equal we need to show both subsets. We should also note that elements of power sets are sets.</div> <div class="para" id="p-2024">
 <span class="process-math">\((\subseteq)\text{:}\)</span> Let <span class="process-math">\(C\in \mathcal{P}(A\cap B)\text{.}\)</span> Then <span class="process-math">\(C\)</span> must be a subset of <span class="process-math">\(A\cap B\text{.}\)</span> Then <span class="process-math">\(C\subseteq A\)</span> and <span class="process-math">\(C\subseteq B\text{.}\)</span> This implies <span class="process-math">\(C\in \mathcal{P}(A)\)</span> and <span class="process-math">\(C\in \mathcal{P}(B)\text{.}\)</span> Thus, <span class="process-math">\(C\in\mathcal{P}(A)\cap\mathcal{P}(B)\text{.}\)</span>
-</div> <div class="para" id="p-1785">
+</div> <div class="para" id="p-2025">
 <span class="process-math">\((\supseteq)\text{:}\)</span> Let <span class="process-math">\(C\in \mathcal{P}(A)\cap\mathcal{P}(B)\text{.}\)</span> Then <span class="process-math">\(C\in \mathcal{P}(A)\)</span> and <span class="process-math">\(C\in \mathcal{P}(B)\text{.}\)</span> Then <span class="process-math">\(C\subseteq A\)</span> and <span class="process-math">\(C\subseteq B\text{.}\)</span> This implies <span class="process-math">\(C\)</span> must be a subset of <span class="process-math">\(A\cap B\text{.}\)</span> Thus, <span class="process-math">\(C\in\mathcal{P}(A\cap B)\text{.}\)</span>
 </div></article></div>
 </div>
 </div></article></div>
-<div class="para" id="p-1786">You might have noticed in this last proof that each of the subset proofs are really just the reverse of each other. If all the implications in our proof are really “if and only if” statements, then we can write the proof more succinctly as a single “if and only if” proof. We will show this technique in the next example. Be careful with if and only if proofs, though. Make sure that at each step both directions of the conditional are true. If you are unsure, you can always write you proof in two stages, as we did in the previous example. We generally use the symbol <span class="process-math">\(\Leftrightarrow\)</span> to mean “if and only if” in proofs.</div>
+<div class="para" id="p-2026">You might have noticed in this last proof that each of the subset proofs are really just the reverse of each other. If all the implications in our proof are really “if and only if” statements, then we can write the proof more succinctly as a single “if and only if” proof. We will show this technique in the next example. Be careful with if and only if proofs, though. Make sure that at each step both directions of the conditional are true. If you are unsure, you can always write you proof in two stages, as we did in the previous example. We generally use the symbol <span class="process-math">\(\Leftrightarrow\)</span> to mean “if and only if” in proofs.</div>
 <article class="example example-like" id="E_shortpowersetproof"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_shortpowersetproof"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Power Set Proof, Shortened.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_shortpowersetproof"><article class="example example-like"> <div class="para" id="p-1787">Prove for all sets <span class="process-math">\(A, B\text{,}\)</span> <span class="process-math">\(\mathcal{P}(A\cap B)=\mathcal{P}(A)\cap \mathcal{P}(B)\text{.}\)</span>
-</div> <article class="hiddenproof" id="proof-35"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-35"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-35"><article class="hiddenproof"><div class="para logical" id="p-1788"><div class="displaymath process-math" id="md-27">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_shortpowersetproof"><article class="example example-like"> <div class="para" id="p-2027">Prove for all sets <span class="process-math">\(A, B\text{,}\)</span> <span class="process-math">\(\mathcal{P}(A\cap B)=\mathcal{P}(A)\cap \mathcal{P}(B)\text{.}\)</span>
+</div> <article class="hiddenproof" id="proof-35"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-35"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-35"><article class="hiddenproof"><div class="para logical" id="p-2028"><div class="displaymath process-math" id="md-27">
 \begin{align*}
 &amp; C\in \mathcal{P}(A\cap B)\\
 \Leftrightarrow &amp; C\subseteq A\cap B\\
@@ -629,19 +660,19 @@ A-(A\cap B) &amp;= A\cap(A\cap B)^C \ \ \text{ Set Difference Law}\\
 \Leftrightarrow &amp; C\in\mathcal{P}(A)\cap\mathcal{P}(B).
 \end{align*}
 </div></div></article></div></article></div>
-<div class="para" id="p-1789">Since we are looking at the power set, we can prove a formula for counting the number of elements of a power set. In this proof we will revisit proof by induction. The number of elements in a set, <span class="process-math">\(S\text{,}\)</span> is denoted <span class="process-math">\(|S|\)</span>.</div>
+<div class="para" id="p-2029">Since we are looking at the power set, we can prove a formula for counting the number of elements of a power set. In this proof we will revisit proof by induction. The number of elements in a set, <span class="process-math">\(S\text{,}\)</span> is denoted <span class="process-math">\(|S|\)</span>.</div>
 <article class="theorem theorem-like" id="T_numbereltspowerset"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.3.5</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1790">If <span class="process-math">\(S\)</span> has <span class="process-math">\(n\)</span> elements, then <span class="process-math">\(\mathcal{P}(S)\)</span> has <span class="process-math">\(2^n\)</span> elements.</div></article><article class="hiddenproof" id="proof-36"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-36"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-36"><article class="hiddenproof"><div class="para" id="p-1791">We will prove this by induction on the number of elements, <span class="process-math">\(n\text{.}\)</span>
-</div> <div class="para" id="p-1792">Base step: Let <span class="process-math">\(n=0\text{.}\)</span> Then since <span class="process-math">\(S\)</span> has 0 elements, <span class="process-math">\(S=\emptyset\text{.}\)</span> The only subset of the empty set is <span class="process-math">\(\emptyset\text{.}\)</span> Thus, <span class="process-math">\(\mathcal{P}(S)=\{\emptyset\}\text{.}\)</span> Hence, <span class="process-math">\(|\mathcal{P}(S)|=1\text{.}\)</span> Since <span class="process-math">\(2^0=1\text{,}\)</span> if <span class="process-math">\(n=0\text{,}\)</span> <span class="process-math">\(\mathcal{P}(S)\)</span> has <span class="process-math">\(2^n\)</span> elements.</div> <div class="para" id="p-1793">Induction step: Assume if a set <span class="process-math">\(S\)</span> has <span class="process-math">\(k\)</span> elements, then <span class="process-math">\(\mathcal{P}(S)\)</span> has <span class="process-math">\(2^k\)</span> elements.</div> <div class="para" id="p-1794">Show if a set <span class="process-math">\(S\)</span> has <span class="process-math">\(k+1\)</span> elements, then <span class="process-math">\(\mathcal{P}(S)\)</span> has <span class="process-math">\(2^{k+1}\)</span> elements.</div> <div class="para" id="p-1795">Proof of induction step: Assume <span class="process-math">\(|S|=k+1\text{.}\)</span> Let <span class="process-math">\(b\in S\text{,}\)</span> then <span class="process-math">\(S=A\cup \{b\}\)</span> where <span class="process-math">\(A=S-\{b\}\text{,}\)</span> the set of elements of <span class="process-math">\(S\)</span> except <span class="process-math">\(b\text{.}\)</span> Then <span class="process-math">\(A\)</span> has <span class="process-math">\(k\)</span> elements, so by the induction assumption, <span class="process-math">\(|\mathcal{P}(A)|=2^k\text{.}\)</span>
-</div> <div class="para" id="p-1796">Now consider the subsets of <span class="process-math">\(S\text{.}\)</span> Each subset either contains <span class="process-math">\(b\)</span> or it doesn't. We know there are <span class="process-math">\(2^k\)</span> subsets that do not contain <span class="process-math">\(b\text{.}\)</span> We get all the subsets of <span class="process-math">\(S\)</span> that do contain <span class="process-math">\(b\)</span> by adding <span class="process-math">\(b\)</span> to the sets that don't contain <span class="process-math">\(b\text{.}\)</span> Thus, there are the same number of subsets that do contain <span class="process-math">\(b\)</span> as those that don't. Hence, we have <span class="process-math">\(2^k\)</span> subsets not containing <span class="process-math">\(b\)</span> and <span class="process-math">\(2^k\)</span> subsets  containing <span class="process-math">\(b\text{.}\)</span>
-</div> <div class="para" id="p-1797">Therefore, <span class="process-math">\(S\)</span> has <span class="process-math">\(2^k+2^k=2(2^k)=2^{k+1}\)</span> subsets, hence <span class="process-math">\(\mathcal{P}(S)\)</span> has <span class="process-math">\(2^{k+1}\)</span> elements.</div></article></div>
-<div class="para" id="p-1798">The next example demonstrates the proof of <a href="" class="xref" data-knowl="./knowl/T_numbereltspowerset.html" title="Theorem 6.3.5">Theorem 6.3.5</a> in a specific set.</div>
+<div class="para" id="p-2030">If <span class="process-math">\(S\)</span> has <span class="process-math">\(n\)</span> elements, then <span class="process-math">\(\mathcal{P}(S)\)</span> has <span class="process-math">\(2^n\)</span> elements.</div></article><article class="hiddenproof" id="proof-36"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-36"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-36"><article class="hiddenproof"><div class="para" id="p-2031">We will prove this by induction on the number of elements, <span class="process-math">\(n\text{.}\)</span>
+</div> <div class="para" id="p-2032">Base step: Let <span class="process-math">\(n=0\text{.}\)</span> Then since <span class="process-math">\(S\)</span> has 0 elements, <span class="process-math">\(S=\emptyset\text{.}\)</span> The only subset of the empty set is <span class="process-math">\(\emptyset\text{.}\)</span> Thus, <span class="process-math">\(\mathcal{P}(S)=\{\emptyset\}\text{.}\)</span> Hence, <span class="process-math">\(|\mathcal{P}(S)|=1\text{.}\)</span> Since <span class="process-math">\(2^0=1\text{,}\)</span> if <span class="process-math">\(n=0\text{,}\)</span> <span class="process-math">\(\mathcal{P}(S)\)</span> has <span class="process-math">\(2^n\)</span> elements.</div> <div class="para" id="p-2033">Induction step: Assume if a set <span class="process-math">\(S\)</span> has <span class="process-math">\(k\)</span> elements, then <span class="process-math">\(\mathcal{P}(S)\)</span> has <span class="process-math">\(2^k\)</span> elements.</div> <div class="para" id="p-2034">Show if a set <span class="process-math">\(S\)</span> has <span class="process-math">\(k+1\)</span> elements, then <span class="process-math">\(\mathcal{P}(S)\)</span> has <span class="process-math">\(2^{k+1}\)</span> elements.</div> <div class="para" id="p-2035">Proof of induction step: Assume <span class="process-math">\(|S|=k+1\text{.}\)</span> Let <span class="process-math">\(b\in S\text{,}\)</span> then <span class="process-math">\(S=A\cup \{b\}\)</span> where <span class="process-math">\(A=S-\{b\}\text{,}\)</span> the set of elements of <span class="process-math">\(S\)</span> except <span class="process-math">\(b\text{.}\)</span> Then <span class="process-math">\(A\)</span> has <span class="process-math">\(k\)</span> elements, so by the induction assumption, <span class="process-math">\(|\mathcal{P}(A)|=2^k\text{.}\)</span>
+</div> <div class="para" id="p-2036">Now consider the subsets of <span class="process-math">\(S\text{.}\)</span> Each subset either contains <span class="process-math">\(b\)</span> or it doesn't. We know there are <span class="process-math">\(2^k\)</span> subsets that do not contain <span class="process-math">\(b\text{.}\)</span> We get all the subsets of <span class="process-math">\(S\)</span> that do contain <span class="process-math">\(b\)</span> by adding <span class="process-math">\(b\)</span> to the sets that don't contain <span class="process-math">\(b\text{.}\)</span> Thus, there are the same number of subsets that do contain <span class="process-math">\(b\)</span> as those that don't. Hence, we have <span class="process-math">\(2^k\)</span> subsets not containing <span class="process-math">\(b\)</span> and <span class="process-math">\(2^k\)</span> subsets  containing <span class="process-math">\(b\text{.}\)</span>
+</div> <div class="para" id="p-2037">Therefore, <span class="process-math">\(S\)</span> has <span class="process-math">\(2^k+2^k=2(2^k)=2^{k+1}\)</span> subsets, hence <span class="process-math">\(\mathcal{P}(S)\)</span> has <span class="process-math">\(2^{k+1}\)</span> elements.</div></article></div>
+<div class="para" id="p-2038">The next example demonstrates the proof of <a href="" class="xref" data-knowl="./knowl/T_numbereltspowerset.html" title="Theorem 6.3.5">Theorem 6.3.5</a> in a specific set.</div>
 <article class="example example-like" id="E_countingsubsets"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_countingsubsets"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Counting the Number of Subsets.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_countingsubsets"><article class="example example-like"> <div class="para" id="p-1799">Let <span class="process-math">\(S=\{1, 2, 3\}\text{.}\)</span> We can separate out the last element so, as in the proof of <a href="" class="xref" data-knowl="./knowl/T_numbereltspowerset.html" title="Theorem 6.3.5">Theorem 6.3.5</a>, <span class="process-math">\(b=3, A=\{1, 2\}\text{.}\)</span>
-</div> <div class="para logical" id="p-1800">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_countingsubsets"><article class="example example-like"> <div class="para" id="p-2039">Let <span class="process-math">\(S=\{1, 2, 3\}\text{.}\)</span> We can separate out the last element so, as in the proof of <a href="" class="xref" data-knowl="./knowl/T_numbereltspowerset.html" title="Theorem 6.3.5">Theorem 6.3.5</a>, <span class="process-math">\(b=3, A=\{1, 2\}\text{.}\)</span>
+</div> <div class="para logical" id="p-2040">
 <div class="para">We can look at the subsets of <span class="process-math">\(S\)</span> that do not contain 3:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -656,74 +687,47 @@ A-(A\cap B) &amp;= A\cap(A\cap B)^C \ \ \text{ Set Difference Law}\\
 </div>
 <div class="para">You can check that we have all the possible subsets of <span class="process-math">\(S\text{.}\)</span>
 </div>
-</div> <div class="para" id="p-1801">If we count up the sets, we have <span class="process-math">\(2^2\)</span> subsets not containing 3, and <span class="process-math">\(2^2\)</span> subsets containing 3. Which gives us <span class="process-math">\(2(2^2)=8=2^3\)</span> subsets of <span class="process-math">\(S\text{.}\)</span> Hence, <span class="process-math">\(|\mathcal{P}(S)|=2^3=8\text{.}\)</span>
+</div> <div class="para" id="p-2041">If we count up the sets, we have <span class="process-math">\(2^2\)</span> subsets not containing 3, and <span class="process-math">\(2^2\)</span> subsets containing 3. Which gives us <span class="process-math">\(2(2^2)=8=2^3\)</span> subsets of <span class="process-math">\(S\text{.}\)</span> Hence, <span class="process-math">\(|\mathcal{P}(S)|=2^3=8\text{.}\)</span>
 </div></article></div>
 <section class="reading-questions" id="reading-questions-25"><h3 class="heading hide-type">
 <span class="type">Reading Questions</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
-<div class="para" id="p-1802">Let <span class="process-math">\(A, B, C\)</span> be sets and <span class="process-math">\(U\)</span> be the universal set.</div>
-<article class="exercise exercise-like" id="exercise-362"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1803">Give a counterexample to disprove <span class="process-math">\(A\cap(B\cup C)=(A\cap B)\cup C\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-274" id="answer-274"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-274"><div class="answer solution-like"><div class="para" id="p-1804">There are many possible answers. <span class="process-math">\(A=\{1, 2\}, B=\{1, 3\}, C=\{2, 3\}\)</span> is one.</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-363"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-1805">Give a counterexample to disprove <span class="process-math">\(A\cup \emptyset=\emptyset\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-275" id="answer-275"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-275"><div class="answer solution-like"><div class="para" id="p-1806">There are many possible answers. <span class="process-math">\(A=\{1, 2\}\)</span> is one.</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-364"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-1807">Give a counterexample to disprove <span class="process-math">\(A\cup \emptyset\neq\emptyset\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-276" id="answer-276"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-276"><div class="answer solution-like"><div class="para" id="p-1808"><span class="process-math">\(A=\emptyset\text{.}\)</span></div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-365"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-1809">Give a counterexample to disprove <span class="process-math">\((A\cup B)^C=A^C\cup B^C\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-277" id="answer-277"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-277"><div class="answer solution-like"><div class="para" id="p-1810">There are many possible answers. <span class="process-math">\(A=\{1, 2\}, B=\{1, 3\}, U=\{1, 2, 3\}\)</span> is one.</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-366"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-1811">Give a counterexample to disprove <span class="process-math">\(B-A=A-B\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-278" id="answer-278"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-278"><div class="answer solution-like"><div class="para" id="p-1812">There are many possible answers. <span class="process-math">\(A=\{1, 2\}, B=\{1, 3\}\)</span> is one.</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-367"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-1813">Give a counterexample to disprove  <span class="process-math">\(B\subseteq A\cup(B\cap C)\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-279" id="answer-279"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-279"><div class="answer solution-like"><div class="para" id="p-1814">There are many possible answers. <span class="process-math">\(A=\{1, 2\}, B=\{3, 4\}, C=\{5\}\)</span> is one.</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-368"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-1815">True or false:  If <span class="process-math">\(A\subseteq B\cup C\text{,}\)</span> then <span class="process-math">\(A\subseteq B\)</span> or <span class="process-math">\(A\subseteq C\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-280" id="answer-280"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-280"><div class="answer solution-like"><div class="para" id="p-1816">False</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-369"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="p-1817">True or false:  If <span class="process-math">\(A\subseteq B\cap C\text{,}\)</span> then <span class="process-math">\(A\subseteq B\)</span> and <span class="process-math">\(A\subseteq C\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-281" id="answer-281"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-281"><div class="answer solution-like"><div class="para" id="p-1818">True</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-370"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<div class="para" id="p-1819">Let <span class="process-math">\(A=\{1, 2, 3, 4, 5\}\text{.}\)</span> Find <span class="process-math">\(|\mathcal{P}(A)|\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-282" id="answer-282"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-282"><div class="answer solution-like"><span class="process-math">\(2^5=32\)</span></div></div>
+<div class="para" id="p-2042">Let <span class="process-math">\(A, B, C\)</span> be sets and <span class="process-math">\(U\)</span> be the universal set.</div>
+<article class="exercise exercise-like" id="exercise-355"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-2043">Give a counterexample to disprove <span class="process-math">\(A\cap(B\cup C)=(A\cap B)\cup C\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-356"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-2045">Give a counterexample to disprove <span class="process-math">\(A\cup \emptyset=\emptyset\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-357"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-2047">Give a counterexample to disprove <span class="process-math">\(A\cup \emptyset\neq\emptyset\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-358"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="p-2049">Give a counterexample to disprove <span class="process-math">\((A\cup B)^C=A^C\cup B^C\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-359"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="p-2051">Give a counterexample to disprove <span class="process-math">\(B-A=A-B\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-360"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="p-2053">Give a counterexample to disprove  <span class="process-math">\(B\subseteq A\cup(B\cap C)\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-361"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="p-2055">True or false:  If <span class="process-math">\(A\subseteq B\cup C\text{,}\)</span> then <span class="process-math">\(A\subseteq B\)</span> or <span class="process-math">\(A\subseteq C\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-362"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para" id="p-2057">True or false:  If <span class="process-math">\(A\subseteq B\cap C\text{,}\)</span> then <span class="process-math">\(A\subseteq B\)</span> and <span class="process-math">\(A\subseteq C\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-363"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="para" id="p-2059">Let <span class="process-math">\(A=\{1, 2, 3, 4, 5\}\text{.}\)</span> Find <span class="process-math">\(|\mathcal{P}(A)|\text{.}\)</span>
 </div></article></section><section class="exercises" id="exercises-25"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-371"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1820">Find a counterexample to show the following statement is false:</div> <div class="para" id="p-1821">For all sets <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\text{,}\)</span> <span class="process-math">\((A\cap B)\cup C=A\cap (B\cup C)\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-372"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-1822">Write a negation for the following statements. Indicate which is true, the statement or the negation. Justify your answer.</div> <ol class="lower-alpha">
-<li id="li-453"><div class="para" id="p-1823">
+<article class="exercise exercise-like" id="exercise-364"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-2060">Find a counterexample to show the following statement is false:</div> <div class="para" id="p-2061">For all sets <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\text{,}\)</span> <span class="process-math">\((A\cap B)\cup C=A\cap (B\cup C)\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-365"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-2062">Write a negation for the following statements. Indicate which is true, the statement or the negation. Justify your answer.</div> <ol class="lower-alpha">
+<li id="li-453"><div class="para" id="p-2063">
 <span class="process-math">\(\forall\)</span> sets <span class="process-math">\(S\text{,}\)</span> <span class="process-math">\(\exists\)</span> a set <span class="process-math">\(T\)</span> such that <span class="process-math">\(S\cap T=\emptyset\text{.}\)</span>
 </div></li>
-<li id="li-454"><div class="para" id="p-1824">
+<li id="li-454"><div class="para" id="p-2064">
 <span class="process-math">\(\exists\)</span> a set <span class="process-math">\(S\)</span> such that <span class="process-math">\(\forall\)</span> sets <span class="process-math">\(T\text{,}\)</span> <span class="process-math">\(S\cup T=\emptyset\text{.}\)</span>
 </div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-373"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-1825">Let <span class="process-math">\(S=\{a, b, c\}\)</span> and for each integer <span class="process-math">\(i=0, 1, 2, 3,\)</span> let <span class="process-math">\(S_i\)</span> be the set of all subsets of <span class="process-math">\(S\)</span> that have <span class="process-math">\(i\)</span> elements. List the elements in <span class="process-math">\(S_0, S_1, S_2, S_3\text{.}\)</span> Is <span class="process-math">\(\{S_0, S_1, S_2, S_3\}\)</span> a partition of <span class="process-math">\({\cal P}(S)\text{?}\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-374"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para logical" id="p-1826">
+</ol></article><article class="exercise exercise-like" id="exercise-366"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-2065">Let <span class="process-math">\(S=\{a, b, c\}\)</span> and for each integer <span class="process-math">\(i=0, 1, 2, 3,\)</span> let <span class="process-math">\(S_i\)</span> be the set of all subsets of <span class="process-math">\(S\)</span> that have <span class="process-math">\(i\)</span> elements. List the elements in <span class="process-math">\(S_0, S_1, S_2, S_3\text{.}\)</span> Is <span class="process-math">\(\{S_0, S_1, S_2, S_3\}\)</span> a partition of <span class="process-math">\({\cal P}(S)\text{?}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-367"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para logical" id="p-2066">
 <div class="para">Supply a reason for each step in the algebraic proof of the statement: For all sets <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -731,7 +735,7 @@ A-(A\cap B) &amp;= A\cap(A\cap B)^C \ \ \text{ Set Difference Law}\\
 (A\cup B)\cap C=(A\cap C)\cup (B\cap C).
 \end{equation*}
 </div>
-</div> <div class="para" id="p-1827">
+</div> <div class="para" id="p-2067">
 <dfn class="terminology">Proof:</dfn> Suppose <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\)</span> are sets. Then</div> <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\((A\cup B)\cap C\)</span></td>
@@ -748,8 +752,8 @@ A-(A\cap B) &amp;= A\cap(A\cap B)^C \ \ \text{ Set Difference Law}\\
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=(A\cap C)\cup (B\cap C)\)</span></td>
 <td class="r m b0 r0 l0 t0 lines">by ___</td>
 </tr>
-</table></div></article><article class="exercise exercise-like" id="exercise-375"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para logical" id="p-1828">
+</table></div></article><article class="exercise exercise-like" id="exercise-368"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para logical" id="p-2068">
 <div class="para">Supply a reason for each step in the algebraic proof of the statement: For all sets <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -757,7 +761,7 @@ A-(A\cap B) &amp;= A\cap(A\cap B)^C \ \ \text{ Set Difference Law}\\
 (A\cup B)- (C-A)=A\cup(B-C).
 \end{equation*}
 </div>
-</div> <div class="para" id="p-1829">
+</div> <div class="para" id="p-2069">
 <dfn class="terminology">Proof:</dfn> Suppose <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\)</span> are sets. Then</div> <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\((A\cup B)-(C-A)\)</span></td>
@@ -794,14 +798,14 @@ A-(A\cap B) &amp;= A\cap(A\cap B)^C \ \ \text{ Set Difference Law}\\
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=A\cup( B-  C)\)</span></td>
 <td class="r m b0 r0 l0 t0 lines">by ___</td>
 </tr>
-</table></div></article><article class="exercise exercise-like" id="exercise-376"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-1830">Prove or disprove for all sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> <span class="process-math">\(A\cap (A\cup B)=A\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-377"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-1831">Prove or disprove for all sets <span class="process-math">\(A, B\)</span> and <span class="process-math">\(C\text{,}\)</span> <span class="process-math">\((A-B)\cap (C-B)=A-(B\cup C)\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-378"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="p-1832">Prove or disprove for all sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> if <span class="process-math">\(A\subseteq B\)</span> then <span class="process-math">\(A\cap B^C=\emptyset\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-379"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<div class="para logical" id="p-1833">
+</table></div></article><article class="exercise exercise-like" id="exercise-369"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="p-2070">Prove or disprove for all sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> <span class="process-math">\(A\cap (A\cup B)=A\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-370"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="p-2071">Prove or disprove for all sets <span class="process-math">\(A, B\)</span> and <span class="process-math">\(C\text{,}\)</span> <span class="process-math">\((A-B)\cap (C-B)=A-(B\cup C)\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-371"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para" id="p-2072">Prove or disprove for all sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> if <span class="process-math">\(A\subseteq B\)</span> then <span class="process-math">\(A\cap B^C=\emptyset\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-372"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="para logical" id="p-2073">
 <div class="para">Prove or disprove for all sets <span class="process-math">\(A, B\)</span> and <span class="process-math">\(C\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -809,16 +813,16 @@ A-(A\cap B) &amp;= A\cap(A\cap B)^C \ \ \text{ Set Difference Law}\\
 A\cup (B-C)=(A\cup B)-(A\cup C).
 \end{equation*}
 </div>
-</div></article><article class="exercise exercise-like" id="exercise-380"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
-<div class="para" id="p-1834">Prove or disprove for all sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> if <span class="process-math">\(A\subseteq B\)</span> then <span class="process-math">\({\cal P}(A)\subseteq {\cal P}(B)\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-381"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
-<div class="para" id="p-1835">Prove or disprove for all sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> <span class="process-math">\({\cal P}(A\cup B)\subseteq {\cal P}(A)\cup{\cal P}(B)\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-382"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
-<div class="para" id="p-1836">Give an algebraic proof of the statement: For all sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> <span class="process-math">\((A-B)\cup(A\cap B)=A\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-383"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
-<div class="para" id="p-1837">Give an algebraic proof of the statement: For all sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> <span class="process-math">\((A-B)\cap(A\cap B)=\emptyset\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-384"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
-<div class="para" id="p-1838">Simplify the statement using algebraic properties: <span class="process-math">\((A-(A\cap B))\cap(B-(A\cap B))\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-373"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="para" id="p-2074">Prove or disprove for all sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> if <span class="process-math">\(A\subseteq B\)</span> then <span class="process-math">\({\cal P}(A)\subseteq {\cal P}(B)\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-374"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="para" id="p-2075">Prove or disprove for all sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> <span class="process-math">\({\cal P}(A\cup B)\subseteq {\cal P}(A)\cup{\cal P}(B)\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-375"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<div class="para" id="p-2076">Give an algebraic proof of the statement: For all sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> <span class="process-math">\((A-B)\cup(A\cap B)=A\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-376"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
+<div class="para" id="p-2077">Give an algebraic proof of the statement: For all sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> <span class="process-math">\((A-B)\cap(A\cap B)=\emptyset\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-377"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
+<div class="para" id="p-2078">Simplify the statement using algebraic properties: <span class="process-math">\((A-(A\cap B))\cap(B-(A\cap B))\text{.}\)</span>
 </div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="propertiesofsets6-2.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="chapter7.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
@@ -827,5 +831,13 @@ A\cup (B-C)=(A\cup B)-(A\cup C).
 <div id="ptx-page-footer">
 <a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12894193;
+var sc_invisible=1;
+var sc_security="e67c59eb";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12894193/0/e67c59eb/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
 </body>
 </html>

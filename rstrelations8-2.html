@@ -62,8 +62,39 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.0.0dev3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runtime.71ffd81c0faeb38b.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.e543e0dd19670ae2.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.1f1f63d2cda36a4d.css">
 </head>
-<body class="pretext book ignore-math">
+<body id="DiscreteMathText" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" href=""></a><div class="title-container">
 <h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
@@ -549,11 +580,11 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="rstrelations8-2"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">8.2</span> <span class="title">Reflexive, Symmetric, Transitive Properties</span>
 </h2>
-<div class="para" id="p-2112">In this section we look at some properties of relations. In particular, we define the reflexive, symmetric, and transitive properties. We will use directed graphs to identify the properties and look at how to prove whether a relation is reflexive, symmetric, and/or transitive.</div>
+<div class="para" id="p-2352">In this section we look at some properties of relations. In particular, we define the reflexive, symmetric, and transitive properties. We will use directed graphs to identify the properties and look at how to prove whether a relation is reflexive, symmetric, and/or transitive.</div>
 <article class="definition definition-like" id="D_RSTprop"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.2.1</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-2113">
+<div class="para logical" id="p-2353">
 <div class="para">Let <span class="process-math">\(R\)</span> be a relation on <span class="process-math">\(A\text{.}\)</span> Then</div>
 <ol class="decimal">
 <li id="li-534"><div class="para" id="p-derived-li-534">
@@ -568,223 +599,211 @@ window.MathJax = {
 </ol>
 </div></article><article class="example example-like" id="E_propofsets"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_propofsets"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Reflexive, Symmetric, Transitive.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_propofsets"><article class="example example-like"> <div class="para logical" id="p-2114">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_propofsets"><article class="example example-like"> <div class="para logical" id="p-2354">
 <div class="para">Let <span class="process-math">\(A=\{1, 2, 3\}\text{,}\)</span> define the relation on <span class="process-math">\(A\)</span> by</div>
 <div class="displaymath process-math">
 \begin{equation*}
 R=\{(1, 1), (2, 2), (3, 3)\}.
 \end{equation*}
 </div>
-</div> <div class="para" id="p-2115">
+</div> <div class="para" id="p-2355">
 <span class="process-math">\(R\)</span> is reflexive since <span class="process-math">\((x, x)\in R\)</span> for each <span class="process-math">\(x\in A\text{.}\)</span>
-</div> <div class="para" id="p-2116">
-<span class="process-math">\(R\)</span> is symmetric since if <span class="process-math">\((x, y)\in R\)</span> then <span class="process-math">\((y, x)\in R\text{.}\)</span>  Note, this property does not mean <span class="process-math">\((x, y)\in R\text{,}\)</span> just that if a pair is in <span class="process-math">\(R\text{,}\)</span> then the reverse is as well.</div> <div class="para" id="p-2117">
+</div> <div class="para" id="p-2356">
+<span class="process-math">\(R\)</span> is symmetric since if <span class="process-math">\((x, y)\in R\)</span> then <span class="process-math">\((y, x)\in R\text{.}\)</span>  Note, this property does not mean <span class="process-math">\((x, y)\in R\text{,}\)</span> just that if a pair is in <span class="process-math">\(R\text{,}\)</span> then the reverse is as well.</div> <div class="para" id="p-2357">
 <span class="process-math">\(R\)</span> is transitive since  if <span class="process-math">\((x, y)\in R\)</span> and <span class="process-math">\((y, z)\in R\)</span> then <span class="process-math">\((x, z)\in R\text{.}\)</span> Note, this property can be tedious to check by hand. In this example, though, the only pairs that fit the hypothesis are pairs like <span class="process-math">\((x, y)=(1, 1), (y, z)=(1, 1)\text{,}\)</span> so <span class="process-math">\((x, z)=(1, 1)\text{,}\)</span> which is in <span class="process-math">\(R\text{.}\)</span>
 </div></article></div>
 <article class="example example-like" id="E_propofsets2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_propofsets2"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Another Look at the Properties.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_propofsets2"><article class="example example-like"> <div class="para logical" id="p-2118">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_propofsets2"><article class="example example-like"> <div class="para logical" id="p-2358">
 <div class="para">Let <span class="process-math">\(A=\{1, 2, 3\}\text{,}\)</span> define the relation on <span class="process-math">\(A\)</span> by</div>
 <div class="displaymath process-math">
 \begin{equation*}
 R=\{(1, 2), (1, 3), (2, 3)\}.
 \end{equation*}
 </div>
-</div> <div class="para" id="p-2119">
+</div> <div class="para" id="p-2359">
 <span class="process-math">\(R\)</span> is not reflexive since <span class="process-math">\((1, 1)\notin R\text{.}\)</span>
-</div> <div class="para" id="p-2120">
+</div> <div class="para" id="p-2360">
 <span class="process-math">\(R\)</span> is not symmetric since <span class="process-math">\((1, 2)\in R\text{,}\)</span> but not <span class="process-math">\((2, 1)\text{.}\)</span>
-</div> <div class="para" id="p-2121">
+</div> <div class="para" id="p-2361">
 <span class="process-math">\(R\)</span> is transitive since  if <span class="process-math">\((x, y)\in R\)</span> and <span class="process-math">\((y, z)\in R\)</span> then <span class="process-math">\((x, z)\in R\text{.}\)</span>
-</div> <div class="para" id="p-2122">Check: <span class="process-math">\((x, y)=(1, 2), (y, z)=(2, 3)\text{,}\)</span> so <span class="process-math">\((x, z)=(1, 3)\text{,}\)</span> which is in <span class="process-math">\(R\text{.}\)</span> This is the only set of ordered pairs where the second coordinate of the first pair matches the first coordinate of the second pair.</div></article></div>
-<div class="para logical" id="p-2123">
+</div> <div class="para" id="p-2362">Check: <span class="process-math">\((x, y)=(1, 2), (y, z)=(2, 3)\text{,}\)</span> so <span class="process-math">\((x, z)=(1, 3)\text{,}\)</span> which is in <span class="process-math">\(R\text{.}\)</span> This is the only set of ordered pairs where the second coordinate of the first pair matches the first coordinate of the second pair.</div></article></div>
+<div class="para logical" id="p-2363">
 <div class="para">We can use directed graphs to help identify the properties.</div>
 <ul class="disc">
 <li id="li-537">
-<span class="heading"><span class="title">Reflexive.</span></span><div class="para" id="p-2124">If a relation is reflexive, then the directed graph will have an arrow from the vertex to itself (a loop) at every vertex.</div>
+<span class="heading"><span class="title">Reflexive.</span></span><div class="para" id="p-2364">If a relation is reflexive, then the directed graph will have an arrow from the vertex to itself (a loop) at every vertex.</div>
 <figure class="figure figure-like" id="F_digraphreflexive"><div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/latex-image/gdreflexive.svg" role="img" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.4<span class="period">.</span></span><span class="space"> </span>Directed graph for reflexive property</figcaption></figure>
 </li>
 <li id="li-538">
-<span class="heading"><span class="title">Symmetric.</span></span><div class="para" id="p-2125">If a relation is symmetric, then whenever the directed graph has an arrow from vertex, <span class="process-math">\(v\)</span> to vertex <span class="process-math">\(u\text{,}\)</span> there is a corresponding arrow  going from <span class="process-math">\(u\)</span> to <span class="process-math">\(v\text{.}\)</span>
+<span class="heading"><span class="title">Symmetric.</span></span><div class="para" id="p-2365">If a relation is symmetric, then whenever the directed graph has an arrow from vertex, <span class="process-math">\(v\)</span> to vertex <span class="process-math">\(u\text{,}\)</span> there is a corresponding arrow  going from <span class="process-math">\(u\)</span> to <span class="process-math">\(v\text{.}\)</span>
 </div>
 <figure class="figure figure-like" id="F_digraphsymmetric"><div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/latex-image/gdsymmetric.svg" role="img" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.5<span class="period">.</span></span><span class="space"> </span>Directed graph for symmetric property</figcaption></figure>
 </li>
 <li id="li-539">
-<span class="heading"><span class="title">Transitive.</span></span><div class="para" id="p-2126">If a relation is transitive, then whenever the directed graph has an arrow from vertex, <span class="process-math">\(v\)</span> to vertex <span class="process-math">\(u\)</span> followed by an arrow from <span class="process-math">\(u\)</span> to <span class="process-math">\(w\text{,}\)</span> there is a corresponding arrow  going from <span class="process-math">\(v\)</span> to <span class="process-math">\(w\text{.}\)</span>
+<span class="heading"><span class="title">Transitive.</span></span><div class="para" id="p-2366">If a relation is transitive, then whenever the directed graph has an arrow from vertex, <span class="process-math">\(v\)</span> to vertex <span class="process-math">\(u\)</span> followed by an arrow from <span class="process-math">\(u\)</span> to <span class="process-math">\(w\text{,}\)</span> there is a corresponding arrow  going from <span class="process-math">\(v\)</span> to <span class="process-math">\(w\text{.}\)</span>
 </div>
 <figure class="figure figure-like" id="F_digraphstransitive"><div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/latex-image/gdtransitive.svg" role="img" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2.6<span class="period">.</span></span><span class="space"> </span>Directed graph for transitive property</figcaption></figure>
 </li>
 </ul>
 </div>
-<div class="para" id="p-2127">The <dfn class="terminology">transitive closure</dfn> of a relation <span class="process-math">\(R\text{,}\)</span> denoted <span class="process-math">\(R^{t}\text{,}\)</span> is the set of ordered pairs in <span class="process-math">\(R\)</span> as well as all additional ordered pairs to make the relation transitive.</div>
+<div class="para" id="p-2367">The <dfn class="terminology">transitive closure</dfn> of a relation <span class="process-math">\(R\text{,}\)</span> denoted <span class="process-math">\(R^{t}\text{,}\)</span> is the set of ordered pairs in <span class="process-math">\(R\)</span> as well as all additional ordered pairs to make the relation transitive.</div>
 <article class="example example-like" id="E_transclosure"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_transclosure"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Transitive Closure.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_transclosure"><article class="example example-like"> <div class="para" id="p-2128">Let <span class="process-math">\(R=\{(1, 2), (3, 2), (4, 1), (4, 3)\}\text{.}\)</span> Then in <span class="process-math">\(R^{t}\)</span> we need <span class="process-math">\((4, 2)\text{.}\)</span> You can check with a directed graph to see this is the only pair we need to add. Thus, <span class="process-math">\(R^{t}=\{(1, 2), (3, 2), (4, 1), (4, 3), (4, 2)\}\text{.}\)</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_transclosure"><article class="example example-like"> <div class="para" id="p-2368">Let <span class="process-math">\(R=\{(1, 2), (3, 2), (4, 1), (4, 3)\}\text{.}\)</span> Then in <span class="process-math">\(R^{t}\)</span> we need <span class="process-math">\((4, 2)\text{.}\)</span> You can check with a directed graph to see this is the only pair we need to add. Thus, <span class="process-math">\(R^{t}=\{(1, 2), (3, 2), (4, 1), (4, 3), (4, 2)\}\text{.}\)</span>
 </div></article></div>
 <article class="activity project-like" id="activity-134"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.2.1</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-68"><div class="para" id="p-2129">Let <span class="process-math">\(A=\{1, 2, 3\}\text{.}\)</span> Let <span class="process-math">\(R=\{(1, 1), (1, 2), (1, 3), (2, 1), (3, 1)\}\text{.}\)</span>
+<div class="introduction" id="introduction-68"><div class="para" id="p-2369">Let <span class="process-math">\(A=\{1, 2, 3\}\text{.}\)</span> Let <span class="process-math">\(R=\{(1, 1), (1, 2), (1, 3), (2, 1), (3, 1)\}\text{.}\)</span>
 </div></div>
 <article class="task exercise-like" id="task-201"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-2130">Determine if <span class="process-math">\(R\)</span> is reflexive.</div></article><article class="task exercise-like" id="task-202"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-2131">Determine if <span class="process-math">\(R\)</span> is symmetric.</div></article><article class="task exercise-like" id="task-203"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-2132">Determine if <span class="process-math">\(R\)</span> is transitive.</div></article><article class="task exercise-like" id="task-204"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="p-2133">Draw the directed graph for <span class="process-math">\(R\text{.}\)</span>
+<div class="para" id="p-2370">Determine if <span class="process-math">\(R\)</span> is reflexive.</div></article><article class="task exercise-like" id="task-202"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-2371">Determine if <span class="process-math">\(R\)</span> is symmetric.</div></article><article class="task exercise-like" id="task-203"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-2372">Determine if <span class="process-math">\(R\)</span> is transitive.</div></article><article class="task exercise-like" id="task-204"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="p-2373">Draw the directed graph for <span class="process-math">\(R\text{.}\)</span>
 </div></article><article class="task exercise-like" id="task-205"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="p-2134">If <span class="process-math">\(R\)</span> is not transitive, what ordered pairs should you add to the relation to make <span class="process-math">\(R\)</span> transitive?</div></article></article><article class="activity project-like" id="activity-135"><h3 class="heading">
+<div class="para" id="p-2374">If <span class="process-math">\(R\)</span> is not transitive, what ordered pairs should you add to the relation to make <span class="process-math">\(R\)</span> transitive?</div></article></article><article class="activity project-like" id="activity-135"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.2.2</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-69"><div class="para" id="p-2135">Let <span class="process-math">\(A=\{1, 2, 3, 4\}\text{.}\)</span> Let <span class="process-math">\(R=\{(1, 1), (1, 3), (2, 2), (3, 2), (3, 3)\}\text{.}\)</span>
+<div class="introduction" id="introduction-69"><div class="para" id="p-2375">Let <span class="process-math">\(A=\{1, 2, 3, 4\}\text{.}\)</span> Let <span class="process-math">\(R=\{(1, 1), (1, 3), (2, 2), (3, 2), (3, 3)\}\text{.}\)</span>
 </div></div>
 <article class="task exercise-like" id="task-206"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-2136">Determine if <span class="process-math">\(R\)</span> is reflexive.</div></article><article class="task exercise-like" id="task-207"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-2137">Determine if <span class="process-math">\(R\)</span> is symmetric.</div></article><article class="task exercise-like" id="task-208"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-2138">Determine if <span class="process-math">\(R\)</span> is transitive.</div></article><article class="task exercise-like" id="task-209"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="p-2139">Draw the directed graph for <span class="process-math">\(R\text{.}\)</span>
+<div class="para" id="p-2376">Determine if <span class="process-math">\(R\)</span> is reflexive.</div></article><article class="task exercise-like" id="task-207"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-2377">Determine if <span class="process-math">\(R\)</span> is symmetric.</div></article><article class="task exercise-like" id="task-208"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-2378">Determine if <span class="process-math">\(R\)</span> is transitive.</div></article><article class="task exercise-like" id="task-209"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="p-2379">Draw the directed graph for <span class="process-math">\(R\text{.}\)</span>
 </div></article><article class="task exercise-like" id="task-210"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="p-2140">If <span class="process-math">\(R\)</span> is not transitive, what ordered pairs should you add to the relation to make <span class="process-math">\(R\)</span> transitive?</div></article></article><div class="para" id="p-2141">Checking that a relation is reflexive, symmetric, or transitive on a small finite set can be done by checking that the property holds for all the elements of <span class="process-math">\(R\text{.}\)</span> But if <span class="process-math">\(A\)</span> is infinite we need to prove the properties more generally.</div>
+<div class="para" id="p-2380">If <span class="process-math">\(R\)</span> is not transitive, what ordered pairs should you add to the relation to make <span class="process-math">\(R\)</span> transitive?</div></article></article><div class="para" id="p-2381">Checking that a relation is reflexive, symmetric, or transitive on a small finite set can be done by checking that the property holds for all the elements of <span class="process-math">\(R\text{.}\)</span> But if <span class="process-math">\(A\)</span> is infinite we need to prove the properties more generally.</div>
 <article class="assemblage assemblage-like" id="B_pfRST"><h3 class="heading"><span class="title">Proving Reflexive, Symmetric, Transitive Properties.</span></h3>
-<div class="para logical" id="p-2142">
+<div class="para logical" id="p-2382">
 <div class="para">To prove a property of a relation:</div>
 <ul class="disc">
 <li id="li-540">
-<span class="heading"><span class="title">Reflexive.</span></span><div class="para" id="p-2143">Let <span class="process-math">\(x\in A\text{.}\)</span> Show <span class="process-math">\((x, x)\in R\text{.}\)</span>
+<span class="heading"><span class="title">Reflexive.</span></span><div class="para" id="p-2383">Let <span class="process-math">\(x\in A\text{.}\)</span> Show <span class="process-math">\((x, x)\in R\text{.}\)</span>
 </div>
 </li>
 <li id="li-541">
-<span class="heading"><span class="title">Symmetric.</span></span><div class="para" id="p-2144">Assume <span class="process-math">\((x, y)\in R\text{.}\)</span> Show <span class="process-math">\((y, x)\in R\text{.}\)</span>
+<span class="heading"><span class="title">Symmetric.</span></span><div class="para" id="p-2384">Assume <span class="process-math">\((x, y)\in R\text{.}\)</span> Show <span class="process-math">\((y, x)\in R\text{.}\)</span>
 </div>
 </li>
 <li id="li-542">
-<span class="heading"><span class="title">Transitive.</span></span><div class="para" id="p-2145">Assume <span class="process-math">\((x, y), (y, z)\in R\text{.}\)</span> Show <span class="process-math">\((x, z)\in R\text{.}\)</span>
+<span class="heading"><span class="title">Transitive.</span></span><div class="para" id="p-2385">Assume <span class="process-math">\((x, y), (y, z)\in R\text{.}\)</span> Show <span class="process-math">\((x, z)\in R\text{.}\)</span>
 </div>
 </li>
 </ul>
 </div>
-<div class="para logical" id="p-2146">
+<div class="para logical" id="p-2386">
 <div class="para">To disprove a property, find a specific counterexample:</div>
 <ul class="disc">
 <li id="li-543">
-<span class="heading"><span class="title">Reflexive.</span></span><div class="para" id="p-2147">Find <span class="process-math">\((x, x)\notin R\)</span> for some <span class="process-math">\(x\in A\text{.}\)</span>
+<span class="heading"><span class="title">Reflexive.</span></span><div class="para" id="p-2387">Find <span class="process-math">\((x, x)\notin R\)</span> for some <span class="process-math">\(x\in A\text{.}\)</span>
 </div>
 </li>
 <li id="li-544">
-<span class="heading"><span class="title">Symmetric.</span></span><div class="para" id="p-2148">Find <span class="process-math">\((x, y)\in R\)</span> with <span class="process-math">\((y, x)\notin R\text{.}\)</span>
+<span class="heading"><span class="title">Symmetric.</span></span><div class="para" id="p-2388">Find <span class="process-math">\((x, y)\in R\)</span> with <span class="process-math">\((y, x)\notin R\text{.}\)</span>
 </div>
 </li>
 <li id="li-545">
-<span class="heading"><span class="title">Transitive.</span></span><div class="para" id="p-2149">Find <span class="process-math">\((x, y), (y, z)\in R\)</span> with <span class="process-math">\((x, z)\notin R\text{.}\)</span>
+<span class="heading"><span class="title">Transitive.</span></span><div class="para" id="p-2389">Find <span class="process-math">\((x, y), (y, z)\in R\)</span> with <span class="process-math">\((x, z)\notin R\text{.}\)</span>
 </div>
 </li>
 </ul>
 </div></article><article class="example example-like" id="E_provingRST"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_provingRST"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Proving Reflexive, Symmetric, Transitive.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_provingRST"><article class="example example-like"> <div class="para" id="p-2150">Let <span class="process-math">\(R\)</span> be the relation on <span class="process-math">\(\mathbb{Z}\)</span> given by <span class="process-math">\((m, n)\in R\Leftrightarrow 3\mid(m-n)\text{.}\)</span>
-</div> <div class="para" id="p-2151">Reflexive: Show <span class="process-math">\((m, m)\in R\text{.}\)</span>
-</div> <div class="para" id="p-2152">We know <span class="process-math">\(m-m=0\text{,}\)</span> and <span class="process-math">\(3\mid 0\text{.}\)</span> So we get that <span class="process-math">\(3\mid m-m\text{.}\)</span> Thus <span class="process-math">\((m, m)\in R\)</span> for all <span class="process-math">\(m\in \mathbb{Z}\text{.}\)</span>
-</div> <div class="para" id="p-2153">Symmetric: Assume <span class="process-math">\((x, y)\in R\text{.}\)</span>
-</div> <div class="para" id="p-2154">Then <span class="process-math">\(3\mid (x-y)\text{.}\)</span> This implies <span class="process-math">\(x-y=3k\)</span> for some <span class="process-math">\(k\in\mathbb{Z}\text{.}\)</span> But then <span class="process-math">\(y-x=-3k=3(-k)\text{,}\)</span> where <span class="process-math">\(-k\in \mathbb{Z}\text{.}\)</span> Thus, <span class="process-math">\(3\mid (y-x)\text{.}\)</span> Hence, <span class="process-math">\((y, x)\in R\text{.}\)</span>
-</div> <div class="para" id="p-2155">Transitive: Assume <span class="process-math">\((x, y), (y, z)\in R\text{.}\)</span>
-</div> <div class="para" id="p-2156">Then <span class="process-math">\(3\mid (x-y)\)</span> and <span class="process-math">\(3\mid (y-z)\text{.}\)</span> This implies <span class="process-math">\(x-y=3k\)</span> for some <span class="process-math">\(k\in\mathbb{Z}\)</span> and <span class="process-math">\(y-z=3j\)</span> for some <span class="process-math">\(j\in\mathbb{Z}\text{.}\)</span> But then <span class="process-math">\(x-z=x-y+y-z=3k+3j=3(j+k)\text{,}\)</span> where <span class="process-math">\(k+j\in \mathbb{Z}\text{.}\)</span> Thus, <span class="process-math">\(3\mid (x-z)\text{.}\)</span> Hence, <span class="process-math">\((x, z)\in R\text{.}\)</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_provingRST"><article class="example example-like"> <div class="para" id="p-2390">Let <span class="process-math">\(R\)</span> be the relation on <span class="process-math">\(\mathbb{Z}\)</span> given by <span class="process-math">\((m, n)\in R\Leftrightarrow 3\mid(m-n)\text{.}\)</span>
+</div> <div class="para" id="p-2391">Reflexive: Show <span class="process-math">\((m, m)\in R\text{.}\)</span>
+</div> <div class="para" id="p-2392">We know <span class="process-math">\(m-m=0\text{,}\)</span> and <span class="process-math">\(3\mid 0\text{.}\)</span> So we get that <span class="process-math">\(3\mid m-m\text{.}\)</span> Thus <span class="process-math">\((m, m)\in R\)</span> for all <span class="process-math">\(m\in \mathbb{Z}\text{.}\)</span>
+</div> <div class="para" id="p-2393">Symmetric: Assume <span class="process-math">\((x, y)\in R\text{.}\)</span>
+</div> <div class="para" id="p-2394">Then <span class="process-math">\(3\mid (x-y)\text{.}\)</span> This implies <span class="process-math">\(x-y=3k\)</span> for some <span class="process-math">\(k\in\mathbb{Z}\text{.}\)</span> But then <span class="process-math">\(y-x=-3k=3(-k)\text{,}\)</span> where <span class="process-math">\(-k\in \mathbb{Z}\text{.}\)</span> Thus, <span class="process-math">\(3\mid (y-x)\text{.}\)</span> Hence, <span class="process-math">\((y, x)\in R\text{.}\)</span>
+</div> <div class="para" id="p-2395">Transitive: Assume <span class="process-math">\((x, y), (y, z)\in R\text{.}\)</span>
+</div> <div class="para" id="p-2396">Then <span class="process-math">\(3\mid (x-y)\)</span> and <span class="process-math">\(3\mid (y-z)\text{.}\)</span> This implies <span class="process-math">\(x-y=3k\)</span> for some <span class="process-math">\(k\in\mathbb{Z}\)</span> and <span class="process-math">\(y-z=3j\)</span> for some <span class="process-math">\(j\in\mathbb{Z}\text{.}\)</span> But then <span class="process-math">\(x-z=x-y+y-z=3k+3j=3(j+k)\text{,}\)</span> where <span class="process-math">\(k+j\in \mathbb{Z}\text{.}\)</span> Thus, <span class="process-math">\(3\mid (x-z)\text{.}\)</span> Hence, <span class="process-math">\((x, z)\in R\text{.}\)</span>
 </div></article></div>
 <article class="activity project-like" id="activity-136"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.2.3</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-70"><div class="para" id="p-2157">Define the relation on <span class="process-math">\(\mathbb{R}\)</span> by <span class="process-math">\(xRy \iff x=y\text{.}\)</span>
+<div class="introduction" id="introduction-70"><div class="para" id="p-2397">Define the relation on <span class="process-math">\(\mathbb{R}\)</span> by <span class="process-math">\(xRy \iff x=y\text{.}\)</span>
 </div></div>
 <article class="task exercise-like" id="task-211"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-2158">Prove or disprove <span class="process-math">\(R\)</span> is reflexive.</div></article><article class="task exercise-like" id="task-212"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-2159">Prove or disprove <span class="process-math">\(R\)</span> is symmetric.</div></article><article class="task exercise-like" id="task-213"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-2160">Prove or disprove <span class="process-math">\(R\)</span> is transitive.</div></article></article><article class="activity project-like" id="activity-137"><h3 class="heading">
+<div class="para" id="p-2398">Prove or disprove <span class="process-math">\(R\)</span> is reflexive.</div></article><article class="task exercise-like" id="task-212"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-2399">Prove or disprove <span class="process-math">\(R\)</span> is symmetric.</div></article><article class="task exercise-like" id="task-213"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-2400">Prove or disprove <span class="process-math">\(R\)</span> is transitive.</div></article></article><article class="activity project-like" id="activity-137"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.2.4</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-71"><div class="para" id="p-2161">Define the relation on <span class="process-math">\(\mathbb{R}\)</span> by <span class="process-math">\(xRy \iff x &lt; y\text{.}\)</span>
+<div class="introduction" id="introduction-71"><div class="para" id="p-2401">Define the relation on <span class="process-math">\(\mathbb{R}\)</span> by <span class="process-math">\(xRy \iff x &lt; y\text{.}\)</span>
 </div></div>
 <article class="task exercise-like" id="task-214"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-2162">Prove or disprove <span class="process-math">\(R\)</span> is reflexive.</div></article><article class="task exercise-like" id="task-215"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-2163">Prove or disprove <span class="process-math">\(R\)</span> is symmetric.</div></article><article class="task exercise-like" id="task-216"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-2164">Prove or disprove <span class="process-math">\(R\)</span> is transitive.</div></article></article><section class="reading-questions" id="reading-questions-29"><h3 class="heading hide-type">
+<div class="para" id="p-2402">Prove or disprove <span class="process-math">\(R\)</span> is reflexive.</div></article><article class="task exercise-like" id="task-215"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-2403">Prove or disprove <span class="process-math">\(R\)</span> is symmetric.</div></article><article class="task exercise-like" id="task-216"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-2404">Prove or disprove <span class="process-math">\(R\)</span> is transitive.</div></article></article><section class="reading-questions" id="reading-questions-29"><h3 class="heading hide-type">
 <span class="type">Reading Questions</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
-<div class="para" id="p-2165">Let <span class="process-math">\(A=\{1, 2, 3\}, B=\{2, 4, 6, 8\}, C=\{0, 1\}\text{.}\)</span>
+<div class="para" id="p-2405">Let <span class="process-math">\(A=\{1, 2, 3\}, B=\{2, 4, 6, 8\}, C=\{0, 1\}\text{.}\)</span>
 </div>
-<article class="exercise exercise-like" id="exercise-432"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para logical" id="p-2166">
+<article class="exercise exercise-like" id="exercise-425"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para logical" id="p-2406">
 <div class="para">Determine if the relation is reflexive, symmetric, transitive where <span class="process-math">\(R\)</span> is the relation on <span class="process-math">\(A\)</span> given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
 a R b \Leftrightarrow a\leq b
 \end{equation*}
 </div>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-324" id="answer-324"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-324"><div class="answer solution-like">Reflexive, transitive, not symmetric</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-433"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para logical" id="p-2167">
+</div></article><article class="exercise exercise-like" id="exercise-426"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para logical" id="p-2407">
 <div class="para">Determine if the relation is reflexive, symmetric, transitive where <span class="process-math">\(R\)</span> is the relation on <span class="process-math">\(C\)</span> given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
 a R b \Leftrightarrow a+b \text{ is even}
 \end{equation*}
 </div>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-325" id="answer-325"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-325"><div class="answer solution-like">Reflexive, symmetric, transitive</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-434"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para logical" id="p-2168">
+</div></article><article class="exercise exercise-like" id="exercise-427"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para logical" id="p-2408">
 <div class="para">Determine if the relation is reflexive, symmetric, transitive where <span class="process-math">\(R\)</span> is the relation on <span class="process-math">\(B\)</span> given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
 a R b \Leftrightarrow a\mid b
 \end{equation*}
 </div>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-326" id="answer-326"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-326"><div class="answer solution-like">Reflexive, transitive, not symmetric</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-435"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para logical" id="p-2169">
+</div></article><article class="exercise exercise-like" id="exercise-428"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para logical" id="p-2409">
 <div class="para">Determine if the relation is reflexive, symmetric, transitive where <span class="process-math">\(R\)</span> is the relation on <span class="process-math">\(\mathbb{Z}\)</span> given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
 a R b \Leftrightarrow a+b=0
 \end{equation*}
 </div>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-327" id="answer-327"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-327"><div class="answer solution-like">Symmetric, not reflexive, not transitive</div></div>
 </div></article></section><section class="exercises" id="exercises-29"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-436"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-2170">Let <span class="process-math">\(A=\{0, 1, 2, 3\}\text{.}\)</span> Let <span class="process-math">\(R_1=\{(0, 0), (0, 1), (0, 3), (1, 1), (1, 0), (2, 3), (3, 3)\}\text{.}\)</span>
+<article class="exercise exercise-like" id="exercise-429"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-2410">Let <span class="process-math">\(A=\{0, 1, 2, 3\}\text{.}\)</span> Let <span class="process-math">\(R_1=\{(0, 0), (0, 1), (0, 3), (1, 1), (1, 0), (2, 3), (3, 3)\}\text{.}\)</span>
 </div> <ol class="lower-alpha">
-<li id="li-546"><div class="para" id="p-2171">Draw the directed graph for <span class="process-math">\(R_1\text{.}\)</span>
+<li id="li-546"><div class="para" id="p-2411">Draw the directed graph for <span class="process-math">\(R_1\text{.}\)</span>
 </div></li>
-<li id="li-547"><div class="para" id="p-2172">Determine if <span class="process-math">\(R_1\)</span> is reflexive. If it is not, give a counterexample.</div></li>
-<li id="li-548"><div class="para" id="p-2173">Determine if <span class="process-math">\(R_1\)</span> is symmetric. If it is not, give a counterexample.</div></li>
-<li id="li-549"><div class="para" id="p-2174">Determine if <span class="process-math">\(R_1\)</span> is transitive. If it is not, give a counterexample.</div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-437"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-2175">Let <span class="process-math">\(A=\{0, 1, 2, 3\}\text{.}\)</span> Let <span class="process-math">\(R_2=\{(1, 2), (2, 1), (1, 3), (3, 1)\}\text{.}\)</span>
+<li id="li-547"><div class="para" id="p-2412">Determine if <span class="process-math">\(R_1\)</span> is reflexive. If it is not, give a counterexample.</div></li>
+<li id="li-548"><div class="para" id="p-2413">Determine if <span class="process-math">\(R_1\)</span> is symmetric. If it is not, give a counterexample.</div></li>
+<li id="li-549"><div class="para" id="p-2414">Determine if <span class="process-math">\(R_1\)</span> is transitive. If it is not, give a counterexample.</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-430"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-2415">Let <span class="process-math">\(A=\{0, 1, 2, 3\}\text{.}\)</span> Let <span class="process-math">\(R_2=\{(1, 2), (2, 1), (1, 3), (3, 1)\}\text{.}\)</span>
 </div> <ol class="lower-alpha">
-<li id="li-550"><div class="para" id="p-2176">Draw the directed graph for <span class="process-math">\(R_2\text{.}\)</span>
+<li id="li-550"><div class="para" id="p-2416">Draw the directed graph for <span class="process-math">\(R_2\text{.}\)</span>
 </div></li>
-<li id="li-551"><div class="para" id="p-2177">Determine if <span class="process-math">\(R_2\)</span> is reflexive. If it is not, give a counterexample.</div></li>
-<li id="li-552"><div class="para" id="p-2178">Determine if <span class="process-math">\(R_2\)</span> is symmetric. If it is not, give a counterexample.</div></li>
-<li id="li-553"><div class="para" id="p-2179">Determine if <span class="process-math">\(R_2\)</span> is transitive. If it is not, give a counterexample.</div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-438"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-2180">Let <span class="process-math">\(A=\{0, 1, 2, 3\}\text{.}\)</span> Let <span class="process-math">\(R_3=\{(0, 0), (0, 1), (0, 2), (1, 2)\}\text{.}\)</span>
+<li id="li-551"><div class="para" id="p-2417">Determine if <span class="process-math">\(R_2\)</span> is reflexive. If it is not, give a counterexample.</div></li>
+<li id="li-552"><div class="para" id="p-2418">Determine if <span class="process-math">\(R_2\)</span> is symmetric. If it is not, give a counterexample.</div></li>
+<li id="li-553"><div class="para" id="p-2419">Determine if <span class="process-math">\(R_2\)</span> is transitive. If it is not, give a counterexample.</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-431"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-2420">Let <span class="process-math">\(A=\{0, 1, 2, 3\}\text{.}\)</span> Let <span class="process-math">\(R_3=\{(0, 0), (0, 1), (0, 2), (1, 2)\}\text{.}\)</span>
 </div> <ol class="lower-alpha">
-<li id="li-554"><div class="para" id="p-2181">Draw the directed graph for <span class="process-math">\(R_3\text{.}\)</span>
+<li id="li-554"><div class="para" id="p-2421">Draw the directed graph for <span class="process-math">\(R_3\text{.}\)</span>
 </div></li>
-<li id="li-555"><div class="para" id="p-2182">Determine if <span class="process-math">\(R_3\)</span> is reflexive. If it is not, give a counterexample.</div></li>
-<li id="li-556"><div class="para" id="p-2183">Determine if <span class="process-math">\(R_3\)</span> is symmetric. If it is not, give a counterexample.</div></li>
-<li id="li-557"><div class="para" id="p-2184">Determine if <span class="process-math">\(R_3\)</span> is transitive. If it is not, give a counterexample.</div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-439"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para logical" id="p-2185">
+<li id="li-555"><div class="para" id="p-2422">Determine if <span class="process-math">\(R_3\)</span> is reflexive. If it is not, give a counterexample.</div></li>
+<li id="li-556"><div class="para" id="p-2423">Determine if <span class="process-math">\(R_3\)</span> is symmetric. If it is not, give a counterexample.</div></li>
+<li id="li-557"><div class="para" id="p-2424">Determine if <span class="process-math">\(R_3\)</span> is transitive. If it is not, give a counterexample.</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-432"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para logical" id="p-2425">
 <div class="para">Let <span class="process-math">\(G\)</span> be the relation on <span class="process-math">\(\mathbb{R}\)</span> defined by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -792,11 +811,11 @@ x\ G\ y\iff xy\geq 0.
 \end{equation*}
 </div>
 </div> <ol class="lower-alpha">
-<li id="li-558"><div class="para" id="p-2186">Determine if <span class="process-math">\(G\)</span> is reflexive. Justify your answer.</div></li>
-<li id="li-559"><div class="para" id="p-2187">Determine if <span class="process-math">\(G\)</span> is symmetric. Justify your answer.</div></li>
-<li id="li-560"><div class="para" id="p-2188">Determine if <span class="process-math">\(G\)</span> is transitive. Justify your answer.</div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-440"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para logical" id="p-2189">
+<li id="li-558"><div class="para" id="p-2426">Determine if <span class="process-math">\(G\)</span> is reflexive. Justify your answer.</div></li>
+<li id="li-559"><div class="para" id="p-2427">Determine if <span class="process-math">\(G\)</span> is symmetric. Justify your answer.</div></li>
+<li id="li-560"><div class="para" id="p-2428">Determine if <span class="process-math">\(G\)</span> is transitive. Justify your answer.</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-433"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para logical" id="p-2429">
 <div class="para">Let <span class="process-math">\(D\)</span> be the relation on <span class="process-math">\(\mathbb{Z}^+\)</span> defined by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -804,11 +823,11 @@ m\ D\ n\iff m\mid n.
 \end{equation*}
 </div>
 </div> <ol class="lower-alpha">
-<li id="li-561"><div class="para" id="p-2190">Determine if <span class="process-math">\(D\)</span> is reflexive. Justify your answer.</div></li>
-<li id="li-562"><div class="para" id="p-2191">Determine if <span class="process-math">\(D\)</span> is symmetric. Justify your answer.</div></li>
-<li id="li-563"><div class="para" id="p-2192">Determine if <span class="process-math">\(D\)</span> is transitive. Justify your answer.</div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-441"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para logical" id="p-2193">
+<li id="li-561"><div class="para" id="p-2430">Determine if <span class="process-math">\(D\)</span> is reflexive. Justify your answer.</div></li>
+<li id="li-562"><div class="para" id="p-2431">Determine if <span class="process-math">\(D\)</span> is symmetric. Justify your answer.</div></li>
+<li id="li-563"><div class="para" id="p-2432">Determine if <span class="process-math">\(D\)</span> is transitive. Justify your answer.</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-434"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para logical" id="p-2433">
 <div class="para">Let <span class="process-math">\(F\)</span> be the relation on <span class="process-math">\(\mathbb{R}\times \mathbb{R}\)</span> defined by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -816,11 +835,11 @@ m\ D\ n\iff m\mid n.
 \end{equation*}
 </div>
 </div> <ol class="lower-alpha">
-<li id="li-564"><div class="para" id="p-2194">Determine if <span class="process-math">\(F\)</span> is reflexive. Justify your answer.</div></li>
-<li id="li-565"><div class="para" id="p-2195">Determine if <span class="process-math">\(F\)</span> is symmetric. Justify your answer.</div></li>
-<li id="li-566"><div class="para" id="p-2196">Determine if <span class="process-math">\(F\)</span> is transitive. Justify your answer.</div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-442"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para logical" id="p-2197">
+<li id="li-564"><div class="para" id="p-2434">Determine if <span class="process-math">\(F\)</span> is reflexive. Justify your answer.</div></li>
+<li id="li-565"><div class="para" id="p-2435">Determine if <span class="process-math">\(F\)</span> is symmetric. Justify your answer.</div></li>
+<li id="li-566"><div class="para" id="p-2436">Determine if <span class="process-math">\(F\)</span> is transitive. Justify your answer.</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-435"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para logical" id="p-2437">
 <div class="para">Define the relation <span class="process-math">\(R\)</span> on <span class="process-math">\(\mathbb{Z}\)</span> by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -828,11 +847,11 @@ m\ R\ n \iff 5\mid(m-n).
 \end{equation*}
 </div>
 </div> <ol class="lower-alpha">
-<li id="li-567"><div class="para" id="p-2198">Prove or disprove <span class="process-math">\(R\)</span> is reflexive.</div></li>
-<li id="li-568"><div class="para" id="p-2199">Prove or disprove <span class="process-math">\(R\)</span> is symmetric.</div></li>
-<li id="li-569"><div class="para" id="p-2200">Prove or disprove <span class="process-math">\(R\)</span> is transitive.</div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-443"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para logical" id="p-2201">
+<li id="li-567"><div class="para" id="p-2438">Prove or disprove <span class="process-math">\(R\)</span> is reflexive.</div></li>
+<li id="li-568"><div class="para" id="p-2439">Prove or disprove <span class="process-math">\(R\)</span> is symmetric.</div></li>
+<li id="li-569"><div class="para" id="p-2440">Prove or disprove <span class="process-math">\(R\)</span> is transitive.</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-436"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para logical" id="p-2441">
 <div class="para">Let <span class="process-math">\(X=\{a, b, c\}\)</span> and <span class="process-math">\({\cal P}(X)\)</span> be the power set of <span class="process-math">\(X\text{.}\)</span> Define the relation <span class="process-math">\(L\)</span> on <span class="process-math">\({\cal P}(X)\)</span> by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -840,11 +859,11 @@ A\ L\ B \iff \text{ the number of elements in $A$ is less than the number of ele
 \end{equation*}
 </div>
 </div> <ol class="lower-alpha">
-<li id="li-570"><div class="para" id="p-2202">Prove or disprove <span class="process-math">\(L\)</span> is reflexive.</div></li>
-<li id="li-571"><div class="para" id="p-2203">Prove or disprove <span class="process-math">\(L\)</span> is symmetric.</div></li>
-<li id="li-572"><div class="para" id="p-2204">Prove or disprove <span class="process-math">\(L\)</span> is transitive.</div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-444"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<div class="para logical" id="p-2205">
+<li id="li-570"><div class="para" id="p-2442">Prove or disprove <span class="process-math">\(L\)</span> is reflexive.</div></li>
+<li id="li-571"><div class="para" id="p-2443">Prove or disprove <span class="process-math">\(L\)</span> is symmetric.</div></li>
+<li id="li-572"><div class="para" id="p-2444">Prove or disprove <span class="process-math">\(L\)</span> is transitive.</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-437"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="para logical" id="p-2445">
 <div class="para">Let <span class="process-math">\(X\)</span> be a nonempty set and <span class="process-math">\({\cal P}(X)\)</span> be the power set of <span class="process-math">\(X\text{.}\)</span> Define the “subset” relation <span class="process-math">\(S\)</span> on <span class="process-math">\({\cal P}(X)\)</span> by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -852,12 +871,12 @@ A\ S\ B \iff A\subseteq B.
 \end{equation*}
 </div>
 </div> <ol class="lower-alpha">
-<li id="li-573"><div class="para" id="p-2206">Prove or disprove <span class="process-math">\(S\)</span> is reflexive.</div></li>
-<li id="li-574"><div class="para" id="p-2207">Prove or disprove <span class="process-math">\(S\)</span> is symmetric.</div></li>
-<li id="li-575"><div class="para" id="p-2208">Prove or disprove <span class="process-math">\(S\)</span> is transitive.</div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-445"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
-<div class="para" id="p-2209">Let <span class="process-math">\(R\)</span> be a relation on a set <span class="process-math">\(A\text{.}\)</span> Prove or disprove if <span class="process-math">\(R\)</span> is reflexive, then <span class="process-math">\(R^{-1}\)</span> is reflexive.</div></article><article class="exercise exercise-like" id="exercise-446"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
-<div class="para" id="p-2210">Let <span class="process-math">\(R\)</span> be a relation on a set <span class="process-math">\(A\text{.}\)</span> Prove or disprove if <span class="process-math">\(R\)</span> is symmetric, then <span class="process-math">\(R^{-1}\)</span> is symmetric.</div></article></section></section></div>
+<li id="li-573"><div class="para" id="p-2446">Prove or disprove <span class="process-math">\(S\)</span> is reflexive.</div></li>
+<li id="li-574"><div class="para" id="p-2447">Prove or disprove <span class="process-math">\(S\)</span> is symmetric.</div></li>
+<li id="li-575"><div class="para" id="p-2448">Prove or disprove <span class="process-math">\(S\)</span> is transitive.</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-438"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="para" id="p-2449">Let <span class="process-math">\(R\)</span> be a relation on a set <span class="process-math">\(A\text{.}\)</span> Prove or disprove if <span class="process-math">\(R\)</span> is reflexive, then <span class="process-math">\(R^{-1}\)</span> is reflexive.</div></article><article class="exercise exercise-like" id="exercise-439"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="para" id="p-2450">Let <span class="process-math">\(R\)</span> be a relation on a set <span class="process-math">\(A\text{.}\)</span> Prove or disprove if <span class="process-math">\(R\)</span> is symmetric, then <span class="process-math">\(R^{-1}\)</span> is symmetric.</div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="relations8-1.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="equivalencerelations8-3.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
@@ -865,5 +884,13 @@ A\ S\ B \iff A\subseteq B.
 <div id="ptx-page-footer">
 <a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=12894193;
+var sc_invisible=1;
+var sc_security="e67c59eb";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12894193/0/e67c59eb/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
 </body>
 </html>
