@@ -87,19 +87,136 @@
     <reading-questions>
       <title>Check Your Understanding</title>
     
-      <exercise><statement><p>What is the fewest number of digits you need to randomly select from <m>A=\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}</m> to guarantee you have either two even or two odd numbers?</p></statement>
+      <exercise label="DMT_pigeonhole_CYU_0to92even2odd"><statement><p>What is the fewest number of digits you need to randomly select from <m>A=\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}</m> to guarantee you have either two even or two odd numbers? <var /></p></statement>
+      <setup>
+    <var>
+    <condition number="3">
+    <feedback>
+      <p>
+        Correct.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="2">
+    <feedback>
+      <p>
+        Incorrect. With two numbers, one could be even, one could be odd.
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. Think about the boxes being Even/Odd. As you select numbers, at what point must you have two in the Even box or two in the Odd box?
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer>3</answer></exercise>
 
-      <exercise><statement><p>What is the fewest number of digits you need to randomly select from <m>A=\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}</m> to guarantee you have two even numbers?</p></statement>
+      <exercise label="DMT_pigeonhole_CYU_0to92even"><statement><p>What is the fewest number of digits you need to randomly select from <m>A=\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}</m> to guarantee you have two even numbers? <var /></p></statement>
+      <setup>
+    <var>
+    <condition number="7">
+    <feedback>
+      <p>
+        Correct.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="2">
+    <feedback>
+      <p>
+        Incorrect. You could have both be odd.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="3">
+    <feedback>
+      <p>
+        Incorrect. You could have all three odd.
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. How many odd numbers could you draw before you must have two even numbers?
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer>7</answer></exercise>
 
-      <exercise><statement><p>What is the fewest number of digits you need to randomly select from <m>A=\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}</m> to guarantee you have a sum of 9?</p></statement>
+      <exercise label="DMT_pigeonhole_CYU_0to9sum9"><statement><p>What is the fewest number of digits you need to randomly select from <m>A=\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}</m> to guarantee you have a sum of 9? <var /></p></statement>
+      <setup>
+    <var>
+    <condition number="6">
+    <feedback>
+      <p>
+        Correct.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="2">
+    <feedback>
+      <p>
+        Incorrect. With two numbers, you could have, say, 1 and 5.
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. Think about the boxes being sets of digits that sum to 9, for example, <m>\{1, 9\}</m> or <m>\{3, 6\}</m>. As you select numbers, at what point must you have two in the same set?
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer>6</answer></exercise>
 
-      <exercise><statement><p>What is the fewest number of digits you need to randomly select from <m>A=\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}</m> to guarantee you have two with the same remainder when divided by 3?</p></statement>
+      <exercise label="DMT_pigeonhole_CYU_0to9remdiv3"><statement><p>What is the fewest number of digits you need to randomly select from <m>A=\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}</m> to guarantee you have two with the same remainder when divided by 3? <var /></p></statement>
+      <setup>
+    <var>
+    <condition number="4">
+    <feedback>
+      <p>
+        Correct.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="2">
+    <feedback>
+      <p>
+        Incorrect. With two numbers, you could have, say, 0 and 1.
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. Think about the boxes being sets of digits with the same remainder when divided by 3, for example, <m>\{0, 3, 6,  9\}</m>. As you select numbers, at what point must you have two in the same set?
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer>4</answer></exercise>
 
-      <exercise><statement><p>If you randomly select 4 digits from <m>A=\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}</m> are you guaranteed to have two with remainder 0 when divided by 3?</p></statement>
+      <exercise label="DMT_pigeonhole_CYU_0to9rem0div3"><statement><p>If you randomly select 4 digits from <m>A=\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}</m> are you guaranteed to have two with remainder 0 when divided by 3?</p></statement>
+      <choices>
+        <choice>
+          <statement><p>Yes</p></statement>
+          <feedback><p>For example, you could have selected 1, 2, 4, 5, none of which have remainder 0.</p></feedback>
+        </choice>
+        <choice correct="yes">
+          <statement><p>No</p></statement>
+          <feedback><p>Correct. Now think about how many you would have to select to get 2 with remainder 0.</p></feedback>
+        </choice>
+      </choices>
       <answer>No</answer></exercise>
 
       

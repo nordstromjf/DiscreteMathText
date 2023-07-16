@@ -84,15 +84,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.0.0dev3';
+eBookConfig.runestone_version = '7.0.4';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runtime.71ffd81c0faeb38b.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.e543e0dd19670ae2.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-347.f9add1ca35d5ad93.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.0dev3/prefix-runestone.1f1f63d2cda36a4d.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.4/prefix-runtime.61a1aa562b2eef01.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.4/prefix-347.193e36c07abd0197.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.0.4/prefix-runestone.89acb6c6122954e4.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.4/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.0.4/prefix-runestone.8d2f742bc74f4a41.css">
 </head>
 <body id="DiscreteMathText" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
@@ -580,36 +580,36 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="binomial9-6"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">9.6</span> <span class="title">Binomial Theorem</span>
 </h2>
-<div class="para" id="p-2995">The Binomial Theorem has applications in many areas of mathematics, from calculus, to number theory, to probability. In this section we look at some examples of combinatorial proofs using binomial coefficients and ultimately prove the Binomial Theorem using induction.</div>
+<div class="para" id="p-3200">The Binomial Theorem has applications in many areas of mathematics, from calculus, to number theory, to probability. In this section we look at some examples of combinatorial proofs using binomial coefficients and ultimately prove the Binomial Theorem using induction.</div>
 <article class="theorem theorem-like" id="T_requalsnminusr"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.6.1</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-2996">
+<div class="para logical" id="p-3201">
 <div class="para">Let <span class="process-math">\(n, r\)</span> be nonnegative integers with <span class="process-math">\(r\leq n\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \binom{n}{r}=\binom{n}{n-r}.
 \end{equation*}
 </div>
-</div></article><div class="para" id="p-2997">An algebraic proof is straightforward and left as an exercise (see <a href="" class="xref" data-knowl="./knowl/X_pfofthm1.html" title="Exercise 9.6.1">Exercise 9.6.1</a>). We will give a combinatorial proof. This means we will prove the two sides of the equation are equal by showing that they are two different ways to count the same set. In general, a combinatorial proof is done by giving a counting argument.</div>
-<article class="hiddenproof" id="proof-43"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-43"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-43"><article class="hiddenproof"><div class="para" id="p-2998">By definition, <span class="process-math">\(\binom{n}{r}\)</span> is the number of subsets where we choose <span class="process-math">\(r\)</span> objects from <span class="process-math">\(n\)</span> objects.</div> <div class="para" id="p-2999">We can create a set of <span class="process-math">\(r\)</span> objects by specifying which objects are in the set or by specifying which objects are <em class="emphasis">not</em> in the set. We note that there are <span class="process-math">\(n-r\)</span> objects not in the set. Thus, <span class="process-math">\(\binom{n}{n-r}\)</span> counts the ways to find a set of <span class="process-math">\(r\)</span> objects out of <span class="process-math">\(n\)</span> objects by finding the ways to not include <span class="process-math">\(n-r\)</span> objects. Thus, both <span class="process-math">\(\binom{n}{r}\)</span> and <span class="process-math">\(\binom{n}{n-r}\)</span> count subsets of <span class="process-math">\(r\)</span> objects from <span class="process-math">\(n\text{,}\)</span> one by counting the objects in the set, one by counting the objects not in the set.</div></article></div>
+</div></article><div class="para" id="p-3202">An algebraic proof is straightforward and left as an exercise (see <a href="" class="xref" data-knowl="./knowl/X_pfofthm1.html" title="Exercise 9.6.1">Exercise 9.6.1</a>). We will give a combinatorial proof. This means we will prove the two sides of the equation are equal by showing that they are two different ways to count the same set. In general, a combinatorial proof is done by giving a counting argument.</div>
+<article class="hiddenproof" id="proof-43"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-43"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-43"><article class="hiddenproof"><div class="para" id="p-3203">By definition, <span class="process-math">\(\binom{n}{r}\)</span> is the number of subsets where we choose <span class="process-math">\(r\)</span> objects from <span class="process-math">\(n\)</span> objects.</div> <div class="para" id="p-3204">We can create a set of <span class="process-math">\(r\)</span> objects by specifying which objects are in the set or by specifying which objects are <em class="emphasis">not</em> in the set. We note that there are <span class="process-math">\(n-r\)</span> objects not in the set. Thus, <span class="process-math">\(\binom{n}{n-r}\)</span> counts the ways to find a set of <span class="process-math">\(r\)</span> objects out of <span class="process-math">\(n\)</span> objects by finding the ways to not include <span class="process-math">\(n-r\)</span> objects. Thus, both <span class="process-math">\(\binom{n}{r}\)</span> and <span class="process-math">\(\binom{n}{n-r}\)</span> count subsets of <span class="process-math">\(r\)</span> objects from <span class="process-math">\(n\text{,}\)</span> one by counting the objects in the set, one by counting the objects not in the set.</div></article></div>
 <article class="theorem theorem-like" id="T_pascalsformula"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.6.2</span><span class="period">.</span><span class="space"> </span><span class="title">Pascal's Formula.</span>
 </h3>
-<div class="para logical" id="p-3000">
+<div class="para logical" id="p-3205">
 <div class="para">Let <span class="process-math">\(n, r\)</span> be nonnegative integers with <span class="process-math">\(r\leq n\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \binom{n+1}{r}=\binom{n}{r-1}+\binom{n}{r}.
 \end{equation*}
 </div>
-</div></article><div class="para" id="p-3001">We leave the algebraic proof as an exercise (see <a href="" class="xref" data-knowl="./knowl/A_pascalalg.html" title="Activity 9.6.1">Activity 9.6.1</a>), and instead provide a combinatorial proof.</div>
-<article class="hiddenproof" id="proof-44"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-44"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-44"><article class="hiddenproof"><div class="para" id="p-3002">By definition, <span class="process-math">\(\binom{n+1}{r}\)</span> counts the subsets of <span class="process-math">\(r\)</span> objects chosen from <span class="process-math">\(n+1\)</span> objects.</div> <div class="para" id="p-3003">Let <span class="process-math">\(S=\{x_1, x_2, \ldots x_{n+1}\}\text{,}\)</span> a set of <span class="process-math">\(n+1\)</span> objects. We can create all the subsets of <span class="process-math">\(r\)</span> objects by choosing all <span class="process-math">\(r\)</span> objects from <span class="process-math">\(\{x_1, \ldots, x_n\}\)</span> or by choosing <span class="process-math">\(r-1\)</span> out of <span class="process-math">\(\{x_1, \ldots, x_n\}\)</span> and including <span class="process-math">\(x_{n+1}\text{.}\)</span> Thus, we can count the subsets of <span class="process-math">\(r\)</span> objects from <span class="process-math">\(n\)</span> objects with <span class="process-math">\(\binom{n}{r}+\binom{n}{r-1}\text{.}\)</span>
+</div></article><div class="para" id="p-3206">We leave the algebraic proof as an exercise (see <a href="" class="xref" data-knowl="./knowl/A_pascalalg.html" title="Activity 9.6.1">Activity 9.6.1</a>), and instead provide a combinatorial proof.</div>
+<article class="hiddenproof" id="proof-44"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-44"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-44"><article class="hiddenproof"><div class="para" id="p-3207">By definition, <span class="process-math">\(\binom{n+1}{r}\)</span> counts the subsets of <span class="process-math">\(r\)</span> objects chosen from <span class="process-math">\(n+1\)</span> objects.</div> <div class="para" id="p-3208">Let <span class="process-math">\(S=\{x_1, x_2, \ldots x_{n+1}\}\text{,}\)</span> a set of <span class="process-math">\(n+1\)</span> objects. We can create all the subsets of <span class="process-math">\(r\)</span> objects by choosing all <span class="process-math">\(r\)</span> objects from <span class="process-math">\(\{x_1, \ldots, x_n\}\)</span> or by choosing <span class="process-math">\(r-1\)</span> out of <span class="process-math">\(\{x_1, \ldots, x_n\}\)</span> and including <span class="process-math">\(x_{n+1}\text{.}\)</span> Thus, we can count the subsets of <span class="process-math">\(r\)</span> objects from <span class="process-math">\(n\)</span> objects with <span class="process-math">\(\binom{n}{r}+\binom{n}{r-1}\text{.}\)</span>
 </div></article></div>
 <article class="activity project-like" id="A_pascalalg"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.6.1</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-3004">
+<div class="para logical" id="p-3209">
 <div class="para">Give an algebraic proof for Pascal's Formula:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -618,10 +618,10 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-52" id="hint-52"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-52"><div class="hint solution-like"><div class="para" id="p-3005">Start with the right-hand side. Use the definition of “choose,” then find a common denominator. Note, you will save yourself a lot of work if you find the <em class="emphasis">least</em> common denominator.</div></div></div>
-</div></article><div class="para" id="p-3006">We often call terms of the form <span class="process-math">\(\binom{n}{r}\)</span> <dfn class="terminology">binomial coefficients</dfn>.</div>
-<div class="para" id="p-3007">There is a connection between binomial coefficients and Pascal's Triangle.</div>
-<div class="para" id="p-3008">You may have seen Pascal's Triangle before, the start of which is <div class="tabular-box natural-width"><table class="tabular">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-55" id="hint-55"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-55"><div class="hint solution-like"><div class="para" id="p-3210">Start with the right-hand side. Use the definition of “choose,” then find a common denominator. Note, you will save yourself a lot of work if you find the <em class="emphasis">least</em> common denominator.</div></div></div>
+</div></article><div class="para" id="p-3211">We often call terms of the form <span class="process-math">\(\binom{n}{r}\)</span> <dfn class="terminology">binomial coefficients</dfn>.</div>
+<div class="para" id="p-3212">There is a connection between binomial coefficients and Pascal's Triangle.</div>
+<div class="para" id="p-3213">You may have seen Pascal's Triangle before, the start of which is <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
@@ -660,8 +660,8 @@ eBookConfig.enable_chatcodes =  false;
 </tr>
 </table></div>
 </div>
-<div class="para" id="p-3009">We get each number in a row by adding the two numbers above. If there is only one number, you just get 1. For example, the fourth row is 1, 3, 3, 1, since <span class="process-math">\(1+2=3\text{.}\)</span> The next row would be 1, 4, 6, 4, 1.</div>
-<div class="para" id="p-3010">If we think about the first row as actually being the 0th row, we can make a triangle with the binomial coefficients: <div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="p-3214">We get each number in a row by adding the two numbers above. If there is only one number, you just get 1. For example, the fourth row is 1, 3, 3, 1, since <span class="process-math">\(1+2=3\text{.}\)</span> The next row would be 1, 4, 6, 4, 1.</div>
+<div class="para" id="p-3215">If we think about the first row as actually being the 0th row, we can make a triangle with the binomial coefficients: <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
@@ -700,13 +700,13 @@ eBookConfig.enable_chatcodes =  false;
 </tr>
 </table></div>
 </div>
-<div class="para" id="p-3011">If you calculate the binomial coefficients, you will see that you get the same values as Pascal's Triangle. Furthermore, Pascal's Formula is just the rule we use to get the triangle: add the <span class="process-math">\(r-1\)</span> and <span class="process-math">\(r\)</span> terms from the <span class="process-math">\(n^{th}\)</span> row to get the <span class="process-math">\(r\)</span> term in the <span class="process-math">\(n+1\)</span> row.</div>
-<div class="para" id="p-3012">A <dfn class="terminology">binomial</dfn> is an expression of the form <span class="process-math">\(a+b\text{.}\)</span>
+<div class="para" id="p-3216">If you calculate the binomial coefficients, you will see that you get the same values as Pascal's Triangle. Furthermore, Pascal's Formula is just the rule we use to get the triangle: add the <span class="process-math">\(r-1\)</span> and <span class="process-math">\(r\)</span> terms from the <span class="process-math">\(n^{th}\)</span> row to get the <span class="process-math">\(r\)</span> term in the <span class="process-math">\(n+1\)</span> row.</div>
+<div class="para" id="p-3217">A <dfn class="terminology">binomial</dfn> is an expression of the form <span class="process-math">\(a+b\text{.}\)</span>
 </div>
-<div class="para" id="p-3013">The Binomial Theorem gives a formula for calculating <span class="process-math">\((a+b)^n\text{.}\)</span> We can prove the Binomial Theorem combinatorially or algebraically. We will provide the algebraic proof, which is a proof by induction. Although we do not provide the details of the combinatorial proof, the next example should give some insight into the combinatorial argument.</div>
+<div class="para" id="p-3218">The Binomial Theorem gives a formula for calculating <span class="process-math">\((a+b)^n\text{.}\)</span> We can prove the Binomial Theorem combinatorially or algebraically. We will provide the algebraic proof, which is a proof by induction. Although we do not provide the details of the combinatorial proof, the next example should give some insight into the combinatorial argument.</div>
 <article class="example example-like" id="E_combbinomialthm"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_combbinomialthm"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.6.3</span><span class="period">.</span><span class="space"> </span><span class="title">A Combinatorial Calculation for <span class="process-math">\((a+b)^3\)</span>.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_combbinomialthm"><article class="example example-like"> <div class="para logical" id="p-3014">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_combbinomialthm"><article class="example example-like"> <div class="para logical" id="p-3219">
 <div class="para">Suppose we want to expand (or multiply) <span class="process-math">\((a+b)^3=(a+b)(a+b)(a+b)\text{.}\)</span> We can think of the multiplication in this way,</div>
 <ul class="disc">
 <li id="li-727"><div class="para" id="p-derived-li-727">there is 1 way to get <span class="process-math">\(a^3\text{:}\)</span> choose 0 <span class="process-math">\(b\)</span>'s from the three factors.</div></li>
@@ -721,7 +721,7 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 </div></article></div>
-<div class="para" id="p-3015">
+<div class="para" id="p-3220">
 <a href="" class="xref" data-knowl="./knowl/E_combbinomialthm.html" title="Example 9.6.3: A Combinatorial Calculation for (a+b)^3">Example 9.6.3</a> can be generalized to <span class="process-math">\((a+b)^n\)</span> in the Binomial Theorem.</div>
 <article class="theorem theorem-like" id="T_binomial"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.6.4</span><span class="period">.</span><span class="space"> </span><span class="title">Binomial Theorem.</span>
@@ -730,7 +730,7 @@ eBookConfig.enable_chatcodes =  false;
 (a+b)^n&amp;= \binom{n}{0}a^n+\binom{n}{1}a^{n-1}b+\binom{n}{2}a^{n-2}b^{2}+\cdots +\binom{n}{n-1}ab^{n-1}+\binom{n}{n}b^n\\
 &amp;=\sum_{k=0}^{n}\binom{n}{k}a^{n-k}b^k.
 \end{align*}
-</div></article><article class="hiddenproof" id="proof-45"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-45"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-45"><article class="hiddenproof"><div class="para logical" id="p-3016">
+</div></article><article class="hiddenproof" id="proof-45"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-45"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-45"><article class="hiddenproof"><div class="para logical" id="p-3221">
 <div class="para">Prove</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -739,7 +739,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para">by induction on <span class="process-math">\(n\text{.}\)</span>
 </div>
-</div> <div class="para logical" id="p-3017">
+</div> <div class="para logical" id="p-3222">
 <div class="para">Base step: Let <span class="process-math">\(n=0\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -752,16 +752,16 @@ eBookConfig.enable_chatcodes =  false;
 \sum_{i=0}^{0}\binom{0}{i}a^{0-i}b^i=a^0b^0=1.
 \end{equation*}
 </div>
-</div> <div class="para" id="p-3018">Induction step: Assume <span class="process-math">\((a+b)^k=\sum_{i=0}^{k}\binom{k}{i}a^{k-i}b^i\text{.}\)</span>
-</div> <div class="para" id="p-3019">Show <span class="process-math">\((a+b)^{k+1}=\sum_{i=0}^{k+1}\binom{k+1}{i}a^{k+1-i}b^i\)</span>
-</div> <div class="para logical" id="p-3020"><div class="displaymath process-math" id="md-32">
+</div> <div class="para" id="p-3223">Induction step: Assume <span class="process-math">\((a+b)^k=\sum_{i=0}^{k}\binom{k}{i}a^{k-i}b^i\text{.}\)</span>
+</div> <div class="para" id="p-3224">Show <span class="process-math">\((a+b)^{k+1}=\sum_{i=0}^{k+1}\binom{k+1}{i}a^{k+1-i}b^i\)</span>
+</div> <div class="para logical" id="p-3225"><div class="displaymath process-math" id="md-32">
 \begin{align*}
 (a+b)^{k+1}&amp;=(a+b)^k(a+b)\\
 &amp;=\biggl(\sum_{i=0}^{k}\binom{k}{i}a^{k-i}b^i\biggr)(a+b)\\
 &amp;=a\sum_{i=0}^{k}\binom{k}{i}a^{k-i}b^i+b\sum_{i=0}^{k}\binom{k}{i}a^{k-i}b^i\\
 &amp;=\sum_{i=0}^{k}\binom{k}{i}a^{k+1-i}b^i+\sum_{i=0}^{k}\binom{k}{i}a^{k-i}b^{i+1}
 \end{align*}
-</div></div> <div class="para logical" id="p-3021">
+</div></div> <div class="para logical" id="p-3226">
 <div class="para">Now we want to change the index of the second sum. This is just a substitution of variable that allows us to shift how we index the terms. If we were to write out the sum, rather than have it in summation notation, we would not need this step. But it allows us to easily combine like terms in the two summations. So, in the second sum, let <span class="process-math">\(j=i+1\text{,}\)</span> so when <span class="process-math">\(i=0, j=1\text{;}\)</span> when <span class="process-math">\(i=k, j=k+1\text{,}\)</span> and <span class="process-math">\(i=j-1\text{.}\)</span> We get</div>
 <div class="displaymath process-math" id="md-33">
 \begin{align*}
@@ -783,48 +783,69 @@ eBookConfig.enable_chatcodes =  false;
 <article class="activity project-like" id="activity-176"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.6.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-3022">Show the Binomial Theorem holds for <span class="process-math">\(n=2\)</span> and <span class="process-math">\(n=3\text{.}\)</span>
-</div></article><div class="para" id="p-3023">The Binomial Theorem relates a sum to a power of a binomial. Although we often think of using the Binomial Theorem as a way to calculate the coefficients for expanding <span class="process-math">\((a+b)^n\text{,}\)</span> it can also be used to simplify certain sums. In this case, the power of the binomial is the <dfn class="terminology">closed form</dfn>.</div>
+<div class="para" id="p-3227">Show the Binomial Theorem holds for <span class="process-math">\(n=2\)</span> and <span class="process-math">\(n=3\text{.}\)</span>
+</div></article><div class="para" id="p-3228">The Binomial Theorem relates a sum to a power of a binomial. Although we often think of using the Binomial Theorem as a way to calculate the coefficients for expanding <span class="process-math">\((a+b)^n\text{,}\)</span> it can also be used to simplify certain sums. In this case, the power of the binomial is the <dfn class="terminology">closed form</dfn>.</div>
 <article class="example example-like" id="E_closedform"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_closedform"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.6.5</span><span class="period">.</span><span class="space"> </span><span class="title">Expressing a Sum in Closed Form.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_closedform"><article class="example example-like"> <div class="para" id="p-3024">Express the sum, <span class="process-math">\(\sum_{i=0}^{n}\binom{n}{i}x^i\text{,}\)</span> in closed form.</div> <div class="para" id="p-3025">For problems such as this, we need to identify <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> as in the Binomial Theorem.</div> <div class="para" id="p-3026">We can see that <span class="process-math">\(x=b\text{,}\)</span> since the power of <span class="process-math">\(x\)</span> matches the power of <span class="process-math">\(b\text{.}\)</span> Since there does not appear to be any term for <span class="process-math">\(a\text{,}\)</span> we can let <span class="process-math">\(a=1\text{.}\)</span> Thus, the closed form is <span class="process-math">\((1+x)^n\text{.}\)</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_closedform"><article class="example example-like"> <div class="para" id="p-3229">Express the sum, <span class="process-math">\(\sum_{i=0}^{n}\binom{n}{i}x^i\text{,}\)</span> in closed form.</div> <div class="para" id="p-3230">For problems such as this, we need to identify <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> as in the Binomial Theorem.</div> <div class="para" id="p-3231">We can see that <span class="process-math">\(x=b\text{,}\)</span> since the power of <span class="process-math">\(x\)</span> matches the power of <span class="process-math">\(b\text{.}\)</span> Since there does not appear to be any term for <span class="process-math">\(a\text{,}\)</span> we can let <span class="process-math">\(a=1\text{.}\)</span> Thus, the closed form is <span class="process-math">\((1+x)^n\text{.}\)</span>
 </div></article></div>
 <article class="activity project-like" id="activity-177"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.6.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-3027">Use the Binomial Theorem to find <span class="process-math">\((3-2x)^3\text{.}\)</span>
+<div class="para" id="p-3232">Use the Binomial Theorem to find <span class="process-math">\((3-2x)^3\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-53" id="hint-53"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-53"><div class="hint solution-like"><div class="para" id="p-3028">In this expression, what are <span class="process-math">\(a, b, n\text{?}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-56" id="hint-56"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-56"><div class="hint solution-like"><div class="para" id="p-3233">In this expression, what are <span class="process-math">\(a, b, n\text{?}\)</span>
 </div></div></div>
 </div></article><article class="activity project-like" id="activity-178"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.6.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-3029">Prove <span class="process-math">\(2^n=\sum_{k=0}^n{n \choose k}\text{.}\)</span>
+<div class="para" id="p-3234">Prove <span class="process-math">\(2^n=\sum_{k=0}^n{n \choose k}\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-54" id="hint-54"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-54"><div class="hint solution-like"><div class="para" id="p-3030">Use that <span class="process-math">\(2=(1+1)\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-57" id="hint-57"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-57"><div class="hint solution-like"><div class="para" id="p-3235">Use that <span class="process-math">\(2=(1+1)\text{.}\)</span>
 </div></div></div>
 </div></article><section class="reading-questions" id="reading-questions-37"><h3 class="heading hide-type">
 <span class="type">Reading Questions</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-551"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-3031">Use the Binomial Theorem to find <span class="process-math">\((a+b)^4\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-552"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-3032">Use the Binomial Theorem to find <span class="process-math">\((a+2)^4\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-553"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-3033">Use the Binomial Theorem to find <span class="process-math">\((a-2)^4\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-554"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-3034">Use the Binomial Theorem to find the coefficient of <span class="process-math">\(x^2y^2\)</span> in <span class="process-math">\((3x-2y)^4\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-555"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-3035">Use the Binomial Theorem to find the coefficient of <span class="process-math">\(x^5y^2\)</span> in <span class="process-math">\((3x-2y)^7\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-556"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-3036">Use the Binomial Theorem to find the coefficient of <span class="process-math">\(x^4y^3\)</span> in <span class="process-math">\((3x-2y)^7\text{.}\)</span>
-</div></article></section><section class="exercises" id="exercises-37"><h3 class="heading hide-type">
+<article class="exercise exercise-like" id="DMT_binomthm_CYU_apbtt4"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-3236">Use the Binomial Theorem to find <span class="process-math">\((a+b)^4\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-58" id="hint-58"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-58"><div class="hint solution-like"><div class="para" id="p-3237">There should be 5 terms in your answer.</div></div></div>
+</div></article><article class="exercise exercise-like" id="DMT_binomthm_CYU_ap2tt4"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-3238">Use the Binomial Theorem to find <span class="process-math">\((a+2)^4\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-59" id="hint-59"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-59"><div class="hint solution-like"><div class="para" id="p-3239">There should be 5 terms in your answer.</div></div></div>
+</div></article><article class="exercise exercise-like" id="DMT_binomthm_CYU_ambtt4"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-3240">Use the Binomial Theorem to find <span class="process-math">\((a-2)^4\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-60" id="hint-60"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-60"><div class="hint solution-like"><div class="para" id="p-3241">There should be 5 terms in your answer.</div></div></div>
+</div></article><article class="exercise exercise-like" id="DMT_binomthm_CYU_coefx2y2"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><div data-component="fillintheblank" data-question_label="" id="DMT_binomthm_CYU_coefx2y2">
+<div class="para" id="p-3242">Use the Binomial Theorem to find the coefficient of <span class="process-math">\(x^2y^2\)</span> in <span class="process-math">\((3x-2y)^4\text{.}\)</span>
+</div> <div class="para" id="p-3243">
+<input type="text" placeholder="Number"> Note, your answer should not include any variables.</div>
+<script type="application/json">[[{"number": [216, 216], "feedback": "<div class=\"para\" id=\"p-3244\">Correct, <span class=\"process-math\">\\(\\binom{4}{2}3^2(-2)^2=216\\text{.}\\)<\/span><\/div>"}, {"number": [36, 36], "feedback": "<div class=\"para\" id=\"p-3245\">Incorrect, don't forget the binomial coefficient: <span class=\"process-math\">\\(\\binom{4}{2}\\text{.}\\)<\/span><\/div>"}, {"number": [6, 6], "feedback": "<div class=\"para\" id=\"p-3246\">Incorrect, don't forget to include <span class=\"process-math\">\\((3x)^2(-2y)^2\\)<\/span> when finding the coefficient of <span class=\"process-math\">\\(x^2y^2\\text{.}\\)<\/span><\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-3247\">Incorrect. Using the Binomial Theorem, we know the term must be <span class=\"process-math\">\\(\\binom{4}{2}(3x)^2(-2y)^2\\text{.}\\)<\/span> Use a bit of algebra to get the coefficient of <span class=\"process-math\">\\(x^2y^2\\text{.}\\)<\/span><\/div>"}]]</script>
+</div></div></div></article><article class="exercise exercise-like" id="DMT_binomthm_CYU_coefx5y2"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><div data-component="fillintheblank" data-question_label="" id="DMT_binomthm_CYU_coefx5y2">
+<div class="para" id="p-3248">Use the Binomial Theorem to find the coefficient of <span class="process-math">\(x^5y^2\)</span> in <span class="process-math">\((3x-2y)^7\text{.}\)</span>
+</div> <div class="para" id="p-3249">
+<input type="text" placeholder="Number"> Note, your answer should not include any variables.</div>
+<script type="application/json">[[{"number": [20412, 20412], "feedback": "<div class=\"para\" id=\"p-3250\">Correct, <span class=\"process-math\">\\(\\binom{7}{2}3^5(-2)^2=20412\\text{.}\\)<\/span><\/div>"}, {"number": [972, 972], "feedback": "<div class=\"para\" id=\"p-3251\">Incorrect, don't forget the binomial coefficient: <span class=\"process-math\">\\(\\binom{7}{2}\\text{.}\\)<\/span><\/div>"}, {"number": [21, 21], "feedback": "<div class=\"para\" id=\"p-3252\">Incorrect, don't forget to include <span class=\"process-math\">\\((3x)^5(-2y)^2\\)<\/span> when finding the coefficient of <span class=\"process-math\">\\(x^5y^2\\text{.}\\)<\/span><\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-3253\">Incorrect. Using the Binomial Theorem, we know the term must be <span class=\"process-math\">\\(\\binom{7}{2}(3x)^5(-2y)^2\\text{.}\\)<\/span> Use a bit of algebra to get the coefficient of <span class=\"process-math\">\\(x^5y^2\\text{.}\\)<\/span><\/div>"}]]</script>
+</div></div></div></article><article class="exercise exercise-like" id="DMT_binomthm_CYU_coefx4y3"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><div data-component="fillintheblank" data-question_label="" id="DMT_binomthm_CYU_coefx4y3">
+<div class="para" id="p-3254">Use the Binomial Theorem to find the coefficient of <span class="process-math">\(x^4y^3\)</span> in <span class="process-math">\((3x-2y)^7\text{.}\)</span>
+</div> <div class="para" id="p-3255">
+<input type="text" placeholder="Number"> Note, your answer should not include any variables.</div>
+<script type="application/json">[[{"number": [-22680, -22680], "feedback": "<div class=\"para\" id=\"p-3256\">Correct, <span class=\"process-math\">\\(\\binom{7}{3}3^4(-2)^3=-22680\\text{.}\\)<\/span><\/div>"}, {"number": [22680, 22680], "feedback": "<div class=\"para\" id=\"p-3257\">Incorrect, note that <span class=\"process-math\">\\((-2)^3\\)<\/span> is negative.<\/div>"}, {"number": [-648, -648], "feedback": "<div class=\"para\" id=\"p-3258\">Incorrect, don't forget the binomial coefficient: <span class=\"process-math\">\\(\\binom{7}{3}\\text{.}\\)<\/span><\/div>"}, {"number": [35, 35], "feedback": "<div class=\"para\" id=\"p-3259\">Incorrect, don't forget to include <span class=\"process-math\">\\((3x)^4(-2y)^3\\)<\/span> when finding the coefficient of <span class=\"process-math\">\\(x^5y^2\\text{.}\\)<\/span><\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-3260\">Incorrect. Using the Binomial Theorem, we know the term must be <span class=\"process-math\">\\(\\binom{7}{3}(3x)^4(-2y)^3\\text{.}\\)<\/span> Use a bit of algebra to get the coefficient of <span class=\"process-math\">\\(x^4y^3\\text{.}\\)<\/span><\/div>"}]]</script>
+</div></div></div></article></section><section class="exercises" id="exercises-37"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="X_pfofthm1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para logical" id="p-3037">
+<div class="para logical" id="p-3261">
 <div class="para">Give an algebraic proof for the formula in <a href="" class="xref" data-knowl="./knowl/T_requalsnminusr.html" title="Theorem 9.6.1">Theorem 9.6.1</a>:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/T_requalsnminusr.html">
 \begin{equation*}
@@ -834,37 +855,37 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para">for integers <span class="process-math">\(n\)</span> and <span class="process-math">\(r\)</span> with <span class="process-math">\(0\leq r\leq n\text{.}\)</span>
 </div>
 </div></article><article class="exercise exercise-like" id="exercise-558"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para logical" id="p-3038">
+<div class="para logical" id="p-3262">
 <div class="para">Use Pascal's triangle to find the following binomial coefficients.</div>
 <ol class="lower-alpha">
-<li id="li-731"><div class="para" id="p-3039">Find the values of <span class="process-math">\({6\choose 2}, {6\choose 3}, {6\choose 4}\)</span> and <span class="process-math">\({6\choose 5}\text{.}\)</span>
+<li id="li-731"><div class="para" id="p-3263">Find the values of <span class="process-math">\({6\choose 2}, {6\choose 3}, {6\choose 4}\)</span> and <span class="process-math">\({6\choose 5}\text{.}\)</span>
 </div></li>
-<li id="li-732"><div class="para" id="p-3040">Use the result of part (a) to find <span class="process-math">\({7\choose 3}\text{,}\)</span> <span class="process-math">\({7\choose 4}\text{,}\)</span> and <span class="process-math">\({7\choose 5}\text{.}\)</span>
+<li id="li-732"><div class="para" id="p-3264">Use the result of part (a) to find <span class="process-math">\({7\choose 3}\text{,}\)</span> <span class="process-math">\({7\choose 4}\text{,}\)</span> and <span class="process-math">\({7\choose 5}\text{.}\)</span>
 </div></li>
-<li id="li-733"><div class="para" id="p-3041">Complete the row of Pascal’s triangle that corresponds to <span class="process-math">\(n=7\text{.}\)</span>
+<li id="li-733"><div class="para" id="p-3265">Complete the row of Pascal’s triangle that corresponds to <span class="process-math">\(n=7\text{.}\)</span>
 </div></li>
 </ol>
 </div></article><article class="exercise exercise-like" id="exercise-559"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para logical" id="p-3042">
+<div class="para logical" id="p-3266">
 <div class="para">The row of Pascal’s triangle that corresponds to <span class="process-math">\(n=8\)</span> is</div>
 <div class="displaymath process-math">
 \begin{equation*}
 1\ \ \ 8\ \ \ 28\ \ \ 56\ \ \ 70\ \ \ 56\ \ \ 28\ \ \ 8\ \ \ 1.
 \end{equation*}
 </div>
-</div> <div class="para" id="p-3043">What is the row that corresponds to <span class="process-math">\(n=9\text{?}\)</span>
+</div> <div class="para" id="p-3267">What is the row that corresponds to <span class="process-math">\(n=9\text{?}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-560"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-3044">Use the Binomial Theorem to expand <span class="process-math">\((u-v)^5\text{.}\)</span>
+<div class="para" id="p-3268">Use the Binomial Theorem to expand <span class="process-math">\((u-v)^5\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-561"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-3045">Use the Binomial Theorem to expand <span class="process-math">\((p-2q)^4\text{.}\)</span>
+<div class="para" id="p-3269">Use the Binomial Theorem to expand <span class="process-math">\((p-2q)^4\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-562"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-3046">Find the coefficient of <span class="process-math">\(x^6y^3\)</span> in <span class="process-math">\((x+y)^9\text{.}\)</span>
+<div class="para" id="p-3270">Find the coefficient of <span class="process-math">\(x^6y^3\)</span> in <span class="process-math">\((x+y)^9\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-563"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-3047">Find the coefficient of <span class="process-math">\(x^7\)</span> in <span class="process-math">\((2x+3)^{10}\text{.}\)</span>
+<div class="para" id="p-3271">Find the coefficient of <span class="process-math">\(x^7\)</span> in <span class="process-math">\((2x+3)^{10}\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-564"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="p-3048">Express <span class="process-math">\(\sum_{k=0}^n{n\choose k}5^k\)</span> in closed form (without the summation symbol and without ellipses,…).</div></article><article class="exercise exercise-like" id="exercise-565"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<div class="para" id="p-3049">Express <span class="process-math">\(\sum_{k=0}^m{m\choose k}2^{m-k}x^k\)</span> in closed form (without the summation symbol and without ellipses,…).</div></article><article class="exercise exercise-like" id="exercise-566"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
-<div class="para logical" id="p-3050">
+<div class="para" id="p-3272">Express <span class="process-math">\(\sum_{k=0}^n{n\choose k}5^k\)</span> in closed form (without the summation symbol and without ellipses,…).</div></article><article class="exercise exercise-like" id="exercise-565"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="para" id="p-3273">Express <span class="process-math">\(\sum_{k=0}^m{m\choose k}2^{m-k}x^k\)</span> in closed form (without the summation symbol and without ellipses,…).</div></article><article class="exercise exercise-like" id="exercise-566"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="para logical" id="p-3274">
 <div class="para">Use Pascal’s Formula to prove by mathematical induction that if <span class="process-math">\(n\)</span> is an integer and <span class="process-math">\(n\geq 1\text{,}\)</span> then</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -872,7 +893,7 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 </div></article><article class="exercise exercise-like" id="exercise-567"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
-<div class="para logical" id="p-3051">
+<div class="para logical" id="p-3275">
 <div class="para">Think of a set with <span class="process-math">\(m+n\)</span> elements as composed of two parts, one with <span class="process-math">\(m\)</span> elements and one with <span class="process-math">\(n\)</span> elements. Give a combinatorial argument to show that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -881,9 +902,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-55" id="hint-55"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-55"><div class="hint solution-like"><div class="para" id="p-3052">Think of counting a single set in two different ways, where one side of the equation represents one way and the other side represents the other way. Since they both count the same set, they should be equal.</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-61" id="hint-61"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-61"><div class="hint solution-like"><div class="para" id="p-3276">Think of counting a single set in two different ways, where one side of the equation represents one way and the other side represents the other way. Since they both count the same set, they should be equal.</div></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-568"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
-<div class="para logical" id="p-3053">
+<div class="para logical" id="p-3277">
 <div class="para">Use the Binomial Theorem to prove for all integers <span class="process-math">\(n\geq 1\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -893,10 +914,10 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-56" id="hint-56"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-56"><div class="hint solution-like"><div class="para" id="p-3054">Use the fact that <span class="process-math">\(1+(-1)=0\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-62" id="hint-62"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-62"><div class="hint solution-like"><div class="para" id="p-3278">Use the fact that <span class="process-math">\(1+(-1)=0\text{.}\)</span>
 </div></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-569"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
-<div class="para logical" id="p-3055">
+<div class="para logical" id="p-3279">
 <div class="para">Use the Binomial Theorem to prove for all integers <span class="process-math">\(n\geq 0\text{,}\)</span>
 </div>
 <div class="displaymath process-math">

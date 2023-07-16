@@ -427,46 +427,147 @@
 </figure>
       
 
-      <exercise><statement><p>List the edges of <m>G</m> incident on <m>v_2</m>.</p></statement>
+      <exercise label="DMT_graphs_CYU_edgeincid2"><statement><p>List the edges of <m>G</m>, <xref ref="F_readingquestions"/>, incident on <m>v_2</m>.</p></statement>
+      <response />
+      <hint><p>There are 5 edges.</p></hint>
       <answer><m>e_1, e_3, e_5, e_6, e_7</m></answer></exercise>
 
-      <exercise><statement><p>Does <m>G</m> have any parallel edges?</p></statement>
+      <exercise label="DMT_graphs_CYU_parallel"><statement correct="yes"><p>True or false <m>G</m>, <xref ref="F_readingquestions"/>, has parallel edges.</p></statement>
+      <feedback><p>Edges <m>e_3, e_6</m> are parallel.</p></feedback>
       <answer>Yes, <m>e_3, e_6</m></answer></exercise>
 
-      <exercise><statement><p>True or false: in <m>G</m>, <m>v_1</m> and <m>v_2</m> are adjacent.</p></statement>
+      <exercise label="DMT_graphs_CYU_v12adjacent"><statement correct="yes"><p>True or false: in <m>G</m>, <xref ref="F_readingquestions"/>, <m>v_1</m> and <m>v_2</m> are adjacent.</p></statement>
       <answer>True</answer></exercise>
 
-      <exercise><statement><p>True or false: in <m>G</m>, <m>v_3</m> and <m>v_4</m> are adjacent.</p></statement>
+      <exercise label="DMT_graphs_CYU_v34adjacent"><statement correct="no"><p>True or false: in <m>G</m>, <xref ref="F_readingquestions"/>, <m>v_3</m> and <m>v_4</m> are adjacent.</p></statement>
       <answer>False</answer></exercise>
 
-      <exercise><statement><p>True or false: in <m>G</m>, <m>e_3</m> and <m>e_6</m> are adjacent.</p></statement>
+      <exercise label="DMT_graphs_CYU_e36adjacent"><statement correct="yes"><p>True or false: in <m>G</m>, <xref ref="F_readingquestions"/>, <m>e_3</m> and <m>e_6</m> are adjacent.</p></statement>
       <answer>True</answer></exercise>
 
-       <exercise><statement><p>In <m>G</m>, find the degree of <m>v_4</m>.</p></statement>
+       <exercise label="DMT_graphs_CYU_degreev4"><statement><p>In <m>G</m>, <xref ref="F_readingquestions"/>, find the degree of <m>v_4</m>. <var /></p></statement>
+       <setup>
+    <var>
+    <condition number="3">
+    <feedback>
+      <p>
+        Correct.
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. See <xref ref="D_degree" />.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>3</m></answer></exercise>
 
-      <exercise><statement><p>In <m>G</m>, find the degree of <m>v_2</m>.</p></statement>
+      <exercise label="DMT_graphs_CYU_degreev2"><statement><p>In <m>G</m>, <xref ref="F_readingquestions"/>, find the degree of <m>v_2</m>. <var /></p></statement>
+      <setup>
+    <var>
+    <condition number="6">
+    <feedback>
+      <p>
+        Correct.
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. See <xref ref="D_degree" />.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>6</m></answer></exercise>
 
-      <exercise><statement><p>What is the total degree of <m>G</m>?</p></statement>
+      <exercise label="DMT_graphs_CYU_totdeg"><statement><p>What is the total degree of <m>G</m>, <xref ref="F_readingquestions"/>? <var /></p></statement>
+      <setup>
+    <var>
+    <condition number="14">
+    <feedback>
+      <p>
+        Correct.
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. See <xref ref="D_degree" />. Add the degrees of all the vertices.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>14</m></answer></exercise>
 
        
 
-       <exercise><statement><p>Draw <m>K_5</m>. How many edges does it have? What is the degree of each vertex?</p></statement>
+       <exercise label="DMT_graphs_CYU_K5"><statement><p>Draw <m>K_5</m>. How many edges does it have? <var /></p>
+       <p>What is the degree of each vertex? <var /></p></statement>
+       <setup>
+    <var>
+    <condition number="10">
+    <feedback>
+      <p>
+        Correct. It has 10 edges.
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. See <xref ref="D_completegraph" />. Make sure you have connected every vertex to every other vertex exactly once.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+    <var>
+    <condition number="4">
+    <feedback>
+      <p>
+        Correct. Every edge has degree 4.
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. See <xref ref="D_completegraph" />.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><p>It has 10 edges. All vertices have degree 4.</p></answer></exercise>
 
-      <exercise><statement><p>True or false: there exists a graph with 4 vertices of degrees 1, 2, 1, 2.</p></statement>
+      <exercise label="DMT_graphs_CYU_exist1212"><statement correct="yes"><p>True or false: there exists a graph with 4 vertices of degrees 1, 2, 1, 2.</p></statement>
+      <feedback><p>One example is a line (path) with 4 vertices.</p></feedback>
       <answer>True. One example is a line (path) with 4 vertices.</answer></exercise>
 
-      <exercise><statement><p>True or false: there exists a graph with 4 vertices of degrees 1, 2, 1, 3.</p></statement>
+      <exercise label="DMT_graphs_CYU_exist1213"><statement correct="no"><p>True or false: there exists a graph with 4 vertices of degrees 1, 2, 1, 3.</p></statement>
+      <feedback><p>The total degree would be odd.</p></feedback>
       <answer>False. Total degree would be odd.</answer></exercise>
 
 
-      <exercise><statement><p>True or false: there exists a graph with 4 vertices of degrees 4, 4, 4, 4.</p></statement>
-      <answer>True. One example has parallel edges between each vertex. Can also have an example with loops.</answer></exercise>
+      <exercise label="DMT_graphs_CYU_exist4444"><statement correct="yes"><p>True or false: there exists a graph with 4 vertices of degrees 4, 4, 4, 4.</p></statement>
+      <feedback><p>One example has parallel edges between each vertex. Can also have an example with loops.</p></feedback>
+      <answer>True. One example has parallel edges between each vertex. You can also have an example with loops.</answer></exercise>
 
-      <exercise><statement><p>True or false: there exists a simple graph with 4 vertices of degrees 4, 4, 4, 4.</p></statement>
+      <exercise label="DMT_graphs_CYU_existsimp4444"><statement correct="no"><p>True or false: there exists a simple graph with 4 vertices of degrees 4, 4, 4, 4.</p></statement>
+      <feedback><p>In a simple graph, you can't have more edges than the complete graph on 4 vertices.</p></feedback>
       <answer>False. Can't have more edges than the complete graph on 4 vertices.</answer></exercise>
 
       

@@ -239,29 +239,35 @@
 </figure>
       
 
-      <exercise><statement><p>True or false: <m>v_1e_2v_3e_5v_2e_7v_2</m> is a path in <m>G</m>.</p></statement>
+      <exercise label="DMT_paths_CYU_257path"><statement correct="no"><p>True or false: <m>v_1e_2v_3e_5v_2e_7v_2</m> is a path in <m>G</m>, <xref ref="F_readingquestions2" />.</p></statement>
+      <feedback><p>It repeats <m>v_2</m>.</p></feedback>
       <answer>False. Repeats <m>v_2</m>.</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>v_1e_2v_3e_5v_2e_7v_2</m> is a closed walk in <m>G</m>.</p></statement>
+      <exercise label="DMT_paths_CYU_257clwalk"><statement correct="no"><p>True or false: <m>v_1e_2v_3e_5v_2e_7v_2</m> is a closed walk in <m>G</m>, <xref ref="F_readingquestions2" />.</p></statement>
+      <feedback><p>It starts and ends at different vertices.</p></feedback>
       <answer>False. Starts and ends at different vertices.</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>v_1e_2v_3e_5v_2e_7v_2e_1v_1</m> is a circuit in <m>G</m>.</p></statement>
+      <exercise label="DMT_paths_CYU_2571circuit"><statement correct="yes"><p>True or false: <m>v_1e_2v_3e_5v_2e_7v_2e_1v_1</m> is a circuit in <m>G</m>, <xref ref="F_readingquestions2" />.</p></statement>
       <answer>True.</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>v_1e_2v_3e_5v_2e_7v_2e_1v_1</m> is a simple circuit in <m>G</m>.</p></statement>
+      <exercise label="DMT_paths_CYU_2571simcir"><statement correct="no"><p>True or false: <m>v_1e_2v_3e_5v_2e_7v_2e_1v_1</m> is a simple circuit in <m>G</m>, <xref ref="F_readingquestions2" />.</p></statement>
+      <feedback><p>It repeats <m>v_2</m>.</p></feedback>
       <answer>False. Repeats <m>v_2</m>.</answer></exercise>
 
-      <exercise><statement><p>True or false <m>v_4e_3v_2e_6v_4</m> is a simple circuit in <m>G</m>.</p></statement>
+      <exercise label="DMT_paths_CYU_36simcir"><statement correct="yes"><p>True or false <m>v_4e_3v_2e_6v_4</m> is a simple circuit in <m>G</m>, <xref ref="F_readingquestions2" />.</p></statement>
       <answer>True.</answer></exercise>
 
 
-      <exercise><statement><p>True or false: <m>G</m> has an Euler circuit.</p></statement>
+      <exercise label="DMT_paths_CYU_Eulercir"><statement correct="no"><p>True or false: <m>G</m>, <xref ref="F_readingquestions2" />, has an Euler circuit.</p></statement>
+      <feedback><p>There are vertices of odd degree.</p></feedback>
       <answer>False. There are vertices of odd degree.</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>G</m> has an Euler path.</p></statement>
+      <exercise label="DMT_paths_CYU_Eulerpath"><statement correct="yes"><p>True or false: <m>G</m>, <xref ref="F_readingquestions2" />, has an Euler path.</p></statement>
+      <feedback><p>A path can start at <m>v_1</m>, end at <m>v_4</m>.</p></feedback>
       <answer>True. Can start at <m>v_1</m>, end at <m>v_4</m>.</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>G</m> has a Hamiltonian circuit.</p></statement>
+      <exercise label="DMT_paths_CYU_Hamcir"><statement correct="yes"><p>True or false: <m>G</m>, <xref ref="F_readingquestions2" />, has a Hamiltonian circuit.</p></statement>
+      <feedback><p>For example, <m>e_2e_5e_6e_4</m>.</p></feedback>
       <answer>True. For example, <m>e_2e_5e_6e_4</m>.</answer></exercise>
 
       

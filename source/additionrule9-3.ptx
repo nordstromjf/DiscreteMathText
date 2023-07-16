@@ -95,22 +95,172 @@ Some of the subjects who had relief from, say, A, might also have had relief fro
     <reading-questions>
       <title>Check Your Understanding</title>
     
-      <exercise><statement><p>How many 3 digit numbers begin with 1 or begin with a 2?</p></statement>
+      <exercise label="DMT_addrule_CYU_3db12"><statement><p>How many 3 digit numbers begin with 1 or begin with a 2? <var /></p></statement>
+      <setup>
+    <var>
+    <condition number="200">
+    <feedback>
+      <p>
+        Correct, <m>1(10)(10)+1(10)(10)=200</m>.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="162">
+    <feedback>
+      <p>
+        Incorrect. Don't forget that there are 10 digits.
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. How many 3 digit numbers begin with 1? How many begin with 2? Now use the addition rule.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>1(10)(10)+1(10)(10)=200</m></answer></exercise>
 
-      <exercise><statement><p>How many 3 digit numbers end with 1 or end with 2?</p></statement>
+      <exercise label="DMT_addrule_CYU_3de12"><statement><p>How many 3 digit numbers end with 1 or end with 2? <var /></p></statement>
+      <setup>
+    <var>
+    <condition number="180">
+    <feedback>
+      <p>
+        Correct, <m>9(10)(1)+9(10)(1)=180</m>.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="200">
+    <feedback>
+      <p>
+        Incorrect. Don't forget that a 3 digit number cannot begin with 0.
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. How many 3 digit numbers end with 1? How many end with 2? Now use the addition rule.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>9(10)(1)+9(10)(1)=180</m></answer></exercise>
 
-      <exercise><statement><p>How many 3 digit numbers begin with 1 or end with a 2?</p></statement>
+      <exercise label="DMT_addrule_CYU_3db1ore2"><statement><p>How many 3 digit numbers begin with 1 or end with a 2? <var /></p></statement>
+      <setup>
+    <var>
+    <condition number="180">
+    <feedback>
+      <p>
+        Correct, <m>(1)(10)(10)+9(10)(1)-1(10)(1)=180</m>.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="190">
+    <feedback>
+      <p>
+        Incorrect. The set of 3 digit numbers beginning with 1 and the set of 3 digit numbers ending with 2 are not disjoint. Make sure to subtract the number of 3 digit numbers in the intersection.
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. How many 3 digit numbers begin with 1? How many end with 2? These two sets are not disjoint, so you need to use Inclusion-Exclusion (see <xref ref="T_inclusionexclusion"/>) and subtract the number of elements in the intersection.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>(1)(10)(10)+9(10)(1)-1(10)(1)=180</m></answer></exercise>
 
-       <exercise><statement><p>How many 3 digit numbers begin with 1 or 2 or end with 2, 3, or 4?</p></statement>
+       <exercise label="DMT_addrule_CYU_3db12ore234"><statement><p>How many 3 digit numbers begin with 1 or 2 or end with 2, 3, or 4? <var /></p></statement>
+        <setup>
+    <var>
+    <condition number="410">
+    <feedback>
+      <p>
+        Correct, <m>(2)(10)(10)+9(10)(3)-2(10)(3)=410</m>.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="470">
+    <feedback>
+      <p>
+        Incorrect. The set of 3 digit numbers beginning with 1 or 2 and the set of 3 digit numbers ending with 2, 3 or 4 are not disjoint. Make sure to subtract the number of 3 digit numbers in the intersection (those that both begin with 1 or 2 and end with 2, 3 or 4).
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. How many 3 digit numbers begin with 1 or 2? How many end with 2, 3, or 4? Note, you can just use the multiplication rule to count each of these sets. These two sets are not disjoint, so you need to use Inclusion-Exclusion (see <xref ref="T_inclusionexclusion"/>) and subtract the number of elements in the intersection (those that both begin with 1 or 2 and end with 2, 3 or 4).
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>(2)(10)(10)+9(10)(3)-2(10)(3)=410</m></answer></exercise>
 
-      <exercise><statement><p>How many integers from 1 to 2500 are multiples of 3 or multiples of 5?</p></statement>
+      <exercise label="DMT_addrule_CYU_mult3or5"><statement><p>How many integers from 1 to 2500 are multiples of 3 or multiples of 5? <var /></p></statement>
+      <setup>
+    <var>
+    <condition number="1167">
+    <feedback>
+      <p>
+        Correct, <m>833+500-166=1167</m>.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="1333">
+    <feedback>
+      <p>
+        Incorrect. The set of multipples of 3 and the set of multiples of 5 are not disjoint. Make sure to subtract the number of integers in the intersection (those that multiples of 15).
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. See <xref ref="E_countingmultiples"/> for an example of how to do this problem.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>833+500-166=1167</m></answer></exercise>
 
-      <exercise><statement><p>How many integers from 1 to 2500 are multiples of 2 or multiples of 7?</p></statement>
+      <exercise label="DMT_addrule_CYU_mult2or7"><statement><p>How many integers from 1 to 2500 are multiples of 2 or multiples of 7? <var /></p></statement>
+      <setup>
+    <var>
+    <condition number="1429">
+    <feedback>
+      <p>
+        Correct, <m>1250+357-178=1429</m>.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="1607">
+    <feedback>
+      <p>
+        Incorrect. The set of multipples of 2 and the set of multiples of 7 are not disjoint. Make sure to subtract the number of integers in the intersection (those that multiples of 14).
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. See <xref ref="E_countingmultiples"/> for an example of how to do this problem.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>1250+357-178=1429</m></answer></exercise>
 
       

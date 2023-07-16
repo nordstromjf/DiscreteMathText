@@ -151,33 +151,33 @@
     <reading-questions>
       <title>Check Your Understanding</title>
 
-      <p>Let <m>A, B, C</m> be sets and <m>U</m> be the universal set.</p>
+      <p>Let <m>A, B, C</m> be sets.</p>
       
-      <exercise><statement><p>True or false: <m>A\cap C=C\cap A</m>.</p></statement>
+      <exercise label="DMT_propsets_CYU_AnCeCnA"><statement correct="yes"><p>True or false: <m>A\cap C=C\cap A</m>.</p></statement>
       <answer>True</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>A\cap(B\cup C)=(A\cap B)\cup (A\cap C)</m>.</p></statement>
+      <exercise label="DMT_propsets_CYU_AnBuCeAnBuAnC"><statement correct="yes"><p>True or false: <m>A\cap(B\cup C)=(A\cap B)\cup (A\cap C)</m>.</p></statement>
       <answer>True</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>A\cap(B\cup C)=(A\cap B)\cup C</m>.</p></statement>
+      <exercise label="DMT_propsets_CYU_AnBuCeAnBuC"><statement correct="no"><p>True or false: <m>A\cap(B\cup C)=(A\cap B)\cup C</m>.</p></statement>
       <answer>False</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>A\cup \emptyset=\emptyset</m>.</p></statement>
+      <exercise label="DMT_propsets_CYU_Auempeemp"><statement correct="no"><p>True or false: <m>A\cup \emptyset=\emptyset</m>.</p></statement>
       <answer>False</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>(A\cup B)^C=A^C\cup B^C</m>.</p></statement>
+      <exercise label="DMT_propsets_CYU_AuBceAcuBc"><statement correct="no"><p>True or false: <m>(A\cup B)^C=A^C\cup B^C</m>.</p></statement>
       <answer>False</answer></exercise>
       
-      <exercise><statement><p>True or false:  <m>B-A=A-B</m>.</p></statement>
+      <exercise label="DMT_propsets_CYU_BmAeAmB"><statement correct="no"><p>True or false:  <m>B-A=A-B</m>.</p></statement>
       <answer><p>False</p></answer></exercise>
 
-      <exercise><statement><p>True or false:  <m>\emptyset\subseteq U</m>.</p></statement>
+      <exercise label="DMT_propsets_CYU_empsU"><statement correct="yes"><p>Let <m>U</m> be the universal set. True or false:  <m>\emptyset\subseteq U</m>.</p></statement>
       <answer><p>True</p></answer></exercise>
 
-      <exercise><statement><p>True or false:  <m>A\subseteq A\cup(B\cap C)</m>.</p></statement>
+      <exercise label="DMT_propsets_CYU_AsAuBnC"><statement correct="yes"><p>True or false:  <m>A\subseteq A\cup(B\cap C)</m>.</p></statement>
       <answer><p>True</p></answer></exercise>
 
-      <exercise><statement><p>True or false:  <m>B\subseteq A\cup(B\cap C)</m>.</p></statement>
+      <exercise label="DMT_propsets_CYU_BsAuBnC"><statement correct="no"><p>True or false:  <m>B\subseteq A\cup(B\cap C)</m>.</p></statement>
       <answer><p>False</p></answer></exercise>
     
 

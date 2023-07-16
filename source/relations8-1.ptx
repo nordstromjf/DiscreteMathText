@@ -224,33 +224,74 @@
     <reading-questions>
       <title>Check Your Understanding</title>
 
-      <p>Let <m>A=\{1, 2, 3\}, B=\{2, 4, 6, 8\}, C=\{0, 1\}</m>.</p>
+      <!--<p>Let <m>A=\{1, 2, 3\}, B=\{2, 4, 6, 8\}, C=\{0, 1\}</m>.</p>-->
       
 
-      <exercise><statement><p>Give the ordered pairs for the relation on <m>A\times B</m> given by 
+      <exercise label="DMT_relations_CYU_rgeq"><statement><p>Let <m>A=\{1, 2, 3\}, B=\{2, 4, 6, 8\}</m>. Determine which of the ordered pairs are in the relation on <m>A\times B</m> given by 
       <me>a R b \Leftrightarrow a\geq b</me></p></statement>
+      <choices randomize="yes">
+        <choice correct="yes">
+          <statement><p><m>(2, 2)</m></p></statement>
+          <feedback><p>Correct, <m>2\geq 2</m></p></feedback>
+        </choice>
+        <choice correct="yes">
+          <statement><p><m>(3, 2)</m></p></statement>
+          <feedback><p>Correct, <m>3\geq 2</m></p></feedback>
+        </choice>
+        <choice>
+          <statement><p><m>(2, 6)</m></p></statement>
+          <feedback><p>Is <m>2 \geq 6</m>?</p></feedback>
+        </choice>
+        <choice>
+          <statement><p><m>(4, 2)</m></p></statement>
+          <feedback><p>Is 4 in <m>A</m>?</p></feedback>
+        </choice>
+      </choices>
       <answer><m>\{(2, 2), (3, 2)\}</m></answer></exercise>
 
-      <exercise><statement><p>Give the ordered pairs for the relation on <m>C</m> given by 
+      <exercise label="DMT_relations_CYU_rapbeven"><statement><p>Let <m>C=\{0, 1\}</m>. Determine which of the ordered pairs are in the relation for the relation on <m>C</m> given by 
       <me>a R b \Leftrightarrow a+b \text{ is even}</me></p></statement>
+      <choices randomize="yes">
+        <choice correct="yes">
+          <statement><p><m>(0, 0)</m></p></statement>
+          <feedback><p>Correct, <m>0+0=0</m>, which is even.</p></feedback>
+        </choice>
+        <choice correct="yes">
+          <statement><p><m>(1, 1)</m></p></statement>
+          <feedback><p>Correct, <m>1+1=2</m>, which is even.</p></feedback>
+        </choice>
+        <choice>
+          <statement><p><m>(0, 1)</m></p></statement>
+          <feedback><p>Is <m>0+1</m> even?</p></feedback>
+        </choice>
+        <choice>
+          <statement><p><m>(1, 3)</m></p></statement>
+          <feedback><p>Is 3 in <m>C</m>?</p></feedback>
+        </choice>
+      </choices>
       <answer><m>\{(0, 0), (1, 1)\}</m></answer></exercise>
 
-      <exercise><statement><p>True or false: the relation on <m>A\times B</m> given by 
+      <exercise label="DMT_relations_CYU_rgeqfun"><statement correct="no"><p>Let <m>A=\{1, 2, 3\}, B=\{2, 4, 6, 8\}</m>. True or false: the relation on <m>A\times B</m> given by 
       <me>a R b \Leftrightarrow a\geq b</me>
       is a function from <m>A</m> to <m>B</m>.</p></statement>
+      <feedback><p>1 does not map to anything in <m>B</m>.</p></feedback>
       <answer>False</answer></exercise>
 
-      <exercise><statement><p>True or false: the relation on <m>C</m> given by 
+      <exercise label="DMT_relations_CYU_rapbevenfun"><statement correct="yes"><p>Let <m>C=\{0, 1\}</m>. True or false: the relation on <m>C</m> given by 
       <me>a R b \Leftrightarrow a+b \text{ is even}</me>
       is a function on <m>C</m>.</p></statement>
       <answer>True</answer></exercise>
 
-      <exercise><statement><p>Give the ordered pairs for the relation on <m>B</m> given by 
-      <me>a R b \Leftrightarrow a\mid b</me></p></statement>
+      <exercise label="DMT_relations_CYU_opadivb"><statement><p>Let <m>B=\{2, 4, 6, 8\}</m>. Give the ordered pairs for the relation on <m>B</m> given by 
+      <me>a R b \Leftrightarrow a\mid b.</me></p></statement>
+      <response />
+       <hint><p>Your answer should have 8 ordered pairs.</p></hint>
       <answer><m>\{(2, 2), (2, 4), (2, 6), (2, 8), (4, 4), (4, 8), (6, 6), (8, 8)\}</m></answer></exercise>
 
-      <exercise><statement><p>Give the ordered pairs for the inverse relation, <m>R^{-1}</m> on <m>B</m> when <m>R</m> is given by 
-      <me>a R b \Leftrightarrow a\mid b</me></p></statement>
+      <exercise label="DMT_relations_CYU_invadivb"><statement><p>Give the ordered pairs for the inverse relation, <m>R^{-1}</m> on <m>B</m> when <m>R</m> is given by 
+      <me>a R b \Leftrightarrow a\mid b.</me></p></statement>
+      <response />
+       <hint><p>Your answer should have 8 ordered pairs.</p></hint>
       <answer><m>\{(2, 2), (4, 2), (6, 2), (8, 2), (4, 4), (8, 4), (6, 6), (8, 8)\}</m></answer></exercise>
       
     

@@ -136,34 +136,126 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.</
     <reading-questions>
       <title>Check Your Understanding</title>
 
-      <p>Let <m>A=\{1, 2, 3\}, B=\{2, 4, 6, 8\}, C=\{0, 1\}</m>.</p>
+      <!--<p>Let <m>A=\{1, 2, 3\}, B=\{2, 4, 6, 8\}, C=\{0, 1\}</m>.</p>-->
   
-      <exercise><statement><p>Determine if the relation is an equivalence relation. If it is, find the equivalence classes. <m>R</m> is the relation on <m>A</m> given by 
+      <exercise label="DMT_equivrel_CYU_leqA"><statement><p>Determine if the relation is an equivalence relation. If it is, give the number of distinct equivalence classes. <m>R</m> is the relation on <m>A=\{1, 2, 3\}</m> given by 
       <me>a R b \Leftrightarrow a\leq b.</me></p></statement>
+      <choices>
+        <choice correct="yes"><statement><p>Not an equivalence relation.</p></statement>
+        <feedback><p>Correct.</p></feedback>
+        </choice>
+        <choice><statement><p>Equivalence relation with 1 equivalence class.</p></statement>
+        <feedback><p><m>R</m> is not symmetric.</p></feedback>
+        </choice>
+        <choice><statement><p>Equivalence relation with 2 equivalence classes.</p></statement>
+        <feedback><p><m>R</m> is not symmetric.</p></feedback>
+        </choice>
+        <choice><statement><p>Equivalence relation with 3 equivalence classes.</p></statement>
+        <feedback><p><m>R</m> is not symmetric.</p></feedback>
+        </choice>
+      </choices>
      <answer>Not an equivalence relation.</answer></exercise>
 
-      <exercise><statement><p>Determine if the relation is an equivalence relation. If it is, find the equivalence classes. <m>R</m> is the relation on <m>C</m> given by 
+      <exercise label="DMT_equivrel_CYU_apbevenC"><statement><p>Determine if the relation is an equivalence relation. If it is, give the number of distinct equivalence classes. <m>R</m> is the relation on <m>C=\{0, 1\}</m> given by 
       <me>a R b \Leftrightarrow a+b \text{ is even}.</me></p></statement>
+      <choices>
+        <choice><statement><p>Not an equivalence relation.</p></statement>
+        <feedback><p>Check that <m>R</m> is reflexive, symmetric, and transitive.</p></feedback>
+        </choice>
+        <choice><statement><p>Equivalence relation with 1 equivalence class.</p></statement>
+        <feedback><p>Is <m>0 R 1</m>?</p></feedback>
+        </choice>
+        <choice correct="yes"><statement><p>Equivalence relation with 2 equivalence classes.</p></statement>
+        <feedback><p>Correct. The equivalence classes are <m>[0]=\{0\}, [1]=\{1\}</m>.</p></feedback>
+        </choice>
+      </choices>
       <answer>Equivalence relation. <m>[0]=\{0\}, [1]=\{1\}</m></answer></exercise>
 
-      <exercise><statement><p>Determine if the relation is an equivalence relation. If it is, find the equivalence classes. <m>R</m> is the relation on <m>B</m> given by 
+      <exercise label="DMT_equivrel_CYU_apbevenB"><statement><p>Determine if the relation is an equivalence relation. If it is, give the number of distinct equivalence classes. <m>R</m> is the relation on <m>B=\{2, 4, 6, 8\}</m> given by 
       <me>a R b \Leftrightarrow a+b \text{ is even}.</me></p></statement>
+      <choices>
+        <choice><statement><p>Not an equivalence relation.</p></statement>
+        <feedback><p>Check that <m>R</m> is reflexive, symmetric, and transitive.</p></feedback>
+        </choice>
+        <choice correct="yes"><statement><p>Equivalence relation with 1 equivalence class.</p></statement>
+        <feedback><p>Correct. The equivalence class is <m>[2]=\{2, 4, 6, 8\}</m>.</p></feedback>
+        </choice>
+        <choice><statement><p>Equivalence relation with 2 equivalence classes.</p></statement>
+        <feedback><p>Check that the sum of any two elements in <m>B</m> is even. Thus, all elements are related to each other.</p></feedback>
+        </choice>
+      </choices>
       <answer>Equivalence relation. <m>[2]=\{2, 4, 6, 8\}</m></answer></exercise>
 
-      <exercise><statement><p>Determine if the relation is an equivalence relation. If it is, find the equivalence classes. <m>R</m> is the relation on <m>A</m> given by 
+      <exercise label="DMT_equivrel_CYU_apbevenA"><statement><p>Determine if the relation is an equivalence relation. If it is, give the number of distinct equivalence classes. <m>R</m> is the relation on <m>A=\{1, 2, 3\}</m> given by 
       <me>a R b \Leftrightarrow a+b \text{ is even}.</me></p></statement>
+      <choices>
+        <choice><statement><p>Not an equivalence relation.</p></statement>
+        <feedback><p>Check that <m>R</m> is reflexive, symmetric, and transitive.</p></feedback>
+        </choice>
+        <choice><statement><p>Equivalence relation with 1 equivalence class.</p></statement>
+        <feedback><p>Note, <m>2+3</m> is odd, so 2 is not related to 3.</p></feedback>
+        </choice>
+        <choice correct="yes"><statement><p>Equivalence relation with 2 equivalence classes.</p></statement>
+        <feedback><p>Correct. The equivalence classes are <m>[1]=\{1, 3\}, [2]=\{2\}</m>.</p></feedback>
+        </choice>
+        <choice><statement><p>Equivalence relation with 3 equivalence classes.</p></statement>
+        <feedback><p>Note, <m>1+3</m> is even, so 1 is related to 3.</p></feedback>
+        </choice>
+      </choices>
       <answer>Equivalence relation. <m>[1]=\{1, 3\}, [2]=\{2\}</m></answer></exercise>
 
-      <exercise><statement><p>Determine if the relation is an equivalence relation. If it is, find the equivalence classes. <m>R</m> is the relation on <m>B</m> given by 
+      <exercise label="DMT_equivrel_CYU_divB"><statement><p>Determine if the relation is an equivalence relation. If it is, give the number of distinct equivalence classes. <m>R</m> is the relation on <m>B=\{2, 4, 6, 8\}</m> given by 
       <me>a R b \Leftrightarrow a\mid b.</me></p></statement>
+      <choices>
+        <choice correct="yes"><statement><p>Not an equivalence relation.</p></statement>
+        <feedback><p>Correct.</p></feedback>
+        </choice>
+        <choice><statement><p>Equivalence relation with 1 equivalence class.</p></statement>
+        <feedback><p><m>R</m> is not symmetric.</p></feedback>
+        </choice>
+        <choice><statement><p>Equivalence relation with 2 equivalence classes.</p></statement>
+        <feedback><p><m>R</m> is not symmetric.</p></feedback>
+        </choice>
+        <choice><statement><p>Equivalence relation with 4 equivalence classes.</p></statement>
+        <feedback><p><m>R</m> is not symmetric.</p></feedback>
+        </choice>
+      </choices>
       <answer>Not an equivalence relation.</answer></exercise>
 
-      <exercise><statement><p>Determine if the relation is an equivalence relation. If it is, find the equivalence classes. <m>R</m> is the relation on <m>\mathbb{Z}</m> given by 
+      <exercise label="DMT_equivrel_CYU_apbe0Z"><statement><p>Determine if the relation is an equivalence relation. If it is, give the number of distinct equivalence classes. <m>R</m> is the relation on <m>\mathbb{Z}</m> given by 
       <me>a R b \Leftrightarrow a+b=0.</me></p></statement>
+      <choices>
+        <choice correct="yes"><statement><p>Not an equivalence relation.</p></statement>
+        <feedback><p>Correct.</p></feedback>
+        </choice>
+        <choice><statement><p>Equivalence relation with 1 equivalence class.</p></statement>
+        <feedback><p><m>R</m> is not transitive.</p></feedback>
+        </choice>
+        <choice><statement><p>Equivalence relation with 2 equivalence classes.</p></statement>
+        <feedback><p><m>R</m> is not transitive.</p></feedback>
+        </choice>
+        <choice><statement><p>Equivalence relation with infinitely many equivalence classes.</p></statement>
+        <feedback><p><m>R</m> is not transitive.</p></feedback>
+        </choice>
+      </choices>
       <answer>Not an equivalence relation.</answer></exercise>
 
-      <exercise><statement><p>Determine if the relation is an equivalence relation. If it is, find the equivalence classes. <m>R</m> is the relation on <m>\mathbb{Z}</m> given by 
+      <exercise label="DMT_equivrel_CYU_mod4"><statement><p>Determine if the relation is an equivalence relation. If it is, find the equivalence classes. <m>R</m> is the relation on <m>\mathbb{Z}</m> given by 
       <me>a R b \Leftrightarrow a\equiv b \mod 4.</me></p></statement>
+      <choices>
+        <choice><statement><p>Not an equivalence relation.</p></statement>
+        <feedback><p>Check that <m>R</m> is reflexive, symmetric, and transitive.</p></feedback>
+        </choice>
+        <choice><statement><p>Equivalence relation with 1 equivalence class.</p></statement>
+        <feedback><p>Note, 2 is not equivalent to 1 mod 4. So there is more than one equivalence class.</p></feedback>
+        </choice>
+        <choice correct="yes"><statement ><p>Equivalence relation with 4 equivalence classes.</p></statement>
+        <feedback><p>Correct. The equivalence classes are <m>[0]=\{4k : k\in \mathbb{Z}\}</m>, <m>[1]=\{4k+1: k\in \mathbb{Z}\}</m>, <m>[2]=\{4k+2 : k\in \mathbb{Z}\}</m>, <m>[3]=\{4k+3 : k\in \mathbb{Z}\}</m>.</p></feedback>
+        </choice>
+        <choice><statement><p>Equivalence relation with infinitely many equivalence classes.</p></statement>
+        <feedback><p>Although each equivalence class has infinitely many elements, there are only as many equivalence classes as possible remainders when dividing by 4.</p></feedback>
+        </choice>
+      </choices>
       <answer>Equivalence relation. <m>[0]=\{4k : k\in \mathbb{Z}\}</m>, <m>[1]=\{4k+1: k\in \mathbb{Z}\}</m>, <m>[2]=\{4k+2 : k\in \mathbb{Z}\}</m>, <m>[3]=\{4k+3 : k\in \mathbb{Z}\}</m></answer></exercise>
 
 

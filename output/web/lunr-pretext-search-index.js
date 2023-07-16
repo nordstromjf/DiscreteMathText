@@ -5497,7 +5497,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "6.1",
   "title": "Set Theory",
-  "body": " Set Theory set theory  In this section we review the set theory definitions of element and subset from . Then we introduce several definitions for operations on sets.  We have been using some of the set notation throughout the course. We review it here for convenience. We usually use capital letters for sets, such as or . If we want to talk about elements in a set , we use the notation . We read this notation as is in or is an element of . If is not in , then we use the notation .  In general, if we use to describe a property of , we use the notation   and read the statement as \" in such that has property .\"  We gave an initial definition of subset in , and introduced the notation for subset: . Now that we will be working with sets more formally, we give a more formal definition of a subset, which will be easier to use in proofs.  is a subset subset of , , if for all , if then .  is a not a subset of , , if there exists , such that and .    We say two sets are equal , , if and .  is a proper subset proper subset of if and .   To important sets are the universal set set universal , , which is the set of everything, and the empty set empty set , , which is the set with nothing. The universal set depends on the context. For example, in calculus, the universal set is often the set of real numbers. In number theory, it could just be the integers. In computer science, it could be the set of sequences of 0 and 1. When dealing with abstract sets, we might want to define a convenient universal set.  We now give the element definitions for common set operations, along with the Venn diagrams for each of the sets.  The set is the union union of sets set union of sets and where union if and only if or .  In set notation, .   Venn diagram for     The set is the intersection intersection of sets set intersection of sets and where intersect if and only if and .  In set notation, .   Venn diagram for     The set is the set difference difference of sets set difference of sets and where minus ; the difference of set and if and only if and .  In set notation, .    Venn diagram for     A common alternate notation for set difference is .  The set is the complement complement of a set set complement of set where the complement of if and only if .  In set notation, .   Venn diagram for     Operations on Sets Let and .  Note, these sets can also be defined with interval notation: .  Find .   Find .   Find .   Find .   Find .    Let and and the Universal set .  Find .  Find .  Find .  Find .  Find .   We can take the union or intersection of many sets using notation similar to summation notation:    We can also take the intersection or union of infinitely many sets:   Let .  Find and .  Find .  Find .  Find .  Find .   The power set power set of a set is the set of all subsets of . We denote it the power set of .  Power Set Let . Find .  We need to find all the subsets of . The subsets are the elements of .  The subsets are . Thus, .  Let . Find .  Recall, in , we defined the Cartesian product of two sets, :  Cartesian Product of Sets Let and .  Find .    We say two sets and are disjoint set disjoint disjoint sets if .  A set of subsets of a set , , is a partition partition of if  ,  whenever .    What this really says is that a set of subsets will be a partition of if the union of the subsets is all of , and the subsets are pairwise disjoint set pairwise disjoint pairwise disjoint sets , meaning the intersection of any pair of sets is empty.  Partition  Let . Then let . We can see that is a partition of since and the subsets have no elements in common, hence they are disjoint.  Now if we let . We can see that is not a partition of since .   To prove , assume , show . Prove . Make sure in your proof you identify what you need to assume and what you need to show.  Find a counterexample to prove .   Check Your Understanding    Let  Match each set with its elements.                                      Let  True or false: . False.   Let  True or false: . False.   Let  True or false: . True.   Let  Find . The elements of the power set are subsets of .   Let  Give a partition of . Lots of subsets work, they just need to be disjoint and the union is all of . Lots of subsets work, they just need to be disjoint and the union is all of . For example,    For each of the following determine if . Then determine if .     .     .     .     .     .     Complete the following sentences without using the symbols , or .     if and only if ___.     if and only if ___.     if and only if ___.      Let , , and . Find each of the following:     .     .     .     .     .     .     .     .      Let the universal set be , and let , , and . Find each of the following:                                                        Determine whether each of the following are true or false.                                                   Let , , and .    Find , , and . Which of these sets are equal?    Find , , and . Which of these sets are equal?    Find and . Are these sets equal?     Determine if the following statements are true or false. Give a justification for you answer.    The number 0 is in .                     Let (the interval ) for all nonnegative integers .    Find .    Find .    Are pairwise disjoint? Explain.    Find .    Find .    Find .    Find .     Determine if the set of sets is a partition of the given set.    Is a partition of ?    Is a partition of ?    Is a partition of ?    Is a partition of ?    Is a partition of ?      Let   Is a partition of ? Explain your answer.    Let and . Find     .     .     .     .      "
+  "body": " Set Theory set theory  In this section we review the set theory definitions of element and subset from . Then we introduce several definitions for operations on sets.  We have been using some of the set notation throughout the course. We review it here for convenience. We usually use capital letters for sets, such as or . If we want to talk about elements in a set , we use the notation . We read this notation as is in or is an element of . If is not in , then we use the notation .  In general, if we use to describe a property of , we use the notation   and read the statement as \" in such that has property .\"  We gave an initial definition of subset in , and introduced the notation for subset: . Now that we will be working with sets more formally, we give a more formal definition of a subset, which will be easier to use in proofs.  is a subset subset of , , if for all , if then .  is a not a subset of , , if there exists , such that and .    We say two sets are equal , , if and .  is a proper subset proper subset of if and .   To important sets are the universal set set universal , , which is the set of everything, and the empty set empty set , , which is the set with nothing. The universal set depends on the context. For example, in calculus, the universal set is often the set of real numbers. In number theory, it could just be the integers. In computer science, it could be the set of sequences of 0 and 1. When dealing with abstract sets, we might want to define a convenient universal set.  We now give the element definitions for common set operations, along with the Venn diagrams for each of the sets.  The set is the union union of sets set union of sets and where union if and only if or .  In set notation, .   Venn diagram for     The set is the intersection intersection of sets set intersection of sets and where intersect if and only if and .  In set notation, .   Venn diagram for     The set is the set difference difference of sets set difference of sets and where minus ; the difference of set and if and only if and .  In set notation, .    Venn diagram for     A common alternate notation for set difference is .  The set is the complement complement of a set set complement of set where the complement of if and only if .  In set notation, .   Venn diagram for     Operations on Sets Let and .  Note, these sets can also be defined with interval notation: .  Find .   Find .   Find .   Find .   Find .    Let and and the Universal set .  Find .  Find .  Find .  Find .  Find .   We can take the union or intersection of many sets using notation similar to summation notation:    We can also take the intersection or union of infinitely many sets:   Let .  Find and .  Find .  Find .  Find .  Find .   The power set power set of a set is the set of all subsets of . We denote it the power set of .  Power Set Let . Find .  We need to find all the subsets of . The subsets are the elements of .  The subsets are . Thus, .  Let . Find .  Recall, in , we defined the Cartesian product of two sets, :  Cartesian Product of Sets Let and .  Find .    We say two sets and are disjoint set disjoint disjoint sets if .  A set of subsets of a set , , is a partition partition of if  ,  whenever .    What this really says is that a set of subsets will be a partition of if the union of the subsets is all of , and the subsets are pairwise disjoint set pairwise disjoint pairwise disjoint sets , meaning the intersection of any pair of sets is empty.  Partition  Let . Then let . We can see that is a partition of since and the subsets have no elements in common, hence they are disjoint.  Now if we let . We can see that is not a partition of since .   To prove , assume , show . Prove . Make sure in your proof you identify what you need to assume and what you need to show.  Find a counterexample to prove .   Check Your Understanding    Let  Match each set with its elements.                                      Let  True or false: . False.   Let  True or false: . False.   Let  True or false: . True.   Let Find . The elements of the power set are subsets of .   Let Give a partition of . Lots of subsets work, they just need to be disjoint and the union is all of . Lots of subsets work, they just need to be disjoint and the union is all of . For example,    For each of the following determine if . Then determine if .     .     .     .     .     .     Complete the following sentences without using the symbols , or .     if and only if ___.     if and only if ___.     if and only if ___.      Let , , and . Find each of the following:     .     .     .     .     .     .     .     .      Let the universal set be , and let , , and . Find each of the following:                                                        Determine whether each of the following are true or false.                                                   Let , , and .    Find , , and . Which of these sets are equal?    Find , , and . Which of these sets are equal?    Find and . Are these sets equal?     Determine if the following statements are true or false. Give a justification for you answer.    The number 0 is in .                     Let (the interval ) for all nonnegative integers .    Find .    Find .    Are pairwise disjoint? Explain.    Find .    Find .    Find .    Find .     Determine if the set of sets is a partition of the given set.    Is a partition of ?    Is a partition of ?    Is a partition of ?    Is a partition of ?    Is a partition of ?      Let   Is a partition of ? Explain your answer.    Let and . Find     .     .     .     .      "
 },
 {
   "id": "D_subset",
@@ -5767,7 +5767,7 @@ var ptx_lunr_docs = [
   "type": "Reading Question",
   "number": "6.1.5",
   "title": "",
-  "body": " Let  Find . The elements of the power set are subsets of . "
+  "body": " Let Find . The elements of the power set are subsets of . "
 },
 {
   "id": "DMT_sets_CYU_partA",
@@ -5776,7 +5776,7 @@ var ptx_lunr_docs = [
   "type": "Reading Question",
   "number": "6.1.6",
   "title": "",
-  "body": " Let  Give a partition of . Lots of subsets work, they just need to be disjoint and the union is all of . Lots of subsets work, they just need to be disjoint and the union is all of . For example, "
+  "body": " Let Give a partition of . Lots of subsets work, they just need to be disjoint and the union is all of . Lots of subsets work, they just need to be disjoint and the union is all of . For example, "
 },
 {
   "id": "exercise-324",
@@ -5884,7 +5884,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "6.2",
   "title": "Properties of Sets",
-  "body": " Properties of Sets set properties  Now that we have defined operations on sets such as union and intersection, we can look at various properties of these operations. In the last section we saw that intersection involves an and statement, while union involves an or. As we work with these properties we will be able to see connections between properties of sets and the logical connectives we saw in .  One of our goals in this section is to learn how to prove properties such as the following subset relations.  subset properties  Subset Relations   ; .  ; .  Transitivity If and then .    Recall from , we can think of the statement as the conditional statement, if then .   Proving Subset subset proof technique  To prove :  Assume .  Show .     Based in their definitions from , we can translate other sets into logical statements, as well. These translations are how we will prove properites of sets using elements.   Translating Set Statements to Logical Statements   if and only if or  if and only if and  if and only if and  if and only if  if and only if and     Proving a Subset Property  Prove .   Let . Then and . Thus, .  Therefore, .    Prove . Be sure to write what you want to assume and what you want to show.  Prove . Be sure to write what you want to assume and what you want to show.  Prove if and then . Be sure to write what you want to assume and what you want to show.   Proving Set Equality set proof of equality  To prove show  , ie, show if then , and  , ie, show if then .    Proving Two Sets are Equal  Prove .    : Let . Then or .  Case 1: . Then by the second subset relation. Similarly, . Thus, and .  Therefore, .  Case 2: . Then and . Then and by the second subset relation. Thus, and .  Therefore, .   : Let . Then and .  Case 1: . Then by the second subset relation (since we can do the union with any set).  Case 2: . Since by assumption, or . Since , .  Similarly, since , and , . Thus, .  Therefore, (again by the second subset relation).    The proofs in and are called element arguments. This type of proof uses elements and the definitions of sets and subsets. You start with being an element of the set of interest, use what you know about the set to then get as an element of another set. This technique generalizes to sets in all different mathematical contexts.  The next theorem shows that the empty set is a subset of every set.  For all sets , .  By contradiction, assume there exists a set such that .  This means there exists such that . But we cannot have . Hence, we have a contradiction. Therefore, .   There are many times in mathematics that we need to prove that a set is empty. We might need do do this if we need sets to be disjoint, or if we need to prove that there are no elements with a particular property. The common method for proving a set is empty is to use contradiction. Note, usually if we want to prove , we show both subsets ( , ), but we just showed , always. So we just need to show . We do this by contradiction.   Proving a Set is Empty empty set proof  To show :  Assume .  Reach a contradiction.    Proving a Set is Empty  Prove , where is the universal set.  Let . Then . But since contains everything, , which is a contradiction. Therefore, .    Prove . Be sure to write what you want to assume and what you want to show.  Prove if then . Note, you need to show . So how do you show a subset? What set should you assume is in?   Summary of Set Identities set identities  Let be the universal set, and , and subsets of the universal set.   Commutative Laws    Associative Laws    Distributive Laws     Identity Laws    Complement Laws    Double Complement Law    Idempotent Laws    Universal Bound Laws    DeMorgan's Laws    Absorption Laws    Complements    Set Difference Law      Check Your Understanding  Let be sets and be the universal set.  True or false: . True  True or false: . True  True or false: . False  True or false: . False  True or false: . False  True or false: . False  True or false: . True  True or false: . True  True or false: . False    Fill in the blanks.    To say that an element is in means that it is in ___ and in ___.    To say that an element is in means that it is in ___ or in ___.    To say that an element is in means that it is in ___ and not in ___.     Illustrate the distributive laws by drawing the Venn diagrams for the given sets.   and  and     Illustrate DeMorgan's laws by drawing the Venn diagrams for the given sets.   and  and     Use an element argument to prove for all sets and , . Be sure to write what you want to assume and what you want to show.    Use an element argument to prove for all sets and , . Be sure to write what you want to assume and what you want to show.    Use an element argument to prove for all sets , , and , if then . Be sure to write what you want to assume and what you want to show.    Use an element argument to prove for all sets , , and , if then . Be sure to write what you want to assume and what you want to show.    Use an element argument to prove for all sets and , if then . Be sure to write what you want to assume and what you want to show.    Use an element argument to prove for all sets and , .  Proving a set is the empty set often involves a proof by contradiction.   Use an element argument to prove for all sets and , if then .    Use an element argument to prove for all sets , , and , if and then .    "
+  "body": " Properties of Sets set properties  Now that we have defined operations on sets such as union and intersection, we can look at various properties of these operations. In the last section we saw that intersection involves an and statement, while union involves an or. As we work with these properties we will be able to see connections between properties of sets and the logical connectives we saw in .  One of our goals in this section is to learn how to prove properties such as the following subset relations.  subset properties  Subset Relations   ; .  ; .  Transitivity If and then .    Recall from , we can think of the statement as the conditional statement, if then .   Proving Subset subset proof technique  To prove :  Assume .  Show .     Based in their definitions from , we can translate other sets into logical statements, as well. These translations are how we will prove properites of sets using elements.   Translating Set Statements to Logical Statements   if and only if or  if and only if and  if and only if and  if and only if  if and only if and     Proving a Subset Property  Prove .   Let . Then and . Thus, .  Therefore, .    Prove . Be sure to write what you want to assume and what you want to show.  Prove . Be sure to write what you want to assume and what you want to show.  Prove if and then . Be sure to write what you want to assume and what you want to show.   Proving Set Equality set proof of equality  To prove show  , ie, show if then , and  , ie, show if then .    Proving Two Sets are Equal  Prove .    : Let . Then or .  Case 1: . Then by the second subset relation. Similarly, . Thus, and .  Therefore, .  Case 2: . Then and . Then and by the second subset relation. Thus, and .  Therefore, .   : Let . Then and .  Case 1: . Then by the second subset relation (since we can do the union with any set).  Case 2: . Since by assumption, or . Since , .  Similarly, since , and , . Thus, .  Therefore, (again by the second subset relation).    The proofs in and are called element arguments. This type of proof uses elements and the definitions of sets and subsets. You start with being an element of the set of interest, use what you know about the set to then get as an element of another set. This technique generalizes to sets in all different mathematical contexts.  The next theorem shows that the empty set is a subset of every set.  For all sets , .  By contradiction, assume there exists a set such that .  This means there exists such that . But we cannot have . Hence, we have a contradiction. Therefore, .   There are many times in mathematics that we need to prove that a set is empty. We might need do do this if we need sets to be disjoint, or if we need to prove that there are no elements with a particular property. The common method for proving a set is empty is to use contradiction. Note, usually if we want to prove , we show both subsets ( , ), but we just showed , always. So we just need to show . We do this by contradiction.   Proving a Set is Empty empty set proof  To show :  Assume .  Reach a contradiction.    Proving a Set is Empty  Prove , where is the universal set.  Let . Then . But since contains everything, , which is a contradiction. Therefore, .    Prove . Be sure to write what you want to assume and what you want to show.  Prove if then . Note, you need to show . So how do you show a subset? What set should you assume is in?   Summary of Set Identities set identities  Let be the universal set, and , and subsets of the universal set.   Commutative Laws    Associative Laws    Distributive Laws     Identity Laws    Complement Laws    Double Complement Law    Idempotent Laws    Universal Bound Laws    DeMorgan's Laws    Absorption Laws    Complements    Set Difference Law      Check Your Understanding  Let be sets.  True or false: . True  True or false: . True  True or false: . False  True or false: . False  True or false: . False  True or false: . False  Let be the universal set. True or false: . True  True or false: . True  True or false: . False    Fill in the blanks.    To say that an element is in means that it is in ___ and in ___.    To say that an element is in means that it is in ___ or in ___.    To say that an element is in means that it is in ___ and not in ___.     Illustrate the distributive laws by drawing the Venn diagrams for the given sets.   and  and     Illustrate DeMorgan's laws by drawing the Venn diagrams for the given sets.   and  and     Use an element argument to prove for all sets and , . Be sure to write what you want to assume and what you want to show.    Use an element argument to prove for all sets and , . Be sure to write what you want to assume and what you want to show.    Use an element argument to prove for all sets , , and , if then . Be sure to write what you want to assume and what you want to show.    Use an element argument to prove for all sets , , and , if then . Be sure to write what you want to assume and what you want to show.    Use an element argument to prove for all sets and , if then . Be sure to write what you want to assume and what you want to show.    Use an element argument to prove for all sets and , .  Proving a set is the empty set often involves a proof by contradiction.   Use an element argument to prove for all sets and , if then .    Use an element argument to prove for all sets , , and , if and then .    "
 },
 {
   "id": "E_subsetprop",
@@ -5932,9 +5932,9 @@ var ptx_lunr_docs = [
   "body": "Proving Two Sets are Equal  Prove .    : Let . Then or .  Case 1: . Then by the second subset relation. Similarly, . Thus, and .  Therefore, .  Case 2: . Then and . Then and by the second subset relation. Thus, and .  Therefore, .   : Let . Then and .  Case 1: . Then by the second subset relation (since we can do the union with any set).  Case 2: . Since by assumption, or . Since , .  Similarly, since , and , . Thus, .  Therefore, (again by the second subset relation).   "
 },
 {
-  "id": "p-1963",
+  "id": "p-1961",
   "level": "2",
-  "url": "propertiesofsets6-2.html#p-1963",
+  "url": "propertiesofsets6-2.html#p-1961",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -5986,81 +5986,81 @@ var ptx_lunr_docs = [
   "body": "Prove if then . Note, you need to show . So how do you show a subset? What set should you assume is in? "
 },
 {
-  "id": "exercise-335",
+  "id": "DMT_propsets_CYU_AnCeCnA",
   "level": "2",
-  "url": "propertiesofsets6-2.html#exercise-335",
+  "url": "propertiesofsets6-2.html#DMT_propsets_CYU_AnCeCnA",
   "type": "Reading Question",
   "number": "6.2.1",
   "title": "",
   "body": "True or false: . True "
 },
 {
-  "id": "exercise-336",
+  "id": "DMT_propsets_CYU_AnBuCeAnBuAnC",
   "level": "2",
-  "url": "propertiesofsets6-2.html#exercise-336",
+  "url": "propertiesofsets6-2.html#DMT_propsets_CYU_AnBuCeAnBuAnC",
   "type": "Reading Question",
   "number": "6.2.2",
   "title": "",
   "body": "True or false: . True "
 },
 {
-  "id": "exercise-337",
+  "id": "DMT_propsets_CYU_AnBuCeAnBuC",
   "level": "2",
-  "url": "propertiesofsets6-2.html#exercise-337",
+  "url": "propertiesofsets6-2.html#DMT_propsets_CYU_AnBuCeAnBuC",
   "type": "Reading Question",
   "number": "6.2.3",
   "title": "",
   "body": "True or false: . False "
 },
 {
-  "id": "exercise-338",
+  "id": "DMT_propsets_CYU_Auempeemp",
   "level": "2",
-  "url": "propertiesofsets6-2.html#exercise-338",
+  "url": "propertiesofsets6-2.html#DMT_propsets_CYU_Auempeemp",
   "type": "Reading Question",
   "number": "6.2.4",
   "title": "",
   "body": "True or false: . False "
 },
 {
-  "id": "exercise-339",
+  "id": "DMT_propsets_CYU_AuBceAcuBc",
   "level": "2",
-  "url": "propertiesofsets6-2.html#exercise-339",
+  "url": "propertiesofsets6-2.html#DMT_propsets_CYU_AuBceAcuBc",
   "type": "Reading Question",
   "number": "6.2.5",
   "title": "",
   "body": "True or false: . False "
 },
 {
-  "id": "exercise-340",
+  "id": "DMT_propsets_CYU_BmAeAmB",
   "level": "2",
-  "url": "propertiesofsets6-2.html#exercise-340",
+  "url": "propertiesofsets6-2.html#DMT_propsets_CYU_BmAeAmB",
   "type": "Reading Question",
   "number": "6.2.6",
   "title": "",
   "body": "True or false: . False "
 },
 {
-  "id": "exercise-341",
+  "id": "DMT_propsets_CYU_empsU",
   "level": "2",
-  "url": "propertiesofsets6-2.html#exercise-341",
+  "url": "propertiesofsets6-2.html#DMT_propsets_CYU_empsU",
   "type": "Reading Question",
   "number": "6.2.7",
   "title": "",
-  "body": "True or false: . True "
+  "body": "Let be the universal set. True or false: . True "
 },
 {
-  "id": "exercise-342",
+  "id": "DMT_propsets_CYU_AsAuBnC",
   "level": "2",
-  "url": "propertiesofsets6-2.html#exercise-342",
+  "url": "propertiesofsets6-2.html#DMT_propsets_CYU_AsAuBnC",
   "type": "Reading Question",
   "number": "6.2.8",
   "title": "",
   "body": "True or false: . True "
 },
 {
-  "id": "exercise-343",
+  "id": "DMT_propsets_CYU_BsAuBnC",
   "level": "2",
-  "url": "propertiesofsets6-2.html#exercise-343",
+  "url": "propertiesofsets6-2.html#DMT_propsets_CYU_BsAuBnC",
   "type": "Reading Question",
   "number": "6.2.9",
   "title": "",
@@ -6172,7 +6172,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "6.3",
   "title": "Algebraic Proofs and Counterexamples",
-  "body": " Algebraic Proofs and Counterexamples  The proofs we did in the last section involved looking at elements in sets. We could translate statements about sets into logical statement such as and s, or s, and conditionals. This allowed us to prove many other properties of sets, such as DeMorgan's Laws. But now that we have these properties, we can use them to prove new properties in a more algebraic way.  First we look at how to disprove statements involving sets. As we saw in , we can disprove a statement with a counterexample.  To prove a statement is false, give a specific counterexample. This means defining specific sets for which the property fails. If you are trying to decide if a statement is true or false, you can experiment with small sets, or you can draw a Venn diagram. The Venn diagram itself is not a proof or a counterexample. But it can help you decide which you should be trying to find.  Finding a Counterexample Prove or disprove if and , then .  This statement is false. Our counterexample should satisfy the negation of the statement: , and . Find small sets that satisfy the negation.  For example, we can try . Then , and . Thus, we have a counterexample.   Advice for finding counterexamples:  Write the negation of the statement so you can make sure your sets satisfy the appropriate conditions.  Most counterexamples for the types of statements we see in this chapter can be found without needing to find tricky sets. So just try something, it will probably work.  You might need to be careful about whether your sets intersect or not.  If you need counterexamples that involve set complements, it is helpful to define a small universal set such as . Then if , , which is easier to work with than, say, all the integers except 1, 2, 3.   Now we want to be able to use the list of properties from the end of the previous section, , to prove statements algebraically. In this case, we do not need to use elements, but we can use properties such as the distributive property or DeMorgan's Laws to rewrite our sets.  Algebraic Set Theory Proof  Prove using properties of sets.    Use identities from the to prove for all sets and ,  Prove or disprove for all sets and , . To decide if a statement is true or false, draw a Venn diagram for each side of the equality. If the two diagrams are the same, provide a proof. If the two diagrams are different, provide a specific counterexample.  Prove or disprove for all sets and , if then . It might be easier to define a small universal set for this one.  Recall the power set of a set , power set , is the set of all subsets of .  Power Set Proof  Prove for all sets and , .  Since we need to show two sets are equal we need to show both subsets. We should also note that elements of power sets are sets.  : Let . Then must be a subset of . Then and . This implies and . Thus, .  : Let . Then and . Then and . This implies must be a subset of . Thus, .    You might have noticed in this last proof that each of the subset proofs are really just the reverse of each other. If all the implications in our proof are really if and only if statements, then we can write the proof more succinctly as a single if and only if proof. We will show this technique in the next example. Be careful with if and only if proofs, though. Make sure that at each step both directions of the conditional are true. If you are unsure, you can always write you proof in two stages, as we did in the previous example. We generally use the symbol if and only if in proofs to mean if and only if in proofs.  Power Set Proof, Shortened  Prove for all sets , .      Since we are looking at the power set, we can prove a formula for counting the number of elements of a power set. In this proof we will revisit proof by induction. The number of elements in a set, , is denoted the number of elements in .  If has elements, then has elements.   We will prove this by induction on the number of elements, .  Base step: Let . Then since has 0 elements, . The only subset of the empty set is . Thus, . Hence, . Since , if , has elements.  Induction step: Assume if a set has elements, then has elements.  Show if a set has elements, then has elements.  Proof of induction step: Assume . Let , then where , the set of elements of except . Then has elements, so by the induction assumption, .  Now consider the subsets of . Each subset either contains or it doesn't. We know there are subsets that do not contain . We get all the subsets of that do contain by adding to the sets that don't contain . Thus, there are the same number of subsets that do contain as those that don't. Hence, we have subsets not containing and subsets containing .  Therefore, has subsets, hence has elements.   The next example demonstrates the proof of in a specific set.  Counting the Number of Subsets  Let . We can separate out the last element so, as in the proof of , .  We can look at the subsets of that do not contain 3: Now add 3 to each of these sets: You can check that we have all the possible subsets of .  If we count up the sets, we have subsets not containing 3, and subsets containing 3. Which gives us subsets of . Hence, .    Check Your Understanding  Let be sets and be the universal set.  Give a counterexample to disprove . There are many possible answers. is one.  Give a counterexample to disprove . There are many possible answers. is one.  Give a counterexample to disprove . .  Give a counterexample to disprove . There are many possible answers. is one.  Give a counterexample to disprove . There are many possible answers. is one.  Give a counterexample to disprove . There are many possible answers. is one.  True or false: If , then or . False  True or false: If , then and . True  Let . Find .     Find a counterexample to show the following statement is false:  For all sets , , and , .    Write a negation for the following statements. Indicate which is true, the statement or the negation. Justify your answer.     sets , a set such that .     a set such that sets , .      Let and for each integer let be the set of all subsets of that have elements. List the elements in . Is a partition of ?    Supply a reason for each step in the algebraic proof of the statement: For all sets , , and ,    Proof: Suppose , , and are sets. Then      by ___      by ___      by ___      Supply a reason for each step in the algebraic proof of the statement: For all sets , , and ,    Proof: Suppose , , and are sets. Then      by ___      by ___      by ___      by ___      by ___      by ___      by ___      Prove or disprove for all sets and , .    Prove or disprove for all sets and , .    Prove or disprove for all sets and , if then .    Prove or disprove for all sets and ,     Prove or disprove for all sets and , if then .    Prove or disprove for all sets and , .    Give an algebraic proof of the statement: For all sets and , .    Give an algebraic proof of the statement: For all sets and , .    Simplify the statement using algebraic properties: .    "
+  "body": " Algebraic Proofs and Counterexamples  The proofs we did in the last section involved looking at elements in sets. We could translate statements about sets into logical statement such as and s, or s, and conditionals. This allowed us to prove many other properties of sets, such as DeMorgan's Laws. But now that we have these properties, we can use them to prove new properties in a more algebraic way.  First we look at how to disprove statements involving sets. As we saw in , we can disprove a statement with a counterexample.  To prove a statement is false, give a specific counterexample. This means defining specific sets for which the property fails. If you are trying to decide if a statement is true or false, you can experiment with small sets, or you can draw a Venn diagram. The Venn diagram itself is not a proof or a counterexample. But it can help you decide which you should be trying to find.  Finding a Counterexample Prove or disprove if and , then .  This statement is false. Our counterexample should satisfy the negation of the statement: , and . Find small sets that satisfy the negation.  For example, we can try . Then , and . Thus, we have a counterexample.   Advice for finding counterexamples:  Write the negation of the statement so you can make sure your sets satisfy the appropriate conditions.  Most counterexamples for the types of statements we see in this chapter can be found without needing to find tricky sets. So just try something, it will probably work.  You might need to be careful about whether your sets intersect or not.  If you need counterexamples that involve set complements, it is helpful to define a small universal set such as . Then if , , which is easier to work with than, say, all the integers except 1, 2, 3.   Now we want to be able to use the list of properties from the end of the previous section, , to prove statements algebraically. In this case, we do not need to use elements, but we can use properties such as the distributive property or DeMorgan's Laws to rewrite our sets.  Algebraic Set Theory Proof  Prove using properties of sets.    Use identities from the to prove for all sets and ,  Prove or disprove for all sets and , . To decide if a statement is true or false, draw a Venn diagram for each side of the equality. If the two diagrams are the same, provide a proof. If the two diagrams are different, provide a specific counterexample.  Prove or disprove for all sets and , if then . It might be easier to define a small universal set for this one.  Recall the power set of a set , power set , is the set of all subsets of .  Power Set Proof  Prove for all sets and , .  Since we need to show two sets are equal we need to show both subsets. We should also note that elements of power sets are sets.  : Let . Then must be a subset of . Then and . This implies and . Thus, .  : Let . Then and . Then and . This implies must be a subset of . Thus, .    You might have noticed in this last proof that each of the subset proofs are really just the reverse of each other. If all the implications in our proof are really if and only if statements, then we can write the proof more succinctly as a single if and only if proof. We will show this technique in the next example. Be careful with if and only if proofs, though. Make sure that at each step both directions of the conditional are true. If you are unsure, you can always write you proof in two stages, as we did in the previous example. We generally use the symbol if and only if in proofs to mean if and only if in proofs.  Power Set Proof, Shortened  Prove for all sets , .      Since we are looking at the power set, we can prove a formula for counting the number of elements of a power set. In this proof we will revisit proof by induction. The number of elements in a set, , is denoted the number of elements in .  If has elements, then has elements.   We will prove this by induction on the number of elements, .  Base step: Let . Then since has 0 elements, . The only subset of the empty set is . Thus, . Hence, . Since , if , has elements.  Induction step: Assume if a set has elements, then has elements.  Show if a set has elements, then has elements.  Proof of induction step: Assume . Let , then where , the set of elements of except . Then has elements, so by the induction assumption, .  Now consider the subsets of . Each subset either contains or it doesn't. We know there are subsets that do not contain . We get all the subsets of that do contain by adding to the sets that don't contain . Thus, there are the same number of subsets that do contain as those that don't. Hence, we have subsets not containing and subsets containing .  Therefore, has subsets, hence has elements.   The next example demonstrates the proof of in a specific set.  Counting the Number of Subsets  Let . We can separate out the last element so, as in the proof of , .  We can look at the subsets of that do not contain 3: Now add 3 to each of these sets: You can check that we have all the possible subsets of .  If we count up the sets, we have subsets not containing 3, and subsets containing 3. Which gives us subsets of . Hence, .    Check Your Understanding  Let be sets and be the universal set.  True or false: If , then or . False  True or false: If , then and . True  Give a counterexample to disprove . There are many possible answers. is one.  Give a counterexample to disprove . There are many possible answers. is one.  Give a counterexample to disprove . .  Give a counterexample to disprove . There are many possible answers. is one.  Give a counterexample to disprove . There are many possible answers. is one.  Give a counterexample to disprove . There are many possible answers. is one.  Let . Find .     Correct, .    See .        Find a counterexample to show the following statement is false:  For all sets , , and , .    Write a negation for the following statements. Indicate which is true, the statement or the negation. Justify your answer.     sets , a set such that .     a set such that sets , .      Let and for each integer let be the set of all subsets of that have elements. List the elements in . Is a partition of ?    Supply a reason for each step in the algebraic proof of the statement: For all sets , , and ,    Proof: Suppose , , and are sets. Then      by ___      by ___      by ___      Supply a reason for each step in the algebraic proof of the statement: For all sets , , and ,    Proof: Suppose , , and are sets. Then      by ___      by ___      by ___      by ___      by ___      by ___      by ___      Prove or disprove for all sets and , .    Prove or disprove for all sets and , .    Prove or disprove for all sets and , if then .    Prove or disprove for all sets and ,     Prove or disprove for all sets and , if then .    Prove or disprove for all sets and , .    Give an algebraic proof of the statement: For all sets and , .    Give an algebraic proof of the statement: For all sets and , .    Simplify the statement using algebraic properties: .    "
 },
 {
   "id": "E_setcounterexample",
@@ -6265,85 +6265,85 @@ var ptx_lunr_docs = [
   "body": "Counting the Number of Subsets  Let . We can separate out the last element so, as in the proof of , .  We can look at the subsets of that do not contain 3: Now add 3 to each of these sets: You can check that we have all the possible subsets of .  If we count up the sets, we have subsets not containing 3, and subsets containing 3. Which gives us subsets of . Hence, .  "
 },
 {
-  "id": "exercise-355",
+  "id": "DMT_algsets_CYU_AsBuCor",
   "level": "2",
-  "url": "algebraicsets6-3.html#exercise-355",
+  "url": "algebraicsets6-3.html#DMT_algsets_CYU_AsBuCor",
   "type": "Reading Question",
   "number": "6.3.1",
   "title": "",
-  "body": "Give a counterexample to disprove . There are many possible answers. is one. "
+  "body": "True or false: If , then or . False "
 },
 {
-  "id": "exercise-356",
+  "id": "DMT_algsets_CYU_AsBnCand",
   "level": "2",
-  "url": "algebraicsets6-3.html#exercise-356",
+  "url": "algebraicsets6-3.html#DMT_algsets_CYU_AsBnCand",
   "type": "Reading Question",
   "number": "6.3.2",
   "title": "",
-  "body": "Give a counterexample to disprove . There are many possible answers. is one. "
+  "body": "True or false: If , then and . True "
 },
 {
-  "id": "exercise-357",
+  "id": "DMT_algsets_CYU_ceAnBuC",
   "level": "2",
-  "url": "algebraicsets6-3.html#exercise-357",
+  "url": "algebraicsets6-3.html#DMT_algsets_CYU_ceAnBuC",
   "type": "Reading Question",
   "number": "6.3.3",
   "title": "",
-  "body": "Give a counterexample to disprove . . "
+  "body": "Give a counterexample to disprove . There are many possible answers. is one. "
 },
 {
-  "id": "exercise-358",
+  "id": "DMT_algsets_CYU_ceAuempe",
   "level": "2",
-  "url": "algebraicsets6-3.html#exercise-358",
+  "url": "algebraicsets6-3.html#DMT_algsets_CYU_ceAuempe",
   "type": "Reading Question",
   "number": "6.3.4",
   "title": "",
   "body": "Give a counterexample to disprove . There are many possible answers. is one. "
 },
 {
-  "id": "exercise-359",
+  "id": "DMT_algsets_CYU_ceAuempne",
   "level": "2",
-  "url": "algebraicsets6-3.html#exercise-359",
+  "url": "algebraicsets6-3.html#DMT_algsets_CYU_ceAuempne",
   "type": "Reading Question",
   "number": "6.3.5",
   "title": "",
-  "body": "Give a counterexample to disprove . There are many possible answers. is one. "
+  "body": "Give a counterexample to disprove . . "
 },
 {
-  "id": "exercise-360",
+  "id": "DMT_algsets_CYU_ceAuBC",
   "level": "2",
-  "url": "algebraicsets6-3.html#exercise-360",
+  "url": "algebraicsets6-3.html#DMT_algsets_CYU_ceAuBC",
   "type": "Reading Question",
   "number": "6.3.6",
   "title": "",
   "body": "Give a counterexample to disprove . There are many possible answers. is one. "
 },
 {
-  "id": "exercise-361",
+  "id": "DMT_algsets_CYU_ceBmA",
   "level": "2",
-  "url": "algebraicsets6-3.html#exercise-361",
+  "url": "algebraicsets6-3.html#DMT_algsets_CYU_ceBmA",
   "type": "Reading Question",
   "number": "6.3.7",
   "title": "",
-  "body": "True or false: If , then or . False "
+  "body": "Give a counterexample to disprove . There are many possible answers. is one. "
 },
 {
-  "id": "exercise-362",
+  "id": "DMT_algsets_CYU_ceBsAuBnC",
   "level": "2",
-  "url": "algebraicsets6-3.html#exercise-362",
+  "url": "algebraicsets6-3.html#DMT_algsets_CYU_ceBsAuBnC",
   "type": "Reading Question",
   "number": "6.3.8",
   "title": "",
-  "body": "True or false: If , then and . True "
+  "body": "Give a counterexample to disprove . There are many possible answers. is one. "
 },
 {
-  "id": "exercise-363",
+  "id": "DMT_algsets_CYU_ordpower",
   "level": "2",
-  "url": "algebraicsets6-3.html#exercise-363",
+  "url": "algebraicsets6-3.html#DMT_algsets_CYU_ordpower",
   "type": "Reading Question",
   "number": "6.3.9",
   "title": "",
-  "body": "Let . Find . "
+  "body": "Let . Find .     Correct, .    See .    "
 },
 {
   "id": "exercise-364",
@@ -6478,7 +6478,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "7.1",
   "title": "Functions",
-  "body": " Functions function  Functions are familar mathematical objects from algebra and calculus. We also saw them in .  A function function , , is a map in which each input is related to one and only one output.  We say is the domain domain and is the codomain codomain of .   Exploring the Definition of a Function  Let be a map as shown in the figure.       shows a map that is not a function since maps to two different outputs.  Let be a map as shown in the figure.       shows a map that is not a function since does not map to any output.  Let be a map as shown in the figure.       shows a map that is a function since each maps to exactly one .   For a given , is  the output of ,  the value of at ,  the image of under .  The image image or range range of a set under is the set of outputs of corresponding to inputs from . In notation the image of  If we say is a preimage preimage or an inverse image inverse image of .  Since can have several preimages, we usually care about the set of all of them.  Let be a function. The set is the preimage preimage of .  Define by where is the remainder when is divided by 3.   Find .  What is the image of under ?  What is the set of preimages of 0? In other words, find the preimage of 0. To find the set of preimages of 0, find all integers that map to 0   If we have a map from a finite set to a finite set, we can draw an arrow diagram arrow diagram in which we use arrows to represent the map from to , as in .  Arrow Diagram  Let and . Let be the function given by the following arrow diagram.       Find the domain of .   Find the codomain of .   Find the range or image of .   Find .   Find the preimage or inverse image of .     Finding Sets for a Function Let be given by .  Find the domain of .   Find the codomain of .   Find the range of .   Find the preimage (or inverse image) of .    Let be functions from to . Then if for all .  In this course we want to look at functions to and from sets other than just the real numbers. For example, we may have functions from finite sets to finite sets.  More Functions  A sequence is a function from to . For example, .  We may also have functions involving Cartesian products of sets. For example, given by .   Define by .   Find .  What is the image of under ?  What is the preimage of 0? The preimage is a set, so find all ordered pairs that map to 0.   Define by .   Find .  What is the image of under ? Is in the image? Is in the image?  What is the preimage of ? The preimage is a set, so find all integers that map to .   Since a function needs to satisfy the property that each can only map to one , we say a function is well-defined well-defined function if whenever , . Most of the functions you've seen in algebra and calculus are clearly well-defined since when , . This property is really only interesting when elements of have multiple representations. In other words, when two equal elements in have two different forms. The most familiar set where this happens is . For example, .  A Map That is Not Well-Defined  Let be given by .  Then in , but and . Thus, but .  Thus is not well-defined, and hence, is not a function.  Let be given by . Show is not well-defined by finding two equivalent fractions in that map to two different integers.   Check Your Understanding  Let .  Let be given by . True or false: is a function. True  Let be given by . True or false: is a function. True  Let be given by . True or false: is a function. False. don't map anywhere.  Let be given by . True or false: is a function. True  Let be given by . True or false: is a function. False. 0 maps to two different values.  Let be given by . Find the preimage of .     Let and . Define the function as the set of ordered pairs     Write the domain and codomain of .    What is the range of ?    Is 3 an inverse image of ? Is 1 an inverse image of ?    What is the inverse image of ? What is the inverse image of ?    Represent as an arrow diagram.      Determine if the following are true or false. Justify your answer.    If two elements in the domain of a function are equal, then their images in the codomain are equal.    If two elements in the codomain of a function are equal, then their preimages in the domain are equal.    A function can have the same output for more than one input.    A function can have the same input for more than one output.      Let and define a function where for all sets in ,     Find .    Find .    Find .     .      Let be the set of all finite subsets of positive integers. Let be the function where for each positive integer , is the set of positive divisors of .    Find .    Find .    Find .    Find .    Find .    Find .      Define the function where for all ordered pairs of integers, .    Find .    Find .    Find .    Find .      Let and . Define by and .    Draw an arrow diagram for .    Let , and . Find , and .     Show that each of the following maps is not a function by showing it is not well-defined.    Define by the rule for all integers and with .    Define by the rule for all integers and with .     "
+  "body": " Functions function  Functions are familar mathematical objects from algebra and calculus. We also saw them in .  A function function , , is a map in which each input is related to one and only one output.  We say is the domain domain and is the codomain codomain of .   Exploring the Definition of a Function  Let be a map as shown in the figure.       shows a map that is not a function since maps to two different outputs.  Let be a map as shown in the figure.       shows a map that is not a function since does not map to any output.  Let be a map as shown in the figure.       shows a map that is a function since each maps to exactly one .   For a given , is  the output of ,  the value of at ,  the image of under .  The image image or range range of a set under is the set of outputs of corresponding to inputs from . In notation the image of  If we say is a preimage preimage or an inverse image inverse image of .  Since can have several preimages, we usually care about the set of all of them.  Let be a function. The set is the preimage preimage of .  Define by where is the remainder when is divided by 3.   Find .  What is the image of under ?  What is the set of preimages of 0? In other words, find the preimage of 0. To find the set of preimages of 0, find all integers that map to 0   If we have a map from a finite set to a finite set, we can draw an arrow diagram arrow diagram in which we use arrows to represent the map from to , as in .  Arrow Diagram  Let and . Let be the function given by the following arrow diagram.       Find the domain of .   Find the codomain of .   Find the range or image of .   Find .   Find the preimage or inverse image of .     Finding Sets for a Function Let be given by .  Find the domain of .   Find the codomain of .   Find the range of .   Find the preimage (or inverse image) of .    Let be functions from to . Then if for all .  In this course we want to look at functions to and from sets other than just the real numbers. For example, we may have functions from finite sets to finite sets.  More Functions  A sequence is a function from to . For example, .  We may also have functions involving Cartesian products of sets. For example, given by .   Define by .   Find .  What is the image of under ?  What is the preimage of 0? The preimage is a set, so find all ordered pairs that map to 0.   Define by .   Find .  What is the image of under ? Is in the image? Is in the image?  What is the preimage of ? The preimage is a set, so find all integers that map to .   Since a function needs to satisfy the property that each can only map to one , we say a function is well-defined well-defined function if whenever , . Most of the functions you've seen in algebra and calculus are clearly well-defined since when , . This property is really only interesting when elements of have multiple representations. In other words, when two equal elements in have two different forms. The most familiar set where this happens is . For example, .  A Map That is Not Well-Defined  Let be given by .  Then in , but and . Thus, but .  Thus is not well-defined, and hence, is not a function.  Let be given by . Show is not well-defined by finding two equivalent fractions in that map to two different integers.   Check Your Understanding    Let .  Let be given by .  True or false: is a function. True   Let .  Let be given by .  True or false: is a function. True   Let .  Let be given by .  True or false: is a function. don't map anywhere. False. don't map anywhere.   Let .  Let be given by .  True or false: is a function. True   Let .  Let be given by .  True or false: is a function. 0 maps to two different values. False. 0 maps to two different values.   Let .  Let be given by .  Which of the following are in the preimage of .   (1, 0)   is in the preimage.    (2, 0)   is in the preimage.    (3, 0)   is in the preimage.    (0, 0)   is not in .    0   is not in .    (0, 1)   is not in , and would not map to 0.    1   is not in .       Let and . Define the function as the set of ordered pairs     Write the domain and codomain of .    What is the range of ?    Is 3 an inverse image of ? Is 1 an inverse image of ?    What is the inverse image of ? What is the inverse image of ?    Represent as an arrow diagram.      Determine if the following are true or false. Justify your answer.    If two elements in the domain of a function are equal, then their images in the codomain are equal.    If two elements in the codomain of a function are equal, then their preimages in the domain are equal.    A function can have the same output for more than one input.    A function can have the same input for more than one output.      Let and define a function where for all sets in ,     Find .    Find .    Find .     .      Let be the set of all finite subsets of positive integers. Let be the function where for each positive integer , is the set of positive divisors of .    Find .    Find .    Find .    Find .    Find .    Find .      Define the function where for all ordered pairs of integers, .    Find .    Find .    Find .    Find .      Let and . Define by and .    Draw an arrow diagram for .    Let , and . Find , and .     Show that each of the following maps is not a function by showing it is not well-defined.    Define by the rule for all integers and with .    Define by the rule for all integers and with .     "
 },
 {
   "id": "D_function",
@@ -6499,9 +6499,9 @@ var ptx_lunr_docs = [
   "body": "Exploring the Definition of a Function  Let be a map as shown in the figure.       shows a map that is not a function since maps to two different outputs.  Let be a map as shown in the figure.       shows a map that is not a function since does not map to any output.  Let be a map as shown in the figure.       shows a map that is a function since each maps to exactly one .  "
 },
 {
-  "id": "p-2089",
+  "id": "p-2090",
   "level": "2",
-  "url": "functions7-1.html#p-2089",
+  "url": "functions7-1.html#p-2090",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -6517,9 +6517,9 @@ var ptx_lunr_docs = [
   "body": "The image image or range range of a set under is the set of outputs of corresponding to inputs from . In notation the image of "
 },
 {
-  "id": "p-2091",
+  "id": "p-2092",
   "level": "2",
-  "url": "functions7-1.html#p-2091",
+  "url": "functions7-1.html#p-2092",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -6544,9 +6544,9 @@ var ptx_lunr_docs = [
   "body": "Define by where is the remainder when is divided by 3.   Find .  What is the image of under ?  What is the set of preimages of 0? In other words, find the preimage of 0. To find the set of preimages of 0, find all integers that map to 0  "
 },
 {
-  "id": "p-2099",
+  "id": "p-2100",
   "level": "2",
-  "url": "functions7-1.html#p-2099",
+  "url": "functions7-1.html#p-2100",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -6598,9 +6598,9 @@ var ptx_lunr_docs = [
   "body": "Define by .   Find .  What is the image of under ? Is in the image? Is in the image?  What is the preimage of ? The preimage is a set, so find all integers that map to .  "
 },
 {
-  "id": "p-2125",
+  "id": "p-2126",
   "level": "2",
-  "url": "functions7-1.html#p-2125",
+  "url": "functions7-1.html#p-2126",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -6625,58 +6625,58 @@ var ptx_lunr_docs = [
   "body": "Let be given by . Show is not well-defined by finding two equivalent fractions in that map to two different integers. "
 },
 {
-  "id": "exercise-378",
+  "id": "DMT_functions_CYU_f1e4",
   "level": "2",
-  "url": "functions7-1.html#exercise-378",
+  "url": "functions7-1.html#DMT_functions_CYU_f1e4",
   "type": "Reading Question",
   "number": "7.1.1",
   "title": "",
-  "body": "Let be given by . True or false: is a function. True "
+  "body": " Let .  Let be given by .  True or false: is a function. True "
 },
 {
-  "id": "exercise-379",
+  "id": "DMT_functions_CYU_f1e2",
   "level": "2",
-  "url": "functions7-1.html#exercise-379",
+  "url": "functions7-1.html#DMT_functions_CYU_f1e2",
   "type": "Reading Question",
   "number": "7.1.2",
   "title": "",
-  "body": "Let be given by . True or false: is a function. True "
+  "body": " Let .  Let be given by .  True or false: is a function. True "
 },
 {
-  "id": "exercise-380",
+  "id": "DMT_functions_CYU_f2e0",
   "level": "2",
-  "url": "functions7-1.html#exercise-380",
+  "url": "functions7-1.html#DMT_functions_CYU_f2e0",
   "type": "Reading Question",
   "number": "7.1.3",
   "title": "",
-  "body": "Let be given by . True or false: is a function. False. don't map anywhere. "
+  "body": " Let .  Let be given by .  True or false: is a function. don't map anywhere. False. don't map anywhere. "
 },
 {
-  "id": "exercise-381",
+  "id": "DMT_functions_CYU_f2ef8e1",
   "level": "2",
-  "url": "functions7-1.html#exercise-381",
+  "url": "functions7-1.html#DMT_functions_CYU_f2ef8e1",
   "type": "Reading Question",
   "number": "7.1.4",
   "title": "",
-  "body": "Let be given by . True or false: is a function. True "
+  "body": " Let .  Let be given by .  True or false: is a function. True "
 },
 {
-  "id": "exercise-382",
+  "id": "DMT_functions_CYU_f0e0",
   "level": "2",
-  "url": "functions7-1.html#exercise-382",
+  "url": "functions7-1.html#DMT_functions_CYU_f0e0",
   "type": "Reading Question",
   "number": "7.1.5",
   "title": "",
-  "body": "Let be given by . True or false: is a function. False. 0 maps to two different values. "
+  "body": " Let .  Let be given by .  True or false: is a function. 0 maps to two different values. False. 0 maps to two different values. "
 },
 {
-  "id": "exercise-383",
+  "id": "DMT_functions_CYU_facecpreim",
   "level": "2",
-  "url": "functions7-1.html#exercise-383",
+  "url": "functions7-1.html#DMT_functions_CYU_facecpreim",
   "type": "Reading Question",
   "number": "7.1.6",
   "title": "",
-  "body": "Let be given by . Find the preimage of . "
+  "body": " Let .  Let be given by .  Which of the following are in the preimage of .   (1, 0)   is in the preimage.    (2, 0)   is in the preimage.    (3, 0)   is in the preimage.    (0, 0)   is not in .    0   is not in .    (0, 1)   is not in , and would not map to 0.    1   is not in .   "
 },
 {
   "id": "exercise-384",
@@ -6895,9 +6895,9 @@ var ptx_lunr_docs = [
   "body": "If is a one-to-one correspondence, then there exists a function such that function inverse the inverse of function  "
 },
 {
-  "id": "p-2214",
+  "id": "p-2235",
   "level": "2",
-  "url": "onetooneonto7-2.html#p-2214",
+  "url": "onetooneonto7-2.html#p-2235",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -6940,108 +6940,108 @@ var ptx_lunr_docs = [
   "body": "Which of the functions from the activities, , , , and are bijections? If a function is a bijection, find its inverse function. Is the inverse one-to-one and onto? "
 },
 {
-  "id": "exercise-391",
+  "id": "DMT_1to1_CYU_1to1R5xm2",
   "level": "2",
-  "url": "onetooneonto7-2.html#exercise-391",
+  "url": "onetooneonto7-2.html#DMT_1to1_CYU_1to1R5xm2",
   "type": "Reading Question",
   "number": "7.2.1",
   "title": "",
   "body": "True or false: is one-to-one. True "
 },
 {
-  "id": "exercise-392",
+  "id": "DMT_1to1_CYU_ontoR5xm2",
   "level": "2",
-  "url": "onetooneonto7-2.html#exercise-392",
+  "url": "onetooneonto7-2.html#DMT_1to1_CYU_ontoR5xm2",
   "type": "Reading Question",
   "number": "7.2.2",
   "title": "",
   "body": "True or false: is onto . True "
 },
 {
-  "id": "exercise-393",
+  "id": "DMT_1to1_CYU_1to1Z5xm2",
   "level": "2",
-  "url": "onetooneonto7-2.html#exercise-393",
+  "url": "onetooneonto7-2.html#DMT_1to1_CYU_1to1Z5xm2",
   "type": "Reading Question",
   "number": "7.2.3",
   "title": "",
   "body": "True or false: is one-to-one. True "
 },
 {
-  "id": "exercise-394",
+  "id": "DMT_1to1_CYU_ontoZ5xm2",
   "level": "2",
-  "url": "onetooneonto7-2.html#exercise-394",
+  "url": "onetooneonto7-2.html#DMT_1to1_CYU_ontoZ5xm2",
   "type": "Reading Question",
   "number": "7.2.4",
   "title": "",
   "body": "True or false: is onto . False "
 },
 {
-  "id": "exercise-395",
+  "id": "DMT_1to1_CYU_1to1Rx3m3",
   "level": "2",
-  "url": "onetooneonto7-2.html#exercise-395",
+  "url": "onetooneonto7-2.html#DMT_1to1_CYU_1to1Rx3m3",
   "type": "Reading Question",
   "number": "7.2.5",
   "title": "",
   "body": "True or false: is one-to-one. True "
 },
 {
-  "id": "exercise-396",
+  "id": "DMT_1to1_CYU_ontoRx3m3",
   "level": "2",
-  "url": "onetooneonto7-2.html#exercise-396",
+  "url": "onetooneonto7-2.html#DMT_1to1_CYU_ontoRx3m3",
   "type": "Reading Question",
   "number": "7.2.6",
   "title": "",
   "body": "True or false: is onto . True "
 },
 {
-  "id": "exercise-397",
+  "id": "DMT_1to1_CYU_1to1Zx3m3",
   "level": "2",
-  "url": "onetooneonto7-2.html#exercise-397",
+  "url": "onetooneonto7-2.html#DMT_1to1_CYU_1to1Zx3m3",
   "type": "Reading Question",
   "number": "7.2.7",
   "title": "",
   "body": "True or false: is one-to-one. True "
 },
 {
-  "id": "exercise-398",
+  "id": "DMT_1to1_CYU_ontoZx3m3",
   "level": "2",
-  "url": "onetooneonto7-2.html#exercise-398",
+  "url": "onetooneonto7-2.html#DMT_1to1_CYU_ontoZx3m3",
   "type": "Reading Question",
   "number": "7.2.8",
   "title": "",
   "body": "True or false: is onto . False "
 },
 {
-  "id": "exercise-399",
+  "id": "DMT_1to1_CYU_1to1ZZx",
   "level": "2",
-  "url": "onetooneonto7-2.html#exercise-399",
+  "url": "onetooneonto7-2.html#DMT_1to1_CYU_1to1ZZx",
   "type": "Reading Question",
   "number": "7.2.9",
   "title": "",
   "body": "True or false: is one-to-one. False "
 },
 {
-  "id": "exercise-400",
+  "id": "DMT_1to1_CYU_ontoZZx",
   "level": "2",
-  "url": "onetooneonto7-2.html#exercise-400",
+  "url": "onetooneonto7-2.html#DMT_1to1_CYU_ontoZZx",
   "type": "Reading Question",
   "number": "7.2.10",
   "title": "",
   "body": "True or false: is onto . True "
 },
 {
-  "id": "exercise-401",
+  "id": "DMT_1to1_CYU_1to1ZZyx",
   "level": "2",
-  "url": "onetooneonto7-2.html#exercise-401",
+  "url": "onetooneonto7-2.html#DMT_1to1_CYU_1to1ZZyx",
   "type": "Reading Question",
   "number": "7.2.11",
   "title": "",
   "body": "True or false: is one-to-one. True "
 },
 {
-  "id": "exercise-402",
+  "id": "DMT_1to1_CYU_ontoZZyx",
   "level": "2",
-  "url": "onetooneonto7-2.html#exercise-402",
+  "url": "onetooneonto7-2.html#DMT_1to1_CYU_ontoZZyx",
   "type": "Reading Question",
   "number": "7.2.12",
   "title": "",
@@ -7126,7 +7126,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "8.1",
   "title": "Relations on Sets",
-  "body": " Relations on Sets relation  We first saw relations in . In this section we revisit the definition, look at several examples, and connect the idea of a function to a relation.  A relation relation , , on , is a set of ordered pairs in .   Simply put, a relation is just a subset, , of .  We often use the notation is related to to mean is related to . In particular, if and only if .  Relation Defined by a Set  Let , define the relation on by Then , for example. But 3 is not related to 1, for example.   Relation Defined by Less Than  We can also define relations with familiar mathematical relationships.  Let , define the relation on by  Find the set of ordered pairs for .    As with functions, we can draw an arrow diagram from to representing the relationship. We have an arrow from to if , or .  The arrow diagram for the relation a< b , given in is given in the following figure.   Arrow diagram for less than.     A function is a relation. Let . Then define by   We can see that is not a function since an element of can map to two different elements of : .  A Function as a Relation  Let be given by . Let be the relation given by :  True or false: .  True  True or false: .  True  True or false: .  False  True or false: .  True  True or false: .  False  True or false: .  False    Determining if a Relation Is a Function relation function  A relation is a function if the following two properties hold:  For every there must be a related to .  Each can only be related in one .   We can translate this idea into the ordered pair notation:  For every there must be a such that .  If and then .    Let be a relation on . The inverse relation inverse relation , , on is  In other words, if and only if .  Inverse Relation Let . This is the relation in .  Find .    Let and . Define the relation from to by  Find the set of ordered pairs given by this relation.  Draw the arrow diagram for this relation.  Give the inverse relation for . Remember, it is a set of ordered pairs.  Is the relation a function?  A relation on is a relation on . We also say a relation from to .  We can use a directed graph to represent a relation on . We label the vertices with the elements from and draw and arrow from to if . Note, if , then we get a loop at .  Directed Graph of a Relation  Let . Let . Then we get the following directed graph for .   Directed graph for less than.     If we now want the relations for less than or equal to, , we have the following directed graph.   Directed graph for less than or equal.      Let . Define the relation on by  Find the set of ordered pairs given by this relation.  Draw the directed graph for this relation.  Give the inverse relation for . Remember, it is a set of ordered pairs.  Is the relation a function?  Let . Define the relation on by  Find the set of ordered pairs given by this relation.  Draw the directed graph for this relation.  Give the inverse relation for . Remember, it is a set of ordered pairs.  Is the relation a function?   Check Your Understanding  Let .  Give the ordered pairs for the relation on given by  Give the ordered pairs for the relation on given by  True or false: the relation on given by is a function from to . False  True or false: the relation on given by is a function on . True  Give the ordered pairs for the relation on given by  Give the ordered pairs for the inverse relation, on when is given by     Define the congruence modulo 3 relation, , on by       Is ? Is ? Is ? Is ?    List five integers such that .    List five integers such that .    List five integers such that .      Let and be the power set of . Define the relation on by     Is ?    Is ?    Is ?      Define the relation, , on by       Is ?    Is ?    Is ?    Is ?      Let and and let be the less than relation. That is, for all ,     Find the set of ordered pairs in .    Find the set of ordered pairs in .      Let and and let be the divides relation. That is, for all ,     Find the set of ordered pairs in .    Find the set of ordered pairs in .      Let . Define the relation on by . Draw the directed graph for .    Let . Define the relation on by Draw the directed graph for .    Let . Define the relation on by Draw the directed graph for .    "
+  "body": " Relations on Sets relation  We first saw relations in . In this section we revisit the definition, look at several examples, and connect the idea of a function to a relation.  A relation relation , , on , is a set of ordered pairs in .   Simply put, a relation is just a subset, , of .  We often use the notation is related to to mean is related to . In particular, if and only if .  Relation Defined by a Set  Let , define the relation on by Then , for example. But 3 is not related to 1, for example.   Relation Defined by Less Than  We can also define relations with familiar mathematical relationships.  Let , define the relation on by  Find the set of ordered pairs for .    As with functions, we can draw an arrow diagram from to representing the relationship. We have an arrow from to if , or .  The arrow diagram for the relation a< b , given in is given in the following figure.   Arrow diagram for less than.     A function is a relation. Let . Then define by   We can see that is not a function since an element of can map to two different elements of : .  A Function as a Relation  Let be given by . Let be the relation given by :  True or false: .  True  True or false: .  True  True or false: .  False  True or false: .  True  True or false: .  False  True or false: .  False    Determining if a Relation Is a Function relation function  A relation is a function if the following two properties hold:  For every there must be a related to .  Each can only be related in one .   We can translate this idea into the ordered pair notation:  For every there must be a such that .  If and then .    Let be a relation on . The inverse relation inverse relation , , on is  In other words, if and only if .  Inverse Relation Let . This is the relation in .  Find .    Let and . Define the relation from to by  Find the set of ordered pairs given by this relation.  Draw the arrow diagram for this relation.  Give the inverse relation for . Remember, it is a set of ordered pairs.  Is the relation a function?  A relation on is a relation on . We also say a relation from to .  We can use a directed graph to represent a relation on . We label the vertices with the elements from and draw and arrow from to if . Note, if , then we get a loop at .  Directed Graph of a Relation  Let . Let . Then we get the following directed graph for .   Directed graph for less than.     If we now want the relations for less than or equal to, , we have the following directed graph.   Directed graph for less than or equal.      Let . Define the relation on by  Find the set of ordered pairs given by this relation.  Draw the directed graph for this relation.  Give the inverse relation for . Remember, it is a set of ordered pairs.  Is the relation a function?  Let . Define the relation on by  Find the set of ordered pairs given by this relation.  Draw the directed graph for this relation.  Give the inverse relation for . Remember, it is a set of ordered pairs.  Is the relation a function?   Check Your Understanding   Let . Determine which of the ordered pairs are in the relation on given by    Correct,     Correct,     Is ?     Is 4 in ?    Let . Determine which of the ordered pairs are in the relation for the relation on given by    Correct, , which is even.     Correct, , which is even.     Is even?     Is 3 in ?    Let . True or false: the relation on given by is a function from to . 1 does not map to anything in . False  Let . True or false: the relation on given by is a function on . True  Let . Give the ordered pairs for the relation on given by Your answer should have 8 ordered pairs.  Give the ordered pairs for the inverse relation, on when is given by Your answer should have 8 ordered pairs.     Define the congruence modulo 3 relation, , on by       Is ? Is ? Is ? Is ?    List five integers such that .    List five integers such that .    List five integers such that .      Let and be the power set of . Define the relation on by     Is ?    Is ?    Is ?      Define the relation, , on by       Is ?    Is ?    Is ?    Is ?      Let and and let be the less than relation. That is, for all ,     Find the set of ordered pairs in .    Find the set of ordered pairs in .      Let and and let be the divides relation. That is, for all ,     Find the set of ordered pairs in .    Find the set of ordered pairs in .      Let . Define the relation on by . Draw the directed graph for .    Let . Define the relation on by Draw the directed graph for .    Let . Define the relation on by Draw the directed graph for .    "
 },
 {
   "id": "D_relation",
@@ -7237,58 +7237,58 @@ var ptx_lunr_docs = [
   "body": "Let . Define the relation on by  Find the set of ordered pairs given by this relation.  Draw the directed graph for this relation.  Give the inverse relation for . Remember, it is a set of ordered pairs.  Is the relation a function? "
 },
 {
-  "id": "exercise-411",
+  "id": "DMT_relations_CYU_rgeq",
   "level": "2",
-  "url": "relations8-1.html#exercise-411",
+  "url": "relations8-1.html#DMT_relations_CYU_rgeq",
   "type": "Reading Question",
   "number": "8.1.1",
   "title": "",
-  "body": "Give the ordered pairs for the relation on given by "
+  "body": "Let . Determine which of the ordered pairs are in the relation on given by    Correct,     Correct,     Is ?     Is 4 in ?   "
 },
 {
-  "id": "exercise-412",
+  "id": "DMT_relations_CYU_rapbeven",
   "level": "2",
-  "url": "relations8-1.html#exercise-412",
+  "url": "relations8-1.html#DMT_relations_CYU_rapbeven",
   "type": "Reading Question",
   "number": "8.1.2",
   "title": "",
-  "body": "Give the ordered pairs for the relation on given by "
+  "body": "Let . Determine which of the ordered pairs are in the relation for the relation on given by    Correct, , which is even.     Correct, , which is even.     Is even?     Is 3 in ?   "
 },
 {
-  "id": "exercise-413",
+  "id": "DMT_relations_CYU_rgeqfun",
   "level": "2",
-  "url": "relations8-1.html#exercise-413",
+  "url": "relations8-1.html#DMT_relations_CYU_rgeqfun",
   "type": "Reading Question",
   "number": "8.1.3",
   "title": "",
-  "body": "True or false: the relation on given by is a function from to . False "
+  "body": "Let . True or false: the relation on given by is a function from to . 1 does not map to anything in . False "
 },
 {
-  "id": "exercise-414",
+  "id": "DMT_relations_CYU_rapbevenfun",
   "level": "2",
-  "url": "relations8-1.html#exercise-414",
+  "url": "relations8-1.html#DMT_relations_CYU_rapbevenfun",
   "type": "Reading Question",
   "number": "8.1.4",
   "title": "",
-  "body": "True or false: the relation on given by is a function on . True "
+  "body": "Let . True or false: the relation on given by is a function on . True "
 },
 {
-  "id": "exercise-415",
+  "id": "DMT_relations_CYU_opadivb",
   "level": "2",
-  "url": "relations8-1.html#exercise-415",
+  "url": "relations8-1.html#DMT_relations_CYU_opadivb",
   "type": "Reading Question",
   "number": "8.1.5",
   "title": "",
-  "body": "Give the ordered pairs for the relation on given by "
+  "body": "Let . Give the ordered pairs for the relation on given by Your answer should have 8 ordered pairs. "
 },
 {
-  "id": "exercise-416",
+  "id": "DMT_relations_CYU_invadivb",
   "level": "2",
-  "url": "relations8-1.html#exercise-416",
+  "url": "relations8-1.html#DMT_relations_CYU_invadivb",
   "type": "Reading Question",
   "number": "8.1.6",
   "title": "",
-  "body": "Give the ordered pairs for the inverse relation, on when is given by "
+  "body": "Give the ordered pairs for the inverse relation, on when is given by Your answer should have 8 ordered pairs. "
 },
 {
   "id": "exercise-417",
@@ -7369,7 +7369,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "8.2",
   "title": "Reflexive, Symmetric, Transitive Properties",
-  "body": " Reflexive, Symmetric, Transitive Properties relation reflexive relation symmetric relation transitive relation  In this section we look at some properties of relations. In particular, we define the reflexive, symmetric, and transitive properties. We will use directed graphs to identify the properties and look at how to prove whether a relation is reflexive, symmetric, and\/or transitive.  Let be a relation on . Then  is reflexive reflexive if for all , . In ordered pair notation, .  is symmetric symmetric if for all , if then . In ordered pair notation, if then .  is transitive transitive if for all , if and then . In ordered pair notation, if and then .     Reflexive, Symmetric, Transitive  Let , define the relation on by  is reflexive since for each .  is symmetric since if then . Note, this property does not mean , just that if a pair is in , then the reverse is as well.  is transitive since if and then . Note, this property can be tedious to check by hand. In this example, though, the only pairs that fit the hypothesis are pairs like , so , which is in .   Another Look at the Properties  Let , define the relation on by  is not reflexive since .  is not symmetric since , but not .  is transitive since if and then .  Check: , so , which is in . This is the only set of ordered pairs where the second coordinate of the first pair matches the first coordinate of the second pair.   We can use directed graphs to help identify the properties.  Reflexive  If a relation is reflexive, then the directed graph will have an arrow from the vertex to itself (a loop) at every vertex.   Directed graph for reflexive property      Symmetric If a relation is symmetric, then whenever the directed graph has an arrow from vertex, to vertex , there is a corresponding arrow going from to .   Directed graph for symmetric property      Transitive If a relation is transitive, then whenever the directed graph has an arrow from vertex, to vertex followed by an arrow from to , there is a corresponding arrow going from to .   Directed graph for transitive property        The transitive closure transitive closure of a relation , denoted , is the set of ordered pairs in as well as all additional ordered pairs to make the relation transitive.  Transitive Closure  Let . Then in we need . You can check with a directed graph to see this is the only pair we need to add. Thus, .  Let . Let .  Determine if is reflexive.  Determine if is symmetric.  Determine if is transitive.  Draw the directed graph for .  If is not transitive, what ordered pairs should you add to the relation to make transitive?  Let . Let .  Determine if is reflexive.  Determine if is symmetric.  Determine if is transitive.  Draw the directed graph for .  If is not transitive, what ordered pairs should you add to the relation to make transitive?  Checking that a relation is reflexive, symmetric, or transitive on a small finite set can be done by checking that the property holds for all the elements of . But if is infinite we need to prove the properties more generally.   Proving Reflexive, Symmetric, Transitive Properties reflexive proof symmetric proof transitive proof  To prove a property of a relation:  Reflexive Let . Show .  Symmetric Assume . Show .  Transitive Assume . Show .   To disprove a property, find a specific counterexample:  Reflexive Find for some .  Symmetric Find with .  Transitive Find with .    Proving Reflexive, Symmetric, Transitive  Let be the relation on given by .  Reflexive: Show .  We know , and . So we get that . Thus for all .  Symmetric: Assume .  Then . This implies for some . But then , where . Thus, . Hence, .  Transitive: Assume .  Then and . This implies for some and for some . But then , where . Thus, . Hence, .   Define the relation on by .  Prove or disprove is reflexive.  Prove or disprove is symmetric.  Prove or disprove is transitive.   Define the relation on by .  Prove or disprove is reflexive.  Prove or disprove is symmetric.  Prove or disprove is transitive.    Check Your Understanding  Let .  Determine if the relation is reflexive, symmetric, transitive where is the relation on given by Reflexive, transitive, not symmetric  Determine if the relation is reflexive, symmetric, transitive where is the relation on given by Reflexive, symmetric, transitive  Determine if the relation is reflexive, symmetric, transitive where is the relation on given by Reflexive, transitive, not symmetric  Determine if the relation is reflexive, symmetric, transitive where is the relation on given by Symmetric, not reflexive, not transitive     Let . Let .    Draw the directed graph for .    Determine if is reflexive. If it is not, give a counterexample.    Determine if is symmetric. If it is not, give a counterexample.    Determine if is transitive. If it is not, give a counterexample.      Let . Let .    Draw the directed graph for .    Determine if is reflexive. If it is not, give a counterexample.    Determine if is symmetric. If it is not, give a counterexample.    Determine if is transitive. If it is not, give a counterexample.      Let . Let .    Draw the directed graph for .    Determine if is reflexive. If it is not, give a counterexample.    Determine if is symmetric. If it is not, give a counterexample.    Determine if is transitive. If it is not, give a counterexample.      Let be the relation on defined by     Determine if is reflexive. Justify your answer.    Determine if is symmetric. Justify your answer.    Determine if is transitive. Justify your answer.      Let be the relation on defined by     Determine if is reflexive. Justify your answer.    Determine if is symmetric. Justify your answer.    Determine if is transitive. Justify your answer.      Let be the relation on defined by     Determine if is reflexive. Justify your answer.    Determine if is symmetric. Justify your answer.    Determine if is transitive. Justify your answer.      Define the relation on by     Prove or disprove is reflexive.    Prove or disprove is symmetric.    Prove or disprove is transitive.      Let and be the power set of . Define the relation on by     Prove or disprove is reflexive.    Prove or disprove is symmetric.    Prove or disprove is transitive.      Let be a nonempty set and be the power set of . Define the subset relation on by     Prove or disprove is reflexive.    Prove or disprove is symmetric.    Prove or disprove is transitive.      Let be a relation on a set . Prove or disprove if is reflexive, then is reflexive.    Let be a relation on a set . Prove or disprove if is symmetric, then is symmetric.    "
+  "body": " Reflexive, Symmetric, Transitive Properties relation reflexive relation symmetric relation transitive relation  In this section we look at some properties of relations. In particular, we define the reflexive, symmetric, and transitive properties. We will use directed graphs to identify the properties and look at how to prove whether a relation is reflexive, symmetric, and\/or transitive.  Let be a relation on . Then  is reflexive reflexive if for all , . In ordered pair notation, .  is symmetric symmetric if for all , if then . In ordered pair notation, if then .  is transitive transitive if for all , if and then . In ordered pair notation, if and then .     Reflexive, Symmetric, Transitive  Let , define the relation on by  is reflexive since for each .  is symmetric since if then . Note, this property does not mean , just that if a pair is in , then the reverse is as well.  is transitive since if and then . Note, this property can be tedious to check by hand. In this example, though, the only pairs that fit the hypothesis are pairs like , so , which is in .   Another Look at the Properties  Let , define the relation on by  is not reflexive since .  is not symmetric since , but not .  is transitive since if and then .  Check: , so , which is in . This is the only set of ordered pairs where the second coordinate of the first pair matches the first coordinate of the second pair.   We can use directed graphs to help identify the properties.  Reflexive  If a relation is reflexive, then the directed graph will have an arrow from the vertex to itself (a loop) at every vertex.   Directed graph for reflexive property      Symmetric If a relation is symmetric, then whenever the directed graph has an arrow from vertex, to vertex , there is a corresponding arrow going from to .   Directed graph for symmetric property      Transitive If a relation is transitive, then whenever the directed graph has an arrow from vertex, to vertex followed by an arrow from to , there is a corresponding arrow going from to .   Directed graph for transitive property        The transitive closure transitive closure of a relation , denoted , is the set of ordered pairs in as well as all additional ordered pairs to make the relation transitive.  Transitive Closure  Let . Then in we need . You can check with a directed graph to see this is the only pair we need to add. Thus, .  Let . Let .  Determine if is reflexive.  Determine if is symmetric.  Determine if is transitive.  Draw the directed graph for .  If is not transitive, what ordered pairs should you add to the relation to make transitive?  Let . Let .  Determine if is reflexive.  Determine if is symmetric.  Determine if is transitive.  Draw the directed graph for .  If is not transitive, what ordered pairs should you add to the relation to make transitive?  Checking that a relation is reflexive, symmetric, or transitive on a small finite set can be done by checking that the property holds for all the elements of . But if is infinite we need to prove the properties more generally.   Proving Reflexive, Symmetric, Transitive Properties reflexive proof symmetric proof transitive proof  To prove a property of a relation:  Reflexive Let . Show .  Symmetric Assume . Show .  Transitive Assume . Show .   To disprove a property, find a specific counterexample:  Reflexive Find for some .  Symmetric Find with .  Transitive Find with .    Proving Reflexive, Symmetric, Transitive  Let be the relation on given by .  Reflexive: Show .  We know , and . So we get that . Thus for all .  Symmetric: Assume .  Then . This implies for some . But then , where . Thus, . Hence, .  Transitive: Assume .  Then and . This implies for some and for some . But then , where . Thus, . Hence, .   Define the relation on by .  Prove or disprove is reflexive.  Prove or disprove is symmetric.  Prove or disprove is transitive.   Define the relation on by .  Prove or disprove is reflexive.  Prove or disprove is symmetric.  Prove or disprove is transitive.    Check Your Understanding   Determine if the relation is reflexive, symmetric, transitive where is the relation on given by   Reflexive  We know .    Symmetric  For example, , but .    Transitive  If , and , then .   Reflexive, transitive, not symmetric  Determine if the relation is reflexive, symmetric, transitive where is the relation on given by   Reflexive  We know , which is even.    Symmetric  If is even, then is even.    Transitive  Since , it is straightforward to check reflexive by hand.   Reflexive, symmetric, transitive  Determine if the relation is reflexive, symmetric, transitive where is the relation on given by   Reflexive  We know .    Symmetric  For example, , but .    Transitive  If , and , then .   Reflexive, transitive, not symmetric  Determine if the relation is reflexive, symmetric, transitive where is the relation on given by   Reflexive  For example, .    Symmetric  If , then .    Transitive  For example, , and , but .   Symmetric, not reflexive, not transitive     Let . Let .    Draw the directed graph for .    Determine if is reflexive. If it is not, give a counterexample.    Determine if is symmetric. If it is not, give a counterexample.    Determine if is transitive. If it is not, give a counterexample.      Let . Let .    Draw the directed graph for .    Determine if is reflexive. If it is not, give a counterexample.    Determine if is symmetric. If it is not, give a counterexample.    Determine if is transitive. If it is not, give a counterexample.      Let . Let .    Draw the directed graph for .    Determine if is reflexive. If it is not, give a counterexample.    Determine if is symmetric. If it is not, give a counterexample.    Determine if is transitive. If it is not, give a counterexample.      Let be the relation on defined by     Determine if is reflexive. Justify your answer.    Determine if is symmetric. Justify your answer.    Determine if is transitive. Justify your answer.      Let be the relation on defined by     Determine if is reflexive. Justify your answer.    Determine if is symmetric. Justify your answer.    Determine if is transitive. Justify your answer.      Let be the relation on defined by     Determine if is reflexive. Justify your answer.    Determine if is symmetric. Justify your answer.    Determine if is transitive. Justify your answer.      Define the relation on by     Prove or disprove is reflexive.    Prove or disprove is symmetric.    Prove or disprove is transitive.      Let and be the power set of . Define the relation on by     Prove or disprove is reflexive.    Prove or disprove is symmetric.    Prove or disprove is transitive.      Let be a nonempty set and be the power set of . Define the subset relation on by     Prove or disprove is reflexive.    Prove or disprove is symmetric.    Prove or disprove is transitive.      Let be a relation on a set . Prove or disprove if is reflexive, then is reflexive.    Let be a relation on a set . Prove or disprove if is symmetric, then is symmetric.    "
 },
 {
   "id": "D_RSTprop",
@@ -7426,9 +7426,9 @@ var ptx_lunr_docs = [
   "body": " Directed graph for transitive property    "
 },
 {
-  "id": "p-2367",
+  "id": "p-2406",
   "level": "2",
-  "url": "rstrelations8-2.html#p-2367",
+  "url": "rstrelations8-2.html#p-2406",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -7489,40 +7489,40 @@ var ptx_lunr_docs = [
   "body": "Define the relation on by .  Prove or disprove is reflexive.  Prove or disprove is symmetric.  Prove or disprove is transitive.  "
 },
 {
-  "id": "exercise-425",
+  "id": "DMT_rst_CYU_leq",
   "level": "2",
-  "url": "rstrelations8-2.html#exercise-425",
+  "url": "rstrelations8-2.html#DMT_rst_CYU_leq",
   "type": "Reading Question",
   "number": "8.2.1",
   "title": "",
-  "body": "Determine if the relation is reflexive, symmetric, transitive where is the relation on given by Reflexive, transitive, not symmetric "
+  "body": "Determine if the relation is reflexive, symmetric, transitive where is the relation on given by   Reflexive  We know .    Symmetric  For example, , but .    Transitive  If , and , then .   Reflexive, transitive, not symmetric "
 },
 {
-  "id": "exercise-426",
+  "id": "DMT_rst_CYU_apbeven",
   "level": "2",
-  "url": "rstrelations8-2.html#exercise-426",
+  "url": "rstrelations8-2.html#DMT_rst_CYU_apbeven",
   "type": "Reading Question",
   "number": "8.2.2",
   "title": "",
-  "body": "Determine if the relation is reflexive, symmetric, transitive where is the relation on given by Reflexive, symmetric, transitive "
+  "body": "Determine if the relation is reflexive, symmetric, transitive where is the relation on given by   Reflexive  We know , which is even.    Symmetric  If is even, then is even.    Transitive  Since , it is straightforward to check reflexive by hand.   Reflexive, symmetric, transitive "
 },
 {
-  "id": "exercise-427",
+  "id": "DMT_rst_CYU_div",
   "level": "2",
-  "url": "rstrelations8-2.html#exercise-427",
+  "url": "rstrelations8-2.html#DMT_rst_CYU_div",
   "type": "Reading Question",
   "number": "8.2.3",
   "title": "",
-  "body": "Determine if the relation is reflexive, symmetric, transitive where is the relation on given by Reflexive, transitive, not symmetric "
+  "body": "Determine if the relation is reflexive, symmetric, transitive where is the relation on given by   Reflexive  We know .    Symmetric  For example, , but .    Transitive  If , and , then .   Reflexive, transitive, not symmetric "
 },
 {
-  "id": "exercise-428",
+  "id": "DMT_rst_CYU_apbe0",
   "level": "2",
-  "url": "rstrelations8-2.html#exercise-428",
+  "url": "rstrelations8-2.html#DMT_rst_CYU_apbe0",
   "type": "Reading Question",
   "number": "8.2.4",
   "title": "",
-  "body": "Determine if the relation is reflexive, symmetric, transitive where is the relation on given by Symmetric, not reflexive, not transitive "
+  "body": "Determine if the relation is reflexive, symmetric, transitive where is the relation on given by   Reflexive  For example, .    Symmetric  If , then .    Transitive  For example, , and , but .   Symmetric, not reflexive, not transitive "
 },
 {
   "id": "exercise-429",
@@ -7630,7 +7630,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "8.3",
   "title": "Equivalence Relations",
-  "body": " Equivalence Relations equivalence relation relation equivalence  In we studied three properties of a relation, the reflexive, symmetric, and transitive properties. These three properties are important for generalizing the idea of equality in mathematics. We may want to relate objects based on certain criteria; objects that share that criteria are equivalent. For example, you may recall from geometry, the idea of congruent triangles. Two triangles are congruent if they have the same angles. In geometry, we may not care at all about the lengths of the sides, just the angles. In this case, we relate triangles with the same angles and treat them as the same triangle.  A relation that is reflexive, symmetric and transitive is an equivalence relation equivalence relation .   In we proved that the relation given by is an equivalence relation since we proved it is reflexive, symmetric, and transitive.  In fact, the proof can easily be adapted to show is an equivalence relation for . The details are left as an exercise,  This relation is an important enough that it has its own definition.  Let . Then and are congruent modulo congruent mod if .  We often just say is congruent to mod , and denote it is congruent to mod ;  Congruence mod 3  True or false: .  Since , true.  True or false: .  Since , true.  True or false: .  Since , false.  True or false: .  Since , false.   Let be an equivalence relation on . Let . The set is the equivalence class equivalence class of .  Given a specific , we find the equivalence class of by finding all the elements that are related to . Keep in mind the equivalence class is a set, denoted . the equivalence class of  Equivalence Classes  Consider the equivalence relation , on .  Find , the set of elements in equivalent to 0.   Find , the set of elements in equivalent to 1.   Find , the set of elements in equivalent to 2.   Find , the set of elements in equivalent to 3.   Find , the set of elements in equivalent to -1.    We can notice a few things from this last example. We can see that some of our equivalence classes are the same. In particular, and . In fact, there are only three distinct equivalence classes, , any other equivalence class will equal one of these.  A few other things to notice, distinct equivalence classes are disjoint--they have no elements in common. Also, contains . We may also recognize that the equivalence classes partition the integers.  More Equivalence Classes  Consider the equivalence relation , on .  This is the relation where two subsets of are related if they have the same number of elements. You can check that this is an equivalence relation.  Find , the set of elements in equivalent to .  , since this is the only subset with 0 elements.  Find .  , since these all have 1 element.  Find .   Find .    Once again, the distinct equivalence classes are disjoint--they have no elements in common. Furthermore, the equivalence classes partition the power set by size of the subset.  Define the relation on by .  Prove is an equivalence relation.  Find and .  Recall that .  Prove the relation is an equivalence relation on .  Find and .  Let . Let .  Check the conditions in to show is a partition of .  Define the relation on ,  and are in the same subset of the partition. Draw the directed graph for .  Show is reflexive, symmetric and transitive.  Find , the equivalence class of 1.  Do you think this particular partition matters? Could we define this relation on any partition of any set and still have it be reflexive, symmetric and transitive?  There is an important connection between equivalence classes and partitions, as we see in the next two theorems.  Let be a set and an equivalence relation. The equivalence classes of form a partition of .  Conversely, as we saw in , if we have a partition of and define the relation and are in the same subset , then is an equivalence relation. We call this the equivalence relation induced by the partition.  Let be a set and be a partition of . Let be the relation induced by the partition. Then is an equivalence relation.  We leave the details of the proof of as an exercise.  The proof of follows directly from the next two Lemmas.  Let be an equivalence relation on and . If then .   Since we want to show the sets are equal, we will show are subsets of each other.  Show . Let . Then by defintion of equivalence class, . We assumed . By the transitive property, . Thus, .  Show . Let . Then by definition of equivalence class, . We assumed . By the symmetric property, . By the transitive property, . Thus, .   really says that if two elements are related in an equivalence relation, they must have the same equivalence class. You can check this with the above examples. Note, we needed the symmetric and transitive properties to prove this lemma.  Let be an equivalence relation on and . Either or .  Assume . We want to show . Since , there exists . This means and . By the symmetric property, . By the transitive property, since and , we have . By , .   really says that any two equivalence classes are either disjoint or exactly the same.  follows since, by the reflexive property, means every element is in an equivalence class. Thus, the union of the equivalence classes is all of . By distinct equivalence classes are disjoint. Thus, we have a partition of .   Check Your Understanding  Let .  Determine if the relation is an equivalence relation. If it is, find the equivalence classes. is the relation on given by Not an equivalence relation.  Determine if the relation is an equivalence relation. If it is, find the equivalence classes. is the relation on given by Equivalence relation.  Determine if the relation is an equivalence relation. If it is, find the equivalence classes. is the relation on given by Equivalence relation.  Determine if the relation is an equivalence relation. If it is, find the equivalence classes. is the relation on given by Equivalence relation.  Determine if the relation is an equivalence relation. If it is, find the equivalence classes. is the relation on given by Not an equivalence relation.  Determine if the relation is an equivalence relation. If it is, find the equivalence classes. is the relation on given by Not an equivalence relation.  Determine if the relation is an equivalence relation. If it is, find the equivalence classes. is the relation on given by Equivalence relation. , , ,     Let . Let Find the equivalence classes of .    Let . Let be the relation on given by Find the equivalence classes of .    Let . Let be the relation on given by Find the equivalence classes of .    Let and . Let be the relation on given by where is the number of elements in . Find the equivalence classes of .    Determine if the following are true or false.     .     .     .     .      Let be the relation congruence modulo 3. Which of the following equivalence classes are equal?     Let be the relation congruence modulo 7. Which of the following equivalence classes are equal?     Prove is an equivalence relation on . Then describe the distinct equivalence classes for this relation.  Use that .   Prove is an equivalence relation on . Then describe the distinct equivalence classes for this relation.  Use that .   Define to be the absolute value relation on by     Prove is an equivalence relation on .    Describe the distinct equivalence classes for this relation.      Let be an equivalence relation on a set . Prove for all , , and in , if and , then .    "
+  "body": " Equivalence Relations equivalence relation relation equivalence  In we studied three properties of a relation, the reflexive, symmetric, and transitive properties. These three properties are important for generalizing the idea of equality in mathematics. We may want to relate objects based on certain criteria; objects that share that criteria are equivalent. For example, you may recall from geometry, the idea of congruent triangles. Two triangles are congruent if they have the same angles. In geometry, we may not care at all about the lengths of the sides, just the angles. In this case, we relate triangles with the same angles and treat them as the same triangle.  A relation that is reflexive, symmetric and transitive is an equivalence relation equivalence relation .   In we proved that the relation given by is an equivalence relation since we proved it is reflexive, symmetric, and transitive.  In fact, the proof can easily be adapted to show is an equivalence relation for . The details are left as an exercise,  This relation is an important enough that it has its own definition.  Let . Then and are congruent modulo congruent mod if .  We often just say is congruent to mod , and denote it is congruent to mod ;  Congruence mod 3  True or false: .  Since , true.  True or false: .  Since , true.  True or false: .  Since , false.  True or false: .  Since , false.   Let be an equivalence relation on . Let . The set is the equivalence class equivalence class of .  Given a specific , we find the equivalence class of by finding all the elements that are related to . Keep in mind the equivalence class is a set, denoted . the equivalence class of  Equivalence Classes  Consider the equivalence relation , on .  Find , the set of elements in equivalent to 0.   Find , the set of elements in equivalent to 1.   Find , the set of elements in equivalent to 2.   Find , the set of elements in equivalent to 3.   Find , the set of elements in equivalent to -1.    We can notice a few things from this last example. We can see that some of our equivalence classes are the same. In particular, and . In fact, there are only three distinct equivalence classes, , any other equivalence class will equal one of these.  A few other things to notice, distinct equivalence classes are disjoint--they have no elements in common. Also, contains . We may also recognize that the equivalence classes partition the integers.  More Equivalence Classes  Consider the equivalence relation , on .  This is the relation where two subsets of are related if they have the same number of elements. You can check that this is an equivalence relation.  Find , the set of elements in equivalent to .  , since this is the only subset with 0 elements.  Find .  , since these all have 1 element.  Find .   Find .    Once again, the distinct equivalence classes are disjoint--they have no elements in common. Furthermore, the equivalence classes partition the power set by size of the subset.  Define the relation on by .  Prove is an equivalence relation.  Find and .  Recall that .  Prove the relation is an equivalence relation on .  Find and .  Let . Let .  Check the conditions in to show is a partition of .  Define the relation on ,  and are in the same subset of the partition. Draw the directed graph for .  Show is reflexive, symmetric and transitive.  Find , the equivalence class of 1.  Do you think this particular partition matters? Could we define this relation on any partition of any set and still have it be reflexive, symmetric and transitive?  There is an important connection between equivalence classes and partitions, as we see in the next two theorems.  Let be a set and an equivalence relation. The equivalence classes of form a partition of .  Conversely, as we saw in , if we have a partition of and define the relation and are in the same subset , then is an equivalence relation. We call this the equivalence relation induced by the partition.  Let be a set and be a partition of . Let be the relation induced by the partition. Then is an equivalence relation.  We leave the details of the proof of as an exercise.  The proof of follows directly from the next two Lemmas.  Let be an equivalence relation on and . If then .   Since we want to show the sets are equal, we will show are subsets of each other.  Show . Let . Then by defintion of equivalence class, . We assumed . By the transitive property, . Thus, .  Show . Let . Then by definition of equivalence class, . We assumed . By the symmetric property, . By the transitive property, . Thus, .   really says that if two elements are related in an equivalence relation, they must have the same equivalence class. You can check this with the above examples. Note, we needed the symmetric and transitive properties to prove this lemma.  Let be an equivalence relation on and . Either or .  Assume . We want to show . Since , there exists . This means and . By the symmetric property, . By the transitive property, since and , we have . By , .   really says that any two equivalence classes are either disjoint or exactly the same.  follows since, by the reflexive property, means every element is in an equivalence class. Thus, the union of the equivalence classes is all of . By distinct equivalence classes are disjoint. Thus, we have a partition of .   Check Your Understanding   Determine if the relation is an equivalence relation. If it is, give the number of distinct equivalence classes. is the relation on given by  Not an equivalence relation.  Correct.   Equivalence relation with 1 equivalence class.  is not symmetric.   Equivalence relation with 2 equivalence classes.  is not symmetric.   Equivalence relation with 3 equivalence classes.  is not symmetric.   Not an equivalence relation.  Determine if the relation is an equivalence relation. If it is, give the number of distinct equivalence classes. is the relation on given by  Not an equivalence relation.  Check that is reflexive, symmetric, and transitive.   Equivalence relation with 1 equivalence class.  Is ?   Equivalence relation with 2 equivalence classes.  Correct. The equivalence classes are .   Equivalence relation.  Determine if the relation is an equivalence relation. If it is, give the number of distinct equivalence classes. is the relation on given by  Not an equivalence relation.  Check that is reflexive, symmetric, and transitive.   Equivalence relation with 1 equivalence class.  Correct. The equivalence class is .   Equivalence relation with 2 equivalence classes.  Check that the sum of any two elements in is even. Thus, all elements are related to each other.   Equivalence relation.  Determine if the relation is an equivalence relation. If it is, give the number of distinct equivalence classes. is the relation on given by  Not an equivalence relation.  Check that is reflexive, symmetric, and transitive.   Equivalence relation with 1 equivalence class.  Note, is odd, so 2 is not related to 3.   Equivalence relation with 2 equivalence classes.  Correct. The equivalence classes are .   Equivalence relation with 3 equivalence classes.  Note, is even, so 1 is related to 3.   Equivalence relation.  Determine if the relation is an equivalence relation. If it is, give the number of distinct equivalence classes. is the relation on given by  Not an equivalence relation.  Correct.   Equivalence relation with 1 equivalence class.  is not symmetric.   Equivalence relation with 2 equivalence classes.  is not symmetric.   Equivalence relation with 4 equivalence classes.  is not symmetric.   Not an equivalence relation.  Determine if the relation is an equivalence relation. If it is, give the number of distinct equivalence classes. is the relation on given by  Not an equivalence relation.  Correct.   Equivalence relation with 1 equivalence class.  is not transitive.   Equivalence relation with 2 equivalence classes.  is not transitive.   Equivalence relation with infinitely many equivalence classes.  is not transitive.   Not an equivalence relation.  Determine if the relation is an equivalence relation. If it is, find the equivalence classes. is the relation on given by  Not an equivalence relation.  Check that is reflexive, symmetric, and transitive.   Equivalence relation with 1 equivalence class.  Note, 2 is not equivalent to 1 mod 4. So there is more than one equivalence class.   Equivalence relation with 4 equivalence classes.  Correct. The equivalence classes are , , , .   Equivalence relation with infinitely many equivalence classes.  Although each equivalence class has infinitely many elements, there are only as many equivalence classes as possible remainders when dividing by 4.   Equivalence relation. , , ,     Let . Let Find the equivalence classes of .    Let . Let be the relation on given by Find the equivalence classes of .    Let . Let be the relation on given by Find the equivalence classes of .    Let and . Let be the relation on given by where is the number of elements in . Find the equivalence classes of .    Determine if the following are true or false.     .     .     .     .      Let be the relation congruence modulo 3. Which of the following equivalence classes are equal?     Let be the relation congruence modulo 7. Which of the following equivalence classes are equal?     Prove is an equivalence relation on . Then describe the distinct equivalence classes for this relation.  Use that .   Prove is an equivalence relation on . Then describe the distinct equivalence classes for this relation.  Use that .   Define to be the absolute value relation on by     Prove is an equivalence relation on .    Describe the distinct equivalence classes for this relation.      Let be an equivalence relation on a set . Prove for all , , and in , if and , then .    "
 },
 {
   "id": "D_equivrel",
@@ -7660,9 +7660,9 @@ var ptx_lunr_docs = [
   "body": "Congruence mod 3  True or false: .  Since , true.  True or false: .  Since , true.  True or false: .  Since , false.  True or false: .  Since , false.  "
 },
 {
-  "id": "p-2466",
+  "id": "p-2528",
   "level": "2",
-  "url": "equivalencerelations8-3.html#p-2466",
+  "url": "equivalencerelations8-3.html#p-2528",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -7723,9 +7723,9 @@ var ptx_lunr_docs = [
   "body": "Let be a set and an equivalence relation. The equivalence classes of form a partition of . "
 },
 {
-  "id": "p-2497",
+  "id": "p-2559",
   "level": "2",
-  "url": "equivalencerelations8-3.html#p-2497",
+  "url": "equivalencerelations8-3.html#p-2559",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -7777,67 +7777,67 @@ var ptx_lunr_docs = [
   "body": "Assume . We want to show . Since , there exists . This means and . By the symmetric property, . By the transitive property, since and , we have . By , .  "
 },
 {
-  "id": "exercise-440",
+  "id": "DMT_equivrel_CYU_leqA",
   "level": "2",
-  "url": "equivalencerelations8-3.html#exercise-440",
+  "url": "equivalencerelations8-3.html#DMT_equivrel_CYU_leqA",
   "type": "Reading Question",
   "number": "8.3.1",
   "title": "",
-  "body": "Determine if the relation is an equivalence relation. If it is, find the equivalence classes. is the relation on given by Not an equivalence relation. "
+  "body": "Determine if the relation is an equivalence relation. If it is, give the number of distinct equivalence classes. is the relation on given by  Not an equivalence relation.  Correct.   Equivalence relation with 1 equivalence class.  is not symmetric.   Equivalence relation with 2 equivalence classes.  is not symmetric.   Equivalence relation with 3 equivalence classes.  is not symmetric.   Not an equivalence relation. "
 },
 {
-  "id": "exercise-441",
+  "id": "DMT_equivrel_CYU_apbevenC",
   "level": "2",
-  "url": "equivalencerelations8-3.html#exercise-441",
+  "url": "equivalencerelations8-3.html#DMT_equivrel_CYU_apbevenC",
   "type": "Reading Question",
   "number": "8.3.2",
   "title": "",
-  "body": "Determine if the relation is an equivalence relation. If it is, find the equivalence classes. is the relation on given by Equivalence relation. "
+  "body": "Determine if the relation is an equivalence relation. If it is, give the number of distinct equivalence classes. is the relation on given by  Not an equivalence relation.  Check that is reflexive, symmetric, and transitive.   Equivalence relation with 1 equivalence class.  Is ?   Equivalence relation with 2 equivalence classes.  Correct. The equivalence classes are .   Equivalence relation. "
 },
 {
-  "id": "exercise-442",
+  "id": "DMT_equivrel_CYU_apbevenB",
   "level": "2",
-  "url": "equivalencerelations8-3.html#exercise-442",
+  "url": "equivalencerelations8-3.html#DMT_equivrel_CYU_apbevenB",
   "type": "Reading Question",
   "number": "8.3.3",
   "title": "",
-  "body": "Determine if the relation is an equivalence relation. If it is, find the equivalence classes. is the relation on given by Equivalence relation. "
+  "body": "Determine if the relation is an equivalence relation. If it is, give the number of distinct equivalence classes. is the relation on given by  Not an equivalence relation.  Check that is reflexive, symmetric, and transitive.   Equivalence relation with 1 equivalence class.  Correct. The equivalence class is .   Equivalence relation with 2 equivalence classes.  Check that the sum of any two elements in is even. Thus, all elements are related to each other.   Equivalence relation. "
 },
 {
-  "id": "exercise-443",
+  "id": "DMT_equivrel_CYU_apbevenA",
   "level": "2",
-  "url": "equivalencerelations8-3.html#exercise-443",
+  "url": "equivalencerelations8-3.html#DMT_equivrel_CYU_apbevenA",
   "type": "Reading Question",
   "number": "8.3.4",
   "title": "",
-  "body": "Determine if the relation is an equivalence relation. If it is, find the equivalence classes. is the relation on given by Equivalence relation. "
+  "body": "Determine if the relation is an equivalence relation. If it is, give the number of distinct equivalence classes. is the relation on given by  Not an equivalence relation.  Check that is reflexive, symmetric, and transitive.   Equivalence relation with 1 equivalence class.  Note, is odd, so 2 is not related to 3.   Equivalence relation with 2 equivalence classes.  Correct. The equivalence classes are .   Equivalence relation with 3 equivalence classes.  Note, is even, so 1 is related to 3.   Equivalence relation. "
 },
 {
-  "id": "exercise-444",
+  "id": "DMT_equivrel_CYU_divB",
   "level": "2",
-  "url": "equivalencerelations8-3.html#exercise-444",
+  "url": "equivalencerelations8-3.html#DMT_equivrel_CYU_divB",
   "type": "Reading Question",
   "number": "8.3.5",
   "title": "",
-  "body": "Determine if the relation is an equivalence relation. If it is, find the equivalence classes. is the relation on given by Not an equivalence relation. "
+  "body": "Determine if the relation is an equivalence relation. If it is, give the number of distinct equivalence classes. is the relation on given by  Not an equivalence relation.  Correct.   Equivalence relation with 1 equivalence class.  is not symmetric.   Equivalence relation with 2 equivalence classes.  is not symmetric.   Equivalence relation with 4 equivalence classes.  is not symmetric.   Not an equivalence relation. "
 },
 {
-  "id": "exercise-445",
+  "id": "DMT_equivrel_CYU_apbe0Z",
   "level": "2",
-  "url": "equivalencerelations8-3.html#exercise-445",
+  "url": "equivalencerelations8-3.html#DMT_equivrel_CYU_apbe0Z",
   "type": "Reading Question",
   "number": "8.3.6",
   "title": "",
-  "body": "Determine if the relation is an equivalence relation. If it is, find the equivalence classes. is the relation on given by Not an equivalence relation. "
+  "body": "Determine if the relation is an equivalence relation. If it is, give the number of distinct equivalence classes. is the relation on given by  Not an equivalence relation.  Correct.   Equivalence relation with 1 equivalence class.  is not transitive.   Equivalence relation with 2 equivalence classes.  is not transitive.   Equivalence relation with infinitely many equivalence classes.  is not transitive.   Not an equivalence relation. "
 },
 {
-  "id": "exercise-446",
+  "id": "DMT_equivrel_CYU_mod4",
   "level": "2",
-  "url": "equivalencerelations8-3.html#exercise-446",
+  "url": "equivalencerelations8-3.html#DMT_equivrel_CYU_mod4",
   "type": "Reading Question",
   "number": "8.3.7",
   "title": "",
-  "body": "Determine if the relation is an equivalence relation. If it is, find the equivalence classes. is the relation on given by Equivalence relation. , , , "
+  "body": "Determine if the relation is an equivalence relation. If it is, find the equivalence classes. is the relation on given by  Not an equivalence relation.  Check that is reflexive, symmetric, and transitive.   Equivalence relation with 1 equivalence class.  Note, 2 is not equivalent to 1 mod 4. So there is more than one equivalence class.   Equivalence relation with 4 equivalence classes.  Correct. The equivalence classes are , , , .   Equivalence relation with infinitely many equivalence classes.  Although each equivalence class has infinitely many elements, there are only as many equivalence classes as possible remainders when dividing by 4.   Equivalence relation. , , , "
 },
 {
   "id": "exercise-447",
@@ -7945,7 +7945,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "8.4",
   "title": "Modular Arithmetic",
-  "body": " Modular Arithmetic modular arithmetic  In the last section we saw that congruence mod is an equivalence relation. In this section we will explore this relation in more detail. We will also introduce the concept of modular arithmetic.  Recall the definition for congruence mod , :  Let . Then congruent mod if .  Note, we can use , since , though defined, is not very interesting since 1 divides everything.  In some applications, and often in computer science, the remainder, , when is divided by is denoted . When using equals (=), we will mean the specific remainder. When using congruence ( ), we will mean the relation. For example, , but many numbers can satisfy the congruence: , etc.  Congruence mod  True or false: .  True  True or false: .  True  True or false: .  False   Determine if the following congruences are true or false.        We use modular arithmetic and equivalence mod when we want to think about remainders when dividing by . A familiar example is clock time. Suppose it is 11 am and you have an appointment in 3 hours. In general, you would not think of your appointment for 14 o'clock. You would think of noon as 0, and get that your appointment is at 2 o'clock. There are many more applications in algebra, cryptography, and computer science where we want to classify integers by their remainders mod .  The following theorem will be useful in proving statements involving congruence, but also in helping do calculations.  Let . The following statements are equivalent.   ;  ;  for some ;  and have the same remainder when divided by ;  , where here we refer to the remainder when dividing by .     When proving several statements are equivalent, we need to be able to get from any one statement to any other.  by definition of congruence.  by definition of mod as the remainder.  is left as an exercise. (See and .)  We will prove .  Assume for some . By the Quotient-Remainder Theorem, with . Thus, . Solving for , we get . But by uniqueness of the remainder, has remainder .  Now assume and have the same remainder when divided by . By the Quotient-Remainder Theorem, and . Substituting in for , . Since , let .   Prove part (1) of implies part (3).  Prove part (3) of implies part (1).  The residue of modulo residue is the remainder when is divided by . The set forms a complete set of residues mod complete set of residues .  Although we have seen congruence mod is an equivalence relation, we formally state it in the following theorem.  Congruence mod is an equivalence relation on with equivalence classes . Furthermore, .  For the proof, see .  Find the equivalence classes for congruence mod 5. List several elements of each equivalence class. What do the elements of each congruence class look like? Think about remainders.  Modular arithmetic modular arithmetic is just the process of adding, subtracting, and multiplying, where we treat integers with the same remainder mod , as equivalent. Thus, we can replace any integer with it's remainder.   Properties of Modular Arithmetic  If and , then     , for    Basically, we can do regular arithmetic, where we can reduce to remainders, or equivalence classes mod .  Modular Arithmetic  Use modular arithmetic to find  .  , so  .   .  , so   Find by first reducing 31 and 92 mod 5, then adding.  Find by first reducing 56 mod 5, then raising to 21.  We can write integers using their decimal expansion. For example, we can write 592 as a decimal expansion: .  Write 1526 as a similar expansion using powers of 10.  Find 10 mod 9 and mod 9 for any .  Use the decimal expansion and (b) find (592 mod 9) and (1526 mod 9).  If we are doing modular arithmetic we often work directly with the equivalence classes, rather than all of the integers.  We define , where represents the equivalence class . Although this sounds complicated, we just do regular arithmetic with and reduce to the remainder mod .   Check Your Understanding  True or false: . True  True or false: . True  True or false: . True  True or false: . False  True or false: . True  True or false: . True  True or false: . True  True or false: . True  True or false: . True  True or false: . True  True or false: . True  Give the equivalence classes for .     Let and .    Use the definition of congruence modulo 3 to explain why .    What value of has the property that ?    What is the (nonnegative) remainder obtained when 25 is divided by 3? When 19 is divided by 3?      Determine if the following are true or false.     mod .     mod .     mod .     mod .      Verify the following statements by simplifying each expression and using the definition of congruence mod 7.     and                           Prove the transitivity of modular congruence. That is, prove for all with , if and , then .    Prove for all with , if , then .    Prove for all with , and , if , then .  Use mathematical induction on .   Prove for all integers , .    Prove that a positive integer, is divisible by 9 if and only if the sum of the digits of is divisible by 9.  The previous problem will be helpful, as will writing as a decimal expansion (see ). It can be useful in proving that a number is divisible by 9 to instead show that it is congruent to 0 mod 9. Also note, this is an if and only if statement so your proof requires two parts.   "
+  "body": " Modular Arithmetic modular arithmetic  In the last section we saw that congruence mod is an equivalence relation. In this section we will explore this relation in more detail. We will also introduce the concept of modular arithmetic.  Recall the definition for congruence mod , :  Let . Then congruent mod if .  Note, we can use , since , though defined, is not very interesting since 1 divides everything.  In some applications, and often in computer science, the remainder, , when is divided by is denoted . When using equals (=), we will mean the specific remainder. When using congruence ( ), we will mean the relation. For example, , but many numbers can satisfy the congruence: , etc.  Congruence mod  True or false: .  True  True or false: .  True  True or false: .  False   Determine if the following congruences are true or false.        We use modular arithmetic and equivalence mod when we want to think about remainders when dividing by . A familiar example is clock time. Suppose it is 11 am and you have an appointment in 3 hours. In general, you would not think of your appointment for 14 o'clock. You would think of noon as 0, and get that your appointment is at 2 o'clock. There are many more applications in algebra, cryptography, and computer science where we want to classify integers by their remainders mod .  The following theorem will be useful in proving statements involving congruence, but also in helping do calculations.  Let . The following statements are equivalent.   ;  ;  for some ;  and have the same remainder when divided by ;  , where here we refer to the remainder when dividing by .     When proving several statements are equivalent, we need to be able to get from any one statement to any other.  by definition of congruence.  by definition of mod as the remainder.  is left as an exercise. (See and .)  We will prove .  Assume for some . By the Quotient-Remainder Theorem, with . Thus, . Solving for , we get . But by uniqueness of the remainder, has remainder .  Now assume and have the same remainder when divided by . By the Quotient-Remainder Theorem, and . Substituting in for , . Since , let .   Prove part (1) of implies part (3).  Prove part (3) of implies part (1).  The residue of modulo residue is the remainder when is divided by . The set forms a complete set of residues mod complete set of residues .  Although we have seen congruence mod is an equivalence relation, we formally state it in the following theorem.  Congruence mod is an equivalence relation on with equivalence classes . Furthermore, .  For the proof, see .  Find the equivalence classes for congruence mod 5. List several elements of each equivalence class. What do the elements of each congruence class look like? Think about remainders.  Modular arithmetic modular arithmetic is just the process of adding, subtracting, and multiplying, where we treat integers with the same remainder mod , as equivalent. Thus, we can replace any integer with it's remainder.   Properties of Modular Arithmetic  If and , then     , for    Basically, we can do regular arithmetic, where we can reduce to remainders, or equivalence classes mod .  Modular Arithmetic  Use modular arithmetic to find  .  , so  .   .  , so   Find by first reducing 31 and 92 mod 5, then adding.  Find by first reducing 56 mod 5, then raising to 21.  We can write integers using their decimal expansion. For example, we can write 592 as a decimal expansion: .  Write 1526 as a similar expansion using powers of 10.  Find 10 mod 9 and mod 9 for any .  Use the decimal expansion and (b) find (592 mod 9) and (1526 mod 9).  If we are doing modular arithmetic we often work directly with the equivalence classes, rather than all of the integers.  We define , where represents the equivalence class . Although this sounds complicated, we just do regular arithmetic with and reduce to the remainder mod .   Check Your Understanding  True or false: . True  True or false: . True  True or false: . True  True or false: . False  True or false: . True  True or false: . True  True or false: . True  True or false: . True  True or false: . True  True or false: . True  True or false: . True  Give the equivalence classes for . There should be 5 equivalence classes. You only need to give a representative for each class in the form .     Let and .    Use the definition of congruence modulo 3 to explain why .    What value of has the property that ?    What is the (nonnegative) remainder obtained when 25 is divided by 3? When 19 is divided by 3?      Determine if the following are true or false.     mod .     mod .     mod .     mod .      Verify the following statements by simplifying each expression and using the definition of congruence mod 7.     and                           Prove the transitivity of modular congruence. That is, prove for all with , if and , then .    Prove for all with , if , then .    Prove for all with , and , if , then .  Use mathematical induction on .   Prove for all integers , .    Prove that a positive integer, is divisible by 9 if and only if the sum of the digits of is divisible by 9.  The previous problem will be helpful, as will writing as a decimal expansion (see ). It can be useful in proving that a number is divisible by 9 to instead show that it is congruent to 0 mod 9. Also note, this is an if and only if statement so your proof requires two parts.   "
 },
 {
   "id": "E_modagain",
@@ -8002,9 +8002,9 @@ var ptx_lunr_docs = [
   "body": "Prove part (3) of implies part (1). "
 },
 {
-  "id": "p-2567",
+  "id": "p-2680",
   "level": "2",
-  "url": "modarith8-4.html#p-2567",
+  "url": "modarith8-4.html#p-2680",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -8029,9 +8029,9 @@ var ptx_lunr_docs = [
   "body": "Find the equivalence classes for congruence mod 5. List several elements of each equivalence class. What do the elements of each congruence class look like? Think about remainders. "
 },
 {
-  "id": "p-2573",
+  "id": "p-2686",
   "level": "2",
-  "url": "modarith8-4.html#p-2573",
+  "url": "modarith8-4.html#p-2686",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -8074,112 +8074,112 @@ var ptx_lunr_docs = [
   "body": "We can write integers using their decimal expansion. For example, we can write 592 as a decimal expansion: .  Write 1526 as a similar expansion using powers of 10.  Find 10 mod 9 and mod 9 for any .  Use the decimal expansion and (b) find (592 mod 9) and (1526 mod 9). "
 },
 {
-  "id": "exercise-458",
+  "id": "DMT_mod_CYU_47equiv2mod5",
   "level": "2",
-  "url": "modarith8-4.html#exercise-458",
+  "url": "modarith8-4.html#DMT_mod_CYU_47equiv2mod5",
   "type": "Reading Question",
   "number": "8.4.1",
   "title": "",
   "body": "True or false: . True "
 },
 {
-  "id": "exercise-459",
+  "id": "DMT_mod_CYU_45equiv0mod5",
   "level": "2",
-  "url": "modarith8-4.html#exercise-459",
+  "url": "modarith8-4.html#DMT_mod_CYU_45equiv0mod5",
   "type": "Reading Question",
   "number": "8.4.2",
   "title": "",
   "body": "True or false: . True "
 },
 {
-  "id": "exercise-460",
+  "id": "DMT_mod_CYU_4equivn1mod5",
   "level": "2",
-  "url": "modarith8-4.html#exercise-460",
+  "url": "modarith8-4.html#DMT_mod_CYU_4equivn1mod5",
   "type": "Reading Question",
   "number": "8.4.3",
   "title": "",
   "body": "True or false: . True "
 },
 {
-  "id": "exercise-461",
+  "id": "DMT_mod_CYU_14equiv1mod5",
   "level": "2",
-  "url": "modarith8-4.html#exercise-461",
+  "url": "modarith8-4.html#DMT_mod_CYU_14equiv1mod5",
   "type": "Reading Question",
   "number": "8.4.4",
   "title": "",
   "body": "True or false: . False "
 },
 {
-  "id": "exercise-462",
+  "id": "DMT_mod_CYU_47p45equiv2mod5",
   "level": "2",
-  "url": "modarith8-4.html#exercise-462",
+  "url": "modarith8-4.html#DMT_mod_CYU_47p45equiv2mod5",
   "type": "Reading Question",
   "number": "8.4.5",
   "title": "",
   "body": "True or false: . True "
 },
 {
-  "id": "exercise-463",
+  "id": "DMT_mod_CYU_47tt2equiv4mod5",
   "level": "2",
-  "url": "modarith8-4.html#exercise-463",
+  "url": "modarith8-4.html#DMT_mod_CYU_47tt2equiv4mod5",
   "type": "Reading Question",
   "number": "8.4.6",
   "title": "",
   "body": "True or false: . True "
 },
 {
-  "id": "exercise-464",
+  "id": "DMT_mod_CYU_4tt500equiv1mod5",
   "level": "2",
-  "url": "modarith8-4.html#exercise-464",
+  "url": "modarith8-4.html#DMT_mod_CYU_4tt500equiv1mod5",
   "type": "Reading Question",
   "number": "8.4.7",
   "title": "",
   "body": "True or false: . True "
 },
 {
-  "id": "exercise-465",
+  "id": "DMT_mod_CYU_10equiv1mod9",
   "level": "2",
-  "url": "modarith8-4.html#exercise-465",
+  "url": "modarith8-4.html#DMT_mod_CYU_10equiv1mod9",
   "type": "Reading Question",
   "number": "8.4.8",
   "title": "",
   "body": "True or false: . True "
 },
 {
-  "id": "exercise-466",
+  "id": "DMT_mod_CYU_10tt2equiv1mod9",
   "level": "2",
-  "url": "modarith8-4.html#exercise-466",
+  "url": "modarith8-4.html#DMT_mod_CYU_10tt2equiv1mod9",
   "type": "Reading Question",
   "number": "8.4.9",
   "title": "",
   "body": "True or false: . True "
 },
 {
-  "id": "exercise-467",
+  "id": "DMT_mod_CYU_10tt5equiv1mod9",
   "level": "2",
-  "url": "modarith8-4.html#exercise-467",
+  "url": "modarith8-4.html#DMT_mod_CYU_10tt5equiv1mod9",
   "type": "Reading Question",
   "number": "8.4.10",
   "title": "",
   "body": "True or false: . True "
 },
 {
-  "id": "exercise-468",
+  "id": "DMT_mod_CYU_10ttnequiv1mod9",
   "level": "2",
-  "url": "modarith8-4.html#exercise-468",
+  "url": "modarith8-4.html#DMT_mod_CYU_10ttnequiv1mod9",
   "type": "Reading Question",
   "number": "8.4.11",
   "title": "",
   "body": "True or false: . True "
 },
 {
-  "id": "exercise-469",
+  "id": "DMT_mod_CYU_equivclassmod5",
   "level": "2",
-  "url": "modarith8-4.html#exercise-469",
+  "url": "modarith8-4.html#DMT_mod_CYU_equivclassmod5",
   "type": "Reading Question",
   "number": "8.4.12",
   "title": "",
-  "body": "Give the equivalence classes for . "
+  "body": "Give the equivalence classes for . There should be 5 equivalence classes. You only need to give a representative for each class in the form . "
 },
 {
   "id": "exercise-470",
@@ -8260,21 +8260,21 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "9.1",
   "title": "Probability",
-  "body": " Probability probability  Let be a set of possible outcomes, called a sample space . Let be a subset of with some property. We call an event .  The probability of event , , is the number of outcomes in divided by the total number of outcomes in .  Let be the number of elements in . Similarly, , is the number of outcomes in .  In notation, .  Finding Probability of an Event  A standard deck of playing cards has 52 cards. Each card has a suit and a value. The deck has four suits: hearts, diamonds, spades, clubs. Each suit has 13 values: Ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, King. The spades and clubs are called black cards, the hearts and diamonds are called red cards.  Find the probability you randomly choose a club from the deck.  Note, is the set of clubs, is the set of cards.   Find the probability you randomly choose a red card from the deck.  Note, is the set of hearts and diamonds, is the set of cards.   Find the probability you randomly choose a 2 from the deck.  Note, is the set of 2's, is the set of cards.    Suppose you toss a fair coin two times.  List all the possible outcomes.  What is the probability that you get exactly 2 heads?  What is the probability that you get exactly 1 head?  In order to calculate a probability, we need to be able to count equally-likely events. Just because there are, say, 3 outcomes, that doesn't mean all the outcomes are equally-likely. For example, the Linfied football team could win, lose, or tie a game. Given the team's winning streak, the three outcomes are not equally-likely. They have a much higher probability of winning than just 1\/3.  Thus, the focus for the rest of the chapter will be on counting events. Once we can count outcomes, it is straight-forward to find the probability.  Before moving on, though, we will state a few useful facts about probabilities.    is always a number between 0 and 1. The probability can be 0.5. It cannot be 50%  means the event is not possible.  means the event always happens.     Check Your Understanding  In a standard deck of cards, find the probability of randomly drawing an Ace.  In a standard deck of cards, find the probability of randomly drawing a face card (Jack, Queen, King).  In a standard deck of cards, find the probability of randomly drawing an even numbered card.  An urn contains 3 red balls, 2 green balls, 4 multicolored balls. Find the probability of drawing a green ball.  An urn contains 3 red balls, 2 green balls, 4 multicolored balls. Find the probability of drawing a solid colored ball.    Assume the sample space is a standard deck of 52 cards. Suppose you choose a random card from the deck.    List all the possible outcomes of the card being red and not a face card.    Calculate the probability of the event in (a).     Assume the sample space is a standard deck of 52 cards. Suppose you choose a random card from the deck.    List all the possible outcomes of the card being black and having an even number on it.    Calculate the probability of the event in (a).      Assume the sample space is the possible rolls of a pair of dice, one blue die and one red die.    List all the possible outcomes where the sum of the numbers showing face up is 8.    Calculate the probability of the event in (a).      Assume the sample space is the possible rolls of a pair of dice, one blue die and one red die.    List all the possible outcomes where the sum of the numbers showing face up is at most 6.    Calculate the probability of the event in (a).      Suppose a coin is tossed four times and the side showing face up on each toss is noted. Suppose also that heads and tails are equally-likely for the coin.    List the 16 elements in the sample space as sequences of heads and tails.    List the set of outcomes and the probability for the event of exactly one toss resulting in a head.    List the set of outcomes and the probability for the event that at least two tosses result in a head.    List the set of outcomes and the probability for the event that no toss results in a head.      Suppose that on a true\/false exam you have no idea about the answers to three questions. You choose your answers randomly and therefore have a 50-50 chance of being correct on any one question. For example, let indicate that you were correct on the first two questions but wrong on the third.    List all the elements of the sample space as the possible sequences of and for the three questions.    List the set of outcomes and the probability for the event that exactly one answer is correct.    List the set of outcomes and the probability for the event that at least two answers are correct.    List the set of outcomes and the probability for the event that no answers are correct.      "
+  "body": " Probability probability  Let be a set of possible outcomes, called a sample space . Let be a subset of with some property. We call an event .  The probability of event , , is the number of outcomes in divided by the total number of outcomes in .  Let be the number of elements in . Similarly, , is the number of outcomes in .  In notation, .  Finding Probability of an Event  A standard deck of playing cards has 52 cards. Each card has a suit and a value. The deck has four suits: hearts, diamonds, spades, clubs. Each suit has 13 values: Ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, King. The spades and clubs are called black cards, the hearts and diamonds are called red cards.  Find the probability you randomly choose a club from the deck.  Note, is the set of clubs, is the set of cards.   Find the probability you randomly choose a red card from the deck.  Note, is the set of hearts and diamonds, is the set of cards.   Find the probability you randomly choose a 2 from the deck.  Note, is the set of 2's, is the set of cards.    Suppose you toss a fair coin two times.  List all the possible outcomes.  What is the probability that you get exactly 2 heads?  What is the probability that you get exactly 1 head?  In order to calculate a probability, we need to be able to count equally-likely events. Just because there are, say, 3 outcomes, that doesn't mean all the outcomes are equally-likely. For example, the Linfied football team could win, lose, or tie a game. Given the team's winning streak, the three outcomes are not equally-likely. They have a much higher probability of winning than just 1\/3.  Thus, the focus for the rest of the chapter will be on counting events. Once we can count outcomes, it is straight-forward to find the probability.  Before moving on, though, we will state a few useful facts about probabilities.    is always a number between 0 and 1. The probability can be 0.5. It cannot be 50%  means the event is not possible.  means the event always happens.     Check Your Understanding  In a standard deck of cards, find the probability of randomly drawing an Ace. Give your answer to at least 3 decimal places.  The probability is .     Correct. The probability is .      Don't forget to round up in the third decimal.      Incorrect. How many Aces are in the deck? How many cards are in the deck? Your answer should be number of Aces divided by number of cards.      In a standard deck of cards, find the probability of randomly drawing a face card (Jack, Queen, King). Give your answer to at least 3 decimal places.  The probability is .     Correct. The probability is .      Don't forget to round up in the third decimal.      Incorrect. How many face cards are in the deck? How many cards are in the deck? Your answer should be number of face cards divided by number of cards.      In a standard deck of cards, find the probability of randomly drawing an even numbered card. Give your answer to at least 3 decimal places.  The probability is .     Correct. The probability is .      Don't forget to round up in the third decimal.      Incorrect. How many even numbered cards (2, 4, 6, 8, 10) are in the deck? How many cards are in the deck? Your answer should be number of even cards divided by number of cards.      An urn contains 3 red balls, 2 green balls, 4 multicolored balls. Find the probability of drawing a green ball. Give your answer to at least 3 decimal places.  The probability is .     Correct. The probability is .      Incorrect. How many green balls are in the urn? How many balls are in the urn? Your answer should be number of green balls divided by number of balls.      An urn contains 3 red balls, 2 green balls, 4 multicolored balls. Find the probability of drawing a solid colored ball. Give your answer to at least 3 decimal places.  The probability is .     Correct. The probability is .      Incorrect. How many solid colored balls are in the urn? How many balls are in the urn? Your answer should be number of solid balls divided by number of balls.        Assume the sample space is a standard deck of 52 cards. Suppose you choose a random card from the deck.    List all the possible outcomes of the card being red and not a face card.    Calculate the probability of the event in (a).     Assume the sample space is a standard deck of 52 cards. Suppose you choose a random card from the deck.    List all the possible outcomes of the card being black and having an even number on it.    Calculate the probability of the event in (a).      Assume the sample space is the possible rolls of a pair of dice, one blue die and one red die.    List all the possible outcomes where the sum of the numbers showing face up is 8.    Calculate the probability of the event in (a).      Assume the sample space is the possible rolls of a pair of dice, one blue die and one red die.    List all the possible outcomes where the sum of the numbers showing face up is at most 6.    Calculate the probability of the event in (a).      Suppose a coin is tossed four times and the side showing face up on each toss is noted. Suppose also that heads and tails are equally-likely for the coin.    List the 16 elements in the sample space as sequences of heads and tails.    List the set of outcomes and the probability for the event of exactly one toss resulting in a head.    List the set of outcomes and the probability for the event that at least two tosses result in a head.    List the set of outcomes and the probability for the event that no toss results in a head.      Suppose that on a true\/false exam you have no idea about the answers to three questions. You choose your answers randomly and therefore have a 50-50 chance of being correct on any one question. For example, let indicate that you were correct on the first two questions but wrong on the third.    List all the elements of the sample space as the possible sequences of and for the three questions.    List the set of outcomes and the probability for the event that exactly one answer is correct.    List the set of outcomes and the probability for the event that at least two answers are correct.    List the set of outcomes and the probability for the event that no answers are correct.      "
 },
 {
-  "id": "p-2623",
+  "id": "p-2737",
   "level": "2",
-  "url": "probability9-1.html#p-2623",
+  "url": "probability9-1.html#p-2737",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "sample space event "
 },
 {
-  "id": "p-2624",
+  "id": "p-2738",
   "level": "2",
-  "url": "probability9-1.html#p-2624",
+  "url": "probability9-1.html#p-2738",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -8299,58 +8299,58 @@ var ptx_lunr_docs = [
   "body": "Suppose you toss a fair coin two times.  List all the possible outcomes.  What is the probability that you get exactly 2 heads?  What is the probability that you get exactly 1 head? "
 },
 {
-  "id": "p-2638",
+  "id": "p-2752",
   "level": "2",
-  "url": "probability9-1.html#p-2638",
+  "url": "probability9-1.html#p-2752",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "equally-likely "
 },
 {
-  "id": "exercise-478",
+  "id": "DMT_prob_CYU_drawA",
   "level": "2",
-  "url": "probability9-1.html#exercise-478",
+  "url": "probability9-1.html#DMT_prob_CYU_drawA",
   "type": "Reading Question",
   "number": "9.1.1",
   "title": "",
-  "body": "In a standard deck of cards, find the probability of randomly drawing an Ace. "
+  "body": "In a standard deck of cards, find the probability of randomly drawing an Ace. Give your answer to at least 3 decimal places.  The probability is .     Correct. The probability is .      Don't forget to round up in the third decimal.      Incorrect. How many Aces are in the deck? How many cards are in the deck? Your answer should be number of Aces divided by number of cards.     "
 },
 {
-  "id": "exercise-479",
+  "id": "DMT_prob_CYU_drawface",
   "level": "2",
-  "url": "probability9-1.html#exercise-479",
+  "url": "probability9-1.html#DMT_prob_CYU_drawface",
   "type": "Reading Question",
   "number": "9.1.2",
   "title": "",
-  "body": "In a standard deck of cards, find the probability of randomly drawing a face card (Jack, Queen, King). "
+  "body": "In a standard deck of cards, find the probability of randomly drawing a face card (Jack, Queen, King). Give your answer to at least 3 decimal places.  The probability is .     Correct. The probability is .      Don't forget to round up in the third decimal.      Incorrect. How many face cards are in the deck? How many cards are in the deck? Your answer should be number of face cards divided by number of cards.     "
 },
 {
-  "id": "exercise-480",
+  "id": "DMT_prob_CYU_draweven",
   "level": "2",
-  "url": "probability9-1.html#exercise-480",
+  "url": "probability9-1.html#DMT_prob_CYU_draweven",
   "type": "Reading Question",
   "number": "9.1.3",
   "title": "",
-  "body": "In a standard deck of cards, find the probability of randomly drawing an even numbered card. "
+  "body": "In a standard deck of cards, find the probability of randomly drawing an even numbered card. Give your answer to at least 3 decimal places.  The probability is .     Correct. The probability is .      Don't forget to round up in the third decimal.      Incorrect. How many even numbered cards (2, 4, 6, 8, 10) are in the deck? How many cards are in the deck? Your answer should be number of even cards divided by number of cards.     "
 },
 {
-  "id": "exercise-481",
+  "id": "DMT_prob_CYU_drawgreen",
   "level": "2",
-  "url": "probability9-1.html#exercise-481",
+  "url": "probability9-1.html#DMT_prob_CYU_drawgreen",
   "type": "Reading Question",
   "number": "9.1.4",
   "title": "",
-  "body": "An urn contains 3 red balls, 2 green balls, 4 multicolored balls. Find the probability of drawing a green ball. "
+  "body": "An urn contains 3 red balls, 2 green balls, 4 multicolored balls. Find the probability of drawing a green ball. Give your answer to at least 3 decimal places.  The probability is .     Correct. The probability is .      Incorrect. How many green balls are in the urn? How many balls are in the urn? Your answer should be number of green balls divided by number of balls.     "
 },
 {
-  "id": "exercise-482",
+  "id": "DMT_prob_CYU_drawsolid",
   "level": "2",
-  "url": "probability9-1.html#exercise-482",
+  "url": "probability9-1.html#DMT_prob_CYU_drawsolid",
   "type": "Reading Question",
   "number": "9.1.5",
   "title": "",
-  "body": "An urn contains 3 red balls, 2 green balls, 4 multicolored balls. Find the probability of drawing a solid colored ball. "
+  "body": "An urn contains 3 red balls, 2 green balls, 4 multicolored balls. Find the probability of drawing a solid colored ball. Give your answer to at least 3 decimal places.  The probability is .     Correct. The probability is .      Incorrect. How many solid colored balls are in the urn? How many balls are in the urn? Your answer should be number of solid balls divided by number of balls.     "
 },
 {
   "id": "exercise-483",
@@ -8413,7 +8413,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "9.2",
   "title": "Multiplication Rule",
-  "body": " Multiplication Rule multiplication rule  In this section we look at how to count a process that has several steps. We start with an example.  Coin Toss  Toss a coin three times. How many ways can you get exactly two heads in the three tosses?  First toss: H or T  Second toss: H or T  Third toss: H or T  If we think about what happens after the first toss, we have H or T. For each of those outcomes, we get H or T on the second toss, so we now have 4 outcomes: HH, HT, TH, TT  With the third toss, each of our four outcomes could end with H or T, giving us 8 outcomes: HHH, HTH, THH, TTH, HHT, HTT, THT, TTT.  Out of these 8 possible outcomes, there are 3 outcomes with exactly 2 heads: HTH, THH, HHT.  We can also see the possibilies using a possibility tree , where the first (top) level represents the first toss, the second level, the second toss, and the third level, the third toss. The blue paths show the outcomes with exactly two Heads.   Possibility tree for tossing a coin three times      In , we saw that each toss doubled the number of outcomes from the previous toss. For example, if we tossed the coin 4 times, we would have outcomes. We are using the multiplication rule to determine the number of outcomes.   Multiplication Rule  Supose we have a process with steps, where  the first step can be done in ways;  the second step can be done in ways;  the step can be done in ways.  Then the total operation can be done in ways.   Suppose a restaurant offers 3 appetizers, 3 entrees, and 2 desserts.  Draw a possibility tree for how many different meals (one appetizer, one entree, and one dessert) you can create.  How many total meals can you create?  Multiplication Rule: License Plates  Find the number of license plates that can be made if each one consists of two letters from A through E, followed by four digits from 1 through 9.  There are 5 choices for the letters: A, B, C, D, E.  There are 9 choices for the digits: 1, 2, 3, 4, 5, 6, 7, 8, 9.  First choose a letter, then another letter, then choose each of the numbers. We can use the multiplication rule since we can choose each character as a process.  Thus, we have license plates.  Now, suppose you cannot repeat a number in any one license plate. How many license plates can we make?  When choosing the numbers, first we have 9 choices, then 8, since we can't choose the same number as the first digit, etc.  The total number of license plates if we can't repeat a number is .   Suppose a license plate consists of 3 letters followed by 2 digits.  How many license plates can you make?  How many license plates can you make if you cannot repeat a letter or number?  A string of length over string is a list of characters where the characters come from set . A binary string string binary or bit string bit string is a string with . The null string null string is the string of length 0, denoted .  Multiplication Rule: Strings  Find the number of bit strings of length 5.   Find the number of words of length 4. These are just strings where is the alphabet.   Find the number of strings of length 7, where .    A permutation permutation of a set is an ordering of the elements of in a row.  Permutations of a Set  Let . Then a permutation of is a list of elements in . List all the permutations of .  Since we have 3 choices for our first element, then 2 choices for the second, and 1 for the last, there are permutations.  The permutations are abc, acb, bca, bac, cab, cba.  How many permutations are there of the set ?    List all the permutations of . There are 6.  How many permutations are there of a set with 5 elements?  How many permutations are there of a set with elements?  gives us a formula for finding the number of permutations of a set with elements.  The number of permutations of a set with elements is factorial, .  An -permutation -permutation of a set is an ordered selection of elements taken from the elements of in a row. We use the notation the number of -permutations from a set of elements for the number of -permutations from a set of elements.  -Permutations of a Set  Let . Then a 3-permutation of is a list of 3 (non-repeating) elements from . For example, ace, dbe, bda are all 3-permutations.  Find the number of 3-permutations of , .  We have 5 choices for the first letter, 4 choices for the second, and 3 choices for the last. Thus, .  How many 4-permutations are there of the standard English alphabet?    How many 2-permutations are there of ?  How many 3-permutations are there of ? Think of finding a way to count them using the multiplication rule rather than writing them all down.  Try to find a general formula for counting all -permutations in a set of elements.  gives us a formula for finding the number of -permutations of a set with elements.  The number of -permutations of a set with elements is which is often easier to calculate using  Find .  Finding Four-Digit Integers  How many odd integers are there from 1000 to 9999?  The number is a string of 4 digits. The first digit cannot be 0, so there are 9 choices: 1 through 9. The second and third digits can be anything from 0 to 9, so there are 10 choices for each. The last digit must be odd, so the only choices are 1, 3, 5, 7, 9.  Thus, there are odd numbers.  How many integers are there from 1000 to 9999 that have distict digits?  The first digit cannot be 0, so there are 9 choices: 1 through 9. The second digit can be anything from 0 to 9, except for whatever the first digit is, so there are 9 choices. Similarly, there are 8 choices for the third digit, and 7 for the last digit.  Thus, there are numbers with distinct digits.    Check Your Understanding  Toss a coin 4 times. How many ways are there to get exactly 1 Head?  Toss a coin 4 times. How many ways are there to get exactly 2 Heads?  Toss a coin 4 times. How many ways are there to get 0 Heads?  How many 3 digit numbers begin with 1 or 2 and end with 2, 3, or 4?  How many 3 digit numbers are divisible by 5?  Calculate the number of permutations of a set with 6 elements.  Calculate .  Calculate .    A bag contains two green balls (labeled and ) and one purple ball. A second bag contains one green ball and two purple balls (labeled and ). Suppose the following experiment is performed: One of the two bags is chosen at random. Next a ball is randomly chosen from the bag. Then a second ball is chosen from the same bag without replacing the first ball.    Construct the possibility tree showing all possible outcomes of the experiment.    What is the total number of outcomes in this experiment?    What is the probability that two green balls are chosen?    What is the probability that two balls of different colors are chosen?     A person buying a computer system is offered a choice of three models of the basic unit, two models of the keyboard, and two models of printer. How many distinct systems can be purchased?    Recall that a bit string is a finite sequence of 0’s and 1’s.    How many bit strings have length 8?    How many bit strings have length 8 and begin with 3 0’s?    How many bit strings have length 8 and begin and end with a 1?      A coin is tossed four times. Each time the result for heads or for tails is recorded. Assume heads and tails are equally likely on each toss.    How many distinct outcomes are possible?    What is the probability that exactly two heads occur?    What is the probability that exactly one head occurs?      Suppose a license plate consists of four letters followed by three digits.    How many different license plates are possible?    How many license plates could begin with and and end with 0?    How many license plates could begin with ?    How many license plates are possible if you cannot repeat a letter or number (all the letters and numbers are distinct)?    How many license plates could begin with and have no repeated letters or numbers?      Consider all two digit integers 10-99.    How many integers are there from 10 through 99?    How many odd integers are there from 10 through 99?    How many integers from 10 through 99 have distinct digits?    How many odd integers from 10 through 99 have distinct digits?    What is the probability that a randomly chosen two-digit number has distinct digits? has distinct digits and is odd?      We want to count the number of possible functions from a finite set to a finite set. You may need to recall the definition of a function, .    How many functions are there from a set with three elements to a set with four elements?    How many functions are there from a set with five elements to a set with two elements?    How many functions are there from a set with elements to a set with elements, where and are positive integers?      We consider various arrangements of the letters in the word .    How many ways can the letters of the word be arranged in a row?    How many ways can the letters of the word be arranged in a row if and must remain together (in order) as a unit?    How many ways can the letters of the word be arranged in a row if the letters must remain together (in order) as a unit?      "
+  "body": " Multiplication Rule multiplication rule  In this section we look at how to count a process that has several steps. We start with an example.  Coin Toss  Toss a coin three times. How many ways can you get exactly two heads in the three tosses?  First toss: H or T  Second toss: H or T  Third toss: H or T  If we think about what happens after the first toss, we have H or T. For each of those outcomes, we get H or T on the second toss, so we now have 4 outcomes: HH, HT, TH, TT  With the third toss, each of our four outcomes could end with H or T, giving us 8 outcomes: HHH, HTH, THH, TTH, HHT, HTT, THT, TTT.  Out of these 8 possible outcomes, there are 3 outcomes with exactly 2 heads: HTH, THH, HHT.  We can also see the possibilies using a possibility tree , where the first (top) level represents the first toss, the second level, the second toss, and the third level, the third toss. The blue paths show the outcomes with exactly two Heads.   Possibility tree for tossing a coin three times      In , we saw that each toss doubled the number of outcomes from the previous toss. For example, if we tossed the coin 4 times, we would have outcomes. We are using the multiplication rule to determine the number of outcomes.   Multiplication Rule  Supose we have a process with steps, where  the first step can be done in ways;  the second step can be done in ways;  the step can be done in ways.  Then the total operation can be done in ways.   Suppose a restaurant offers 3 appetizers, 3 entrees, and 2 desserts.  Draw a possibility tree for how many different meals (one appetizer, one entree, and one dessert) you can create.  How many total meals can you create?  Multiplication Rule: License Plates  Find the number of license plates that can be made if each one consists of two letters from A through E, followed by four digits from 1 through 9.  There are 5 choices for the letters: A, B, C, D, E.  There are 9 choices for the digits: 1, 2, 3, 4, 5, 6, 7, 8, 9.  First choose a letter, then another letter, then choose each of the numbers. We can use the multiplication rule since we can choose each character as a process.  Thus, we have license plates.  Now, suppose you cannot repeat a number in any one license plate. How many license plates can we make?  When choosing the numbers, first we have 9 choices, then 8, since we can't choose the same number as the first digit, etc.  The total number of license plates if we can't repeat a number is .   Suppose a license plate consists of 3 letters followed by 2 digits.  How many license plates can you make?  How many license plates can you make if you cannot repeat a letter or number?  A string of length over string is a list of characters where the characters come from set . A binary string string binary or bit string bit string is a string with . The null string null string is the string of length 0, denoted .  Multiplication Rule: Strings  Find the number of bit strings of length 5.   Find the number of words of length 4. These are just strings where is the alphabet.   Find the number of strings of length 7, where .    A permutation permutation of a set is an ordering of the elements of in a row.  Permutations of a Set  Let . Then a permutation of is a list of elements in . List all the permutations of .  Since we have 3 choices for our first element, then 2 choices for the second, and 1 for the last, there are permutations.  The permutations are abc, acb, bca, bac, cab, cba.  How many permutations are there of the set ?    List all the permutations of . There are 6.  How many permutations are there of a set with 5 elements?  How many permutations are there of a set with elements?  gives us a formula for finding the number of permutations of a set with elements.  The number of permutations of a set with elements is factorial, .  An -permutation -permutation of a set is an ordered selection of elements taken from the elements of in a row. We use the notation the number of -permutations from a set of elements for the number of -permutations from a set of elements.  -Permutations of a Set  Let . Then a 3-permutation of is a list of 3 (non-repeating) elements from . For example, ace, dbe, bda are all 3-permutations.  Find the number of 3-permutations of , .  We have 5 choices for the first letter, 4 choices for the second, and 3 choices for the last. Thus, .  How many 4-permutations are there of the standard English alphabet?    How many 2-permutations are there of ?  How many 3-permutations are there of ? Think of finding a way to count them using the multiplication rule rather than writing them all down.  Try to find a general formula for counting all -permutations in a set of elements.  gives us a formula for finding the number of -permutations of a set with elements.  The number of -permutations of a set with elements is which is often easier to calculate using  Find .  Finding Four-Digit Integers  How many odd integers are there from 1000 to 9999?  The number is a string of 4 digits. The first digit cannot be 0, so there are 9 choices: 1 through 9. The second and third digits can be anything from 0 to 9, so there are 10 choices for each. The last digit must be odd, so the only choices are 1, 3, 5, 7, 9.  Thus, there are odd numbers.  How many integers are there from 1000 to 9999 that have distict digits?  The first digit cannot be 0, so there are 9 choices: 1 through 9. The second digit can be anything from 0 to 9, except for whatever the first digit is, so there are 9 choices. Similarly, there are 8 choices for the third digit, and 7 for the last digit.  Thus, there are numbers with distinct digits.    Check Your Understanding  Toss a coin 4 times. How many ways are there to get exactly 1 Head?      Correct.      Incorrect. Try writing out all possible strings of 4 Heads and Tails which have only 1 Head.      Toss a coin 4 times. How many ways are there to get exactly 2 Heads?     Correct.      Incorrect. For help see .      Toss a coin 4 times. How many ways are there to get 0 Heads?     Correct.      Incorrect. If there are no heads, what is the only possible outcome?      How many 3 digit numbers begin with 1 or 2 and end with 2, 3, or 4?     Correct, using the multiplication rule, .      Incorrect. Remember, 0 is a digit.      Incorrect. Use the multiplication rule: how many choices do you have for the first digit, the second digit, the third digit?      How many 3 digit numbers are divisible by 5?     Correct, using the multiplication rule, .      Incorrect. Remember, a 3 digit number can't start with 0.      Incorrect. Remember, 0 is a digit, so it can occur in the second digit.      Incorrect. Use the multiplication rule: how many choices do you have for the first digit, the second digit, the third digit? What are the possible last digits if a number is divisible by 5?      Calculate the number of permutations of a set with 6 elements.     Correct.       Incorrect. See .      Calculate .     Correct.       Incorrect. See .      Calculate .     Correct.       Incorrect. See .        A bag contains two green balls (labeled and ) and one purple ball. A second bag contains one green ball and two purple balls (labeled and ). Suppose the following experiment is performed: One of the two bags is chosen at random. Next a ball is randomly chosen from the bag. Then a second ball is chosen from the same bag without replacing the first ball.    Construct the possibility tree showing all possible outcomes of the experiment.    What is the total number of outcomes in this experiment?    What is the probability that two green balls are chosen?    What is the probability that two balls of different colors are chosen?     A person buying a computer system is offered a choice of three models of the basic unit, two models of the keyboard, and two models of printer. How many distinct systems can be purchased?    Recall that a bit string is a finite sequence of 0’s and 1’s.    How many bit strings have length 8?    How many bit strings have length 8 and begin with 3 0’s?    How many bit strings have length 8 and begin and end with a 1?      A coin is tossed four times. Each time the result for heads or for tails is recorded. Assume heads and tails are equally likely on each toss.    How many distinct outcomes are possible?    What is the probability that exactly two heads occur?    What is the probability that exactly one head occurs?      Suppose a license plate consists of four letters followed by three digits.    How many different license plates are possible?    How many license plates could begin with and and end with 0?    How many license plates could begin with ?    How many license plates are possible if you cannot repeat a letter or number (all the letters and numbers are distinct)?    How many license plates could begin with and have no repeated letters or numbers?      Consider all two digit integers 10-99.    How many integers are there from 10 through 99?    How many odd integers are there from 10 through 99?    How many integers from 10 through 99 have distinct digits?    How many odd integers from 10 through 99 have distinct digits?    What is the probability that a randomly chosen two-digit number has distinct digits? has distinct digits and is odd?      We want to count the number of possible functions from a finite set to a finite set. You may need to recall the definition of a function, .    How many functions are there from a set with three elements to a set with four elements?    How many functions are there from a set with five elements to a set with two elements?    How many functions are there from a set with elements to a set with elements, where and are positive integers?      We consider various arrangements of the letters in the word .    How many ways can the letters of the word be arranged in a row?    How many ways can the letters of the word be arranged in a row if and must remain together (in order) as a unit?    How many ways can the letters of the word be arranged in a row if the letters must remain together (in order) as a unit?      "
 },
 {
   "id": "E_cointosscount",
@@ -8452,9 +8452,9 @@ var ptx_lunr_docs = [
   "body": "Suppose a license plate consists of 3 letters followed by 2 digits.  How many license plates can you make?  How many license plates can you make if you cannot repeat a letter or number? "
 },
 {
-  "id": "p-2694",
+  "id": "p-2826",
   "level": "2",
-  "url": "multrule9-2.html#p-2694",
+  "url": "multrule9-2.html#p-2826",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -8596,76 +8596,76 @@ var ptx_lunr_docs = [
   "body": "Finding Four-Digit Integers  How many odd integers are there from 1000 to 9999?  The number is a string of 4 digits. The first digit cannot be 0, so there are 9 choices: 1 through 9. The second and third digits can be anything from 0 to 9, so there are 10 choices for each. The last digit must be odd, so the only choices are 1, 3, 5, 7, 9.  Thus, there are odd numbers.  How many integers are there from 1000 to 9999 that have distict digits?  The first digit cannot be 0, so there are 9 choices: 1 through 9. The second digit can be anything from 0 to 9, except for whatever the first digit is, so there are 9 choices. Similarly, there are 8 choices for the third digit, and 7 for the last digit.  Thus, there are numbers with distinct digits.  "
 },
 {
-  "id": "exercise-489",
+  "id": "DMT_multrule_CYU_4toss1H",
   "level": "2",
-  "url": "multrule9-2.html#exercise-489",
+  "url": "multrule9-2.html#DMT_multrule_CYU_4toss1H",
   "type": "Reading Question",
   "number": "9.2.1",
   "title": "",
-  "body": "Toss a coin 4 times. How many ways are there to get exactly 1 Head? "
+  "body": "Toss a coin 4 times. How many ways are there to get exactly 1 Head?      Correct.      Incorrect. Try writing out all possible strings of 4 Heads and Tails which have only 1 Head.     "
 },
 {
-  "id": "exercise-490",
+  "id": "DMT_multrule_CYU_4toss2H",
   "level": "2",
-  "url": "multrule9-2.html#exercise-490",
+  "url": "multrule9-2.html#DMT_multrule_CYU_4toss2H",
   "type": "Reading Question",
   "number": "9.2.2",
   "title": "",
-  "body": "Toss a coin 4 times. How many ways are there to get exactly 2 Heads? "
+  "body": "Toss a coin 4 times. How many ways are there to get exactly 2 Heads?     Correct.      Incorrect. For help see .     "
 },
 {
-  "id": "exercise-491",
+  "id": "DMT_multrule_CYU_4toss0H",
   "level": "2",
-  "url": "multrule9-2.html#exercise-491",
+  "url": "multrule9-2.html#DMT_multrule_CYU_4toss0H",
   "type": "Reading Question",
   "number": "9.2.3",
   "title": "",
-  "body": "Toss a coin 4 times. How many ways are there to get 0 Heads? "
+  "body": "Toss a coin 4 times. How many ways are there to get 0 Heads?     Correct.      Incorrect. If there are no heads, what is the only possible outcome?     "
 },
 {
-  "id": "exercise-492",
+  "id": "DMT_multrule_CYU_3digand",
   "level": "2",
-  "url": "multrule9-2.html#exercise-492",
+  "url": "multrule9-2.html#DMT_multrule_CYU_3digand",
   "type": "Reading Question",
   "number": "9.2.4",
   "title": "",
-  "body": "How many 3 digit numbers begin with 1 or 2 and end with 2, 3, or 4? "
+  "body": "How many 3 digit numbers begin with 1 or 2 and end with 2, 3, or 4?     Correct, using the multiplication rule, .      Incorrect. Remember, 0 is a digit.      Incorrect. Use the multiplication rule: how many choices do you have for the first digit, the second digit, the third digit?     "
 },
 {
-  "id": "exercise-493",
+  "id": "DMT_multrule_CYU_3digdiv5",
   "level": "2",
-  "url": "multrule9-2.html#exercise-493",
+  "url": "multrule9-2.html#DMT_multrule_CYU_3digdiv5",
   "type": "Reading Question",
   "number": "9.2.5",
   "title": "",
-  "body": "How many 3 digit numbers are divisible by 5? "
+  "body": "How many 3 digit numbers are divisible by 5?     Correct, using the multiplication rule, .      Incorrect. Remember, a 3 digit number can't start with 0.      Incorrect. Remember, 0 is a digit, so it can occur in the second digit.      Incorrect. Use the multiplication rule: how many choices do you have for the first digit, the second digit, the third digit? What are the possible last digits if a number is divisible by 5?     "
 },
 {
-  "id": "exercise-494",
+  "id": "DMT_multrule_CYU_perm6",
   "level": "2",
-  "url": "multrule9-2.html#exercise-494",
+  "url": "multrule9-2.html#DMT_multrule_CYU_perm6",
   "type": "Reading Question",
   "number": "9.2.6",
   "title": "",
-  "body": "Calculate the number of permutations of a set with 6 elements. "
+  "body": "Calculate the number of permutations of a set with 6 elements.     Correct.       Incorrect. See .     "
 },
 {
-  "id": "exercise-495",
+  "id": "DMT_multrule_CYU_P74",
   "level": "2",
-  "url": "multrule9-2.html#exercise-495",
+  "url": "multrule9-2.html#DMT_multrule_CYU_P74",
   "type": "Reading Question",
   "number": "9.2.7",
   "title": "",
-  "body": "Calculate . "
+  "body": "Calculate .     Correct.       Incorrect. See .     "
 },
 {
-  "id": "exercise-496",
+  "id": "DMT_multrule_CYU_P72",
   "level": "2",
-  "url": "multrule9-2.html#exercise-496",
+  "url": "multrule9-2.html#DMT_multrule_CYU_P72",
   "type": "Reading Question",
   "number": "9.2.8",
   "title": "",
-  "body": "Calculate . "
+  "body": "Calculate .     Correct.       Incorrect. See .     "
 },
 {
   "id": "exercise-497",
@@ -8746,7 +8746,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "9.3",
   "title": "Addition Rule",
-  "body": " Addition Rule addition rule  In this section we look at how to count unions of disjoint sets, then look at counting sets with nontrivial intersections.   Addition Rule addition rule  If is the union of distinct, mutually disjoint sets, , then the number of elements in is given by   Addition Rule: Counting Numbers Divisible by 5  How many 3 digit numbers are divisible by 5?  We were able to count 3 digit numbers in the last section by constructing the number as a sequence of digits. We will use this example to think about how to count these as disjoint sets.  Let be the set of 3 digit numbers ending in 5.  Let be the set of 3 digit numbers ending in 0.  , where we are using the multiplication rule as in .  .  Since no number ends in both 5 and 0, . Thus, by the addition rule,   How many 3 digit numbers are divisible by 10?  How many 3 digit numbers are divisible by 2?  It is going to take practice to be able to see when to use the multiplication rule and when to use the addition rule. If you are counting elements of different sets, use addition. If you are counting elements that are constructed in a process (can you determine step 1, step 2, etc?), then use the multiplication rule. Many problems require both rules, as we saw in .  Now we want to look at what happens if our sets are not disjoint.  If is finite and , then .  If we want to count the number of elements in , we can count those in and those in . But every element in the intersection has now been counted twice. so we need to subtract . This is the idea behind the Inclusion-Exclusion Rule.  Inclusion-Exclusion Rule inclusion-exclusion rule Let be finite sets.   For the case with three sets, we can see that each element in the intersection of at least two sets got counted twice, but when we subtract off all three intersections, we end up subtracting each element in more than one intersection twice, so we need to add back the elements in the intersection of all three sets. For this class, we won't need to use Inclusion-Exclusion on more than three sets, but the rule does generalize to sets by adding the sets, subtracting intersections of two sets, adding the intersections of three sets, subtracting the intersections of four sets, etc.  Inclusion-Exclusion: Counting Multiples  How many integers from 1 to 1000 are multiples of 3 or multiples of 5?  Let be the set of multiples of 3. Let be the set of multiples of 5.  Then is the set of multiples of 3 and 5, so multiples of 15.  We need a good way to count the multiples of 3. We know they have the form . Since , we have that . Hence, . Since , . Thus,  Similarly, since , Since ,  By Inclusion-Exclusion,   We want to count the number of integers from 1-50 that are divisible by 3 or 7.   How many integers from 1-50 are divisible by 3?  How many integers from 1-50 are divisible by 7?  What is the number of integers from 1-50 divisible by 3 or 7? You can pretty easily check you answer by writing them all down. Can you use inclusion-exclusion to calculate this?   We want to count the number of integers from 1-1000 that are divisible by 4, 7 or 9.  How many integers from 1-1000 are divisible by 4?  How many integers from 1-1000 are divisible by 7?  How many integers from 1-1000 are divisible by 9?  Now calculate the number of integers 1-1000 divisible by 4, 7, or 9 using inclusion-exclusion. What other sets do you need to calculate? You'll need the 3 set version of Inclusion-Exclusion  How many ways can the word THEORY be arranged if the TH must be next to each other as TH or HT? Count the TH words, then the HT words, then figure out which rule you need to find the total.  Inclusion-Exclusion: Drug Study  Suppose a study was done with three drugs, A, B and C. A total of 50 subjects used all three drugs. They reported which drugs made them feel better, with the following results:  21 felt better with A  21 felt better with B  31 felt better with C  9 felt better with A and B  14 felt better with A and C  15 felt better with B and C  41 felt better with at least one drug  Some of the subjects who had relief from, say, A, might also have had relief from another drug. So some of the 21 who reported feeling better with A, may also be included in the count of the 9 who felt better with A and B.  How many had relief from none of the drugs?   How many had relief from all three of the drugs?  We need to calculate , which we can find by rewriting the Inclusion-Exclusion Rule:     Check Your Understanding  How many 3 digit numbers begin with 1 or begin with a 2?  How many 3 digit numbers end with 1 or end with 2?  How many 3 digit numbers begin with 1 or end with a 2?  How many 3 digit numbers begin with 1 or 2 or end with 2, 3, or 4?  How many integers from 1 to 2500 are multiples of 3 or multiples of 5?  How many integers from 1 to 2500 are multiples of 2 or multiples of 7?     How many bit strings consist of from one through four digits? (Note, strings of different lengths are considered distinct. For example 10 and 0010 are distinct strings.)    How many bit strings consist of from five through eight digits?    The hexadecimal numbers are constructed using 16 digits: 0-9, A, B, C, D, E, F.   How many strings of hexadecimal digits consist of from one through three digits?    How many strings of hexadecimal digits consist of from two through five digits?     Consider the integers 1-999.    How many integers from 1 through 999 do not have any repeated digits?    How many integers from 1 through 999 have at least one repeated digit?    What is the probability that an integer chosen at random from 1 through 999 has at least one repeated digit?     Consider all five digit integers, 10,000-99,999.    How many five-digit integers are divisible by 5?    What is the probability that a five digit integer chosen at random is divisible by 5?     At a certain company, passwords must be 3-5 symbols long and composed of the 26 letters, the ten digits, and the 14 symbols !, @, #, $, %, ^, &, *, (, ), , , {, }.    How many passwords are possible if repetition of symbols is allowed?    How many passwords contain no repeated symbols?    How many passwords have at least one repeated symbol?    What is the probability that a password chosen randomly has at least one repeated symbol?     Consider the letters in the word .    How many ways can the letters of the word be arranged in a row?    How many ways can the letters of the word be arranged in a row if the must remain together in that order?    How many ways can the letters of the word be arranged in a row if the must remain together in either order ( or )?    Assume any seven digits can be used to form a telephone number.    How many seven-digit telephone numbers would not have any repeated digits?    How many seven-digit telephone numbers would have at least one repeated digit?    What is the probability that a randomly chosen seven-digit telephone number would have at least one repeated digit?     A college conducted a survey to explore the academic interests and achievements of its students. It asked students to place checks beside the numbers of all statements that were true of them. Statement #1 was I was on the honor roll last term. Statement #2 was I belong to an academic club. Statement #3 was I am majoring in at least two subjects. Out of a sample of 100 students, 28 checked #1, 26 checked #2, and 14 checked #3, 18 checked both #1 and #2, 4 checked both #1 and #3, 3 checked both #2 and #3, and 2 checked all three. Note that some of the students who checked #1 (or #2 or #3) may have also checked other numbers.    How many of the students checked at least one of the statements?    How many students checked none of the statements?    How many students checked #1 and #2, but not #3?    How many students checked #2 and #3, but not #1?    How many students checked #2, but not the other two?     A Venn diagram may help you answer some of these questions.   "
+  "body": " Addition Rule addition rule  In this section we look at how to count unions of disjoint sets, then look at counting sets with nontrivial intersections.   Addition Rule addition rule  If is the union of distinct, mutually disjoint sets, , then the number of elements in is given by   Addition Rule: Counting Numbers Divisible by 5  How many 3 digit numbers are divisible by 5?  We were able to count 3 digit numbers in the last section by constructing the number as a sequence of digits. We will use this example to think about how to count these as disjoint sets.  Let be the set of 3 digit numbers ending in 5.  Let be the set of 3 digit numbers ending in 0.  , where we are using the multiplication rule as in .  .  Since no number ends in both 5 and 0, . Thus, by the addition rule,   How many 3 digit numbers are divisible by 10?  How many 3 digit numbers are divisible by 2?  It is going to take practice to be able to see when to use the multiplication rule and when to use the addition rule. If you are counting elements of different sets, use addition. If you are counting elements that are constructed in a process (can you determine step 1, step 2, etc?), then use the multiplication rule. Many problems require both rules, as we saw in .  Now we want to look at what happens if our sets are not disjoint.  If is finite and , then .  If we want to count the number of elements in , we can count those in and those in . But every element in the intersection has now been counted twice. so we need to subtract . This is the idea behind the Inclusion-Exclusion Rule.  Inclusion-Exclusion Rule inclusion-exclusion rule Let be finite sets.   For the case with three sets, we can see that each element in the intersection of at least two sets got counted twice, but when we subtract off all three intersections, we end up subtracting each element in more than one intersection twice, so we need to add back the elements in the intersection of all three sets. For this class, we won't need to use Inclusion-Exclusion on more than three sets, but the rule does generalize to sets by adding the sets, subtracting intersections of two sets, adding the intersections of three sets, subtracting the intersections of four sets, etc.  Inclusion-Exclusion: Counting Multiples  How many integers from 1 to 1000 are multiples of 3 or multiples of 5?  Let be the set of multiples of 3. Let be the set of multiples of 5.  Then is the set of multiples of 3 and 5, so multiples of 15.  We need a good way to count the multiples of 3. We know they have the form . Since , we have that . Hence, . Since , . Thus,  Similarly, since , Since ,  By Inclusion-Exclusion,   We want to count the number of integers from 1-50 that are divisible by 3 or 7.   How many integers from 1-50 are divisible by 3?  How many integers from 1-50 are divisible by 7?  What is the number of integers from 1-50 divisible by 3 or 7? You can pretty easily check you answer by writing them all down. Can you use inclusion-exclusion to calculate this?   We want to count the number of integers from 1-1000 that are divisible by 4, 7 or 9.  How many integers from 1-1000 are divisible by 4?  How many integers from 1-1000 are divisible by 7?  How many integers from 1-1000 are divisible by 9?  Now calculate the number of integers 1-1000 divisible by 4, 7, or 9 using inclusion-exclusion. What other sets do you need to calculate? You'll need the 3 set version of Inclusion-Exclusion  How many ways can the word THEORY be arranged if the TH must be next to each other as TH or HT? Count the TH words, then the HT words, then figure out which rule you need to find the total.  Inclusion-Exclusion: Drug Study  Suppose a study was done with three drugs, A, B and C. A total of 50 subjects used all three drugs. They reported which drugs made them feel better, with the following results:  21 felt better with A  21 felt better with B  31 felt better with C  9 felt better with A and B  14 felt better with A and C  15 felt better with B and C  41 felt better with at least one drug  Some of the subjects who had relief from, say, A, might also have had relief from another drug. So some of the 21 who reported feeling better with A, may also be included in the count of the 9 who felt better with A and B.  How many had relief from none of the drugs?   How many had relief from all three of the drugs?  We need to calculate , which we can find by rewriting the Inclusion-Exclusion Rule:     Check Your Understanding  How many 3 digit numbers begin with 1 or begin with a 2?     Correct, .      Incorrect. Don't forget that there are 10 digits.      Incorrect. How many 3 digit numbers begin with 1? How many begin with 2? Now use the addition rule.      How many 3 digit numbers end with 1 or end with 2?     Correct, .      Incorrect. Don't forget that a 3 digit number cannot begin with 0.      Incorrect. How many 3 digit numbers end with 1? How many end with 2? Now use the addition rule.      How many 3 digit numbers begin with 1 or end with a 2?     Correct, .      Incorrect. The set of 3 digit numbers beginning with 1 and the set of 3 digit numbers ending with 2 are not disjoint. Make sure to subtract the number of 3 digit numbers in the intersection.      Incorrect. How many 3 digit numbers begin with 1? How many end with 2? These two sets are not disjoint, so you need to use Inclusion-Exclusion (see ) and subtract the number of elements in the intersection.      How many 3 digit numbers begin with 1 or 2 or end with 2, 3, or 4?     Correct, .      Incorrect. The set of 3 digit numbers beginning with 1 or 2 and the set of 3 digit numbers ending with 2, 3 or 4 are not disjoint. Make sure to subtract the number of 3 digit numbers in the intersection (those that both begin with 1 or 2 and end with 2, 3 or 4).      Incorrect. How many 3 digit numbers begin with 1 or 2? How many end with 2, 3, or 4? Note, you can just use the multiplication rule to count each of these sets. These two sets are not disjoint, so you need to use Inclusion-Exclusion (see ) and subtract the number of elements in the intersection (those that both begin with 1 or 2 and end with 2, 3 or 4).      How many integers from 1 to 2500 are multiples of 3 or multiples of 5?     Correct, .      Incorrect. The set of multipples of 3 and the set of multiples of 5 are not disjoint. Make sure to subtract the number of integers in the intersection (those that multiples of 15).      Incorrect. See for an example of how to do this problem.      How many integers from 1 to 2500 are multiples of 2 or multiples of 7?     Correct, .      Incorrect. The set of multipples of 2 and the set of multiples of 7 are not disjoint. Make sure to subtract the number of integers in the intersection (those that multiples of 14).      Incorrect. See for an example of how to do this problem.         How many bit strings consist of from one through four digits? (Note, strings of different lengths are considered distinct. For example 10 and 0010 are distinct strings.)    How many bit strings consist of from five through eight digits?    The hexadecimal numbers are constructed using 16 digits: 0-9, A, B, C, D, E, F.   How many strings of hexadecimal digits consist of from one through three digits?    How many strings of hexadecimal digits consist of from two through five digits?     Consider the integers 1-999.    How many integers from 1 through 999 do not have any repeated digits?    How many integers from 1 through 999 have at least one repeated digit?    What is the probability that an integer chosen at random from 1 through 999 has at least one repeated digit?     Consider all five digit integers, 10,000-99,999.    How many five-digit integers are divisible by 5?    What is the probability that a five digit integer chosen at random is divisible by 5?     At a certain company, passwords must be 3-5 symbols long and composed of the 26 letters, the ten digits, and the 14 symbols !, @, #, $, %, ^, &, *, (, ), , , {, }.    How many passwords are possible if repetition of symbols is allowed?    How many passwords contain no repeated symbols?    How many passwords have at least one repeated symbol?    What is the probability that a password chosen randomly has at least one repeated symbol?     Consider the letters in the word .    How many ways can the letters of the word be arranged in a row?    How many ways can the letters of the word be arranged in a row if the must remain together in that order?    How many ways can the letters of the word be arranged in a row if the must remain together in either order ( or )?    Assume any seven digits can be used to form a telephone number.    How many seven-digit telephone numbers would not have any repeated digits?    How many seven-digit telephone numbers would have at least one repeated digit?    What is the probability that a randomly chosen seven-digit telephone number would have at least one repeated digit?     A college conducted a survey to explore the academic interests and achievements of its students. It asked students to place checks beside the numbers of all statements that were true of them. Statement #1 was I was on the honor roll last term. Statement #2 was I belong to an academic club. Statement #3 was I am majoring in at least two subjects. Out of a sample of 100 students, 28 checked #1, 26 checked #2, and 14 checked #3, 18 checked both #1 and #2, 4 checked both #1 and #3, 3 checked both #2 and #3, and 2 checked all three. Note that some of the students who checked #1 (or #2 or #3) may have also checked other numbers.    How many of the students checked at least one of the statements?    How many students checked none of the statements?    How many students checked #1 and #2, but not #3?    How many students checked #2 and #3, but not #1?    How many students checked #2, but not the other two?     A Venn diagram may help you answer some of these questions.   "
 },
 {
   "id": "E_divby5",
@@ -8830,58 +8830,58 @@ var ptx_lunr_docs = [
   "body": "Inclusion-Exclusion: Drug Study  Suppose a study was done with three drugs, A, B and C. A total of 50 subjects used all three drugs. They reported which drugs made them feel better, with the following results:  21 felt better with A  21 felt better with B  31 felt better with C  9 felt better with A and B  14 felt better with A and C  15 felt better with B and C  41 felt better with at least one drug  Some of the subjects who had relief from, say, A, might also have had relief from another drug. So some of the 21 who reported feeling better with A, may also be included in the count of the 9 who felt better with A and B.  How many had relief from none of the drugs?   How many had relief from all three of the drugs?  We need to calculate , which we can find by rewriting the Inclusion-Exclusion Rule:   "
 },
 {
-  "id": "exercise-505",
+  "id": "DMT_addrule_CYU_3db12",
   "level": "2",
-  "url": "additionrule9-3.html#exercise-505",
+  "url": "additionrule9-3.html#DMT_addrule_CYU_3db12",
   "type": "Reading Question",
   "number": "9.3.1",
   "title": "",
-  "body": "How many 3 digit numbers begin with 1 or begin with a 2? "
+  "body": "How many 3 digit numbers begin with 1 or begin with a 2?     Correct, .      Incorrect. Don't forget that there are 10 digits.      Incorrect. How many 3 digit numbers begin with 1? How many begin with 2? Now use the addition rule.     "
 },
 {
-  "id": "exercise-506",
+  "id": "DMT_addrule_CYU_3de12",
   "level": "2",
-  "url": "additionrule9-3.html#exercise-506",
+  "url": "additionrule9-3.html#DMT_addrule_CYU_3de12",
   "type": "Reading Question",
   "number": "9.3.2",
   "title": "",
-  "body": "How many 3 digit numbers end with 1 or end with 2? "
+  "body": "How many 3 digit numbers end with 1 or end with 2?     Correct, .      Incorrect. Don't forget that a 3 digit number cannot begin with 0.      Incorrect. How many 3 digit numbers end with 1? How many end with 2? Now use the addition rule.     "
 },
 {
-  "id": "exercise-507",
+  "id": "DMT_addrule_CYU_3db1ore2",
   "level": "2",
-  "url": "additionrule9-3.html#exercise-507",
+  "url": "additionrule9-3.html#DMT_addrule_CYU_3db1ore2",
   "type": "Reading Question",
   "number": "9.3.3",
   "title": "",
-  "body": "How many 3 digit numbers begin with 1 or end with a 2? "
+  "body": "How many 3 digit numbers begin with 1 or end with a 2?     Correct, .      Incorrect. The set of 3 digit numbers beginning with 1 and the set of 3 digit numbers ending with 2 are not disjoint. Make sure to subtract the number of 3 digit numbers in the intersection.      Incorrect. How many 3 digit numbers begin with 1? How many end with 2? These two sets are not disjoint, so you need to use Inclusion-Exclusion (see ) and subtract the number of elements in the intersection.     "
 },
 {
-  "id": "exercise-508",
+  "id": "DMT_addrule_CYU_3db12ore234",
   "level": "2",
-  "url": "additionrule9-3.html#exercise-508",
+  "url": "additionrule9-3.html#DMT_addrule_CYU_3db12ore234",
   "type": "Reading Question",
   "number": "9.3.4",
   "title": "",
-  "body": "How many 3 digit numbers begin with 1 or 2 or end with 2, 3, or 4? "
+  "body": "How many 3 digit numbers begin with 1 or 2 or end with 2, 3, or 4?     Correct, .      Incorrect. The set of 3 digit numbers beginning with 1 or 2 and the set of 3 digit numbers ending with 2, 3 or 4 are not disjoint. Make sure to subtract the number of 3 digit numbers in the intersection (those that both begin with 1 or 2 and end with 2, 3 or 4).      Incorrect. How many 3 digit numbers begin with 1 or 2? How many end with 2, 3, or 4? Note, you can just use the multiplication rule to count each of these sets. These two sets are not disjoint, so you need to use Inclusion-Exclusion (see ) and subtract the number of elements in the intersection (those that both begin with 1 or 2 and end with 2, 3 or 4).     "
 },
 {
-  "id": "exercise-509",
+  "id": "DMT_addrule_CYU_mult3or5",
   "level": "2",
-  "url": "additionrule9-3.html#exercise-509",
+  "url": "additionrule9-3.html#DMT_addrule_CYU_mult3or5",
   "type": "Reading Question",
   "number": "9.3.5",
   "title": "",
-  "body": "How many integers from 1 to 2500 are multiples of 3 or multiples of 5? "
+  "body": "How many integers from 1 to 2500 are multiples of 3 or multiples of 5?     Correct, .      Incorrect. The set of multipples of 3 and the set of multiples of 5 are not disjoint. Make sure to subtract the number of integers in the intersection (those that multiples of 15).      Incorrect. See for an example of how to do this problem.     "
 },
 {
-  "id": "exercise-510",
+  "id": "DMT_addrule_CYU_mult2or7",
   "level": "2",
-  "url": "additionrule9-3.html#exercise-510",
+  "url": "additionrule9-3.html#DMT_addrule_CYU_mult2or7",
   "type": "Reading Question",
   "number": "9.3.6",
   "title": "",
-  "body": "How many integers from 1 to 2500 are multiples of 2 or multiples of 7? "
+  "body": "How many integers from 1 to 2500 are multiples of 2 or multiples of 7?     Correct, .      Incorrect. The set of multipples of 2 and the set of multiples of 7 are not disjoint. Make sure to subtract the number of integers in the intersection (those that multiples of 14).      Incorrect. See for an example of how to do this problem.     "
 },
 {
   "id": "exercise-511",
@@ -8971,7 +8971,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "9.4",
   "title": "Pigeonhole Principle",
-  "body": " Pigeonhole Principle pigeonhole principle  In this section we look at a method of counting that uses a correspondence between two sets. We can think of one set as a set of objects and the other as a set of boxes. The name of the principle comes from thinking of a set of letters and pigeonholes, which is what they used to call rows of letterboxes. Though it is also fun to think about correspondences between pigeons and pigeonholes.  Pigeonhole Principle pigeonhole principle A function from one fnite set to a smaller finite set cannot be one-to-one. There must be at least two elements in the domain that have the same image in the codomain.  The Pigeonhole Principle really just says that if there are more objects (pigeons) than boxes (pigeonholes) then there must be at least one box with more than one object.  When working with pigeonhole problems  identify the objects (pigeons)  identify the boxes (pigeonholes)  show the number of objects is bigger than the number of boxes.   Beware:  You can still have a box with no objects.  You do not know which box has more than one object.  A box could have all the objects.  You do not know how many objects are in any particular box.   Counting Socks  In a drawer with 5 pairs of red socks and 5 pairs of blue socks, how many socks do you need to randomly pull out of the drawer to be certain that you have a pair?  Note, there are 10 socks of each color.  3 socks, since the first two might be different colors. If that happens the third sock must match one of the first two.  In this example, the socks are the objects and the colors are the boxes.  Now, what if you need to make sure you have a red pair?  12 socks.   It is important to note that pigeonhole problems are not about probability. We want to know when we are guaranteed to have a pair of socks, not when it is likely that we have a pair.  In a group of 10 people, must 2 be born in the same month? What is the most people that can be born in the same month?  In a group of 13 people, must at least 2 be born in the same month? Must at least one person be born in January?  Finding Sums of Integers  Let . How many integers do you need to choose from to guarantee that 2 numbers will sum to 11?  Since we are looking for sums of 11, our boxes can be pairs of numbers that sum to 11: . Then our objects are the numbers themselves. We need the number of numbers to be greater than the number of boxes, which is 5. Thus, if we choose 6 numbers from , we are guaranteed to have 2 from the same subset. This means with 6 numbers we must have two numbers that sum to 11.  Let . If 5 integers are selected from , must at least one pair have a sum of 9? If 4 integers are selected from , must at least one pair have a sum of 9?  How many integers from 0 to 60 must you choose in order to get at least one that is odd? How many integers from 0 to 60 must you choose in order to get at least one that is even?  We can generalize the Pigeonhole Principle. If we have enough objects, we can guarantee more than two objects in one box.  Generalized Pigeonhole Principle pigeonhole principle generalized If there are objects mapped to boxes, and for some , we have , then at least one box contains or more objects.  Generalized Pigeonhole  Suppose you have 23 books that are placed in 4 boxes.  Must at least one box contain at least one book?  Yes  Must at least one box contain at least two books?  Yes  Must at least one box contain at least six books?  Yes  Must at least one box contain at least seven books?  No  What is the most books that can be in a box?  23  What is the fewest books that can be in a box?  0   If you have 8 books and want to place them in 3 boxes, must at least one box have 4 books? Must at least one box have 3 books?  In a group of 2000 people, must 5 have the same birthday?  Let be finite sets with the same number of elements. Suppose is a function from to . Then is one-to-one if and only if is onto.  The Pigeonhole Principle can be used to prove the theorem, but it is more technical than we need. If you try a few examples of functions from a set of elements to another set of elements, you can probably convince yourself that a one-to-one function must be onto and vice versa.   Check Your Understanding  What is the fewest number of digits you need to randomly select from to guarantee you have either two even or two odd numbers? 3  What is the fewest number of digits you need to randomly select from to guarantee you have two even numbers? 7  What is the fewest number of digits you need to randomly select from to guarantee you have a sum of 9? 6  What is the fewest number of digits you need to randomly select from to guarantee you have two with the same remainder when divided by 3? 4  If you randomly select 4 digits from are you guaranteed to have two with remainder 0 when divided by 3? No     Consider a standard deck of 52 cards.    If 13 cards are selected from he deck, must at least 2 be of the same denomination?    If 20 cards are selected from the deck, must at least 2 be of the same denomination?    How many cards must you pick from the deck to be sure of getting at least 1 red card?      A small town has only 500 residents. Must there be 2 residents who have the same birthday?   Given any set of four integers, must there be at least two that have the same remainder when divided by 3? Why?   Given any set of three integers, must there be at least two that have the same remainder when divided by 3? Why?    Let . If six integers are selected from , must at least one pair have a sum of 15? Why?    If integers are chosen from the set , where is a positive integer, must at least one of them be even? Why?    Suppose six pairs of similar-looking boots are thrown together in a pile. How many individual boots must you pick to be sure of getting a matched pair? Why?    How many integers from 1 to 100 must you choose in order to be sure to get at least one that is divisible by 5?    How many integers must you pick in order to be sure that at least two of them have the same remainder when divided by 15?    In a group of 30 people, must at least 3 have been born in the same month? Why?    "
+  "body": " Pigeonhole Principle pigeonhole principle  In this section we look at a method of counting that uses a correspondence between two sets. We can think of one set as a set of objects and the other as a set of boxes. The name of the principle comes from thinking of a set of letters and pigeonholes, which is what they used to call rows of letterboxes. Though it is also fun to think about correspondences between pigeons and pigeonholes.  Pigeonhole Principle pigeonhole principle A function from one fnite set to a smaller finite set cannot be one-to-one. There must be at least two elements in the domain that have the same image in the codomain.  The Pigeonhole Principle really just says that if there are more objects (pigeons) than boxes (pigeonholes) then there must be at least one box with more than one object.  When working with pigeonhole problems  identify the objects (pigeons)  identify the boxes (pigeonholes)  show the number of objects is bigger than the number of boxes.   Beware:  You can still have a box with no objects.  You do not know which box has more than one object.  A box could have all the objects.  You do not know how many objects are in any particular box.   Counting Socks  In a drawer with 5 pairs of red socks and 5 pairs of blue socks, how many socks do you need to randomly pull out of the drawer to be certain that you have a pair?  Note, there are 10 socks of each color.  3 socks, since the first two might be different colors. If that happens the third sock must match one of the first two.  In this example, the socks are the objects and the colors are the boxes.  Now, what if you need to make sure you have a red pair?  12 socks.   It is important to note that pigeonhole problems are not about probability. We want to know when we are guaranteed to have a pair of socks, not when it is likely that we have a pair.  In a group of 10 people, must 2 be born in the same month? What is the most people that can be born in the same month?  In a group of 13 people, must at least 2 be born in the same month? Must at least one person be born in January?  Finding Sums of Integers  Let . How many integers do you need to choose from to guarantee that 2 numbers will sum to 11?  Since we are looking for sums of 11, our boxes can be pairs of numbers that sum to 11: . Then our objects are the numbers themselves. We need the number of numbers to be greater than the number of boxes, which is 5. Thus, if we choose 6 numbers from , we are guaranteed to have 2 from the same subset. This means with 6 numbers we must have two numbers that sum to 11.  Let . If 5 integers are selected from , must at least one pair have a sum of 9? If 4 integers are selected from , must at least one pair have a sum of 9?  How many integers from 0 to 60 must you choose in order to get at least one that is odd? How many integers from 0 to 60 must you choose in order to get at least one that is even?  We can generalize the Pigeonhole Principle. If we have enough objects, we can guarantee more than two objects in one box.  Generalized Pigeonhole Principle pigeonhole principle generalized If there are objects mapped to boxes, and for some , we have , then at least one box contains or more objects.  Generalized Pigeonhole  Suppose you have 23 books that are placed in 4 boxes.  Must at least one box contain at least one book?  Yes  Must at least one box contain at least two books?  Yes  Must at least one box contain at least six books?  Yes  Must at least one box contain at least seven books?  No  What is the most books that can be in a box?  23  What is the fewest books that can be in a box?  0   If you have 8 books and want to place them in 3 boxes, must at least one box have 4 books? Must at least one box have 3 books?  In a group of 2000 people, must 5 have the same birthday?  Let be finite sets with the same number of elements. Suppose is a function from to . Then is one-to-one if and only if is onto.  The Pigeonhole Principle can be used to prove the theorem, but it is more technical than we need. If you try a few examples of functions from a set of elements to another set of elements, you can probably convince yourself that a one-to-one function must be onto and vice versa.   Check Your Understanding  What is the fewest number of digits you need to randomly select from to guarantee you have either two even or two odd numbers?     Correct.      Incorrect. With two numbers, one could be even, one could be odd.      Incorrect. Think about the boxes being Even\/Odd. As you select numbers, at what point must you have two in the Even box or two in the Odd box?     3  What is the fewest number of digits you need to randomly select from to guarantee you have two even numbers?     Correct.      Incorrect. You could have both be odd.      Incorrect. You could have all three odd.      Incorrect. How many odd numbers could you draw before you must have two even numbers?     7  What is the fewest number of digits you need to randomly select from to guarantee you have a sum of 9?     Correct.      Incorrect. With two numbers, you could have, say, 1 and 5.      Incorrect. Think about the boxes being sets of digits that sum to 9, for example, or . As you select numbers, at what point must you have two in the same set?     6  What is the fewest number of digits you need to randomly select from to guarantee you have two with the same remainder when divided by 3?     Correct.      Incorrect. With two numbers, you could have, say, 0 and 1.      Incorrect. Think about the boxes being sets of digits with the same remainder when divided by 3, for example, . As you select numbers, at what point must you have two in the same set?     4  If you randomly select 4 digits from are you guaranteed to have two with remainder 0 when divided by 3?   Yes  For example, you could have selected 1, 2, 4, 5, none of which have remainder 0.    No  Correct. Now think about how many you would have to select to get 2 with remainder 0.   No     Consider a standard deck of 52 cards.    If 13 cards are selected from he deck, must at least 2 be of the same denomination?    If 20 cards are selected from the deck, must at least 2 be of the same denomination?    How many cards must you pick from the deck to be sure of getting at least 1 red card?      A small town has only 500 residents. Must there be 2 residents who have the same birthday?   Given any set of four integers, must there be at least two that have the same remainder when divided by 3? Why?   Given any set of three integers, must there be at least two that have the same remainder when divided by 3? Why?    Let . If six integers are selected from , must at least one pair have a sum of 15? Why?    If integers are chosen from the set , where is a positive integer, must at least one of them be even? Why?    Suppose six pairs of similar-looking boots are thrown together in a pile. How many individual boots must you pick to be sure of getting a matched pair? Why?    How many integers from 1 to 100 must you choose in order to be sure to get at least one that is divisible by 5?    How many integers must you pick in order to be sure that at least two of them have the same remainder when divided by 15?    In a group of 30 people, must at least 3 have been born in the same month? Why?    "
 },
 {
   "id": "T_pigeonhole",
@@ -9082,49 +9082,49 @@ var ptx_lunr_docs = [
   "body": "Let be finite sets with the same number of elements. Suppose is a function from to . Then is one-to-one if and only if is onto. "
 },
 {
-  "id": "exercise-520",
+  "id": "DMT_pigeonhole_CYU_0to92even2odd",
   "level": "2",
-  "url": "pigeonhole9-4.html#exercise-520",
+  "url": "pigeonhole9-4.html#DMT_pigeonhole_CYU_0to92even2odd",
   "type": "Reading Question",
   "number": "9.4.1",
   "title": "",
-  "body": "What is the fewest number of digits you need to randomly select from to guarantee you have either two even or two odd numbers? 3 "
+  "body": "What is the fewest number of digits you need to randomly select from to guarantee you have either two even or two odd numbers?     Correct.      Incorrect. With two numbers, one could be even, one could be odd.      Incorrect. Think about the boxes being Even\/Odd. As you select numbers, at what point must you have two in the Even box or two in the Odd box?     3 "
 },
 {
-  "id": "exercise-521",
+  "id": "DMT_pigeonhole_CYU_0to92even",
   "level": "2",
-  "url": "pigeonhole9-4.html#exercise-521",
+  "url": "pigeonhole9-4.html#DMT_pigeonhole_CYU_0to92even",
   "type": "Reading Question",
   "number": "9.4.2",
   "title": "",
-  "body": "What is the fewest number of digits you need to randomly select from to guarantee you have two even numbers? 7 "
+  "body": "What is the fewest number of digits you need to randomly select from to guarantee you have two even numbers?     Correct.      Incorrect. You could have both be odd.      Incorrect. You could have all three odd.      Incorrect. How many odd numbers could you draw before you must have two even numbers?     7 "
 },
 {
-  "id": "exercise-522",
+  "id": "DMT_pigeonhole_CYU_0to9sum9",
   "level": "2",
-  "url": "pigeonhole9-4.html#exercise-522",
+  "url": "pigeonhole9-4.html#DMT_pigeonhole_CYU_0to9sum9",
   "type": "Reading Question",
   "number": "9.4.3",
   "title": "",
-  "body": "What is the fewest number of digits you need to randomly select from to guarantee you have a sum of 9? 6 "
+  "body": "What is the fewest number of digits you need to randomly select from to guarantee you have a sum of 9?     Correct.      Incorrect. With two numbers, you could have, say, 1 and 5.      Incorrect. Think about the boxes being sets of digits that sum to 9, for example, or . As you select numbers, at what point must you have two in the same set?     6 "
 },
 {
-  "id": "exercise-523",
+  "id": "DMT_pigeonhole_CYU_0to9remdiv3",
   "level": "2",
-  "url": "pigeonhole9-4.html#exercise-523",
+  "url": "pigeonhole9-4.html#DMT_pigeonhole_CYU_0to9remdiv3",
   "type": "Reading Question",
   "number": "9.4.4",
   "title": "",
-  "body": "What is the fewest number of digits you need to randomly select from to guarantee you have two with the same remainder when divided by 3? 4 "
+  "body": "What is the fewest number of digits you need to randomly select from to guarantee you have two with the same remainder when divided by 3?     Correct.      Incorrect. With two numbers, you could have, say, 0 and 1.      Incorrect. Think about the boxes being sets of digits with the same remainder when divided by 3, for example, . As you select numbers, at what point must you have two in the same set?     4 "
 },
 {
-  "id": "exercise-524",
+  "id": "DMT_pigeonhole_CYU_0to9rem0div3",
   "level": "2",
-  "url": "pigeonhole9-4.html#exercise-524",
+  "url": "pigeonhole9-4.html#DMT_pigeonhole_CYU_0to9rem0div3",
   "type": "Reading Question",
   "number": "9.4.5",
   "title": "",
-  "body": "If you randomly select 4 digits from are you guaranteed to have two with remainder 0 when divided by 3? No "
+  "body": "If you randomly select 4 digits from are you guaranteed to have two with remainder 0 when divided by 3?   Yes  For example, you could have selected 1, 2, 4, 5, none of which have remainder 0.    No  Correct. Now think about how many you would have to select to get 2 with remainder 0.   No "
 },
 {
   "id": "exercise-525",
@@ -9223,7 +9223,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "9.5",
   "title": "Combinations",
-  "body": " Combinations combination  In this section we look at how to count subsets of a set and define the mathematical concept of a combination.  Let be nonnegative integers with . An -combination combination of a set of elements is the number of subsets of size that can be chosen from a set of elements. We denote it , which is read choose . choose  Other common notation are , or . We will use notation, which we first saw in . For example, is the number of subsets of size 4 chosen from a set of 5 elements.  Since order does not matter in a set, the order in which we choose elements of a set does not matter. Recall, when counting permutations, the order in which we chose our elements did matter. We can use what we know about permutations, though, to count combinations.  We can calculate combinations by first finding all the -permuatations of a set, then dividing by all the possible orderings of that subset: . This can be rewritten to be the standard formula for calculating combinations: .  Note, since , and . This also makes sense with the definition, as there is only one set with 0 elements, the empty set.  Calculate and .  Calculate and .  Combinations versus Permutations  Suppose you want to choose a group of 3 students in a class of 15 for a group project. How many ways can you choose the group?  We use combinations: . It does not matter if a member was chosen first, second, or third, they would still be a member of the group. Thus, there are ways to choose a group of 3.  Now suppose you want to choose a group of 3 students in a class of 15 for a group project, but the first student chosen will be the note-taker, the second will be the presenter, the third will manage the discussion. How many ways can you choose the group?  We use permutations: . Now it does matter if a member was chosen first, second, or third, as each member has a different role. Thus, there are ways to choose a group of 3 where the members' roles are defined.   In deciding whether to use combinations or permutations, you need to decide whether order matters. For combinations, order doesn't matter; think about choosing subsets. For permuations, order does matter; think about choosing ordered lists.  Recall, a binary string is just a list of 0s and 1s  Binary Strings How many binary strings of length 5 can have exactly 2 ones?  We can think of forming a binary string with 2 ones as a list of 5 places where we need to choose 2 places for the ones. Once we've done that, the other places must have 0's. Thus, we have five places and choose 2:  How many binary strings of length 5 can have at most 2 ones?  Here we can count the strings with 2 ones, 1 one, and 0 ones. We add them since the strings with different numbers of ones are disjoint:   How many binary strings of length 7 have exactly 3 ones? Think of this as a list of 7 digits. How many ways are there to place the ones?  How many binary strings of length 7 have at most 2 ones? First count how many have 0 ones, then 1 one, then 2 ones. Should you use the addition rule or multiplication rule to find the total number?  Rearranging Letters How many ways are there to order the letters in the word letter ?  We can think of the string of letters as 6 places where we can choose to put letters. First we can choose the place to put the l : we have 6 places, we need to choose 1:  Next we choose the places to put the two e s: we now only have 5 places (since one has the l), we need to choose 2:  We continue in this way, with 3 places to put the two t s: , and one remaining place to put the r : .  Since placing each letter is a process (we don't have a complete string until we have placed all the letters), we need to use the multiplication rule:   There is another way to calculate the previous example.  Alternate Rearranging Letters How many ways are there to order the letters in the word letter ?  We can think of the string of letters as 6 places where we can choose to put letters. First we can think of all the letters as distinct. Then we have 6 letters to choose for the first place, 5 for the second, 4 for the third, etc. Thus we have ways to place 6 distinct letters.  But the letters are not distinct, so we need to divide by the number of ways we over-counted. For each permutation we just counted, switching the two e s gives us the same word, so we need to divide by the number of ways to rearrange the two e s: Similarly, we need to divide by equivalent arrangements of the two t s: .  Putting this together we have   How many ways are there to order the letters in book ? First place all the b s--how many ways can you do this? Then count how many ways to place all the o s, then all the k s.  How many ways are there to order the letters in infinity ?  Forming Committees  A class has 13 students. How many ways can a group of 7 be chosen?   Suppose in this class of 13 there are 7 juniors and 6 seniors.   How many groups of 7 can be chosen that contain 4 juniors and 3 seniors?  , first choose the juniors then the seniors.  How many groups of 7 can be chosen so that there is at least one senior?  , all the possible groups minus the groups with no seniors.  How many groups of 7 can be chosen so that there are at most 3 juniors?  , count the groups of one junior and 6 seniors, two juniors and 5 seniors, three juniors and 4 seniors. Note, there are no groups with no juniors.  How many groups of 7 can be chosen if two people refuse to work together?  Call the two people A and B.  Find the number of groups with A and not B: . Note, we only need to choose 6 out of 11 since we know A is in the group and B is not, so we just need to choose the other 6 members.  Similarly, find the number of groups with B and not A: .  Now, find the number of groups with neither A nor B: . Note, we need to choose 7 out of 11 since we know A and B cannot be chosen.  Since the sets of each type of group (with A, with B, with neither) are disjoint, we use the addition rule:      Check Your Understanding  Calculate the number of 4-combinations of a set with 6 elements.  Calculate .  Calculate .  Calculate .  Calculate .  Calculate .  Find the number of binary strings of length 7 with 4 zeros.  Find the number of binary strings of length 7 with at most 2 zeros.  Find the number of strings that can be formed from the letters in the word calculate . or     Calculate                                         A student council consists of 15 students.    In how many ways can a committee of 6 be selected from the membership of the council?    Two council members have the same major and are not permitted to serve together on a committee. How many ways can a committee of 6 be selected from the membership of the council?    Two council members always insist on serving together on a committee. If they can’t serve together, they won’t serve at all. How many ways can a committee of 6 be selected from the membership of the council?    Suppose the council contains 8 seniors and 7 juniors.    How many committees of six contain three seniors and three juniors?    How many committees of six contain at least one junior?      Suppose the council consists of three freshmen, four sophomores, three juniors, and five seniors. How many committees of eight contain two from each class?      An instructor gives an exam with fourteen questions. Students are allowed to choose any ten questions to answer.    How many different choices of ten questions are there?    Suppose six questions require proof and eight do not.    How many groups of ten questions contain four that require proof and six that do not?    How many groups of ten questions contain fat least one that requires proof?    How many groups of ten questions contain at most three that require proof?      Suppose the exam instructions specify that at most one of the questions 1 and 2 may be included among the ten. How many different choices of the ten questions are there?    Suppose the exam instructions specify that either questions 1 and 2 are to be included among the ten or neither is to be included. How many different choices of ten questions are there?      A coin is tossed ten times. in each case the outcome (H or T) is recorded.    What is the total number of possible outcomes of the coin tossing experiment?    In how many of the possible outcomes are exactly five heads obtained?    In how many of the possible outcomes are at least eight heads obtained?    In how many of the possible outcomes is at least one head obtained?    In how many of the possible outcomes is at most one head obtained?      A binary or bit string consists of just 0’s and 1’s. A bit string of length 16 is called a 16-bit string.    How many 16-bit strings contain exactly seven 1’s?    How many 16-bit strings contain at least thirteen 1’s?    How many 16-bit strings contain at least one 1?    How many 16-bit strings contain at most one 1?      Consider the word    How many distinguishable ways are there to order the letters in the word ?    How many distinguishable ways are there to order the letters in the word if it must begin with and end with ?    How many distinguishable ways are there to order the letters in the word if the letters must be next to each other in order?      In Morse code, symbols are represented by variable-length sequences of dots and dashes. For example, . How many different symbols can be represented by sequences of seven or fewer dots and dashes?    "
+  "body": " Combinations combination  In this section we look at how to count subsets of a set and define the mathematical concept of a combination.  Let be nonnegative integers with . An -combination combination of a set of elements is the number of subsets of size that can be chosen from a set of elements. We denote it , which is read choose . choose  Other common notation are , or . We will use notation, which we first saw in . For example, is the number of subsets of size 4 chosen from a set of 5 elements.  Since order does not matter in a set, the order in which we choose elements of a set does not matter. Recall, when counting permutations, the order in which we chose our elements did matter. We can use what we know about permutations, though, to count combinations.  We can calculate combinations by first finding all the -permuatations of a set, then dividing by all the possible orderings of that subset: . This can be rewritten to be the standard formula for calculating combinations: .  Note, since , and . This also makes sense with the definition, as there is only one set with 0 elements, the empty set.  Calculate and .  Calculate and .  Combinations versus Permutations  Suppose you want to choose a group of 3 students in a class of 15 for a group project. How many ways can you choose the group?  We use combinations: . It does not matter if a member was chosen first, second, or third, they would still be a member of the group. Thus, there are ways to choose a group of 3.  Now suppose you want to choose a group of 3 students in a class of 15 for a group project, but the first student chosen will be the note-taker, the second will be the presenter, the third will manage the discussion. How many ways can you choose the group?  We use permutations: . Now it does matter if a member was chosen first, second, or third, as each member has a different role. Thus, there are ways to choose a group of 3 where the members' roles are defined.   In deciding whether to use combinations or permutations, you need to decide whether order matters. For combinations, order doesn't matter; think about choosing subsets. For permuations, order does matter; think about choosing ordered lists.  Recall, a binary string is just a list of 0s and 1s  Binary Strings How many binary strings of length 5 can have exactly 2 ones?  We can think of forming a binary string with 2 ones as a list of 5 places where we need to choose 2 places for the ones. Once we've done that, the other places must have 0's. Thus, we have five places and choose 2:  How many binary strings of length 5 can have at most 2 ones?  Here we can count the strings with 2 ones, 1 one, and 0 ones. We add them since the strings with different numbers of ones are disjoint:   How many binary strings of length 7 have exactly 3 ones? Think of this as a list of 7 digits. How many ways are there to place the ones?  How many binary strings of length 7 have at most 2 ones? First count how many have 0 ones, then 1 one, then 2 ones. Should you use the addition rule or multiplication rule to find the total number?  Rearranging Letters How many ways are there to order the letters in the word letter ?  We can think of the string of letters as 6 places where we can choose to put letters. First we can choose the place to put the l : we have 6 places, we need to choose 1:  Next we choose the places to put the two e s: we now only have 5 places (since one has the l), we need to choose 2:  We continue in this way, with 3 places to put the two t s: , and one remaining place to put the r : .  Since placing each letter is a process (we don't have a complete string until we have placed all the letters), we need to use the multiplication rule:   There is another way to calculate the previous example.  Alternate Rearranging Letters How many ways are there to order the letters in the word letter ?  We can think of the string of letters as 6 places where we can choose to put letters. First we can think of all the letters as distinct. Then we have 6 letters to choose for the first place, 5 for the second, 4 for the third, etc. Thus we have ways to place 6 distinct letters.  But the letters are not distinct, so we need to divide by the number of ways we over-counted. For each permutation we just counted, switching the two e s gives us the same word, so we need to divide by the number of ways to rearrange the two e s: Similarly, we need to divide by equivalent arrangements of the two t s: .  Putting this together we have   How many ways are there to order the letters in book ? First place all the b s--how many ways can you do this? Then count how many ways to place all the o s, then all the k s.  How many ways are there to order the letters in infinity ?  Forming Committees  A class has 13 students. How many ways can a group of 7 be chosen?   Suppose in this class of 13 there are 7 juniors and 6 seniors.   How many groups of 7 can be chosen that contain 4 juniors and 3 seniors?  , first choose the juniors then the seniors.  How many groups of 7 can be chosen so that there is at least one senior?  , all the possible groups minus the groups with no seniors.  How many groups of 7 can be chosen so that there are at most 3 juniors?  , count the groups of one junior and 6 seniors, two juniors and 5 seniors, three juniors and 4 seniors. Note, there are no groups with no juniors.  How many groups of 7 can be chosen if two people refuse to work together?  Call the two people A and B.  Find the number of groups with A and not B: . Note, we only need to choose 6 out of 11 since we know A is in the group and B is not, so we just need to choose the other 6 members.  Similarly, find the number of groups with B and not A: .  Now, find the number of groups with neither A nor B: . Note, we need to choose 7 out of 11 since we know A and B cannot be chosen.  Since the sets of each type of group (with A, with B, with neither) are disjoint, we use the addition rule:      Check Your Understanding  Calculate the number of 4-combinations of a set with 6 elements.     Correct, .      Incorrect. You might be thinking of permutations rather than combinations.      Incorrect. See .      Calculate .     Correct, .      Incorrect. See .      Calculate .     Correct, .      Incorrect. See .      Calculate .     Correct, .      Incorrect. See .      Calculate .     Correct, .      Incorrect. See .      Calculate .     Correct, .      Incorrect. See .      Find the number of binary strings of length 7 with 4 zeros.     Correct, .      Incorrect. See .      Find the number of binary strings of length 7 with at most 2 zeros.     Correct, .      Incorrect. See . Make sure you are counting strings with 0, 1, and 2 zeros.      Find the number of strings that can be formed from the letters in the word calculate .     Correct, or .      Incorrect. See . Make sure you see that there are 2 c's, 2 a's, and 2 l's.     or     Calculate                                         A student council consists of 15 students.    In how many ways can a committee of 6 be selected from the membership of the council?    Two council members have the same major and are not permitted to serve together on a committee. How many ways can a committee of 6 be selected from the membership of the council?    Two council members always insist on serving together on a committee. If they can’t serve together, they won’t serve at all. How many ways can a committee of 6 be selected from the membership of the council?    Suppose the council contains 8 seniors and 7 juniors.    How many committees of six contain three seniors and three juniors?    How many committees of six contain at least one junior?      Suppose the council consists of three freshmen, four sophomores, three juniors, and five seniors. How many committees of eight contain two from each class?      An instructor gives an exam with fourteen questions. Students are allowed to choose any ten questions to answer.    How many different choices of ten questions are there?    Suppose six questions require proof and eight do not.    How many groups of ten questions contain four that require proof and six that do not?    How many groups of ten questions contain fat least one that requires proof?    How many groups of ten questions contain at most three that require proof?      Suppose the exam instructions specify that at most one of the questions 1 and 2 may be included among the ten. How many different choices of the ten questions are there?    Suppose the exam instructions specify that either questions 1 and 2 are to be included among the ten or neither is to be included. How many different choices of ten questions are there?      A coin is tossed ten times. in each case the outcome (H or T) is recorded.    What is the total number of possible outcomes of the coin tossing experiment?    In how many of the possible outcomes are exactly five heads obtained?    In how many of the possible outcomes are at least eight heads obtained?    In how many of the possible outcomes is at least one head obtained?    In how many of the possible outcomes is at most one head obtained?      A binary or bit string consists of just 0’s and 1’s. A bit string of length 16 is called a 16-bit string.    How many 16-bit strings contain exactly seven 1’s?    How many 16-bit strings contain at least thirteen 1’s?    How many 16-bit strings contain at least one 1?    How many 16-bit strings contain at most one 1?      Consider the word    How many distinguishable ways are there to order the letters in the word ?    How many distinguishable ways are there to order the letters in the word if it must begin with and end with ?    How many distinguishable ways are there to order the letters in the word if the letters must be next to each other in order?      In Morse code, symbols are represented by variable-length sequences of dots and dashes. For example, . How many different symbols can be represented by sequences of seven or fewer dots and dashes?    "
 },
 {
   "id": "D_combination",
@@ -9334,85 +9334,85 @@ var ptx_lunr_docs = [
   "body": "Forming Committees  A class has 13 students. How many ways can a group of 7 be chosen?   Suppose in this class of 13 there are 7 juniors and 6 seniors.   How many groups of 7 can be chosen that contain 4 juniors and 3 seniors?  , first choose the juniors then the seniors.  How many groups of 7 can be chosen so that there is at least one senior?  , all the possible groups minus the groups with no seniors.  How many groups of 7 can be chosen so that there are at most 3 juniors?  , count the groups of one junior and 6 seniors, two juniors and 5 seniors, three juniors and 4 seniors. Note, there are no groups with no juniors.  How many groups of 7 can be chosen if two people refuse to work together?  Call the two people A and B.  Find the number of groups with A and not B: . Note, we only need to choose 6 out of 11 since we know A is in the group and B is not, so we just need to choose the other 6 members.  Similarly, find the number of groups with B and not A: .  Now, find the number of groups with neither A nor B: . Note, we need to choose 7 out of 11 since we know A and B cannot be chosen.  Since the sets of each type of group (with A, with B, with neither) are disjoint, we use the addition rule:    "
 },
 {
-  "id": "exercise-535",
+  "id": "DMT_comb_CYU_4combof6",
   "level": "2",
-  "url": "combinations9-5.html#exercise-535",
+  "url": "combinations9-5.html#DMT_comb_CYU_4combof6",
   "type": "Reading Question",
   "number": "9.5.1",
   "title": "",
-  "body": "Calculate the number of 4-combinations of a set with 6 elements. "
+  "body": "Calculate the number of 4-combinations of a set with 6 elements.     Correct, .      Incorrect. You might be thinking of permutations rather than combinations.      Incorrect. See .     "
 },
 {
-  "id": "exercise-536",
+  "id": "DMT_comb_CYU_7choose4",
   "level": "2",
-  "url": "combinations9-5.html#exercise-536",
+  "url": "combinations9-5.html#DMT_comb_CYU_7choose4",
   "type": "Reading Question",
   "number": "9.5.2",
   "title": "",
-  "body": "Calculate . "
+  "body": "Calculate .     Correct, .      Incorrect. See .     "
 },
 {
-  "id": "exercise-537",
+  "id": "DMT_comb_CYU_7choose2",
   "level": "2",
-  "url": "combinations9-5.html#exercise-537",
+  "url": "combinations9-5.html#DMT_comb_CYU_7choose2",
   "type": "Reading Question",
   "number": "9.5.3",
   "title": "",
-  "body": "Calculate . "
+  "body": "Calculate .     Correct, .      Incorrect. See .     "
 },
 {
-  "id": "exercise-538",
+  "id": "DMT_comb_CYU_7choose1",
   "level": "2",
-  "url": "combinations9-5.html#exercise-538",
+  "url": "combinations9-5.html#DMT_comb_CYU_7choose1",
   "type": "Reading Question",
   "number": "9.5.4",
   "title": "",
-  "body": "Calculate . "
+  "body": "Calculate .     Correct, .      Incorrect. See .     "
 },
 {
-  "id": "exercise-539",
+  "id": "DMT_comb_CYU_7choose7",
   "level": "2",
-  "url": "combinations9-5.html#exercise-539",
+  "url": "combinations9-5.html#DMT_comb_CYU_7choose7",
   "type": "Reading Question",
   "number": "9.5.5",
   "title": "",
-  "body": "Calculate . "
+  "body": "Calculate .     Correct, .      Incorrect. See .     "
 },
 {
-  "id": "exercise-540",
+  "id": "DMT_comb_CYU_7choose0",
   "level": "2",
-  "url": "combinations9-5.html#exercise-540",
+  "url": "combinations9-5.html#DMT_comb_CYU_7choose0",
   "type": "Reading Question",
   "number": "9.5.6",
   "title": "",
-  "body": "Calculate . "
+  "body": "Calculate .     Correct, .      Incorrect. See .     "
 },
 {
-  "id": "exercise-541",
+  "id": "DMT_comb_CYU_7bit40s",
   "level": "2",
-  "url": "combinations9-5.html#exercise-541",
+  "url": "combinations9-5.html#DMT_comb_CYU_7bit40s",
   "type": "Reading Question",
   "number": "9.5.7",
   "title": "",
-  "body": "Find the number of binary strings of length 7 with 4 zeros. "
+  "body": "Find the number of binary strings of length 7 with 4 zeros.     Correct, .      Incorrect. See .     "
 },
 {
-  "id": "exercise-542",
+  "id": "DMT_comb_CYU_7bitmost20s",
   "level": "2",
-  "url": "combinations9-5.html#exercise-542",
+  "url": "combinations9-5.html#DMT_comb_CYU_7bitmost20s",
   "type": "Reading Question",
   "number": "9.5.8",
   "title": "",
-  "body": "Find the number of binary strings of length 7 with at most 2 zeros. "
+  "body": "Find the number of binary strings of length 7 with at most 2 zeros.     Correct, .      Incorrect. See . Make sure you are counting strings with 0, 1, and 2 zeros.     "
 },
 {
-  "id": "exercise-543",
+  "id": "DMT_comb_CYU_calculate",
   "level": "2",
-  "url": "combinations9-5.html#exercise-543",
+  "url": "combinations9-5.html#DMT_comb_CYU_calculate",
   "type": "Reading Question",
   "number": "9.5.9",
   "title": "",
-  "body": "Find the number of strings that can be formed from the letters in the word calculate . or "
+  "body": "Find the number of strings that can be formed from the letters in the word calculate .     Correct, or .      Incorrect. See . Make sure you see that there are 2 c's, 2 a's, and 2 l's.     or "
 },
 {
   "id": "exercise-544",
@@ -9484,7 +9484,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "9.6",
   "title": "Binomial Theorem",
-  "body": " Binomial Theorem Binomial Theorem  The Binomial Theorem has applications in many areas of mathematics, from calculus, to number theory, to probability. In this section we look at some examples of combinatorial proofs using binomial coefficients and ultimately prove the Binomial Theorem using induction.  Let be nonnegative integers with . Then  An algebraic proof is straightforward and left as an exercise (see ). We will give a combinatorial proof. This means we will prove the two sides of the equation are equal by showing that they are two different ways to count the same set. In general, a combinatorial proof is done by giving a counting argument.  By definition, is the number of subsets where we choose objects from objects.  We can create a set of objects by specifying which objects are in the set or by specifying which objects are not in the set. We note that there are objects not in the set. Thus, counts the ways to find a set of objects out of objects by finding the ways to not include objects. Thus, both and count subsets of objects from , one by counting the objects in the set, one by counting the objects not in the set.  Pascal's Formula Pascal's Formula Let be nonnegative integers with . Then  We leave the algebraic proof as an exercise (see ), and instead provide a combinatorial proof.  By definition, counts the subsets of objects chosen from objects.  Let , a set of objects. We can create all the subsets of objects by choosing all objects from or by choosing out of and including . Thus, we can count the subsets of objects from objects with .   Give an algebraic proof for Pascal's Formula: Start with the right-hand side. Use the definition of choose, then find a common denominator. Note, you will save yourself a lot of work if you find the least common denominator.  We often call terms of the form  binomial coefficients binomial coefficient .  There is a connection between binomial coefficients and Pascal's Triangle.  You may have seen Pascal's Triangle before, the start of which is  1  1 1  1 2 1  1 3 3 1   We get each number in a row by adding the two numbers above. If there is only one number, you just get 1. For example, the fourth row is 1, 3, 3, 1, since . The next row would be 1, 4, 6, 4, 1.  If we think about the first row as actually being the 0th row, we can make a triangle with the binomial coefficients:       If you calculate the binomial coefficients, you will see that you get the same values as Pascal's Triangle. Furthermore, Pascal's Formula is just the rule we use to get the triangle: add the and terms from the row to get the term in the row.  A binomial binomial is an expression of the form .  The Binomial Theorem gives a formula for calculating . We can prove the Binomial Theorem combinatorially or algebraically. We will provide the algebraic proof, which is a proof by induction. Although we do not provide the details of the combinatorial proof, the next example should give some insight into the combinatorial argument.  A Combinatorial Calculation for  Suppose we want to expand (or multiply) . We can think of the multiplication in this way,  there is 1 way to get : choose 0 's from the three factors.  there are 3 ways to get : choose 1 from the three factors.  there are 3 ways to get : choose 2 's' from the three factors.  there is 1 way to get : choose 3 's from the three factors.  This give us    can be generalized to in the Binomial Theorem.  Binomial Theorem Binomial Theorem Let be a nonnegative integer, then  Prove by induction on .  Base step: Let . Then . Also,  Induction step: Assume .  Show   Now we want to change the index of the second sum. This is just a substitution of variable that allows us to shift how we index the terms. If we were to write out the sum, rather than have it in summation notation, we would not need this step. But it allows us to easily combine like terms in the two summations. So, in the second sum, let , so when ; when , and . We get   Show the Binomial Theorem holds for and .  The Binomial Theorem relates a sum to a power of a binomial. Although we often think of using the Binomial Theorem as a way to calculate the coefficients for expanding , it can also be used to simplify certain sums. In this case, the power of the binomial is the closed form closed form sum sum closed form .  Expressing a Sum in Closed Form  Express the sum, , in closed form.  For problems such as this, we need to identify and as in the Binomial Theorem.  We can see that , since the power of matches the power of . Since there does not appear to be any term for , we can let . Thus, the closed form is .  Use the Binomial Theorem to find . In this expression, what are ?  Prove . Use that .   Check Your Understanding  Use the Binomial Theorem to find .  Use the Binomial Theorem to find .  Use the Binomial Theorem to find .  Use the Binomial Theorem to find the coefficient of in .  Use the Binomial Theorem to find the coefficient of in .  Use the Binomial Theorem to find the coefficient of in .     Give an algebraic proof for the formula in : for integers and with .    Use Pascal's triangle to find the following binomial coefficients.   Find the values of and .    Use the result of part (a) to find , , and .    Complete the row of Pascal’s triangle that corresponds to .      The row of Pascal’s triangle that corresponds to is   What is the row that corresponds to ?    Use the Binomial Theorem to expand .    Use the Binomial Theorem to expand .    Find the coefficient of in .    Find the coefficient of in .    Express in closed form (without the summation symbol and without ellipses,…).    Express in closed form (without the summation symbol and without ellipses,…).    Use Pascal’s Formula to prove by mathematical induction that if is an integer and , then    Think of a set with elements as composed of two parts, one with elements and one with elements. Give a combinatorial argument to show that  Think of counting a single set in two different ways, where one side of the equation represents one way and the other side represents the other way. Since they both count the same set, they should be equal.  Use the Binomial Theorem to prove for all integers ,  Use the fact that .   Use the Binomial Theorem to prove for all integers ,     "
+  "body": " Binomial Theorem Binomial Theorem  The Binomial Theorem has applications in many areas of mathematics, from calculus, to number theory, to probability. In this section we look at some examples of combinatorial proofs using binomial coefficients and ultimately prove the Binomial Theorem using induction.  Let be nonnegative integers with . Then  An algebraic proof is straightforward and left as an exercise (see ). We will give a combinatorial proof. This means we will prove the two sides of the equation are equal by showing that they are two different ways to count the same set. In general, a combinatorial proof is done by giving a counting argument.  By definition, is the number of subsets where we choose objects from objects.  We can create a set of objects by specifying which objects are in the set or by specifying which objects are not in the set. We note that there are objects not in the set. Thus, counts the ways to find a set of objects out of objects by finding the ways to not include objects. Thus, both and count subsets of objects from , one by counting the objects in the set, one by counting the objects not in the set.  Pascal's Formula Pascal's Formula Let be nonnegative integers with . Then  We leave the algebraic proof as an exercise (see ), and instead provide a combinatorial proof.  By definition, counts the subsets of objects chosen from objects.  Let , a set of objects. We can create all the subsets of objects by choosing all objects from or by choosing out of and including . Thus, we can count the subsets of objects from objects with .   Give an algebraic proof for Pascal's Formula: Start with the right-hand side. Use the definition of choose, then find a common denominator. Note, you will save yourself a lot of work if you find the least common denominator.  We often call terms of the form  binomial coefficients binomial coefficient .  There is a connection between binomial coefficients and Pascal's Triangle.  You may have seen Pascal's Triangle before, the start of which is  1  1 1  1 2 1  1 3 3 1   We get each number in a row by adding the two numbers above. If there is only one number, you just get 1. For example, the fourth row is 1, 3, 3, 1, since . The next row would be 1, 4, 6, 4, 1.  If we think about the first row as actually being the 0th row, we can make a triangle with the binomial coefficients:       If you calculate the binomial coefficients, you will see that you get the same values as Pascal's Triangle. Furthermore, Pascal's Formula is just the rule we use to get the triangle: add the and terms from the row to get the term in the row.  A binomial binomial is an expression of the form .  The Binomial Theorem gives a formula for calculating . We can prove the Binomial Theorem combinatorially or algebraically. We will provide the algebraic proof, which is a proof by induction. Although we do not provide the details of the combinatorial proof, the next example should give some insight into the combinatorial argument.  A Combinatorial Calculation for  Suppose we want to expand (or multiply) . We can think of the multiplication in this way,  there is 1 way to get : choose 0 's from the three factors.  there are 3 ways to get : choose 1 from the three factors.  there are 3 ways to get : choose 2 's' from the three factors.  there is 1 way to get : choose 3 's from the three factors.  This give us    can be generalized to in the Binomial Theorem.  Binomial Theorem Binomial Theorem Let be a nonnegative integer, then  Prove by induction on .  Base step: Let . Then . Also,  Induction step: Assume .  Show   Now we want to change the index of the second sum. This is just a substitution of variable that allows us to shift how we index the terms. If we were to write out the sum, rather than have it in summation notation, we would not need this step. But it allows us to easily combine like terms in the two summations. So, in the second sum, let , so when ; when , and . We get   Show the Binomial Theorem holds for and .  The Binomial Theorem relates a sum to a power of a binomial. Although we often think of using the Binomial Theorem as a way to calculate the coefficients for expanding , it can also be used to simplify certain sums. In this case, the power of the binomial is the closed form closed form sum sum closed form .  Expressing a Sum in Closed Form  Express the sum, , in closed form.  For problems such as this, we need to identify and as in the Binomial Theorem.  We can see that , since the power of matches the power of . Since there does not appear to be any term for , we can let . Thus, the closed form is .  Use the Binomial Theorem to find . In this expression, what are ?  Prove . Use that .   Check Your Understanding  Use the Binomial Theorem to find . There should be 5 terms in your answer.  Use the Binomial Theorem to find . There should be 5 terms in your answer.  Use the Binomial Theorem to find . There should be 5 terms in your answer.  Use the Binomial Theorem to find the coefficient of in .   Note, your answer should not include any variables.     Correct, .      Incorrect, don't forget the binomial coefficient: .   \\   Incorrect, don't forget to include when finding the coefficient of .      Incorrect. Using the Binomial Theorem, we know the term must be . Use a bit of algebra to get the coefficient of .      Use the Binomial Theorem to find the coefficient of in .   Note, your answer should not include any variables.     Correct, .      Incorrect, don't forget the binomial coefficient: .   \\   Incorrect, don't forget to include when finding the coefficient of .      Incorrect. Using the Binomial Theorem, we know the term must be . Use a bit of algebra to get the coefficient of .      Use the Binomial Theorem to find the coefficient of in .   Note, your answer should not include any variables.     Correct, .      Incorrect, note that is negative.      Incorrect, don't forget the binomial coefficient: .   \\   Incorrect, don't forget to include when finding the coefficient of .      Incorrect. Using the Binomial Theorem, we know the term must be . Use a bit of algebra to get the coefficient of .         Give an algebraic proof for the formula in : for integers and with .    Use Pascal's triangle to find the following binomial coefficients.   Find the values of and .    Use the result of part (a) to find , , and .    Complete the row of Pascal’s triangle that corresponds to .      The row of Pascal’s triangle that corresponds to is   What is the row that corresponds to ?    Use the Binomial Theorem to expand .    Use the Binomial Theorem to expand .    Find the coefficient of in .    Find the coefficient of in .    Express in closed form (without the summation symbol and without ellipses,…).    Express in closed form (without the summation symbol and without ellipses,…).    Use Pascal’s Formula to prove by mathematical induction that if is an integer and , then    Think of a set with elements as composed of two parts, one with elements and one with elements. Give a combinatorial argument to show that  Think of counting a single set in two different ways, where one side of the equation represents one way and the other side represents the other way. Since they both count the same set, they should be equal.  Use the Binomial Theorem to prove for all integers ,  Use the fact that .   Use the Binomial Theorem to prove for all integers ,     "
 },
 {
   "id": "T_requalsnminusr",
@@ -9532,18 +9532,18 @@ var ptx_lunr_docs = [
   "body": "Give an algebraic proof for Pascal's Formula: Start with the right-hand side. Use the definition of choose, then find a common denominator. Note, you will save yourself a lot of work if you find the least common denominator. "
 },
 {
-  "id": "p-3006",
+  "id": "p-3211",
   "level": "2",
-  "url": "binomial9-6.html#p-3006",
+  "url": "binomial9-6.html#p-3211",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "binomial coefficients "
 },
 {
-  "id": "p-3012",
+  "id": "p-3217",
   "level": "2",
-  "url": "binomial9-6.html#p-3012",
+  "url": "binomial9-6.html#p-3217",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -9586,9 +9586,9 @@ var ptx_lunr_docs = [
   "body": "Show the Binomial Theorem holds for and . "
 },
 {
-  "id": "p-3023",
+  "id": "p-3228",
   "level": "2",
-  "url": "binomial9-6.html#p-3023",
+  "url": "binomial9-6.html#p-3228",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -9622,58 +9622,58 @@ var ptx_lunr_docs = [
   "body": "Prove . Use that . "
 },
 {
-  "id": "exercise-551",
+  "id": "DMT_binomthm_CYU_apbtt4",
   "level": "2",
-  "url": "binomial9-6.html#exercise-551",
+  "url": "binomial9-6.html#DMT_binomthm_CYU_apbtt4",
   "type": "Reading Question",
   "number": "9.6.1",
   "title": "",
-  "body": "Use the Binomial Theorem to find . "
+  "body": "Use the Binomial Theorem to find . There should be 5 terms in your answer. "
 },
 {
-  "id": "exercise-552",
+  "id": "DMT_binomthm_CYU_ap2tt4",
   "level": "2",
-  "url": "binomial9-6.html#exercise-552",
+  "url": "binomial9-6.html#DMT_binomthm_CYU_ap2tt4",
   "type": "Reading Question",
   "number": "9.6.2",
   "title": "",
-  "body": "Use the Binomial Theorem to find . "
+  "body": "Use the Binomial Theorem to find . There should be 5 terms in your answer. "
 },
 {
-  "id": "exercise-553",
+  "id": "DMT_binomthm_CYU_ambtt4",
   "level": "2",
-  "url": "binomial9-6.html#exercise-553",
+  "url": "binomial9-6.html#DMT_binomthm_CYU_ambtt4",
   "type": "Reading Question",
   "number": "9.6.3",
   "title": "",
-  "body": "Use the Binomial Theorem to find . "
+  "body": "Use the Binomial Theorem to find . There should be 5 terms in your answer. "
 },
 {
-  "id": "exercise-554",
+  "id": "DMT_binomthm_CYU_coefx2y2",
   "level": "2",
-  "url": "binomial9-6.html#exercise-554",
+  "url": "binomial9-6.html#DMT_binomthm_CYU_coefx2y2",
   "type": "Reading Question",
   "number": "9.6.4",
   "title": "",
-  "body": "Use the Binomial Theorem to find the coefficient of in . "
+  "body": "Use the Binomial Theorem to find the coefficient of in .   Note, your answer should not include any variables.     Correct, .      Incorrect, don't forget the binomial coefficient: .   \\   Incorrect, don't forget to include when finding the coefficient of .      Incorrect. Using the Binomial Theorem, we know the term must be . Use a bit of algebra to get the coefficient of .     "
 },
 {
-  "id": "exercise-555",
+  "id": "DMT_binomthm_CYU_coefx5y2",
   "level": "2",
-  "url": "binomial9-6.html#exercise-555",
+  "url": "binomial9-6.html#DMT_binomthm_CYU_coefx5y2",
   "type": "Reading Question",
   "number": "9.6.5",
   "title": "",
-  "body": "Use the Binomial Theorem to find the coefficient of in . "
+  "body": "Use the Binomial Theorem to find the coefficient of in .   Note, your answer should not include any variables.     Correct, .      Incorrect, don't forget the binomial coefficient: .   \\   Incorrect, don't forget to include when finding the coefficient of .      Incorrect. Using the Binomial Theorem, we know the term must be . Use a bit of algebra to get the coefficient of .     "
 },
 {
-  "id": "exercise-556",
+  "id": "DMT_binomthm_CYU_coefx4y3",
   "level": "2",
-  "url": "binomial9-6.html#exercise-556",
+  "url": "binomial9-6.html#DMT_binomthm_CYU_coefx4y3",
   "type": "Reading Question",
   "number": "9.6.6",
   "title": "",
-  "body": "Use the Binomial Theorem to find the coefficient of in . "
+  "body": "Use the Binomial Theorem to find the coefficient of in .   Note, your answer should not include any variables.     Correct, .      Incorrect, note that is negative.      Incorrect, don't forget the binomial coefficient: .   \\   Incorrect, don't forget to include when finding the coefficient of .      Incorrect. Using the Binomial Theorem, we know the term must be . Use a bit of algebra to get the coefficient of .     "
 },
 {
   "id": "X_pfofthm1",
@@ -9799,12 +9799,12 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "10.1",
   "title": "Graphs",
-  "body": " Graphs graph  This section focuses on some of the terminology associated with graphs. We will also define some special types of graphs, such as complete graphs.  A graph graph is a collection of vertices vertex and edges edge .   Example of a graph,     is an example of a graph. We have labeled the vertices with and the edges with .    A graph, , consists of a finite set, , of vertices vertex and a finite set, , of edges edge . Each edge is assocated with two vertices (it may be the same vertex) called endpoints endpoints of an edge .  In the above example, , . The endpoints of edge are .  If two edges have the same endpoints, we say they are parallel parallel edges edge parallel .  A loop loop is an edge where both endpoints are the same vertex.  Two vertices connected by an edge are called adjacent adjacent vertices vertex adjacent . For example, in  is adjacent to , but is not adjacent to .  A vertex of a loop is adjacent to itself.  An edge is incident on incident edge each of its endpoints.  Two edges that are incident on the same vertex are adjacent adjacent edges edge adjacent . For example, in  and are adjacent, but and are not adjacent.  An isolated vertex isolated vertex is one with no incident edges.  A graph with no vertices is the empty graph empty graph .  In , edges and are parallel edges, while edge is a loop. We also have an isolated vertex, .   Example of a graph with parallel edges and a loop     Graph Terminology  Consider the graph, given in the figure.   Graph     Find .   Find .   Find the endpoints for .   Find the endpoints for .   Find the endpoints for .   Find the edges incident on .   Find all vertices adjacent to .   Does have any parallel edges?  Yes.  Does have any loops?  No.   It is important to note that it is possible to draw the same graph in different ways.   The same graph drawn in two different ways     The two graphs in are the same graph since they have the same vertex and edge sets, and a given edge still has the same endpoints.  A directed graph directed graph or digraph digraph graph directed consists of a set of vertices, and directed edges (arrows), , where each edge is associated with an ordered pair of of vertices called endpoints, .  We saw directed graphs in and . For example, see . In this example, we have an edge with endpoints , but not .  Really, the vertices of a graph represent a set, while the edges represent relationships between elements of that set. There are lots of examples of graphs as representations of relationships or networks. For example, graphs are used to represent communications systems, flight patterns, and friendship networks. Graphs can even be used to find strategies in games such as sudoku.  A graph with no parallel edges or loops is called simple simple graph . For example, is simple, while is not.  Now we want to define a couple special graphs.  A complete graph on vertices complete graph graph complete , , is a simple graph with vertices whose set of edges contains exactly one edge for every pair of vertices.  are given in the following figure.   Examples of complete graphs     Draw the complete graphs on 5 vertices and 6 vertices, and .   Let . A complete bipartite graph on vertices complete bipartite graph graph complete bipartite , , is a simple graph with vertices and , such that  there is an edge from to for all and ;  there are no edges from to for all ;  there are no edges from to for all .     Complete bipartite graph,     Draw the complete bipartite graphs and .  A graph is a subgraph subgraph of if every vertex in is also a vertex in , and every edge in is also an edge in such that the edges in have the same endpoints as in .  In the following figure, and are subgraphs of .   Examples of subgraphs, , of the graph     The degree degree of a vertex vertex degree of a vertex , , is the number of edges incident on . Loops are counted twice. The total degree total degree graph total degree of a graph is the sum of the degrees of all vertices in .  Degree  Let be the graph in .  Find .  3  Find .  2  Find the total degree of .  10  Let be the graph in .  Find .  4  Find .  0  Find the total degree of .  6  Is there a relationship between the number of edges in and the total degree?   As you might have seen in , there is a relationship between the total degree of a graph and the number of edges.  The total degree of a graph is where is the number of edges in .  We will not provide a formal proof, but the theorem is not hard to show as each edge must be incident on two vertices. Thus, each edge is counted twice in the total degree.  Draw any graph with 6 edges. Find the total degree of your graph. Verify that the total degree is twice the number of edges.  The total degree of any graph is even.  Explain why in any graph there is an even number of vertices of odd degree.  For each of the following either draw an example of the graph or explain why it is impossible.  A graph with 4 vertices of degrees 1, 1, 2, 3.  A graph with 4 vertices of degrees 1, 1, 2, 2.  A simple graph with 4 vertices of degrees 1, 1, 2, 2.  A graph with 4 vertices of degrees 1, 2, 3, 3.  A simple graph with 4 vertices of degrees 1, 2, 3, 4.  A simple graph with 6 edges and all vertices of degrees 3.    Check Your Understanding  Use the following graph for questions about .   The graph for Check Your Understanding     List the edges of incident on .  Does have any parallel edges? Yes,  True or false: in , and are adjacent. True  True or false: in , and are adjacent. False  True or false: in , and are adjacent. True  In , find the degree of .  In , find the degree of .  What is the total degree of ?  Draw . How many edges does it have? What is the degree of each vertex? It has 10 edges. All vertices have degree 4.  True or false: there exists a graph with 4 vertices of degrees 1, 2, 1, 2. True. One example is a line (path) with 4 vertices.  True or false: there exists a graph with 4 vertices of degrees 1, 2, 1, 3. False. Total degree would be odd.  True or false: there exists a graph with 4 vertices of degrees 4, 4, 4, 4. True. One example has parallel edges between each vertex. Can also have an example with loops.  True or false: there exists a simple graph with 4 vertices of degrees 4, 4, 4, 4. False. Can't have more edges than the complete graph on 4 vertices.    Draw the graph given by the following information: Graph has vertex set and edge set with edge-endpoint function given by the table.    Edge  Endpoints                     Show that the two drawings represent the same graph by labeling the vertices and edges of the right-hand drawing to correspond to those of the left-hand drawing.      Show that the two drawings represent the same graph by labeling the vertices and edges of the right-hand drawing to correspond to those of the left-hand drawing.      Consider the graph       Find all edges that are incident on .    Find all vertices that are adjacent to .    Find all edges that are adjacent to .    Find all loops.    Find all parallel edges.    Find all isolated vertices.    Find the degree of .    Find the total degree of the graph.     A graph has vertices of degrees 0, 2, 2, 3, and 9. How many edges does the graph have?   For each of the following, draw the graph if it exists or explain why no such graph exists.    A graph with four vertices of degrees 1, 1, 1, and 4.    A graph with four vertices of degrees 1, 2, 3, and 4.    A simple graph with 9 edges and all vertices of degree 3.     In a group of 25 people, is it possible for each person to shake hands with exactly 3 other people? Explain your answer.   Recall that denotes the complete bipartite graph on vertices.    Draw .    Draw .    Draw .    How many vertices of have of degree ? degree ?    What is the total degree of ?    Find a formula in terms of and for the number of edges of .      Recall is the complete graph on vertices.    Draw .    Show that for all integers , the number of edges of is .    There are two possible approaches for the proof. One is to try a counting argument, the other is to do induction on .   "
+  "body": " Graphs graph  This section focuses on some of the terminology associated with graphs. We will also define some special types of graphs, such as complete graphs.  A graph graph is a collection of vertices vertex and edges edge .   Example of a graph,     is an example of a graph. We have labeled the vertices with and the edges with .    A graph, , consists of a finite set, , of vertices vertex and a finite set, , of edges edge . Each edge is assocated with two vertices (it may be the same vertex) called endpoints endpoints of an edge .  In the above example, , . The endpoints of edge are .  If two edges have the same endpoints, we say they are parallel parallel edges edge parallel .  A loop loop is an edge where both endpoints are the same vertex.  Two vertices connected by an edge are called adjacent adjacent vertices vertex adjacent . For example, in  is adjacent to , but is not adjacent to .  A vertex of a loop is adjacent to itself.  An edge is incident on incident edge each of its endpoints.  Two edges that are incident on the same vertex are adjacent adjacent edges edge adjacent . For example, in  and are adjacent, but and are not adjacent.  An isolated vertex isolated vertex is one with no incident edges.  A graph with no vertices is the empty graph empty graph .  In , edges and are parallel edges, while edge is a loop. We also have an isolated vertex, .   Example of a graph with parallel edges and a loop     Graph Terminology  Consider the graph, given in the figure.   Graph     Find .   Find .   Find the endpoints for .   Find the endpoints for .   Find the endpoints for .   Find the edges incident on .   Find all vertices adjacent to .   Does have any parallel edges?  Yes.  Does have any loops?  No.   It is important to note that it is possible to draw the same graph in different ways.   The same graph drawn in two different ways     The two graphs in are the same graph since they have the same vertex and edge sets, and a given edge still has the same endpoints.  A directed graph directed graph or digraph digraph graph directed consists of a set of vertices, and directed edges (arrows), , where each edge is associated with an ordered pair of of vertices called endpoints, .  We saw directed graphs in and . For example, see . In this example, we have an edge with endpoints , but not .  Really, the vertices of a graph represent a set, while the edges represent relationships between elements of that set. There are lots of examples of graphs as representations of relationships or networks. For example, graphs are used to represent communications systems, flight patterns, and friendship networks. Graphs can even be used to find strategies in games such as sudoku.  A graph with no parallel edges or loops is called simple simple graph . For example, is simple, while is not.  Now we want to define a couple special graphs.  A complete graph on vertices complete graph graph complete , , is a simple graph with vertices whose set of edges contains exactly one edge for every pair of vertices.  are given in the following figure.   Examples of complete graphs     Draw the complete graphs on 5 vertices and 6 vertices, and .   Let . A complete bipartite graph on vertices complete bipartite graph graph complete bipartite , , is a simple graph with vertices and , such that  there is an edge from to for all and ;  there are no edges from to for all ;  there are no edges from to for all .     Complete bipartite graph,     Draw the complete bipartite graphs and .  A graph is a subgraph subgraph of if every vertex in is also a vertex in , and every edge in is also an edge in such that the edges in have the same endpoints as in .  In the following figure, and are subgraphs of .   Examples of subgraphs, , of the graph     The degree degree of a vertex vertex degree of a vertex , , is the number of edges incident on . Loops are counted twice. The total degree total degree graph total degree of a graph is the sum of the degrees of all vertices in .  Degree  Let be the graph in .  Find .  3  Find .  2  Find the total degree of .  10  Let be the graph in .  Find .  4  Find .  0  Find the total degree of .  6  Is there a relationship between the number of edges in and the total degree?   As you might have seen in , there is a relationship between the total degree of a graph and the number of edges.  The total degree of a graph is where is the number of edges in .  We will not provide a formal proof, but the theorem is not hard to show as each edge must be incident on two vertices. Thus, each edge is counted twice in the total degree.  Draw any graph with 6 edges. Find the total degree of your graph. Verify that the total degree is twice the number of edges.  The total degree of any graph is even.  Explain why in any graph there is an even number of vertices of odd degree.  For each of the following either draw an example of the graph or explain why it is impossible.  A graph with 4 vertices of degrees 1, 1, 2, 3.  A graph with 4 vertices of degrees 1, 1, 2, 2.  A simple graph with 4 vertices of degrees 1, 1, 2, 2.  A graph with 4 vertices of degrees 1, 2, 3, 3.  A simple graph with 4 vertices of degrees 1, 2, 3, 4.  A simple graph with 6 edges and all vertices of degrees 3.    Check Your Understanding  Use the following graph for questions about .   The graph for Check Your Understanding     List the edges of , , incident on . There are 5 edges.  True or false , , has parallel edges. Edges are parallel. Yes,  True or false: in , , and are adjacent. True  True or false: in , , and are adjacent. False  True or false: in , , and are adjacent. True  In , , find the degree of .     Correct.      Incorrect. See .      In , , find the degree of .     Correct.      Incorrect. See .      What is the total degree of , ?     Correct.      Incorrect. See . Add the degrees of all the vertices.      Draw . How many edges does it have?  What is the degree of each vertex?     Correct. It has 10 edges.      Incorrect. See . Make sure you have connected every vertex to every other vertex exactly once.        Correct. Every edge has degree 4.      Incorrect. See .     It has 10 edges. All vertices have degree 4.  True or false: there exists a graph with 4 vertices of degrees 1, 2, 1, 2. One example is a line (path) with 4 vertices. True. One example is a line (path) with 4 vertices.  True or false: there exists a graph with 4 vertices of degrees 1, 2, 1, 3. The total degree would be odd. False. Total degree would be odd.  True or false: there exists a graph with 4 vertices of degrees 4, 4, 4, 4. One example has parallel edges between each vertex. Can also have an example with loops. True. One example has parallel edges between each vertex. You can also have an example with loops.  True or false: there exists a simple graph with 4 vertices of degrees 4, 4, 4, 4. In a simple graph, you can't have more edges than the complete graph on 4 vertices. False. Can't have more edges than the complete graph on 4 vertices.    Draw the graph given by the following information: Graph has vertex set and edge set with edge-endpoint function given by the table.    Edge  Endpoints                     Show that the two drawings represent the same graph by labeling the vertices and edges of the right-hand drawing to correspond to those of the left-hand drawing.      Show that the two drawings represent the same graph by labeling the vertices and edges of the right-hand drawing to correspond to those of the left-hand drawing.      Consider the graph       Find all edges that are incident on .    Find all vertices that are adjacent to .    Find all edges that are adjacent to .    Find all loops.    Find all parallel edges.    Find all isolated vertices.    Find the degree of .    Find the total degree of the graph.     A graph has vertices of degrees 0, 2, 2, 3, and 9. How many edges does the graph have?   For each of the following, draw the graph if it exists or explain why no such graph exists.    A graph with four vertices of degrees 1, 1, 1, and 4.    A graph with four vertices of degrees 1, 2, 3, and 4.    A simple graph with 9 edges and all vertices of degree 3.     In a group of 25 people, is it possible for each person to shake hands with exactly 3 other people? Explain your answer.   Recall that denotes the complete bipartite graph on vertices.    Draw .    Draw .    Draw .    How many vertices of have of degree ? degree ?    What is the total degree of ?    Find a formula in terms of and for the number of edges of .      Recall is the complete graph on vertices.    Draw .    Show that for all integers , the number of edges of is .    There are two possible approaches for the proof. One is to try a counting argument, the other is to do induction on .   "
 },
 {
-  "id": "p-3058",
+  "id": "p-3282",
   "level": "2",
-  "url": "graphs10-1.html#p-3058",
+  "url": "graphs10-1.html#p-3282",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -9829,63 +9829,63 @@ var ptx_lunr_docs = [
   "body": "  A graph, , consists of a finite set, , of vertices vertex and a finite set, , of edges edge . Each edge is assocated with two vertices (it may be the same vertex) called endpoints endpoints of an edge . "
 },
 {
-  "id": "p-3062",
+  "id": "p-3286",
   "level": "2",
-  "url": "graphs10-1.html#p-3062",
+  "url": "graphs10-1.html#p-3286",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "parallel "
 },
 {
-  "id": "p-3063",
+  "id": "p-3287",
   "level": "2",
-  "url": "graphs10-1.html#p-3063",
+  "url": "graphs10-1.html#p-3287",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "loop "
 },
 {
-  "id": "p-3064",
+  "id": "p-3288",
   "level": "2",
-  "url": "graphs10-1.html#p-3064",
+  "url": "graphs10-1.html#p-3288",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "adjacent "
 },
 {
-  "id": "p-3066",
+  "id": "p-3290",
   "level": "2",
-  "url": "graphs10-1.html#p-3066",
+  "url": "graphs10-1.html#p-3290",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "incident on "
 },
 {
-  "id": "p-3067",
+  "id": "p-3291",
   "level": "2",
-  "url": "graphs10-1.html#p-3067",
+  "url": "graphs10-1.html#p-3291",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "adjacent "
 },
 {
-  "id": "p-3068",
+  "id": "p-3292",
   "level": "2",
-  "url": "graphs10-1.html#p-3068",
+  "url": "graphs10-1.html#p-3292",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "isolated vertex "
 },
 {
-  "id": "p-3069",
+  "id": "p-3293",
   "level": "2",
-  "url": "graphs10-1.html#p-3069",
+  "url": "graphs10-1.html#p-3293",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -9928,9 +9928,9 @@ var ptx_lunr_docs = [
   "body": "A directed graph directed graph or digraph digraph graph directed consists of a set of vertices, and directed edges (arrows), , where each edge is associated with an ordered pair of of vertices called endpoints, . "
 },
 {
-  "id": "p-3086",
+  "id": "p-3310",
   "level": "2",
-  "url": "graphs10-1.html#p-3086",
+  "url": "graphs10-1.html#p-3310",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -10081,121 +10081,121 @@ var ptx_lunr_docs = [
   "body": " The graph for Check Your Understanding    "
 },
 {
-  "id": "exercise-570",
+  "id": "DMT_graphs_CYU_edgeincid2",
   "level": "2",
-  "url": "graphs10-1.html#exercise-570",
+  "url": "graphs10-1.html#DMT_graphs_CYU_edgeincid2",
   "type": "Reading Question",
   "number": "10.1.1",
   "title": "",
-  "body": "List the edges of incident on . "
+  "body": "List the edges of , , incident on . There are 5 edges. "
 },
 {
-  "id": "exercise-571",
+  "id": "DMT_graphs_CYU_parallel",
   "level": "2",
-  "url": "graphs10-1.html#exercise-571",
+  "url": "graphs10-1.html#DMT_graphs_CYU_parallel",
   "type": "Reading Question",
   "number": "10.1.2",
   "title": "",
-  "body": "Does have any parallel edges? Yes, "
+  "body": "True or false , , has parallel edges. Edges are parallel. Yes, "
 },
 {
-  "id": "exercise-572",
+  "id": "DMT_graphs_CYU_v12adjacent",
   "level": "2",
-  "url": "graphs10-1.html#exercise-572",
+  "url": "graphs10-1.html#DMT_graphs_CYU_v12adjacent",
   "type": "Reading Question",
   "number": "10.1.3",
   "title": "",
-  "body": "True or false: in , and are adjacent. True "
+  "body": "True or false: in , , and are adjacent. True "
 },
 {
-  "id": "exercise-573",
+  "id": "DMT_graphs_CYU_v34adjacent",
   "level": "2",
-  "url": "graphs10-1.html#exercise-573",
+  "url": "graphs10-1.html#DMT_graphs_CYU_v34adjacent",
   "type": "Reading Question",
   "number": "10.1.4",
   "title": "",
-  "body": "True or false: in , and are adjacent. False "
+  "body": "True or false: in , , and are adjacent. False "
 },
 {
-  "id": "exercise-574",
+  "id": "DMT_graphs_CYU_e36adjacent",
   "level": "2",
-  "url": "graphs10-1.html#exercise-574",
+  "url": "graphs10-1.html#DMT_graphs_CYU_e36adjacent",
   "type": "Reading Question",
   "number": "10.1.5",
   "title": "",
-  "body": "True or false: in , and are adjacent. True "
+  "body": "True or false: in , , and are adjacent. True "
 },
 {
-  "id": "exercise-575",
+  "id": "DMT_graphs_CYU_degreev4",
   "level": "2",
-  "url": "graphs10-1.html#exercise-575",
+  "url": "graphs10-1.html#DMT_graphs_CYU_degreev4",
   "type": "Reading Question",
   "number": "10.1.6",
   "title": "",
-  "body": "In , find the degree of . "
+  "body": "In , , find the degree of .     Correct.      Incorrect. See .     "
 },
 {
-  "id": "exercise-576",
+  "id": "DMT_graphs_CYU_degreev2",
   "level": "2",
-  "url": "graphs10-1.html#exercise-576",
+  "url": "graphs10-1.html#DMT_graphs_CYU_degreev2",
   "type": "Reading Question",
   "number": "10.1.7",
   "title": "",
-  "body": "In , find the degree of . "
+  "body": "In , , find the degree of .     Correct.      Incorrect. See .     "
 },
 {
-  "id": "exercise-577",
+  "id": "DMT_graphs_CYU_totdeg",
   "level": "2",
-  "url": "graphs10-1.html#exercise-577",
+  "url": "graphs10-1.html#DMT_graphs_CYU_totdeg",
   "type": "Reading Question",
   "number": "10.1.8",
   "title": "",
-  "body": "What is the total degree of ? "
+  "body": "What is the total degree of , ?     Correct.      Incorrect. See . Add the degrees of all the vertices.     "
 },
 {
-  "id": "exercise-578",
+  "id": "DMT_graphs_CYU_K5",
   "level": "2",
-  "url": "graphs10-1.html#exercise-578",
+  "url": "graphs10-1.html#DMT_graphs_CYU_K5",
   "type": "Reading Question",
   "number": "10.1.9",
   "title": "",
-  "body": "Draw . How many edges does it have? What is the degree of each vertex? It has 10 edges. All vertices have degree 4. "
+  "body": "Draw . How many edges does it have?  What is the degree of each vertex?     Correct. It has 10 edges.      Incorrect. See . Make sure you have connected every vertex to every other vertex exactly once.        Correct. Every edge has degree 4.      Incorrect. See .     It has 10 edges. All vertices have degree 4. "
 },
 {
-  "id": "exercise-579",
+  "id": "DMT_graphs_CYU_exist1212",
   "level": "2",
-  "url": "graphs10-1.html#exercise-579",
+  "url": "graphs10-1.html#DMT_graphs_CYU_exist1212",
   "type": "Reading Question",
   "number": "10.1.10",
   "title": "",
-  "body": "True or false: there exists a graph with 4 vertices of degrees 1, 2, 1, 2. True. One example is a line (path) with 4 vertices. "
+  "body": "True or false: there exists a graph with 4 vertices of degrees 1, 2, 1, 2. One example is a line (path) with 4 vertices. True. One example is a line (path) with 4 vertices. "
 },
 {
-  "id": "exercise-580",
+  "id": "DMT_graphs_CYU_exist1213",
   "level": "2",
-  "url": "graphs10-1.html#exercise-580",
+  "url": "graphs10-1.html#DMT_graphs_CYU_exist1213",
   "type": "Reading Question",
   "number": "10.1.11",
   "title": "",
-  "body": "True or false: there exists a graph with 4 vertices of degrees 1, 2, 1, 3. False. Total degree would be odd. "
+  "body": "True or false: there exists a graph with 4 vertices of degrees 1, 2, 1, 3. The total degree would be odd. False. Total degree would be odd. "
 },
 {
-  "id": "exercise-581",
+  "id": "DMT_graphs_CYU_exist4444",
   "level": "2",
-  "url": "graphs10-1.html#exercise-581",
+  "url": "graphs10-1.html#DMT_graphs_CYU_exist4444",
   "type": "Reading Question",
   "number": "10.1.12",
   "title": "",
-  "body": "True or false: there exists a graph with 4 vertices of degrees 4, 4, 4, 4. True. One example has parallel edges between each vertex. Can also have an example with loops. "
+  "body": "True or false: there exists a graph with 4 vertices of degrees 4, 4, 4, 4. One example has parallel edges between each vertex. Can also have an example with loops. True. One example has parallel edges between each vertex. You can also have an example with loops. "
 },
 {
-  "id": "exercise-582",
+  "id": "DMT_graphs_CYU_existsimp4444",
   "level": "2",
-  "url": "graphs10-1.html#exercise-582",
+  "url": "graphs10-1.html#DMT_graphs_CYU_existsimp4444",
   "type": "Reading Question",
   "number": "10.1.13",
   "title": "",
-  "body": "True or false: there exists a simple graph with 4 vertices of degrees 4, 4, 4, 4. False. Can't have more edges than the complete graph on 4 vertices. "
+  "body": "True or false: there exists a simple graph with 4 vertices of degrees 4, 4, 4, 4. In a simple graph, you can't have more edges than the complete graph on 4 vertices. False. Can't have more edges than the complete graph on 4 vertices. "
 },
 {
   "id": "exercise-583",
@@ -10285,7 +10285,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "10.2",
   "title": "Paths and Circuits",
-  "body": " Paths and Circuits path circuit graph path graph circuit  The origin story for this section is the Konigsberg Bridge Problem, which involves seven bridges, as pictured in . The story is that the challenge of Konigsberg was to try to traverse all the bridges, without repeating one, and return to where you started. Euler found a way to represent the problem as a graph, also pictured. The vertices are the land masses and the edges are the bridges. This representation makes it easier to try to answer the question. Before moving on, try to solve the bridge problem by finding a route through the graph that starts and ends at some vertex and traverses each edge exactly once.   Konigsberg bridge problem,    For each of the following terms we have a list of vertices and edges, , that represent a way to traverse through the graph. So, for example, must be an endpoint of , must be an endpoint of and , etc. For each of the following terms we indicate whether we can repeat vertices and\/or edges in the list.  A walk walk from to has . It can repeat edges and vertices. It can begin at any vertex and end at any vertex.  A trail trail from to has . It cannot repeat edges. It can begin at any vertex and end at any vertex.  A path path from to has . It cannot repeat edges or vertices. It can begin at any vertex and end at any vertex.  A closed walk closed walk walk closed must start and end at the same vertex , . It can repeat edges and vertices.  A circuit circuit must start and end at the same vertex , . It cannot repeat edges. It can repeat vertices.  A simple circuit simple circuit circuit simple must start and end at the same vertex , . It cannot repeat edges or vertices, except for the initial and terminal vertex.    If it is clear which vertices we must use, we often just use the edges, , to describe paths, curcuits, walks, etc.  The trivial walk walk trivial is just the single vertex . This is also the trivial circuit circuit trivial .  Paths and Circuits  Consider the graph .   The graph for     For each list of vertices and edges, decide if it is a walk, trail, path, closed walk, circuit, simple circuit.    walk   walk, trail   walk, trail, closed walk, circuit, simple circuit   walk, trail   walk, trail, closed walk, circuit    Two vertices, , are connected connected vertices if there is a walk from to .  A graph, , is connected connected graph if given any two vertices , there is a walk from to .  Basically, a graph is connected if it is in one piece. is an example of a connected graph. The example in with the isolated vertex, is an example of a graph that is not connected.  We state several propositions in this section without proof. You are encouraged to sketch examples of graphs to try to verify the propositions for yourself.  If is a connected graph then any two distinct vertices of can be connected by a simple path.  Draw several examples of connected graphs. Verify for yourself that if is connected then any two distinct vertices of can be connected by a simple path.  If and are part of a circuit in and one edge is removed, then there still exists a path from to in .  Draw several examples of graphs with a circuit. Verify for yourself that if and are part of a circuit and one edge is removed then there still exists a path from to in .  If is a connected graph and contains a nontrivial circuit, then an edge of the circuit can be removed without disconnecting .  Draw several examples of connected graphs containing a nontrivial circuit. Verify for yourself that if is connected and contains a nontrivial circuit then an edge of the circuit can be removed without disconnecting .  An Euler circuit Euler circuit circuit Euler for a graph is a circuit that contains every vertex and every edge of .  An Euler circuit must start and end at the same vertex and include every vertex and every edge. It can repeat vertices, but it cannot repeat edges. If you look back at the Konigsberg bridge problem, you can see that to solve the bridge problem is to find an Euler circuit for the associated graph. Were you able to find such a circuit?  Finding Euler Circuits  Is it possible to find an Euler circuit for the graph in ?      Yes. For example .  Is it possible to find an Euler circuit for the Konigsberg bridge graph in ?      No.   Draw the complete bipartite graphs , , and . Determine if each of these graphs has an Euler circuit.  We want to decide when a graph has an Euler circuit. The following two theorems completely characterize when a graph has an Euler circuit.  If a graph has an Euler circuit, then every vertex has even degree.  Although we will not prove this formally, the basic idea is that to create an Euler circuit for each vertex you need to be able to arrive at the vertex along an edge and then leave the vertex along a different edge. In the case of the inital vertex, you need to be able to leave the vertex and then return.  tells us that the Konigsberg bridge graph cannot have an Euler circuit since we have vertices of odd degree.  If every vertex of a nonempty graph has even degree and is connected, then the graph has an Euler circuit.  tells us that the graph in has an Euler circuit since all vertices have even degree, and the graph is connected. The graph in does not have an Euler circuit since it is not connected (although every vertex has even degree).  Verify and on , , and .  An Euler path Euler path from to is a sequence of adjacent edges and vertices that starts at and ends at passing through every vertex of at least once and traversing every edge exactly once.  An Euler path is a path that covers every edge and vertex of without repeating edges.  A graph has an Euler path from to if and only if is connected, and have odd degree, and all other vertices of have even degree.  Draw a graph that has an Euler path but not an Euler circuit.  We've been focusing on traversing a graph by covering each edge exactly once, but what if we want to traverse each vertex exactly once?  A Hamiltonian circuit Hamiltonian circuit circuit Hamiltonian for is a simple circuit that includes every vertex of .  A Hamiltonian circuit starts and ends at the same vertex, passes through all other vertices without repeating, does not repeat edges, but does not need to use all the edges. For example, in the Konigsberg bridge graph , we have Hamiltonian circuit .  Draw the complete bipartite graphs , , and . Determine if these graphs have an Hamiltonian circuit.   Check Your Understanding  Use the following graph for questions about .   The graph for Check Your Understanding     True or false: is a path in . False. Repeats .  True or false: is a closed walk in . False. Starts and ends at different vertices.  True or false: is a circuit in . True.  True or false: is a simple circuit in . False. Repeats .  True or false is a simple circuit in . True.  True or false: has an Euler circuit. False. There are vertices of odd degree.  True or false: has an Euler path. True. Can start at , end at .  True or false: has a Hamiltonian circuit. True. For example, .     In the graph below, determine whether the following walks are trails, paths, closed walks, circuits, simple circuits, or just walks.                                      Consider the following graph.      How many paths are there from to ?    How many trails are there from to ?    How many walks are there from to ?      Each of (a)-(c) describes a graph. In each case answer yes, no or not necessarily to whether the graph has an Euler circuit. Justify your answer.     is a connected graph with 5 vertices of degrees 2, 2, 3, 3, and 4.     is a connected graph with 5 vertices of degrees 2, 2, 4, 4, and 6.     is a graph with 5 vertices of degrees 2, 2, 4, 4, and 6.      Determine whether the following graph has an Euler circuit. If it does, describe it, if it doesn’t, explain why not.      Determine whether the following graph has an Euler circuit. If it does, describe it, if it doesn’t, explain why not.      Find a Hamiltonian circuit for the graph below.      Show that the following graph does not have a Hamiltonian circuit.     Give two examples of graphs that have Euler circuits but not Hamiltonian circuits. Your graphs must have a different number of edges from each other.   Give two examples of graphs that have Hamiltonian circuits but not Euler circuits. Your graphs must have a different number of edges from each other.    "
+  "body": " Paths and Circuits path circuit graph path graph circuit  The origin story for this section is the Konigsberg Bridge Problem, which involves seven bridges, as pictured in . The story is that the challenge of Konigsberg was to try to traverse all the bridges, without repeating one, and return to where you started. Euler found a way to represent the problem as a graph, also pictured. The vertices are the land masses and the edges are the bridges. This representation makes it easier to try to answer the question. Before moving on, try to solve the bridge problem by finding a route through the graph that starts and ends at some vertex and traverses each edge exactly once.   Konigsberg bridge problem,    For each of the following terms we have a list of vertices and edges, , that represent a way to traverse through the graph. So, for example, must be an endpoint of , must be an endpoint of and , etc. For each of the following terms we indicate whether we can repeat vertices and\/or edges in the list.  A walk walk from to has . It can repeat edges and vertices. It can begin at any vertex and end at any vertex.  A trail trail from to has . It cannot repeat edges. It can begin at any vertex and end at any vertex.  A path path from to has . It cannot repeat edges or vertices. It can begin at any vertex and end at any vertex.  A closed walk closed walk walk closed must start and end at the same vertex , . It can repeat edges and vertices.  A circuit circuit must start and end at the same vertex , . It cannot repeat edges. It can repeat vertices.  A simple circuit simple circuit circuit simple must start and end at the same vertex , . It cannot repeat edges or vertices, except for the initial and terminal vertex.    If it is clear which vertices we must use, we often just use the edges, , to describe paths, curcuits, walks, etc.  The trivial walk walk trivial is just the single vertex . This is also the trivial circuit circuit trivial .  Paths and Circuits  Consider the graph .   The graph for     For each list of vertices and edges, decide if it is a walk, trail, path, closed walk, circuit, simple circuit.    walk   walk, trail   walk, trail, closed walk, circuit, simple circuit   walk, trail   walk, trail, closed walk, circuit    Two vertices, , are connected connected vertices if there is a walk from to .  A graph, , is connected connected graph if given any two vertices , there is a walk from to .  Basically, a graph is connected if it is in one piece. is an example of a connected graph. The example in with the isolated vertex, is an example of a graph that is not connected.  We state several propositions in this section without proof. You are encouraged to sketch examples of graphs to try to verify the propositions for yourself.  If is a connected graph then any two distinct vertices of can be connected by a simple path.  Draw several examples of connected graphs. Verify for yourself that if is connected then any two distinct vertices of can be connected by a simple path.  If and are part of a circuit in and one edge is removed, then there still exists a path from to in .  Draw several examples of graphs with a circuit. Verify for yourself that if and are part of a circuit and one edge is removed then there still exists a path from to in .  If is a connected graph and contains a nontrivial circuit, then an edge of the circuit can be removed without disconnecting .  Draw several examples of connected graphs containing a nontrivial circuit. Verify for yourself that if is connected and contains a nontrivial circuit then an edge of the circuit can be removed without disconnecting .  An Euler circuit Euler circuit circuit Euler for a graph is a circuit that contains every vertex and every edge of .  An Euler circuit must start and end at the same vertex and include every vertex and every edge. It can repeat vertices, but it cannot repeat edges. If you look back at the Konigsberg bridge problem, you can see that to solve the bridge problem is to find an Euler circuit for the associated graph. Were you able to find such a circuit?  Finding Euler Circuits  Is it possible to find an Euler circuit for the graph in ?      Yes. For example .  Is it possible to find an Euler circuit for the Konigsberg bridge graph in ?      No.   Draw the complete bipartite graphs , , and . Determine if each of these graphs has an Euler circuit.  We want to decide when a graph has an Euler circuit. The following two theorems completely characterize when a graph has an Euler circuit.  If a graph has an Euler circuit, then every vertex has even degree.  Although we will not prove this formally, the basic idea is that to create an Euler circuit for each vertex you need to be able to arrive at the vertex along an edge and then leave the vertex along a different edge. In the case of the inital vertex, you need to be able to leave the vertex and then return.  tells us that the Konigsberg bridge graph cannot have an Euler circuit since we have vertices of odd degree.  If every vertex of a nonempty graph has even degree and is connected, then the graph has an Euler circuit.  tells us that the graph in has an Euler circuit since all vertices have even degree, and the graph is connected. The graph in does not have an Euler circuit since it is not connected (although every vertex has even degree).  Verify and on , , and .  An Euler path Euler path from to is a sequence of adjacent edges and vertices that starts at and ends at passing through every vertex of at least once and traversing every edge exactly once.  An Euler path is a path that covers every edge and vertex of without repeating edges.  A graph has an Euler path from to if and only if is connected, and have odd degree, and all other vertices of have even degree.  Draw a graph that has an Euler path but not an Euler circuit.  We've been focusing on traversing a graph by covering each edge exactly once, but what if we want to traverse each vertex exactly once?  A Hamiltonian circuit Hamiltonian circuit circuit Hamiltonian for is a simple circuit that includes every vertex of .  A Hamiltonian circuit starts and ends at the same vertex, passes through all other vertices without repeating, does not repeat edges, but does not need to use all the edges. For example, in the Konigsberg bridge graph , we have Hamiltonian circuit .  Draw the complete bipartite graphs , , and . Determine if these graphs have an Hamiltonian circuit.   Check Your Understanding  Use the following graph for questions about .   The graph for Check Your Understanding     True or false: is a path in , . It repeats . False. Repeats .  True or false: is a closed walk in , . It starts and ends at different vertices. False. Starts and ends at different vertices.  True or false: is a circuit in , . True.  True or false: is a simple circuit in , . It repeats . False. Repeats .  True or false is a simple circuit in , . True.  True or false: , , has an Euler circuit. There are vertices of odd degree. False. There are vertices of odd degree.  True or false: , , has an Euler path. A path can start at , end at . True. Can start at , end at .  True or false: , , has a Hamiltonian circuit. For example, . True. For example, .     In the graph below, determine whether the following walks are trails, paths, closed walks, circuits, simple circuits, or just walks.                                      Consider the following graph.      How many paths are there from to ?    How many trails are there from to ?    How many walks are there from to ?      Each of (a)-(c) describes a graph. In each case answer yes, no or not necessarily to whether the graph has an Euler circuit. Justify your answer.     is a connected graph with 5 vertices of degrees 2, 2, 3, 3, and 4.     is a connected graph with 5 vertices of degrees 2, 2, 4, 4, and 6.     is a graph with 5 vertices of degrees 2, 2, 4, 4, and 6.      Determine whether the following graph has an Euler circuit. If it does, describe it, if it doesn’t, explain why not.      Determine whether the following graph has an Euler circuit. If it does, describe it, if it doesn’t, explain why not.      Find a Hamiltonian circuit for the graph below.      Show that the following graph does not have a Hamiltonian circuit.     Give two examples of graphs that have Euler circuits but not Hamiltonian circuits. Your graphs must have a different number of edges from each other.   Give two examples of graphs that have Hamiltonian circuits but not Euler circuits. Your graphs must have a different number of edges from each other.    "
 },
 {
   "id": "F_Kbridge",
@@ -10306,9 +10306,9 @@ var ptx_lunr_docs = [
   "body": "For each of the following terms we have a list of vertices and edges, , that represent a way to traverse through the graph. So, for example, must be an endpoint of , must be an endpoint of and , etc. For each of the following terms we indicate whether we can repeat vertices and\/or edges in the list.  A walk walk from to has . It can repeat edges and vertices. It can begin at any vertex and end at any vertex.  A trail trail from to has . It cannot repeat edges. It can begin at any vertex and end at any vertex.  A path path from to has . It cannot repeat edges or vertices. It can begin at any vertex and end at any vertex.  A closed walk closed walk walk closed must start and end at the same vertex , . It can repeat edges and vertices.  A circuit circuit must start and end at the same vertex , . It cannot repeat edges. It can repeat vertices.  A simple circuit simple circuit circuit simple must start and end at the same vertex , . It cannot repeat edges or vertices, except for the initial and terminal vertex.   "
 },
 {
-  "id": "p-3165",
+  "id": "p-3406",
   "level": "2",
-  "url": "pathscircuits10-2.html#p-3165",
+  "url": "pathscircuits10-2.html#p-3406",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -10504,76 +10504,76 @@ var ptx_lunr_docs = [
   "body": " The graph for Check Your Understanding    "
 },
 {
-  "id": "exercise-592",
+  "id": "DMT_paths_CYU_257path",
   "level": "2",
-  "url": "pathscircuits10-2.html#exercise-592",
+  "url": "pathscircuits10-2.html#DMT_paths_CYU_257path",
   "type": "Reading Question",
   "number": "10.2.1",
   "title": "",
-  "body": "True or false: is a path in . False. Repeats . "
+  "body": "True or false: is a path in , . It repeats . False. Repeats . "
 },
 {
-  "id": "exercise-593",
+  "id": "DMT_paths_CYU_257clwalk",
   "level": "2",
-  "url": "pathscircuits10-2.html#exercise-593",
+  "url": "pathscircuits10-2.html#DMT_paths_CYU_257clwalk",
   "type": "Reading Question",
   "number": "10.2.2",
   "title": "",
-  "body": "True or false: is a closed walk in . False. Starts and ends at different vertices. "
+  "body": "True or false: is a closed walk in , . It starts and ends at different vertices. False. Starts and ends at different vertices. "
 },
 {
-  "id": "exercise-594",
+  "id": "DMT_paths_CYU_2571circuit",
   "level": "2",
-  "url": "pathscircuits10-2.html#exercise-594",
+  "url": "pathscircuits10-2.html#DMT_paths_CYU_2571circuit",
   "type": "Reading Question",
   "number": "10.2.3",
   "title": "",
-  "body": "True or false: is a circuit in . True. "
+  "body": "True or false: is a circuit in , . True. "
 },
 {
-  "id": "exercise-595",
+  "id": "DMT_paths_CYU_2571simcir",
   "level": "2",
-  "url": "pathscircuits10-2.html#exercise-595",
+  "url": "pathscircuits10-2.html#DMT_paths_CYU_2571simcir",
   "type": "Reading Question",
   "number": "10.2.4",
   "title": "",
-  "body": "True or false: is a simple circuit in . False. Repeats . "
+  "body": "True or false: is a simple circuit in , . It repeats . False. Repeats . "
 },
 {
-  "id": "exercise-596",
+  "id": "DMT_paths_CYU_36simcir",
   "level": "2",
-  "url": "pathscircuits10-2.html#exercise-596",
+  "url": "pathscircuits10-2.html#DMT_paths_CYU_36simcir",
   "type": "Reading Question",
   "number": "10.2.5",
   "title": "",
-  "body": "True or false is a simple circuit in . True. "
+  "body": "True or false is a simple circuit in , . True. "
 },
 {
-  "id": "exercise-597",
+  "id": "DMT_paths_CYU_Eulercir",
   "level": "2",
-  "url": "pathscircuits10-2.html#exercise-597",
+  "url": "pathscircuits10-2.html#DMT_paths_CYU_Eulercir",
   "type": "Reading Question",
   "number": "10.2.6",
   "title": "",
-  "body": "True or false: has an Euler circuit. False. There are vertices of odd degree. "
+  "body": "True or false: , , has an Euler circuit. There are vertices of odd degree. False. There are vertices of odd degree. "
 },
 {
-  "id": "exercise-598",
+  "id": "DMT_paths_CYU_Eulerpath",
   "level": "2",
-  "url": "pathscircuits10-2.html#exercise-598",
+  "url": "pathscircuits10-2.html#DMT_paths_CYU_Eulerpath",
   "type": "Reading Question",
   "number": "10.2.7",
   "title": "",
-  "body": "True or false: has an Euler path. True. Can start at , end at . "
+  "body": "True or false: , , has an Euler path. A path can start at , end at . True. Can start at , end at . "
 },
 {
-  "id": "exercise-599",
+  "id": "DMT_paths_CYU_Hamcir",
   "level": "2",
-  "url": "pathscircuits10-2.html#exercise-599",
+  "url": "pathscircuits10-2.html#DMT_paths_CYU_Hamcir",
   "type": "Reading Question",
   "number": "10.2.8",
   "title": "",
-  "body": "True or false: has a Hamiltonian circuit. True. For example, . "
+  "body": "True or false: , , has a Hamiltonian circuit. For example, . True. For example, . "
 },
 {
   "id": "exercise-600",
@@ -10663,7 +10663,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "10.3",
   "title": "Trees",
-  "body": " Trees tree graph tree  In this section we look at a special type of graph called a tree. Trees are useful in many applications, such as probability trees or decision trees.  A graph is circuit-free circuit-free graph graph circuit-free if it has no nontrivial circuits.  A graph is a tree tree if it is connected and circuit-free.  The trivial tree is just a single vertex. While the empty tree has no vertices (and, hence, no edges).  A graph is a forest forest if it is circuit-free. We can think of a forest as a collection of trees.  Trees and Not Trees    Examples of trees      Examples of graphs that are not trees      A terminal vertex terminal vertex or leaf leaf is a vertex of degree 1. Vertices of degree greater than 1 are internal internal vertex or branch branch vertex vertex branch vertices.  We now define some special types of trees, and related terms.  A rooted tree has one vertex, , designated as the root rooted tree tree rooted .  The level level of vertex vertex level of a vertex, , is the number of edges from to the root, .  The height height of a tree tree height of a tree is the maximum level of the tree.  Let be a vertex in a rooted tree. Then the children child of a vertex vertex child of are the vertices adjacent to , one level below (think of the root at the top of the tree, with each successive level below the previous one).  The parent parent of a vertex vertex parent of a vertex is the adjacent vertex one level up from .  The siblings sibling of a vertex vertex sibling of a vertex are the vertices with the same parent as .  The ancestors ancestor of a vertex vertex ancestor of a vertex are the vertices on the path from to , not including .  The descendants descendant of a vertex vertex descendant of a vertex are the vertices on the subtree taking as the root, not including .   Rooted Tree    A rooted tree     In the example, let be the root of the tree.  Then is at level 2, is at level 4, and is at level 0.  The height of the tree is 4.  The children of are and .  The only sibling of is ; the parent of is .  The ancestors of are and . The descendants of are .    A binary tree binary tree is a rooted tree in which each vertex has at most two children.  A full binary tree binary tree full is a rooted tree in which each branch vertex has exactly two children and all leaves are at the same height.  Full Binary Tree    A full binary tree of height 3      Draw the full binary tree of height 4. How many leaves does it have?  In this activity we will explore the relationship between the number of edges and the number of vertices in a tree.  Draw a forest with 10 vertices that is not a tree.  Draw three different trees, each with 10 vertices.  How many edges does each graph in (b) have? Check with other students on the class. How many edges do their graphs have?  Draw a tree with 5 vertices and one with 12 vertices. How many edges do they have?  Can you draw a tree with 5 vertices with 7 edges? What about 5 edges? What is the most number of edges you can have? What is the fewest?  Form a conjecture about how many edges a tree with 10 vertices has. What about a tree with 5 vertices?    After experimenting you should be able to conjecture that a tree with 10 vertices has 9 edges, and a tree with 5 vertices must have 4 edges. This relationship is true in general.  For any positive integer, , any tree with vertices has edges.  In this activity we explore graphs with edges and edges more generally.  Draw a graph with 7 vertices and 6 edges that is not a tree.  Draw a connected graph with 7 vertices and 6 edges that is not a tree.  Draw a graph with 7 vertices and 6 edges that is not connected and is not a tree.  Do you think any of the tasks in (a), (b), and (c) are impossible?  Form a conjecture about graphs with vertices and edges.   We should be able to see that it is not possible to draw a connected graph with 7 vertices and 6 edges that is not a tree. This leads to the next theorem.  For any positive integer , if a graph, , is connected with vertices and edges, then is a tree.   Check Your Understanding  For which values of is the complete graph a tree? Just .  True or false: In a rooted tree, a vertex can have more than one parent. False.  True or false: In a rooted tree, a vertex can have 0 parents. True, the root has 0 parents.  In the rooted tree in , how many children does have? 3  In the rooted tree in , how many descendants does have? 7  In the rooted tree in , what is the level of ? 1  How many leaves does the full binary tree of height 4 have? 16  True or false: There exists a tree with 7 vertices and 9 edges. False.  True or false: There exists a tree with 7 vertices and 5 edges. False.  True or false: There exists a forest with 7 vertices and 5 edges. True.  True or false: If a graph has 8 vertices and 7 edges it must be a tree. False.  True or false: If a connected graph has 8 vertices and 7 edges it must be a tree. True.  True or false: There exists a tree with 8 vertices and 2 leaves. True.  True or false: There exists a tree with 8 vertices and 7 leaves. True.    What is the total degree of a tree with vertices? Why?  Consider the following lemma.  Any tree with more than one vertex has at least one vertex of degree 1.  This is a useful lemma for proving statements about trees. However, if the tree has infinitely many vertices and edges, then the lemma is false. Give an example of an infinite tree that has no vertex of degree 1.    For each of the following, either draw a graph with the given properties or explain why no such graph exists.    Tree, nine vertices, nine edges.    Graph, connected, nine vertices, nine edges.    Tree, five vertices, total degree 8    Graph, six vertices, five edges, not a tree.    Graph, connected, ten vertices, nine edges, has a circuit.      Suppose a connected graph has twelve vertices and 11 edges. Must this graph have a vertex of degree 1? Explain your answer.    "
+  "body": " Trees tree graph tree  In this section we look at a special type of graph called a tree. Trees are useful in many applications, such as probability trees or decision trees.  A graph is circuit-free circuit-free graph graph circuit-free if it has no nontrivial circuits.  A graph is a tree tree if it is connected and circuit-free.  The trivial tree is just a single vertex. While the empty tree has no vertices (and, hence, no edges).  A graph is a forest forest if it is circuit-free. We can think of a forest as a collection of trees.  Trees and Not Trees    Examples of trees      Examples of graphs that are not trees      A terminal vertex terminal vertex or leaf leaf is a vertex of degree 1. Vertices of degree greater than 1 are internal internal vertex or branch branch vertex vertex branch vertices.  We now define some special types of trees, and related terms.  A rooted tree has one vertex, , designated as the root rooted tree tree rooted .  The level level of vertex vertex level of a vertex, , is the number of edges from to the root, .  The height height of a tree tree height of a tree is the maximum level of the tree.  Let be a vertex in a rooted tree. Then the children child of a vertex vertex child of are the vertices adjacent to , one level below (think of the root at the top of the tree, with each successive level below the previous one).  The parent parent of a vertex vertex parent of a vertex is the adjacent vertex one level up from .  The siblings sibling of a vertex vertex sibling of a vertex are the vertices with the same parent as .  The ancestors ancestor of a vertex vertex ancestor of a vertex are the vertices on the path from to , not including .  The descendants descendant of a vertex vertex descendant of a vertex are the vertices on the subtree taking as the root, not including .   Rooted Tree    A rooted tree     In the example, let be the root of the tree.  Then is at level 2, is at level 4, and is at level 0.  The height of the tree is 4.  The children of are and .  The only sibling of is ; the parent of is .  The ancestors of are and . The descendants of are .    A binary tree binary tree is a rooted tree in which each vertex has at most two children.  A full binary tree binary tree full is a rooted tree in which each branch vertex has exactly two children and all leaves are at the same height.  Full Binary Tree    A full binary tree of height 3      Draw the full binary tree of height 4. How many leaves does it have?  In this activity we will explore the relationship between the number of edges and the number of vertices in a tree.  Draw a forest with 10 vertices that is not a tree.  Draw three different trees, each with 10 vertices.  How many edges does each graph in (b) have? Check with other students on the class. How many edges do their graphs have?  Draw a tree with 5 vertices and one with 12 vertices. How many edges do they have?  Can you draw a tree with 5 vertices with 7 edges? What about 5 edges? What is the most number of edges you can have? What is the fewest?  Form a conjecture about how many edges a tree with 10 vertices has. What about a tree with 5 vertices?    After experimenting you should be able to conjecture that a tree with 10 vertices has 9 edges, and a tree with 5 vertices must have 4 edges. This relationship is true in general.  For any positive integer, , any tree with vertices has edges.  In this activity we explore graphs with edges and edges more generally.  Draw a graph with 7 vertices and 6 edges that is not a tree.  Draw a connected graph with 7 vertices and 6 edges that is not a tree.  Draw a graph with 7 vertices and 6 edges that is not connected and is not a tree.  Do you think any of the tasks in (a), (b), and (c) are impossible?  Form a conjecture about graphs with vertices and edges.   We should be able to see that it is not possible to draw a connected graph with 7 vertices and 6 edges that is not a tree. This leads to the next theorem.  For any positive integer , if a graph, , is connected with vertices and edges, then is a tree.   Check Your Understanding  For which values of is the complete graph a tree?               No values of    All values of .   Just .  True or false: In a rooted tree, a vertex can have more than one parent. False.  True or false: In a rooted tree, a vertex can have 0 parents. The root has 0 parents. True, the root has 0 parents.  In the rooted tree in , how many children does have?     Correct.      Incorrect. See .     3  In the rooted tree in , how many descendants does have?     Correct.      Incorrect. See .     7  In the rooted tree in , what is the level of ?     Correct.      Incorrect. See .     1  How many leaves does the full binary tree of height 4 have?     Correct.      Incorrect. See , and draw a full binary tree of height 4.     16  True or false: There exists a tree with 7 vertices and 9 edges. False.  True or false: There exists a tree with 7 vertices and 5 edges. False.  True or false: There exists a forest with 7 vertices and 5 edges. True.  True or false: If a graph has 8 vertices and 7 edges it must be a tree. False.  True or false: If a connected graph has 8 vertices and 7 edges it must be a tree. True.  True or false: There exists a tree with 8 vertices and 2 leaves. True.  True or false: There exists a tree with 8 vertices and 7 leaves. True.    What is the total degree of a tree with vertices? Why?  Consider the following lemma.  Any tree with more than one vertex has at least one vertex of degree 1.  This is a useful lemma for proving statements about trees. However, if the tree has infinitely many vertices and edges, then the lemma is false. Give an example of an infinite tree that has no vertex of degree 1.    For each of the following, either draw a graph with the given properties or explain why no such graph exists.    Tree, nine vertices, nine edges.    Graph, connected, nine vertices, nine edges.    Tree, five vertices, total degree 8    Graph, six vertices, five edges, not a tree.    Graph, connected, ten vertices, nine edges, has a circuit.      Suppose a connected graph has twelve vertices and 11 edges. Must this graph have a vertex of degree 1? Explain your answer.    "
 },
 {
   "id": "D_circuitfree",
@@ -10684,9 +10684,9 @@ var ptx_lunr_docs = [
   "body": "A graph is a tree tree if it is connected and circuit-free. "
 },
 {
-  "id": "p-3235",
+  "id": "p-3482",
   "level": "2",
-  "url": "trees10-3.html#p-3235",
+  "url": "trees10-3.html#p-3482",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -10720,9 +10720,9 @@ var ptx_lunr_docs = [
   "body": "A terminal vertex terminal vertex or leaf leaf is a vertex of degree 1. Vertices of degree greater than 1 are internal internal vertex or branch branch vertex vertex branch vertices. "
 },
 {
-  "id": "p-3239",
+  "id": "p-3486",
   "level": "2",
-  "url": "trees10-3.html#p-3239",
+  "url": "trees10-3.html#p-3486",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -10738,18 +10738,18 @@ var ptx_lunr_docs = [
   "body": "Rooted Tree    A rooted tree     In the example, let be the root of the tree.  Then is at level 2, is at level 4, and is at level 0.  The height of the tree is 4.  The children of are and .  The only sibling of is ; the parent of is .  The ancestors of are and . The descendants of are .  "
 },
 {
-  "id": "p-3246",
+  "id": "p-3493",
   "level": "2",
-  "url": "trees10-3.html#p-3246",
+  "url": "trees10-3.html#p-3493",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "binary tree "
 },
 {
-  "id": "p-3247",
+  "id": "p-3494",
   "level": "2",
-  "url": "trees10-3.html#p-3247",
+  "url": "trees10-3.html#p-3494",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -10810,126 +10810,126 @@ var ptx_lunr_docs = [
   "body": "For any positive integer , if a graph, , is connected with vertices and edges, then is a tree. "
 },
 {
-  "id": "exercise-609",
+  "id": "DMT_trees_CYU_Kntree",
   "level": "2",
-  "url": "trees10-3.html#exercise-609",
+  "url": "trees10-3.html#DMT_trees_CYU_Kntree",
   "type": "Reading Question",
   "number": "10.3.1",
   "title": "",
-  "body": "For which values of is the complete graph a tree? Just . "
+  "body": "For which values of is the complete graph a tree?               No values of    All values of .   Just . "
 },
 {
-  "id": "exercise-610",
+  "id": "DMT_trees_CYU_multipleparent",
   "level": "2",
-  "url": "trees10-3.html#exercise-610",
+  "url": "trees10-3.html#DMT_trees_CYU_multipleparent",
   "type": "Reading Question",
   "number": "10.3.2",
   "title": "",
   "body": "True or false: In a rooted tree, a vertex can have more than one parent. False. "
 },
 {
-  "id": "exercise-611",
+  "id": "DMT_trees_CYU_0parent",
   "level": "2",
-  "url": "trees10-3.html#exercise-611",
+  "url": "trees10-3.html#DMT_trees_CYU_0parent",
   "type": "Reading Question",
   "number": "10.3.3",
   "title": "",
-  "body": "True or false: In a rooted tree, a vertex can have 0 parents. True, the root has 0 parents. "
+  "body": "True or false: In a rooted tree, a vertex can have 0 parents. The root has 0 parents. True, the root has 0 parents. "
 },
 {
-  "id": "exercise-612",
+  "id": "DMT_trees_CYU_childrenr",
   "level": "2",
-  "url": "trees10-3.html#exercise-612",
+  "url": "trees10-3.html#DMT_trees_CYU_childrenr",
   "type": "Reading Question",
   "number": "10.3.4",
   "title": "",
-  "body": "In the rooted tree in , how many children does have? 3 "
+  "body": "In the rooted tree in , how many children does have?     Correct.      Incorrect. See .     3 "
 },
 {
-  "id": "exercise-613",
+  "id": "DMT_trees_CYU_descendp",
   "level": "2",
-  "url": "trees10-3.html#exercise-613",
+  "url": "trees10-3.html#DMT_trees_CYU_descendp",
   "type": "Reading Question",
   "number": "10.3.5",
   "title": "",
-  "body": "In the rooted tree in , how many descendants does have? 7 "
+  "body": "In the rooted tree in , how many descendants does have?     Correct.      Incorrect. See .     7 "
 },
 {
-  "id": "exercise-614",
+  "id": "DMT_trees_CYU_levelp",
   "level": "2",
-  "url": "trees10-3.html#exercise-614",
+  "url": "trees10-3.html#DMT_trees_CYU_levelp",
   "type": "Reading Question",
   "number": "10.3.6",
   "title": "",
-  "body": "In the rooted tree in , what is the level of ? 1 "
+  "body": "In the rooted tree in , what is the level of ?     Correct.      Incorrect. See .     1 "
 },
 {
-  "id": "exercise-615",
+  "id": "DMT_trees_CYU_leavesfbt4",
   "level": "2",
-  "url": "trees10-3.html#exercise-615",
+  "url": "trees10-3.html#DMT_trees_CYU_leavesfbt4",
   "type": "Reading Question",
   "number": "10.3.7",
   "title": "",
-  "body": "How many leaves does the full binary tree of height 4 have? 16 "
+  "body": "How many leaves does the full binary tree of height 4 have?     Correct.      Incorrect. See , and draw a full binary tree of height 4.     16 "
 },
 {
-  "id": "exercise-616",
+  "id": "DMT_trees_CYU_tree7v9e",
   "level": "2",
-  "url": "trees10-3.html#exercise-616",
+  "url": "trees10-3.html#DMT_trees_CYU_tree7v9e",
   "type": "Reading Question",
   "number": "10.3.8",
   "title": "",
   "body": "True or false: There exists a tree with 7 vertices and 9 edges. False. "
 },
 {
-  "id": "exercise-617",
+  "id": "DMT_trees_CYU_tree7v5e",
   "level": "2",
-  "url": "trees10-3.html#exercise-617",
+  "url": "trees10-3.html#DMT_trees_CYU_tree7v5e",
   "type": "Reading Question",
   "number": "10.3.9",
   "title": "",
   "body": "True or false: There exists a tree with 7 vertices and 5 edges. False. "
 },
 {
-  "id": "exercise-618",
+  "id": "DMT_trees_CYU_forest7v5e",
   "level": "2",
-  "url": "trees10-3.html#exercise-618",
+  "url": "trees10-3.html#DMT_trees_CYU_forest7v5e",
   "type": "Reading Question",
   "number": "10.3.10",
   "title": "",
   "body": "True or false: There exists a forest with 7 vertices and 5 edges. True. "
 },
 {
-  "id": "exercise-619",
+  "id": "DMT_trees_CYU_8v7etree",
   "level": "2",
-  "url": "trees10-3.html#exercise-619",
+  "url": "trees10-3.html#DMT_trees_CYU_8v7etree",
   "type": "Reading Question",
   "number": "10.3.11",
   "title": "",
   "body": "True or false: If a graph has 8 vertices and 7 edges it must be a tree. False. "
 },
 {
-  "id": "exercise-620",
+  "id": "DMT_trees_CYU_conn8v7etree",
   "level": "2",
-  "url": "trees10-3.html#exercise-620",
+  "url": "trees10-3.html#DMT_trees_CYU_conn8v7etree",
   "type": "Reading Question",
   "number": "10.3.12",
   "title": "",
   "body": "True or false: If a connected graph has 8 vertices and 7 edges it must be a tree. True. "
 },
 {
-  "id": "exercise-621",
+  "id": "DMT_trees_CYU_tree8v2l",
   "level": "2",
-  "url": "trees10-3.html#exercise-621",
+  "url": "trees10-3.html#DMT_trees_CYU_tree8v2l",
   "type": "Reading Question",
   "number": "10.3.13",
   "title": "",
   "body": "True or false: There exists a tree with 8 vertices and 2 leaves. True. "
 },
 {
-  "id": "exercise-622",
+  "id": "DMT_trees_CYU_tree8v7l",
   "level": "2",
-  "url": "trees10-3.html#exercise-622",
+  "url": "trees10-3.html#DMT_trees_CYU_tree8v7l",
   "type": "Reading Question",
   "number": "10.3.14",
   "title": "",

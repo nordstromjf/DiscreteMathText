@@ -210,40 +210,40 @@
     <reading-questions>
       <title>Check Your Understanding</title>
       
-      <exercise><statement><p>True or false: <m>f:\mathbb{R}\rightarrow \mathbb{R}, f(x)=5x-2</m> is one-to-one.</p></statement>
+      <exercise label="DMT_1to1_CYU_1to1R5xm2"><statement correct="yes"><p>True or false: <m>f:\mathbb{R}\rightarrow \mathbb{R}, f(x)=5x-2</m> is one-to-one.</p></statement>
       <answer>True</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>f:\mathbb{R}\rightarrow \mathbb{R}, f(x)=5x-2</m> is onto <m>\mathbb{R}</m>.</p></statement>
+      <exercise label="DMT_1to1_CYU_ontoR5xm2"><statement correct="yes"><p>True or false: <m>f:\mathbb{R}\rightarrow \mathbb{R}, f(x)=5x-2</m> is onto <m>\mathbb{R}</m>.</p></statement>
       <answer>True</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>f:\mathbb{Z}\rightarrow \mathbb{Z}, f(x)=5x-2</m> is one-to-one.</p></statement>
+      <exercise label="DMT_1to1_CYU_1to1Z5xm2"><statement correct="yes"><p>True or false: <m>f:\mathbb{Z}\rightarrow \mathbb{Z}, f(x)=5x-2</m> is one-to-one.</p></statement>
       <answer>True</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>f:\mathbb{Z}\rightarrow \mathbb{Z}, f(x)=5x-2</m> is onto <m>\mathbb{Z}</m>.</p></statement>
+      <exercise label="DMT_1to1_CYU_ontoZ5xm2"><statement correct="no"><p>True or false: <m>f:\mathbb{Z}\rightarrow \mathbb{Z}, f(x)=5x-2</m> is onto <m>\mathbb{Z}</m>.</p></statement>
       <answer>False</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>f:\mathbb{R}\rightarrow \mathbb{R}, f(x)=x^3-3</m> is one-to-one.</p></statement>
+      <exercise label="DMT_1to1_CYU_1to1Rx3m3"><statement correct="yes"><p>True or false: <m>f:\mathbb{R}\rightarrow \mathbb{R}, f(x)=x^3-3</m> is one-to-one.</p></statement>
       <answer>True</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>f:\mathbb{R}\rightarrow \mathbb{R}, f(x)=x^3-3</m> is onto <m>\mathbb{R}</m>.</p></statement>
+      <exercise label="DMT_1to1_CYU_ontoRx3m3"><statement correct="yes"><p>True or false: <m>f:\mathbb{R}\rightarrow \mathbb{R}, f(x)=x^3-3</m> is onto <m>\mathbb{R}</m>.</p></statement>
       <answer>True</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>f:\mathbb{Z}\rightarrow \mathbb{Z}, f(x)=x^3-3</m> is one-to-one.</p></statement>
+      <exercise label="DMT_1to1_CYU_1to1Zx3m3"><statement correct="yes"><p>True or false: <m>f:\mathbb{Z}\rightarrow \mathbb{Z}, f(x)=x^3-3</m> is one-to-one.</p></statement>
       <answer>True</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>f:\mathbb{Z}\rightarrow \mathbb{Z}, f(x)=x^3-3</m> is onto <m>\mathbb{Z}</m>.</p></statement>
+      <exercise label="DMT_1to1_CYU_ontoZx3m3"><statement correct="no"><p>True or false: <m>f:\mathbb{Z}\rightarrow \mathbb{Z}, f(x)=x^3-3</m> is onto <m>\mathbb{Z}</m>.</p></statement>
       <answer>False</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>f:\mathbb{Z}\times\mathbb{Z}\rightarrow \mathbb{Z}, f(x, y)=x</m> is one-to-one.</p></statement>
+      <exercise label="DMT_1to1_CYU_1to1ZZx"><statement correct="no"><p>True or false: <m>f:\mathbb{Z}\times\mathbb{Z}\rightarrow \mathbb{Z}, f(x, y)=x</m> is one-to-one.</p></statement>
       <answer>False</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>f:\mathbb{Z}\times\mathbb{Z}\rightarrow \mathbb{Z}, f(x, y)=x</m> is onto <m>\mathbb{Z}</m>.</p></statement>
+      <exercise label="DMT_1to1_CYU_ontoZZx"><statement correct="yes"><p>True or false: <m>f:\mathbb{Z}\times\mathbb{Z}\rightarrow \mathbb{Z}, f(x, y)=x</m> is onto <m>\mathbb{Z}</m>.</p></statement>
       <answer>True</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>f:\mathbb{Z}\times\mathbb{Z}\rightarrow \mathbb{Z}\times\mathbb{Z}, f(x, y)=(y, x)</m> is one-to-one.</p></statement>
+      <exercise label="DMT_1to1_CYU_1to1ZZyx"><statement correct="yes"><p>True or false: <m>f:\mathbb{Z}\times\mathbb{Z}\rightarrow \mathbb{Z}\times\mathbb{Z}, f(x, y)=(y, x)</m> is one-to-one.</p></statement>
       <answer>True</answer></exercise>
 
-      <exercise><statement><p>True or false: <m>f:\mathbb{Z}\times\mathbb{Z}\rightarrow \mathbb{Z}\times\mathbb{Z}, f(x, y)=(y, x)</m> is onto <m>\mathbb{Z}\times\mathbb{Z}</m>.</p></statement>
+      <exercise label="DMT_1to1_CYU_ontoZZyx"><statement correct="yes"><p>True or false: <m>f:\mathbb{Z}\times\mathbb{Z}\rightarrow \mathbb{Z}\times\mathbb{Z}, f(x, y)=(y, x)</m> is onto <m>\mathbb{Z}\times\mathbb{Z}</m>.</p></statement>
       <answer>True</answer></exercise>
 
       

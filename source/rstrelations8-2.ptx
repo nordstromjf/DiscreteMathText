@@ -187,22 +187,78 @@
     <reading-questions>
       <title>Check Your Understanding</title>
 
-      <p>Let <m>A=\{1, 2, 3\}, B=\{2, 4, 6, 8\}, C=\{0, 1\}</m>.</p>
+      <!--<p>Let <m>A=\{1, 2, 3\}, B=\{2, 4, 6, 8\}, C=\{0, 1\}</m>.</p>-->
   
-      <exercise><statement><p>Determine if the relation is reflexive, symmetric, transitive where <m>R</m> is the relation on <m>A</m> given by 
-      <me>a R b \Leftrightarrow a\leq b</me></p></statement>
+      <exercise label="DMT_rst_CYU_leq"><statement><p>Determine if the relation is reflexive, symmetric, transitive where <m>R</m> is the relation on <m>A=\{1, 2, 3\}</m> given by 
+      <me>a R b \Leftrightarrow a\leq b.</me></p></statement>
+      <choices>
+        <choice correct="yes">
+          <statement><p>Reflexive</p></statement>
+          <feedback><p>We know <m>a\leq a</m>.</p></feedback>
+        </choice>
+        <choice>
+          <statement><p>Symmetric</p></statement>
+          <feedback><p>For example, <m>1\leq 2</m>, but <m>2\nleq 1</m>.</p></feedback>
+        </choice>
+        <choice correct="yes">
+          <statement><p>Transitive</p></statement>
+          <feedback><p>If <m>a \leq b</m>, and <m>b\leq c</m>, then <m>a\leq c</m>.</p></feedback>
+        </choice>
+      </choices>
      <answer>Reflexive, transitive, not symmetric</answer></exercise>
 
-      <exercise><statement><p>Determine if the relation is reflexive, symmetric, transitive where <m>R</m> is the relation on <m>C</m> given by 
-      <me>a R b \Leftrightarrow a+b \text{ is even}</me></p></statement>
+      <exercise label="DMT_rst_CYU_apbeven"><statement><p>Determine if the relation is reflexive, symmetric, transitive where <m>R</m> is the relation on <m>C=\{0, 1\}</m> given by 
+      <me>a R b \Leftrightarrow a+b \text{ is even}.</me></p></statement>
+      <choices>
+        <choice correct="yes">
+          <statement><p>Reflexive</p></statement>
+          <feedback><p>We know <m>a+a=2a</m>, which is even.</p></feedback>
+        </choice>
+        <choice correct="yes">
+          <statement><p>Symmetric</p></statement>
+          <feedback><p>If <m>a+b</m> is even, then <m>b+a</m> is even.</p></feedback>
+        </choice>
+        <choice correct="yes">
+          <statement><p>Transitive</p></statement>
+          <feedback><p>Since <m>R=\{(0, 0), (1, 1)\}</m>, it is straightforward to check reflexive by hand.</p></feedback>
+        </choice>
+      </choices>
       <answer>Reflexive, symmetric, transitive</answer></exercise>
 
-      <exercise><statement><p>Determine if the relation is reflexive, symmetric, transitive where <m>R</m> is the relation on <m>B</m> given by 
-      <me>a R b \Leftrightarrow a\mid b</me></p></statement>
+      <exercise label="DMT_rst_CYU_div"><statement><p>Determine if the relation is reflexive, symmetric, transitive where <m>R</m> is the relation on <m>B=\{2, 4, 6, 8\}</m> given by 
+      <me>a R b \Leftrightarrow a\mid b.</me></p></statement>
+      <choices>
+        <choice correct="yes">
+          <statement><p>Reflexive</p></statement>
+          <feedback><p>We know <m>a\mid a</m>.</p></feedback>
+        </choice>
+        <choice>
+          <statement><p>Symmetric</p></statement>
+          <feedback><p>For example, <m>2\mid 4</m>, but <m>4\nmid 2</m>.</p></feedback>
+        </choice>
+        <choice correct="yes">
+          <statement><p>Transitive</p></statement>
+          <feedback><p>If <m>a \mid b</m>, and <m>b\mid c</m>, then <m>a\mid c</m>.</p></feedback>
+        </choice>
+      </choices>
       <answer>Reflexive, transitive, not symmetric</answer></exercise>
 
-      <exercise><statement><p>Determine if the relation is reflexive, symmetric, transitive where <m>R</m> is the relation on <m>\mathbb{Z}</m> given by 
-      <me>a R b \Leftrightarrow a+b=0</me></p></statement>
+      <exercise label="DMT_rst_CYU_apbe0"><statement><p>Determine if the relation is reflexive, symmetric, transitive where <m>R</m> is the relation on <m>\mathbb{Z}</m> given by 
+      <me>a R b \Leftrightarrow a+b=0.</me></p></statement>
+      <choices>
+        <choice>
+          <statement><p>Reflexive</p></statement>
+          <feedback><p>For example, <m>1+1\neq 0</m>.</p></feedback>
+        </choice>
+        <choice correct="yes">
+          <statement><p>Symmetric</p></statement>
+          <feedback><p>If <m>a+b=0</m>, then <m>b+a=0</m>.</p></feedback>
+        </choice>
+        <choice>
+          <statement><p>Transitive</p></statement>
+          <feedback><p>For example, <m>1+(-1)=0</m>, and <m>(-1)+1=0</m>, but <m>1+1\neq 0</m>.</p></feedback>
+        </choice>
+      </choices>
       <answer>Symmetric, not reflexive, not transitive</answer></exercise>
 
 

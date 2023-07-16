@@ -49,19 +49,145 @@
       <title>Check Your Understanding</title>
       
 
-      <exercise><statement><p>In a standard deck of cards, find the probability of randomly drawing an Ace.</p></statement>
+      <exercise label="DMT_prob_CYU_drawA"><statement><p>In a standard deck of cards, find the probability of randomly drawing an Ace. Give your answer to at least 3 decimal places.</p>
+      <p>The probability is <var />.</p></statement>
+      <setup>
+    <var>
+
+    <condition number="0.07692" tolerance="0.0005">
+    <feedback>
+      <p>
+        Correct. The probability is <m>\frac{4}{52}</m>.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="0.076">
+    <feedback>
+      <p>
+        Don't forget to round up in the third decimal.
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect.
+        How many Aces are in the deck? How many cards are in the deck? Your answer should be number of Aces divided by number of cards.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>\frac{4}{52}</m></answer></exercise>
 
-       <exercise><statement><p>In a standard deck of cards, find the probability of randomly drawing a face card (Jack, Queen, King).</p></statement>
+       <exercise label="DMT_prob_CYU_drawface"><statement><p>In a standard deck of cards, find the probability of randomly drawing a face card (Jack, Queen, King). Give your answer to at least 3 decimal places.</p>
+     <p>The probability is <var />.</p></statement>
+     <setup>
+    <var>
+
+    <condition number="0.23077" tolerance="0.0005">
+    <feedback>
+      <p>
+        Correct. The probability is <m>\frac{12}{52}</m>.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="0.230">
+    <feedback>
+      <p>
+        Don't forget to round up in the third decimal.
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect.
+        How many face cards are in the deck? How many cards are in the deck? Your answer should be number of face cards divided by number of cards.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>\frac{12}{52}</m></answer></exercise>
 
-       <exercise><statement><p>In a standard deck of cards, find the probability of randomly drawing an even numbered card.</p></statement>
+       <exercise label="DMT_prob_CYU_draweven"><statement><p>In a standard deck of cards, find the probability of randomly drawing an even numbered card. Give your answer to at least 3 decimal places.</p>
+     <p>The probability is <var />.</p></statement>
+     <setup>
+    <var>
+
+    <condition number="0.3846" tolerance="0.0005">
+    <feedback>
+      <p>
+        Correct. The probability is <m>\frac{20}{52}</m>.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="0.384">
+    <feedback>
+      <p>
+        Don't forget to round up in the third decimal.
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect.
+        How many even numbered cards (2, 4, 6, 8, 10) are in the deck? How many cards are in the deck? Your answer should be number of even cards divided by number of cards.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>\frac{20}{52}</m></answer></exercise>
 
-       <exercise><statement><p>An urn contains 3 red balls, 2 green balls, 4 multicolored balls. Find the probability of drawing a green ball.</p></statement>
+       <exercise label="DMT_prob_CYU_drawgreen"><statement><p>An urn contains 3 red balls, 2 green balls, 4 multicolored balls. Find the probability of drawing a green ball. Give your answer to at least 3 decimal places.</p>
+     <p>The probability is <var />.</p></statement>
+     <setup>
+    <var>
+
+    <condition number="0.22222" tolerance="0.0005">
+    <feedback>
+      <p>
+        Correct. The probability is <m>\frac{2}{9}</m>.
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect.
+        How many green balls are in the urn? How many balls are in the urn? Your answer should be number of green balls divided by number of balls.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>\frac{2}{9}</m></answer></exercise>
 
-      <exercise><statement><p>An urn contains 3 red balls, 2 green balls, 4 multicolored balls. Find the probability of drawing a solid colored ball.</p></statement>
+      <exercise label="DMT_prob_CYU_drawsolid"><statement><p>An urn contains 3 red balls, 2 green balls, 4 multicolored balls. Find the probability of drawing a solid colored ball. Give your answer to at least 3 decimal places.</p>
+    <p>The probability is <var />.</p></statement>
+    <setup>
+    <var>
+
+    <condition number="0.55555" tolerance="0.0005">
+    <feedback>
+      <p>
+        Correct. The probability is <m>\frac{5}{9}</m>.
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect.
+        How many solid colored balls are in the urn? How many balls are in the urn? Your answer should be number of solid balls divided by number of balls.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>\frac{5}{9}</m></answer></exercise>
 
     </reading-questions>

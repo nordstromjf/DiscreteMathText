@@ -99,30 +99,207 @@
       <title>Check Your Understanding</title>
       
 
-       <exercise><statement><p>Calculate the number of 4-combinations of a set with 6 elements.</p></statement>
+       <exercise label="DMT_comb_CYU_4combof6"><statement><p>Calculate the number of 4-combinations of a set with 6 elements. <var /></p></statement>
+       <setup>
+    <var>
+    <condition number="15">
+    <feedback>
+      <p>
+        Correct, <m>\frac{6!}{4!2!}=15</m>.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="360">
+    <feedback>
+      <p>
+        Incorrect. You might be thinking of permutations rather than combinations.
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. See <xref ref="D_combination" />.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>\frac{6!}{4!2!}=15</m></answer></exercise>
 
-       <exercise><statement><p>Calculate <m>\binom{7}{4}</m>.</p></statement>
+       <exercise label="DMT_comb_CYU_7choose4"><statement><p>Calculate <m>\binom{7}{4}</m>. <var /></p></statement>
+  <setup>
+    <var>
+    <condition number="35">
+    <feedback>
+      <p>
+        Correct, <m>\frac{7!}{4!3!}=35</m>.
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. See <xref ref="D_combination" />.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>\frac{7!}{4!3!}=35</m></answer></exercise>
 
-      <exercise><statement><p>Calculate <m>\binom{7}{2}</m>.</p></statement>
+      <exercise label="DMT_comb_CYU_7choose2"><statement><p>Calculate <m>\binom{7}{2}</m>. <var /></p></statement>
+      <setup>
+    <var>
+    <condition number="21">
+    <feedback>
+      <p>
+        Correct, <m>\frac{7!}{2!5!}=21</m>.
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. See <xref ref="D_combination" />.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>21</m></answer></exercise>
 
-      <exercise><statement><p>Calculate <m>\binom{7}{1}</m>.</p></statement>
+      <exercise label="DMT_comb_CYU_7choose1"><statement><p>Calculate <m>\binom{7}{1}</m>. <var /></p></statement>
+      <setup>
+    <var>
+    <condition number="7">
+    <feedback>
+      <p>
+        Correct, <m>\frac{7!}{1!6!}=7</m>.
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. See <xref ref="D_combination" />.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>7</m></answer></exercise>
 
-      <exercise><statement><p>Calculate <m>\binom{7}{7}</m>.</p></statement>
+      <exercise label="DMT_comb_CYU_7choose7"><statement><p>Calculate <m>\binom{7}{7}</m>. <var /></p></statement>
+      <setup>
+    <var>
+    <condition number="1">
+    <feedback>
+      <p>
+        Correct, <m>\frac{7!}{7!0!}=1</m>.
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. See <xref ref="D_combination" />.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>1</m></answer></exercise>
-      <exercise><statement><p>Calculate <m>\binom{7}{0}</m>.</p></statement>
+      <exercise label="DMT_comb_CYU_7choose0"><statement><p>Calculate <m>\binom{7}{0}</m>. <var /></p></statement>
+      <setup>
+    <var>
+    <condition number="1">
+    <feedback>
+      <p>
+        Correct, <m>\frac{7!}{0!7!}=1</m>.
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. See <xref ref="D_combination" />.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>1</m></answer></exercise>
 
-      <exercise><statement><p>Find the number of binary strings of length 7 with 4 zeros.</p></statement>
+      <exercise label="DMT_comb_CYU_7bit40s"><statement><p>Find the number of binary strings of length 7 with 4 zeros. <var /></p></statement>
+      <setup>
+    <var>
+    <condition number="35">
+    <feedback>
+      <p>
+        Correct, <m>\binom{7}{4}=35</m>.
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. See <xref ref="E_binstrings" />.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>\binom{7}{4}</m></answer></exercise>
 
-      <exercise><statement><p>Find the number of binary strings of length 7 with at most 2 zeros.</p></statement>
+      <exercise label="DMT_comb_CYU_7bitmost20s"><statement><p>Find the number of binary strings of length 7 with at most 2 zeros. <var /></p></statement>
+       <setup>
+    <var>
+    <condition number="29">
+    <feedback>
+      <p>
+        Correct, <m>\binom{7}{0}+\binom{7}{1}+\binom{7}{2}=29</m>.
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. See <xref ref="E_binstrings" />. Make sure you are counting strings with 0, 1, and 2 zeros.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>\binom{7}{0}+\binom{7}{1}+\binom{7}{2}</m></answer></exercise>
 
-      <exercise><statement><p>Find the number of strings that can be formed from the letters in the word <q>calculate</q>.</p></statement>
+      <exercise label="DMT_comb_CYU_calculate"><statement><p>Find the number of strings that can be formed from the letters in the word <q>calculate</q>. <var /></p></statement>
+      <setup>
+    <var>
+    <condition number="45360">
+    <feedback>
+      <p>
+        Correct, <m>\binom{9}{2}\cdot\binom{7}{2}\cdot\binom{5}{2}\cdot\binom{3}{1}\cdot\binom{2}{1}\cdot\binom{1}{1}</m> or <m>\frac{9!}{2!2!2!}</m>.
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. See <xref ref="E_altreorderletters" />. Make sure you see that there are 2 c's, 2 a's, and 2 l's.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>\binom{9}{2}\cdot\binom{7}{2}\cdot\binom{5}{2}\cdot\binom{3}{1}\cdot\binom{2}{1}\cdot\binom{1}{1}</m> or <m>\frac{9!}{2!2!2!}</m></answer></exercise>
 
       

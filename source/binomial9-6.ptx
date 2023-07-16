@@ -122,21 +122,131 @@ by induction on <m>n</m>.</p>
       <title>Check Your Understanding</title>
       
 
-       <exercise><statement><p>Use the Binomial Theorem to find <m>(a+b)^4</m>.</p></statement>
+       <exercise label="DMT_binomthm_CYU_apbtt4"><statement><p>Use the Binomial Theorem to find <m>(a+b)^4</m>.</p></statement>
+       <response />
+       <hint><p>There should be 5 terms in your answer.</p></hint>
       <answer><m>a^4+4a^3b+6a^2b^2+4ab^3+b^4</m></answer></exercise>
 
-      <exercise><statement><p>Use the Binomial Theorem to find <m>(a+2)^4</m>.</p></statement>
+      <exercise label="DMT_binomthm_CYU_ap2tt4"><statement><p>Use the Binomial Theorem to find <m>(a+2)^4</m>.</p></statement>
+      <response />
+       <hint><p>There should be 5 terms in your answer.</p></hint>
       <answer><m>a^4+4a^32+6a^22^2+4a2^3+2^4=a^4+8a^3+24a^2+32a+16</m></answer></exercise>
 
-      <exercise><statement><p>Use the Binomial Theorem to find <m>(a-2)^4</m>.</p></statement>
+      <exercise label="DMT_binomthm_CYU_ambtt4"><statement><p>Use the Binomial Theorem to find <m>(a-2)^4</m>.</p></statement>
+      <response />
+       <hint><p>There should be 5 terms in your answer.</p></hint>
       <answer><m>a^4+4a^3(-2)+6a^2(-2)^2+4a(-2)^3+(-2)^4=a^4-8a^3+24a^2-32a+16</m></answer></exercise>
 
-      <exercise><statement><p>Use the Binomial Theorem to find the coefficient of <m>x^2y^2</m> in <m>(3x-2y)^4</m>.</p></statement>
+      <exercise label="DMT_binomthm_CYU_coefx2y2"><statement><p>Use the Binomial Theorem to find the coefficient of <m>x^2y^2</m> in <m>(3x-2y)^4</m>.</p>
+      <p> <var /> Note, your answer should not include any variables.</p></statement>
+      <setup>
+    <var>
+    <condition number="216">
+    <feedback>
+      <p>
+        Correct, <m>\binom{4}{2}3^2(-2)^2=216</m>.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="36">
+    <feedback>
+      <p>
+        Incorrect, don't forget the binomial coefficient: <m>\binom{4}{2}</m>.
+      </p>
+    </feedback>
+    </condition>\<condition number="6">
+    <feedback>
+      <p>
+        Incorrect, don't forget to include <m>(3x)^2(-2y)^2</m> when finding the coefficient of <m>x^2y^2</m>.
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. Using the Binomial Theorem, we know the term must be <m>\binom{4}{2}(3x)^2(-2y)^2</m>. Use a bit of algebra to get the coefficient of <m>x^2y^2</m>.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>\binom{4}{2}3^2(-2)^2=216</m></answer></exercise>
 
-      <exercise><statement><p>Use the Binomial Theorem to find the coefficient of <m>x^5y^2</m> in <m>(3x-2y)^7</m>.</p></statement>
+      <exercise label="DMT_binomthm_CYU_coefx5y2"><statement><p>Use the Binomial Theorem to find the coefficient of <m>x^5y^2</m> in <m>(3x-2y)^7</m>.</p>
+    <p> <var /> Note, your answer should not include any variables.</p></statement>
+    <setup>
+    <var>
+    <condition number="20412">
+    <feedback>
+      <p>
+        Correct, <m>\binom{7}{2}3^5(-2)^2=20412</m>.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="972">
+    <feedback>
+      <p>
+        Incorrect, don't forget the binomial coefficient: <m>\binom{7}{2}</m>.
+      </p>
+    </feedback>
+    </condition>\<condition number="21">
+    <feedback>
+      <p>
+        Incorrect, don't forget to include <m>(3x)^5(-2y)^2</m> when finding the coefficient of <m>x^5y^2</m>.
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. Using the Binomial Theorem, we know the term must be <m>\binom{7}{2}(3x)^5(-2y)^2</m>. Use a bit of algebra to get the coefficient of <m>x^5y^2</m>.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>\binom{7}{2}3^5(-2)^2=20412</m></answer></exercise>
-      <exercise><statement><p>Use the Binomial Theorem to find the coefficient of <m>x^4y^3</m> in <m>(3x-2y)^7</m>.</p></statement>
+      <exercise label="DMT_binomthm_CYU_coefx4y3"><statement><p>Use the Binomial Theorem to find the coefficient of <m>x^4y^3</m> in <m>(3x-2y)^7</m>.</p>
+    <p> <var /> Note, your answer should not include any variables.</p></statement>
+      <setup>
+    <var>
+    <condition number="-22680">
+    <feedback>
+      <p>
+        Correct, <m>\binom{7}{3}3^4(-2)^3=-22680</m>.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="22680">
+    <feedback>
+      <p>
+        Incorrect, note that <m>(-2)^3</m> is negative.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="-648">
+    <feedback>
+      <p>
+        Incorrect, don't forget the binomial coefficient: <m>\binom{7}{3}</m>.
+      </p>
+    </feedback>
+    </condition>\<condition number="35">
+    <feedback>
+      <p>
+        Incorrect, don't forget to include <m>(3x)^4(-2y)^3</m> when finding the coefficient of <m>x^5y^2</m>.
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. Using the Binomial Theorem, we know the term must be <m>\binom{7}{3}(3x)^4(-2y)^3</m>. Use a bit of algebra to get the coefficient of <m>x^4y^3</m>.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>\binom{7}{3}3^4(-2)^3=-22680</m></answer></exercise>
 
 

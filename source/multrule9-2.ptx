@@ -163,28 +163,194 @@
       <title>Check Your Understanding</title>
       
 
-      <exercise><statement><p>Toss a coin 4 times. How many ways are there to get exactly 1 Head?</p></statement>
+      <exercise label="DMT_multrule_CYU_4toss1H"><statement><p>Toss a coin 4 times. How many ways are there to get exactly 1 Head? <var /></p>
+    </statement>
+    <setup>
+    <var>
+    <condition number="4">
+    <feedback>
+      <p>
+        Correct.
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. Try writing out all possible strings of 4 Heads and Tails which have only 1 Head.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>4</m></answer></exercise>
 
-      <exercise><statement><p>Toss a coin 4 times. How many ways are there to get exactly 2 Heads?</p></statement>
+      <exercise label="DMT_multrule_CYU_4toss2H"><statement><p>Toss a coin 4 times. How many ways are there to get exactly 2 Heads? <var /></p></statement>
+      <setup>
+    <var>
+    <condition number="6">
+    <feedback>
+      <p>
+        Correct.
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. For help see <xref ref="E_cointosscount"/>.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>6</m></answer></exercise>
 
-      <exercise><statement><p>Toss a coin 4 times. How many ways are there to get 0 Heads?</p></statement>
+      <exercise label="DMT_multrule_CYU_4toss0H"><statement><p>Toss a coin 4 times. How many ways are there to get 0 Heads? <var /></p></statement>
+      <setup>
+    <var>
+    <condition number="1">
+    <feedback>
+      <p>
+        Correct.
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. If there are no heads, what is the only possible outcome?
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>1</m></answer></exercise>
 
-       <exercise><statement><p>How many 3 digit numbers begin with 1 or 2 and end with 2, 3, or 4?</p></statement>
+       <exercise label="DMT_multrule_CYU_3digand"><statement><p>How many 3 digit numbers begin with 1 or 2 and end with 2, 3, or 4? <var /></p></statement>
+       <setup>
+    <var>
+    <condition number="60">
+    <feedback>
+      <p>
+        Correct, using the multiplication rule, <m>(2)(10)(3)=60</m>.
+      </p>
+    </feedback>
+    </condition>
+     <condition number="54">
+    <feedback>
+      <p>
+        Incorrect. Remember, 0 is a digit.
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. Use the multiplication rule: how many choices do you have for the first digit, the second digit, the third digit?
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>(2)(10)(3)=60</m></answer></exercise>
 
-      <exercise><statement><p>How many 3 digit numbers are divisible by 5?</p></statement>
+      <exercise label="DMT_multrule_CYU_3digdiv5"><statement><p>How many 3 digit numbers are divisible by 5? <var /></p></statement>
+      <setup>
+    <var>
+    <condition number="180">
+    <feedback>
+      <p>
+        Correct, using the multiplication rule, <m>(9)(10)(2)=60</m>.
+      </p>
+    </feedback>
+    </condition>
+     <condition number="200">
+    <feedback>
+      <p>
+        Incorrect. Remember, a 3 digit number can't start with 0.
+      </p>
+    </feedback>
+    </condition>
+    <condition number="162">
+    <feedback>
+      <p>
+        Incorrect. Remember, 0 is a digit, so it can occur in the second digit.
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. Use the multiplication rule: how many choices do you have for the first digit, the second digit, the third digit? What are the possible last digits if a number is divisible by 5?
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>(9)(10)(2)=180</m></answer></exercise>
 
-       <exercise><statement><p>Calculate the number of permutations of a set with 6 elements.</p></statement>
+       <exercise label="DMT_multrule_CYU_perm6"><statement><p>Calculate the number of permutations of a set with 6 elements. <var /></p></statement>
+       <setup>
+    <var>
+    <condition number="720">
+    <feedback>
+      <p>
+        Correct. <m>6!=720.</m>
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. See <xref ref="T_numperm"/>.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>6!</m></answer></exercise>
 
-       <exercise><statement><p>Calculate <m>P(7, 4)</m>.</p></statement>
+       <exercise label="DMT_multrule_CYU_P74"><statement><p>Calculate <m>P(7, 4)</m>. <var /></p></statement>
+       <setup>
+    <var>
+    <condition number="840">
+    <feedback>
+      <p>
+        Correct. <m>(7)(6)(5)(4)=720.</m>
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. See <xref ref="T_numrperm"/>.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>(7)(6)(5)(4)</m></answer></exercise>
 
-      <exercise><statement><p>Calculate <m>P(7, 2)</m>.</p></statement>
+      <exercise label="DMT_multrule_CYU_P72"><statement><p>Calculate <m>P(7, 2)</m>. <var /></p></statement>
+      <setup>
+    <var>
+    <condition number="42">
+    <feedback>
+      <p>
+        Correct. <m>(7)(6)=42.</m>
+      </p>
+    </feedback>
+    </condition>
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. See <xref ref="T_numrperm"/>.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer><m>(7)(6)</m></answer></exercise>
 
       

@@ -217,26 +217,84 @@
     <reading-questions>
       <title>Check Your Understanding</title>
 
-      <p>Let <m>A=\{1, 2, 3\}, B=\{2, 4, 6, 8\}, C=\{0, 1\}</m>.</p>
+      <!--<p>Let <m>A=\{1, 2, 3\}, B=\{2, 4, 6, 8\}, C=\{0, 1\}</m>.</p>-->
       
 
-      <exercise><statement><p>Let <m>f:A\rightarrow B</m> be given by <m>f(1)=4, f(2)=8, f(3)=2</m>. True or false: <m>f</m> is a function.</p></statement>
+      <exercise label="DMT_functions_CYU_f1e4"><statement correct="yes">
+        <p>Let <m>A=\{1, 2, 3\}, B=\{2, 4, 6, 8\}</m>.</p>
+      <p>Let <m>f:A\rightarrow B</m> be given by <m>f(1)=4, f(2)=8, f(3)=2</m>.</p>
+      <p> True or false: <m>f</m> is a function.</p></statement>
       <answer>True</answer></exercise>
 
-      <exercise><statement><p>Let <m>f:A\rightarrow B</m> be given by <m>f(1)=2, f(2)=4, f(3)=2</m>. True or false: <m>f</m> is a function.</p></statement>
+      <exercise label="DMT_functions_CYU_f1e2"><statement correct="yes">
+        <p>Let <m>A=\{1, 2, 3\}, B=\{2, 4, 6, 8\}</m>.</p>
+      <p>Let <m>f:A\rightarrow B</m> be given by <m>f(1)=2, f(2)=4, f(3)=2</m>.</p>
+      <p> True or false: <m>f</m> is a function.</p></statement>
       <answer>True</answer></exercise>
 
 
-      <exercise><statement><p>Let <m>f:B\rightarrow C</m> be given by <m>f(2)=0, f(4)=1</m>. True or false: <m>f</m> is a function.</p></statement>
-      <answer><p>False. <m>4, 6</m> don't map anywhere.</p></answer></exercise>
+      <exercise label="DMT_functions_CYU_f2e0"><statement correct="no">
+        <p>Let <m>B=\{2, 4, 6, 8\}, C=\{0, 1\}</m>.</p>
+      <p>Let <m>f:B\rightarrow C</m> be given by <m>f(2)=0, f(4)=1</m>.</p>
+      <p> True or false: <m>f</m> is a function.</p></statement>
+      <feedback><p><m>6, 8</m> don't map anywhere.</p></feedback>
+      <answer><p>False. <m>6, 8</m> don't map anywhere.</p></answer></exercise>
 
-      <exercise><statement><p>Let <m>f:B\rightarrow C</m> be given by <m>f(2)=0, f(4)=1, f(6)=1, f(8)=1</m>. True or false: <m>f</m> is a function.</p></statement>
+      <exercise label="DMT_functions_CYU_f2ef8e1"><statement correct="yes">
+        <p>Let <m>B=\{2, 4, 6, 8\}, C=\{0, 1\}</m>.</p>
+      <p>Let <m>f:B\rightarrow C</m> be given by <m>f(2)=0, f(4)=1, f(6)=1, f(8)=1</m>.</p>
+      <p> True or false: <m>f</m> is a function.</p></statement>
       <answer>True</answer></exercise>
 
-      <exercise><statement><p>Let <m>f:C\rightarrow C</m> be given by <m>f(0)=0, f(0)=1, f(1)=0, f(1)=1</m>. True or false: <m>f</m> is a function.</p></statement>
+      <exercise label="DMT_functions_CYU_f0e0"><statement correct="no">
+        <p>Let <m>C=\{0, 1\}</m>.</p>
+        <p>Let <m>f:C\rightarrow C</m> be given by <m>f(0)=0, f(0)=1, f(1)=0, f(1)=1</m>.</p>
+        <p> True or false: <m>f</m> is a function.</p></statement>
+      <feedback><p>0 maps to two different values.</p></feedback>
       <answer><p>False. 0 maps to two different values.</p></answer></exercise>
 
-      <exercise><statement><p>Let <m>f:A\times C\rightarrow C</m> be given by <m>f(a, c)=c</m>. Find the preimage of <m>0\in C</m>.</p></statement>
+      <exercise label="DMT_functions_CYU_facecpreim"><statement>
+        <p>Let <m>A=\{1, 2, 3\}, C=\{0, 1\}</m>.</p>
+        <p>Let <m>f:A\times C\rightarrow C</m> be given by <m>f(a, c)=c</m>.</p>
+        <p> Which of the following are in the preimage of <m>0\in C</m>.</p></statement>
+      <choices randomize="yes">
+        <choice correct="yes"><statement>
+          <p>(1, 0)</p>
+        </statement>
+        <feedback><m>(1, 0)</m> is in the preimage.</feedback>
+        </choice>
+        <choice correct="yes"><statement>
+          <p>(2, 0)</p>
+        </statement>
+        <feedback><m>(2, 0)</m> is in the preimage.</feedback>
+        </choice>
+        <choice correct="yes"><statement>
+          <p>(3, 0)</p>
+        </statement>
+        <feedback><m>(3, 0)</m> is in the preimage.</feedback>
+        </choice>
+        <choice><statement>
+          <p>(0, 0)</p>
+        </statement>
+        <feedback><m>(0, 0)</m> is not in <m>A\times C</m>.</feedback>
+        </choice>
+        <choice><statement>
+          <p>0</p>
+        </statement>
+        <feedback><m>0</m> is not in <m>A\times C</m>.</feedback>
+        </choice>
+        <choice><statement>
+          <p>(0, 1)</p>
+        </statement>
+        <feedback><m>(0, 1)</m> is not in <m>A\times C</m>, and would not map to 0.</feedback>
+        </choice>
+        <choice><statement>
+          <p>1</p>
+        </statement>
+        <feedback><m>1</m> is not in <m>A\times C</m>.</feedback>
+        </choice>
+      </choices>
+
       <answer><m>\{(1, 0), (2, 0), (3, 0)\}</m></answer></exercise>
 
 

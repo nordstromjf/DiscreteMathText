@@ -116,42 +116,44 @@
       <title>Check Your Understanding</title>
 
   
-      <exercise><statement><p>True or false: <m>47\equiv 2\mod 5</m>.</p></statement>
+      <exercise label="DMT_mod_CYU_47equiv2mod5"><statement correct="yes"><p>True or false: <m>47\equiv 2\mod 5</m>.</p></statement>
      <answer>True</answer></exercise>
 
 
-      <exercise><statement><p>True or false: <m>45\equiv 0\mod 5</m>.</p></statement>
+      <exercise label="DMT_mod_CYU_45equiv0mod5"><statement correct="yes"><p>True or false: <m>45\equiv 0\mod 5</m>.</p></statement>
      <answer>True</answer></exercise>
 
-     <exercise><statement><p>True or false: <m>4\equiv -1\mod 5</m>.</p></statement>
+     <exercise label="DMT_mod_CYU_4equivn1mod5"><statement correct="yes"><p>True or false: <m>4\equiv -1\mod 5</m>.</p></statement>
      <answer>True</answer></exercise>
 
-     <exercise><statement><p>True or false: <m>14\equiv 1\mod 5</m>.</p></statement>
+     <exercise label="DMT_mod_CYU_14equiv1mod5"><statement correct="no"><p>True or false: <m>14\equiv 1\mod 5</m>.</p></statement>
      <answer>False</answer></exercise>
 
-     <exercise><statement><p>True or false: <m>47+45\equiv 2\mod 5</m>.</p></statement>
+     <exercise label="DMT_mod_CYU_47p45equiv2mod5"><statement correct="yes"><p>True or false: <m>47+45\equiv 2\mod 5</m>.</p></statement>
      <answer>True</answer></exercise>
 
-     <exercise><statement><p>True or false: <m>(47)^2\equiv 4\mod 5</m>.</p></statement>
+     <exercise label="DMT_mod_CYU_47tt2equiv4mod5"><statement correct="yes"><p>True or false: <m>(47)^2\equiv 4\mod 5</m>.</p></statement>
      <answer>True</answer></exercise>
 
-     <exercise><statement><p>True or false: <m>4^{500}\equiv 1\mod 5</m>.</p></statement>
+     <exercise label="DMT_mod_CYU_4tt500equiv1mod5"><statement correct="yes"><p>True or false: <m>4^{500}\equiv 1\mod 5</m>.</p></statement>
      <answer>True</answer></exercise>
 
-     <exercise><statement><p>True or false: <m>10\equiv 1\mod 9</m>.</p></statement>
+     <exercise label="DMT_mod_CYU_10equiv1mod9"><statement correct="yes"><p>True or false: <m>10\equiv 1\mod 9</m>.</p></statement>
      <answer>True</answer></exercise>
 
-     <exercise><statement><p>True or false: <m>10^2\equiv 1\mod 9</m>.</p></statement>
+     <exercise label="DMT_mod_CYU_10tt2equiv1mod9"><statement correct="yes"><p>True or false: <m>10^2\equiv 1\mod 9</m>.</p></statement>
      <answer>True</answer></exercise>
 
-     <exercise><statement><p>True or false: <m>10^5\equiv 1\mod 9</m>.</p></statement>
+     <exercise label="DMT_mod_CYU_10tt5equiv1mod9"><statement correct="yes"><p>True or false: <m>10^5\equiv 1\mod 9</m>.</p></statement>
      <answer>True</answer></exercise>
 
-     <exercise><statement><p>True or false: <m>10^n\equiv 1\mod 9</m>.</p></statement>
+     <exercise label="DMT_mod_CYU_10ttnequiv1mod9"><statement correct="yes"><p>True or false: <m>10^n\equiv 1\mod 9</m>.</p></statement>
      <answer>True</answer></exercise>
 
 
-      <exercise><statement><p>Give the equivalence classes for  <m>a\equiv b \mod 5</m>.</p></statement>
+      <exercise label="DMT_mod_CYU_equivclassmod5"><statement><p>Give the equivalence classes for  <m>a\equiv b \mod 5</m>.</p></statement>
+      <response />
+      <hint><p>There should be 5 equivalence classes. You only need to give a representative for each class in the form <m>[a]</m>.</p></hint>
       <answer><m>[0], [1], [2], [3], [4]</m></answer></exercise>
 
       

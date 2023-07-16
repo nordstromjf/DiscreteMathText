@@ -290,46 +290,143 @@
       <title>Check Your Understanding</title>
 
 
-      <exercise><statement><p>For which values of <m>n</m> is the complete graph <m>K_n</m> a tree?</p></statement>
+      <exercise label="DMT_trees_CYU_Kntree"><statement><p>For which values of <m>n</m> is the complete graph <m>K_n</m> a tree?</p></statement>
+      <choices>
+        <choice correct="yes">
+          <statement><p><m>n=1</m></p></statement>
+        </choice>
+         <choice correct="yes">
+          <statement><p><m>n=2</m></p></statement>
+        </choice>
+         <choice>
+          <statement><p><m>n=3</m></p></statement>
+        </choice>
+         <choice>
+          <statement><p><m>n=4</m></p></statement>
+        </choice>
+         <choice>
+          <statement><p>No values of <m>n</m></p></statement>
+        </choice>
+        <choice>
+          <statement><p>All values of <m>n\geq 1</m>.</p></statement>
+        </choice>
+      </choices>
       <answer>Just <m>n=1, 2</m>.</answer></exercise>
 
-      <exercise><statement><p>True or false: In a rooted tree, a vertex can have more than one parent.</p></statement>
+      <exercise label="DMT_trees_CYU_multipleparent"><statement correct="no"><p>True or false: In a rooted tree, a vertex can have more than one parent.</p></statement>
       <answer>False.</answer></exercise>
 
-      <exercise><statement><p>True or false: In a rooted tree, a vertex can have 0 parents.</p></statement>
+      <exercise label="DMT_trees_CYU_0parent"><statement correct="yes"><p>True or false: In a rooted tree, a vertex can have 0 parents.</p></statement>
+      <feedback><p>The root has 0 parents.</p></feedback>
       <answer>True, the root has 0 parents.</answer></exercise>
 
-      <exercise><statement><p>In the rooted tree in <xref ref="F_rootedtree"/>, how many children does <m>r</m> have?</p></statement>
+      <exercise label="DMT_trees_CYU_childrenr"><statement><p>In the rooted tree in <xref ref="F_rootedtree"/>, how many children does <m>r</m> have? <var /></p></statement>
+      <setup>
+    <var>
+    <condition number="3">
+    <feedback>
+      <p>
+        Correct.
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. See <xref ref="E_rootedtree" />.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer>3</answer></exercise>
 
-      <exercise><statement><p>In the rooted tree in <xref ref="F_rootedtree"/>, how many descendants does <m>p</m> have?</p></statement>
+      <exercise label="DMT_trees_CYU_descendp"><statement><p>In the rooted tree in <xref ref="F_rootedtree"/>, how many descendants does <m>p</m> have? <var /></p></statement>
+      <setup>
+    <var>
+    <condition number="7">
+    <feedback>
+      <p>
+        Correct.
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. See <xref ref="E_rootedtree" />.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer>7</answer></exercise>
 
-      <exercise><statement><p>In the rooted tree in <xref ref="F_rootedtree"/>, what is the level of <m>p</m>?</p></statement>
+      <exercise label="DMT_trees_CYU_levelp"><statement><p>In the rooted tree in <xref ref="F_rootedtree"/>, what is the level of <m>p</m>? <var /></p></statement>
+      <setup>
+    <var>
+    <condition number="1">
+    <feedback>
+      <p>
+        Correct.
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. See <xref ref="E_rootedtree" />.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer>1</answer></exercise>
 
-      <exercise><statement><p>How many leaves does the full binary tree of height 4 have?</p></statement>
+      <exercise label="DMT_trees_CYU_leavesfbt4"><statement><p>How many leaves does the full binary tree of height 4 have? <var /></p></statement>
+      <setup>
+    <var>
+    <condition number="16">
+    <feedback>
+      <p>
+        Correct.
+      </p>
+    </feedback>
+    </condition>
+    
+    <condition string=".*">
+    <feedback>
+      <p>
+        Incorrect. See <xref ref="E_fullbinarytree" />, and draw a full binary tree of height 4.
+      </p>
+    </feedback>
+    </condition>
+    </var>
+  </setup>
       <answer>16</answer></exercise>
 
-      <exercise><statement><p>True or false: There exists a tree with 7 vertices and 9 edges.</p></statement>
+      <exercise label="DMT_trees_CYU_tree7v9e"><statement correct="no"><p>True or false: There exists a tree with 7 vertices and 9 edges.</p></statement>
       <answer>False.</answer></exercise>
 
-      <exercise><statement><p>True or false: There exists a tree with 7 vertices and 5 edges.</p></statement>
+      <exercise label="DMT_trees_CYU_tree7v5e"><statement correct="no"><p>True or false: There exists a tree with 7 vertices and 5 edges.</p></statement>
       <answer>False.</answer></exercise>
       
-      <exercise><statement><p>True or false: There exists a forest with 7 vertices and 5 edges.</p></statement>
+      <exercise label="DMT_trees_CYU_forest7v5e"><statement correct="yes"><p>True or false: There exists a forest with 7 vertices and 5 edges.</p></statement>
       <answer>True.</answer></exercise>
 
-      <exercise><statement><p>True or false: If a graph has 8 vertices and 7 edges it must be a tree.</p></statement>
+      <exercise label="DMT_trees_CYU_8v7etree"><statement correct="no"><p>True or false: If a graph has 8 vertices and 7 edges it must be a tree.</p></statement>
       <answer>False.</answer></exercise>
 
-      <exercise><statement><p>True or false: If a connected graph has 8 vertices and 7 edges it must be a tree.</p></statement>
+      <exercise label="DMT_trees_CYU_conn8v7etree"><statement correct="yes"><p>True or false: If a connected graph has 8 vertices and 7 edges it must be a tree.</p></statement>
       <answer>True.</answer></exercise>
 
-      <exercise><statement><p>True or false: There exists a tree with 8 vertices and 2 leaves.</p></statement>
+      <exercise label="DMT_trees_CYU_tree8v2l"><statement correct="yes"><p>True or false: There exists a tree with 8 vertices and 2 leaves.</p></statement>
       <answer>True.</answer></exercise>
 
-      <exercise><statement><p>True or false: There exists a tree with 8 vertices and 7 leaves.</p></statement>
+      <exercise label="DMT_trees_CYU_tree8v7l"><statement correct="yes"><p>True or false: There exists a tree with 8 vertices and 7 leaves.</p></statement>
       <answer>True.</answer></exercise>
 
 
