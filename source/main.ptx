@@ -4,6 +4,10 @@
 
   <docinfo>
     <document-id>DiscreteMathText</document-id>
+
+    <blurb shelf="Mathematics">
+      This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques. 
+    </blurb>
     <macros>
       \newcommand{\MyTikzmark}[2]{
      \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
