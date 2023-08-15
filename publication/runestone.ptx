@@ -18,6 +18,7 @@
     <!-- project). Some examples:                                            -->
     <exercise-inline statement="yes" hint="yes" answer="no" solution="no" />
     <exercise-divisional statement="yes" hint="yes" answer="no"/>
+    <exercise-reading statement="yes" hint="yes" answer="no" />
     <!-- Style of fill-in-the-blanks: -->
     <fillin textstyle="underline" mathstyle="shade" />
     <!-- You can set a watermark: -->
