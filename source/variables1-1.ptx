@@ -63,7 +63,7 @@
       </exercise>
 
       <exercise label="DMT_variables_CYU_if-Tues-rewrite"><statement><p>Consider the statement "If it is Tuesday, then we will have pizza for lunch." Rewrite this statement as a universal statement. </p></statement>
-      <response />
+      <response/>
       <answer>Every Tuesday we will have pizza for lunch.</answer>
     </exercise>
 
@@ -83,7 +83,7 @@
       </exercise>
 
        <exercise label="DMT_variables_CYU_every-diff-rewrite"><statement><p>Consider the statement "Every differentiable function is continuous." Rewrite this statement as a conditional statement.</p></statement>
-       <response />
+       <response/>
       <answer>If a function is differentiable, then it is continuous.</answer>
     </exercise>
 
