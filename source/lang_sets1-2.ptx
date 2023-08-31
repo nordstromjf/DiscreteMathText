@@ -68,9 +68,9 @@
 
 <activity>
   <introduction><p>Determine if each of the following is true or false. If it is false, what small change in notation would make it true? Make sure you are able to distinguish between <em>elements</em> of a set and <em>subsets</em> of a set.</p></introduction>
-  <task><p><m>5\in \mathbb{Q}</m></p></task>
-  <task><p><m>\{2\} \in \mathbb{Z}</m></p></task>
-  <task><p><m>\{-1, -2, -3\}\subseteq \mathbb{Z}</m></p></task>
+  <task><p><m>5\in \{2,3,5,7\}</m></p></task>
+  <task><p><m>\{2\} \in \{2,3,5,7\}</m></p></task>
+  <task><p><m>\{-1, -2, -3\}\subseteq \{-1, -2, -3\}</m></p></task>
   <task><p><m>0\subseteq \{0, 2, 4\}</m></p></task>
   <task><p><m>\{0\}\subseteq \{0, 2, 4\}</m></p></task>
 </activity>

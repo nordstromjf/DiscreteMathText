@@ -49,7 +49,7 @@
 </latex-image></image>
 </figure>
 
-<definition><statement> <p>A <term>function</term><idx>function</idx>, <m>f</m>, from a set <m>A</m> to a set <m>B</m>, <m>f:\mathbb{R}\rightarrow\mathbb{R}</m>,  is a mapping such that for every <m>a\in A</m> there is a unique <m>b\in B</m> with <m>f(a)=b</m>.</p></statement></definition>
+<definition><statement> <p>A <term>function</term><idx>function</idx>, <m>f</m>, from a set <m>A</m> to a set <m>B</m>, <m>f:A \rightarrow B</m>,  is a mapping such that for every <m>a\in A</m> there is a unique <m>b\in B</m> with <m>f(a)=b</m>.</p></statement></definition>
 
 <example xml:id="E_func1"><title>Example of a function</title>
     <p>Let <m>A=\mathbb{R}, B=\mathbb{R}</m>. Let <m>f(x)=x+2</m>. Then <m>f:\mathbb{R}\rightarrow\mathbb{R}</m>. We can check that it is a function: if we choose an <m>x\in A</m>, we can see that there is a corresponding real number <m>x+2</m>, which always exists. We can also see that for any <m>x\in A</m>, there is only one possible number as output.</p>
