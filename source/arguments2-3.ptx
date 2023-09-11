@@ -440,7 +440,7 @@
       <p><tabular>
       <row><cell><m>p\vee q</m></cell></row>
        <row bottom="medium"><cell><m>\sim p</m></cell></row>
-      <row><cell><m>\therefore\ </m><m>\sim q</m></cell></row>
+      <row><cell><m>\therefore\ </m><m>q</m></cell></row>
     </tabular></p></statement>
     <choices randomize="no">
       <choice correct="yes"><statement><p>The argument is valid.</p></statement>
@@ -615,7 +615,7 @@
 
       <exercise><statement>
         <p>
-    Determine whether the following arguments are valid or invalid. If they are invalid, determine it they exhibit the converse error or the inverse error. Rewrite each argument using symbols to help determine validity.
+    Determine whether the following arguments are valid or invalid. If they are invalid, determine if they exhibit the converse error or the inverse error. Rewrite each argument using symbols to help determine validity.
   </p>
 
   <p><ol marker="a">
