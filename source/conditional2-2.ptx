@@ -469,10 +469,10 @@ So a statement such as <q><m>p</m> is necessary and sufficient for <m>q</m></q> 
     Give the truth-table for <m>(p\rightarrow r) \leftrightarrow (q\rightarrow r)</m>.
   </p></statement></exercise>
       <exercise><statement><p>
-    Use a truth truth-table to show the logical equivalence <m>(p \rightarrow q)\equiv (\sim p\ \vee q)</m>.
+    Use a truth-table to show the logical equivalence <m>(p \rightarrow q)\equiv (\sim p\ \vee q)</m>.
   </p></statement></exercise>
       <exercise><statement><p>
-    Use a truth truth-table to show the logical equivalence <m>\sim (p \rightarrow q)\equiv (p\ \wedge \sim q)</m>.
+    Use a truth-table to show the logical equivalence <m>\sim (p \rightarrow q)\equiv (p\ \wedge \sim q)</m>.
   </p></statement></exercise>
       <exercise><statement><p>
     Write each of the following statements in symbolic form and determine whether they are logically equivalent. Include a truth-table and clearly state your conclusion.

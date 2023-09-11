@@ -52,7 +52,7 @@
 
 </activity>
 
-<p>Recall from <xref ref="conditional2-2"/> the contapositive of <m>p\rightarrow q</m> is <m>\sim q\rightarrow p</m>. We can use this to define the contrapositive of a universal conditional statement.</p>
+<p>Recall from <xref ref="conditional2-2"/> the contapositive of <m>p\rightarrow q</m> is <m>\sim q\rightarrow \sim p</m>. We can use this to define the contrapositive of a universal conditional statement.</p>
 
   <definition xml:id="D_contrapositiveuc"><statement>
   <p>The universal conditional statement <m>\forall x\in D, P(x)\rightarrow Q(x)</m> has <term>contrapositive</term><idx><h>contrapositive</h><h>universal conditional</h></idx><idx><h>universal conditional</h><h>contrapositive</h></idx> <m>\forall x\in D, \sim Q(x)\rightarrow \sim P(x)</m>.</p></statement></definition>
