@@ -120,14 +120,14 @@
 
 <activity><introduction><p>Consider the general form of universal modus ponens.</p></introduction>
   <task><p>Draw the Venn diagram for universal modus ponens. You should have a circle labeled <q>P</q> and one labeled <q>Q.</q></p></task>
-  <task><p>Write your own argument that has the form of universal modus tollens.</p></task>
+  <task><p>Write your own argument that has the form of universal modus ponens.</p></task>
   <task><p>Use a Venn diagram with appropriate labels to show that your argument is valid.</p></task>
 </activity>
 
 
 <activity><introduction><p>Consider the general form of universal modus tollens.</p></introduction>
   <task><p>Draw the Venn diagram for universal modus tollens. You should have a circle labeled <q>P</q> and one labeled <q>Q.</q></p></task>
-  <task><p>Write your own argument that has the form of universal modus ponens.</p></task>
+  <task><p>Write your own argument that has the form of universal modus tollens.</p></task>
   <task><p>Use a Venn diagram with appropriate labels to show that your argument is valid.</p></task>
 </activity>
 
