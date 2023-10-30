@@ -119,7 +119,7 @@ We read <m>\sum_{k=1}^{n}a_k</m><notation><usage><m>\sum_{k=1}^{n}a_k</m></usage
   </p>
 </assemblage>
 
-  <activity><statement><p>Prove <m>\sum_{k=1}^{n}a_k + \sum_{k=1}^{n}b_k=\sum_{1}^{n}(a_k+b_k)</m>.</p></statement><hint><p>Try writing out the sum rather than using summation notation.</p></hint></activity>
+  <activity><statement><p>Prove <m>\sum_{k=1}^{n}a_k + \sum_{k=1}^{n}b_k=\sum_{k=1}^{n}(a_k+b_k)</m>.</p></statement><hint><p>Try writing out the sum rather than using summation notation.</p></hint></activity>
 
 
 <definition xml:id="D_choose"><statement><p>The number of subsets of size <m>r</m> that can be chosen from a set of <m>n</m> elements is <m>n</m> <term>choose</term><idx>choose</idx> <m>r</m>. Notation <m>\binom{n}{r}</m><notation><usage><m>\binom{n}{r}</m></usage><description><m>n</m> choose <m>r</m></description></notation>, read <q><m>n</m> choose <m>r</m>.</q></p></statement></definition>

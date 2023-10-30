@@ -195,7 +195,7 @@
       </statement></exercise>
       <exercise><statement>
         <p>
-    Prove by contradiction: If <m>a</m> and <m>b</m> are rational numbers, <m>b\neq 0</m>, and <m>r</m> an irrational number, then <m>a+br</m> is irrational.
+    Prove by contradiction: If <m>a</m> and <m>b</m> are rational numbers, <m>b\neq 0</m>, and <m>r</m> is an irrational number, then <m>a+br</m> is irrational.
   </p>
       </statement></exercise>
       <exercise><statement>

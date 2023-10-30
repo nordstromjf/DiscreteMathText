@@ -84,15 +84,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.1.4';
+eBookConfig.runestone_version = '7.2.2';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.1.4/prefix-runtime.d3f96040775bf7ec.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.1.4/prefix-347.8328b60515045466.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.1.4/prefix-runestone.3a5641c4e1fe869e.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.1.4/prefix-347.f9add1ca35d5ad93.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.1.4/prefix-runestone.cec40a61180efd41.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.2.2/prefix-runtime.ea89cba5970a9192.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.2.2/prefix-347.8328b60515045466.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.2.2/prefix-runestone.f9281f94d8420c68.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.2.2/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.2.2/prefix-runestone.f64dcc3632d7a0c3.css">
 </head>
 <body id="DiscreteMathText" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
@@ -580,7 +580,7 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="iteration5-6"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.6</span> <span class="title">Solving Recurrence Relations by Iteration</span>
 </h2>
-<div class="para" id="p-1724">Given a sequence defined recursively, we want to be able to find an explicit formula for the sequence. In general, this can be difficult and can involve very sophisticated mathematical tools. We will learn one method, the <dfn class="terminology">method of iteration</dfn>, just to get a taste for the ideas.</div> <div class="para logical" id="p-1725">
+<div class="para" id="p-1728">Given a sequence defined recursively, we want to be able to find an explicit formula for the sequence. In general, this can be difficult and can involve very sophisticated mathematical tools. We will learn one method, the <dfn class="terminology">method of iteration</dfn>, just to get a taste for the ideas.</div> <div class="para logical" id="p-1729">
 <div class="para">To find an explicit formula for a recursive sequence using the methods of iteration:</div>
 <ol class="decimal">
 <li id="li-342"><div class="para" id="p-derived-li-342">Calculate several terms of the sequence, often without simplifying the terms.</div></li>
@@ -592,8 +592,8 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <article class="example example-like" id="E_arithmetic"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_arithmetic"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.6.1</span><span class="period">.</span><span class="space"> </span><span class="title">Finding an Explicit Formula.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_arithmetic"><article class="example example-like"> <div class="para" id="p-1726">Find the first five terms of the sequence given by <span class="process-math">\(a_k=a_{k-1}+3, k\geq 1\text{,}\)</span> <span class="process-math">\(a_0=4\text{.}\)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-240" id="answer-240"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-240"><div class="answer solution-like"><span class="process-math">\(a_0=4, a_1=7, a_2=10, a_3=13, a_4=16\)</span></div></div> <div class="para" id="p-1727">It might be difficult to see a pattern, so we will calculate the terms without simplifying <em class="emphasis">at all</em>.</div>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_arithmetic"><article class="example example-like"> <div class="para" id="p-1730">Find the first five terms of the sequence given by <span class="process-math">\(a_k=a_{k-1}+3, k\geq 1\text{,}\)</span> <span class="process-math">\(a_0=4\text{.}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-240" id="answer-240"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-240"><div class="answer solution-like"><span class="process-math">\(a_0=4, a_1=7, a_2=10, a_3=13, a_4=16\)</span></div></div> <div class="para" id="p-1731">It might be difficult to see a pattern, so we will calculate the terms without simplifying <em class="emphasis">at all</em>.</div>
 <div class="displaymath process-math" id="md-23">
 \begin{align*}
 a_0&amp; =4\\
@@ -603,11 +603,11 @@ a_3&amp; =((4+3)+3)+3\\
 a_4&amp; =(((4+3)+3)+3)+3
 \end{align*}
 </div>
-<div class="para" id="p-1728">Now it should be easier to see a pattern. It seems we have <span class="process-math">\(a_n=4+3n\text{,}\)</span> which is an explicit formula.</div> <div class="para" id="p-1729">To prove this is the correct formula, we would assume <span class="process-math">\(a_k=a_{k-1}+3\)</span> and prove <span class="process-math">\(a_n=4+3n\)</span> by induction.</div> <article class="hiddenproof" id="proof-27"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-27"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-27"><article class="hiddenproof"><div class="para" id="p-1730">Let <span class="process-math">\(a_k=a_{k-1}+3, a_0=4\text{.}\)</span> Prove <span class="process-math">\(a_n=4+3n, n\geq 0\)</span>
-</div> <div class="para" id="p-1731">Base Step: Let <span class="process-math">\(n=0\text{.}\)</span> Then <span class="process-math">\(a_n=a_0=4\text{.}\)</span> And <span class="process-math">\(4+3n=4+3(0)=4\text{.}\)</span> Thus, <span class="process-math">\(a_n=4+3n\)</span> for <span class="process-math">\(n=0\text{.}\)</span>
-</div> <div class="para" id="p-1732">Induction Step: Assume <span class="process-math">\(a_k=4+3k\)</span> for some <span class="process-math">\(k\geq 0\text{.}\)</span>
-</div> <div class="para" id="p-1733">Show <span class="process-math">\(a_{k+1}=4+3(k+1)\text{.}\)</span>
-</div> <div class="para logical" id="p-1734">
+<div class="para" id="p-1732">Now it should be easier to see a pattern. It seems we have <span class="process-math">\(a_n=4+3n\text{,}\)</span> which is an explicit formula.</div> <div class="para" id="p-1733">To prove this is the correct formula, we would assume <span class="process-math">\(a_k=a_{k-1}+3\)</span> and prove <span class="process-math">\(a_n=4+3n\)</span> by induction.</div> <article class="hiddenproof" id="proof-27"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-27"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-27"><article class="hiddenproof"><div class="para" id="p-1734">Let <span class="process-math">\(a_k=a_{k-1}+3, a_0=4\text{.}\)</span> Prove <span class="process-math">\(a_n=4+3n, n\geq 0\)</span>
+</div> <div class="para" id="p-1735">Base Step: Let <span class="process-math">\(n=0\text{.}\)</span> Then <span class="process-math">\(a_n=a_0=4\text{.}\)</span> And <span class="process-math">\(4+3n=4+3(0)=4\text{.}\)</span> Thus, <span class="process-math">\(a_n=4+3n\)</span> for <span class="process-math">\(n=0\text{.}\)</span>
+</div> <div class="para" id="p-1736">Induction Step: Assume <span class="process-math">\(a_k=4+3k\)</span> for some <span class="process-math">\(k\geq 0\text{.}\)</span>
+</div> <div class="para" id="p-1737">Show <span class="process-math">\(a_{k+1}=4+3(k+1)\text{.}\)</span>
+</div> <div class="para logical" id="p-1738">
 <div class="para">Proof of induction step: By the recursive definition of the sequence, <span class="process-math">\(a_{k+1}=a_{k}+3\text{.}\)</span> Thus,</div>
 <div class="displaymath process-math" id="md-24">
 \begin{align*}
@@ -622,7 +622,7 @@ a_{k+1}&amp;=a_k+3\\
 <article class="definition definition-like" id="D_arithseq"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.6.2</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-1735">
+<div class="para logical" id="p-1739">
 <div class="para">An <dfn class="terminology">arithmetic sequence</dfn> is given recursively by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -630,17 +630,17 @@ a_k=a_{k-1}+d
 \end{equation*}
 </div>
 <div class="para">where <span class="process-math">\(d\)</span> is constant.</div>
-</div></article><article class="activity project-like" id="activity-103"><h3 class="heading">
+</div></article><article class="activity project-like" id="activity-101"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.6.1</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-50"><div class="para" id="p-1736">Generalize <a href="" class="xref" data-knowl="./knowl/E_arithmetic.html" title="Example 5.6.1: Finding an Explicit Formula">Example 5.6.1</a> to find an explicit formula for an arithmetic sequence.</div></div>
-<article class="task exercise-like" id="task-154"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-1737">Let <span class="process-math">\(d=5, a_0=2\text{.}\)</span> Write out the first 6 terms of the arithmetic sequence. Can you find an explicit formula for the sequence (one that just depends on <span class="process-math">\(n\)</span>)?</div></article><article class="task exercise-like" id="task-155"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-1738">Write out the first 6 terms of the sequence <em class="emphasis">without simplifying at all</em>. Now can you find an explicit formula?</div></article><article class="task exercise-like" id="task-156"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-1739">Using the same technique of writing out the terms without simplifying, find an explicit formula for the general form, <span class="process-math">\(a_k=a_{k-1}+d\text{,}\)</span> of an arithmetic sequence.</div></article></article><article class="definition definition-like" id="D_geomseq"><h3 class="heading">
+<div class="introduction" id="introduction-52"><div class="para" id="p-1740">Generalize <a href="" class="xref" data-knowl="./knowl/E_arithmetic.html" title="Example 5.6.1: Finding an Explicit Formula">Example 5.6.1</a> to find an explicit formula for an arithmetic sequence.</div></div>
+<article class="task exercise-like" id="task-160"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="p-1741">Let <span class="process-math">\(d=5, a_0=2\text{.}\)</span> Write out the first 6 terms of the arithmetic sequence. Can you find an explicit formula for the sequence (one that just depends on <span class="process-math">\(n\)</span>)?</div></article><article class="task exercise-like" id="task-161"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-1742">Write out the first 6 terms of the sequence <em class="emphasis">without simplifying at all</em>. Now can you find an explicit formula?</div></article><article class="task exercise-like" id="task-162"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-1743">Using the same technique of writing out the terms without simplifying, find an explicit formula for the general form, <span class="process-math">\(a_k=a_{k-1}+d\text{,}\)</span> of an arithmetic sequence.</div></article></article><article class="definition definition-like" id="D_geomseq"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.6.3</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-1740">
+<div class="para logical" id="p-1744">
 <div class="para">A <dfn class="terminology">geometric sequence</dfn> is given recursively by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -648,44 +648,44 @@ a_k=ra_{k-1}
 \end{equation*}
 </div>
 <div class="para">where <span class="process-math">\(r\)</span> is constant.</div>
-</div></article><article class="activity project-like" id="activity-104"><h3 class="heading">
+</div></article><article class="activity project-like" id="activity-102"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.6.2</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-51"><div class="para" id="p-1741">Use the method of iteration to find an explicit formula for a geometric sequence.</div></div>
-<article class="task exercise-like" id="task-157"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-1742">Let <span class="process-math">\(r=2, a_0=3\text{.}\)</span> Write out the first 6 terms of the geometric sequence. Can you find an explicit formula for the sequence (one that just depends on <span class="process-math">\(n\)</span>)?</div></article><article class="task exercise-like" id="task-158"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-1743">Write out the first 6 terms of the sequence <em class="emphasis">without simplifying at all</em>. Now can you find an explicit formula?</div></article><article class="task exercise-like" id="task-159"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-1744">Using the same technique of writing out the terms without simplifying, find an explicit formula for the general form, <span class="process-math">\(a_k=ra_{k-1}\text{,}\)</span> of a geometric sequence.</div></article></article><article class="assemblage assemblage-like" id="B_pfexplictformula"><h3 class="heading"><span class="title">Proving a Recursive Sequence Satisfies an Explicit Formula.</span></h3>
-<div class="para logical" id="p-1745">
+<div class="introduction" id="introduction-53"><div class="para" id="p-1745">Use the method of iteration to find an explicit formula for a geometric sequence.</div></div>
+<article class="task exercise-like" id="task-163"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="p-1746">Let <span class="process-math">\(r=2, a_0=3\text{.}\)</span> Write out the first 6 terms of the geometric sequence. Can you find an explicit formula for the sequence (one that just depends on <span class="process-math">\(n\)</span>)?</div></article><article class="task exercise-like" id="task-164"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-1747">Write out the first 6 terms of the sequence <em class="emphasis">without simplifying at all</em>. Now can you find an explicit formula?</div></article><article class="task exercise-like" id="task-165"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-1748">Using the same technique of writing out the terms without simplifying, find an explicit formula for the general form, <span class="process-math">\(a_k=ra_{k-1}\text{,}\)</span> of a geometric sequence.</div></article></article><article class="assemblage assemblage-like" id="B_pfexplictformula"><h3 class="heading"><span class="title">Proving a Recursive Sequence Satisfies an Explicit Formula.</span></h3>
+<div class="para logical" id="p-1749">
 <div class="para">To prove a recursively defined sequence satisfies an explicit formula:</div>
 <ul class="disc">
 <li id="li-346"><div class="para" id="p-derived-li-346">Assume the recursive formula for the sequence.</div></li>
 <li id="li-347"><div class="para" id="p-derived-li-347">Show, using an induction proof, that the explicit formula holds. You need to prove the base step for all initial terms. You will need to use the recurrence relation in the inductive step.</div></li>
 </ul>
-</div></article><article class="activity project-like" id="activity-105"><h3 class="heading">
+</div></article><article class="activity project-like" id="activity-103"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.6.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1746">Prove if <span class="process-math">\(a_0=2\)</span> and <span class="process-math">\(a_k=a_{k-1}+5\text{,}\)</span> then <span class="process-math">\(a_n=2+5n\)</span> for <span class="process-math">\(n\geq 0\)</span> by induction.</div>
+<div class="para" id="p-1750">Prove if <span class="process-math">\(a_0=2\)</span> and <span class="process-math">\(a_k=a_{k-1}+5\text{,}\)</span> then <span class="process-math">\(a_n=2+5n\)</span> for <span class="process-math">\(n\geq 0\)</span> by induction.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-29" id="hint-29"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-29"><div class="hint solution-like"><div class="para" id="p-1747">You are assuming the recursive relationship holds. The statement you are proving by induction is that <span class="process-math">\(a_n=2+5n\)</span> for <span class="process-math">\(n\geq 0\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-29" id="hint-29"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-29"><div class="hint solution-like"><div class="para" id="p-1751">You are assuming the recursive relationship holds. The statement you are proving by induction is that <span class="process-math">\(a_n=2+5n\)</span> for <span class="process-math">\(n\geq 0\text{.}\)</span>
 </div></div></div>
-</div></article><article class="activity project-like" id="activity-106"><h3 class="heading">
+</div></article><article class="activity project-like" id="activity-104"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.6.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1748">Prove if <span class="process-math">\(a_k=ra_{k-1}\text{,}\)</span> then <span class="process-math">\(a_n=a_0r^n\)</span> for <span class="process-math">\(n\geq 0\)</span> by induction.</div>
+<div class="para" id="p-1752">Prove if <span class="process-math">\(a_k=ra_{k-1}\text{,}\)</span> then <span class="process-math">\(a_n=a_0r^n\)</span> for <span class="process-math">\(n\geq 0\)</span> by induction.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-30" id="hint-30"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-30"><div class="hint solution-like"><div class="para" id="p-1749">You are assuming the recursive relationship holds. The statement you are proving by induction is that <span class="process-math">\(a_n=a_0r^n\)</span> for <span class="process-math">\(n\geq 0\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-30" id="hint-30"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-30"><div class="hint solution-like"><div class="para" id="p-1753">You are assuming the recursive relationship holds. The statement you are proving by induction is that <span class="process-math">\(a_n=a_0r^n\)</span> for <span class="process-math">\(n\geq 0\text{.}\)</span>
 </div></div></div>
-</div></article><div class="para" id="p-1750">As promised, in <a href="" class="xref" data-knowl="./knowl/E_explicitfib.html" title="Example 5.6.4: Proving Explicit Formula for the Fibonacci Sequence">Example 5.6.4</a> we will prove an explicit formula for the Fibonacci sequence. We will not derive it as that is beyond the scope of this course. But we can prove that it works using induction. Before working through the proof, it will be helpful to see the algebraic simplification in the next activity.</div>
-<article class="activity project-like" id="activity-107"><h3 class="heading">
+</div></article><div class="para" id="p-1754">As promised, in <a href="" class="xref" data-knowl="./knowl/E_explicitfib.html" title="Example 5.6.4: Proving Explicit Formula for the Fibonacci Sequence">Example 5.6.4</a> we will prove an explicit formula for the Fibonacci sequence. We will not derive it as that is beyond the scope of this course. But we can prove that it works using induction. Before working through the proof, it will be helpful to see the algebraic simplification in the next activity.</div>
+<article class="activity project-like" id="activity-105"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.6.5</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1751">Simplify <span class="process-math">\(\Bigl(\frac{1+\sqrt{5}}{2}\Bigr)^2\)</span> and <span class="process-math">\(\Bigl(\frac{1-\sqrt{5}}{2}\Bigr)^2\text{.}\)</span>
+<div class="para" id="p-1755">Simplify <span class="process-math">\(\Bigl(\frac{1+\sqrt{5}}{2}\Bigr)^2\)</span> and <span class="process-math">\(\Bigl(\frac{1-\sqrt{5}}{2}\Bigr)^2\text{.}\)</span>
 </div></article><article class="example example-like" id="E_explicitfib"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_explicitfib"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.6.4</span><span class="period">.</span><span class="space"> </span><span class="title">Proving Explicit Formula for the Fibonacci Sequence.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_explicitfib"><article class="example example-like"> <div class="para" id="p-1752">Let <span class="process-math">\(F_k=F_{k-1}+F_{k-2}, k\geq 1\text{,}\)</span> <span class="process-math">\(F_0=1, F_1=1\)</span> be the Fibonacci sequence.</div> <div class="para" id="p-1753">Prove <span class="process-math">\(F_n=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{n+1}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{n+1}\biggr]\text{.}\)</span>
-</div> <article class="hiddenproof" id="proof-28"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-28"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-28"><article class="hiddenproof"><div class="para" id="p-1754">Let <span class="process-math">\(F_k=F_{k-1}+F_{k-2}, F_0=1, F_1=1\text{.}\)</span>
-</div> <div class="para logical" id="p-1755">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_explicitfib"><article class="example example-like"> <div class="para" id="p-1756">Let <span class="process-math">\(F_k=F_{k-1}+F_{k-2}, k\geq 1\text{,}\)</span> <span class="process-math">\(F_0=1, F_1=1\)</span> be the Fibonacci sequence.</div> <div class="para" id="p-1757">Prove <span class="process-math">\(F_n=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{n+1}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{n+1}\biggr]\text{.}\)</span>
+</div> <article class="hiddenproof" id="proof-28"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-28"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-28"><article class="hiddenproof"><div class="para" id="p-1758">Let <span class="process-math">\(F_k=F_{k-1}+F_{k-2}, F_0=1, F_1=1\text{.}\)</span>
+</div> <div class="para logical" id="p-1759">
 <div class="para">Base Step: Let <span class="process-math">\(n=0\text{.}\)</span> Then <span class="process-math">\(F_0=1\text{.}\)</span> And</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -694,7 +694,7 @@ a_k=ra_{k-1}
 \frac{1}{\sqrt{5}}\biggl[\frac{2\sqrt{5}}{2}\biggr]=1
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-1756">
+</div> <div class="para logical" id="p-1760">
 <div class="para">Let <span class="process-math">\(n=1\text{.}\)</span> Then <span class="process-math">\(F_1=1\text{.}\)</span> And</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -702,7 +702,7 @@ a_k=ra_{k-1}
 \frac{1}{\sqrt{5}}\biggl[\frac{6+2\sqrt{5}}{4}-\frac{6-2\sqrt{5}}{4}\biggr]=1
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-1757">
+</div> <div class="para logical" id="p-1761">
 <div class="para">Induction Step: Assume</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -710,14 +710,14 @@ F_i=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{i+1}-\biggl(\fr
 \end{equation*}
 </div>
 <div class="para">for some <span class="process-math">\(k\geq 0\)</span> (strong induction).</div>
-</div> <div class="para logical" id="p-1758">
+</div> <div class="para logical" id="p-1762">
 <div class="para">Show</div>
 <div class="displaymath process-math">
 \begin{equation*}
 F_{k+1}=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k+2}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k+2}\biggr].
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-1759">
+</div> <div class="para logical" id="p-1763">
 <div class="para">Proof of induction step: By the recursive definition of the sequence, <span class="process-math">\(F_{k+1}=F_{k}+F_{k-1}\text{.}\)</span> Thus,</div>
 <div class="displaymath process-math" id="md-25">
 \begin{align*}
@@ -737,47 +737,47 @@ F_{k+1}&amp;=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k+1}-\
 </div>
 <div class="para">Therefore, by induction, <span class="process-math">\(F_n=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{n+1}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{n+1}\biggr]\text{.}\)</span>
 </div>
-</div></article></div> <div class="para" id="p-1760">Note, the proof contains some algebraic steps that may not be obvious. But all of them can be checked. For example, it is easier to see that <span class="process-math">\(\biggl(\frac{3+\sqrt{5}}{2}\biggr)=\biggl(\frac{1+\sqrt{5}}{2}\biggr)^2\)</span> by squaring the RHS and simplifying.</div></article></div>
-<div class="para" id="p-1761">It can be confusing to remember when to use induction and when to use a LHS/RHS proof. The following summary gives guidelines for when to use each technique.</div>
+</div></article></div> <div class="para" id="p-1764">Note, the proof contains some algebraic steps that may not be obvious. But all of them can be checked. For example, it is easier to see that <span class="process-math">\(\biggl(\frac{3+\sqrt{5}}{2}\biggr)=\biggl(\frac{1+\sqrt{5}}{2}\biggr)^2\)</span> by squaring the RHS and simplifying.</div></article></div>
+<div class="para" id="p-1765">It can be confusing to remember when to use induction and when to use a LHS/RHS proof. The following summary gives guidelines for when to use each technique.</div>
 <article class="assemblage assemblage-like" id="B_summaryrecursiveexplicit"><h3 class="heading"><span class="title">Summary of Techniques for Sequences.</span></h3>
-<div class="para logical" id="p-1762">
+<div class="para logical" id="p-1766">
 <div class="para">If you are given a sequence where each term is just a formula for <span class="process-math">\(n\text{:}\)</span>
 </div>
 <ul class="disc">
-<li id="li-348"><div class="para" id="p-1763">You sequence is defined explicitly.</div></li>
-<li id="li-349"><div class="para" id="p-1764">For example, <span class="process-math">\(a_n=n^2+5\text{.}\)</span>
+<li id="li-348"><div class="para" id="p-1767">You sequence is defined explicitly.</div></li>
+<li id="li-349"><div class="para" id="p-1768">For example, <span class="process-math">\(a_n=n^2+5\text{.}\)</span>
 </div></li>
-<li id="li-350"><div class="para" id="p-1765">To prove a recurrence relation, use LHS/RHS proof.</div></li>
-<li id="li-351"><div class="para" id="p-1766">You are assuming the explicit formula and proving the recurrence relation. Thus, use the explicit formula in your proof. Do not assume the recurrence relation.</div></li>
+<li id="li-350"><div class="para" id="p-1769">To prove a recurrence relation, use LHS/RHS proof.</div></li>
+<li id="li-351"><div class="para" id="p-1770">You are assuming the explicit formula and proving the recurrence relation. Thus, use the explicit formula in your proof. Do not assume the recurrence relation.</div></li>
 </ul>
 </div>
-<div class="para logical" id="p-1767">
+<div class="para logical" id="p-1771">
 <div class="para">If you are given a sequence where each term is defined by previous terms:</div>
 <ul class="disc">
-<li id="li-352"><div class="para" id="p-1768">You sequence is defined recursively.</div></li>
-<li id="li-353"><div class="para" id="p-1769">For example, <span class="process-math">\(a_n=3a_{n-1}+2a_{n-2}\text{.}\)</span>
+<li id="li-352"><div class="para" id="p-1772">You sequence is defined recursively.</div></li>
+<li id="li-353"><div class="para" id="p-1773">For example, <span class="process-math">\(a_n=3a_{n-1}+2a_{n-2}\text{.}\)</span>
 </div></li>
-<li id="li-354"><div class="para" id="p-1770">To prove an explicit formula, use induction on the explicit formula.</div></li>
-<li id="li-355"><div class="para" id="p-1771">You are assuming the recurrence formula and proving the explicit formula. Thus, use the recurrence formula in your proof, generally in the induction step. Your base step, assume statement, and show statement all involve the explicit formula.</div></li>
+<li id="li-354"><div class="para" id="p-1774">To prove an explicit formula, use induction on the explicit formula.</div></li>
+<li id="li-355"><div class="para" id="p-1775">You are assuming the recurrence formula and proving the explicit formula. Thus, use the recurrence formula in your proof, generally in the induction step. Your base step, assume statement, and show statement all involve the explicit formula.</div></li>
 </ul>
 </div></article><section class="reading-questions" id="reading-questions-22"><h3 class="heading hide-type">
 <span class="type">Reading Questions</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="DMT_iterat_CYU_rr3612"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1772">Find a recurrence relation for <span class="process-math">\(3, 6, 12, 24, 48, \ldots\text{.}\)</span>
+<div class="para" id="p-1776">Find a recurrence relation for <span class="process-math">\(3, 6, 12, 24, 48, \ldots\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="DMT_iterat_CYU_exp3612"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-1774">Find an explicit formula for <span class="process-math">\(3, 6, 12, 24, 48, \ldots\text{.}\)</span>
+<div class="para" id="p-1778">Find an explicit formula for <span class="process-math">\(3, 6, 12, 24, 48, \ldots\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="DMT_iterat_CYU_rr2610"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-1776">Find a recurrence relation for <span class="process-math">\(2, 6, 10, 14, 18, \ldots\text{.}\)</span>
+<div class="para" id="p-1780">Find a recurrence relation for <span class="process-math">\(2, 6, 10, 14, 18, \ldots\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="DMT_iterat_CYU_exp2610"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-1778">Find an explicit formula for <span class="process-math">\(2, 6, 10, 14, 18, \ldots\text{.}\)</span>
+<div class="para" id="p-1782">Find an explicit formula for <span class="process-math">\(2, 6, 10, 14, 18, \ldots\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="DMT_iterat_CYU_simpgrat2"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-1780">Simplify <span class="process-math">\(\biggl(\frac{1-\sqrt{5}}{2}\biggr)^2\text{.}\)</span>
+<div class="para" id="p-1784">Simplify <span class="process-math">\(\biggl(\frac{1-\sqrt{5}}{2}\biggr)^2\text{.}\)</span>
 </div></article></section><section class="exercises" id="exercises-22"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="X_itform1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para logical" id="p-1782">
+<div class="para logical" id="p-1786">
 <div class="para">Use iteration to conjecture an explicit formula for the sequence</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -790,7 +790,7 @@ a_k=ka_{k-1}, k\geq1.
 \end{equation*}
 </div>
 </div></article><article class="exercise exercise-like" id="X_itform2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para logical" id="p-1783">
+<div class="para logical" id="p-1787">
 <div class="para">Use iteration to conjecture an explicit formula for the sequence</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -804,9 +804,9 @@ b_k=3b_{k-1}+1, k\geq2.
 </div>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-31" id="hint-31"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-31"><div class="hint solution-like"><div class="para" id="p-1784">The formula for a geometric sum, <a href="" class="xref" data-knowl="./knowl/Q_geosum.html" title="Equation 5.2.2">(5.2.2)</a>, might be helpful.</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-31" id="hint-31"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-31"><div class="hint solution-like"><div class="para" id="p-1788">The formula for a geometric sum, <a href="" class="xref" data-knowl="./knowl/Q_geosum.html" title="Equation 5.2.2">(5.2.2)</a>, might be helpful.</div></div></div>
 </div></article><article class="exercise exercise-like" id="X_itform3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para logical" id="p-1785">
+<div class="para logical" id="p-1789">
 <div class="para">Use iteration to conjecture an explicit formula for the sequence</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -820,15 +820,15 @@ r_k=r_{k-1}+2k, k\geq1.
 </div>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-32" id="hint-32"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-32"><div class="hint solution-like"><div class="para" id="p-1786">The formula for the sum of the first <span class="process-math">\(n\)</span> integers, <a href="" class="xref" data-knowl="./knowl/Q_sumofn.html" title="Equation 5.2.1">(5.2.1)</a> might be helpful.</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-32" id="hint-32"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-32"><div class="hint solution-like"><div class="para" id="p-1790">The formula for the sum of the first <span class="process-math">\(n\)</span> integers, <a href="" class="xref" data-knowl="./knowl/Q_sumofn.html" title="Equation 5.2.1">(5.2.1)</a> might be helpful.</div></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-313"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-1787">Suppose <span class="process-math">\(d\)</span> is a fixed constant and <span class="process-math">\(a_0, a_1, a_2,\ldots\)</span> is a sequence that satisfies the recurrence relation <span class="process-math">\(a_k=a_{k-1}+d\)</span> for all integers <span class="process-math">\(k\geq 1\text{.}\)</span> Use mathematical induction to prove that <span class="process-math">\(a_n=a_0+nd\)</span> for all integers <span class="process-math">\(n\geq 0\text{.}\)</span>
+<div class="para" id="p-1791">Suppose <span class="process-math">\(d\)</span> is a fixed constant and <span class="process-math">\(a_0, a_1, a_2,\ldots\)</span> is a sequence that satisfies the recurrence relation <span class="process-math">\(a_k=a_{k-1}+d\)</span> for all integers <span class="process-math">\(k\geq 1\text{.}\)</span> Use mathematical induction to prove that <span class="process-math">\(a_n=a_0+nd\)</span> for all integers <span class="process-math">\(n\geq 0\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-314"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-1788">Suppose <span class="process-math">\(r\)</span> is a fixed constant and <span class="process-math">\(a_0, a_1, a_2,\ldots\)</span> is a sequence that satisfies the recurrence relation <span class="process-math">\(a_k=ra_{k-1}\)</span> for all integers <span class="process-math">\(k\geq 1\text{.}\)</span> Use mathematical induction to prove that <span class="process-math">\(a_n=a_0r^n\)</span> for all integers <span class="process-math">\(n\geq 0\text{.}\)</span>
+<div class="para" id="p-1792">Suppose <span class="process-math">\(r\)</span> is a fixed constant and <span class="process-math">\(a_0, a_1, a_2,\ldots\)</span> is a sequence that satisfies the recurrence relation <span class="process-math">\(a_k=ra_{k-1}\)</span> for all integers <span class="process-math">\(k\geq 1\text{.}\)</span> Use mathematical induction to prove that <span class="process-math">\(a_n=a_0r^n\)</span> for all integers <span class="process-math">\(n\geq 0\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-315"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-1789">Use induction to prove your conjectured formula from <a href="" class="xref" data-knowl="./knowl/X_itform1.html" title="Exercise 5.6.1">Exercise 5.6.1</a>.</div></article><article class="exercise exercise-like" id="exercise-316"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-1790">Use induction to prove your conjectured formula from <a href="" class="xref" data-knowl="./knowl/X_itform2.html" title="Exercise 5.6.2">Exercise 5.6.2</a>.</div></article><article class="exercise exercise-like" id="exercise-317"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="p-1791">Use induction to prove your conjectured formula from <a href="" class="xref" data-knowl="./knowl/X_itform3.html" title="Exercise 5.6.3">Exercise 5.6.3</a>.</div></article></section></section></div>
+<div class="para" id="p-1793">Use induction to prove your conjectured formula from <a href="" class="xref" data-knowl="./knowl/X_itform1.html" title="Exercise 5.6.1">Exercise 5.6.1</a>.</div></article><article class="exercise exercise-like" id="exercise-316"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="p-1794">Use induction to prove your conjectured formula from <a href="" class="xref" data-knowl="./knowl/X_itform2.html" title="Exercise 5.6.2">Exercise 5.6.2</a>.</div></article><article class="exercise exercise-like" id="exercise-317"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para" id="p-1795">Use induction to prove your conjectured formula from <a href="" class="xref" data-knowl="./knowl/X_itform3.html" title="Exercise 5.6.3">Exercise 5.6.3</a>.</div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="recursion5-5.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="chapter6.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

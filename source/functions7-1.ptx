@@ -185,14 +185,14 @@
 
   
 
-<activity><introduction><p>Define <m>f:\mathbb{Z}\rightarrow\mathbb{Z}\times\mathbb{Z}</m> by <m>f(a, b)=a-b</m>.</p>
+<activity><introduction><p>Define <m>f:\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}</m> by <m>f(a, b)=a-b</m>.</p>
   </introduction>
     <task><p>Find <m>f(0, 2), f(1, 1), f(2, 0), f(3, 2), f(n, 0)</m>.</p></task>
     <task><p>What is the image of <m>\mathbb{Z}\times\mathbb{Z}</m> under <m>f</m>?</p></task>
   <task><p>What is the preimage of 0?</p></task><himt><p>The preimage is a set, so find all ordered pairs that map to 0.</p></himt>
 </activity>
 
-<activity><introduction><p>Define <m>f:\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}</m> by <m>f(a)=(a, a)</m>.</p>
+<activity><introduction><p>Define <m>f:\mathbb{Z}\rightarrow\mathbb{Z}\times\mathbb{Z}</m> by <m>f(a)=(a, a)</m>.</p>
   </introduction>
     <task><p>Find <m>f(0), f(2), f(-3)</m>.</p></task>
     <task><p>What is the image of <m>\mathbb{Z}</m> under <m>f</m>? Is <m>(1, 1)</m> in the image? Is <m>(-1, 1)</m> in the image?</p></task>

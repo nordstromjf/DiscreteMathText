@@ -84,15 +84,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.1.4';
+eBookConfig.runestone_version = '7.2.2';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.1.4/prefix-runtime.d3f96040775bf7ec.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.1.4/prefix-347.8328b60515045466.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.1.4/prefix-runestone.3a5641c4e1fe869e.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.1.4/prefix-347.f9add1ca35d5ad93.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.1.4/prefix-runestone.cec40a61180efd41.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.2.2/prefix-runtime.ea89cba5970a9192.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.2.2/prefix-347.8328b60515045466.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.2.2/prefix-runestone.f9281f94d8420c68.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.2.2/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.2.2/prefix-runestone.f64dcc3632d7a0c3.css">
 </head>
 <body id="DiscreteMathText" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
@@ -580,34 +580,34 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="modarith8-4"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">8.4</span> <span class="title">Modular Arithmetic</span>
 </h2>
-<div class="para" id="p-2650">In the last section we saw that congruence mod <span class="process-math">\(n\)</span> is an equivalence relation. In this section we will explore this relation in more detail. We will also introduce the concept of modular arithmetic.</div>
-<div class="para" id="p-2651">Recall the definition for congruence mod <span class="process-math">\(n\text{,}\)</span> <a href="" class="xref" data-knowl="./knowl/D_mod.html" title="Definition 8.3.2">Definition 8.3.2</a>:</div>
-<div class="para" id="p-2652">Let <span class="process-math">\(a, b, n\in \mathbb{Z}, n&gt;1\text{.}\)</span> Then <span class="process-math">\(a\equiv b\mod n\)</span> if <span class="process-math">\(n\mid (a-b)\text{.}\)</span>
+<div class="para" id="p-2654">In the last section we saw that congruence mod <span class="process-math">\(n\)</span> is an equivalence relation. In this section we will explore this relation in more detail. We will also introduce the concept of modular arithmetic.</div>
+<div class="para" id="p-2655">Recall the definition for congruence mod <span class="process-math">\(n\text{,}\)</span> <a href="" class="xref" data-knowl="./knowl/D_mod.html" title="Definition 8.3.2">Definition 8.3.2</a>:</div>
+<div class="para" id="p-2656">Let <span class="process-math">\(a, b, n\in \mathbb{Z}, n&gt;1\text{.}\)</span> Then <span class="process-math">\(a\equiv b\mod n\)</span> if <span class="process-math">\(n\mid (a-b)\text{.}\)</span>
 </div>
-<div class="para" id="p-2653">Note, we can use <span class="process-math">\(n&gt;1\text{,}\)</span> since <span class="process-math">\(n=1\text{,}\)</span> though defined, is not very interesting since 1 divides everything.</div>
-<div class="para" id="p-2654">In some applications, and often in computer science, the remainder, <span class="process-math">\(r\text{,}\)</span> when <span class="process-math">\(a\)</span> is divided by <span class="process-math">\(n\)</span> is denoted <span class="process-math">\(r=a \mod n\text{.}\)</span> When using equals (=), we will mean the specific remainder. When using congruence (<span class="process-math">\(\equiv\)</span>), we will mean the relation. For example, <span class="process-math">\(2=12 \mod 5\text{,}\)</span> but many numbers can satisfy the congruence: <span class="process-math">\(17 \equiv 12 \mod 5\text{,}\)</span> etc.</div>
+<div class="para" id="p-2657">Note, we can use <span class="process-math">\(n&gt;1\text{,}\)</span> since <span class="process-math">\(n=1\text{,}\)</span> though defined, is not very interesting since 1 divides everything.</div>
+<div class="para" id="p-2658">In some applications, and often in computer science, the remainder, <span class="process-math">\(r\text{,}\)</span> when <span class="process-math">\(a\)</span> is divided by <span class="process-math">\(n\)</span> is denoted <span class="process-math">\(r=a \mod n\text{.}\)</span> When using equals (=), we will mean the specific remainder. When using congruence (<span class="process-math">\(\equiv\)</span>), we will mean the relation. For example, <span class="process-math">\(2=12 \mod 5\text{,}\)</span> but many numbers can satisfy the congruence: <span class="process-math">\(17 \equiv 12 \mod 5\text{,}\)</span> etc.</div>
 <article class="example example-like" id="E_modagain"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_modagain"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Congruence mod <span class="process-math">\(n\)</span>.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_modagain"><article class="example example-like"> <div class="para" id="p-2655">True or false: <span class="process-math">\(19\equiv 5 \mod 2\text{.}\)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-340" id="answer-340"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-340"><div class="answer solution-like"><div class="para" id="p-2656">True</div></div></div> <div class="para" id="p-2657">True or false: <span class="process-math">\(19\equiv 5 \mod 7\text{.}\)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-341" id="answer-341"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-341"><div class="answer solution-like"><div class="para" id="p-2658">True</div></div></div> <div class="para" id="p-2659">True or false: <span class="process-math">\(19\equiv 5 \mod 5\text{.}\)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-342" id="answer-342"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-342"><div class="answer solution-like"><div class="para" id="p-2660">False</div></div></div></article></div>
-<article class="activity project-like" id="activity-141"><h3 class="heading">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_modagain"><article class="example example-like"> <div class="para" id="p-2659">True or false: <span class="process-math">\(19\equiv 5 \mod 2\text{.}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-340" id="answer-340"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-340"><div class="answer solution-like"><div class="para" id="p-2660">True</div></div></div> <div class="para" id="p-2661">True or false: <span class="process-math">\(19\equiv 5 \mod 7\text{.}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-341" id="answer-341"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-341"><div class="answer solution-like"><div class="para" id="p-2662">True</div></div></div> <div class="para" id="p-2663">True or false: <span class="process-math">\(19\equiv 5 \mod 5\text{.}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-342" id="answer-342"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-342"><div class="answer solution-like"><div class="para" id="p-2664">False</div></div></div></article></div>
+<article class="activity project-like" id="activity-139"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.4.1</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-75"><div class="para" id="p-2661">Determine if the following congruences are true or false.</div></div>
-<article class="task exercise-like" id="task-226"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-2662"><span class="process-math">\(12\equiv 0 \mod 6\)</span></div></article><article class="task exercise-like" id="task-227"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-2663"><span class="process-math">\(0\equiv 12 \mod 6\)</span></div></article><article class="task exercise-like" id="task-228"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-2664"><span class="process-math">\(12\equiv 5 \mod 7\)</span></div></article><article class="task exercise-like" id="task-229"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="p-2665"><span class="process-math">\(-5\equiv 5 \mod 6\)</span></div></article><article class="task exercise-like" id="task-230"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="p-2666"><span class="process-math">\(-1\equiv 7 \mod 6\)</span></div></article></article><div class="para" id="p-2667">We use modular arithmetic and equivalence mod <span class="process-math">\(n\)</span> when we want to think about remainders when dividing by <span class="process-math">\(n\text{.}\)</span> A familiar example is clock time. Suppose it is 11 am and you have an appointment in 3 hours. In general, you would not think of your appointment for 14 o'clock. You would think of noon as 0, and get that your appointment is at 2 o'clock. There are many more applications in algebra, cryptography, and computer science where we want to classify integers by their remainders mod <span class="process-math">\(n\text{.}\)</span>
+<div class="introduction" id="introduction-77"><div class="para" id="p-2665">Determine if the following congruences are true or false.</div></div>
+<article class="task exercise-like" id="task-232"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="p-2666"><span class="process-math">\(12\equiv 0 \mod 6\)</span></div></article><article class="task exercise-like" id="task-233"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-2667"><span class="process-math">\(0\equiv 12 \mod 6\)</span></div></article><article class="task exercise-like" id="task-234"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-2668"><span class="process-math">\(12\equiv 5 \mod 7\)</span></div></article><article class="task exercise-like" id="task-235"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="p-2669"><span class="process-math">\(-5\equiv 5 \mod 6\)</span></div></article><article class="task exercise-like" id="task-236"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="p-2670"><span class="process-math">\(-1\equiv 7 \mod 6\)</span></div></article></article><div class="para" id="p-2671">We use modular arithmetic and equivalence mod <span class="process-math">\(n\)</span> when we want to think about remainders when dividing by <span class="process-math">\(n\text{.}\)</span> A familiar example is clock time. Suppose it is 11 am and you have an appointment in 3 hours. In general, you would not think of your appointment for 14 o'clock. You would think of noon as 0, and get that your appointment is at 2 o'clock. There are many more applications in algebra, cryptography, and computer science where we want to classify integers by their remainders mod <span class="process-math">\(n\text{.}\)</span>
 </div>
-<div class="para" id="p-2668">The following theorem will be useful in proving statements involving congruence, but also in helping do calculations.</div>
+<div class="para" id="p-2672">The following theorem will be useful in proving statements involving congruence, but also in helping do calculations.</div>
 <article class="theorem theorem-like" id="T_modequvalences"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.4.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-2669">Let <span class="process-math">\(a, b, n\in \mathbb{Z}, n&gt;1\text{.}\)</span> The following statements are equivalent.</div> <div class="para logical" id="p-2670"><ol class="decimal">
+<div class="para" id="p-2673">Let <span class="process-math">\(a, b, n\in \mathbb{Z}, n&gt;1\text{.}\)</span> The following statements are equivalent.</div> <div class="para logical" id="p-2674"><ol class="decimal">
 <li id="li-582"><div class="para" id="p-derived-li-582"><span class="process-math">\(n\mid a-b\text{;}\)</span></div></li>
 <li id="li-583"><div class="para" id="p-derived-li-583"><span class="process-math">\(a\equiv b \mod n\text{;}\)</span></div></li>
 <li id="li-584"><div class="para" id="p-derived-li-584">
@@ -619,36 +619,36 @@ eBookConfig.enable_chatcodes =  false;
 <li id="li-586"><div class="para" id="p-derived-li-586">
 <span class="process-math">\(a \mod n = b \mod n\text{,}\)</span> where here we refer to the remainder when dividing by <span class="process-math">\(n\text{.}\)</span>
 </div></li>
-</ol></div></article><article class="hiddenproof" id="proof-42"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-42"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-42"><article class="hiddenproof"><div class="para" id="p-2671">When proving several statements are equivalent, we need to be able to get from any one statement to any other.</div> <div class="para" id="p-2672">
-<span class="process-math">\((1)\Leftrightarrow (2)\)</span> by definition of congruence.</div> <div class="para" id="p-2673">
-<span class="process-math">\((4)\Leftrightarrow (5)\)</span> by definition of mod as the remainder.</div> <div class="para" id="p-2674">
-<span class="process-math">\((1)\Leftrightarrow (3)\)</span> is left as an exercise. (See <a href="" class="xref" data-knowl="./knowl/A_Thm1imp3.html" title="Activity 8.4.2">Activity 8.4.2</a> and <a href="" class="xref" data-knowl="./knowl/A_Thm3imp1.html" title="Activity 8.4.3">Activity 8.4.3</a>.)</div> <div class="para" id="p-2675">We will prove <span class="process-math">\((3)\Leftrightarrow (4)\text{.}\)</span>
-</div> <div class="para" id="p-2676">Assume <span class="process-math">\(a=b+kn\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span> By the Quotient-Remainder Theorem, <span class="process-math">\(a=qn+r\)</span> with <span class="process-math">\(0\leq r&lt; n\text{.}\)</span> Thus, <span class="process-math">\(b+kn=qn+r\text{.}\)</span> Solving for <span class="process-math">\(b\text{,}\)</span> we get <span class="process-math">\(b=(q-k)n+r\text{.}\)</span> But by uniqueness of the remainder, <span class="process-math">\(b\)</span> has remainder <span class="process-math">\(r\text{.}\)</span>
-</div> <div class="para" id="p-2677">Now assume <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> have the same remainder when divided by <span class="process-math">\(n\text{.}\)</span> By the Quotient-Remainder Theorem, <span class="process-math">\(a=qn+r\)</span> and <span class="process-math">\(b=q'n+r\text{.}\)</span> Substituting in for <span class="process-math">\(r\text{,}\)</span> <span class="process-math">\(a=qn+b-q'n=b+(q-q')n\text{.}\)</span> Since <span class="process-math">\((q-q')\in \mathbb{Z}\text{,}\)</span> let <span class="process-math">\(k=q-q'\text{.}\)</span>
+</ol></div></article><article class="hiddenproof" id="proof-42"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-42"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-42"><article class="hiddenproof"><div class="para" id="p-2675">When proving several statements are equivalent, we need to be able to get from any one statement to any other.</div> <div class="para" id="p-2676">
+<span class="process-math">\((1)\Leftrightarrow (2)\)</span> by definition of congruence.</div> <div class="para" id="p-2677">
+<span class="process-math">\((4)\Leftrightarrow (5)\)</span> by definition of mod as the remainder.</div> <div class="para" id="p-2678">
+<span class="process-math">\((1)\Leftrightarrow (3)\)</span> is left as an exercise. (See <a href="" class="xref" data-knowl="./knowl/A_Thm1imp3.html" title="Activity 8.4.2">Activity 8.4.2</a> and <a href="" class="xref" data-knowl="./knowl/A_Thm3imp1.html" title="Activity 8.4.3">Activity 8.4.3</a>.)</div> <div class="para" id="p-2679">We will prove <span class="process-math">\((3)\Leftrightarrow (4)\text{.}\)</span>
+</div> <div class="para" id="p-2680">Assume <span class="process-math">\(a=b+kn\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span> By the Quotient-Remainder Theorem, <span class="process-math">\(a=qn+r\)</span> with <span class="process-math">\(0\leq r&lt; n\text{.}\)</span> Thus, <span class="process-math">\(b+kn=qn+r\text{.}\)</span> Solving for <span class="process-math">\(b\text{,}\)</span> we get <span class="process-math">\(b=(q-k)n+r\text{.}\)</span> But by uniqueness of the remainder, <span class="process-math">\(b\)</span> has remainder <span class="process-math">\(r\text{.}\)</span>
+</div> <div class="para" id="p-2681">Now assume <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> have the same remainder when divided by <span class="process-math">\(n\text{.}\)</span> By the Quotient-Remainder Theorem, <span class="process-math">\(a=qn+r\)</span> and <span class="process-math">\(b=q'n+r\text{.}\)</span> Substituting in for <span class="process-math">\(r\text{,}\)</span> <span class="process-math">\(a=qn+b-q'n=b+(q-q')n\text{.}\)</span> Since <span class="process-math">\((q-q')\in \mathbb{Z}\text{,}\)</span> let <span class="process-math">\(k=q-q'\text{.}\)</span>
 </div></article></div>
 <article class="activity project-like" id="A_Thm1imp3"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.4.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-2678">Prove part (1) of <a href="" class="xref" data-knowl="./knowl/T_modequvalences.html" title="Theorem 8.4.2">Theorem 8.4.2</a> implies part (3).</div></article><article class="activity project-like" id="A_Thm3imp1"><h3 class="heading">
+<div class="para" id="p-2682">Prove part (1) of <a href="" class="xref" data-knowl="./knowl/T_modequvalences.html" title="Theorem 8.4.2">Theorem 8.4.2</a> implies part (3).</div></article><article class="activity project-like" id="A_Thm3imp1"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.4.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-2679">Prove part (3) of <a href="" class="xref" data-knowl="./knowl/T_modequvalences.html" title="Theorem 8.4.2">Theorem 8.4.2</a> implies part (1).</div></article><div class="para" id="p-2680">The <dfn class="terminology">residue of <span class="process-math">\(a\)</span> modulo <span class="process-math">\(n\)</span></dfn> is the remainder when <span class="process-math">\(a\)</span> is divided by <span class="process-math">\(n\text{.}\)</span> The set <span class="process-math">\(\{0, 1, \ldots, n-1\}\)</span> forms a <dfn class="terminology">complete set of residues mod <span class="process-math">\(n\)</span></dfn>.</div>
-<div class="para" id="p-2681">Although we have seen congruence mod <span class="process-math">\(n\)</span> is an equivalence relation, we formally state it in the following theorem.</div>
+<div class="para" id="p-2683">Prove part (3) of <a href="" class="xref" data-knowl="./knowl/T_modequvalences.html" title="Theorem 8.4.2">Theorem 8.4.2</a> implies part (1).</div></article><div class="para" id="p-2684">The <dfn class="terminology">residue of <span class="process-math">\(a\)</span> modulo <span class="process-math">\(n\)</span></dfn> is the remainder when <span class="process-math">\(a\)</span> is divided by <span class="process-math">\(n\text{.}\)</span> The set <span class="process-math">\(\{0, 1, \ldots, n-1\}\)</span> forms a <dfn class="terminology">complete set of residues mod <span class="process-math">\(n\)</span></dfn>.</div>
+<div class="para" id="p-2685">Although we have seen congruence mod <span class="process-math">\(n\)</span> is an equivalence relation, we formally state it in the following theorem.</div>
 <article class="theorem theorem-like" id="T_congequivrelation"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.4.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-2682">Congruence mod <span class="process-math">\(n\)</span> is an equivalence relation on <span class="process-math">\(\mathbb{Z}\)</span> with equivalence classes <span class="process-math">\([0], [1], \ldots [n-1]\text{.}\)</span> Furthermore, <span class="process-math">\([a]=\{m\in \mathbb{Z} : m=a+kn, k\in \mathbb{Z}\}\text{.}\)</span>
-</div></article><div class="para" id="p-2683">For the proof, see <a href="" class="xref" data-knowl="./knowl/X_modn.html" title="Exercise 8.3.9">Exercise 8.3.9</a>.</div>
-<article class="activity project-like" id="activity-144"><h3 class="heading">
+<div class="para" id="p-2686">Congruence mod <span class="process-math">\(n\)</span> is an equivalence relation on <span class="process-math">\(\mathbb{Z}\)</span> with equivalence classes <span class="process-math">\([0], [1], \ldots [n-1]\text{.}\)</span> Furthermore, <span class="process-math">\([a]=\{m\in \mathbb{Z} : m=a+kn, k\in \mathbb{Z}\}\text{.}\)</span>
+</div></article><div class="para" id="p-2687">For the proof, see <a href="" class="xref" data-knowl="./knowl/X_modn.html" title="Exercise 8.3.9">Exercise 8.3.9</a>.</div>
+<article class="activity project-like" id="activity-142"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.4.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-2684">Find the equivalence classes for congruence mod 5. List several elements of each equivalence class. What do the elements of each congruence class look like?</div>
+<div class="para" id="p-2688">Find the equivalence classes for congruence mod 5. List several elements of each equivalence class. What do the elements of each congruence class look like?</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-43" id="hint-43"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-43"><div class="hint solution-like"><div class="para" id="p-2685">Think about remainders.</div></div></div>
-</div></article><div class="para" id="p-2686">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-43" id="hint-43"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-43"><div class="hint solution-like"><div class="para" id="p-2689">Think about remainders.</div></div></div>
+</div></article><div class="para" id="p-2690">
 <dfn class="terminology">Modular arithmetic</dfn> is just the process of adding, subtracting, and multiplying, where we treat integers with the same remainder mod <span class="process-math">\(n\text{,}\)</span> as equivalent. Thus, we can replace any integer with it's remainder.</div>
 <article class="assemblage assemblage-like" id="B_propmodarith"><h3 class="heading"><span class="title">Properties of Modular Arithmetic.</span></h3>
-<div class="para logical" id="p-2687">
+<div class="para logical" id="p-2691">
 <div class="para">If <span class="process-math">\(a\equiv c \mod n\)</span> and <span class="process-math">\(b\equiv d \mod n\text{,}\)</span> then</div>
 <ul class="disc">
 <li id="li-587"><div class="para" id="p-derived-li-587"><span class="process-math">\(\displaystyle a+b\equiv c+d \mod n\)</span></div></li>
@@ -658,39 +658,39 @@ eBookConfig.enable_chatcodes =  false;
 <span class="process-math">\(a^m\equiv c^m \mod n\text{,}\)</span> for <span class="process-math">\(m\in\mathbb{Z}^+\)</span>
 </div></li>
 </ul>
-</div></article><div class="para" id="p-2688">Basically, we can do regular arithmetic, where we can reduce to remainders, or equivalence classes mod <span class="process-math">\(n\text{.}\)</span>
+</div></article><div class="para" id="p-2692">Basically, we can do regular arithmetic, where we can reduce to remainders, or equivalence classes mod <span class="process-math">\(n\text{.}\)</span>
 </div>
 <article class="example example-like" id="E_modarith"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_modarith"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Modular Arithmetic.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_modarith"><article class="example example-like"> <div class="para" id="p-2689">Use modular arithmetic to find</div> <div class="para" id="p-2690"><span class="process-math">\(10+25 \mod 6\text{.}\)</span></div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-343" id="answer-343"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-343"><div class="answer solution-like">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_modarith"><article class="example example-like"> <div class="para" id="p-2693">Use modular arithmetic to find</div> <div class="para" id="p-2694"><span class="process-math">\(10+25 \mod 6\text{.}\)</span></div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-343" id="answer-343"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-343"><div class="answer solution-like">
 <span class="process-math">\(10\equiv 4 \mod 6, 25\equiv 1\mod 6\text{,}\)</span> so <span class="process-math">\(10+25\equiv 4+1\equiv 5 \mod 6\)</span>
-</div></div> <div class="para" id="p-2691"><span class="process-math">\(10\cdot 25 \mod 6\text{.}\)</span></div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-344" id="answer-344"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-344"><div class="answer solution-like"><span class="process-math">\(10\cdot 25\equiv 4\cdot 1\equiv 4 \mod 6\)</span></div></div> <div class="para" id="p-2692"><span class="process-math">\(25^{15} \mod 6\text{.}\)</span></div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-345" id="answer-345"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-345"><div class="answer solution-like">
+</div></div> <div class="para" id="p-2695"><span class="process-math">\(10\cdot 25 \mod 6\text{.}\)</span></div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-344" id="answer-344"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-344"><div class="answer solution-like"><span class="process-math">\(10\cdot 25\equiv 4\cdot 1\equiv 4 \mod 6\)</span></div></div> <div class="para" id="p-2696"><span class="process-math">\(25^{15} \mod 6\text{.}\)</span></div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-345" id="answer-345"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-345"><div class="answer solution-like">
 <span class="process-math">\(25\equiv 1\mod 6\text{,}\)</span> so <span class="process-math">\(25^{15}\equiv 1^{15}\equiv 1 \mod 6\)</span>
 </div></div></article></div>
-<article class="activity project-like" id="activity-145"><h3 class="heading">
+<article class="activity project-like" id="activity-143"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.4.5</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-2693">Find <span class="process-math">\((31+92) \mod 5\)</span> by first reducing 31 and 92 mod 5, then adding.</div></article><article class="activity project-like" id="activity-146"><h3 class="heading">
+<div class="para" id="p-2697">Find <span class="process-math">\((31+92) \mod 5\)</span> by first reducing 31 and 92 mod 5, then adding.</div></article><article class="activity project-like" id="activity-144"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.4.6</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-2694">Find <span class="process-math">\((56)^{21} \mod 5\)</span> by first reducing 56 mod 5, then raising to 21.</div></article><article class="activity project-like" id="A_decimalexpan"><h3 class="heading">
+<div class="para" id="p-2698">Find <span class="process-math">\((56)^{21} \mod 5\)</span> by first reducing 56 mod 5, then raising to 21.</div></article><article class="activity project-like" id="A_decimalexpan"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.4.7</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-76"><div class="para" id="p-2695">We can write integers using their decimal expansion. For example, we can write 592 as a decimal expansion: <span class="process-math">\((5\times 100)+(9\times 10)+2=5\times 10^2+9\times 10^1+2\times 10^0\text{.}\)</span>
+<div class="introduction" id="introduction-78"><div class="para" id="p-2699">We can write integers using their decimal expansion. For example, we can write 592 as a decimal expansion: <span class="process-math">\((5\times 100)+(9\times 10)+2=5\times 10^2+9\times 10^1+2\times 10^0\text{.}\)</span>
 </div></div>
-<article class="task exercise-like" id="task-231"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-2696">Write 1526 as a similar expansion using powers of 10.</div></article><article class="task exercise-like" id="task-232"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-2697">Find 10 mod 9 and <span class="process-math">\(10^n\)</span> mod 9 for any <span class="process-math">\(n\in \mathbb{Z}, n\geq 0\text{.}\)</span>
-</div></article><article class="task exercise-like" id="task-233"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-2698">Use the decimal expansion and (b) find (592 mod 9) and (1526 mod 9).</div></article></article><div class="para" id="p-2699">If we are doing modular arithmetic we often work directly with the equivalence classes, rather than all of the integers.</div>
-<div class="para" id="p-2700">We define <span class="process-math">\(\mathbb{Z}_n=\{0, 1, \ldots, n-1\}\text{,}\)</span> where <span class="process-math">\(k\in\mathbb{Z}_n\)</span> represents the equivalence class <span class="process-math">\([k]\text{.}\)</span> Although this sounds complicated, we just do regular arithmetic with <span class="process-math">\(1, \ldots, n-1\)</span> and reduce to the remainder mod <span class="process-math">\(n\text{.}\)</span>
+<article class="task exercise-like" id="task-237"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="p-2700">Write 1526 as a similar expansion using powers of 10.</div></article><article class="task exercise-like" id="task-238"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-2701">Find 10 mod 9 and <span class="process-math">\(10^n\)</span> mod 9 for any <span class="process-math">\(n\in \mathbb{Z}, n\geq 0\text{.}\)</span>
+</div></article><article class="task exercise-like" id="task-239"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-2702">Use the decimal expansion and (b) find (592 mod 9) and (1526 mod 9).</div></article></article><div class="para" id="p-2703">If we are doing modular arithmetic we often work directly with the equivalence classes, rather than all of the integers.</div>
+<div class="para" id="p-2704">We define <span class="process-math">\(\mathbb{Z}_n=\{0, 1, \ldots, n-1\}\text{,}\)</span> where <span class="process-math">\(k\in\mathbb{Z}_n\)</span> represents the equivalence class <span class="process-math">\([k]\text{.}\)</span> Although this sounds complicated, we just do regular arithmetic with <span class="process-math">\(1, \ldots, n-1\)</span> and reduce to the remainder mod <span class="process-math">\(n\text{.}\)</span>
 </div>
 <section class="reading-questions" id="reading-questions-31"><h3 class="heading hide-type">
 <span class="type">Reading Questions</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="DMT_mod_CYU_47equiv2mod5"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_mod_CYU_47equiv2mod5">
-<div class="para" id="p-2701">True or false: <span class="process-math">\(47\equiv 2\mod 5\text{.}\)</span>
+<div class="para" id="p-2705">True or false: <span class="process-math">\(47\equiv 2\mod 5\text{.}\)</span>
 </div>
 <li data-component="answer" id="DMT_mod_CYU_47equiv2mod5_opt_t" data-correct=""><p>True.</p></li>
 <li data-component="feedback" id="DMT_mod_CYU_47equiv2mod5_opt_t">
@@ -698,7 +698,7 @@ eBookConfig.enable_chatcodes =  false;
 <li data-component="feedback" id="DMT_mod_CYU_47equiv2mod5_opt_f">
 </ul></div></div></article><article class="exercise exercise-like" id="DMT_mod_CYU_45equiv0mod5"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_mod_CYU_45equiv0mod5">
-<div class="para" id="p-2702">True or false: <span class="process-math">\(45\equiv 0\mod 5\text{.}\)</span>
+<div class="para" id="p-2706">True or false: <span class="process-math">\(45\equiv 0\mod 5\text{.}\)</span>
 </div>
 <li data-component="answer" id="DMT_mod_CYU_45equiv0mod5_opt_t" data-correct=""><p>True.</p></li>
 <li data-component="feedback" id="DMT_mod_CYU_45equiv0mod5_opt_t">
@@ -706,7 +706,7 @@ eBookConfig.enable_chatcodes =  false;
 <li data-component="feedback" id="DMT_mod_CYU_45equiv0mod5_opt_f">
 </ul></div></div></article><article class="exercise exercise-like" id="DMT_mod_CYU_4equivn1mod5"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_mod_CYU_4equivn1mod5">
-<div class="para" id="p-2703">True or false: <span class="process-math">\(4\equiv -1\mod 5\text{.}\)</span>
+<div class="para" id="p-2707">True or false: <span class="process-math">\(4\equiv -1\mod 5\text{.}\)</span>
 </div>
 <li data-component="answer" id="DMT_mod_CYU_4equivn1mod5_opt_t" data-correct=""><p>True.</p></li>
 <li data-component="feedback" id="DMT_mod_CYU_4equivn1mod5_opt_t">
@@ -714,7 +714,7 @@ eBookConfig.enable_chatcodes =  false;
 <li data-component="feedback" id="DMT_mod_CYU_4equivn1mod5_opt_f">
 </ul></div></div></article><article class="exercise exercise-like" id="DMT_mod_CYU_14equiv1mod5"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_mod_CYU_14equiv1mod5">
-<div class="para" id="p-2704">True or false: <span class="process-math">\(14\equiv 1\mod 5\text{.}\)</span>
+<div class="para" id="p-2708">True or false: <span class="process-math">\(14\equiv 1\mod 5\text{.}\)</span>
 </div>
 <li data-component="answer" id="DMT_mod_CYU_14equiv1mod5_opt_t"><p>True.</p></li>
 <li data-component="feedback" id="DMT_mod_CYU_14equiv1mod5_opt_t">
@@ -722,7 +722,7 @@ eBookConfig.enable_chatcodes =  false;
 <li data-component="feedback" id="DMT_mod_CYU_14equiv1mod5_opt_f">
 </ul></div></div></article><article class="exercise exercise-like" id="DMT_mod_CYU_47p45equiv2mod5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_mod_CYU_47p45equiv2mod5">
-<div class="para" id="p-2705">True or false: <span class="process-math">\(47+45\equiv 2\mod 5\text{.}\)</span>
+<div class="para" id="p-2709">True or false: <span class="process-math">\(47+45\equiv 2\mod 5\text{.}\)</span>
 </div>
 <li data-component="answer" id="DMT_mod_CYU_47p45equiv2mod5_opt_t" data-correct=""><p>True.</p></li>
 <li data-component="feedback" id="DMT_mod_CYU_47p45equiv2mod5_opt_t">
@@ -730,7 +730,7 @@ eBookConfig.enable_chatcodes =  false;
 <li data-component="feedback" id="DMT_mod_CYU_47p45equiv2mod5_opt_f">
 </ul></div></div></article><article class="exercise exercise-like" id="DMT_mod_CYU_47tt2equiv4mod5"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_mod_CYU_47tt2equiv4mod5">
-<div class="para" id="p-2706">True or false: <span class="process-math">\((47)^2\equiv 4\mod 5\text{.}\)</span>
+<div class="para" id="p-2710">True or false: <span class="process-math">\((47)^2\equiv 4\mod 5\text{.}\)</span>
 </div>
 <li data-component="answer" id="DMT_mod_CYU_47tt2equiv4mod5_opt_t" data-correct=""><p>True.</p></li>
 <li data-component="feedback" id="DMT_mod_CYU_47tt2equiv4mod5_opt_t">
@@ -738,7 +738,7 @@ eBookConfig.enable_chatcodes =  false;
 <li data-component="feedback" id="DMT_mod_CYU_47tt2equiv4mod5_opt_f">
 </ul></div></div></article><article class="exercise exercise-like" id="DMT_mod_CYU_4tt500equiv1mod5"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_mod_CYU_4tt500equiv1mod5">
-<div class="para" id="p-2707">True or false: <span class="process-math">\(4^{500}\equiv 1\mod 5\text{.}\)</span>
+<div class="para" id="p-2711">True or false: <span class="process-math">\(4^{500}\equiv 1\mod 5\text{.}\)</span>
 </div>
 <li data-component="answer" id="DMT_mod_CYU_4tt500equiv1mod5_opt_t" data-correct=""><p>True.</p></li>
 <li data-component="feedback" id="DMT_mod_CYU_4tt500equiv1mod5_opt_t">
@@ -746,7 +746,7 @@ eBookConfig.enable_chatcodes =  false;
 <li data-component="feedback" id="DMT_mod_CYU_4tt500equiv1mod5_opt_f">
 </ul></div></div></article><article class="exercise exercise-like" id="DMT_mod_CYU_10equiv1mod9"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_mod_CYU_10equiv1mod9">
-<div class="para" id="p-2708">True or false: <span class="process-math">\(10\equiv 1\mod 9\text{.}\)</span>
+<div class="para" id="p-2712">True or false: <span class="process-math">\(10\equiv 1\mod 9\text{.}\)</span>
 </div>
 <li data-component="answer" id="DMT_mod_CYU_10equiv1mod9_opt_t" data-correct=""><p>True.</p></li>
 <li data-component="feedback" id="DMT_mod_CYU_10equiv1mod9_opt_t">
@@ -754,7 +754,7 @@ eBookConfig.enable_chatcodes =  false;
 <li data-component="feedback" id="DMT_mod_CYU_10equiv1mod9_opt_f">
 </ul></div></div></article><article class="exercise exercise-like" id="DMT_mod_CYU_10tt2equiv1mod9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_mod_CYU_10tt2equiv1mod9">
-<div class="para" id="p-2709">True or false: <span class="process-math">\(10^2\equiv 1\mod 9\text{.}\)</span>
+<div class="para" id="p-2713">True or false: <span class="process-math">\(10^2\equiv 1\mod 9\text{.}\)</span>
 </div>
 <li data-component="answer" id="DMT_mod_CYU_10tt2equiv1mod9_opt_t" data-correct=""><p>True.</p></li>
 <li data-component="feedback" id="DMT_mod_CYU_10tt2equiv1mod9_opt_t">
@@ -762,7 +762,7 @@ eBookConfig.enable_chatcodes =  false;
 <li data-component="feedback" id="DMT_mod_CYU_10tt2equiv1mod9_opt_f">
 </ul></div></div></article><article class="exercise exercise-like" id="DMT_mod_CYU_10tt5equiv1mod9"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_mod_CYU_10tt5equiv1mod9">
-<div class="para" id="p-2710">True or false: <span class="process-math">\(10^5\equiv 1\mod 9\text{.}\)</span>
+<div class="para" id="p-2714">True or false: <span class="process-math">\(10^5\equiv 1\mod 9\text{.}\)</span>
 </div>
 <li data-component="answer" id="DMT_mod_CYU_10tt5equiv1mod9_opt_t" data-correct=""><p>True.</p></li>
 <li data-component="feedback" id="DMT_mod_CYU_10tt5equiv1mod9_opt_t">
@@ -770,68 +770,68 @@ eBookConfig.enable_chatcodes =  false;
 <li data-component="feedback" id="DMT_mod_CYU_10tt5equiv1mod9_opt_f">
 </ul></div></div></article><article class="exercise exercise-like" id="DMT_mod_CYU_10ttnequiv1mod9"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_mod_CYU_10ttnequiv1mod9">
-<div class="para" id="p-2711">True or false: <span class="process-math">\(10^n\equiv 1\mod 9\text{.}\)</span>
+<div class="para" id="p-2715">True or false: <span class="process-math">\(10^n\equiv 1\mod 9\text{.}\)</span>
 </div>
 <li data-component="answer" id="DMT_mod_CYU_10ttnequiv1mod9_opt_t" data-correct=""><p>True.</p></li>
 <li data-component="feedback" id="DMT_mod_CYU_10ttnequiv1mod9_opt_t">
 <li data-component="answer" id="DMT_mod_CYU_10ttnequiv1mod9_opt_f"><p>False.</p></li>
 <li data-component="feedback" id="DMT_mod_CYU_10ttnequiv1mod9_opt_f">
 </ul></div></div></article><article class="exercise exercise-like" id="DMT_mod_CYU_equivclassmod5"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
-<div class="para" id="p-2712">Give the equivalence classes for  <span class="process-math">\(a\equiv b \mod 5\text{.}\)</span>
+<div class="para" id="p-2716">Give the equivalence classes for  <span class="process-math">\(a\equiv b \mod 5\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-44" id="hint-44"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-44"><div class="hint solution-like"><div class="para" id="p-2713">There should be 5 equivalence classes. You only need to give a representative for each class in the form <span class="process-math">\([a]\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-44" id="hint-44"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-44"><div class="hint solution-like"><div class="para" id="p-2717">There should be 5 equivalence classes. You only need to give a representative for each class in the form <span class="process-math">\([a]\text{.}\)</span>
 </div></div></div>
 </div></article></section><section class="exercises" id="exercises-31"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="exercise-470"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-2714">Let <span class="process-math">\(a=25\)</span> and <span class="process-math">\(b=19\text{.}\)</span>
+<div class="para" id="p-2718">Let <span class="process-math">\(a=25\)</span> and <span class="process-math">\(b=19\text{.}\)</span>
 </div> <ol class="lower-alpha">
-<li id="li-591"><div class="para" id="p-2715">Use the definition of congruence modulo 3 to explain why <span class="process-math">\(25\equiv 19 \mod 3\text{.}\)</span>
+<li id="li-591"><div class="para" id="p-2719">Use the definition of congruence modulo 3 to explain why <span class="process-math">\(25\equiv 19 \mod 3\text{.}\)</span>
 </div></li>
-<li id="li-592"><div class="para" id="p-2716">What value of <span class="process-math">\(k\)</span> has the property that <span class="process-math">\(25=19+3k\text{?}\)</span>
+<li id="li-592"><div class="para" id="p-2720">What value of <span class="process-math">\(k\)</span> has the property that <span class="process-math">\(25=19+3k\text{?}\)</span>
 </div></li>
-<li id="li-593"><div class="para" id="p-2717">What is the (nonnegative) remainder obtained when 25 is divided by 3? When 19 is divided by 3?</div></li>
+<li id="li-593"><div class="para" id="p-2721">What is the (nonnegative) remainder obtained when 25 is divided by 3? When 19 is divided by 3?</div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-471"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-2718">Determine if the following are true or false.</div> <ol class="lower-alpha">
-<li id="li-594"><div class="para" id="p-2719">
+<div class="para" id="p-2722">Determine if the following are true or false.</div> <ol class="lower-alpha">
+<li id="li-594"><div class="para" id="p-2723">
 <span class="process-math">\(58\equiv 14\)</span> mod <span class="process-math">\(11\text{.}\)</span>
 </div></li>
-<li id="li-595"><div class="para" id="p-2720">
+<li id="li-595"><div class="para" id="p-2724">
 <span class="process-math">\(46\equiv 89\)</span> mod <span class="process-math">\(13\text{.}\)</span>
 </div></li>
-<li id="li-596"><div class="para" id="p-2721">
+<li id="li-596"><div class="para" id="p-2725">
 <span class="process-math">\(674\equiv 558\)</span> mod <span class="process-math">\(56\text{.}\)</span>
 </div></li>
-<li id="li-597"><div class="para" id="p-2722">
+<li id="li-597"><div class="para" id="p-2726">
 <span class="process-math">\(432\equiv 981\)</span> mod <span class="process-math">\(9\text{.}\)</span>
 </div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-472"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-2723">Verify the following statements by simplifying each expression and using the definition of congruence mod 7.</div> <ol class="lower-alpha">
-<li id="li-598"><div class="para" id="p-2724">
+<div class="para" id="p-2727">Verify the following statements by simplifying each expression and using the definition of congruence mod 7.</div> <ol class="lower-alpha">
+<li id="li-598"><div class="para" id="p-2728">
 <span class="process-math">\(128\equiv 2 \mod 7\)</span> and <span class="process-math">\(61\equiv 5 \mod 7\)</span>
 </div></li>
-<li id="li-599"><div class="para" id="p-2725"><span class="process-math">\(\displaystyle (128+61)\equiv (2+5) \mod 7\)</span></div></li>
-<li id="li-600"><div class="para" id="p-2726"><span class="process-math">\(\displaystyle (128-61)\equiv (2-5) \mod 7\)</span></div></li>
-<li id="li-601"><div class="para" id="p-2727"><span class="process-math">\(\displaystyle (128\cdot 61)\equiv (2\cdot 5) \mod 7\)</span></div></li>
-<li id="li-602"><div class="para" id="p-2728"><span class="process-math">\(\displaystyle 128^2\equiv 2^2 \mod 7\)</span></div></li>
+<li id="li-599"><div class="para" id="p-2729"><span class="process-math">\(\displaystyle (128+61)\equiv (2+5) \mod 7\)</span></div></li>
+<li id="li-600"><div class="para" id="p-2730"><span class="process-math">\(\displaystyle (128-61)\equiv (2-5) \mod 7\)</span></div></li>
+<li id="li-601"><div class="para" id="p-2731"><span class="process-math">\(\displaystyle (128\cdot 61)\equiv (2\cdot 5) \mod 7\)</span></div></li>
+<li id="li-602"><div class="para" id="p-2732"><span class="process-math">\(\displaystyle 128^2\equiv 2^2 \mod 7\)</span></div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-473"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-2729">Prove the transitivity of modular congruence. That is, prove for all <span class="process-math">\(a, b, c, n\in \mathbb{Z}\)</span> with <span class="process-math">\(n&gt;1\text{,}\)</span> if <span class="process-math">\(a\equiv b \mod n\)</span> and <span class="process-math">\(b\equiv c \mod n\text{,}\)</span> then <span class="process-math">\(a\equiv c \mod n\text{.}\)</span>
+<div class="para" id="p-2733">Prove the transitivity of modular congruence. That is, prove for all <span class="process-math">\(a, b, c, n\in \mathbb{Z}\)</span> with <span class="process-math">\(n&gt;1\text{,}\)</span> if <span class="process-math">\(a\equiv b \mod n\)</span> and <span class="process-math">\(b\equiv c \mod n\text{,}\)</span> then <span class="process-math">\(a\equiv c \mod n\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-474"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-2730">Prove for all <span class="process-math">\(a,  c, n\in \mathbb{Z}\)</span> with <span class="process-math">\(n&gt;1\text{,}\)</span> if <span class="process-math">\(a\equiv c \mod n\text{,}\)</span> then <span class="process-math">\(a^2\equiv c^2 \mod n\text{.}\)</span>
+<div class="para" id="p-2734">Prove for all <span class="process-math">\(a,  c, n\in \mathbb{Z}\)</span> with <span class="process-math">\(n&gt;1\text{,}\)</span> if <span class="process-math">\(a\equiv c \mod n\text{,}\)</span> then <span class="process-math">\(a^2\equiv c^2 \mod n\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-475"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-2731">Prove for all <span class="process-math">\(a,  c, n, m\in \mathbb{Z}\)</span> with <span class="process-math">\(n&gt;1\text{,}\)</span> and <span class="process-math">\(m\geq 1\text{,}\)</span> if <span class="process-math">\(a\equiv c \mod n\text{,}\)</span> then <span class="process-math">\(a^m\equiv c^m \mod n\text{.}\)</span>
+<div class="para" id="p-2735">Prove for all <span class="process-math">\(a,  c, n, m\in \mathbb{Z}\)</span> with <span class="process-math">\(n&gt;1\text{,}\)</span> and <span class="process-math">\(m\geq 1\text{,}\)</span> if <span class="process-math">\(a\equiv c \mod n\text{,}\)</span> then <span class="process-math">\(a^m\equiv c^m \mod n\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-45" id="hint-45"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-45"><div class="hint solution-like"><div class="para" id="p-2732">Use mathematical induction on <span class="process-math">\(m\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-45" id="hint-45"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-45"><div class="hint solution-like"><div class="para" id="p-2736">Use mathematical induction on <span class="process-math">\(m\text{.}\)</span>
 </div></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-476"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-2733">Prove for all integers <span class="process-math">\(n\geq 0\text{,}\)</span> <span class="process-math">\(10^n\equiv 1 \mod 9\text{.}\)</span>
+<div class="para" id="p-2737">Prove for all integers <span class="process-math">\(n\geq 0\text{,}\)</span> <span class="process-math">\(10^n\equiv 1 \mod 9\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-477"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="p-2734">Prove that a positive integer, <span class="process-math">\(N\)</span> is divisible by 9 if and only if the sum of the digits of <span class="process-math">\(N\)</span> is divisible by 9.</div>
+<div class="para" id="p-2738">Prove that a positive integer, <span class="process-math">\(N\)</span> is divisible by 9 if and only if the sum of the digits of <span class="process-math">\(N\)</span> is divisible by 9.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-46" id="hint-46"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-46"><div class="hint solution-like"><div class="para" id="p-2735">The previous problem will be helpful, as will writing <span class="process-math">\(N\)</span> as a decimal expansion (see <a href="" class="xref" data-knowl="./knowl/A_decimalexpan.html" title="Activity 8.4.7">Activity 8.4.7</a>). It can be useful in proving that a number is divisible by 9 to instead show that it is congruent to 0 mod 9. Also note, this is an “if and only if” statement so your proof requires two parts.</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-46" id="hint-46"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-46"><div class="hint solution-like"><div class="para" id="p-2739">The previous problem will be helpful, as will writing <span class="process-math">\(N\)</span> as a decimal expansion (see <a href="" class="xref" data-knowl="./knowl/A_decimalexpan.html" title="Activity 8.4.7">Activity 8.4.7</a>). It can be useful in proving that a number is divisible by 9 to instead show that it is congruent to 0 mod 9. Also note, this is an “if and only if” statement so your proof requires two parts.</div></div></div>
 </div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="equivalencerelations8-3.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="chapter9.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

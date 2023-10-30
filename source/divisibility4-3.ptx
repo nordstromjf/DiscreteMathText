@@ -155,7 +155,7 @@
 
 <p><xref ref="T_FTofArith" /> is more powerful than it may seem. Although you have probably found prime factorizations before, you may not have thought much about the fact that they are unique. Consider the statement <m>3\mid 2^{101}</m>. Is this true or false? Well, since <m>2^{101}</m> is a prime factorization, the only prime divisor it has is 2. Thus, <m>3\mid 2^{101}</m> is false. If you have the prime factorization of an integer, then you know exactly which primes (and which powers of primes) divide the integer. </p>
 
-<activity><introduction><p>Determine if the follwing are true or false. Give a reason for your answer.</p></introduction>
+<activity><introduction><p>Determine if the following are true or false. Give a reason for your answer.</p></introduction>
 <task><p>5 divides <m>3^{600}</m>.</p></task>
 <task><p>6 divides <m>3^{600}</m>.</p></task>
 <task><p>9 divides <m>3^{600}</m>.</p></task>

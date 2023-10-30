@@ -8,7 +8,7 @@
   <title>Principle of Mathematical Induction</title>
   <p>Let <m>P(n)</m> be a property defined for integers <m>n</m>, and let <m>a</m> be a fixed integer. Suppose the following are true:
 <ol marker="1"><li><m>P(a)</m> is true;</li>
-<li>For all <m>k\in\mathbb{Z}</m> with <m>k\geq a</m>, if <m>P(k)</m> is true than <m>P(k+1)</m> is true;</li></ol>
+<li>For all <m>k\in\mathbb{Z}</m> with <m>k\geq a</m>, if <m>P(k)</m> is true then <m>P(k+1)</m> is true;</li></ol>
 
 then for all <m>n\geq a</m>, <m>P(n)</m> is true.
 </p>
@@ -85,7 +85,7 @@ Thus, <m>\sum_{i=1}^{k+1}i=\frac{(k+1)(k+2)}{2}</m>.</p>
 
 <activity><introduction><p>Before the next example, we practice the relationship between sums of <m>k</m> terms and sums of <m>k+1</m> terms.</p></introduction>
     <task><p>Write out the summation for <m>\sum_{i=0}^{n}r^i</m>.</p></task>
-    <task><p>Write out the summation for <m>\sum_{i=1}^{n+1}r^i</m>.</p></task>
+    <task><p>Write out the summation for <m>\sum_{i=0}^{n+1}r^i</m>.</p></task>
     <task><p>How do (a) and (b) differ?</p></task>
 
   </activity>
@@ -127,7 +127,7 @@ Thus, <m>\sum_{i=0}^{k+1}r^i=\frac{r^{k+2}-1}{r-1}</m>.</p>
 
 <activity><introduction><p>Suppose you want to prove <m>\sum_{i=1}^{n}i^2=\frac{n(n+1)(2n+1)}{6}</m> for all <m>n\geq 1</m> by induction. </p></introduction>
     <task><p>What would you want to prove in the base step?</p></task>
-    <task><p>What should you assume in the induction step?.</p></task>
+    <task><p>What should you assume in the induction step?</p></task>
     <task><p>What should you show in the induction step?</p></task>
     <task><p>Now try to put this all together in the form of an induction proof. If you are unable to prove it, where do you get stuck?</p></task>
 

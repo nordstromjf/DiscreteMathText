@@ -199,9 +199,9 @@
   </example>
 
   <activity><introduction><p>Prove or disprove the following statements.</p></introduction>
-<task><p>If <m>n</m> is even, then <m>5n</m> is even.</p></task>
-<task><p>If <m>n</m> is odd, then <m>5n+1</m> is odd.</p></task>
-<task><p>If <m>n</m> and <m>m</m> are odd, then their product, <m>nm</m>,  is odd.</p></task>
+<task><p>For all <m>n\in \mathbb{Z}</m>, if <m>n</m> is even, then <m>5n</m> is even.</p></task>
+<task><p>For all <m>n\in \mathbb{Z}</m>, if <m>n</m> is odd, then <m>5n+1</m> is odd.</p></task>
+<task><p>For all <m>m, n\in \mathbb{Z}</m>, if <m>n</m> and <m>m</m> are odd, then their product, <m>nm</m>,  is odd.</p></task>
 </activity>
 
     <reading-questions>

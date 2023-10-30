@@ -4,7 +4,7 @@
   <p>In this section we look at a variation on induction called strong induction. This is really just regular induction except we make a stronger assumption in the induction hypothesis. It is possible that we need to show more than one base case as well, but for the moment we will just look at how and why we may need to change the assumption.</p>
 
 <assemblage xml:id="B_strongind"><idx>strong induction</idx><idx><h>induction</h><h>strong</h></idx>
-  <title>Stong Induction</title>
+  <title>Strong Induction</title>
   <p>Let <m>P(n)</m> be a property defined for integers <m>n</m>. If 
   <ol marker="1">
   <li><m>P(1), \ldots P(a)</m> are true for some <m>a</m>, and</li>
@@ -119,12 +119,20 @@ This is not a subset of the integers and does not have a least element, even tho
 
 </example>
 
-<activity><statement><p>Let <m>k\in \mathbb{Z}</m>. Do the conditions of the Well-Ordering Principle apply to <m>S=\{2k: k\geq 3\}?</m></p></statement></activity>
+<activity><introduction><p>Determine if the conditions of the Well-Ordering Principle apply to each of the following sets.</p></introduction>
+<task><p>Let <m>k\in \mathbb{Z}</m>,  <m>S=\{2k: k\geq 3\}</m>.</p></task>
 
-<activity><statement><p>Let <m>k, j\in \mathbb{Z}</m>. Do the conditions of the Well-Ordering Principle apply to 
-<me>S=\{2k+3j: 2k+3j\geq 0\}?</me></p></statement></activity>
-<activity><statement><p>Do the conditions of the Well-Ordering Principle apply to <m>S=\{r\in \mathbb{Q}: r\geq 0\}?</m></p></statement></activity>
-<activity><statement><p>Let <m>n, d\in \mathbb{Z}</m>, and <m>d>0</m>. Do the conditions of the Well-Ordering Principle apply to <me>S=\{n-dk: n-dk\geq 0\}?</me></p></statement></activity>
+<task><p>Let <m>k, j\in \mathbb{Z}</m>, <m>S=\{2k+3j: 2k+3j\geq 0\}</m>.</p></task>
+<task><p> <m>S=\{r\in \mathbb{Q}: r\geq 0\}?</m></p></task>
+</activity>
+
+<activity><introduction><p>Give three elements of each set, then determine if the conditions of the Well-Ordering Principle apply to each of the following sets.</p></introduction>
+<task><p><m>S=\{7-3k: 7-3k\geq 0, k\in \mathbb{Z}\}.</m></p></task>
+
+<task><p><m>S=\{-8-3k: -8-3k\geq 0, k\in \mathbb{Z}\}.</m></p></task>
+
+<task><p>Let <m>n, d\in \mathbb{Z}</m>, and <m>d>0</m>, <m>S=\{n-dk: n-dk\geq 0, k\in \mathbb{Z}\}.</m></p></task>
+</activity>
 
 <p>We now prove the existence part of the Quotient-Remainder Theorem.</p>
 <p><xref ref="T_divisionalgorthm"/>: Given any <m>n, d\in \mathbb{Z}</m> with <m>d>0</m>, there exist <m>q, r</m> such that <m>n=dq+r</m> and <m>0\leq r&lt; d</m>.<idx>Quotient-Remainder Theorem</idx></p>
@@ -203,11 +211,11 @@ But then <m>n-d(q+1)\in S</m> and <m>n-d(q+1)&lt; n-dq=r</m>. This contradicts t
   </statement></exercise>
   <exercise><statement>
     <p>
-    Let <m>a_1, a_3, a_3,  \ldots</m> be the sequence defined as <me>a_1=1, a_2=3,</me> <me>a_k=a_{k-1}+a_{k-2}, k\geq3.</me>
+    Let <m>a_1, a_2, a_3,  \ldots</m> be the sequence defined as <me>a_1=1, a_2=3,</me> <me>a_k=a_{k-1}+a_{k-2}, k\geq3.</me>
   </p>
 
   <p>
-    Use strong induction to prove that <m>a_n\leq \Bigl(\frac{7}{4}\Bigr)^n</m> or all integers <m>n \geq 1</m>.
+    Use strong induction to prove that <m>a_n\leq \Bigl(\frac{7}{4}\Bigr)^n</m> for all integers <m>n \geq 1</m>.
   </p>
   </statement></exercise>
 

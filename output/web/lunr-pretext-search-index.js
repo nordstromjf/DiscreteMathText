@@ -2032,7 +2032,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.3",
   "title": "Statements with Multiple Quantifiers",
-  "body": " Statements with Multiple Quantifiers  Many statements in mathematics involve multple quantifiers. For example, For all real numbers , there exists a real number with . These statements, though frequent in math courses, represent some of the most complicated types of statements to understand. In this section we will try to understand the general structure of such statements.  Let's look at the various ways we could have statements with two quantifiers. Since we have two quantifiers, we will have two variables. Thus, our predicate will now involve both variables. We can use the notation to mean a statement about and .   .  This means we can find a in that makes true for each in . In such statements will often depend on .   .  The order of the quantifiers matters. This means we can find a single  in that makes true for every in . In such statements does not depend on . The same must work for all the 's.   .  This means is true for all and for all .   .  This means is true for for at least one and at least one .    Statements with Multiple Quantifiers  Let . Determine whether the following statements are true or false.   For any can you always find a corresponding with ?  Yes, for each let . So the statement is true.   Is there a single that works for all ?  No, no single will always have . So the statement is false.   Let . Determine if each statement is true or false. Give a reason for your answer.  .  .  .  .  .  .   Although we won't study the mathematical context of the following example in this class, it is a classic example in mathematics of a statement with multiple quantifiers and a conditional. It is so important that it is the subject of one set of math bike racks in front of Taylor Hall!  Definition of a Limit  The definition of the limit of a function: For every , there exists a such that if then . Or in symbols, .   Now, we want to be able to negate statements with multiple quantifiers. There is nothing really new here, we just negate our quantified statements as we did for single quantifiers.   Negating Statements with Multiple Quantifiers quantifier negation  The negation of is ;  In notation,  The negation of is ;  In notation,  The negation of is ;  In notation,  The negation of is ;  In notation,   Negating the Definition of a Limit  If you take Elementary Analysis, you will need to be able to negate the definition of the limit from . Negate For every , there exists a such that if then . Hint: Our statement has the form So the negation has the form  .   Write the negation of the following statements. Then determine whether the original statment is true or false.  There exists an integer such that for all integers .  For every integer there exists an integer such that .   Write the negation of the following statements. Then determine whether the original statment is true of false.  There exists an integer such that for all integers .  For every integer there exists an integer such that .   Translating Statements with Multiple Quantifiers  Let be loves . Translate each of the following statements using quantifiers and variables.  Someone loves everyone.   Someone is loved by everyone.   Everyone loves someone.   Everyone is loved by someone.     Check Your Understanding  Write the negation of .  True or False: . If , no will have . False. If , no will have  Write the negation of .  True or False: . No matter which you choose, will have . False. No matter which you choose, will have  Write the negation of .  True or False: . Every even integer is 2 times an integer. True. Every even integer is 2 times an integer.     Let . Explain why each of the following statements are true.     , such that .     such that .      Let . Write the negations for each of the following statements and determine which is true, the given statement or the negation.     , such that .     such that .     , such that .     such that .      For each of the following, (1) rewrite the statement in English without the symbols or or variables. Then (2) indicate whether the statement is true or false.     real numbers , a real number such that .     a real number such that real numbers , .      For each of the following, (1) rewrite the statement in English without the symbols or or variables. Express your answer as simply as possible. Then (2) write the negation for each statement.     colors , a candy such that is colored .     odd integers , an integer such that .     a real number such that real numbers , .      For each of the following, (1) write a new statement by interchanging the symbols and . Then (2) state which is true: the given statement, the interchanged statement, neither, or both.     , such that .     such that (the set of negative real numbers), .      For each of the following statements, (1) rewrite the statement formally using quantifiers and variables, and (2) write the negation for the statement.    Everybody trusts somebody.    Any even integer equals twice some integer.      Determine whether the following statements are true or false. Give a sentence or two explaining your answer.     , such that .     , such that .     , such that , .     , such that .     , such that .      "
+  "body": " Statements with Multiple Quantifiers  Many statements in mathematics involve multple quantifiers. For example, For all real numbers , there exists a real number with . These statements, though frequent in math courses, represent some of the most complicated types of statements to understand. In this section we will try to understand the general structure of such statements.  Let's look at the various ways we could have statements with two quantifiers. Since we have two quantifiers, we will have two variables. Thus, our predicate will now involve both variables. We can use the notation to mean a statement about and .   .  This means we can find a in that makes true for each in . In such statements will often depend on .   .  The order of the quantifiers matters. This means we can find a single  in that makes true for every in . In such statements does not depend on . The same must work for all the 's.   .  This means is true for all and for all .   .  This means is true for for at least one and at least one .    Statements with Multiple Quantifiers  Let . Determine whether the following statements are true or false.   For any can you always find a corresponding with ?  Yes, for each let . So the statement is true.   Is there a single that works for all ?  No, no single will always have . So the statement is false.   Let . Determine if each statement is true or false. Give a reason for your answer.  .  .  .  .  .  .   Although we won't study the mathematical context of the following example in this class, it is a classic example in mathematics of a statement with multiple quantifiers and a conditional. It is so important that it is the subject of one set of math bike racks in front of Taylor Hall!  Definition of a Limit  The definition of the limit of a function: For every , there exists a such that if then . Or in symbols, .   Now, we want to be able to negate statements with multiple quantifiers. There is nothing really new here, we just negate our quantified statements as we did for single quantifiers.   Negating Statements with Multiple Quantifiers quantifier negation  The negation of is ;  In notation,  The negation of is ;  In notation,  The negation of is ;  In notation,  The negation of is ;  In notation,   Negating the Definition of a Limit  If you take Elementary Analysis, you will need to be able to negate the definition of the limit from . Negate For every , there exists a such that if then . Hint: Our statement has the form So the negation has the form  .   Write the negation of the following statements. Then determine whether the original statment is true or false.  There exists an integer such that for all integers .  For every integer there exists an integer such that .   Write the negation of the following statements. Then determine whether the original statment is true of false.  There exists an integer such that for all integers .  For every integer there exists an integer such that .   Translating Statements with Multiple Quantifiers  Let be loves . Translate each of the following statements using quantifiers and variables.  Someone loves everyone.   Someone is loved by everyone.   Everyone loves someone.   Everyone is loved by someone.     Check Your Understanding  Write the negation of .  True or False: . If , no will have . False. If , no will have  Write the negation of .  True or False: . No matter which you choose, will have . False. No matter which you choose, will have  Write the negation of .  True or False: . Every even integer is 2 times an integer. True. Every even integer is 2 times an integer.     Let . Explain why each of the following statements are true.     , such that .     such that .      Let . Write the negations for each of the following statements and determine which is true, the given statement or the negation.     , such that .     such that .     , such that .     such that .      For each of the following, (1) rewrite the statement in English without the symbols or or variables. Then (2) indicate whether the statement is true or false.     real numbers , a real number such that .     a real number such that real numbers , .      For each of the following, (1) rewrite the statement in English without the symbols or or variables, trying to express your answer as simply as possible. Then (2) write the negation for each statement.     colors , a candy such that is colored .     odd integers , an integer such that .     a real number such that real numbers , .      For each of the following, (1) write a new statement by interchanging the symbols and . Then (2) state which is true: the given statement, the interchanged statement, neither, or both.     , such that .     such that (the set of negative real numbers), .      For each of the following statements, (1) rewrite the statement formally using quantifiers and variables, and (2) write the negation for the statement.    Everybody trusts somebody.    Any even integer equals twice some integer.      Determine whether the following statements are true or false. Give a sentence or two explaining your answer.     , such that .     , such that .     , such that , .     , such that .     , such that .      "
 },
 {
   "id": "E_multquant1",
@@ -2185,7 +2185,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.3.4",
   "title": "",
-  "body": " For each of the following, (1) rewrite the statement in English without the symbols or or variables. Express your answer as simply as possible. Then (2) write the negation for each statement.     colors , a candy such that is colored .     odd integers , an integer such that .     a real number such that real numbers , .    "
+  "body": " For each of the following, (1) rewrite the statement in English without the symbols or or variables, trying to express your answer as simply as possible. Then (2) write the negation for each statement.     colors , a candy such that is colored .     odd integers , an integer such that .     a real number such that real numbers , .    "
 },
 {
   "id": "exercise-117",
@@ -2221,7 +2221,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.4",
   "title": "Arguments with Quantifiers",
-  "body": " Arguments with Quantifiers argument quantifier  In we studied arguments with logical statements. In this chapter we've looked at statements with quantifiers. Now we want to combine the two ideas.  Recall, an argument is valid argument quantifier valid argument if it whenever the premises are true, the conclusion must be true. An argument is invalid invalid argument if it possible for the premises to be true and the conclusion false.  An Argument with Quantified Statements    All computer science majors take Discrete Math before graduation.  Anna is a computer science major.  Anna takes Discrete Math before graduation.  Is this argument valid or invalid?  This argument is valid.   Another Argument with Quantified Statements    All computer science majors take Discrete Math before graduation.  Troy did not take Discrete Math before graduation.  Troy is not a computer science major.  Is this argument valid or invalid?  This argument is valid.   Although and are a valid arguments, we will have trouble using a truth-table to determine validity. In this section we will develop other tools for analyzing quantified arguments. These examples are extentions of modus ponens and modus tollens from .   Common Forms of Arguments with Quantifiers  Universal modus ponens modus ponens universal :  , if then     is an example of universal modus ponens.  Universal modus tollens modus tollens universal :  , if then     is an example of universal modus tollens.   To determine validity of quantified arguments we need to ask if it is possible for the premises to be true while the conclusion is false. If it is possible, then the argument is invalid. If it is not possible, then the argument is valid. We will use Venn diagrams Venn diagram quantified argument to help us determine validity. A Venn diagram is just a picture where we use circles to represent sets of objects and points to represent specific elements. We draw the circles to represent how our sets are related to each other.  The Venn diagram for is given by the following figure.   Venn diagram for the argument in     The picture represents the two premises of the argument. In the Venn diagram we have a circle representing students taking Discrete Math ( Discrete Math ) and a circle representing computer science majors ( CS majors ). The CS major circle is completely inside the Discrete Math circle since the first statement in the argument is that all computer science majors take Discrete Math. This means the set of computer science majors is a subset of the set of students taking Discrete Math. The second statement in the argument is that Anna is a computer science major. This means Anna is an element (represented by a point) of the set of CS majors.  Now, if we look at the diagram determined by the two premises, we see that Anna must also be an element of the set of students taking Discrete Math. Thus, it is not possible to have true premises and a false conclusion.   Process for Using a Venn diagram to Determine Validity    Draw the Venn diagram for each premise.  Statements such as All A are B mean A is a subset of B.  Make sure you distinguish between sets (lots of things have a certain property) and elements (a specific thing with a property).  See if it is possible for the premises to be true and the conclusion false.  Sometimes there is a choice about where to place a certain element of set. For example, if I know is not in set A, then might be in set B or it might not be in B. We can use these choices to see if we can make the premises true and the conclusion false.    Let's use this process on some more examples.  Determining Validity    All integers are rational numbers.  is not rational.  is not an integer.  The two premises are represented with the following diagram. Recall, is the set of rational numbers and is the set of integers.     We can see from the diagram that it is impossible to make the conclusion false. In particular, cannot be in the set of integers.  Consider the general form of universal modus ponens.  Draw the Venn diagram for universal modus ponens. You should have a circle labeled P and one labeled Q.  Write your own argument that has the form of universal modus ponens.  Use a Venn diagram with appropriate labels to show that your argument is valid.   Consider the general form of universal modus tollens.  Draw the Venn diagram for universal modus tollens. You should have a circle labeled P and one labeled Q.  Write your own argument that has the form of universal modus tollens.  Use a Venn diagram with appropriate labels to show that your argument is valid.   An Invalid Argument    All integers are rational numbers.  is rational.  is an integer.  The first premise is represented with the following diagram.     But we need to be careful about where we place . The second premise just says it needs to be inside the rational circle. Is it possible to place it in the rational circle so that the conclusion is false? Yes, we can place inside the rational circle, but not in the integer circle. So the following diagram shows how it is possible to have true premises and a false conclusion.    Therefore, the argument is invalid.    Invalid Arguments with Quantifiers  Converse error converse error quantifier   if then     is an example of converse error.  Inverse error inverse error quantifier   if then      Write your own example of inverse error. Use a Venn diagram to show your argument is invalid.  It will be useful to have some standard Venn diagrams for common forms of statements.   Venn Diagrams for Common Statements Venn diagram   All B are A.    Some A are B, or there exists an A that is a B.    No A are B.      For each argument use a Venn diagram to determine if the argument is valid or invalid.   Every Linfield student lives on campus.  Freya lives on campus.  Freya is a Linfield student.    Every polynomial function is differentiable.  is not a polynomial function.  is not differentiable.    For each argument use a Venn diagram to determine if the argument is valid or invalid.   , if studies then will do well on the exams.  , if does well on the exams then will get an A in Discrete Math.  If Gauss studies then Gauss will get an A in Discrete Math.    , if studies then will do well on the exams.  , if does well on the exams then will get an A in Discrete Math.  Newton will get an A in Discrete Math.   Compare your answers to the two arguments. What is different? How does the difference affect the argument?    Check Your Understanding  Determine whether the following argument is valid or invalid.  All zebras have stripes.  Rex has stripes.  Rex is a zebra.    The argument is valid.   The argument is invalid.   Invalid.  Determine whether the following argument is valid or invalid.  All zebras have stripes.  Lily does not have stripes.  Lily is not a zebra.    The argument is valid.   The argument is invalid.   Valid.  Determine whether the following argument is valid or invalid.  All zebras have stripes.  All zebras are animals.  Rex has stripes.  Rex is an animal.    The argument is valid.   The argument is invalid.   Invalid.  Determine whether the following argument is valid or invalid.  All zebras have stripes.  All animals have stripes.  All zebras are animals.    The argument is valid.   The argument is invalid.   Invalid.  Determine whether the following argument is valid or invalid.  All zebras have stripes.  All things with stripes are animals.  All zebras are animals.    The argument is valid.   The argument is invalid.   Valid.  Determine whether the following argument is valid or invalid.  All zebras are animals.  All animals have stripes.  All zebras have stripes.    The argument is valid.   The argument is invalid.   Valid.     Determine if the argument is valid or invalid. If it is valid, state whether it is an example of modus ponens or modus tollens. If it is invalid, state whether it it exhibits converse error or inverse error.      All healthy people eat an apple a day.    Keisha eats an apple a day.    Keisha is a healthy person.        If the product of two numbers is 0, then at least one of the numbers is 0.    For a particular number , neither nor equals 0.    The product is not 0.        All honest people pay their taxes.    Darth is not honest.    Darth does not pay his taxes.        Any sum of two rational numbers is rational.    The sum is rational.    The numbers and are both rational.        If an infinite series converges, then its terms go to 0.    The terms of the infinite series go to 0.    The infinite series converges.        If an infinite series converges, then its terms go to 0.    The terms of the infinite series do not go to 0.    The infinite series does not converge.        Determine if the argument is valid or invalid. Support your answer by drawing a Venn diagram.     All people are mice.    All mice are mortal.    All people are mortal.      All polynomial functions are differentiable.    All differentiable functions are continuous.    All polynomial functions are continuous.      Use a diagram to show the following argument can have true premises and a false conclusion.    All dogs are carnivorous.    Aaron is not a dog.    Aaron is not carnivorous.      What can you conclude about the validity or invalidity of the following argument form? Explain your answer.    , if then .    , if then .     and .      What can you conclude about the validity or invalidity of the following argument form? Explain your answer.    , if then .    , if then .     .      "
+  "body": " Arguments with Quantifiers argument quantifier  In we studied arguments with logical statements. In this chapter we've looked at statements with quantifiers. Now we want to combine the two ideas.  Recall, an argument is valid argument quantifier valid argument if it whenever the premises are true, the conclusion must be true. An argument is invalid invalid argument if it possible for the premises to be true and the conclusion false.  An Argument with Quantified Statements    All computer science majors take Discrete Math before graduation.  Anna is a computer science major.  Anna takes Discrete Math before graduation.  Is this argument valid or invalid?  This argument is valid.   Another Argument with Quantified Statements    All computer science majors take Discrete Math before graduation.  Troy did not take Discrete Math before graduation.  Troy is not a computer science major.  Is this argument valid or invalid?  This argument is valid.   Although and are a valid arguments, we will have trouble using a truth-table to determine validity. In this section we will develop other tools for analyzing quantified arguments. These examples are extentions of modus ponens and modus tollens from .   Common Forms of Arguments with Quantifiers  Universal modus ponens modus ponens universal :  , if then     is an example of universal modus ponens.  Universal modus tollens modus tollens universal :  , if then     is an example of universal modus tollens.   To determine validity of quantified arguments we need to ask if it is possible for the premises to be true while the conclusion is false. If it is possible, then the argument is invalid. If it is not possible, then the argument is valid. We will use Venn diagrams Venn diagram quantified argument to help us determine validity. A Venn diagram is just a picture where we use circles to represent sets of objects and points to represent specific elements. We draw the circles to represent how our sets are related to each other.  The Venn diagram for is given by the following figure.   Venn diagram for the argument in     The picture represents the two premises of the argument. In the Venn diagram we have a circle representing students taking Discrete Math ( Discrete Math ) and a circle representing computer science majors ( CS majors ). The CS major circle is completely inside the Discrete Math circle since the first statement in the argument is that all computer science majors take Discrete Math. This means the set of computer science majors is a subset of the set of students taking Discrete Math. The second statement in the argument is that Anna is a computer science major. This means Anna is an element (represented by a point) of the set of CS majors.  Now, if we look at the diagram determined by the two premises, we see that Anna must also be an element of the set of students taking Discrete Math. Thus, it is not possible to have true premises and a false conclusion.   Process for Using a Venn diagram to Determine Validity    Draw the Venn diagram for each premise.  Statements such as All A are B mean A is a subset of B.  Make sure you distinguish between sets (lots of things have a certain property) and elements (a specific thing with a property).  See if it is possible for the premises to be true and the conclusion false.  Sometimes there is a choice about where to place a certain element of set. For example, if I know is not in set A, then might be in set B or it might not be in B. We can use these choices to see if we can make the premises true and the conclusion false.    Let's use this process on some more examples.  Determining Validity    All integers are rational numbers.  is not rational.  is not an integer.  The two premises are represented with the following diagram. Recall, is the set of rational numbers and is the set of integers.     We can see from the diagram that it is impossible to make the conclusion false. In particular, cannot be in the set of integers.  Consider the general form of universal modus ponens.  Draw the Venn diagram for universal modus ponens. You should have a circle labeled P and one labeled Q.  Write your own argument that has the form of universal modus ponens.  Use a Venn diagram with appropriate labels to show that your argument is valid.   Consider the general form of universal modus tollens.  Draw the Venn diagram for universal modus tollens. You should have a circle labeled P and one labeled Q.  Write your own argument that has the form of universal modus tollens.  Use a Venn diagram with appropriate labels to show that your argument is valid.   An Invalid Argument    All integers are rational numbers.  is rational.  is an integer.  The first premise is represented with the following diagram.     But we need to be careful about where we place . The second premise just says it needs to be inside the rational circle. Is it possible to place it in the rational circle so that the conclusion is false? Yes, we can place inside the rational circle, but not in the integer circle. So the following diagram shows how it is possible to have true premises and a false conclusion.    Therefore, the argument is invalid.    Invalid Arguments with Quantifiers  Converse error converse error quantifier   if then     is an example of converse error.  Inverse error inverse error quantifier   if then      Write your own example of inverse error. Use a Venn diagram to show your argument is invalid.  It will be useful to have some standard Venn diagrams for common forms of statements.   Venn Diagrams for Common Statements Venn diagram   All B are A.    Some A are B, or there exists an A that is a B.    No A are B.      For each argument use a Venn diagram to determine if the argument is valid or invalid.   Every Linfield student lives on campus.  Freya lives on campus.  Freya is a Linfield student.    Every polynomial function is differentiable.  is not a polynomial function.  is not differentiable.    For each argument use a Venn diagram to determine if the argument is valid or invalid.   , if studies then will do well on the exams.  , if does well on the exams then will get an A in Discrete Math.  If Gauss studies then Gauss will get an A in Discrete Math.    , if studies then will do well on the exams.  , if does well on the exams then will get an A in Discrete Math.  Newton will get an A in Discrete Math.   Compare your answers to the two arguments. What is different? How does the difference affect the argument?    Check Your Understanding  Determine whether the following argument is valid or invalid.  All zebras have stripes.  Rex has stripes.  Rex is a zebra.    The argument is valid.   The argument is invalid.   Invalid.  Determine whether the following argument is valid or invalid.  All zebras have stripes.  Lily does not have stripes.  Lily is not a zebra.    The argument is valid.   The argument is invalid.   Valid.  Determine whether the following argument is valid or invalid.  All zebras have stripes.  All zebras are animals.  Rex has stripes.  Rex is an animal.    The argument is valid.   The argument is invalid.   Invalid.  Determine whether the following argument is valid or invalid.  All zebras have stripes.  All animals have stripes.  All zebras are animals.    The argument is valid.   The argument is invalid.   Invalid.  Determine whether the following argument is valid or invalid.  All zebras have stripes.  All things with stripes are animals.  All zebras are animals.    The argument is valid.   The argument is invalid.   Valid.  Determine whether the following argument is valid or invalid.  All zebras are animals.  All animals have stripes.  All zebras have stripes.    The argument is valid.   The argument is invalid.   Valid.     Determine if the argument is valid or invalid. If it is valid, state whether it is an example of modus ponens or modus tollens. If it is invalid, state whether it exhibits converse error or inverse error.      All healthy people eat an apple a day.    Keisha eats an apple a day.    Keisha is a healthy person.        If the product of two numbers is 0, then at least one of the numbers is 0.    For a particular number , neither nor equals 0.    The product is not 0.        All honest people pay their taxes.    Darth is not honest.    Darth does not pay his taxes.        Any sum of two rational numbers is rational.    The sum is rational.    The numbers and are both rational.        If an infinite series converges, then its terms go to 0.    The terms of the infinite series go to 0.    The infinite series converges.        If an infinite series converges, then its terms go to 0.    The terms of the infinite series do not go to 0.    The infinite series does not converge.        Determine if the argument is valid or invalid. Support your answer by drawing a Venn diagram.     All people are mice.    All mice are mortal.    All people are mortal.      All polynomial functions are differentiable.    All differentiable functions are continuous.    All polynomial functions are continuous.      Use a diagram to show the following argument can have true premises and a false conclusion.    All dogs are carnivorous.    Aaron is not a dog.    Aaron is not carnivorous.      What can you conclude about the validity or invalidity of the following argument form? Explain your answer.    , if then .    , if then .     and .      What can you conclude about the validity or invalidity of the following argument form? Explain your answer.    , if then .    , if then .     .      "
 },
 {
   "id": "p-760",
@@ -2392,7 +2392,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.4.1",
   "title": "",
-  "body": " Determine if the argument is valid or invalid. If it is valid, state whether it is an example of modus ponens or modus tollens. If it is invalid, state whether it it exhibits converse error or inverse error.      All healthy people eat an apple a day.    Keisha eats an apple a day.    Keisha is a healthy person.        If the product of two numbers is 0, then at least one of the numbers is 0.    For a particular number , neither nor equals 0.    The product is not 0.        All honest people pay their taxes.    Darth is not honest.    Darth does not pay his taxes.        Any sum of two rational numbers is rational.    The sum is rational.    The numbers and are both rational.        If an infinite series converges, then its terms go to 0.    The terms of the infinite series go to 0.    The infinite series converges.        If an infinite series converges, then its terms go to 0.    The terms of the infinite series do not go to 0.    The infinite series does not converge.      "
+  "body": " Determine if the argument is valid or invalid. If it is valid, state whether it is an example of modus ponens or modus tollens. If it is invalid, state whether it exhibits converse error or inverse error.      All healthy people eat an apple a day.    Keisha eats an apple a day.    Keisha is a healthy person.        If the product of two numbers is 0, then at least one of the numbers is 0.    For a particular number , neither nor equals 0.    The product is not 0.        All honest people pay their taxes.    Darth is not honest.    Darth does not pay his taxes.        Any sum of two rational numbers is rational.    The sum is rational.    The numbers and are both rational.        If an infinite series converges, then its terms go to 0.    The terms of the infinite series go to 0.    The infinite series converges.        If an infinite series converges, then its terms go to 0.    The terms of the infinite series do not go to 0.    The infinite series does not converge.      "
 },
 {
   "id": "exercise-127",
@@ -2437,7 +2437,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.1",
   "title": "Direct Proof and Counterexample",
-  "body": " Direct Proof and Counterexample proof direct direct proof  Before starting proof techniques, we introduce a few mathematical definitons. Keep in mind, mathematical definitions are constructed to provide a common language for proofs. They are intended to provide rigor and precision. They are not intended to provide conceptual understanding. You need to develop conceptual understanding of the terms apart from the definition. However, we need to rely on definitions to provide structure for our proofs.  An integer, , is even even integer if it has the form for some .  An integer , is odd odd integer if it has the form for some .  You are probably familiar, generally, with even numbers such as 2, 4, 6, 8, and odd numbers such as 3, 5, 7, 9. But the next example uses the definitions to look at more examples.  Even or Odd  Is -5 even or odd?  where . Thus, -5 is odd.  Is 0 even or odd?  where . Thus, 0 is even.  Let . Is even or odd?  where . Thus is even.  Let . Is even or odd?  where . Thus is odd.   Let be integers. Determine if each of the following are always even, always odd, or sometimes even\/ sometimes odd.        We've now seen several examples of even\/ odd integers. Are there integers which are both even and odd? Can an integer be neither even nor odd? The answer to both questions is no. However, proving that every integer is even or odd (and not both), is pretty challenging, and we won't try to do it, yet. We will use this fact, though, so if we know an integer is not even, then it must be odd, and vice versa.  An integer, , is prime prime if and, for all positive integers , if then or .  An integer, , is composite composite if and for some positive integers with and .  Prime or Composite  Is 1 prime?  No. The definiton requires .  Is 1 composite?  No. Again, the definiton requires .  Is 121 prime?  No. . Thus, 121 is composite.  Let . Is composite?  It depends. If then, no. We would need for to be composite.    Consider the statement for all positive integers and , if then or from the definition for a prime number.  Write the statement symbolically using quantifiers and connectives.  Write the negation of the statement symbolically.  How is the negation related to the definition of a composite number? Is every integer either prime or composite?   We state our first proof technique.   Proving Existential Statements existential proof of  To prove   Find making, true. Note, this step may happen as scratchwork, not part of your proof.  For your proof, state .  Show and is true.    This type of proof is called a constructive proof of existence constructive proof existential statement   Existential Proof  Prove such that .  Let . Then and .   Another Existential Proof  Let . Prove such that .  Let . Then since and .   Let . Prove there exists such that .  There are other ways to prove existence. One common way is a proof by contradiction, which we will see later in . There are several examples of existence proofs in calculus where it can be shown that something exists without constructing a specific value. For example, take a look at a proof of Rolle's Theorem, the Mean Value Theorem, the Extreme Value Theorem, or the Taylor Remainder Theorem (Calc II).  Since the negation of a universal statement is an existential statement, we disprove a universal statements with a counterexample counterexample .   Counterexamples counterexample  To disprove the statement   Find the negation of the statement: .  Find making, true and false. Note, this step may happen as scratchwork, not part of your counterexample.  For your counterexample, state .  Show , is true and is false.     A counterexample is really just an existence proof of the negation. But since we are showing the original statement is false, we usually just call it a counterexample to the (original) statement.  Counterexample  Disprove the statement: Every prime number, , is odd.  Let . Then is prime and is not odd.   Give a counterexample to show the following statement is false: For all if then .  One of the most common mathematical statements is the universal conditional. We will see several techniques for proving . The first method, method of exhaustion, is very limited, but worth mentioning.   Method of Exhaustion proof method of exaustion  To prove , where is a finite set:  For each specific where is true, show is true.     Method of Exaustion  Prove for all , if is even and , then can be written as the sum of prime numbers.  We can find all the integers that are even and . This is the set . For each of these numbers we can demonstrate a way to write them as the sum of primes: .   The method of exhaustion only works if we can show the statement for every . But if is infinite, we need to use a more general method.   Method of Direct Proof proof direct direct proof  To prove :  Let (make sure this is a variable, or generic, , not a specific value).  Assume is true.  Show is true.    Direct Proof  Prove for all , if is even, then is odd.  Let be even. Then by definition, for some . Then where . Which means is odd.   Sum of Even Numbers  Prove the sum of two even integers is even.  Note, this statement is not obviously in the form of an if...then. We often have to translate statements into a more formal statement before proving them. Translation:  Prove for all if and are even, then is even.  Let be even. Then by definition, for some and for some . (Note, we cannot use for both and as they likely are two different numbers.) Then where . Which means is even.   Some proof writing advice:  Make the proof self-contained. Try not to reference many other mathematical facts. Many proofs in this course will rely entirely on definitions.  Use complete sentences. Even equations have a sentence structure. Your proof should be able to be read in sentences.  Give reasons. Connect your statements together.  Include words. Often using a word is better that using a symbol. Many proofs have no symbols in them at all.  The audience for your proofs is not the instructor. Think of the audience as being your peers in the course or even yourself in a few weeks (or months) when you might have forgotten the specific content. Write so you will know what you meant later.  The goal of a proof is to write a clear, easy to follow, argument--not to just get to the end. The answer is the proof itself. Use space, start a new line, set equations on their own line.  Never feel that you have to be able to know what the end of the proof will look like before you can start. Write proofs one step at a time. Start with what you know. See if you can do one thing. See if you can do another thing. Look at where you want to go. Do not try to see the whole picture at once. This is also good advice for reading a proof.   Some common proof-writing errors:  Using an example for a proof. If you need to prove a statement for all , it is not nough to show it for an example.  Using the same variable to represent two different things.  Jumping to conclusions. Giving inadequate reasons. This often occur if you rely on additional mathematical ideas or don't connect your ideas to each other.  Assuming what you need to prove. This is a big one. This most often occurs when there is confusion about conditional statements. Be careful about identifying the if and the then in a statement.   Often in math we need to identify whether a statement is true or false, so that we know whether we need to prove the true statement or disprove the false one.  Prove or Disprove  Prove or disprove there exists a positive integer such that is prime.  Since we need to try to decide if the statement is true or false, first try some examples.   After trying several examples, we might guess that it is false. If we want to disprove the statement then we need to prove the negation. Find the negation of the statement.  For all positive integers is not prime (is composite).  So we need to show that for a general we can always write as a product of with .  We can try to factor the expression: .  Let . We need to show that . Since and . Thus . Therefore, is not prime.   Prove or disprove the following statements.  If is even, then is even.  If is odd, then is odd.  If and are odd, then their product, , is odd.    Check Your Understanding  True or false: is odd. False.  True or false: is even. False.  True or false: is odd. True.  True or false: is even. True.  True or false: if is even, then is even. True.  True or false: 99 is composite. True.  True or false: -99 is composite. False.  True or false: is prime. False.     Use the definitions of even, odd, prime, and composite to justify your answer to each of the following questions. Let and be integers.    Is even?    Is odd?    If , is composite?      Prove there are integers and such that and and is an integer.    Prove there is an integer such that is prime.    Disprove by giving a counterexample: For all real numbers and , if then .    Disprove by giving a counterexample: For all integers, and , if is odd then and are both odd.    Find the mistakes in the following proof.    Theorem: For all integers , if then is composite.   Proof : For , . But , and so 9 is composite. Hence the theorem is true.    Find the mistakes in the following proof.    Theorem: The difference between any odd integer and any even integer is odd.   Proof : Suppose is an odd integer, and is an even integer. By definition of odd, where is an integer, and by definition of even where is an integer. Then Since 1 is odd the difference between an odd integer and and even integer is odd.    Prove the difference of any even integer minus any odd integer is odd.    Prove the sum of any two odd integers is even.    Prove the following statement is false: There exists an integer such that is prime.    For the following problems determine if they are true of false. Prove the true statements and provide counterexamples for the false statements.    The product of any even integer and any integer is even.    For all integers , if is prime then .    For all integers , is a prime number.      "
+  "body": " Direct Proof and Counterexample proof direct direct proof  Before starting proof techniques, we introduce a few mathematical definitons. Keep in mind, mathematical definitions are constructed to provide a common language for proofs. They are intended to provide rigor and precision. They are not intended to provide conceptual understanding. You need to develop conceptual understanding of the terms apart from the definition. However, we need to rely on definitions to provide structure for our proofs.  An integer, , is even even integer if it has the form for some .  An integer , is odd odd integer if it has the form for some .  You are probably familiar, generally, with even numbers such as 2, 4, 6, 8, and odd numbers such as 3, 5, 7, 9. But the next example uses the definitions to look at more examples.  Even or Odd  Is -5 even or odd?  where . Thus, -5 is odd.  Is 0 even or odd?  where . Thus, 0 is even.  Let . Is even or odd?  where . Thus is even.  Let . Is even or odd?  where . Thus is odd.   Let be integers. Determine if each of the following are always even, always odd, or sometimes even\/ sometimes odd.        We've now seen several examples of even\/ odd integers. Are there integers which are both even and odd? Can an integer be neither even nor odd? The answer to both questions is no. However, proving that every integer is even or odd (and not both), is pretty challenging, and we won't try to do it, yet. We will use this fact, though, so if we know an integer is not even, then it must be odd, and vice versa.  An integer, , is prime prime if and, for all positive integers , if then or .  An integer, , is composite composite if and for some positive integers with and .  Prime or Composite  Is 1 prime?  No. The definiton requires .  Is 1 composite?  No. Again, the definiton requires .  Is 121 prime?  No. . Thus, 121 is composite.  Let . Is composite?  It depends. If then, no. We would need for to be composite.    Consider the statement for all positive integers and , if then or from the definition for a prime number.  Write the statement symbolically using quantifiers and connectives.  Write the negation of the statement symbolically.  How is the negation related to the definition of a composite number? Is every integer either prime or composite?   We state our first proof technique.   Proving Existential Statements existential proof of  To prove   Find making, true. Note, this step may happen as scratchwork, not part of your proof.  For your proof, state .  Show and is true.    This type of proof is called a constructive proof of existence constructive proof existential statement   Existential Proof  Prove such that .  Let . Then and .   Another Existential Proof  Let . Prove such that .  Let . Then since and .   Let . Prove there exists such that .  There are other ways to prove existence. One common way is a proof by contradiction, which we will see later in . There are several examples of existence proofs in calculus where it can be shown that something exists without constructing a specific value. For example, take a look at a proof of Rolle's Theorem, the Mean Value Theorem, the Extreme Value Theorem, or the Taylor Remainder Theorem (Calc II).  Since the negation of a universal statement is an existential statement, we disprove a universal statements with a counterexample counterexample .   Counterexamples counterexample  To disprove the statement   Find the negation of the statement: .  Find making, true and false. Note, this step may happen as scratchwork, not part of your counterexample.  For your counterexample, state .  Show , is true and is false.     A counterexample is really just an existence proof of the negation. But since we are showing the original statement is false, we usually just call it a counterexample to the (original) statement.  Counterexample  Disprove the statement: Every prime number, , is odd.  Let . Then is prime and is not odd.   Give a counterexample to show the following statement is false: For all if then .  One of the most common mathematical statements is the universal conditional. We will see several techniques for proving . The first method, method of exhaustion, is very limited, but worth mentioning.   Method of Exhaustion proof method of exaustion  To prove , where is a finite set:  For each specific where is true, show is true.     Method of Exaustion  Prove for all , if is even and , then can be written as the sum of prime numbers.  We can find all the integers that are even and . This is the set . For each of these numbers we can demonstrate a way to write them as the sum of primes: .   The method of exhaustion only works if we can show the statement for every . But if is infinite, we need to use a more general method.   Method of Direct Proof proof direct direct proof  To prove :  Let (make sure this is a variable, or generic, , not a specific value).  Assume is true.  Show is true.    Direct Proof  Prove for all , if is even, then is odd.  Let be even. Then by definition, for some . Then where . Which means is odd.   Sum of Even Numbers  Prove the sum of two even integers is even.  Note, this statement is not obviously in the form of an if...then. We often have to translate statements into a more formal statement before proving them. Translation:  Prove for all if and are even, then is even.  Let be even. Then by definition, for some and for some . (Note, we cannot use for both and as they likely are two different numbers.) Then where . Which means is even.   Some proof writing advice:  Make the proof self-contained. Try not to reference many other mathematical facts. Many proofs in this course will rely entirely on definitions.  Use complete sentences. Even equations have a sentence structure. Your proof should be able to be read in sentences.  Give reasons. Connect your statements together.  Include words. Often using a word is better that using a symbol. Many proofs have no symbols in them at all.  The audience for your proofs is not the instructor. Think of the audience as being your peers in the course or even yourself in a few weeks (or months) when you might have forgotten the specific content. Write so you will know what you meant later.  The goal of a proof is to write a clear, easy to follow, argument--not to just get to the end. The answer is the proof itself. Use space, start a new line, set equations on their own line.  Never feel that you have to be able to know what the end of the proof will look like before you can start. Write proofs one step at a time. Start with what you know. See if you can do one thing. See if you can do another thing. Look at where you want to go. Do not try to see the whole picture at once. This is also good advice for reading a proof.   Some common proof-writing errors:  Using an example for a proof. If you need to prove a statement for all , it is not nough to show it for an example.  Using the same variable to represent two different things.  Jumping to conclusions. Giving inadequate reasons. This often occur if you rely on additional mathematical ideas or don't connect your ideas to each other.  Assuming what you need to prove. This is a big one. This most often occurs when there is confusion about conditional statements. Be careful about identifying the if and the then in a statement.   Often in math we need to identify whether a statement is true or false, so that we know whether we need to prove the true statement or disprove the false one.  Prove or Disprove  Prove or disprove there exists a positive integer such that is prime.  Since we need to try to decide if the statement is true or false, first try some examples.   After trying several examples, we might guess that it is false. If we want to disprove the statement then we need to prove the negation. Find the negation of the statement.  For all positive integers is not prime (is composite).  So we need to show that for a general we can always write as a product of with .  We can try to factor the expression: .  Let . We need to show that . Since and . Thus . Therefore, is not prime.   Prove or disprove the following statements.  For all , if is even, then is even.  For all , if is odd, then is odd.  For all , if and are odd, then their product, , is odd.    Check Your Understanding  True or false: is odd. False.  True or false: is even. False.  True or false: is odd. True.  True or false: is even. True.  True or false: if is even, then is even. True.  True or false: 99 is composite. True.  True or false: -99 is composite. False.  True or false: is prime. False.     Use the definitions of even, odd, prime, and composite to justify your answer to each of the following questions. Let and be integers.    Is even?    Is odd?    If , is composite?      Prove there are integers and such that and and is an integer.    Prove there is an integer such that is prime.    Disprove by giving a counterexample: For all real numbers and , if then .    Disprove by giving a counterexample: For all integers, and , if is odd then and are both odd.    Find the mistakes in the following proof.    Theorem: For all integers , if then is composite.   Proof : For , . But , and so 9 is composite. Hence the theorem is true.    Find the mistakes in the following proof.    Theorem: The difference between any odd integer and any even integer is odd.   Proof : Suppose is an odd integer, and is an even integer. By definition of odd, where is an integer, and by definition of even where is an integer. Then Since 1 is odd the difference between an odd integer and and even integer is odd.    Prove the difference of any even integer minus any odd integer is odd.    Prove the sum of any two odd integers is even.    Prove the following statement is false: There exists an integer such that is prime.    For the following problems determine if they are true of false. Prove the true statements and provide counterexamples for the false statements.    The product of any even integer and any integer is even.    For all integers , if is prime then .    For all integers , is a prime number.      "
 },
 {
   "id": "definition-20",
@@ -2617,7 +2617,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "4.1.5",
   "title": "",
-  "body": "Prove or disprove the following statements.  If is even, then is even.  If is odd, then is odd.  If and are odd, then their product, , is odd.  "
+  "body": "Prove or disprove the following statements.  For all , if is even, then is even.  For all , if is odd, then is odd.  For all , if and are odd, then their product, , is odd.  "
 },
 {
   "id": "DMT_direct_CYU_5np3odd",
@@ -3067,7 +3067,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.3",
   "title": "Divisibility",
-  "body": " Divisibility  In this section we introduce the idea of divisibility for integers. It is important to understand that this concept involves only integers and is not the same thing as division. Divisibility is a property while division is an operation.  Let . Then is divisible divisible by if for some .  If for some we can also say  is a multiple multiple of ;  is a factor factor of ;  is a divisor divisor of ;   divides divides  .   We use the notation divides , read divides .  Warning:  is a relationship between two integers. It is a statement that is either true or false. It does not equal a number. It is not the same thing as a fraction. It is not an equation, but it can be translated to the equation for some integer .  It is important to look at the special case when or is 0.  is always false.  is true if .  Thus, is false, even though, technically, one could write .    Finding Divisors  Find the divisors of 6.  1, 2, 3, 6, -1, -2, -3, -6  Find the divisors of 5.  1, 5, -1, -5  Find the divisors of 1.  1, -1   If does not divide , then for every . This can be difficult to show in general, but if and are specific integers, you could show is not an integer. This is the only time a fraction can show up in proofs about divibilty.  We use the notation does not divide for does not divide .  Determining Divisibility  True or false: .  True, .  True or false: .  False, has no integer solutions since .  True or false: .  False, has no integer solutions since .  True or false: .  True, .  True or false: .  True, .  True or false: .  True, .  True or false: .  True, .  True or false: .  False, has no integer solutions since .  True or false: .  False, has no integer solutions.   Determine if the following divisibility statements are true or false, and justify your answer.        Now, let's use the definition of divisibility to prove a more general theorem.  For all integers, , if and , then .  Let . Assume and . Then by definition, for some and for some . Substituting the first equation into the second, . Since , .  Prove if 15 divides , then 5 divides .  Prove or disprove if 6 divides , then 12 divides .  Prove if and , then .  Now that we have the concept of divisibility, we can look at some bigger mathematical theorems involving divisibility by primes.  Any integer is divisible by a prime.  We will divide this proof into two cases, where is prime and where is composite.  Case 1: is prime. We can see that . Since n is prime, is divisible by a prime.  Case 2: is composite. Then where , and . If is prime, then is divisible by a prime.  If is not prime, then where , and . If is prime, then and is divisible by a prime.  Similarly, if is not prime, then where , and , etc.  We can keep applying this process to get with , and .  If at any point is prime, then we are done, as we have found a prime divisor of . We know that there cannot be infinitely many non-prime since there are only finitely many integers between 1 and . Thus, the process must terminate with a prime divisor of . Hence, every integer is divisible by a prime.   We now state a big theorem in discrete mathematics, but leave the proof for later. This theorem is more commonly called the Fundamental Theorem of Arthmetic. Fundamental Theorem of Arithmetic Unique Factorization Theorem  Unique Factorization Theorem Unique Factorization Theorem  Given any integer there exists a positive integer , distinct primes , and positive integers , such that . This factorization of into powers of primes is unique except for the order of the factors.  The decomposition into powers of primes, , is called the standard form prime factorization standard form of the prime factorization.  Let be an integer . Then the factorial of factorial is given by .  For example, .  Prime Factorization  Find the prime factorization of 252 in standard form.  .  Find the prime factorization of 17 in standard form.  , since it is prime.  Find the prime factorization of 195 in standard form.  .  Find the prime factorization of in standard form.   .   Give the prime factorization of 600 in standard form.  Give the prime factorization of (9 factorial). Is 10 a factor of ? Is ?  is more powerful than it may seem. Although you have probably found prime factorizations before, you may not have thought much about the fact that they are unique. Consider the statement . Is this true or false? Well, since is a prime factorization, the only prime divisor it has is 2. Thus, is false. If you have the prime factorization of an integer, then you know exactly which primes (and which powers of primes) divide the integer.  Determine if the follwing are true or false. Give a reason for your answer.  5 divides .  6 divides .  9 divides .  300 divides .    Check Your Understanding  True or false: . True.  True or false: . True.  True or false: . False.  True or false: . False.  True or false: . True.  True or false: . True.  True or false: . True.  True or false: . False.  True or false: . False.  True or false: . True.  Give the prime factorization for . .  True or false: . True.  True or false: . , so would need a factor of . False, , so would need a factor of .    Determine if the following statements are true or false. Justify your answer.       is a factor of 66        Let . Determine if the following statements are true or false. Justify your answer.    3 divides .    is divisible by 4.    100 divides     Show that the following statement is false: For all integers and , if then .    Recall that the standard factored form of an integer is a product of powers of a prime, as in .   Write in standard factored form.    Write in standard factored form.    Without computing the value of determine how many zeros are at the end of this number when written in decimal form. Justify your answer.    For (c), What prime factors correspond to zeros at the end of a number?   Prove, using the definition of divisibility, for all integers , , and , if and then .   Prove or disprove: The product of any two even integers is a multiple of 4.  Prove or disprove: For all integers , , and , if then and .  Prove or disprove: For all integers , , and , if then or .  Prove or disprove: For all integers , , and , if is a factor of then is a factor of .   "
+  "body": " Divisibility  In this section we introduce the idea of divisibility for integers. It is important to understand that this concept involves only integers and is not the same thing as division. Divisibility is a property while division is an operation.  Let . Then is divisible divisible by if for some .  If for some we can also say  is a multiple multiple of ;  is a factor factor of ;  is a divisor divisor of ;   divides divides  .   We use the notation divides , read divides .  Warning:  is a relationship between two integers. It is a statement that is either true or false. It does not equal a number. It is not the same thing as a fraction. It is not an equation, but it can be translated to the equation for some integer .  It is important to look at the special case when or is 0.  is always false.  is true if .  Thus, is false, even though, technically, one could write .    Finding Divisors  Find the divisors of 6.  1, 2, 3, 6, -1, -2, -3, -6  Find the divisors of 5.  1, 5, -1, -5  Find the divisors of 1.  1, -1   If does not divide , then for every . This can be difficult to show in general, but if and are specific integers, you could show is not an integer. This is the only time a fraction can show up in proofs about divibilty.  We use the notation does not divide for does not divide .  Determining Divisibility  True or false: .  True, .  True or false: .  False, has no integer solutions since .  True or false: .  False, has no integer solutions since .  True or false: .  True, .  True or false: .  True, .  True or false: .  True, .  True or false: .  True, .  True or false: .  False, has no integer solutions since .  True or false: .  False, has no integer solutions.   Determine if the following divisibility statements are true or false, and justify your answer.        Now, let's use the definition of divisibility to prove a more general theorem.  For all integers, , if and , then .  Let . Assume and . Then by definition, for some and for some . Substituting the first equation into the second, . Since , .  Prove if 15 divides , then 5 divides .  Prove or disprove if 6 divides , then 12 divides .  Prove if and , then .  Now that we have the concept of divisibility, we can look at some bigger mathematical theorems involving divisibility by primes.  Any integer is divisible by a prime.  We will divide this proof into two cases, where is prime and where is composite.  Case 1: is prime. We can see that . Since n is prime, is divisible by a prime.  Case 2: is composite. Then where , and . If is prime, then is divisible by a prime.  If is not prime, then where , and . If is prime, then and is divisible by a prime.  Similarly, if is not prime, then where , and , etc.  We can keep applying this process to get with , and .  If at any point is prime, then we are done, as we have found a prime divisor of . We know that there cannot be infinitely many non-prime since there are only finitely many integers between 1 and . Thus, the process must terminate with a prime divisor of . Hence, every integer is divisible by a prime.   We now state a big theorem in discrete mathematics, but leave the proof for later. This theorem is more commonly called the Fundamental Theorem of Arthmetic. Fundamental Theorem of Arithmetic Unique Factorization Theorem  Unique Factorization Theorem Unique Factorization Theorem  Given any integer there exists a positive integer , distinct primes , and positive integers , such that . This factorization of into powers of primes is unique except for the order of the factors.  The decomposition into powers of primes, , is called the standard form prime factorization standard form of the prime factorization.  Let be an integer . Then the factorial of factorial is given by .  For example, .  Prime Factorization  Find the prime factorization of 252 in standard form.  .  Find the prime factorization of 17 in standard form.  , since it is prime.  Find the prime factorization of 195 in standard form.  .  Find the prime factorization of in standard form.   .   Give the prime factorization of 600 in standard form.  Give the prime factorization of (9 factorial). Is 10 a factor of ? Is ?  is more powerful than it may seem. Although you have probably found prime factorizations before, you may not have thought much about the fact that they are unique. Consider the statement . Is this true or false? Well, since is a prime factorization, the only prime divisor it has is 2. Thus, is false. If you have the prime factorization of an integer, then you know exactly which primes (and which powers of primes) divide the integer.  Determine if the following are true or false. Give a reason for your answer.  5 divides .  6 divides .  9 divides .  300 divides .    Check Your Understanding  True or false: . True.  True or false: . True.  True or false: . False.  True or false: . False.  True or false: . True.  True or false: . True.  True or false: . True.  True or false: . False.  True or false: . False.  True or false: . True.  Give the prime factorization for . .  True or false: . True.  True or false: . , so would need a factor of . False, , so would need a factor of .    Determine if the following statements are true or false. Justify your answer.       is a factor of 66        Let . Determine if the following statements are true or false. Justify your answer.    3 divides .    is divisible by 4.    100 divides     Show that the following statement is false: For all integers and , if then .    Recall that the standard factored form of an integer is a product of powers of a prime, as in .   Write in standard factored form.    Write in standard factored form.    Without computing the value of determine how many zeros are at the end of this number when written in decimal form. Justify your answer.    For (c), What prime factors correspond to zeros at the end of a number?   Prove, using the definition of divisibility, for all integers , , and , if and then .   Prove or disprove: The product of any two even integers is a multiple of 4.  Prove or disprove: For all integers , , and , if then and .  Prove or disprove: For all integers , , and , if then or .  Prove or disprove: For all integers , , and , if is a factor of then is a factor of .   "
 },
 {
   "id": "definition-26",
@@ -3238,7 +3238,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "4.3.7",
   "title": "",
-  "body": "Determine if the follwing are true or false. Give a reason for your answer.  5 divides .  6 divides .  9 divides .  300 divides .  "
+  "body": "Determine if the following are true or false. Give a reason for your answer.  5 divides .  6 divides .  9 divides .  300 divides .  "
 },
 {
   "id": "DMT_divis_CYU_6div24",
@@ -3688,7 +3688,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.5",
   "title": "Proof by Contradiction and Contrapositive",
-  "body": " Proof by Contradiction and Contrapositive proof by contradiction proof by contrapositive contradiction proof contrapositive proof  In this section we will learn two new proof techniques, contradiction and contrapositive. Both proof techniques rely on being able to negate mathematical statements.  As we add more proof techniques, it is important to realize that you are not expected to know which technique to use when you start a proof. Proof-writing often takes some trial and error. First try a direct proof, if you get stuck, you may think about whether breaking your set into cases will help, or whether negating a statement will make it easier to use. It is also quite possible that different methods can be used to prove the same statement.   Method of Proof by Contradiction proof by contradiction contradiction proof   Assume the statement to be proved is false. Or, assume the negation is true.  Show you reach some logical contradiction.  Conclude the original statement is true.    There Is No Greatest Integer  Prove there is no greatest integer.  By contradiction. Assume there is a greatest integer. Call this greatest integer . Now consider . Since is an integer, is an integer. We can see that , which contradicts that was the greatest. Therefore, there is no greatest integer.   Since contradiction relies on negating statements, recall the following negations:  has negation  has negation  has negation    Consider the statement: The sum of a rational number and an irrational number is irrational.  Try to determine if the statement is true or false by trying examples and looking for a counterexample.  Write the statement using variables and quantifiers.  Write the negation of the statement.  Now assume the negation is true and find a contradiction.  The work in (d) is your scratch work. Write a careful proof by contradiction to show the original statement is true.  Recall from that a conditional, , and its contrapositive, , are logically equivalent. This means we can prove the contrapositive rather than the original statement.   Method of Proof by Contrapositive proof by contrapositive contrapositive proof   Write the statement to be proved in the form , if then .  Write the contrapositive of the statement: , if then .  Prove the contrapositive directly: assume , show .    A Divisibility Proof by Contrapositive  Prove for all , if then .  This statement has contrapositive: For all , if then .  By contrapositive. Let . Assume . This means for some . Then , where . Thus, .   Consider the statement: For all integers , if is even then is even.  Write the contrapositive of the statement.  To prove the statement by contrapositive, what should you assume?  To prove the statement by contrapositive, what should you show?  Give a direct proof of the contrapositive. You have now proven the original statement by contrapositive.   Since we can use either contradiction or contrapositive on statements of the form , the following comparison may be helpful.   Comparing Contradiction and Contrapositive  Contradiction with :  Assume .  Show any contradiction. The contradiction may be or it may be , or some other logical contradiction.  Since you can reach any contradiction at all, it may be difficult to know what you are looking for. It also may be difficult to know if you've made an error.  With contradiction you get to assume more, but it is less clear what you want to show.    Contrapositive with :  Assume .  Show .  With contrapositive you assume less than contradiction, but you know exactly what you are trying to show.      Check Your Understanding  Give the negation for the statement: There does not exist a greatest odd integer. There exists a greatest odd integer.  Give the negation for the statement: For all real numbers , if is not rational then is not rational. There exists a real number such that is rational and is not rational.  Suppose you want to prove the following statement by contradiction: For all real numbers , if is not rational then is not rational. What should you assume? What should you show? Assume: there exists a real number such that is rational and is not rational. Show: any contradiction.  Give the contrapositive for the statement: For all real numbers , if is not rational then is not rational. For all real numbers if is rational then is rational.  Suppose you want to prove the following statement by contrapositive: For all real numbers , if is not rational then is not rational. What should you assume? What should you show? Assume: is real, is rational. Show: is rational.  Give the negation for the statement: For all integers and primes , if then . There exists an integer and a prime such that and .  Suppose you want to prove the following statement by contradiction: For all integers and primes , if then . What should you assume? What should you show? Assume: there exists an integer and a prime such that and . Show any contradiction.  Give the contrapositive for the statement: For all integers and primes , if then . For all integers if then .  Suppose you want to prove the following statement by contrapositive: For all integers and primes , if then . What should you assume? What should you show? Assume: is an integer, is prime, and . Show: .    Is an irrational number? Explain.   Consider the statement: For all integers , if is odd then is odd.    Write what you would assume and what you would need to show to prove this statement by contradiction.    Write what you would assume and what you would need to show to prove this statement by contrapositive.       A Test to Determine if a Number is Prime: Given any integer , to test whether is prime check to see if it is divisible by a prime number less than or equal to . If it is not divisible by any prime less than or equal to , then is prime.  Use this test to determine if the following numbers are prime or not.    527    613      Carefully write the negation of each statement then prove the statement by contradiction.   There is no greatest even integer.  There is no least positive rational number.      Prove by contradiction: If and are rational numbers, , and an irrational number, then is irrational.    Prove the following statement in two ways: (a) by contrapositive and (b) by contradiction.  For all integers , if is odd then is odd.    "
+  "body": " Proof by Contradiction and Contrapositive proof by contradiction proof by contrapositive contradiction proof contrapositive proof  In this section we will learn two new proof techniques, contradiction and contrapositive. Both proof techniques rely on being able to negate mathematical statements.  As we add more proof techniques, it is important to realize that you are not expected to know which technique to use when you start a proof. Proof-writing often takes some trial and error. First try a direct proof, if you get stuck, you may think about whether breaking your set into cases will help, or whether negating a statement will make it easier to use. It is also quite possible that different methods can be used to prove the same statement.   Method of Proof by Contradiction proof by contradiction contradiction proof   Assume the statement to be proved is false. Or, assume the negation is true.  Show you reach some logical contradiction.  Conclude the original statement is true.    There Is No Greatest Integer  Prove there is no greatest integer.  By contradiction. Assume there is a greatest integer. Call this greatest integer . Now consider . Since is an integer, is an integer. We can see that , which contradicts that was the greatest. Therefore, there is no greatest integer.   Since contradiction relies on negating statements, recall the following negations:  has negation  has negation  has negation    Consider the statement: The sum of a rational number and an irrational number is irrational.  Try to determine if the statement is true or false by trying examples and looking for a counterexample.  Write the statement using variables and quantifiers.  Write the negation of the statement.  Now assume the negation is true and find a contradiction.  The work in (d) is your scratch work. Write a careful proof by contradiction to show the original statement is true.  Recall from that a conditional, , and its contrapositive, , are logically equivalent. This means we can prove the contrapositive rather than the original statement.   Method of Proof by Contrapositive proof by contrapositive contrapositive proof   Write the statement to be proved in the form , if then .  Write the contrapositive of the statement: , if then .  Prove the contrapositive directly: assume , show .    A Divisibility Proof by Contrapositive  Prove for all , if then .  This statement has contrapositive: For all , if then .  By contrapositive. Let . Assume . This means for some . Then , where . Thus, .   Consider the statement: For all integers , if is even then is even.  Write the contrapositive of the statement.  To prove the statement by contrapositive, what should you assume?  To prove the statement by contrapositive, what should you show?  Give a direct proof of the contrapositive. You have now proven the original statement by contrapositive.   Since we can use either contradiction or contrapositive on statements of the form , the following comparison may be helpful.   Comparing Contradiction and Contrapositive  Contradiction with :  Assume .  Show any contradiction. The contradiction may be or it may be , or some other logical contradiction.  Since you can reach any contradiction at all, it may be difficult to know what you are looking for. It also may be difficult to know if you've made an error.  With contradiction you get to assume more, but it is less clear what you want to show.    Contrapositive with :  Assume .  Show .  With contrapositive you assume less than contradiction, but you know exactly what you are trying to show.      Check Your Understanding  Give the negation for the statement: There does not exist a greatest odd integer. There exists a greatest odd integer.  Give the negation for the statement: For all real numbers , if is not rational then is not rational. There exists a real number such that is rational and is not rational.  Suppose you want to prove the following statement by contradiction: For all real numbers , if is not rational then is not rational. What should you assume? What should you show? Assume: there exists a real number such that is rational and is not rational. Show: any contradiction.  Give the contrapositive for the statement: For all real numbers , if is not rational then is not rational. For all real numbers if is rational then is rational.  Suppose you want to prove the following statement by contrapositive: For all real numbers , if is not rational then is not rational. What should you assume? What should you show? Assume: is real, is rational. Show: is rational.  Give the negation for the statement: For all integers and primes , if then . There exists an integer and a prime such that and .  Suppose you want to prove the following statement by contradiction: For all integers and primes , if then . What should you assume? What should you show? Assume: there exists an integer and a prime such that and . Show any contradiction.  Give the contrapositive for the statement: For all integers and primes , if then . For all integers if then .  Suppose you want to prove the following statement by contrapositive: For all integers and primes , if then . What should you assume? What should you show? Assume: is an integer, is prime, and . Show: .    Is an irrational number? Explain.   Consider the statement: For all integers , if is odd then is odd.    Write what you would assume and what you would need to show to prove this statement by contradiction.    Write what you would assume and what you would need to show to prove this statement by contrapositive.       A Test to Determine if a Number is Prime: Given any integer , to test whether is prime check to see if it is divisible by a prime number less than or equal to . If it is not divisible by any prime less than or equal to , then is prime.  Use this test to determine if the following numbers are prime or not.    527    613      Carefully write the negation of each statement then prove the statement by contradiction.   There is no greatest even integer.  There is no least positive rational number.      Prove by contradiction: If and are rational numbers, , and is an irrational number, then is irrational.    Prove the following statement in two ways: (a) by contrapositive and (b) by contradiction.  For all integers , if is odd then is odd.    "
 },
 {
   "id": "E_nogreatinteger",
@@ -3850,7 +3850,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.5",
   "title": "",
-  "body": " Prove by contradiction: If and are rational numbers, , and an irrational number, then is irrational.  "
+  "body": " Prove by contradiction: If and are rational numbers, , and is an irrational number, then is irrational.  "
 },
 {
   "id": "exercise-217",
@@ -3868,7 +3868,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.6",
   "title": "More Proof by Contradiction and Contrapositive",
-  "body": " More Proof by Contradiction and Contrapositive  In this section we will use contradiction and contrapositive to prove two classical theorems in mathematics.  In you used contrapositive to prove if is even, then is even. This statement is an important step in our first big theorem. We state it here formally as a lemma.  Let . If is even, then is even.  We will prove this by contrapositive. Assume is odd. Show is odd. Since is odd, for some . Then Since , is odd.   is irrational.  We will prove this by contradiction. Assume is rational. Then with . We will additionally assume and have no common factors. [Note, this additional assumption just makes the proof simpler. You should convince yourself that it is reasonable to add this assumption--that given any fraction, we can always reduce so and have no common factors.]  Now, using algebra on the equations, Since , must be even. Then by , must be even.  Since is even, for some . Thus, we can substitute into the above equation. Since , must be even. Then by , must be even.  But now we have and both even, which means they both have a common factor of 2. This contradicts our assumption that and have no common factors. Since we reached a contradiction, we can conclude that is irrational.   Make sure you can read through the above proof and follow from one step to the next.  In and , we proved if is even then is even. Now suppose you want to prove if is divisible by 3 then is divisible by 3.  To prove the statement by contrapositive, what should you assume?  To prove the statement by contrapositive, what should you show?  The problem with now giving a direct proof of the contrapositive, is that we need to know what we mean by is not divisible by 3. Recall the Quotient-Remainder Theorem, . If is not divisible by 3, what are the possible forms for ? Think of the forms for .  Now write a proof by cases using the cases for from (c) to show if is not divisible by 3, then is not divisible by 3.   Our second classical theorem is to prove there are infinitely many prime numbers. We previously proved there are infinitely many integers. In that proof, if we had a biggest integer, , we were able to construct an integer that was greater than , namely . However, primes are not that nice. If you were to list out several prime numbers, it would be impossible to find a pattern for the next prime. Sometimes primes are close together, like 17 and 19, and sometimes they are far apart. In fact, it is possible to prove that we can find a list of consecutive integers where none of the consecutive integers are prime for any positive integer . This means there are arbitrarily long sequences of consecutive integers with no primes, or there are primes that are arbitrarily far apart.  First we need to understand a bit more about divisibilty with primes.  Consider the statement: For all and primes , if then .  Write the contrapositive of the statement.  Write the negation of the statement.  Based on the contrapositive and the negation, which seem easier to use in a proof?  Assume and . Can you find a contradiction?  If you were able to find a contradiction, try to write a careful proof by contradiction for the statement.   The statement in is an important lemma for proving there are infinitely many primes.  For all and all primes , if then .  We will prove this by contradiction. Let , prime. Assume and . Since , for some . Since , for some . Thus, Since , and is a factor of 1. However, the only factors of 1 are 1 and -1, which are not prime. Thus, we have a contradiction.   There are infinitely many primes.  Assume there are finitely many primes. Since there are finitely many, we can list them all, say, . Now let , the product of all the primes. Consider . We know for each prime . By , . This means is an integer greater than 1 with no prime divisor, which contradicts .   Check Your Understanding  Let . Give the contrapositive for the statement: if , then . If then .  Suppose you are given that . Use the Quotient-Remainder Theorem ( ) to list the possible cases for . What are the possible values for the remainder, ? We know from the Quotient-Remainder Theorem, , with . Since the only possible forms are .  If for some , show . Multiply out . . Since has remainder 1, .  If for some , show . Multiply out . . Since has remainder 1, .  True or false: for every , is irrational. is rational. False. is rational.  True or false: if , then . Try . False. Try .  True or false: for all , if , then . Try . False. Try .  True or false: for all , is prime. Try . False. Try .    Prove or disprove is irrational.   Prove or disprove the difference of any two irrational numbers is irrational.    Prove or disprove if is any rational number and is any irrational number, then is irrational.    Prove or disprove the product of any two irrational numbers is irrational.    Give an example to show that if is not prime and is divisible by , then need not be divisible by .    Adapt the proofs of and to prove the followng statements.   Prove that for all integers , if is even then is even.    Prove that is irrational.    For (b), adapt the steps in the proof that is irrational to and use (a).  Prove is irrational. You might find very helpful.   "
+  "body": " More Proof by Contradiction and Contrapositive  In this section we will use contradiction and contrapositive to prove two classical theorems in mathematics.  In you used contrapositive to prove if is even, then is even. This statement is an important step in our first big theorem. We state it here formally as a lemma.  Let . If is even, then is even.  We will prove this by contrapositive. Assume is odd. Show is odd. Since is odd, for some . Then Since , is odd.   is irrational.  We will prove this by contradiction. Assume is rational. Then with . We will additionally assume and have no common factors. [Note, this additional assumption just makes the proof simpler. You should convince yourself that it is reasonable to add this assumption--that given any fraction, we can always reduce so and have no common factors.]  Now, using algebra on the equations, Since , must be even. Then by , must be even.  Since is even, for some . Thus, we can substitute into the above equation. Since , must be even. Then by , must be even.  But now we have and both even, which means they both have a common factor of 2. This contradicts our assumption that and have no common factors. Since we reached a contradiction, we can conclude that is irrational.   Make sure you can read through the above proof and follow from one step to the next.  In and , we proved if is even then is even. Now suppose you want to prove if is divisible by 3 then is divisible by 3.  To prove the statement by contrapositive, what should you assume?  To prove the statement by contrapositive, what should you show?  The problem with now giving a direct proof of the contrapositive, is that we need to know what we mean by is not divisible by 3. Recall the Quotient-Remainder Theorem, . If is not divisible by 3, what are the possible forms for ? Think of the forms for .  Now write a proof by cases using the cases for from (c) to show if is not divisible by 3, then is not divisible by 3.   Our second classical theorem is to prove there are infinitely many prime numbers. We previously proved there are infinitely many integers. In that proof, if we had a biggest integer, , we were able to construct an integer that was greater than , namely . However, primes are not that nice. If you were to list out several prime numbers, it would be impossible to find a pattern for the next prime. Sometimes primes are close together, like 17 and 19, and sometimes they are far apart. In fact, it is possible to prove that we can find a list of consecutive integers where none of the consecutive integers are prime for any positive integer . This means there are arbitrarily long sequences of consecutive integers with no primes, or there are primes that are arbitrarily far apart.  First we need to understand a bit more about divisibilty with primes.  Consider the statement: For all and primes , if then .  Write the contrapositive of the statement.  Write the negation of the statement.  Based on the contrapositive and the negation, which seem easier to use in a proof?  Assume and . Can you find a contradiction?  If you were able to find a contradiction, try to write a careful proof by contradiction for the statement.   The statement in is an important lemma for proving there are infinitely many primes.  For all and all primes , if then .  We will prove this by contradiction. Let , prime. Assume and . Since , for some . Since , for some . Thus, Since , and is a factor of 1. However, the only factors of 1 are 1 and -1, which are not prime. Thus, we have a contradiction.   There are infinitely many primes.  Assume there are finitely many primes. Since there are finitely many, we can list them all, say, . Now let , the product of all the primes. Consider . We know for each prime . By , . This means is an integer greater than 1 with no prime divisor, which contradicts .   Check Your Understanding  Let . Give the contrapositive for the statement: if , then . If then .  Suppose you are given that . Use the Quotient-Remainder Theorem ( ) to list the possible cases for . What are the possible values for the remainder, ? We know from the Quotient-Remainder Theorem, , with . Since the only possible forms are .  If for some , show . Multiply out . . Since has remainder 1, .  If for some , show . Multiply out . . Since has remainder 1, .  True or false: for every , is irrational. is rational. False. is rational.  True or false: if , then . Try . False. Try .  True or false: for all , if , then . Try . False. Try .  True or false: for all , is prime. Try . False. Try .    Prove or disprove is irrational.   Prove or disprove the difference of any two irrational numbers is irrational.    Prove or disprove if is any rational number and is any irrational number, then is irrational.    Prove or disprove the product of any two irrational numbers is irrational.    Give an example to show that if is not prime and is divisible by , then need not be divisible by .    Adapt the proofs of and to prove the following statements.   Prove that for all integers , if is even then is even.    Prove that is irrational.    For (b), adapt the steps in the proof that is irrational to and use (a).  Prove is irrational. You might find very helpful.   "
 },
 {
   "id": "L_nsquaredeven",
@@ -4084,7 +4084,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.6.6",
   "title": "",
-  "body": " Adapt the proofs of and to prove the followng statements.   Prove that for all integers , if is even then is even.    Prove that is irrational.    For (b), adapt the steps in the proof that is irrational to and use (a). "
+  "body": " Adapt the proofs of and to prove the following statements.   Prove that for all integers , if is even then is even.    Prove that is irrational.    For (b), adapt the steps in the proof that is irrational to and use (a). "
 },
 {
   "id": "exercise-232",
@@ -4444,7 +4444,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.2",
   "title": "Mathematical Induction",
-  "body": " Mathematical Induction mathematical induction induction  In this section we learn a new proof technique, mathematical induction. This technique is useful for proving statements about the positive (or nonnegative) integers. It is based on the following principle.   Principle of Mathematical Induction  Let be a property defined for integers , and let be a fixed integer. Suppose the following are true: is true;  For all with , if is true than is true; then for all , is true.   The way to think about the Principle of Mathematical Induction is that if you know the statement is true for some starting value, ( is true), and if you can show that knowing the statement is true for some value allows you to know it is true for the next value ( ), then you know it for all values greater than or equal to .  So why should this work? Suppose you know two things:  is true, and   .  Note, you do not know is true, just that if it is true, then will be true. Now since is true, by (2.), must be true. Since is true, must be true, etc. In this way we can see that must be true for all .  The Principle of Mathematical Induction lets us skip all the intermediate steps, and conclude once we have (1.) and (2.).  Induction proofs follow a fairly formal structure. You are encouraged to follow the structure closely.   Structure of a Mathematical Induction Proof proof by induction induction proof structure  To prove ,  Base Step Show is true.  Induction Step Assume for some , show .  Conclude is true for all   In the above structure we used for simplicitiy, but an induction proof could have a base step starting at a different . Most commonly, the base step starts with 0 or 1.  When writing induction proofs, make sure you use the actual statement you are proving rather than the notation .  Since the induction step in mathematical induction connects a statement about to a statement about , we need to be comfortable with the relationship between sums of terms and sums of terms.  Write out the summation for .  Write out the summation for .  How do (a) and (b) differ?   Proof by Induction: Summation Formula  Prove for .   Base Step: Let . Then Since the left hand side of the equation equals the right hand side, for .  Induction Step:  Assume for some .  Show .  Proof of induction step: Thus, .  Hence, by induction for .    Note, in the base step we looked at each side of what we wanted to show separately. We can refer to this as a left hand side\/ right hand side proof , or in short hand, a LHS\/RHS proof. If we just start with the equation we want to show, then we are assuming what we are trying to prove. To avoid this, it is best, when trying to show two things are equal in the base step, to do a LHS\/ RHS proof.  now gives us a useful formula for finding the sum of 1 through :  Before the next example, we practice the relationship between sums of terms and sums of terms.  Write out the summation for .  Write out the summation for .  How do (a) and (b) differ?   Proof by Induction: Geometric Sum  Prove for .   Base Step: Let . Then Since the left hand side of the equation equals the right hand side, for .  Induction Step:  Assume for some .  Show .  Proof of induction step: Thus, .  Hence, by induction for .    The sum in is called a geometric sum geometric sum . Now we have a useful formula for the sum of for various values of :   Suppose you want to prove for all by induction.  What would you want to prove in the base step?  What should you assume in the induction step?.  What should you show in the induction step?  Now try to put this all together in the form of an induction proof. If you are unable to prove it, where do you get stuck?   Using Summation Formulas  Use one of the sum formulas, or , to calculate the following sums.       The closed form closed form sum summation closed form of a sum is the computational formula for the sum. For example, the closed form of is .   Check Your Understanding  Determine the values of in the summation formula to find .  : , :     Correct    What is the first term of the sum?      Correct    What is the last term of the sum?     Determine the values of in the summation formula to find .  : , :    Correct    What is the first value for so that the first term in the sequence is 2?      Correct    What is the last value for so that the last term is 12?     Determine the values of in the summation formula to find .  : , :    Correct    How many terms are there if we start counting at 0?      Correct    What do you multiply each term by to get the next term?     Determine the values of in the summation formula to find .  : , :    Correct    How many terms are there if we start counting at 0?      Correct    What do you multiply each term by to get the next term?     Write out the rest of the summation formula for .  Suppose you want to prove . Show the formula holds for . Use a LHS\/RHS proof. LHS: RHS:  Suppose you want to prove . What should you assume in the induction step? Let .  Suppose you want to prove . What should you show in the induction step? Let .  Consider . What is the term in the sum?  Consider . What is the term in the sum?    Use one of the formulas or to evaluate    Use one of the formulas or to write the closed form of the following sums.            For each integer with , let be the formula     Write out the statement . Is true?    Write out the statement .    Write out the statement .    In a proof by mathematical induction that the formula holds for all , what must be shown in the inductive step?      Use mathematical induction to prove for all integers ,     Use mathematical induction to prove for all integers ,     Use mathematical induction to prove for all integers ,     "
+  "body": " Mathematical Induction mathematical induction induction  In this section we learn a new proof technique, mathematical induction. This technique is useful for proving statements about the positive (or nonnegative) integers. It is based on the following principle.   Principle of Mathematical Induction  Let be a property defined for integers , and let be a fixed integer. Suppose the following are true: is true;  For all with , if is true then is true; then for all , is true.   The way to think about the Principle of Mathematical Induction is that if you know the statement is true for some starting value, ( is true), and if you can show that knowing the statement is true for some value allows you to know it is true for the next value ( ), then you know it for all values greater than or equal to .  So why should this work? Suppose you know two things:  is true, and   .  Note, you do not know is true, just that if it is true, then will be true. Now since is true, by (2.), must be true. Since is true, must be true, etc. In this way we can see that must be true for all .  The Principle of Mathematical Induction lets us skip all the intermediate steps, and conclude once we have (1.) and (2.).  Induction proofs follow a fairly formal structure. You are encouraged to follow the structure closely.   Structure of a Mathematical Induction Proof proof by induction induction proof structure  To prove ,  Base Step Show is true.  Induction Step Assume for some , show .  Conclude is true for all   In the above structure we used for simplicitiy, but an induction proof could have a base step starting at a different . Most commonly, the base step starts with 0 or 1.  When writing induction proofs, make sure you use the actual statement you are proving rather than the notation .  Since the induction step in mathematical induction connects a statement about to a statement about , we need to be comfortable with the relationship between sums of terms and sums of terms.  Write out the summation for .  Write out the summation for .  How do (a) and (b) differ?   Proof by Induction: Summation Formula  Prove for .   Base Step: Let . Then Since the left hand side of the equation equals the right hand side, for .  Induction Step:  Assume for some .  Show .  Proof of induction step: Thus, .  Hence, by induction for .    Note, in the base step we looked at each side of what we wanted to show separately. We can refer to this as a left hand side\/ right hand side proof , or in short hand, a LHS\/RHS proof. If we just start with the equation we want to show, then we are assuming what we are trying to prove. To avoid this, it is best, when trying to show two things are equal in the base step, to do a LHS\/ RHS proof.  now gives us a useful formula for finding the sum of 1 through :  Before the next example, we practice the relationship between sums of terms and sums of terms.  Write out the summation for .  Write out the summation for .  How do (a) and (b) differ?   Proof by Induction: Geometric Sum  Prove for .   Base Step: Let . Then Since the left hand side of the equation equals the right hand side, for .  Induction Step:  Assume for some .  Show .  Proof of induction step: Thus, .  Hence, by induction for .    The sum in is called a geometric sum geometric sum . Now we have a useful formula for the sum of for various values of :   Suppose you want to prove for all by induction.  What would you want to prove in the base step?  What should you assume in the induction step?  What should you show in the induction step?  Now try to put this all together in the form of an induction proof. If you are unable to prove it, where do you get stuck?   Using Summation Formulas  Use one of the sum formulas, or , to calculate the following sums.       The closed form closed form sum summation closed form of a sum is the computational formula for the sum. For example, the closed form of is .   Check Your Understanding  Determine the values of in the summation formula to find .  : , :     Correct    What is the first term of the sum?      Correct    What is the last term of the sum?     Determine the values of in the summation formula to find .  : , :    Correct    What is the first value for so that the first term in the sequence is 2?      Correct    What is the last value for so that the last term is 12?     Determine the values of in the summation formula to find .  : , :    Correct    How many terms are there if we start counting at 0?      Correct    What do you multiply each term by to get the next term?     Determine the values of in the summation formula to find .  : , :    Correct    How many terms are there if we start counting at 0?      Correct    What do you multiply each term by to get the next term?     Write out the rest of the summation formula for .  Suppose you want to prove . Show the formula holds for . Use a LHS\/RHS proof. LHS: RHS:  Suppose you want to prove . What should you assume in the induction step? Let .  Suppose you want to prove . What should you show in the induction step? Let .  Consider . What is the term in the sum?  Consider . What is the term in the sum?    Use one of the formulas or to evaluate    Use one of the formulas or to write the closed form of the following sums.            For each integer with , let be the formula     Write out the statement . Is true?    Write out the statement .    Write out the statement .    In a proof by mathematical induction that the formula holds for all , what must be shown in the inductive step?      Use mathematical induction to prove for all integers ,     Use mathematical induction to prove for all integers ,     Use mathematical induction to prove for all integers ,     "
 },
 {
   "id": "activity-87",
@@ -4498,7 +4498,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "5.2.3",
   "title": "",
-  "body": "Suppose you want to prove for all by induction.  What would you want to prove in the base step?  What should you assume in the induction step?.  What should you show in the induction step?  Now try to put this all together in the form of an induction proof. If you are unable to prove it, where do you get stuck?  "
+  "body": "Suppose you want to prove for all by induction.  What would you want to prove in the base step?  What should you assume in the induction step?  What should you show in the induction step?  Now try to put this all together in the form of an induction proof. If you are unable to prove it, where do you get stuck?  "
 },
 {
   "id": "E_usingsums",
@@ -4822,7 +4822,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.4",
   "title": "Strong Induction",
-  "body": " Strong Induction strong induction Quotient-Remainder Theorem proof  In this section we look at a variation on induction called strong induction. This is really just regular induction except we make a stronger assumption in the induction hypothesis. It is possible that we need to show more than one base case as well, but for the moment we will just look at how and why we may need to change the assumption.  strong induction induction strong  Stong Induction  Let be a property defined for integers . If  are true for some , and  if is true for all , then is true;  then we can conclude is true for all .   As in the previous sections on induction, we will assume .  Strong induction requires a change in how we write our induction assumption, so we need a slight change to our standard structure for a strong induction proof.   Structure of a Strong Induction Proof strong induction proof structure   Base Step Assume is true.  Induction Step Assume is true for all . Show is true.   For now, we can use in the base step and just do one base step as before. But we might need to show, say, and .   The only real difference between strong induction and regular induction is that instead of assuming , we assume . In notation, this is for all .  Why can we change the assumption? Well, remember how induction works, first we show , then the induction step gets us to , which then gets us to , etc. But once we get to, say, , we already know . Thus, we may as well assume we have for everything up to .  To see the necessity of a stronger assumption, we revisit , by using induction to prove every integer is divisible by a prime. First we will attempt to use regular induction and see why it isn't enough.  Trying Regular Induction  Prove for all integers , is divisible by a prime.  First we try to do the proof using regular induction.   Base Step: Let . Then and 2 is prime.  Thus, is divisible by a prime.  Induction Step:  Assume is divisible by a prime for some .  Show is divisible by a prime.  Proof of induction step:  Case 1: is prime. Now, and hence is divisible by a prime.  Case 2: is not prime. This is were we get stuck, since although we know is divisible by a prime, that doesn't tell us anything about . In fact, we showed that any prime dividing  cannot divide .  Thus, regular induction is not going to work for this proof.    Now we can show how to do the proof with strong induction.  Strong Induction  Prove for all integers , is divisible by a prime.  The only change in the structure is to the induction assumption.   Base Step: Let . Then and 2 is prime.  Thus, is divisible by a prime.  Induction Step:  Assume is divisible by a prime for all and for some .  Show is divisible by a prime.  Proof of induction step:  Case 1: is prime. Now, and hence is divisible by a prime.  Case 2: is not prime. Thus where . Then . By our induction assumption, must be divisible by a prime. Since and is divisible by a prime, is divisible by a prime.  Thus, by induction, every is divisible by a prime.    In regular induction, we use that we know the statement holds for to get that it holds for . Strong induction is useful when we need to use some smaller case (not just ) to get the statement for .  Let be the sequence defined as   Write out the first 6 terms of the sequence.  Convince yourself that for the first six terms of the sequence, .  Now try to write a standard induction proof to prove for all . Does anything go wrong?  The proof requires strong induction. For the base step, how many previous terms do you need before you can first compute using the formula provided in defining the sequence? You need to show the base step for each of these initial terms since the induction won't apply to them. Check the base step for each of these terms.  Write the assume and show statements for the inductive step. Make sure your assume statement is in the form for strong induction.  Now prove the inductive step.  For the remainder of the section, we are going to switch gears a bit, a prove the existence part of the Quotient-Remainder Theorem. Before we do that we need the Well-Ordering Principle, which we will state without a proof.  Well-Ordering Principle Well-Ordering Principle Let be a set containing one or more integers, all of which are greater than some fixed integer. Then has a least element.  To check that the Well-Ordering Principle applies, you need to check three things:    Every element of is greater than some fixed integer.   Well-Ordering Principle  First note that the Well-Ordering Principle does not apply if the set is not integers. For example, This is not a subset of the integers and does not have a least element, even though every element is greater than 0.  Now consider . Check each of the conditions.  since .  since .  Every element of is greater than some fixed integer since when .    Let . Do the conditions of the Well-Ordering Principle apply to  Let . Do the conditions of the Well-Ordering Principle apply to  Do the conditions of the Well-Ordering Principle apply to  Let , and . Do the conditions of the Well-Ordering Principle apply to  We now prove the existence part of the Quotient-Remainder Theorem.  : Given any with , there exist such that and . Quotient-Remainder Theorem  Let . Show satisfies the Well-Ordering Principle. Clearly is a set of integers, and by definition, every element is greater than or equal to 0. So we just need to show that .  If , we can let . Then . Hence .  If , let . Then . But and . Thus, . Hence .  Thus, is nonempty and satisfies the conditions of the Well-Ordering Principle. Hence, has a least element. Call it .  Since , for some . Let . Then , and so .  We just need to show that . Well, since .  We will use contradiction to show . Assume . Then But then and . This contradicts that was the smallest element of . Therefore, .   Check Your Understanding  True or false: satisfies the conditions of the Well-Ordering Principle. The elements aren't all integers. False, the elements aren't all integers.  True or false: satisfies the conditions of the Well-Ordering Principle. Check that the set satifies the three conditions. True.  True or false: satisfies the conditions of the Well-Ordering Principle. The elements aren't all greater that some integer. False, the elements aren't all greater that some integer.  True or false: satisfies the conditions of the Well-Ordering Principle. Check that the set satifies the three conditions. True.  True or false: satisfies the conditions of the Well-Ordering Principle. Check that the set satifies the three conditions. True.    Let be the sequence defined as    Prove that is odd for all integers .  Let be the sequence defined as    Prove that is divisible by 4 for all integers .   Let be the sequence defined as    Prove that for all integers .    Let be the sequence defined as    Use strong induction to prove that or all integers .    "
+  "body": " Strong Induction strong induction Quotient-Remainder Theorem proof  In this section we look at a variation on induction called strong induction. This is really just regular induction except we make a stronger assumption in the induction hypothesis. It is possible that we need to show more than one base case as well, but for the moment we will just look at how and why we may need to change the assumption.  strong induction induction strong  Strong Induction  Let be a property defined for integers . If  are true for some , and  if is true for all , then is true;  then we can conclude is true for all .   As in the previous sections on induction, we will assume .  Strong induction requires a change in how we write our induction assumption, so we need a slight change to our standard structure for a strong induction proof.   Structure of a Strong Induction Proof strong induction proof structure   Base Step Assume is true.  Induction Step Assume is true for all . Show is true.   For now, we can use in the base step and just do one base step as before. But we might need to show, say, and .   The only real difference between strong induction and regular induction is that instead of assuming , we assume . In notation, this is for all .  Why can we change the assumption? Well, remember how induction works, first we show , then the induction step gets us to , which then gets us to , etc. But once we get to, say, , we already know . Thus, we may as well assume we have for everything up to .  To see the necessity of a stronger assumption, we revisit , by using induction to prove every integer is divisible by a prime. First we will attempt to use regular induction and see why it isn't enough.  Trying Regular Induction  Prove for all integers , is divisible by a prime.  First we try to do the proof using regular induction.   Base Step: Let . Then and 2 is prime.  Thus, is divisible by a prime.  Induction Step:  Assume is divisible by a prime for some .  Show is divisible by a prime.  Proof of induction step:  Case 1: is prime. Now, and hence is divisible by a prime.  Case 2: is not prime. This is were we get stuck, since although we know is divisible by a prime, that doesn't tell us anything about . In fact, we showed that any prime dividing  cannot divide .  Thus, regular induction is not going to work for this proof.    Now we can show how to do the proof with strong induction.  Strong Induction  Prove for all integers , is divisible by a prime.  The only change in the structure is to the induction assumption.   Base Step: Let . Then and 2 is prime.  Thus, is divisible by a prime.  Induction Step:  Assume is divisible by a prime for all and for some .  Show is divisible by a prime.  Proof of induction step:  Case 1: is prime. Now, and hence is divisible by a prime.  Case 2: is not prime. Thus where . Then . By our induction assumption, must be divisible by a prime. Since and is divisible by a prime, is divisible by a prime.  Thus, by induction, every is divisible by a prime.    In regular induction, we use that we know the statement holds for to get that it holds for . Strong induction is useful when we need to use some smaller case (not just ) to get the statement for .  Let be the sequence defined as   Write out the first 6 terms of the sequence.  Convince yourself that for the first six terms of the sequence, .  Now try to write a standard induction proof to prove for all . Does anything go wrong?  The proof requires strong induction. For the base step, how many previous terms do you need before you can first compute using the formula provided in defining the sequence? You need to show the base step for each of these initial terms since the induction won't apply to them. Check the base step for each of these terms.  Write the assume and show statements for the inductive step. Make sure your assume statement is in the form for strong induction.  Now prove the inductive step.  For the remainder of the section, we are going to switch gears a bit, a prove the existence part of the Quotient-Remainder Theorem. Before we do that we need the Well-Ordering Principle, which we will state without a proof.  Well-Ordering Principle Well-Ordering Principle Let be a set containing one or more integers, all of which are greater than some fixed integer. Then has a least element.  To check that the Well-Ordering Principle applies, you need to check three things:    Every element of is greater than some fixed integer.   Well-Ordering Principle  First note that the Well-Ordering Principle does not apply if the set is not integers. For example, This is not a subset of the integers and does not have a least element, even though every element is greater than 0.  Now consider . Check each of the conditions.  since .  since .  Every element of is greater than some fixed integer since when .    Determine if the conditions of the Well-Ordering Principle apply to each of the following sets.  Let , .  Let , .     Give three elements of each set, then determine if the conditions of the Well-Ordering Principle apply to each of the following sets.    Let , and ,   We now prove the existence part of the Quotient-Remainder Theorem.  : Given any with , there exist such that and . Quotient-Remainder Theorem  Let . Show satisfies the Well-Ordering Principle. Clearly is a set of integers, and by definition, every element is greater than or equal to 0. So we just need to show that .  If , we can let . Then . Hence .  If , let . Then . But and . Thus, . Hence .  Thus, is nonempty and satisfies the conditions of the Well-Ordering Principle. Hence, has a least element. Call it .  Since , for some . Let . Then , and so .  We just need to show that . Well, since .  We will use contradiction to show . Assume . Then But then and . This contradicts that was the smallest element of . Therefore, .   Check Your Understanding  True or false: satisfies the conditions of the Well-Ordering Principle. The elements aren't all integers. False, the elements aren't all integers.  True or false: satisfies the conditions of the Well-Ordering Principle. Check that the set satifies the three conditions. True.  True or false: satisfies the conditions of the Well-Ordering Principle. The elements aren't all greater that some integer. False, the elements aren't all greater that some integer.  True or false: satisfies the conditions of the Well-Ordering Principle. Check that the set satifies the three conditions. True.  True or false: satisfies the conditions of the Well-Ordering Principle. Check that the set satifies the three conditions. True.    Let be the sequence defined as    Prove that is odd for all integers .  Let be the sequence defined as    Prove that is divisible by 4 for all integers .   Let be the sequence defined as    Prove that for all integers .    Let be the sequence defined as    Use strong induction to prove that for all integers .    "
 },
 {
   "id": "E_divbyprimeregular",
@@ -4876,7 +4876,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "5.4.2",
   "title": "",
-  "body": "Let . Do the conditions of the Well-Ordering Principle apply to "
+  "body": "Determine if the conditions of the Well-Ordering Principle apply to each of the following sets.  Let , .  Let , .    "
 },
 {
   "id": "activity-94",
@@ -4885,25 +4885,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "5.4.3",
   "title": "",
-  "body": "Let . Do the conditions of the Well-Ordering Principle apply to "
-},
-{
-  "id": "activity-95",
-  "level": "2",
-  "url": "stronginduction5-4.html#activity-95",
-  "type": "Activity",
-  "number": "5.4.4",
-  "title": "",
-  "body": "Do the conditions of the Well-Ordering Principle apply to "
-},
-{
-  "id": "activity-96",
-  "level": "2",
-  "url": "stronginduction5-4.html#activity-96",
-  "type": "Activity",
-  "number": "5.4.5",
-  "title": "",
-  "body": "Let , and . Do the conditions of the Well-Ordering Principle apply to "
+  "body": "Give three elements of each set, then determine if the conditions of the Well-Ordering Principle apply to each of the following sets.    Let , and ,  "
 },
 {
   "id": "proof-25",
@@ -4993,7 +4975,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.4.4",
   "title": "",
-  "body": " Let be the sequence defined as    Use strong induction to prove that or all integers .  "
+  "body": " Let be the sequence defined as    Use strong induction to prove that for all integers .  "
 },
 {
   "id": "recursion5-5",
@@ -5005,9 +4987,9 @@ var ptx_lunr_docs = [
   "body": " Defining Sequences Recursively sequence recursive  We've seen sequences defined explicitly, such as . Another common way to generate a sequence is by giving a rule for how to generate the next term from the previous term. For example, where . Such sequences are called recursively defined sequences recursively defined sequence .  Explicitly Defined Sequences explicit sequence sequence explicit  Find the first five terms of the sequence given by .   Find the first five terms of the sequence given by .   Write out the first 6 terms of the sequence .  Recursively Defined Sequences  Find the first five terms of the sequence given by .   Find the first five terms of the sequence given by .   Find the first five terms of the sequence given by .   Write out the first 6 terms of the sequence .  Although both types of sequences use an equation to find , the recursive sequence also needs to define the first few terms. If we change the initial terms, we get a different sequence. The formula used to generate the recursive sequence is called a recurrence relation recurrence relation , while the first term (or terms) is called the initial condition(s) .  An advantage of an explicitly defined sequence is that it is easy to find any particular term. For example, it would be easy to calculate in . In order to find in , we would need to know , and all the terms before that. So we would need to have generated the sequence up to that point to calculate a specific term.  Recursive sequences have the advantage that they can be faster (or computationally simpler) to calculate, especially if you need to generate many terms of the sequence. Computers are good at generating recursive sequences. It also may be the case that we can easily define a recursive sequence in which it is difficult, or even impossible, to express with an explicit formula.  The Fibonacci Sequence Fibonacci sequence sequence Fibonacci  The Fibonacci sequence is defined recursively by Give the first 6 terms of the Fibonacci sequence.   Write out the 7th, 8th, and 9th terms of the Fibonacci sequence.  The Fibonacci sequence is a good example of a recursively defined sequence where it is difficult to find an explicit formula. An explicit formula for the Fibonacci sequence does exist, we will see it in the next section and in , but it requires much more sophisticated mathematics to find it than anything we will see in this course. If you are interested, though, this is the sort of thing you would see if you take a combinatorics course. When we do see the formula, it should be clear that it is computationally much harder to work with than the recursive definiton (which is why you rarely see it when working with the Fibonacci sequence).  We would like to explore the connection between recursive and explicit sequences.  Write out the first 6 terms of . Is this an explicitly or recursively defined sequence?  Consider the recurrence relationship . Write out several terms of the sequence for a couple different choices of initial terms.  How do the sequences in (a) and (b) compare?  We want to be able to show the relationship between the recursive definition and the explicit definition for a sequence. In this section we will look at proving an explicit sequence satisfies a given recurrence relation. Since, in general, explict formulas contain more information than a recurrence relation, we can use simpler proof techniques to show an explicit sequence satisfies a recurrence relation.   Proving a Sequence Satisfies a Recurrence Relation recurrence relation proof  To prove an explicity defined sequence satisfies a recurrence relation:  Assume the explicit formula for the sequence.  Show, using a LHS\/RHS proof, that the recurrence relation holds.  This is always a direct proof. Do not use induction. We will see induction in the next section.   Proving a Recurrence Relation for an Explicit Sequence  Let . Show this sequence satisfies the recurrence relation , for .   Assume for all . Show this sequence statisfies the recurrence relation .  LHS: , since we know that satisfies the explicit formula.  RHS: , since we know that satisfies the explicit formula.  Simplifying, we get .  Thus, the LHS=RHS, hence .    Prove satisfies the recurrence relationship , by assuming the sequence is given by , and showing .  To show an explicitly defined sequence satisfies a recurrence relationship always assume the explicit formula and show the recursive one. This can almost always be done with a direct proof.  We can use the recurrence relation for the Fibonacci numbers to prove additional properties.  For the Fibonacci sequence, prove for all . Pick whichever side of the equation looks easier to start with. Do some algebra and, where appropriate, use the recursive definition for . If you get stuck, try working with the other side of the equation.   Check Your Understanding  Find the 4th term of the sequence: .     Correct    You found the third term.    You found the fifth term.    The first two terms are 2, 6.    2, 6, 26, 126  Find the 4th term of the sequence: .     Correct    You found the third term.    The first two terms are 1, 2.    1, 2, 2, 1  Find the 4th term of the sequence: .     Correct    You found the third term.    The first two terms are 2, 6.    2, 6, 12, 20  Find the 4th term of the sequence: .     Correct    You found the third term.    The first two terms are 1, 3.    1, 3, 6, 10  Determine if the following sequence is explicitly defined or recursively defined: .  Explicitly defined  Recursively defined  Recursively defined.  Determine if the following sequence is explicitly defined or recursively defined: .  Explicitly defined  Recursively defined  Recursively defined.  Determine if the following sequence is explicitly defined or recursively defined: .  Explicitly defined  Recursively defined  Explicitly defined.  Determine if the following sequence is explicitly defined or recursively defined: .  Explicitly defined  Recursively defined  Recursively defined.  Let . Show this sequence satisfies the recurrence relation . This is a LHS\/RHS proof showing the recurrence relation is true when you assume . In particular, you know and . LHS: . RHS: .  Let . Show this sequence satisfies the recurrence relation . This is a LHS\/RHS proof showing the recurrence relation is true when you assume . In particular, you know and . LHS: . RHS: .  Let . Show this sequence satisfies the recurrence relation . This is a LHS\/RHS proof showing the recurrence relation is true when you assume . In particular, you know and . LHS: . RHS: .     Find the first 4 terms of the sequence defined by      Find the first 4 terms of the sequence defined by      Let be the sequence defined by the formula , for all integers . Show that this sequence satisfies the recurrence relation for all integers .    Let be the sequence defined by the formula , for all integers . Show that this sequence satisfies the recurrence relation for all integers .    Let be the sequence defined by the formula , for all integers . Show that this sequence satisfies the recurrence relation     Let be the Fibonacci sequence. Prove that for all integers .    It turns out that the Fibonacci sequence satisfies the following explicit formula: Verify that the sequence defined by this explicit formula satisfies the Fibonacci recurrence relation for all integers .    "
 },
 {
-  "id": "p-1636",
+  "id": "p-1640",
   "level": "2",
-  "url": "recursion5-5.html#p-1636",
+  "url": "recursion5-5.html#p-1640",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -5023,9 +5005,9 @@ var ptx_lunr_docs = [
   "body": "Explicitly Defined Sequences explicit sequence sequence explicit  Find the first five terms of the sequence given by .   Find the first five terms of the sequence given by .  "
 },
 {
-  "id": "activity-97",
+  "id": "activity-95",
   "level": "2",
-  "url": "recursion5-5.html#activity-97",
+  "url": "recursion5-5.html#activity-95",
   "type": "Activity",
   "number": "5.5.1",
   "title": "",
@@ -5041,18 +5023,18 @@ var ptx_lunr_docs = [
   "body": "Recursively Defined Sequences  Find the first five terms of the sequence given by .   Find the first five terms of the sequence given by .   Find the first five terms of the sequence given by .  "
 },
 {
-  "id": "activity-98",
+  "id": "activity-96",
   "level": "2",
-  "url": "recursion5-5.html#activity-98",
+  "url": "recursion5-5.html#activity-96",
   "type": "Activity",
   "number": "5.5.2",
   "title": "",
   "body": "Write out the first 6 terms of the sequence . "
 },
 {
-  "id": "p-1644",
+  "id": "p-1648",
   "level": "2",
-  "url": "recursion5-5.html#p-1644",
+  "url": "recursion5-5.html#p-1648",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -5068,18 +5050,18 @@ var ptx_lunr_docs = [
   "body": "The Fibonacci Sequence Fibonacci sequence sequence Fibonacci  The Fibonacci sequence is defined recursively by Give the first 6 terms of the Fibonacci sequence.  "
 },
 {
-  "id": "activity-99",
+  "id": "activity-97",
   "level": "2",
-  "url": "recursion5-5.html#activity-99",
+  "url": "recursion5-5.html#activity-97",
   "type": "Activity",
   "number": "5.5.3",
   "title": "",
   "body": "Write out the 7th, 8th, and 9th terms of the Fibonacci sequence. "
 },
 {
-  "id": "activity-100",
+  "id": "activity-98",
   "level": "2",
-  "url": "recursion5-5.html#activity-100",
+  "url": "recursion5-5.html#activity-98",
   "type": "Activity",
   "number": "5.5.4",
   "title": "",
@@ -5095,18 +5077,18 @@ var ptx_lunr_docs = [
   "body": "Proving a Recurrence Relation for an Explicit Sequence  Let . Show this sequence satisfies the recurrence relation , for .   Assume for all . Show this sequence statisfies the recurrence relation .  LHS: , since we know that satisfies the explicit formula.  RHS: , since we know that satisfies the explicit formula.  Simplifying, we get .  Thus, the LHS=RHS, hence .   "
 },
 {
-  "id": "activity-101",
+  "id": "activity-99",
   "level": "2",
-  "url": "recursion5-5.html#activity-101",
+  "url": "recursion5-5.html#activity-99",
   "type": "Activity",
   "number": "5.5.5",
   "title": "",
   "body": "Prove satisfies the recurrence relationship , by assuming the sequence is given by , and showing . "
 },
 {
-  "id": "activity-102",
+  "id": "activity-100",
   "level": "2",
-  "url": "recursion5-5.html#activity-102",
+  "url": "recursion5-5.html#activity-100",
   "type": "Activity",
   "number": "5.5.6",
   "title": "",
@@ -5284,9 +5266,9 @@ var ptx_lunr_docs = [
   "body": " Solving Recurrence Relations by Iteration iteration recurrence relation iteration  Given a sequence defined recursively, we want to be able to find an explicit formula for the sequence. In general, this can be difficult and can involve very sophisticated mathematical tools. We will learn one method, the method of iteration , just to get a taste for the ideas.   Method of Iteration iteration method of  To find an explicit formula for a recursive sequence using the methods of iteration:  Calculate several terms of the sequence, often without simplifying the terms.  See a pattern.  Guess an explicit formula for the pattern. Keep in mind your formula should just depend on .  Prove your explicit formula using induction.    Finding an Explicit Formula explicit formula by iteration  Find the first five terms of the sequence given by , .   It might be difficult to see a pattern, so we will calculate the terms without simplifying at all .   Now it should be easier to see a pattern. It seems we have , which is an explicit formula.  To prove this is the correct formula, we would assume and prove by induction.   Let . Prove  Base Step: Let . Then . And . Thus, for .  Induction Step: Assume for some .  Show .  Proof of induction step: By the recursive definition of the sequence, . Thus, Therefore, by induction, .   An arithmetic sequence arthmetic sequence sequence arithmetic is given recursively by where is constant.  Generalize to find an explicit formula for an arithmetic sequence.  Let . Write out the first 6 terms of the arithmetic sequence. Can you find an explicit formula for the sequence (one that just depends on )?  Write out the first 6 terms of the sequence without simplifying at all . Now can you find an explicit formula?  Using the same technique of writing out the terms without simplifying, find an explicit formula for the general form, , of an arithmetic sequence.   A geometric sequence geometric sequence sequence geometric is given recursively by where is constant.  Use the method of iteration to find an explicit formula for a geometric sequence.  Let . Write out the first 6 terms of the geometric sequence. Can you find an explicit formula for the sequence (one that just depends on )?  Write out the first 6 terms of the sequence without simplifying at all . Now can you find an explicit formula?  Using the same technique of writing out the terms without simplifying, find an explicit formula for the general form, , of a geometric sequence.    Proving a Recursive Sequence Satisfies an Explicit Formula explicit formula proof recurrence relation proof of explicit formula  To prove a recursively defined sequence satisfies an explicit formula:  Assume the recursive formula for the sequence.  Show, using an induction proof, that the explicit formula holds. You need to prove the base step for all initial terms. You will need to use the recurrence relation in the inductive step.     Prove if and , then for by induction. You are assuming the recursive relationship holds. The statement you are proving by induction is that for .  Prove if , then for by induction. You are assuming the recursive relationship holds. The statement you are proving by induction is that for .  As promised, in we will prove an explicit formula for the Fibonacci sequence. We will not derive it as that is beyond the scope of this course. But we can prove that it works using induction. Before working through the proof, it will be helpful to see the algebraic simplification in the next activity.  Simplify and .  Proving Explicit Formula for the Fibonacci Sequence Fibonacci sequence explicit formula  Let , be the Fibonacci sequence.  Prove .   Let .  Base Step: Let . Then . And  Let . Then . And  Induction Step: Assume for some (strong induction).  Show  Proof of induction step: By the recursive definition of the sequence, . Thus, Therefore, by induction, .   Note, the proof contains some algebraic steps that may not be obvious. But all of them can be checked. For example, it is easier to see that by squaring the RHS and simplifying.   It can be confusing to remember when to use induction and when to use a LHS\/RHS proof. The following summary gives guidelines for when to use each technique.   Summary of Techniques for Sequences sequence explicit formula proof sequence recursive formula proof  If you are given a sequence where each term is just a formula for :  You sequence is defined explicitly.  For example, .  To prove a recurrence relation, use LHS\/RHS proof.  You are assuming the explicit formula and proving the recurrence relation. Thus, use the explicit formula in your proof. Do not assume the recurrence relation.   If you are given a sequence where each term is defined by previous terms:  You sequence is defined recursively.  For example, .  To prove an explicit formula, use induction on the explicit formula.  You are assuming the recurrence formula and proving the explicit formula. Thus, use the recurrence formula in your proof, generally in the induction step. Your base step, assume statement, and show statement all involve the explicit formula.     Check Your Understanding  Find a recurrence relation for .  Find an explicit formula for .  Find a recurrence relation for .  Find an explicit formula for .  Simplify .    Use iteration to conjecture an explicit formula for the sequence     Use iteration to conjecture an explicit formula for the sequence    The formula for a geometric sum, , might be helpful.  Use iteration to conjecture an explicit formula for the sequence   The formula for the sum of the first integers, might be helpful.   Suppose is a fixed constant and is a sequence that satisfies the recurrence relation for all integers . Use mathematical induction to prove that for all integers .    Suppose is a fixed constant and is a sequence that satisfies the recurrence relation for all integers . Use mathematical induction to prove that for all integers .   Use induction to prove your conjectured formula from .   Use induction to prove your conjectured formula from .    Use induction to prove your conjectured formula from .    "
 },
 {
-  "id": "p-1724",
+  "id": "p-1728",
   "level": "2",
-  "url": "iteration5-6.html#p-1724",
+  "url": "iteration5-6.html#p-1728",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -5311,9 +5293,9 @@ var ptx_lunr_docs = [
   "body": "An arithmetic sequence arthmetic sequence sequence arithmetic is given recursively by where is constant. "
 },
 {
-  "id": "activity-103",
+  "id": "activity-101",
   "level": "2",
-  "url": "iteration5-6.html#activity-103",
+  "url": "iteration5-6.html#activity-101",
   "type": "Activity",
   "number": "5.6.1",
   "title": "",
@@ -5329,36 +5311,36 @@ var ptx_lunr_docs = [
   "body": "A geometric sequence geometric sequence sequence geometric is given recursively by where is constant. "
 },
 {
-  "id": "activity-104",
+  "id": "activity-102",
   "level": "2",
-  "url": "iteration5-6.html#activity-104",
+  "url": "iteration5-6.html#activity-102",
   "type": "Activity",
   "number": "5.6.2",
   "title": "",
   "body": "Use the method of iteration to find an explicit formula for a geometric sequence.  Let . Write out the first 6 terms of the geometric sequence. Can you find an explicit formula for the sequence (one that just depends on )?  Write out the first 6 terms of the sequence without simplifying at all . Now can you find an explicit formula?  Using the same technique of writing out the terms without simplifying, find an explicit formula for the general form, , of a geometric sequence.  "
 },
 {
-  "id": "activity-105",
+  "id": "activity-103",
   "level": "2",
-  "url": "iteration5-6.html#activity-105",
+  "url": "iteration5-6.html#activity-103",
   "type": "Activity",
   "number": "5.6.3",
   "title": "",
   "body": "Prove if and , then for by induction. You are assuming the recursive relationship holds. The statement you are proving by induction is that for . "
 },
 {
-  "id": "activity-106",
+  "id": "activity-104",
   "level": "2",
-  "url": "iteration5-6.html#activity-106",
+  "url": "iteration5-6.html#activity-104",
   "type": "Activity",
   "number": "5.6.4",
   "title": "",
   "body": "Prove if , then for by induction. You are assuming the recursive relationship holds. The statement you are proving by induction is that for . "
 },
 {
-  "id": "activity-107",
+  "id": "activity-105",
   "level": "2",
-  "url": "iteration5-6.html#activity-107",
+  "url": "iteration5-6.html#activity-105",
   "type": "Activity",
   "number": "5.6.5",
   "title": "",
@@ -5527,9 +5509,9 @@ var ptx_lunr_docs = [
   "body": "is a proper subset proper subset of if and .  "
 },
 {
-  "id": "p-1803",
+  "id": "p-1807",
   "level": "2",
-  "url": "sets6-1.html#p-1803",
+  "url": "sets6-1.html#p-1807",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -5617,18 +5599,18 @@ var ptx_lunr_docs = [
   "body": "Operations on Sets Let and .  Note, these sets can also be defined with interval notation: .  Find .   Find .   Find .   Find .   Find .   "
 },
 {
-  "id": "activity-108",
+  "id": "activity-106",
   "level": "2",
-  "url": "sets6-1.html#activity-108",
+  "url": "sets6-1.html#activity-106",
   "type": "Activity",
   "number": "6.1.1",
   "title": "",
   "body": "Let and and the Universal set .  Find .  Find .  Find .  Find .  Find .  "
 },
 {
-  "id": "activity-109",
+  "id": "activity-107",
   "level": "2",
-  "url": "sets6-1.html#activity-109",
+  "url": "sets6-1.html#activity-107",
   "type": "Activity",
   "number": "6.1.2",
   "title": "",
@@ -5653,9 +5635,9 @@ var ptx_lunr_docs = [
   "body": "Power Set Let . Find .  We need to find all the subsets of . The subsets are the elements of .  The subsets are . Thus, . "
 },
 {
-  "id": "activity-110",
+  "id": "activity-108",
   "level": "2",
-  "url": "sets6-1.html#activity-110",
+  "url": "sets6-1.html#activity-108",
   "type": "Activity",
   "number": "6.1.3",
   "title": "",
@@ -5689,9 +5671,9 @@ var ptx_lunr_docs = [
   "body": "A set of subsets of a set , , is a partition partition of if  ,  whenever .   "
 },
 {
-  "id": "p-1845",
+  "id": "p-1849",
   "level": "2",
-  "url": "sets6-1.html#p-1845",
+  "url": "sets6-1.html#p-1849",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -5707,18 +5689,18 @@ var ptx_lunr_docs = [
   "body": "Partition  Let . Then let . We can see that is a partition of since and the subsets have no elements in common, hence they are disjoint.  Now if we let . We can see that is not a partition of since .  "
 },
 {
-  "id": "activity-111",
+  "id": "activity-109",
   "level": "2",
-  "url": "sets6-1.html#activity-111",
+  "url": "sets6-1.html#activity-109",
   "type": "Activity",
   "number": "6.1.4",
   "title": "",
   "body": "To prove , assume , show . Prove . Make sure in your proof you identify what you need to assume and what you need to show. "
 },
 {
-  "id": "activity-112",
+  "id": "activity-110",
   "level": "2",
-  "url": "sets6-1.html#activity-112",
+  "url": "sets6-1.html#activity-110",
   "type": "Activity",
   "number": "6.1.5",
   "title": "",
@@ -5896,27 +5878,27 @@ var ptx_lunr_docs = [
   "body": "Proving a Subset Property  Prove .   Let . Then and . Thus, .  Therefore, .   "
 },
 {
-  "id": "activity-113",
+  "id": "activity-111",
   "level": "2",
-  "url": "propertiesofsets6-2.html#activity-113",
+  "url": "propertiesofsets6-2.html#activity-111",
   "type": "Activity",
   "number": "6.2.1",
   "title": "",
   "body": "Prove . Be sure to write what you want to assume and what you want to show. "
 },
 {
-  "id": "activity-114",
+  "id": "activity-112",
   "level": "2",
-  "url": "propertiesofsets6-2.html#activity-114",
+  "url": "propertiesofsets6-2.html#activity-112",
   "type": "Activity",
   "number": "6.2.2",
   "title": "",
   "body": "Prove . Be sure to write what you want to assume and what you want to show. "
 },
 {
-  "id": "activity-115",
+  "id": "activity-113",
   "level": "2",
-  "url": "propertiesofsets6-2.html#activity-115",
+  "url": "propertiesofsets6-2.html#activity-113",
   "type": "Activity",
   "number": "6.2.3",
   "title": "",
@@ -5932,9 +5914,9 @@ var ptx_lunr_docs = [
   "body": "Proving Two Sets are Equal  Prove .    : Let . Then or .  Case 1: . Then by the second subset relation. Similarly, . Thus, and .  Therefore, .  Case 2: . Then and . Then and by the second subset relation. Thus, and .  Therefore, .   : Let . Then and .  Case 1: . Then by the second subset relation (since we can do the union with any set).  Case 2: . Since by assumption, or . Since , .  Similarly, since , and , . Thus, .  Therefore, (again by the second subset relation).   "
 },
 {
-  "id": "p-1961",
+  "id": "p-1965",
   "level": "2",
-  "url": "propertiesofsets6-2.html#p-1961",
+  "url": "propertiesofsets6-2.html#p-1965",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -5968,18 +5950,18 @@ var ptx_lunr_docs = [
   "body": "Proving a Set is Empty  Prove , where is the universal set.  Let . Then . But since contains everything, , which is a contradiction. Therefore, .   "
 },
 {
-  "id": "activity-116",
+  "id": "activity-114",
   "level": "2",
-  "url": "propertiesofsets6-2.html#activity-116",
+  "url": "propertiesofsets6-2.html#activity-114",
   "type": "Activity",
   "number": "6.2.4",
   "title": "",
   "body": "Prove . Be sure to write what you want to assume and what you want to show. "
 },
 {
-  "id": "activity-117",
+  "id": "activity-115",
   "level": "2",
-  "url": "propertiesofsets6-2.html#activity-117",
+  "url": "propertiesofsets6-2.html#activity-115",
   "type": "Activity",
   "number": "6.2.5",
   "title": "",
@@ -6193,27 +6175,27 @@ var ptx_lunr_docs = [
   "body": "Algebraic Set Theory Proof  Prove using properties of sets.   "
 },
 {
-  "id": "activity-118",
+  "id": "activity-116",
   "level": "2",
-  "url": "algebraicsets6-3.html#activity-118",
+  "url": "algebraicsets6-3.html#activity-116",
   "type": "Activity",
   "number": "6.3.1",
   "title": "",
   "body": "Use identities from the to prove for all sets and , "
 },
 {
-  "id": "activity-119",
+  "id": "activity-117",
   "level": "2",
-  "url": "algebraicsets6-3.html#activity-119",
+  "url": "algebraicsets6-3.html#activity-117",
   "type": "Activity",
   "number": "6.3.2",
   "title": "",
   "body": "Prove or disprove for all sets and , . To decide if a statement is true or false, draw a Venn diagram for each side of the equality. If the two diagrams are the same, provide a proof. If the two diagrams are different, provide a specific counterexample. "
 },
 {
-  "id": "activity-120",
+  "id": "activity-118",
   "level": "2",
-  "url": "algebraicsets6-3.html#activity-120",
+  "url": "algebraicsets6-3.html#activity-118",
   "type": "Activity",
   "number": "6.3.3",
   "title": "",
@@ -6499,9 +6481,9 @@ var ptx_lunr_docs = [
   "body": "Exploring the Definition of a Function  Let be a map as shown in the figure.       shows a map that is not a function since maps to two different outputs.  Let be a map as shown in the figure.       shows a map that is not a function since does not map to any output.  Let be a map as shown in the figure.       shows a map that is a function since each maps to exactly one .  "
 },
 {
-  "id": "p-2090",
+  "id": "p-2094",
   "level": "2",
-  "url": "functions7-1.html#p-2090",
+  "url": "functions7-1.html#p-2094",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -6517,9 +6499,9 @@ var ptx_lunr_docs = [
   "body": "The image image or range range of a set under is the set of outputs of corresponding to inputs from . In notation the image of "
 },
 {
-  "id": "p-2092",
+  "id": "p-2096",
   "level": "2",
-  "url": "functions7-1.html#p-2092",
+  "url": "functions7-1.html#p-2096",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -6535,18 +6517,18 @@ var ptx_lunr_docs = [
   "body": "Let be a function. The set is the preimage preimage of . "
 },
 {
-  "id": "activity-121",
+  "id": "activity-119",
   "level": "2",
-  "url": "functions7-1.html#activity-121",
+  "url": "functions7-1.html#activity-119",
   "type": "Activity",
   "number": "7.1.1",
   "title": "",
   "body": "Define by where is the remainder when is divided by 3.   Find .  What is the image of under ?  What is the set of preimages of 0? In other words, find the preimage of 0. To find the set of preimages of 0, find all integers that map to 0  "
 },
 {
-  "id": "p-2100",
+  "id": "p-2104",
   "level": "2",
-  "url": "functions7-1.html#p-2100",
+  "url": "functions7-1.html#p-2104",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -6580,27 +6562,27 @@ var ptx_lunr_docs = [
   "body": "More Functions  A sequence is a function from to . For example, .  We may also have functions involving Cartesian products of sets. For example, given by .  "
 },
 {
-  "id": "activity-122",
+  "id": "activity-120",
   "level": "2",
-  "url": "functions7-1.html#activity-122",
+  "url": "functions7-1.html#activity-120",
   "type": "Activity",
   "number": "7.1.2",
   "title": "",
   "body": "Define by .   Find .  What is the image of under ?  What is the preimage of 0? The preimage is a set, so find all ordered pairs that map to 0.  "
 },
 {
-  "id": "activity-123",
+  "id": "activity-121",
   "level": "2",
-  "url": "functions7-1.html#activity-123",
+  "url": "functions7-1.html#activity-121",
   "type": "Activity",
   "number": "7.1.3",
   "title": "",
   "body": "Define by .   Find .  What is the image of under ? Is in the image? Is in the image?  What is the preimage of ? The preimage is a set, so find all integers that map to .  "
 },
 {
-  "id": "p-2126",
+  "id": "p-2130",
   "level": "2",
-  "url": "functions7-1.html#p-2126",
+  "url": "functions7-1.html#p-2130",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -6616,9 +6598,9 @@ var ptx_lunr_docs = [
   "body": "A Map That is Not Well-Defined  Let be given by .  Then in , but and . Thus, but .  Thus is not well-defined, and hence, is not a function. "
 },
 {
-  "id": "activity-124",
+  "id": "activity-122",
   "level": "2",
-  "url": "functions7-1.html#activity-124",
+  "url": "functions7-1.html#activity-122",
   "type": "Activity",
   "number": "7.1.4",
   "title": "",
@@ -6895,9 +6877,9 @@ var ptx_lunr_docs = [
   "body": "If is a one-to-one correspondence, then there exists a function such that function inverse the inverse of function  "
 },
 {
-  "id": "p-2235",
+  "id": "p-2239",
   "level": "2",
-  "url": "onetooneonto7-2.html#p-2235",
+  "url": "onetooneonto7-2.html#p-2239",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -6931,9 +6913,9 @@ var ptx_lunr_docs = [
   "body": "Show is one-to-one: assume . Then for some . Thus, and . Since is a function, .  Show is onto . Let . Then there exists such that since is a function from . Now, . Therefore, there exists such that .  "
 },
 {
-  "id": "activity-130",
+  "id": "activity-128",
   "level": "2",
-  "url": "onetooneonto7-2.html#activity-130",
+  "url": "onetooneonto7-2.html#activity-128",
   "type": "Activity",
   "number": "7.2.6",
   "title": "",
@@ -7192,9 +7174,9 @@ var ptx_lunr_docs = [
   "body": "Inverse Relation Let . This is the relation in .  Find .   "
 },
 {
-  "id": "activity-131",
+  "id": "activity-129",
   "level": "2",
-  "url": "relations8-1.html#activity-131",
+  "url": "relations8-1.html#activity-129",
   "type": "Activity",
   "number": "8.1.1",
   "title": "",
@@ -7219,18 +7201,18 @@ var ptx_lunr_docs = [
   "body": "Directed Graph of a Relation  Let . Let . Then we get the following directed graph for .   Directed graph for less than.     If we now want the relations for less than or equal to, , we have the following directed graph.   Directed graph for less than or equal.     "
 },
 {
-  "id": "activity-132",
+  "id": "activity-130",
   "level": "2",
-  "url": "relations8-1.html#activity-132",
+  "url": "relations8-1.html#activity-130",
   "type": "Activity",
   "number": "8.1.2",
   "title": "",
   "body": "Let . Define the relation on by  Find the set of ordered pairs given by this relation.  Draw the directed graph for this relation.  Give the inverse relation for . Remember, it is a set of ordered pairs.  Is the relation a function? "
 },
 {
-  "id": "activity-133",
+  "id": "activity-131",
   "level": "2",
-  "url": "relations8-1.html#activity-133",
+  "url": "relations8-1.html#activity-131",
   "type": "Activity",
   "number": "8.1.3",
   "title": "",
@@ -7426,9 +7408,9 @@ var ptx_lunr_docs = [
   "body": " Directed graph for transitive property    "
 },
 {
-  "id": "p-2406",
+  "id": "p-2410",
   "level": "2",
-  "url": "rstrelations8-2.html#p-2406",
+  "url": "rstrelations8-2.html#p-2410",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -7444,18 +7426,18 @@ var ptx_lunr_docs = [
   "body": "Transitive Closure  Let . Then in we need . You can check with a directed graph to see this is the only pair we need to add. Thus, . "
 },
 {
-  "id": "activity-134",
+  "id": "activity-132",
   "level": "2",
-  "url": "rstrelations8-2.html#activity-134",
+  "url": "rstrelations8-2.html#activity-132",
   "type": "Activity",
   "number": "8.2.1",
   "title": "",
   "body": "Let . Let .  Determine if is reflexive.  Determine if is symmetric.  Determine if is transitive.  Draw the directed graph for .  If is not transitive, what ordered pairs should you add to the relation to make transitive? "
 },
 {
-  "id": "activity-135",
+  "id": "activity-133",
   "level": "2",
-  "url": "rstrelations8-2.html#activity-135",
+  "url": "rstrelations8-2.html#activity-133",
   "type": "Activity",
   "number": "8.2.2",
   "title": "",
@@ -7471,18 +7453,18 @@ var ptx_lunr_docs = [
   "body": "Proving Reflexive, Symmetric, Transitive  Let be the relation on given by .  Reflexive: Show .  We know , and . So we get that . Thus for all .  Symmetric: Assume .  Then . This implies for some . But then , where . Thus, . Hence, .  Transitive: Assume .  Then and . This implies for some and for some . But then , where . Thus, . Hence, .  "
 },
 {
-  "id": "activity-136",
+  "id": "activity-134",
   "level": "2",
-  "url": "rstrelations8-2.html#activity-136",
+  "url": "rstrelations8-2.html#activity-134",
   "type": "Activity",
   "number": "8.2.3",
   "title": "",
   "body": "Define the relation on by .  Prove or disprove is reflexive.  Prove or disprove is symmetric.  Prove or disprove is transitive.  "
 },
 {
-  "id": "activity-137",
+  "id": "activity-135",
   "level": "2",
-  "url": "rstrelations8-2.html#activity-137",
+  "url": "rstrelations8-2.html#activity-135",
   "type": "Activity",
   "number": "8.2.4",
   "title": "",
@@ -7660,9 +7642,9 @@ var ptx_lunr_docs = [
   "body": "Congruence mod 3  True or false: .  Since , true.  True or false: .  Since , true.  True or false: .  Since , false.  True or false: .  Since , false.  "
 },
 {
-  "id": "p-2528",
+  "id": "p-2532",
   "level": "2",
-  "url": "equivalencerelations8-3.html#p-2528",
+  "url": "equivalencerelations8-3.html#p-2532",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -7687,18 +7669,18 @@ var ptx_lunr_docs = [
   "body": "More Equivalence Classes  Consider the equivalence relation , on .  This is the relation where two subsets of are related if they have the same number of elements. You can check that this is an equivalence relation.  Find , the set of elements in equivalent to .  , since this is the only subset with 0 elements.  Find .  , since these all have 1 element.  Find .   Find .   "
 },
 {
-  "id": "activity-138",
+  "id": "activity-136",
   "level": "2",
-  "url": "equivalencerelations8-3.html#activity-138",
+  "url": "equivalencerelations8-3.html#activity-136",
   "type": "Activity",
   "number": "8.3.1",
   "title": "",
   "body": "Define the relation on by .  Prove is an equivalence relation.  Find and . "
 },
 {
-  "id": "activity-139",
+  "id": "activity-137",
   "level": "2",
-  "url": "equivalencerelations8-3.html#activity-139",
+  "url": "equivalencerelations8-3.html#activity-137",
   "type": "Activity",
   "number": "8.3.2",
   "title": "",
@@ -7723,9 +7705,9 @@ var ptx_lunr_docs = [
   "body": "Let be a set and an equivalence relation. The equivalence classes of form a partition of . "
 },
 {
-  "id": "p-2559",
+  "id": "p-2563",
   "level": "2",
-  "url": "equivalencerelations8-3.html#p-2559",
+  "url": "equivalencerelations8-3.html#p-2563",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -7957,9 +7939,9 @@ var ptx_lunr_docs = [
   "body": "Congruence mod  True or false: .  True  True or false: .  True  True or false: .  False  "
 },
 {
-  "id": "activity-141",
+  "id": "activity-139",
   "level": "2",
-  "url": "modarith8-4.html#activity-141",
+  "url": "modarith8-4.html#activity-139",
   "type": "Activity",
   "number": "8.4.1",
   "title": "",
@@ -8002,9 +7984,9 @@ var ptx_lunr_docs = [
   "body": "Prove part (3) of implies part (1). "
 },
 {
-  "id": "p-2680",
+  "id": "p-2684",
   "level": "2",
-  "url": "modarith8-4.html#p-2680",
+  "url": "modarith8-4.html#p-2684",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -8020,18 +8002,18 @@ var ptx_lunr_docs = [
   "body": "Congruence mod is an equivalence relation on with equivalence classes . Furthermore, . "
 },
 {
-  "id": "activity-144",
+  "id": "activity-142",
   "level": "2",
-  "url": "modarith8-4.html#activity-144",
+  "url": "modarith8-4.html#activity-142",
   "type": "Activity",
   "number": "8.4.4",
   "title": "",
   "body": "Find the equivalence classes for congruence mod 5. List several elements of each equivalence class. What do the elements of each congruence class look like? Think about remainders. "
 },
 {
-  "id": "p-2686",
+  "id": "p-2690",
   "level": "2",
-  "url": "modarith8-4.html#p-2686",
+  "url": "modarith8-4.html#p-2690",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -8047,18 +8029,18 @@ var ptx_lunr_docs = [
   "body": "Modular Arithmetic  Use modular arithmetic to find  .  , so  .   .  , so  "
 },
 {
-  "id": "activity-145",
+  "id": "activity-143",
   "level": "2",
-  "url": "modarith8-4.html#activity-145",
+  "url": "modarith8-4.html#activity-143",
   "type": "Activity",
   "number": "8.4.5",
   "title": "",
   "body": "Find by first reducing 31 and 92 mod 5, then adding. "
 },
 {
-  "id": "activity-146",
+  "id": "activity-144",
   "level": "2",
-  "url": "modarith8-4.html#activity-146",
+  "url": "modarith8-4.html#activity-144",
   "type": "Activity",
   "number": "8.4.6",
   "title": "",
@@ -8263,18 +8245,18 @@ var ptx_lunr_docs = [
   "body": " Probability probability  Let be a set of possible outcomes, called a sample space . Let be a subset of with some property. We call an event .  The probability of event , , is the number of outcomes in divided by the total number of outcomes in .  Let be the number of elements in . Similarly, , is the number of outcomes in .  In notation, .  Finding Probability of an Event  A standard deck of playing cards has 52 cards. Each card has a suit and a value. The deck has four suits: hearts, diamonds, spades, clubs. Each suit has 13 values: Ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, King. The spades and clubs are called black cards, the hearts and diamonds are called red cards.  Find the probability you randomly choose a club from the deck.  Note, is the set of clubs, is the set of cards.   Find the probability you randomly choose a red card from the deck.  Note, is the set of hearts and diamonds, is the set of cards.   Find the probability you randomly choose a 2 from the deck.  Note, is the set of 2's, is the set of cards.    Suppose you toss a fair coin two times.  List all the possible outcomes.  What is the probability that you get exactly 2 heads?  What is the probability that you get exactly 1 head?  In order to calculate a probability, we need to be able to count equally-likely events. Just because there are, say, 3 outcomes, that doesn't mean all the outcomes are equally-likely. For example, the Linfied football team could win, lose, or tie a game. Given the team's winning streak, the three outcomes are not equally-likely. They have a much higher probability of winning than just 1\/3.  Thus, the focus for the rest of the chapter will be on counting events. Once we can count outcomes, it is straight-forward to find the probability.  Before moving on, though, we will state a few useful facts about probabilities.    is always a number between 0 and 1. The probability can be 0.5. It cannot be 50%  means the event is not possible.  means the event always happens.     Check Your Understanding  In a standard deck of cards, find the probability of randomly drawing an Ace. Give your answer to at least 3 decimal places.  The probability is .     Correct. The probability is .      Don't forget to round up in the third decimal.      Incorrect. How many Aces are in the deck? How many cards are in the deck? Your answer should be number of Aces divided by number of cards.      In a standard deck of cards, find the probability of randomly drawing a face card (Jack, Queen, King). Give your answer to at least 3 decimal places.  The probability is .     Correct. The probability is .      Don't forget to round up in the third decimal.      Incorrect. How many face cards are in the deck? How many cards are in the deck? Your answer should be number of face cards divided by number of cards.      In a standard deck of cards, find the probability of randomly drawing an even numbered card. Give your answer to at least 3 decimal places.  The probability is .     Correct. The probability is .      Don't forget to round up in the third decimal.      Incorrect. How many even numbered cards (2, 4, 6, 8, 10) are in the deck? How many cards are in the deck? Your answer should be number of even cards divided by number of cards.      An urn contains 3 red balls, 2 green balls, 4 multicolored balls. Find the probability of drawing a green ball. Give your answer to at least 3 decimal places.  The probability is .     Correct. The probability is .      Incorrect. How many green balls are in the urn? How many balls are in the urn? Your answer should be number of green balls divided by number of balls.      An urn contains 3 red balls, 2 green balls, 4 multicolored balls. Find the probability of drawing a solid colored ball. Give your answer to at least 3 decimal places.  The probability is .     Correct. The probability is .      Incorrect. How many solid colored balls are in the urn? How many balls are in the urn? Your answer should be number of solid balls divided by number of balls.        Assume the sample space is a standard deck of 52 cards. Suppose you choose a random card from the deck.    List all the possible outcomes of the card being red and not a face card.    Calculate the probability of the event in (a).     Assume the sample space is a standard deck of 52 cards. Suppose you choose a random card from the deck.    List all the possible outcomes of the card being black and having an even number on it.    Calculate the probability of the event in (a).      Assume the sample space is the possible rolls of a pair of dice, one blue die and one red die.    List all the possible outcomes where the sum of the numbers showing face up is 8.    Calculate the probability of the event in (a).      Assume the sample space is the possible rolls of a pair of dice, one blue die and one red die.    List all the possible outcomes where the sum of the numbers showing face up is at most 6.    Calculate the probability of the event in (a).      Suppose a coin is tossed four times and the side showing face up on each toss is noted. Suppose also that heads and tails are equally-likely for the coin.    List the 16 elements in the sample space as sequences of heads and tails.    List the set of outcomes and the probability for the event of exactly one toss resulting in a head.    List the set of outcomes and the probability for the event that at least two tosses result in a head.    List the set of outcomes and the probability for the event that no toss results in a head.      Suppose that on a true\/false exam you have no idea about the answers to three questions. You choose your answers randomly and therefore have a 50-50 chance of being correct on any one question. For example, let indicate that you were correct on the first two questions but wrong on the third.    List all the elements of the sample space as the possible sequences of and for the three questions.    List the set of outcomes and the probability for the event that exactly one answer is correct.    List the set of outcomes and the probability for the event that at least two answers are correct.    List the set of outcomes and the probability for the event that no answers are correct.      "
 },
 {
-  "id": "p-2737",
+  "id": "p-2741",
   "level": "2",
-  "url": "probability9-1.html#p-2737",
+  "url": "probability9-1.html#p-2741",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "sample space event "
 },
 {
-  "id": "p-2738",
+  "id": "p-2742",
   "level": "2",
-  "url": "probability9-1.html#p-2738",
+  "url": "probability9-1.html#p-2742",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -8290,18 +8272,18 @@ var ptx_lunr_docs = [
   "body": "Finding Probability of an Event  A standard deck of playing cards has 52 cards. Each card has a suit and a value. The deck has four suits: hearts, diamonds, spades, clubs. Each suit has 13 values: Ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, King. The spades and clubs are called black cards, the hearts and diamonds are called red cards.  Find the probability you randomly choose a club from the deck.  Note, is the set of clubs, is the set of cards.   Find the probability you randomly choose a red card from the deck.  Note, is the set of hearts and diamonds, is the set of cards.   Find the probability you randomly choose a 2 from the deck.  Note, is the set of 2's, is the set of cards.   "
 },
 {
-  "id": "activity-148",
+  "id": "activity-146",
   "level": "2",
-  "url": "probability9-1.html#activity-148",
+  "url": "probability9-1.html#activity-146",
   "type": "Activity",
   "number": "9.1.1",
   "title": "",
   "body": "Suppose you toss a fair coin two times.  List all the possible outcomes.  What is the probability that you get exactly 2 heads?  What is the probability that you get exactly 1 head? "
 },
 {
-  "id": "p-2752",
+  "id": "p-2756",
   "level": "2",
-  "url": "probability9-1.html#p-2752",
+  "url": "probability9-1.html#p-2756",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -8425,9 +8407,9 @@ var ptx_lunr_docs = [
   "body": "Coin Toss  Toss a coin three times. How many ways can you get exactly two heads in the three tosses?  First toss: H or T  Second toss: H or T  Third toss: H or T  If we think about what happens after the first toss, we have H or T. For each of those outcomes, we get H or T on the second toss, so we now have 4 outcomes: HH, HT, TH, TT  With the third toss, each of our four outcomes could end with H or T, giving us 8 outcomes: HHH, HTH, THH, TTH, HHT, HTT, THT, TTT.  Out of these 8 possible outcomes, there are 3 outcomes with exactly 2 heads: HTH, THH, HHT.  We can also see the possibilies using a possibility tree , where the first (top) level represents the first toss, the second level, the second toss, and the third level, the third toss. The blue paths show the outcomes with exactly two Heads.   Possibility tree for tossing a coin three times     "
 },
 {
-  "id": "activity-149",
+  "id": "activity-147",
   "level": "2",
-  "url": "multrule9-2.html#activity-149",
+  "url": "multrule9-2.html#activity-147",
   "type": "Activity",
   "number": "9.2.1",
   "title": "",
@@ -8443,18 +8425,18 @@ var ptx_lunr_docs = [
   "body": "Multiplication Rule: License Plates  Find the number of license plates that can be made if each one consists of two letters from A through E, followed by four digits from 1 through 9.  There are 5 choices for the letters: A, B, C, D, E.  There are 9 choices for the digits: 1, 2, 3, 4, 5, 6, 7, 8, 9.  First choose a letter, then another letter, then choose each of the numbers. We can use the multiplication rule since we can choose each character as a process.  Thus, we have license plates.  Now, suppose you cannot repeat a number in any one license plate. How many license plates can we make?  When choosing the numbers, first we have 9 choices, then 8, since we can't choose the same number as the first digit, etc.  The total number of license plates if we can't repeat a number is .  "
 },
 {
-  "id": "activity-150",
+  "id": "activity-148",
   "level": "2",
-  "url": "multrule9-2.html#activity-150",
+  "url": "multrule9-2.html#activity-148",
   "type": "Activity",
   "number": "9.2.2",
   "title": "",
   "body": "Suppose a license plate consists of 3 letters followed by 2 digits.  How many license plates can you make?  How many license plates can you make if you cannot repeat a letter or number? "
 },
 {
-  "id": "p-2826",
+  "id": "p-2830",
   "level": "2",
-  "url": "multrule9-2.html#p-2826",
+  "url": "multrule9-2.html#p-2830",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -8488,18 +8470,18 @@ var ptx_lunr_docs = [
   "body": "Permutations of a Set  Let . Then a permutation of is a list of elements in . List all the permutations of .  Since we have 3 choices for our first element, then 2 choices for the second, and 1 for the last, there are permutations.  The permutations are abc, acb, bca, bac, cab, cba.  How many permutations are there of the set ?   "
 },
 {
-  "id": "activity-151",
+  "id": "activity-149",
   "level": "2",
-  "url": "multrule9-2.html#activity-151",
+  "url": "multrule9-2.html#activity-149",
   "type": "Activity",
   "number": "9.2.3",
   "title": "",
   "body": "List all the permutations of . There are 6. "
 },
 {
-  "id": "activity-152",
+  "id": "activity-150",
   "level": "2",
-  "url": "multrule9-2.html#activity-152",
+  "url": "multrule9-2.html#activity-150",
   "type": "Activity",
   "number": "9.2.4",
   "title": "",
@@ -8542,18 +8524,18 @@ var ptx_lunr_docs = [
   "body": "-Permutations of a Set  Let . Then a 3-permutation of is a list of 3 (non-repeating) elements from . For example, ace, dbe, bda are all 3-permutations.  Find the number of 3-permutations of , .  We have 5 choices for the first letter, 4 choices for the second, and 3 choices for the last. Thus, .  How many 4-permutations are there of the standard English alphabet?   "
 },
 {
-  "id": "activity-154",
+  "id": "activity-152",
   "level": "2",
-  "url": "multrule9-2.html#activity-154",
+  "url": "multrule9-2.html#activity-152",
   "type": "Activity",
   "number": "9.2.6",
   "title": "",
   "body": "How many 2-permutations are there of ? "
 },
 {
-  "id": "activity-155",
+  "id": "activity-153",
   "level": "2",
-  "url": "multrule9-2.html#activity-155",
+  "url": "multrule9-2.html#activity-153",
   "type": "Activity",
   "number": "9.2.7",
   "title": "",
@@ -8578,9 +8560,9 @@ var ptx_lunr_docs = [
   "body": "The number of -permutations of a set with elements is which is often easier to calculate using "
 },
 {
-  "id": "activity-157",
+  "id": "activity-155",
   "level": "2",
-  "url": "multrule9-2.html#activity-157",
+  "url": "multrule9-2.html#activity-155",
   "type": "Activity",
   "number": "9.2.9",
   "title": "",
@@ -8758,18 +8740,18 @@ var ptx_lunr_docs = [
   "body": "Addition Rule: Counting Numbers Divisible by 5  How many 3 digit numbers are divisible by 5?  We were able to count 3 digit numbers in the last section by constructing the number as a sequence of digits. We will use this example to think about how to count these as disjoint sets.  Let be the set of 3 digit numbers ending in 5.  Let be the set of 3 digit numbers ending in 0.  , where we are using the multiplication rule as in .  .  Since no number ends in both 5 and 0, . Thus, by the addition rule,  "
 },
 {
-  "id": "activity-158",
+  "id": "activity-156",
   "level": "2",
-  "url": "additionrule9-3.html#activity-158",
+  "url": "additionrule9-3.html#activity-156",
   "type": "Activity",
   "number": "9.3.1",
   "title": "",
   "body": "How many 3 digit numbers are divisible by 10? "
 },
 {
-  "id": "activity-159",
+  "id": "activity-157",
   "level": "2",
-  "url": "additionrule9-3.html#activity-159",
+  "url": "additionrule9-3.html#activity-157",
   "type": "Activity",
   "number": "9.3.2",
   "title": "",
@@ -8794,27 +8776,27 @@ var ptx_lunr_docs = [
   "body": "Inclusion-Exclusion: Counting Multiples  How many integers from 1 to 1000 are multiples of 3 or multiples of 5?  Let be the set of multiples of 3. Let be the set of multiples of 5.  Then is the set of multiples of 3 and 5, so multiples of 15.  We need a good way to count the multiples of 3. We know they have the form . Since , we have that . Hence, . Since , . Thus,  Similarly, since , Since ,  By Inclusion-Exclusion,  "
 },
 {
-  "id": "activity-160",
+  "id": "activity-158",
   "level": "2",
-  "url": "additionrule9-3.html#activity-160",
+  "url": "additionrule9-3.html#activity-158",
   "type": "Activity",
   "number": "9.3.3",
   "title": "",
   "body": "We want to count the number of integers from 1-50 that are divisible by 3 or 7.   How many integers from 1-50 are divisible by 3?  How many integers from 1-50 are divisible by 7?  What is the number of integers from 1-50 divisible by 3 or 7? You can pretty easily check you answer by writing them all down. Can you use inclusion-exclusion to calculate this?  "
 },
 {
-  "id": "activity-161",
+  "id": "activity-159",
   "level": "2",
-  "url": "additionrule9-3.html#activity-161",
+  "url": "additionrule9-3.html#activity-159",
   "type": "Activity",
   "number": "9.3.4",
   "title": "",
   "body": "We want to count the number of integers from 1-1000 that are divisible by 4, 7 or 9.  How many integers from 1-1000 are divisible by 4?  How many integers from 1-1000 are divisible by 7?  How many integers from 1-1000 are divisible by 9?  Now calculate the number of integers 1-1000 divisible by 4, 7, or 9 using inclusion-exclusion. What other sets do you need to calculate? You'll need the 3 set version of Inclusion-Exclusion "
 },
 {
-  "id": "activity-162",
+  "id": "activity-160",
   "level": "2",
-  "url": "additionrule9-3.html#activity-162",
+  "url": "additionrule9-3.html#activity-160",
   "type": "Activity",
   "number": "9.3.5",
   "title": "",
@@ -8992,18 +8974,18 @@ var ptx_lunr_docs = [
   "body": "Counting Socks  In a drawer with 5 pairs of red socks and 5 pairs of blue socks, how many socks do you need to randomly pull out of the drawer to be certain that you have a pair?  Note, there are 10 socks of each color.  3 socks, since the first two might be different colors. If that happens the third sock must match one of the first two.  In this example, the socks are the objects and the colors are the boxes.  Now, what if you need to make sure you have a red pair?  12 socks.  "
 },
 {
-  "id": "activity-163",
+  "id": "activity-161",
   "level": "2",
-  "url": "pigeonhole9-4.html#activity-163",
+  "url": "pigeonhole9-4.html#activity-161",
   "type": "Activity",
   "number": "9.4.1",
   "title": "",
   "body": "In a group of 10 people, must 2 be born in the same month? What is the most people that can be born in the same month? "
 },
 {
-  "id": "activity-164",
+  "id": "activity-162",
   "level": "2",
-  "url": "pigeonhole9-4.html#activity-164",
+  "url": "pigeonhole9-4.html#activity-162",
   "type": "Activity",
   "number": "9.4.2",
   "title": "",
@@ -9019,18 +9001,18 @@ var ptx_lunr_docs = [
   "body": "Finding Sums of Integers  Let . How many integers do you need to choose from to guarantee that 2 numbers will sum to 11?  Since we are looking for sums of 11, our boxes can be pairs of numbers that sum to 11: . Then our objects are the numbers themselves. We need the number of numbers to be greater than the number of boxes, which is 5. Thus, if we choose 6 numbers from , we are guaranteed to have 2 from the same subset. This means with 6 numbers we must have two numbers that sum to 11. "
 },
 {
-  "id": "activity-165",
+  "id": "activity-163",
   "level": "2",
-  "url": "pigeonhole9-4.html#activity-165",
+  "url": "pigeonhole9-4.html#activity-163",
   "type": "Activity",
   "number": "9.4.3",
   "title": "",
   "body": "Let . If 5 integers are selected from , must at least one pair have a sum of 9? If 4 integers are selected from , must at least one pair have a sum of 9? "
 },
 {
-  "id": "activity-166",
+  "id": "activity-164",
   "level": "2",
-  "url": "pigeonhole9-4.html#activity-166",
+  "url": "pigeonhole9-4.html#activity-164",
   "type": "Activity",
   "number": "9.4.4",
   "title": "",
@@ -9055,18 +9037,18 @@ var ptx_lunr_docs = [
   "body": "Generalized Pigeonhole  Suppose you have 23 books that are placed in 4 boxes.  Must at least one box contain at least one book?  Yes  Must at least one box contain at least two books?  Yes  Must at least one box contain at least six books?  Yes  Must at least one box contain at least seven books?  No  What is the most books that can be in a box?  23  What is the fewest books that can be in a box?  0  "
 },
 {
-  "id": "activity-167",
+  "id": "activity-165",
   "level": "2",
-  "url": "pigeonhole9-4.html#activity-167",
+  "url": "pigeonhole9-4.html#activity-165",
   "type": "Activity",
   "number": "9.4.5",
   "title": "",
   "body": "If you have 8 books and want to place them in 3 boxes, must at least one box have 4 books? Must at least one box have 3 books? "
 },
 {
-  "id": "activity-168",
+  "id": "activity-166",
   "level": "2",
-  "url": "pigeonhole9-4.html#activity-168",
+  "url": "pigeonhole9-4.html#activity-166",
   "type": "Activity",
   "number": "9.4.6",
   "title": "",
@@ -9235,18 +9217,18 @@ var ptx_lunr_docs = [
   "body": "Let be nonnegative integers with . An -combination combination of a set of elements is the number of subsets of size that can be chosen from a set of elements. We denote it , which is read choose . choose "
 },
 {
-  "id": "activity-169",
+  "id": "activity-167",
   "level": "2",
-  "url": "combinations9-5.html#activity-169",
+  "url": "combinations9-5.html#activity-167",
   "type": "Activity",
   "number": "9.5.1",
   "title": "",
   "body": "Calculate and . "
 },
 {
-  "id": "activity-170",
+  "id": "activity-168",
   "level": "2",
-  "url": "combinations9-5.html#activity-170",
+  "url": "combinations9-5.html#activity-168",
   "type": "Activity",
   "number": "9.5.2",
   "title": "",
@@ -9271,18 +9253,18 @@ var ptx_lunr_docs = [
   "body": "Binary Strings How many binary strings of length 5 can have exactly 2 ones?  We can think of forming a binary string with 2 ones as a list of 5 places where we need to choose 2 places for the ones. Once we've done that, the other places must have 0's. Thus, we have five places and choose 2:  How many binary strings of length 5 can have at most 2 ones?  Here we can count the strings with 2 ones, 1 one, and 0 ones. We add them since the strings with different numbers of ones are disjoint:  "
 },
 {
-  "id": "activity-171",
+  "id": "activity-169",
   "level": "2",
-  "url": "combinations9-5.html#activity-171",
+  "url": "combinations9-5.html#activity-169",
   "type": "Activity",
   "number": "9.5.3",
   "title": "",
   "body": "How many binary strings of length 7 have exactly 3 ones? Think of this as a list of 7 digits. How many ways are there to place the ones? "
 },
 {
-  "id": "activity-172",
+  "id": "activity-170",
   "level": "2",
-  "url": "combinations9-5.html#activity-172",
+  "url": "combinations9-5.html#activity-170",
   "type": "Activity",
   "number": "9.5.4",
   "title": "",
@@ -9307,18 +9289,18 @@ var ptx_lunr_docs = [
   "body": "Alternate Rearranging Letters How many ways are there to order the letters in the word letter ?  We can think of the string of letters as 6 places where we can choose to put letters. First we can think of all the letters as distinct. Then we have 6 letters to choose for the first place, 5 for the second, 4 for the third, etc. Thus we have ways to place 6 distinct letters.  But the letters are not distinct, so we need to divide by the number of ways we over-counted. For each permutation we just counted, switching the two e s gives us the same word, so we need to divide by the number of ways to rearrange the two e s: Similarly, we need to divide by equivalent arrangements of the two t s: .  Putting this together we have  "
 },
 {
-  "id": "activity-173",
+  "id": "activity-171",
   "level": "2",
-  "url": "combinations9-5.html#activity-173",
+  "url": "combinations9-5.html#activity-171",
   "type": "Activity",
   "number": "9.5.5",
   "title": "",
   "body": "How many ways are there to order the letters in book ? First place all the b s--how many ways can you do this? Then count how many ways to place all the o s, then all the k s. "
 },
 {
-  "id": "activity-174",
+  "id": "activity-172",
   "level": "2",
-  "url": "combinations9-5.html#activity-174",
+  "url": "combinations9-5.html#activity-172",
   "type": "Activity",
   "number": "9.5.6",
   "title": "",
@@ -9532,18 +9514,18 @@ var ptx_lunr_docs = [
   "body": "Give an algebraic proof for Pascal's Formula: Start with the right-hand side. Use the definition of choose, then find a common denominator. Note, you will save yourself a lot of work if you find the least common denominator. "
 },
 {
-  "id": "p-3211",
+  "id": "p-3215",
   "level": "2",
-  "url": "binomial9-6.html#p-3211",
+  "url": "binomial9-6.html#p-3215",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "binomial coefficients "
 },
 {
-  "id": "p-3217",
+  "id": "p-3221",
   "level": "2",
-  "url": "binomial9-6.html#p-3217",
+  "url": "binomial9-6.html#p-3221",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -9577,18 +9559,18 @@ var ptx_lunr_docs = [
   "body": "Prove by induction on .  Base step: Let . Then . Also,  Induction step: Assume .  Show   Now we want to change the index of the second sum. This is just a substitution of variable that allows us to shift how we index the terms. If we were to write out the sum, rather than have it in summation notation, we would not need this step. But it allows us to easily combine like terms in the two summations. So, in the second sum, let , so when ; when , and . We get  "
 },
 {
-  "id": "activity-176",
+  "id": "activity-174",
   "level": "2",
-  "url": "binomial9-6.html#activity-176",
+  "url": "binomial9-6.html#activity-174",
   "type": "Activity",
   "number": "9.6.2",
   "title": "",
   "body": "Show the Binomial Theorem holds for and . "
 },
 {
-  "id": "p-3228",
+  "id": "p-3232",
   "level": "2",
-  "url": "binomial9-6.html#p-3228",
+  "url": "binomial9-6.html#p-3232",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -9604,18 +9586,18 @@ var ptx_lunr_docs = [
   "body": "Expressing a Sum in Closed Form  Express the sum, , in closed form.  For problems such as this, we need to identify and as in the Binomial Theorem.  We can see that , since the power of matches the power of . Since there does not appear to be any term for , we can let . Thus, the closed form is . "
 },
 {
-  "id": "activity-177",
+  "id": "activity-175",
   "level": "2",
-  "url": "binomial9-6.html#activity-177",
+  "url": "binomial9-6.html#activity-175",
   "type": "Activity",
   "number": "9.6.3",
   "title": "",
   "body": "Use the Binomial Theorem to find . In this expression, what are ? "
 },
 {
-  "id": "activity-178",
+  "id": "activity-176",
   "level": "2",
-  "url": "binomial9-6.html#activity-178",
+  "url": "binomial9-6.html#activity-176",
   "type": "Activity",
   "number": "9.6.4",
   "title": "",
@@ -9802,9 +9784,9 @@ var ptx_lunr_docs = [
   "body": " Graphs graph  This section focuses on some of the terminology associated with graphs. We will also define some special types of graphs, such as complete graphs.  A graph graph is a collection of vertices vertex and edges edge .   Example of a graph,     is an example of a graph. We have labeled the vertices with and the edges with .    A graph, , consists of a finite set, , of vertices vertex and a finite set, , of edges edge . Each edge is assocated with two vertices (it may be the same vertex) called endpoints endpoints of an edge .  In the above example, , . The endpoints of edge are .  If two edges have the same endpoints, we say they are parallel parallel edges edge parallel .  A loop loop is an edge where both endpoints are the same vertex.  Two vertices connected by an edge are called adjacent adjacent vertices vertex adjacent . For example, in  is adjacent to , but is not adjacent to .  A vertex of a loop is adjacent to itself.  An edge is incident on incident edge each of its endpoints.  Two edges that are incident on the same vertex are adjacent adjacent edges edge adjacent . For example, in  and are adjacent, but and are not adjacent.  An isolated vertex isolated vertex is one with no incident edges.  A graph with no vertices is the empty graph empty graph .  In , edges and are parallel edges, while edge is a loop. We also have an isolated vertex, .   Example of a graph with parallel edges and a loop     Graph Terminology  Consider the graph, given in the figure.   Graph     Find .   Find .   Find the endpoints for .   Find the endpoints for .   Find the endpoints for .   Find the edges incident on .   Find all vertices adjacent to .   Does have any parallel edges?  Yes.  Does have any loops?  No.   It is important to note that it is possible to draw the same graph in different ways.   The same graph drawn in two different ways     The two graphs in are the same graph since they have the same vertex and edge sets, and a given edge still has the same endpoints.  A directed graph directed graph or digraph digraph graph directed consists of a set of vertices, and directed edges (arrows), , where each edge is associated with an ordered pair of of vertices called endpoints, .  We saw directed graphs in and . For example, see . In this example, we have an edge with endpoints , but not .  Really, the vertices of a graph represent a set, while the edges represent relationships between elements of that set. There are lots of examples of graphs as representations of relationships or networks. For example, graphs are used to represent communications systems, flight patterns, and friendship networks. Graphs can even be used to find strategies in games such as sudoku.  A graph with no parallel edges or loops is called simple simple graph . For example, is simple, while is not.  Now we want to define a couple special graphs.  A complete graph on vertices complete graph graph complete , , is a simple graph with vertices whose set of edges contains exactly one edge for every pair of vertices.  are given in the following figure.   Examples of complete graphs     Draw the complete graphs on 5 vertices and 6 vertices, and .   Let . A complete bipartite graph on vertices complete bipartite graph graph complete bipartite , , is a simple graph with vertices and , such that  there is an edge from to for all and ;  there are no edges from to for all ;  there are no edges from to for all .     Complete bipartite graph,     Draw the complete bipartite graphs and .  A graph is a subgraph subgraph of if every vertex in is also a vertex in , and every edge in is also an edge in such that the edges in have the same endpoints as in .  In the following figure, and are subgraphs of .   Examples of subgraphs, , of the graph     The degree degree of a vertex vertex degree of a vertex , , is the number of edges incident on . Loops are counted twice. The total degree total degree graph total degree of a graph is the sum of the degrees of all vertices in .  Degree  Let be the graph in .  Find .  3  Find .  2  Find the total degree of .  10  Let be the graph in .  Find .  4  Find .  0  Find the total degree of .  6  Is there a relationship between the number of edges in and the total degree?   As you might have seen in , there is a relationship between the total degree of a graph and the number of edges.  The total degree of a graph is where is the number of edges in .  We will not provide a formal proof, but the theorem is not hard to show as each edge must be incident on two vertices. Thus, each edge is counted twice in the total degree.  Draw any graph with 6 edges. Find the total degree of your graph. Verify that the total degree is twice the number of edges.  The total degree of any graph is even.  Explain why in any graph there is an even number of vertices of odd degree.  For each of the following either draw an example of the graph or explain why it is impossible.  A graph with 4 vertices of degrees 1, 1, 2, 3.  A graph with 4 vertices of degrees 1, 1, 2, 2.  A simple graph with 4 vertices of degrees 1, 1, 2, 2.  A graph with 4 vertices of degrees 1, 2, 3, 3.  A simple graph with 4 vertices of degrees 1, 2, 3, 4.  A simple graph with 6 edges and all vertices of degrees 3.    Check Your Understanding  Use the following graph for questions about .   The graph for Check Your Understanding     List the edges of , , incident on . There are 5 edges.  True or false , , has parallel edges. Edges are parallel. Yes,  True or false: in , , and are adjacent. True  True or false: in , , and are adjacent. False  True or false: in , , and are adjacent. True  In , , find the degree of .     Correct.      Incorrect. See .      In , , find the degree of .     Correct.      Incorrect. See .      What is the total degree of , ?     Correct.      Incorrect. See . Add the degrees of all the vertices.      Draw . How many edges does it have?  What is the degree of each vertex?     Correct. It has 10 edges.      Incorrect. See . Make sure you have connected every vertex to every other vertex exactly once.        Correct. Every edge has degree 4.      Incorrect. See .     It has 10 edges. All vertices have degree 4.  True or false: there exists a graph with 4 vertices of degrees 1, 2, 1, 2. One example is a line (path) with 4 vertices. True. One example is a line (path) with 4 vertices.  True or false: there exists a graph with 4 vertices of degrees 1, 2, 1, 3. The total degree would be odd. False. Total degree would be odd.  True or false: there exists a graph with 4 vertices of degrees 4, 4, 4, 4. One example has parallel edges between each vertex. Can also have an example with loops. True. One example has parallel edges between each vertex. You can also have an example with loops.  True or false: there exists a simple graph with 4 vertices of degrees 4, 4, 4, 4. In a simple graph, you can't have more edges than the complete graph on 4 vertices. False. Can't have more edges than the complete graph on 4 vertices.    Draw the graph given by the following information: Graph has vertex set and edge set with edge-endpoint function given by the table.    Edge  Endpoints                     Show that the two drawings represent the same graph by labeling the vertices and edges of the right-hand drawing to correspond to those of the left-hand drawing.      Show that the two drawings represent the same graph by labeling the vertices and edges of the right-hand drawing to correspond to those of the left-hand drawing.      Consider the graph       Find all edges that are incident on .    Find all vertices that are adjacent to .    Find all edges that are adjacent to .    Find all loops.    Find all parallel edges.    Find all isolated vertices.    Find the degree of .    Find the total degree of the graph.     A graph has vertices of degrees 0, 2, 2, 3, and 9. How many edges does the graph have?   For each of the following, draw the graph if it exists or explain why no such graph exists.    A graph with four vertices of degrees 1, 1, 1, and 4.    A graph with four vertices of degrees 1, 2, 3, and 4.    A simple graph with 9 edges and all vertices of degree 3.     In a group of 25 people, is it possible for each person to shake hands with exactly 3 other people? Explain your answer.   Recall that denotes the complete bipartite graph on vertices.    Draw .    Draw .    Draw .    How many vertices of have of degree ? degree ?    What is the total degree of ?    Find a formula in terms of and for the number of edges of .      Recall is the complete graph on vertices.    Draw .    Show that for all integers , the number of edges of is .    There are two possible approaches for the proof. One is to try a counting argument, the other is to do induction on .   "
 },
 {
-  "id": "p-3282",
+  "id": "p-3286",
   "level": "2",
-  "url": "graphs10-1.html#p-3282",
+  "url": "graphs10-1.html#p-3286",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -9829,40 +9811,13 @@ var ptx_lunr_docs = [
   "body": "  A graph, , consists of a finite set, , of vertices vertex and a finite set, , of edges edge . Each edge is assocated with two vertices (it may be the same vertex) called endpoints endpoints of an edge . "
 },
 {
-  "id": "p-3286",
-  "level": "2",
-  "url": "graphs10-1.html#p-3286",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "parallel "
-},
-{
-  "id": "p-3287",
-  "level": "2",
-  "url": "graphs10-1.html#p-3287",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "loop "
-},
-{
-  "id": "p-3288",
-  "level": "2",
-  "url": "graphs10-1.html#p-3288",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "adjacent "
-},
-{
   "id": "p-3290",
   "level": "2",
   "url": "graphs10-1.html#p-3290",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "incident on "
+  "body": "parallel "
 },
 {
   "id": "p-3291",
@@ -9871,7 +9826,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "adjacent "
+  "body": "loop "
 },
 {
   "id": "p-3292",
@@ -9880,12 +9835,39 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
+  "body": "adjacent "
+},
+{
+  "id": "p-3294",
+  "level": "2",
+  "url": "graphs10-1.html#p-3294",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "incident on "
+},
+{
+  "id": "p-3295",
+  "level": "2",
+  "url": "graphs10-1.html#p-3295",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "adjacent "
+},
+{
+  "id": "p-3296",
+  "level": "2",
+  "url": "graphs10-1.html#p-3296",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
   "body": "isolated vertex "
 },
 {
-  "id": "p-3293",
+  "id": "p-3297",
   "level": "2",
-  "url": "graphs10-1.html#p-3293",
+  "url": "graphs10-1.html#p-3297",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -9928,9 +9910,9 @@ var ptx_lunr_docs = [
   "body": "A directed graph directed graph or digraph digraph graph directed consists of a set of vertices, and directed edges (arrows), , where each edge is associated with an ordered pair of of vertices called endpoints, . "
 },
 {
-  "id": "p-3310",
+  "id": "p-3314",
   "level": "2",
-  "url": "graphs10-1.html#p-3310",
+  "url": "graphs10-1.html#p-3314",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -9955,9 +9937,9 @@ var ptx_lunr_docs = [
   "body": " Examples of complete graphs    "
 },
 {
-  "id": "activity-179",
+  "id": "activity-177",
   "level": "2",
-  "url": "graphs10-1.html#activity-179",
+  "url": "graphs10-1.html#activity-177",
   "type": "Activity",
   "number": "10.1.1",
   "title": "",
@@ -9982,9 +9964,9 @@ var ptx_lunr_docs = [
   "body": " Complete bipartite graph,    "
 },
 {
-  "id": "activity-180",
+  "id": "activity-178",
   "level": "2",
-  "url": "graphs10-1.html#activity-180",
+  "url": "graphs10-1.html#activity-178",
   "type": "Activity",
   "number": "10.1.2",
   "title": "",
@@ -10036,9 +10018,9 @@ var ptx_lunr_docs = [
   "body": "The total degree of a graph is where is the number of edges in . "
 },
 {
-  "id": "activity-181",
+  "id": "activity-179",
   "level": "2",
-  "url": "graphs10-1.html#activity-181",
+  "url": "graphs10-1.html#activity-179",
   "type": "Activity",
   "number": "10.1.3",
   "title": "",
@@ -10054,18 +10036,18 @@ var ptx_lunr_docs = [
   "body": "The total degree of any graph is even. "
 },
 {
-  "id": "activity-182",
+  "id": "activity-180",
   "level": "2",
-  "url": "graphs10-1.html#activity-182",
+  "url": "graphs10-1.html#activity-180",
   "type": "Activity",
   "number": "10.1.4",
   "title": "",
   "body": "Explain why in any graph there is an even number of vertices of odd degree. "
 },
 {
-  "id": "activity-183",
+  "id": "activity-181",
   "level": "2",
-  "url": "graphs10-1.html#activity-183",
+  "url": "graphs10-1.html#activity-181",
   "type": "Activity",
   "number": "10.1.5",
   "title": "",
@@ -10306,9 +10288,9 @@ var ptx_lunr_docs = [
   "body": "For each of the following terms we have a list of vertices and edges, , that represent a way to traverse through the graph. So, for example, must be an endpoint of , must be an endpoint of and , etc. For each of the following terms we indicate whether we can repeat vertices and\/or edges in the list.  A walk walk from to has . It can repeat edges and vertices. It can begin at any vertex and end at any vertex.  A trail trail from to has . It cannot repeat edges. It can begin at any vertex and end at any vertex.  A path path from to has . It cannot repeat edges or vertices. It can begin at any vertex and end at any vertex.  A closed walk closed walk walk closed must start and end at the same vertex , . It can repeat edges and vertices.  A circuit circuit must start and end at the same vertex , . It cannot repeat edges. It can repeat vertices.  A simple circuit simple circuit circuit simple must start and end at the same vertex , . It cannot repeat edges or vertices, except for the initial and terminal vertex.   "
 },
 {
-  "id": "p-3406",
+  "id": "p-3410",
   "level": "2",
-  "url": "pathscircuits10-2.html#p-3406",
+  "url": "pathscircuits10-2.html#p-3410",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -10351,9 +10333,9 @@ var ptx_lunr_docs = [
   "body": "If is a connected graph then any two distinct vertices of can be connected by a simple path. "
 },
 {
-  "id": "activity-184",
+  "id": "activity-182",
   "level": "2",
-  "url": "pathscircuits10-2.html#activity-184",
+  "url": "pathscircuits10-2.html#activity-182",
   "type": "Activity",
   "number": "10.2.1",
   "title": "",
@@ -10369,9 +10351,9 @@ var ptx_lunr_docs = [
   "body": "If and are part of a circuit in and one edge is removed, then there still exists a path from to in . "
 },
 {
-  "id": "activity-185",
+  "id": "activity-183",
   "level": "2",
-  "url": "pathscircuits10-2.html#activity-185",
+  "url": "pathscircuits10-2.html#activity-183",
   "type": "Activity",
   "number": "10.2.2",
   "title": "",
@@ -10387,9 +10369,9 @@ var ptx_lunr_docs = [
   "body": "If is a connected graph and contains a nontrivial circuit, then an edge of the circuit can be removed without disconnecting . "
 },
 {
-  "id": "activity-186",
+  "id": "activity-184",
   "level": "2",
-  "url": "pathscircuits10-2.html#activity-186",
+  "url": "pathscircuits10-2.html#activity-184",
   "type": "Activity",
   "number": "10.2.3",
   "title": "",
@@ -10414,9 +10396,9 @@ var ptx_lunr_docs = [
   "body": "Finding Euler Circuits  Is it possible to find an Euler circuit for the graph in ?      Yes. For example .  Is it possible to find an Euler circuit for the Konigsberg bridge graph in ?      No.  "
 },
 {
-  "id": "activity-187",
+  "id": "activity-185",
   "level": "2",
-  "url": "pathscircuits10-2.html#activity-187",
+  "url": "pathscircuits10-2.html#activity-185",
   "type": "Activity",
   "number": "10.2.4",
   "title": "",
@@ -10441,9 +10423,9 @@ var ptx_lunr_docs = [
   "body": "If every vertex of a nonempty graph has even degree and is connected, then the graph has an Euler circuit. "
 },
 {
-  "id": "activity-188",
+  "id": "activity-186",
   "level": "2",
-  "url": "pathscircuits10-2.html#activity-188",
+  "url": "pathscircuits10-2.html#activity-186",
   "type": "Activity",
   "number": "10.2.5",
   "title": "",
@@ -10468,9 +10450,9 @@ var ptx_lunr_docs = [
   "body": "A graph has an Euler path from to if and only if is connected, and have odd degree, and all other vertices of have even degree. "
 },
 {
-  "id": "activity-189",
+  "id": "activity-187",
   "level": "2",
-  "url": "pathscircuits10-2.html#activity-189",
+  "url": "pathscircuits10-2.html#activity-187",
   "type": "Activity",
   "number": "10.2.6",
   "title": "",
@@ -10486,9 +10468,9 @@ var ptx_lunr_docs = [
   "body": "A Hamiltonian circuit Hamiltonian circuit circuit Hamiltonian for is a simple circuit that includes every vertex of . "
 },
 {
-  "id": "activity-190",
+  "id": "activity-188",
   "level": "2",
-  "url": "pathscircuits10-2.html#activity-190",
+  "url": "pathscircuits10-2.html#activity-188",
   "type": "Activity",
   "number": "10.2.7",
   "title": "",
@@ -10684,9 +10666,9 @@ var ptx_lunr_docs = [
   "body": "A graph is a tree tree if it is connected and circuit-free. "
 },
 {
-  "id": "p-3482",
+  "id": "p-3486",
   "level": "2",
-  "url": "trees10-3.html#p-3482",
+  "url": "trees10-3.html#p-3486",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -10720,9 +10702,9 @@ var ptx_lunr_docs = [
   "body": "A terminal vertex terminal vertex or leaf leaf is a vertex of degree 1. Vertices of degree greater than 1 are internal internal vertex or branch branch vertex vertex branch vertices. "
 },
 {
-  "id": "p-3486",
+  "id": "p-3490",
   "level": "2",
-  "url": "trees10-3.html#p-3486",
+  "url": "trees10-3.html#p-3490",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -10738,18 +10720,18 @@ var ptx_lunr_docs = [
   "body": "Rooted Tree    A rooted tree     In the example, let be the root of the tree.  Then is at level 2, is at level 4, and is at level 0.  The height of the tree is 4.  The children of are and .  The only sibling of is ; the parent of is .  The ancestors of are and . The descendants of are .  "
 },
 {
-  "id": "p-3493",
+  "id": "p-3497",
   "level": "2",
-  "url": "trees10-3.html#p-3493",
+  "url": "trees10-3.html#p-3497",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "binary tree "
 },
 {
-  "id": "p-3494",
+  "id": "p-3498",
   "level": "2",
-  "url": "trees10-3.html#p-3494",
+  "url": "trees10-3.html#p-3498",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -10765,18 +10747,18 @@ var ptx_lunr_docs = [
   "body": "Full Binary Tree    A full binary tree of height 3     "
 },
 {
-  "id": "activity-191",
+  "id": "activity-189",
   "level": "2",
-  "url": "trees10-3.html#activity-191",
+  "url": "trees10-3.html#activity-189",
   "type": "Activity",
   "number": "10.3.1",
   "title": "",
   "body": "Draw the full binary tree of height 4. How many leaves does it have? "
 },
 {
-  "id": "activity-192",
+  "id": "activity-190",
   "level": "2",
-  "url": "trees10-3.html#activity-192",
+  "url": "trees10-3.html#activity-190",
   "type": "Activity",
   "number": "10.3.2",
   "title": "",
@@ -10792,9 +10774,9 @@ var ptx_lunr_docs = [
   "body": "For any positive integer, , any tree with vertices has edges. "
 },
 {
-  "id": "activity-193",
+  "id": "activity-191",
   "level": "2",
-  "url": "trees10-3.html#activity-193",
+  "url": "trees10-3.html#activity-191",
   "type": "Activity",
   "number": "10.3.3",
   "title": "",
