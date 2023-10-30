@@ -84,15 +84,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.1.4';
+eBookConfig.runestone_version = '7.2.2';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.1.4/prefix-runtime.d3f96040775bf7ec.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.1.4/prefix-347.8328b60515045466.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.1.4/prefix-runestone.3a5641c4e1fe869e.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.1.4/prefix-347.f9add1ca35d5ad93.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.1.4/prefix-runestone.cec40a61180efd41.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.2.2/prefix-runtime.ea89cba5970a9192.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.2.2/prefix-347.8328b60515045466.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.2.2/prefix-runestone.f9281f94d8420c68.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.2.2/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.2.2/prefix-runestone.f64dcc3632d7a0c3.css">
 </head>
 <body id="DiscreteMathText" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
@@ -580,32 +580,32 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="recursion5-5"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.5</span> <span class="title">Defining Sequences Recursively</span>
 </h2>
-<div class="para" id="p-1636">We've seen sequences defined explicitly, such as <span class="process-math">\(a_n=n^2\text{.}\)</span> Another common way to generate a sequence is by giving a rule for how to generate the next term from the previous term. For example,  <span class="process-math">\(a_n=a_{n-1}+2\)</span> where <span class="process-math">\(a_1=1\text{.}\)</span> Such sequences are called <dfn class="terminology">recursively defined</dfn> sequences.</div>
+<div class="para" id="p-1640">We've seen sequences defined explicitly, such as <span class="process-math">\(a_n=n^2\text{.}\)</span> Another common way to generate a sequence is by giving a rule for how to generate the next term from the previous term. For example,  <span class="process-math">\(a_n=a_{n-1}+2\)</span> where <span class="process-math">\(a_1=1\text{.}\)</span> Such sequences are called <dfn class="terminology">recursively defined</dfn> sequences.</div>
 <article class="example example-like" id="E_explicitseq"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_explicitseq"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.5.1</span><span class="period">.</span><span class="space"> </span><span class="title">Explicitly Defined Sequences.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_explicitseq"><article class="example example-like"> <div class="para" id="p-1637">Find the first five terms of the sequence given by <span class="process-math">\(a_n=n^2, n\geq 0\text{.}\)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-223" id="answer-223"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-223"><div class="answer solution-like"><span class="process-math">\(a_0=0, a_1=1, a_2=4, a_3=9, a_4=16\)</span></div></div> <div class="para" id="p-1638">Find the first five terms of the sequence given by <span class="process-math">\(a_n=\frac{1}{n}, n\geq 1\text{.}\)</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_explicitseq"><article class="example example-like"> <div class="para" id="p-1641">Find the first five terms of the sequence given by <span class="process-math">\(a_n=n^2, n\geq 0\text{.}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-223" id="answer-223"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-223"><div class="answer solution-like"><span class="process-math">\(a_0=0, a_1=1, a_2=4, a_3=9, a_4=16\)</span></div></div> <div class="para" id="p-1642">Find the first five terms of the sequence given by <span class="process-math">\(a_n=\frac{1}{n}, n\geq 1\text{.}\)</span>
 </div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-224" id="answer-224"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-224"><div class="answer solution-like"><span class="process-math">\(a_1=1, a_2=1/2, a_3=1/3, a_4=1/4, a_5=1/5\)</span></div></div></article></div>
-<article class="activity project-like" id="activity-97"><h3 class="heading">
+<article class="activity project-like" id="activity-95"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.5.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1639">Write out the first 6 terms of the sequence <span class="process-math">\(a_n=2^n, n\geq 0\text{.}\)</span>
+<div class="para" id="p-1643">Write out the first 6 terms of the sequence <span class="process-math">\(a_n=2^n, n\geq 0\text{.}\)</span>
 </div></article><article class="example example-like" id="E_recursiveseq"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_recursiveseq"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.5.2</span><span class="period">.</span><span class="space"> </span><span class="title">Recursively Defined Sequences.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_recursiveseq"><article class="example example-like"> <div class="para" id="p-1640">Find the first five terms of the sequence given by <span class="process-math">\(a_n=a_{n-1}+2, a_1=1\text{.}\)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-225" id="answer-225"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-225"><div class="answer solution-like"><span class="process-math">\(a_1=1, a_2=3, a_3=5, a_4=7, a_5=9\)</span></div></div> <div class="para" id="p-1641">Find the first five terms of the sequence given by <span class="process-math">\(a_n=a_{n-1}+2, a_1=0\text{.}\)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-226" id="answer-226"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-226"><div class="answer solution-like"><span class="process-math">\(a_1=0, a_2=2, a_3=4, a_4=6, a_5=8\)</span></div></div> <div class="para" id="p-1642">Find the first five terms of the sequence given by <span class="process-math">\(a_n=a_{n-1}+5a_{n-2}, a_0=1, a_1=1\text{.}\)</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_recursiveseq"><article class="example example-like"> <div class="para" id="p-1644">Find the first five terms of the sequence given by <span class="process-math">\(a_n=a_{n-1}+2, a_1=1\text{.}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-225" id="answer-225"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-225"><div class="answer solution-like"><span class="process-math">\(a_1=1, a_2=3, a_3=5, a_4=7, a_5=9\)</span></div></div> <div class="para" id="p-1645">Find the first five terms of the sequence given by <span class="process-math">\(a_n=a_{n-1}+2, a_1=0\text{.}\)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-226" id="answer-226"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-226"><div class="answer solution-like"><span class="process-math">\(a_1=0, a_2=2, a_3=4, a_4=6, a_5=8\)</span></div></div> <div class="para" id="p-1646">Find the first five terms of the sequence given by <span class="process-math">\(a_n=a_{n-1}+5a_{n-2}, a_0=1, a_1=1\text{.}\)</span>
 </div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-227" id="answer-227"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-227"><div class="answer solution-like"><span class="process-math">\(a_0=1, a_1=1, a_2=6, a_3=11, a_4=41\)</span></div></div></article></div>
-<article class="activity project-like" id="activity-98"><h3 class="heading">
+<article class="activity project-like" id="activity-96"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.5.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1643">Write out the first 6 terms of the sequence <span class="process-math">\(a_n=a_{n-1}+2a_{n-2}, a_0=1, a_1=1\text{.}\)</span>
-</div></article><div class="para" id="p-1644">Although both types of sequences use an equation to find <span class="process-math">\(a_n\text{,}\)</span> the recursive sequence also needs to define the first few terms. If we change the <dfn class="terminology">initial</dfn> terms, we get a different sequence. The formula used to generate the recursive sequence is called a <dfn class="terminology">recurrence relation</dfn>, while the first term (or terms) is called the <dfn class="terminology">initial condition(s)</dfn>.</div>
-<div class="para" id="p-1645">An advantage of an explicitly defined sequence is that it is easy to find any particular term. For example, it would be easy to calculate <span class="process-math">\(a_{500}\)</span> in <a href="" class="xref" data-knowl="./knowl/E_explicitseq.html" title="Example 5.5.1: Explicitly Defined Sequences">Example 5.5.1</a>. In order to find <span class="process-math">\(a_{500}\)</span> in <a href="" class="xref" data-knowl="./knowl/E_recursiveseq.html" title="Example 5.5.2: Recursively Defined Sequences">Example 5.5.2</a>, we would need to know <span class="process-math">\(a_{499}\text{,}\)</span> and all the terms before that. So we would need to have generated the sequence up to that point to calculate a specific term.</div>
-<div class="para" id="p-1646">Recursive sequences have the advantage that they can be faster (or computationally simpler) to calculate, especially if you need to generate many terms of the sequence. Computers are good at generating recursive sequences. It also may be the case that we can easily define a recursive sequence in which it is difficult, or even impossible, to express with an explicit formula.</div>
+<div class="para" id="p-1647">Write out the first 6 terms of the sequence <span class="process-math">\(a_n=a_{n-1}+2a_{n-2}, a_0=1, a_1=1\text{.}\)</span>
+</div></article><div class="para" id="p-1648">Although both types of sequences use an equation to find <span class="process-math">\(a_n\text{,}\)</span> the recursive sequence also needs to define the first few terms. If we change the <dfn class="terminology">initial</dfn> terms, we get a different sequence. The formula used to generate the recursive sequence is called a <dfn class="terminology">recurrence relation</dfn>, while the first term (or terms) is called the <dfn class="terminology">initial condition(s)</dfn>.</div>
+<div class="para" id="p-1649">An advantage of an explicitly defined sequence is that it is easy to find any particular term. For example, it would be easy to calculate <span class="process-math">\(a_{500}\)</span> in <a href="" class="xref" data-knowl="./knowl/E_explicitseq.html" title="Example 5.5.1: Explicitly Defined Sequences">Example 5.5.1</a>. In order to find <span class="process-math">\(a_{500}\)</span> in <a href="" class="xref" data-knowl="./knowl/E_recursiveseq.html" title="Example 5.5.2: Recursively Defined Sequences">Example 5.5.2</a>, we would need to know <span class="process-math">\(a_{499}\text{,}\)</span> and all the terms before that. So we would need to have generated the sequence up to that point to calculate a specific term.</div>
+<div class="para" id="p-1650">Recursive sequences have the advantage that they can be faster (or computationally simpler) to calculate, especially if you need to generate many terms of the sequence. Computers are good at generating recursive sequences. It also may be the case that we can easily define a recursive sequence in which it is difficult, or even impossible, to express with an explicit formula.</div>
 <article class="example example-like" id="E_fibonaccidef"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_fibonaccidef"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.5.3</span><span class="period">.</span><span class="space"> </span><span class="title">The Fibonacci Sequence.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_fibonaccidef"><article class="example example-like"> <div class="para logical" id="p-1647">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_fibonaccidef"><article class="example example-like"> <div class="para logical" id="p-1651">
 <div class="para">The Fibonacci sequence is defined recursively by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -614,20 +614,20 @@ F_1=1, F_2=1, F_k=F_{k-1}+F_{k-2}.
 </div>
 <div class="para">Give the first 6 terms of the Fibonacci sequence.</div>
 </div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-228" id="answer-228"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-228"><div class="answer solution-like"><span class="process-math">\(1, 1, 2, 3, 5, 8\)</span></div></div></article></div>
-<article class="activity project-like" id="activity-99"><h3 class="heading">
+<article class="activity project-like" id="activity-97"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.5.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1648">Write out the 7th, 8th, and 9th terms of the Fibonacci sequence.</div></article><div class="para" id="p-1649">The Fibonacci sequence is a good example of a recursively defined sequence where it is difficult to find an explicit formula. An explicit formula for the Fibonacci sequence does exist, we will see it in the next section and in <a href="" class="xref" data-knowl="./knowl/EC_Fibexplicit.html" title="Exercise 5.5.7">Exercise 5.5.7</a>, but it requires much more sophisticated mathematics to find it than anything we will see in this course. If you are interested, though, this is the sort of thing you would see if you take a combinatorics course. When we do see the formula, it should be clear that it is computationally <em class="emphasis">much</em> harder to work with than the recursive definiton (which is why you rarely see it when working with the Fibonacci sequence).</div>
-<article class="activity project-like" id="activity-100"><h3 class="heading">
+<div class="para" id="p-1652">Write out the 7th, 8th, and 9th terms of the Fibonacci sequence.</div></article><div class="para" id="p-1653">The Fibonacci sequence is a good example of a recursively defined sequence where it is difficult to find an explicit formula. An explicit formula for the Fibonacci sequence does exist, we will see it in the next section and in <a href="" class="xref" data-knowl="./knowl/EC_Fibexplicit.html" title="Exercise 5.5.7">Exercise 5.5.7</a>, but it requires much more sophisticated mathematics to find it than anything we will see in this course. If you are interested, though, this is the sort of thing you would see if you take a combinatorics course. When we do see the formula, it should be clear that it is computationally <em class="emphasis">much</em> harder to work with than the recursive definiton (which is why you rarely see it when working with the Fibonacci sequence).</div>
+<article class="activity project-like" id="activity-98"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.5.4</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-49"><div class="para" id="p-1650">We would like to explore the connection between recursive and explicit sequences.</div></div>
-<article class="task exercise-like" id="task-151"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-1651">Write out the first 6 terms of <span class="process-math">\(a_n=\frac{(-1)^n}{n!}, n\geq 0\text{.}\)</span> Is this an explicitly or recursively defined sequence?</div></article><article class="task exercise-like" id="task-152"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-1652">Consider the recurrence relationship <span class="process-math">\(a_k=\frac{-a_{k-1}}{k}, k\geq1\text{.}\)</span> Write out several terms of the sequence for a couple different choices of initial terms.</div></article><article class="task exercise-like" id="task-153"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-1653">How do the sequences in (a) and (b) compare?</div></article></article><div class="para" id="p-1654">We want to be able to show the relationship between the recursive definition and the explicit definition for a sequence. In this section we will look at proving an explicit sequence satisfies a given recurrence relation. Since, in general, explict formulas contain more information than a recurrence relation, we can use simpler proof techniques to show an explicit sequence satisfies a recurrence relation.</div>
+<div class="introduction" id="introduction-51"><div class="para" id="p-1654">We would like to explore the connection between recursive and explicit sequences.</div></div>
+<article class="task exercise-like" id="task-157"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="p-1655">Write out the first 6 terms of <span class="process-math">\(a_n=\frac{(-1)^n}{n!}, n\geq 0\text{.}\)</span> Is this an explicitly or recursively defined sequence?</div></article><article class="task exercise-like" id="task-158"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-1656">Consider the recurrence relationship <span class="process-math">\(a_k=\frac{-a_{k-1}}{k}, k\geq1\text{.}\)</span> Write out several terms of the sequence for a couple different choices of initial terms.</div></article><article class="task exercise-like" id="task-159"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-1657">How do the sequences in (a) and (b) compare?</div></article></article><div class="para" id="p-1658">We want to be able to show the relationship between the recursive definition and the explicit definition for a sequence. In this section we will look at proving an explicit sequence satisfies a given recurrence relation. Since, in general, explict formulas contain more information than a recurrence relation, we can use simpler proof techniques to show an explicit sequence satisfies a recurrence relation.</div>
 <article class="assemblage assemblage-like" id="B_pfrecurrencerelation"><h3 class="heading"><span class="title">Proving a Sequence Satisfies a Recurrence Relation.</span></h3>
-<div class="para logical" id="p-1655">
+<div class="para logical" id="p-1659">
 <div class="para">To prove an explicity defined sequence satisfies a recurrence relation:</div>
 <ul class="disc">
 <li id="li-340"><div class="para" id="p-derived-li-340">Assume the explicit formula for the sequence.</div></li>
@@ -636,102 +636,102 @@ F_1=1, F_2=1, F_k=F_{k-1}+F_{k-2}.
 <div class="para">This is always a direct proof. Do not use induction. We will see induction in the next section.</div>
 </div></article><article class="example example-like" id="E_showrecurrence"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_showrecurrence"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.5.4</span><span class="period">.</span><span class="space"> </span><span class="title">Proving a Recurrence Relation for an Explicit Sequence.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_showrecurrence"><article class="example example-like"> <div class="para" id="p-1656">Let <span class="process-math">\(a_n=3n+1, n\geq 0\text{.}\)</span> Show this sequence satisfies the recurrence relation <span class="process-math">\(a_k=a_{k-1}+3\text{,}\)</span> for <span class="process-math">\(k\geq 1\text{.}\)</span>
-</div> <article class="hiddenproof" id="proof-26"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-26"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-26"><article class="hiddenproof"><div class="para" id="p-1657">Assume <span class="process-math">\(a_n=3n+1\)</span> for all <span class="process-math">\(n\geq 0\text{.}\)</span> Show this sequence statisfies the recurrence relation <span class="process-math">\(a_k=a_{k-1}+3\text{.}\)</span>
-</div> <div class="para" id="p-1658">LHS: <span class="process-math">\(a_{k}=3k+1\text{,}\)</span>  since we know that <span class="process-math">\(a_k\)</span> satisfies the explicit formula.</div> <div class="para" id="p-1659">RHS: <span class="process-math">\(a_{k-1}+3=(3(k-1)+1)+3\text{,}\)</span>  since we know that <span class="process-math">\(a_{k-1}\)</span> satisfies the explicit formula.</div> <div class="para" id="p-1660">Simplifying, we get <span class="process-math">\(a_{k-1}+3=3k-3+1+3=3k+1\text{.}\)</span>
-</div> <div class="para" id="p-1661">Thus, the LHS=RHS, hence <span class="process-math">\(a_k=a_{k-1}+3\text{.}\)</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_showrecurrence"><article class="example example-like"> <div class="para" id="p-1660">Let <span class="process-math">\(a_n=3n+1, n\geq 0\text{.}\)</span> Show this sequence satisfies the recurrence relation <span class="process-math">\(a_k=a_{k-1}+3\text{,}\)</span> for <span class="process-math">\(k\geq 1\text{.}\)</span>
+</div> <article class="hiddenproof" id="proof-26"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-26"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-26"><article class="hiddenproof"><div class="para" id="p-1661">Assume <span class="process-math">\(a_n=3n+1\)</span> for all <span class="process-math">\(n\geq 0\text{.}\)</span> Show this sequence statisfies the recurrence relation <span class="process-math">\(a_k=a_{k-1}+3\text{.}\)</span>
+</div> <div class="para" id="p-1662">LHS: <span class="process-math">\(a_{k}=3k+1\text{,}\)</span>  since we know that <span class="process-math">\(a_k\)</span> satisfies the explicit formula.</div> <div class="para" id="p-1663">RHS: <span class="process-math">\(a_{k-1}+3=(3(k-1)+1)+3\text{,}\)</span>  since we know that <span class="process-math">\(a_{k-1}\)</span> satisfies the explicit formula.</div> <div class="para" id="p-1664">Simplifying, we get <span class="process-math">\(a_{k-1}+3=3k-3+1+3=3k+1\text{.}\)</span>
+</div> <div class="para" id="p-1665">Thus, the LHS=RHS, hence <span class="process-math">\(a_k=a_{k-1}+3\text{.}\)</span>
 </div></article></div></article></div>
-<article class="activity project-like" id="activity-101"><h3 class="heading">
+<article class="activity project-like" id="activity-99"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.5.5</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1662">Prove <span class="process-math">\(a_n=\frac{(-1)^n}{n!}, n\geq 0\)</span> satisfies the recurrence relationship <span class="process-math">\(a_k=\frac{-a_{k-1}}{k}, k\geq1\text{,}\)</span> by assuming the sequence is given by  <span class="process-math">\(a_n=\frac{(-1)^n}{n!}, n\geq 0\text{,}\)</span> and showing <span class="process-math">\(a_k=\frac{-a_{k-1}}{k}\text{.}\)</span>
-</div></article><div class="para" id="p-1663">To show an explicitly defined sequence satisfies a recurrence relationship always assume the explicit formula and show the recursive one. This can almost always be done with a direct proof.</div>
-<div class="para" id="p-1664">We can use the recurrence relation for the Fibonacci numbers to prove additional properties.</div>
-<article class="activity project-like" id="activity-102"><h3 class="heading">
+<div class="para" id="p-1666">Prove <span class="process-math">\(a_n=\frac{(-1)^n}{n!}, n\geq 0\)</span> satisfies the recurrence relationship <span class="process-math">\(a_k=\frac{-a_{k-1}}{k}, k\geq1\text{,}\)</span> by assuming the sequence is given by  <span class="process-math">\(a_n=\frac{(-1)^n}{n!}, n\geq 0\text{,}\)</span> and showing <span class="process-math">\(a_k=\frac{-a_{k-1}}{k}\text{.}\)</span>
+</div></article><div class="para" id="p-1667">To show an explicitly defined sequence satisfies a recurrence relationship always assume the explicit formula and show the recursive one. This can almost always be done with a direct proof.</div>
+<div class="para" id="p-1668">We can use the recurrence relation for the Fibonacci numbers to prove additional properties.</div>
+<article class="activity project-like" id="activity-100"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.5.6</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1665">For the Fibonacci sequence, prove <span class="process-math">\({F_k}^2-{F_{k-1}}^2=F_kF_{k+1}-F_{k+1}F_{k-1}\)</span> for all <span class="process-math">\(k\geq 1\text{.}\)</span>
+<div class="para" id="p-1669">For the Fibonacci sequence, prove <span class="process-math">\({F_k}^2-{F_{k-1}}^2=F_kF_{k+1}-F_{k+1}F_{k-1}\)</span> for all <span class="process-math">\(k\geq 1\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-25" id="hint-25"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-25"><div class="hint solution-like"><div class="para" id="p-1666">Pick whichever side of the equation looks easier to start with. Do some algebra and, where appropriate, use the recursive definition for <span class="process-math">\(F_k\text{.}\)</span> If you get stuck, try working with the other side of the equation.</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-25" id="hint-25"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-25"><div class="hint solution-like"><div class="para" id="p-1670">Pick whichever side of the equation looks easier to start with. Do some algebra and, where appropriate, use the recursive definition for <span class="process-math">\(F_k\text{.}\)</span> If you get stuck, try working with the other side of the equation.</div></div></div>
 </div></article><section class="reading-questions" id="reading-questions-21"><h3 class="heading hide-type">
 <span class="type">Reading Questions</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="DMT_recursive_CYU_5anm1m4"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><div data-component="fillintheblank" data-question_label="" id="DMT_recursive_CYU_5anm1m4">
-<div class="para" id="p-1667">Find the 4th term of the sequence: <span class="process-math">\(a_n=5a_{n-1}-4, a_1=2\text{.}\)</span>
-</div> <div class="para" id="p-1668"><input type="text" placeholder="Number" size="4"></div>
-<script type="application/json">[[{"number": [126, 126], "feedback": "<div class=\"para\" id=\"p-1669\">Correct<\/div>"}, {"number": [26, 26], "feedback": "<div class=\"para\" id=\"p-1670\">You found the third term.<\/div>"}, {"number": [626, 626], "feedback": "<div class=\"para\" id=\"p-1671\">You found the fifth term.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-1672\">The first two terms are 2, 6.<\/div>"}]]</script>
+<div class="para" id="p-1671">Find the 4th term of the sequence: <span class="process-math">\(a_n=5a_{n-1}-4, a_1=2\text{.}\)</span>
+</div> <div class="para" id="p-1672"><input type="text" placeholder="Number" size="4"></div>
+<script type="application/json">[[{"number": [126, 126], "feedback": "<div class=\"para\" id=\"p-1673\">Correct<\/div>"}, {"number": [26, 26], "feedback": "<div class=\"para\" id=\"p-1674\">You found the third term.<\/div>"}, {"number": [626, 626], "feedback": "<div class=\"para\" id=\"p-1675\">You found the fifth term.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-1676\">The first two terms are 2, 6.<\/div>"}]]</script>
 </div></div></div></article><article class="exercise exercise-like" id="DMT_recursive_CYU_anm1danm2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><div data-component="fillintheblank" data-question_label="" id="DMT_recursive_CYU_anm1danm2">
-<div class="para" id="p-1674">Find the 4th term of the sequence: <span class="process-math">\(a_n=\frac{a_{n-1}}{a_{n-2}}, a_{0}=1, a_1=2\text{.}\)</span>
-</div> <div class="para" id="p-1675"><input type="text" placeholder="Number" size="4"></div>
-<script type="application/json">[[{"number": [1, 1], "feedback": "<div class=\"para\" id=\"p-1676\">Correct<\/div>"}, {"number": [2, 2], "feedback": "<div class=\"para\" id=\"p-1677\">You found the third term.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-1678\">The first two terms are 1, 2.<\/div>"}]]</script>
+<div class="para" id="p-1678">Find the 4th term of the sequence: <span class="process-math">\(a_n=\frac{a_{n-1}}{a_{n-2}}, a_{0}=1, a_1=2\text{.}\)</span>
+</div> <div class="para" id="p-1679"><input type="text" placeholder="Number" size="4"></div>
+<script type="application/json">[[{"number": [1, 1], "feedback": "<div class=\"para\" id=\"p-1680\">Correct<\/div>"}, {"number": [2, 2], "feedback": "<div class=\"para\" id=\"p-1681\">You found the third term.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-1682\">The first two terms are 1, 2.<\/div>"}]]</script>
 </div></div></div></article><article class="exercise exercise-like" id="DMT_recursive_CYU_n2pn"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><div data-component="fillintheblank" data-question_label="" id="DMT_recursive_CYU_n2pn">
-<div class="para" id="p-1680">Find the 4th term of the sequence: <span class="process-math">\(a_n=n^2+n, n\geq 1\text{.}\)</span>
-</div> <div class="para" id="p-1681"><input type="text" placeholder="Number" size="4"></div>
-<script type="application/json">[[{"number": [20, 20], "feedback": "<div class=\"para\" id=\"p-1682\">Correct<\/div>"}, {"number": [12, 12], "feedback": "<div class=\"para\" id=\"p-1683\">You found the third term.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-1684\">The first two terms are 2, 6.<\/div>"}]]</script>
+<div class="para" id="p-1684">Find the 4th term of the sequence: <span class="process-math">\(a_n=n^2+n, n\geq 1\text{.}\)</span>
+</div> <div class="para" id="p-1685"><input type="text" placeholder="Number" size="4"></div>
+<script type="application/json">[[{"number": [20, 20], "feedback": "<div class=\"para\" id=\"p-1686\">Correct<\/div>"}, {"number": [12, 12], "feedback": "<div class=\"para\" id=\"p-1687\">You found the third term.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-1688\">The first two terms are 2, 6.<\/div>"}]]</script>
 </div></div></div></article><article class="exercise exercise-like" id="DMT_recursive_CYU_npanm1"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><div data-component="fillintheblank" data-question_label="" id="DMT_recursive_CYU_npanm1">
-<div class="para" id="p-1686">Find the 4th term of the sequence: <span class="process-math">\(a_n=n+a_{n-1}, a_1=1\text{.}\)</span>
-</div> <div class="para" id="p-1687"><input type="text" placeholder="Number" size="4"></div>
-<script type="application/json">[[{"number": [10, 10], "feedback": "<div class=\"para\" id=\"p-1688\">Correct<\/div>"}, {"number": [6, 6], "feedback": "<div class=\"para\" id=\"p-1689\">You found the third term.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-1690\">The first two terms are 1, 3.<\/div>"}]]</script>
+<div class="para" id="p-1690">Find the 4th term of the sequence: <span class="process-math">\(a_n=n+a_{n-1}, a_1=1\text{.}\)</span>
+</div> <div class="para" id="p-1691"><input type="text" placeholder="Number" size="4"></div>
+<script type="application/json">[[{"number": [10, 10], "feedback": "<div class=\"para\" id=\"p-1692\">Correct<\/div>"}, {"number": [6, 6], "feedback": "<div class=\"para\" id=\"p-1693\">You found the third term.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"p-1694\">The first two terms are 1, 3.<\/div>"}]]</script>
 </div></div></div></article><article class="exercise exercise-like" id="DMT_recursive_CYU_er5anm1m4"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="DMT_recursive_CYU_er5anm1m4" data-multipleanswers="false">
-<div class="para" id="p-1692">Determine if the following sequence is explicitly defined or recursively defined: <span class="process-math">\(a_n=5a_{n-1}-4, a_1=2\text{.}\)</span>
+<div class="para" id="p-1696">Determine if the following sequence is explicitly defined or recursively defined: <span class="process-math">\(a_n=5a_{n-1}-4, a_1=2\text{.}\)</span>
 </div>
-<li data-component="answer" id="DMT_recursive_CYU_er5anm1m4_opt_a"><div class="para" id="p-1693">Explicitly defined</div></li>
+<li data-component="answer" id="DMT_recursive_CYU_er5anm1m4_opt_a"><div class="para" id="p-1697">Explicitly defined</div></li>
 <li data-component="feedback" id="DMT_recursive_CYU_er5anm1m4_opt_a">
-<li data-component="answer" id="DMT_recursive_CYU_er5anm1m4_opt_b" data-correct=""><div class="para" id="p-1694">Recursively defined</div></li>
+<li data-component="answer" id="DMT_recursive_CYU_er5anm1m4_opt_b" data-correct=""><div class="para" id="p-1698">Recursively defined</div></li>
 <li data-component="feedback" id="DMT_recursive_CYU_er5anm1m4_opt_b">
 </ul></div></div></article><article class="exercise exercise-like" id="DMT_recursive_CYU_eranm1danm2"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="DMT_recursive_CYU_eranm1danm2" data-multipleanswers="false">
-<div class="para" id="p-1696">Determine if the following sequence is explicitly defined or recursively defined: <span class="process-math">\(a_n=\frac{a_{n-1}}{a_{n-2}}, a_{0}=1, a_1=2\text{.}\)</span>
+<div class="para" id="p-1700">Determine if the following sequence is explicitly defined or recursively defined: <span class="process-math">\(a_n=\frac{a_{n-1}}{a_{n-2}}, a_{0}=1, a_1=2\text{.}\)</span>
 </div>
-<li data-component="answer" id="DMT_recursive_CYU_eranm1danm2_opt_a"><div class="para" id="p-1697">Explicitly defined</div></li>
+<li data-component="answer" id="DMT_recursive_CYU_eranm1danm2_opt_a"><div class="para" id="p-1701">Explicitly defined</div></li>
 <li data-component="feedback" id="DMT_recursive_CYU_eranm1danm2_opt_a">
-<li data-component="answer" id="DMT_recursive_CYU_eranm1danm2_opt_b" data-correct=""><div class="para" id="p-1698">Recursively defined</div></li>
+<li data-component="answer" id="DMT_recursive_CYU_eranm1danm2_opt_b" data-correct=""><div class="para" id="p-1702">Recursively defined</div></li>
 <li data-component="feedback" id="DMT_recursive_CYU_eranm1danm2_opt_b">
 </ul></div></div></article><article class="exercise exercise-like" id="DMT_recursive_CYU_ern2pn"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="DMT_recursive_CYU_ern2pn" data-multipleanswers="false">
-<div class="para" id="p-1700">Determine if the following sequence is explicitly defined or recursively defined: <span class="process-math">\(a_n=n^2+n, n\geq 1\text{.}\)</span>
+<div class="para" id="p-1704">Determine if the following sequence is explicitly defined or recursively defined: <span class="process-math">\(a_n=n^2+n, n\geq 1\text{.}\)</span>
 </div>
-<li data-component="answer" id="DMT_recursive_CYU_ern2pn_opt_a" data-correct=""><div class="para" id="p-1701">Explicitly defined</div></li>
+<li data-component="answer" id="DMT_recursive_CYU_ern2pn_opt_a" data-correct=""><div class="para" id="p-1705">Explicitly defined</div></li>
 <li data-component="feedback" id="DMT_recursive_CYU_ern2pn_opt_a">
-<li data-component="answer" id="DMT_recursive_CYU_ern2pn_opt_b"><div class="para" id="p-1702">Recursively defined</div></li>
+<li data-component="answer" id="DMT_recursive_CYU_ern2pn_opt_b"><div class="para" id="p-1706">Recursively defined</div></li>
 <li data-component="feedback" id="DMT_recursive_CYU_ern2pn_opt_b">
 </ul></div></div></article><article class="exercise exercise-like" id="DMT_recursive_CYU_ernpanm1"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="DMT_recursive_CYU_ernpanm1" data-multipleanswers="false">
-<div class="para" id="p-1704">Determine if the following sequence is explicitly defined or recursively defined: <span class="process-math">\(a_n=n+a_{n-1}, a_1=1\text{.}\)</span>
+<div class="para" id="p-1708">Determine if the following sequence is explicitly defined or recursively defined: <span class="process-math">\(a_n=n+a_{n-1}, a_1=1\text{.}\)</span>
 </div>
-<li data-component="answer" id="DMT_recursive_CYU_ernpanm1_opt_a"><div class="para" id="p-1705">Explicitly defined</div></li>
+<li data-component="answer" id="DMT_recursive_CYU_ernpanm1_opt_a"><div class="para" id="p-1709">Explicitly defined</div></li>
 <li data-component="feedback" id="DMT_recursive_CYU_ernpanm1_opt_a">
-<li data-component="answer" id="DMT_recursive_CYU_ernpanm1_opt_b" data-correct=""><div class="para" id="p-1706">Recursively defined</div></li>
+<li data-component="answer" id="DMT_recursive_CYU_ernpanm1_opt_b" data-correct=""><div class="para" id="p-1710">Recursively defined</div></li>
 <li data-component="feedback" id="DMT_recursive_CYU_ernpanm1_opt_b">
 </ul></div></div></article><article class="exercise exercise-like" id="DMT_recursive_CYU_2np1showrec"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<div class="para" id="p-1708">Let <span class="process-math">\(a_n=2n+1, n\geq 0\text{.}\)</span> Show this sequence satisfies the recurrence relation <span class="process-math">\(a_k=a_{k-1}+2\text{.}\)</span>
+<div class="para" id="p-1712">Let <span class="process-math">\(a_n=2n+1, n\geq 0\text{.}\)</span> Show this sequence satisfies the recurrence relation <span class="process-math">\(a_k=a_{k-1}+2\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-26" id="hint-26"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-26"><div class="hint solution-like"><div class="para" id="p-1709">This is a LHS/RHS proof showing the recurrence relation is true when you assume <span class="process-math">\(a_n=2n+1\text{.}\)</span> In particular, you know <span class="process-math">\(a_k=2k+1\)</span> and <span class="process-math">\(a_{k-1}=2(k-1)+1\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-26" id="hint-26"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-26"><div class="hint solution-like"><div class="para" id="p-1713">This is a LHS/RHS proof showing the recurrence relation is true when you assume <span class="process-math">\(a_n=2n+1\text{.}\)</span> In particular, you know <span class="process-math">\(a_k=2k+1\)</span> and <span class="process-math">\(a_{k-1}=2(k-1)+1\text{.}\)</span>
 </div></div></div>
 </div></article><article class="exercise exercise-like" id="DMT_recursive_CYU_2nshowrec"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
-<div class="para" id="p-1711">Let <span class="process-math">\(a_n=2n, n\geq 0\text{.}\)</span> Show this sequence satisfies the recurrence relation <span class="process-math">\(a_k=a_{k-1}+2\text{.}\)</span>
+<div class="para" id="p-1715">Let <span class="process-math">\(a_n=2n, n\geq 0\text{.}\)</span> Show this sequence satisfies the recurrence relation <span class="process-math">\(a_k=a_{k-1}+2\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-27" id="hint-27"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-27"><div class="hint solution-like"><div class="para" id="p-1712">This is a LHS/RHS proof showing the recurrence relation is true when you assume <span class="process-math">\(a_n=2n\text{.}\)</span> In particular, you know <span class="process-math">\(a_k=2k\)</span> and <span class="process-math">\(a_{k-1}=2(k-1)\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-27" id="hint-27"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-27"><div class="hint solution-like"><div class="para" id="p-1716">This is a LHS/RHS proof showing the recurrence relation is true when you assume <span class="process-math">\(a_n=2n\text{.}\)</span> In particular, you know <span class="process-math">\(a_k=2k\)</span> and <span class="process-math">\(a_{k-1}=2(k-1)\text{.}\)</span>
 </div></div></div>
 </div></article><article class="exercise exercise-like" id="DMT_recursive_CYU_2npdshowrec"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
-<div class="para" id="p-1714">Let <span class="process-math">\(a_n=2n+d, n\geq 0\text{.}\)</span> Show this sequence satisfies the recurrence relation <span class="process-math">\(a_k=a_{k-1}+2\text{.}\)</span>
+<div class="para" id="p-1718">Let <span class="process-math">\(a_n=2n+d, n\geq 0\text{.}\)</span> Show this sequence satisfies the recurrence relation <span class="process-math">\(a_k=a_{k-1}+2\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-28" id="hint-28"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-28"><div class="hint solution-like"><div class="para" id="p-1715">This is a LHS/RHS proof showing the recurrence relation is true when you assume <span class="process-math">\(a_n=2n+d\text{.}\)</span> In particular, you know <span class="process-math">\(a_k=2k+d\)</span> and <span class="process-math">\(a_{k-1}=2(k-1)+d\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-28" id="hint-28"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-28"><div class="hint solution-like"><div class="para" id="p-1719">This is a LHS/RHS proof showing the recurrence relation is true when you assume <span class="process-math">\(a_n=2n+d\text{.}\)</span> In particular, you know <span class="process-math">\(a_k=2k+d\)</span> and <span class="process-math">\(a_{k-1}=2(k-1)+d\text{.}\)</span>
 </div></div></div>
 </div></article></section><section class="exercises" id="exercises-21"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="exercise-298"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para logical" id="p-1717">
+<div class="para logical" id="p-1721">
 <div class="para">Find the first 4 terms of the sequence defined by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -744,7 +744,7 @@ a_k=a_{k-1}+3k, k\geq2.
 \end{equation*}
 </div>
 </div></article><article class="exercise exercise-like" id="exercise-299"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para logical" id="p-1718">
+<div class="para logical" id="p-1722">
 <div class="para">Find the first 4 terms of the sequence defined by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -757,11 +757,11 @@ b_k=b_{k-1}+2b_{k-2}, k\geq2.
 \end{equation*}
 </div>
 </div></article><article class="exercise exercise-like" id="exercise-300"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-1719">Let <span class="process-math">\(a_0, a_1, a_2,  \ldots\)</span> be the sequence defined by the formula <span class="process-math">\(a_n=3n+1\text{,}\)</span> for all integers <span class="process-math">\(n\geq 0\text{.}\)</span> Show that this sequence satisfies the recurrence relation <span class="process-math">\(a_k=a_{k-1}+3\)</span> for all integers <span class="process-math">\(k\geq1\text{.}\)</span>
+<div class="para" id="p-1723">Let <span class="process-math">\(a_0, a_1, a_2,  \ldots\)</span> be the sequence defined by the formula <span class="process-math">\(a_n=3n+1\text{,}\)</span> for all integers <span class="process-math">\(n\geq 0\text{.}\)</span> Show that this sequence satisfies the recurrence relation <span class="process-math">\(a_k=a_{k-1}+3\)</span> for all integers <span class="process-math">\(k\geq1\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-301"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-1720">Let <span class="process-math">\(b_0, b_1, b_2,  \ldots\)</span> be the sequence defined by the formula <span class="process-math">\(b_n=4^n\text{,}\)</span> for all integers <span class="process-math">\(n\geq 0\text{.}\)</span> Show that this sequence satisfies the recurrence relation <span class="process-math">\(b_k=4b_{k-1}\)</span> for all integers <span class="process-math">\(k\geq1\text{.}\)</span>
+<div class="para" id="p-1724">Let <span class="process-math">\(b_0, b_1, b_2,  \ldots\)</span> be the sequence defined by the formula <span class="process-math">\(b_n=4^n\text{,}\)</span> for all integers <span class="process-math">\(n\geq 0\text{.}\)</span> Show that this sequence satisfies the recurrence relation <span class="process-math">\(b_k=4b_{k-1}\)</span> for all integers <span class="process-math">\(k\geq1\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-302"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para logical" id="p-1721">
+<div class="para logical" id="p-1725">
 <div class="para">Let <span class="process-math">\(c_0, c_1, c_2,  \ldots\)</span> be the sequence defined by the formula <span class="process-math">\(c_n=2+n\text{,}\)</span> for all integers <span class="process-math">\(n\geq 0\text{.}\)</span> Show that this sequence satisfies the recurrence relation</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -769,7 +769,7 @@ c_k=2c_{k-1}-c_{k-2}.
 \end{equation*}
 </div>
 </div></article><article class="exercise exercise-like" id="exercise-303"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para logical" id="p-1722">
+<div class="para logical" id="p-1726">
 <div class="para">Let <span class="process-math">\(F_0, F_1, F_2, \ldots\)</span> be the Fibonacci sequence. Prove that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -779,7 +779,7 @@ F_k=3F_{k-3}+2F_{k-4}
 <div class="para">for all integers <span class="process-math">\(k\geq 4\text{.}\)</span>
 </div>
 </div></article><article class="exercise exercise-like" id="EC_Fibexplicit"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para logical" id="p-1723">
+<div class="para logical" id="p-1727">
 <div class="para">It turns out that the Fibonacci sequence satisfies the following explicit formula:</div>
 <div class="displaymath process-math">
 \begin{equation*}

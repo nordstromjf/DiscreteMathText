@@ -11,8 +11,19 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">True or false: <span class="process-math">\(S=\{3n : n\in \mathbb{Z}, n\geq 0\}\)</span> satisfies the conditions of the Well-Ordering Principle.</div>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para logical">
+<div class="para">We will use contradiction to show <span class="process-math">\(r&lt; d\text{.}\)</span> Assume <span class="process-math">\(r\geq d\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{align*}
+n-d(q+1)&amp;=n-dq-d\\
+&amp;=r-d\\
+&amp;\geq 0, \text{ since } r\geq d.
+\end{align*}
+</div>
+<div class="para">But then <span class="process-math">\(n-d(q+1)\in S\)</span> and <span class="process-math">\(n-d(q+1)&lt; n-dq=r\text{.}\)</span> This contradicts that <span class="process-math">\(r\)</span> was the smallest element of <span class="process-math">\(S\text{.}\)</span> Therefore, <span class="process-math">\(r&lt; d\text{.}\)</span>
+</div>
+</div>
 <span class="incontext"><a href="stronginduction5-4.html#p-1616" class="internal">in-context</a></span>
 </body>
 </html>

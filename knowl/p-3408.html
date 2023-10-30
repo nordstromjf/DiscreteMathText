@@ -12,7 +12,17 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">For each list of vertices and edges, decide if it is a walk, trail, path, closed walk, circuit, simple circuit.</div>
+<div class="para logical">
+<div class="para">For each of the following terms we have a list of vertices and edges, <span class="process-math">\(v_0e_1v_1e_2\cdots e_nv_v\text{,}\)</span>  that represent a way to traverse through the graph. So, for example, <span class="process-math">\(v_0\)</span> must be an endpoint of <span class="process-math">\(e_1\text{,}\)</span> <span class="process-math">\(v_1\)</span> must be an endpoint of <span class="process-math">\(e_1\)</span> and <span class="process-math">\(e_2\text{,}\)</span> etc. For each of the following terms we indicate whether we can repeat vertices and/or edges in the list.</div>
+<ul class="disc">
+<li><div class="para">A <dfn class="terminology">walk</dfn> from <span class="process-math">\(v\)</span> to <span class="process-math">\(w\)</span> has <span class="process-math">\(v=v_0, w=v_n\text{.}\)</span> It can repeat edges and vertices. It can begin at any vertex and end at any vertex.</div></li>
+<li><div class="para">A <dfn class="terminology">trail</dfn> from <span class="process-math">\(v\)</span> to <span class="process-math">\(w\)</span> has <span class="process-math">\(v=v_0, w=v_n\text{.}\)</span> It cannot repeat edges. It can begin at any vertex and end at any vertex.</div></li>
+<li><div class="para">A <dfn class="terminology">path</dfn> from <span class="process-math">\(v\)</span> to <span class="process-math">\(w\)</span> has <span class="process-math">\(v=v_0, w=v_n\text{.}\)</span> It cannot repeat edges or vertices. It can begin at any vertex and end at any vertex.</div></li>
+<li><div class="para">A <dfn class="terminology">closed walk</dfn> must start and end at the same vertex <span class="process-math">\(v\text{,}\)</span>  <span class="process-math">\(v=v_0, v=v_n\text{.}\)</span> It can repeat edges and vertices.</div></li>
+<li><div class="para">A <dfn class="terminology">circuit</dfn> must start and end at the same vertex <span class="process-math">\(v\text{,}\)</span>  <span class="process-math">\(v=v_0, v=v_n\text{.}\)</span> It cannot repeat edges. It can repeat vertices.</div></li>
+<li><div class="para">A <dfn class="terminology">simple circuit</dfn> must start and end at the same vertex <span class="process-math">\(v\text{,}\)</span>  <span class="process-math">\(v=v_0, v=v_n\text{.}\)</span> It cannot repeat edges or vertices, except for the initial and terminal vertex.</div></li>
+</ul>
+</div>
 <span class="incontext"><a href="pathscircuits10-2.html#p-3408" class="internal">in-context</a></span>
 </body>
 </html>

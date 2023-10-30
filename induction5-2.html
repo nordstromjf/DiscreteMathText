@@ -84,15 +84,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.1.4';
+eBookConfig.runestone_version = '7.2.2';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.1.4/prefix-runtime.d3f96040775bf7ec.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.1.4/prefix-347.8328b60515045466.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.1.4/prefix-runestone.3a5641c4e1fe869e.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.1.4/prefix-347.f9add1ca35d5ad93.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.1.4/prefix-runestone.cec40a61180efd41.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.2.2/prefix-runtime.ea89cba5970a9192.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.2.2/prefix-347.8328b60515045466.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.2.2/prefix-runestone.f9281f94d8420c68.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.2.2/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.2.2/prefix-runestone.f64dcc3632d7a0c3.css">
 </head>
 <body id="DiscreteMathText" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
@@ -587,7 +587,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol class="decimal">
 <li id="li-314"><div class="para" id="p-derived-li-314">
 <span class="process-math">\(P(a)\)</span> is true;</div></li>
-<li id="li-315"><div class="para" id="p-derived-li-315">For all <span class="process-math">\(k\in\mathbb{Z}\)</span> with <span class="process-math">\(k\geq a\text{,}\)</span> if <span class="process-math">\(P(k)\)</span> is true than <span class="process-math">\(P(k+1)\)</span> is true;</div></li>
+<li id="li-315"><div class="para" id="p-derived-li-315">For all <span class="process-math">\(k\in\mathbb{Z}\)</span> with <span class="process-math">\(k\geq a\text{,}\)</span> if <span class="process-math">\(P(k)\)</span> is true then <span class="process-math">\(P(k+1)\)</span> is true;</div></li>
 </ol>
 <div class="para">then for all <span class="process-math">\(n\geq a\text{,}\)</span> <span class="process-math">\(P(n)\)</span> is true.</div>
 </div></article><div class="para" id="p-1411">The way to think about the Principle of Mathematical Induction is that if you know the statement is true for some starting value, (<span class="process-math">\(P(a)\)</span> is true), and if you can show that knowing the statement is true for some value allows you to know it is true for the next value (<span class="process-math">\(P(k)\rightarrow P(k+1)\)</span>), then you know it for all values greater than or equal to <span class="process-math">\(a\text{.}\)</span>
@@ -680,7 +680,7 @@ eBookConfig.enable_chatcodes =  false;
 <article class="task exercise-like" id="task-138"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="p-1432">Write out the summation for <span class="process-math">\(\sum_{i=0}^{n}r^i\text{.}\)</span>
 </div></article><article class="task exercise-like" id="task-139"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-1433">Write out the summation for <span class="process-math">\(\sum_{i=1}^{n+1}r^i\text{.}\)</span>
+<div class="para" id="p-1433">Write out the summation for <span class="process-math">\(\sum_{i=0}^{n+1}r^i\text{.}\)</span>
 </div></article><article class="task exercise-like" id="task-140"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="p-1434">How do (a) and (b) differ?</div></article></article><article class="example example-like" id="E_geosuminduction"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_geosuminduction"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Proof by Induction: Geometric Sum.</span>
@@ -730,7 +730,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="introduction" id="introduction-47"><div class="para" id="p-1443">Suppose you want to prove <span class="process-math">\(\sum_{i=1}^{n}i^2=\frac{n(n+1)(2n+1)}{6}\)</span> for all <span class="process-math">\(n\geq 1\)</span> by induction.</div></div>
 <article class="task exercise-like" id="task-141"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="p-1444">What would you want to prove in the base step?</div></article><article class="task exercise-like" id="task-142"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-1445">What should you assume in the induction step?.</div></article><article class="task exercise-like" id="task-143"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-1445">What should you assume in the induction step?</div></article><article class="task exercise-like" id="task-143"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="p-1446">What should you show in the induction step?</div></article><article class="task exercise-like" id="task-144"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="p-1447">Now try to put this all together in the form of an induction proof. If you are unable to prove it, where do you get stuck?</div></article></article><article class="example example-like" id="E_usingsums"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_usingsums"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Using Summation Formulas.</span>
