@@ -7351,7 +7351,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "8.2",
   "title": "Reflexive, Symmetric, Transitive Properties",
-  "body": " Reflexive, Symmetric, Transitive Properties relation reflexive relation symmetric relation transitive relation  In this section we look at some properties of relations. In particular, we define the reflexive, symmetric, and transitive properties. We will use directed graphs to identify the properties and look at how to prove whether a relation is reflexive, symmetric, and\/or transitive.  Let be a relation on . Then  is reflexive reflexive if for all , . In ordered pair notation, .  is symmetric symmetric if for all , if then . In ordered pair notation, if then .  is transitive transitive if for all , if and then . In ordered pair notation, if and then .     Reflexive, Symmetric, Transitive  Let , define the relation on by  is reflexive since for each .  is symmetric since if then . Note, this property does not mean , just that if a pair is in , then the reverse is as well.  is transitive since if and then . Note, this property can be tedious to check by hand. In this example, though, the only pairs that fit the hypothesis are pairs like , so , which is in .   Another Look at the Properties  Let , define the relation on by  is not reflexive since .  is not symmetric since , but not .  is transitive since if and then .  Check: , so , which is in . This is the only set of ordered pairs where the second coordinate of the first pair matches the first coordinate of the second pair.   We can use directed graphs to help identify the properties.  Reflexive  If a relation is reflexive, then the directed graph will have an arrow from the vertex to itself (a loop) at every vertex.   Directed graph for reflexive property      Symmetric If a relation is symmetric, then whenever the directed graph has an arrow from vertex, to vertex , there is a corresponding arrow going from to .   Directed graph for symmetric property      Transitive If a relation is transitive, then whenever the directed graph has an arrow from vertex, to vertex followed by an arrow from to , there is a corresponding arrow going from to .   Directed graph for transitive property        The transitive closure transitive closure of a relation , denoted , is the set of ordered pairs in as well as all additional ordered pairs to make the relation transitive.  Transitive Closure  Let . Then in we need . You can check with a directed graph to see this is the only pair we need to add. Thus, .  Let . Let .  Determine if is reflexive.  Determine if is symmetric.  Determine if is transitive.  Draw the directed graph for .  If is not transitive, what ordered pairs should you add to the relation to make transitive?  Let . Let .  Determine if is reflexive.  Determine if is symmetric.  Determine if is transitive.  Draw the directed graph for .  If is not transitive, what ordered pairs should you add to the relation to make transitive?  Checking that a relation is reflexive, symmetric, or transitive on a small finite set can be done by checking that the property holds for all the elements of . But if is infinite we need to prove the properties more generally.   Proving Reflexive, Symmetric, Transitive Properties reflexive proof symmetric proof transitive proof  To prove a property of a relation:  Reflexive Let . Show .  Symmetric Assume . Show .  Transitive Assume . Show .   To disprove a property, find a specific counterexample:  Reflexive Find for some .  Symmetric Find with .  Transitive Find with .    Proving Reflexive, Symmetric, Transitive  Let be the relation on given by .  Reflexive: Show .  We know , and . So we get that . Thus for all .  Symmetric: Assume .  Then . This implies for some . But then , where . Thus, . Hence, .  Transitive: Assume .  Then and . This implies for some and for some . But then , where . Thus, . Hence, .   Define the relation on by .  Prove or disprove is reflexive.  Prove or disprove is symmetric.  Prove or disprove is transitive.   Define the relation on by .  Prove or disprove is reflexive.  Prove or disprove is symmetric.  Prove or disprove is transitive.    Check Your Understanding   Determine if the relation is reflexive, symmetric, transitive where is the relation on given by   Reflexive  We know .    Symmetric  For example, , but .    Transitive  If , and , then .   Reflexive, transitive, not symmetric  Determine if the relation is reflexive, symmetric, transitive where is the relation on given by   Reflexive  We know , which is even.    Symmetric  If is even, then is even.    Transitive  Since , it is straightforward to check reflexive by hand.   Reflexive, symmetric, transitive  Determine if the relation is reflexive, symmetric, transitive where is the relation on given by   Reflexive  We know .    Symmetric  For example, , but .    Transitive  If , and , then .   Reflexive, transitive, not symmetric  Determine if the relation is reflexive, symmetric, transitive where is the relation on given by   Reflexive  For example, .    Symmetric  If , then .    Transitive  For example, , and , but .   Symmetric, not reflexive, not transitive     Let . Let .    Draw the directed graph for .    Determine if is reflexive. If it is not, give a counterexample.    Determine if is symmetric. If it is not, give a counterexample.    Determine if is transitive. If it is not, give a counterexample.      Let . Let .    Draw the directed graph for .    Determine if is reflexive. If it is not, give a counterexample.    Determine if is symmetric. If it is not, give a counterexample.    Determine if is transitive. If it is not, give a counterexample.      Let . Let .    Draw the directed graph for .    Determine if is reflexive. If it is not, give a counterexample.    Determine if is symmetric. If it is not, give a counterexample.    Determine if is transitive. If it is not, give a counterexample.      Let be the relation on defined by     Determine if is reflexive. Justify your answer.    Determine if is symmetric. Justify your answer.    Determine if is transitive. Justify your answer.      Let be the relation on defined by     Determine if is reflexive. Justify your answer.    Determine if is symmetric. Justify your answer.    Determine if is transitive. Justify your answer.      Let be the relation on defined by     Determine if is reflexive. Justify your answer.    Determine if is symmetric. Justify your answer.    Determine if is transitive. Justify your answer.      Define the relation on by     Prove or disprove is reflexive.    Prove or disprove is symmetric.    Prove or disprove is transitive.      Let and be the power set of . Define the relation on by     Prove or disprove is reflexive.    Prove or disprove is symmetric.    Prove or disprove is transitive.      Let be a nonempty set and be the power set of . Define the subset relation on by     Prove or disprove is reflexive.    Prove or disprove is symmetric.    Prove or disprove is transitive.      Let be a relation on a set . Prove or disprove if is reflexive, then is reflexive.    Let be a relation on a set . Prove or disprove if is symmetric, then is symmetric.    "
+  "body": " Reflexive, Symmetric, Transitive Properties relation reflexive relation symmetric relation transitive relation  In this section we look at some properties of relations. In particular, we define the reflexive, symmetric, and transitive properties. We will use directed graphs to identify the properties and look at how to prove whether a relation is reflexive, symmetric, and\/or transitive.  Let be a relation on . Then  is reflexive reflexive if for all , . In ordered pair notation, .  is symmetric symmetric if for all , if then . In ordered pair notation, if then .  is transitive transitive if for all , if and then . In ordered pair notation, if and then .     Reflexive, Symmetric, Transitive  Let , define the relation on by  is reflexive since for each .  is symmetric since if then . Note, this property does not mean , just that if a pair is in , then the reverse is as well.  is transitive since if and then . Note, this property can be tedious to check by hand. In this example, though, the only pairs that fit the hypothesis are pairs like , so , which is in .   Another Look at the Properties  Let , define the relation on by  is not reflexive since .  is not symmetric since , but not .  is transitive since if and then .  Check: , so , which is in . This is the only set of ordered pairs where the second coordinate of the first pair matches the first coordinate of the second pair.   We can use directed graphs to help identify the properties.  Reflexive  If a relation is reflexive, then the directed graph will have an arrow from the vertex to itself (a loop) at every vertex.   Directed graph for reflexive property      Symmetric If a relation is symmetric, then whenever the directed graph has an arrow from vertex, to vertex , there is a corresponding arrow going from to .   Directed graph for symmetric property      Transitive If a relation is transitive, then whenever the directed graph has an arrow from vertex, to vertex followed by an arrow from to , there is a corresponding arrow going from to .   Directed graph for transitive property        Let . Let .  Determine if is reflexive.  Determine if is symmetric.  Determine if is transitive.  Draw the directed graph for .   Let . Let .  Determine if is reflexive.  Determine if is symmetric.  Determine if is transitive.  Draw the directed graph for .   The transitive closure transitive closure of a relation , denoted , is the set of ordered pairs in as well as all additional ordered pairs to make the relation transitive.  Transitive Closure  Let . Then in we need . You can check with a directed graph to see this is the only pair we need to add. Thus, .  For the relations in and , find the transitive closure.  Let . What ordered pairs, if any, should you add to the relation to make transitive?  Let . What ordered pairs, if any, should you add to the relation to make transitive?  Checking that a relation is reflexive, symmetric, or transitive on a small finite set can be done by checking that the property holds for all the elements of . But if is infinite we need to prove the properties more generally.   Proving Reflexive, Symmetric, Transitive Properties reflexive proof symmetric proof transitive proof  To prove a property of a relation:  Reflexive Let . Show .  Symmetric Assume . Show .  Transitive Assume . Show .   To disprove a property, find a specific counterexample:  Reflexive Find for some .  Symmetric Find with .  Transitive Find with .    Proving Reflexive, Symmetric, Transitive  Let be the relation on given by .  Reflexive: Show .  We know , and . So we get that . Thus for all .  Symmetric: Assume .  Then . This implies for some . But then , where . Thus, . Hence, .  Transitive: Assume .  Then and . This implies for some and for some . But then , where . Thus, . Hence, .   Define the relation on by .  Prove or disprove is reflexive.  Prove or disprove is symmetric.  Prove or disprove is transitive.   Define the relation on by .  Prove or disprove is reflexive.  Prove or disprove is symmetric.  Prove or disprove is transitive.    Check Your Understanding   Determine if the relation is reflexive, symmetric, transitive where is the relation on given by   Reflexive  We know .    Symmetric  For example, , but .    Transitive  If , and , then .   Reflexive, transitive, not symmetric  Determine if the relation is reflexive, symmetric, transitive where is the relation on given by   Reflexive  We know , which is even.    Symmetric  If is even, then is even.    Transitive  Since , it is straightforward to check reflexive by hand.   Reflexive, symmetric, transitive  Determine if the relation is reflexive, symmetric, transitive where is the relation on given by   Reflexive  We know .    Symmetric  For example, , but .    Transitive  If , and , then .   Reflexive, transitive, not symmetric  Determine if the relation is reflexive, symmetric, transitive where is the relation on given by   Reflexive  For example, .    Symmetric  If , then .    Transitive  For example, , and , but .   Symmetric, not reflexive, not transitive     Let . Let .    Draw the directed graph for .    Determine if is reflexive. If it is not, give a counterexample.    Determine if is symmetric. If it is not, give a counterexample.    Determine if is transitive. If it is not, give a counterexample.      Let . Let .    Draw the directed graph for .    Determine if is reflexive. If it is not, give a counterexample.    Determine if is symmetric. If it is not, give a counterexample.    Determine if is transitive. If it is not, give a counterexample.      Let . Let .    Draw the directed graph for .    Determine if is reflexive. If it is not, give a counterexample.    Determine if is symmetric. If it is not, give a counterexample.    Determine if is transitive. If it is not, give a counterexample.      Let be the relation on defined by     Determine if is reflexive. Justify your answer.    Determine if is symmetric. Justify your answer.    Determine if is transitive. Justify your answer.      Let be the relation on defined by     Determine if is reflexive. Justify your answer.    Determine if is symmetric. Justify your answer.    Determine if is transitive. Justify your answer.      Let be the relation on defined by     Determine if is reflexive. Justify your answer.    Determine if is symmetric. Justify your answer.    Determine if is transitive. Justify your answer.      Define the relation on by     Prove or disprove is reflexive.    Prove or disprove is symmetric.    Prove or disprove is transitive.      Let and be the power set of . Define the relation on by     Prove or disprove is reflexive.    Prove or disprove is symmetric.    Prove or disprove is transitive.      Let be a nonempty set and be the power set of . Define the subset relation on by     Prove or disprove is reflexive.    Prove or disprove is symmetric.    Prove or disprove is transitive.      Let be a relation on a set . Prove or disprove if is reflexive, then is reflexive.    Let be a relation on a set . Prove or disprove if is symmetric, then is symmetric.    "
 },
 {
   "id": "D_RSTprop",
@@ -7408,9 +7408,27 @@ var ptx_lunr_docs = [
   "body": " Directed graph for transitive property    "
 },
 {
-  "id": "p-2410",
+  "id": "A_relationset1",
   "level": "2",
-  "url": "rstrelations8-2.html#p-2410",
+  "url": "rstrelations8-2.html#A_relationset1",
+  "type": "Activity",
+  "number": "8.2.1",
+  "title": "",
+  "body": "Let . Let .  Determine if is reflexive.  Determine if is symmetric.  Determine if is transitive.  Draw the directed graph for .  "
+},
+{
+  "id": "A_relationset2",
+  "level": "2",
+  "url": "rstrelations8-2.html#A_relationset2",
+  "type": "Activity",
+  "number": "8.2.2",
+  "title": "",
+  "body": "Let . Let .  Determine if is reflexive.  Determine if is symmetric.  Determine if is transitive.  Draw the directed graph for .  "
+},
+{
+  "id": "p-2420",
+  "level": "2",
+  "url": "rstrelations8-2.html#p-2420",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -7426,22 +7444,13 @@ var ptx_lunr_docs = [
   "body": "Transitive Closure  Let . Then in we need . You can check with a directed graph to see this is the only pair we need to add. Thus, . "
 },
 {
-  "id": "activity-132",
+  "id": "activity-134",
   "level": "2",
-  "url": "rstrelations8-2.html#activity-132",
+  "url": "rstrelations8-2.html#activity-134",
   "type": "Activity",
-  "number": "8.2.1",
+  "number": "8.2.3",
   "title": "",
-  "body": "Let . Let .  Determine if is reflexive.  Determine if is symmetric.  Determine if is transitive.  Draw the directed graph for .  If is not transitive, what ordered pairs should you add to the relation to make transitive? "
-},
-{
-  "id": "activity-133",
-  "level": "2",
-  "url": "rstrelations8-2.html#activity-133",
-  "type": "Activity",
-  "number": "8.2.2",
-  "title": "",
-  "body": "Let . Let .  Determine if is reflexive.  Determine if is symmetric.  Determine if is transitive.  Draw the directed graph for .  If is not transitive, what ordered pairs should you add to the relation to make transitive? "
+  "body": "For the relations in and , find the transitive closure.  Let . What ordered pairs, if any, should you add to the relation to make transitive?  Let . What ordered pairs, if any, should you add to the relation to make transitive? "
 },
 {
   "id": "E_provingRST",
@@ -7453,20 +7462,20 @@ var ptx_lunr_docs = [
   "body": "Proving Reflexive, Symmetric, Transitive  Let be the relation on given by .  Reflexive: Show .  We know , and . So we get that . Thus for all .  Symmetric: Assume .  Then . This implies for some . But then , where . Thus, . Hence, .  Transitive: Assume .  Then and . This implies for some and for some . But then , where . Thus, . Hence, .  "
 },
 {
-  "id": "activity-134",
-  "level": "2",
-  "url": "rstrelations8-2.html#activity-134",
-  "type": "Activity",
-  "number": "8.2.3",
-  "title": "",
-  "body": "Define the relation on by .  Prove or disprove is reflexive.  Prove or disprove is symmetric.  Prove or disprove is transitive.  "
-},
-{
   "id": "activity-135",
   "level": "2",
   "url": "rstrelations8-2.html#activity-135",
   "type": "Activity",
   "number": "8.2.4",
+  "title": "",
+  "body": "Define the relation on by .  Prove or disprove is reflexive.  Prove or disprove is symmetric.  Prove or disprove is transitive.  "
+},
+{
+  "id": "activity-136",
+  "level": "2",
+  "url": "rstrelations8-2.html#activity-136",
+  "type": "Activity",
+  "number": "8.2.5",
   "title": "",
   "body": "Define the relation on by .  Prove or disprove is reflexive.  Prove or disprove is symmetric.  Prove or disprove is transitive.  "
 },
@@ -7642,9 +7651,9 @@ var ptx_lunr_docs = [
   "body": "Congruence mod 3  True or false: .  Since , true.  True or false: .  Since , true.  True or false: .  Since , false.  True or false: .  Since , false.  "
 },
 {
-  "id": "p-2532",
+  "id": "p-2533",
   "level": "2",
-  "url": "equivalencerelations8-3.html#p-2532",
+  "url": "equivalencerelations8-3.html#p-2533",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -7669,18 +7678,18 @@ var ptx_lunr_docs = [
   "body": "More Equivalence Classes  Consider the equivalence relation , on .  This is the relation where two subsets of are related if they have the same number of elements. You can check that this is an equivalence relation.  Find , the set of elements in equivalent to .  , since this is the only subset with 0 elements.  Find .  , since these all have 1 element.  Find .   Find .   "
 },
 {
-  "id": "activity-136",
+  "id": "activity-137",
   "level": "2",
-  "url": "equivalencerelations8-3.html#activity-136",
+  "url": "equivalencerelations8-3.html#activity-137",
   "type": "Activity",
   "number": "8.3.1",
   "title": "",
   "body": "Define the relation on by .  Prove is an equivalence relation.  Find and . "
 },
 {
-  "id": "activity-137",
+  "id": "activity-138",
   "level": "2",
-  "url": "equivalencerelations8-3.html#activity-137",
+  "url": "equivalencerelations8-3.html#activity-138",
   "type": "Activity",
   "number": "8.3.2",
   "title": "",
@@ -7705,9 +7714,9 @@ var ptx_lunr_docs = [
   "body": "Let be a set and an equivalence relation. The equivalence classes of form a partition of . "
 },
 {
-  "id": "p-2563",
+  "id": "p-2564",
   "level": "2",
-  "url": "equivalencerelations8-3.html#p-2563",
+  "url": "equivalencerelations8-3.html#p-2564",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -7939,9 +7948,9 @@ var ptx_lunr_docs = [
   "body": "Congruence mod  True or false: .  True  True or false: .  True  True or false: .  False  "
 },
 {
-  "id": "activity-139",
+  "id": "activity-140",
   "level": "2",
-  "url": "modarith8-4.html#activity-139",
+  "url": "modarith8-4.html#activity-140",
   "type": "Activity",
   "number": "8.4.1",
   "title": "",
@@ -7984,9 +7993,9 @@ var ptx_lunr_docs = [
   "body": "Prove part (3) of implies part (1). "
 },
 {
-  "id": "p-2684",
+  "id": "p-2685",
   "level": "2",
-  "url": "modarith8-4.html#p-2684",
+  "url": "modarith8-4.html#p-2685",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -8002,18 +8011,18 @@ var ptx_lunr_docs = [
   "body": "Congruence mod is an equivalence relation on with equivalence classes . Furthermore, . "
 },
 {
-  "id": "activity-142",
+  "id": "activity-143",
   "level": "2",
-  "url": "modarith8-4.html#activity-142",
+  "url": "modarith8-4.html#activity-143",
   "type": "Activity",
   "number": "8.4.4",
   "title": "",
   "body": "Find the equivalence classes for congruence mod 5. List several elements of each equivalence class. What do the elements of each congruence class look like? Think about remainders. "
 },
 {
-  "id": "p-2690",
+  "id": "p-2691",
   "level": "2",
-  "url": "modarith8-4.html#p-2690",
+  "url": "modarith8-4.html#p-2691",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -8029,18 +8038,18 @@ var ptx_lunr_docs = [
   "body": "Modular Arithmetic  Use modular arithmetic to find  .  , so  .   .  , so  "
 },
 {
-  "id": "activity-143",
+  "id": "activity-144",
   "level": "2",
-  "url": "modarith8-4.html#activity-143",
+  "url": "modarith8-4.html#activity-144",
   "type": "Activity",
   "number": "8.4.5",
   "title": "",
   "body": "Find by first reducing 31 and 92 mod 5, then adding. "
 },
 {
-  "id": "activity-144",
+  "id": "activity-145",
   "level": "2",
-  "url": "modarith8-4.html#activity-144",
+  "url": "modarith8-4.html#activity-145",
   "type": "Activity",
   "number": "8.4.6",
   "title": "",
@@ -8245,18 +8254,18 @@ var ptx_lunr_docs = [
   "body": " Probability probability  Let be a set of possible outcomes, called a sample space . Let be a subset of with some property. We call an event .  The probability of event , , is the number of outcomes in divided by the total number of outcomes in .  Let be the number of elements in . Similarly, , is the number of outcomes in .  In notation, .  Finding Probability of an Event  A standard deck of playing cards has 52 cards. Each card has a suit and a value. The deck has four suits: hearts, diamonds, spades, clubs. Each suit has 13 values: Ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, King. The spades and clubs are called black cards, the hearts and diamonds are called red cards.  Find the probability you randomly choose a club from the deck.  Note, is the set of clubs, is the set of cards.   Find the probability you randomly choose a red card from the deck.  Note, is the set of hearts and diamonds, is the set of cards.   Find the probability you randomly choose a 2 from the deck.  Note, is the set of 2's, is the set of cards.    Suppose you toss a fair coin two times.  List all the possible outcomes.  What is the probability that you get exactly 2 heads?  What is the probability that you get exactly 1 head?  In order to calculate a probability, we need to be able to count equally-likely events. Just because there are, say, 3 outcomes, that doesn't mean all the outcomes are equally-likely. For example, the Linfied football team could win, lose, or tie a game. Given the team's winning streak, the three outcomes are not equally-likely. They have a much higher probability of winning than just 1\/3.  Thus, the focus for the rest of the chapter will be on counting events. Once we can count outcomes, it is straight-forward to find the probability.  Before moving on, though, we will state a few useful facts about probabilities.    is always a number between 0 and 1. The probability can be 0.5. It cannot be 50%  means the event is not possible.  means the event always happens.     Check Your Understanding  In a standard deck of cards, find the probability of randomly drawing an Ace. Give your answer to at least 3 decimal places.  The probability is .     Correct. The probability is .      Don't forget to round up in the third decimal.      Incorrect. How many Aces are in the deck? How many cards are in the deck? Your answer should be number of Aces divided by number of cards.      In a standard deck of cards, find the probability of randomly drawing a face card (Jack, Queen, King). Give your answer to at least 3 decimal places.  The probability is .     Correct. The probability is .      Don't forget to round up in the third decimal.      Incorrect. How many face cards are in the deck? How many cards are in the deck? Your answer should be number of face cards divided by number of cards.      In a standard deck of cards, find the probability of randomly drawing an even numbered card. Give your answer to at least 3 decimal places.  The probability is .     Correct. The probability is .      Don't forget to round up in the third decimal.      Incorrect. How many even numbered cards (2, 4, 6, 8, 10) are in the deck? How many cards are in the deck? Your answer should be number of even cards divided by number of cards.      An urn contains 3 red balls, 2 green balls, 4 multicolored balls. Find the probability of drawing a green ball. Give your answer to at least 3 decimal places.  The probability is .     Correct. The probability is .      Incorrect. How many green balls are in the urn? How many balls are in the urn? Your answer should be number of green balls divided by number of balls.      An urn contains 3 red balls, 2 green balls, 4 multicolored balls. Find the probability of drawing a solid colored ball. Give your answer to at least 3 decimal places.  The probability is .     Correct. The probability is .      Incorrect. How many solid colored balls are in the urn? How many balls are in the urn? Your answer should be number of solid balls divided by number of balls.        Assume the sample space is a standard deck of 52 cards. Suppose you choose a random card from the deck.    List all the possible outcomes of the card being red and not a face card.    Calculate the probability of the event in (a).     Assume the sample space is a standard deck of 52 cards. Suppose you choose a random card from the deck.    List all the possible outcomes of the card being black and having an even number on it.    Calculate the probability of the event in (a).      Assume the sample space is the possible rolls of a pair of dice, one blue die and one red die.    List all the possible outcomes where the sum of the numbers showing face up is 8.    Calculate the probability of the event in (a).      Assume the sample space is the possible rolls of a pair of dice, one blue die and one red die.    List all the possible outcomes where the sum of the numbers showing face up is at most 6.    Calculate the probability of the event in (a).      Suppose a coin is tossed four times and the side showing face up on each toss is noted. Suppose also that heads and tails are equally-likely for the coin.    List the 16 elements in the sample space as sequences of heads and tails.    List the set of outcomes and the probability for the event of exactly one toss resulting in a head.    List the set of outcomes and the probability for the event that at least two tosses result in a head.    List the set of outcomes and the probability for the event that no toss results in a head.      Suppose that on a true\/false exam you have no idea about the answers to three questions. You choose your answers randomly and therefore have a 50-50 chance of being correct on any one question. For example, let indicate that you were correct on the first two questions but wrong on the third.    List all the elements of the sample space as the possible sequences of and for the three questions.    List the set of outcomes and the probability for the event that exactly one answer is correct.    List the set of outcomes and the probability for the event that at least two answers are correct.    List the set of outcomes and the probability for the event that no answers are correct.      "
 },
 {
-  "id": "p-2741",
+  "id": "p-2742",
   "level": "2",
-  "url": "probability9-1.html#p-2741",
+  "url": "probability9-1.html#p-2742",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "sample space event "
 },
 {
-  "id": "p-2742",
+  "id": "p-2743",
   "level": "2",
-  "url": "probability9-1.html#p-2742",
+  "url": "probability9-1.html#p-2743",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -8272,18 +8281,18 @@ var ptx_lunr_docs = [
   "body": "Finding Probability of an Event  A standard deck of playing cards has 52 cards. Each card has a suit and a value. The deck has four suits: hearts, diamonds, spades, clubs. Each suit has 13 values: Ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, King. The spades and clubs are called black cards, the hearts and diamonds are called red cards.  Find the probability you randomly choose a club from the deck.  Note, is the set of clubs, is the set of cards.   Find the probability you randomly choose a red card from the deck.  Note, is the set of hearts and diamonds, is the set of cards.   Find the probability you randomly choose a 2 from the deck.  Note, is the set of 2's, is the set of cards.   "
 },
 {
-  "id": "activity-146",
+  "id": "activity-147",
   "level": "2",
-  "url": "probability9-1.html#activity-146",
+  "url": "probability9-1.html#activity-147",
   "type": "Activity",
   "number": "9.1.1",
   "title": "",
   "body": "Suppose you toss a fair coin two times.  List all the possible outcomes.  What is the probability that you get exactly 2 heads?  What is the probability that you get exactly 1 head? "
 },
 {
-  "id": "p-2756",
+  "id": "p-2757",
   "level": "2",
-  "url": "probability9-1.html#p-2756",
+  "url": "probability9-1.html#p-2757",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -8395,7 +8404,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "9.2",
   "title": "Multiplication Rule",
-  "body": " Multiplication Rule multiplication rule  In this section we look at how to count a process that has several steps. We start with an example.  Coin Toss  Toss a coin three times. How many ways can you get exactly two heads in the three tosses?  First toss: H or T  Second toss: H or T  Third toss: H or T  If we think about what happens after the first toss, we have H or T. For each of those outcomes, we get H or T on the second toss, so we now have 4 outcomes: HH, HT, TH, TT  With the third toss, each of our four outcomes could end with H or T, giving us 8 outcomes: HHH, HTH, THH, TTH, HHT, HTT, THT, TTT.  Out of these 8 possible outcomes, there are 3 outcomes with exactly 2 heads: HTH, THH, HHT.  We can also see the possibilies using a possibility tree , where the first (top) level represents the first toss, the second level, the second toss, and the third level, the third toss. The blue paths show the outcomes with exactly two Heads.   Possibility tree for tossing a coin three times      In , we saw that each toss doubled the number of outcomes from the previous toss. For example, if we tossed the coin 4 times, we would have outcomes. We are using the multiplication rule to determine the number of outcomes.   Multiplication Rule  Supose we have a process with steps, where  the first step can be done in ways;  the second step can be done in ways;  the step can be done in ways.  Then the total operation can be done in ways.   Suppose a restaurant offers 3 appetizers, 3 entrees, and 2 desserts.  Draw a possibility tree for how many different meals (one appetizer, one entree, and one dessert) you can create.  How many total meals can you create?  Multiplication Rule: License Plates  Find the number of license plates that can be made if each one consists of two letters from A through E, followed by four digits from 1 through 9.  There are 5 choices for the letters: A, B, C, D, E.  There are 9 choices for the digits: 1, 2, 3, 4, 5, 6, 7, 8, 9.  First choose a letter, then another letter, then choose each of the numbers. We can use the multiplication rule since we can choose each character as a process.  Thus, we have license plates.  Now, suppose you cannot repeat a number in any one license plate. How many license plates can we make?  When choosing the numbers, first we have 9 choices, then 8, since we can't choose the same number as the first digit, etc.  The total number of license plates if we can't repeat a number is .   Suppose a license plate consists of 3 letters followed by 2 digits.  How many license plates can you make?  How many license plates can you make if you cannot repeat a letter or number?  A string of length over string is a list of characters where the characters come from set . A binary string string binary or bit string bit string is a string with . The null string null string is the string of length 0, denoted .  Multiplication Rule: Strings  Find the number of bit strings of length 5.   Find the number of words of length 4. These are just strings where is the alphabet.   Find the number of strings of length 7, where .    A permutation permutation of a set is an ordering of the elements of in a row.  Permutations of a Set  Let . Then a permutation of is a list of elements in . List all the permutations of .  Since we have 3 choices for our first element, then 2 choices for the second, and 1 for the last, there are permutations.  The permutations are abc, acb, bca, bac, cab, cba.  How many permutations are there of the set ?    List all the permutations of . There are 6.  How many permutations are there of a set with 5 elements?  How many permutations are there of a set with elements?  gives us a formula for finding the number of permutations of a set with elements.  The number of permutations of a set with elements is factorial, .  An -permutation -permutation of a set is an ordered selection of elements taken from the elements of in a row. We use the notation the number of -permutations from a set of elements for the number of -permutations from a set of elements.  -Permutations of a Set  Let . Then a 3-permutation of is a list of 3 (non-repeating) elements from . For example, ace, dbe, bda are all 3-permutations.  Find the number of 3-permutations of , .  We have 5 choices for the first letter, 4 choices for the second, and 3 choices for the last. Thus, .  How many 4-permutations are there of the standard English alphabet?    How many 2-permutations are there of ?  How many 3-permutations are there of ? Think of finding a way to count them using the multiplication rule rather than writing them all down.  Try to find a general formula for counting all -permutations in a set of elements.  gives us a formula for finding the number of -permutations of a set with elements.  The number of -permutations of a set with elements is which is often easier to calculate using  Find .  Finding Four-Digit Integers  How many odd integers are there from 1000 to 9999?  The number is a string of 4 digits. The first digit cannot be 0, so there are 9 choices: 1 through 9. The second and third digits can be anything from 0 to 9, so there are 10 choices for each. The last digit must be odd, so the only choices are 1, 3, 5, 7, 9.  Thus, there are odd numbers.  How many integers are there from 1000 to 9999 that have distict digits?  The first digit cannot be 0, so there are 9 choices: 1 through 9. The second digit can be anything from 0 to 9, except for whatever the first digit is, so there are 9 choices. Similarly, there are 8 choices for the third digit, and 7 for the last digit.  Thus, there are numbers with distinct digits.    Check Your Understanding  Toss a coin 4 times. How many ways are there to get exactly 1 Head?      Correct.      Incorrect. Try writing out all possible strings of 4 Heads and Tails which have only 1 Head.      Toss a coin 4 times. How many ways are there to get exactly 2 Heads?     Correct.      Incorrect. For help see .      Toss a coin 4 times. How many ways are there to get 0 Heads?     Correct.      Incorrect. If there are no heads, what is the only possible outcome?      How many 3 digit numbers begin with 1 or 2 and end with 2, 3, or 4?     Correct, using the multiplication rule, .      Incorrect. Remember, 0 is a digit.      Incorrect. Use the multiplication rule: how many choices do you have for the first digit, the second digit, the third digit?      How many 3 digit numbers are divisible by 5?     Correct, using the multiplication rule, .      Incorrect. Remember, a 3 digit number can't start with 0.      Incorrect. Remember, 0 is a digit, so it can occur in the second digit.      Incorrect. Use the multiplication rule: how many choices do you have for the first digit, the second digit, the third digit? What are the possible last digits if a number is divisible by 5?      Calculate the number of permutations of a set with 6 elements.     Correct.       Incorrect. See .      Calculate .     Correct.       Incorrect. See .      Calculate .     Correct.       Incorrect. See .        A bag contains two green balls (labeled and ) and one purple ball. A second bag contains one green ball and two purple balls (labeled and ). Suppose the following experiment is performed: One of the two bags is chosen at random. Next a ball is randomly chosen from the bag. Then a second ball is chosen from the same bag without replacing the first ball.    Construct the possibility tree showing all possible outcomes of the experiment.    What is the total number of outcomes in this experiment?    What is the probability that two green balls are chosen?    What is the probability that two balls of different colors are chosen?     A person buying a computer system is offered a choice of three models of the basic unit, two models of the keyboard, and two models of printer. How many distinct systems can be purchased?    Recall that a bit string is a finite sequence of 0’s and 1’s.    How many bit strings have length 8?    How many bit strings have length 8 and begin with 3 0’s?    How many bit strings have length 8 and begin and end with a 1?      A coin is tossed four times. Each time the result for heads or for tails is recorded. Assume heads and tails are equally likely on each toss.    How many distinct outcomes are possible?    What is the probability that exactly two heads occur?    What is the probability that exactly one head occurs?      Suppose a license plate consists of four letters followed by three digits.    How many different license plates are possible?    How many license plates could begin with and and end with 0?    How many license plates could begin with ?    How many license plates are possible if you cannot repeat a letter or number (all the letters and numbers are distinct)?    How many license plates could begin with and have no repeated letters or numbers?      Consider all two digit integers 10-99.    How many integers are there from 10 through 99?    How many odd integers are there from 10 through 99?    How many integers from 10 through 99 have distinct digits?    How many odd integers from 10 through 99 have distinct digits?    What is the probability that a randomly chosen two-digit number has distinct digits? has distinct digits and is odd?      We want to count the number of possible functions from a finite set to a finite set. You may need to recall the definition of a function, .    How many functions are there from a set with three elements to a set with four elements?    How many functions are there from a set with five elements to a set with two elements?    How many functions are there from a set with elements to a set with elements, where and are positive integers?      We consider various arrangements of the letters in the word .    How many ways can the letters of the word be arranged in a row?    How many ways can the letters of the word be arranged in a row if and must remain together (in order) as a unit?    How many ways can the letters of the word be arranged in a row if the letters must remain together (in order) as a unit?      "
+  "body": " Multiplication Rule multiplication rule  In this section we look at how to count a process that has several steps. We start with an example.  Coin Toss  Toss a coin three times. How many ways can you get exactly two heads in the three tosses?  First toss: H or T  Second toss: H or T  Third toss: H or T  If we think about what happens after the first toss, we have H or T. For each of those outcomes, we get H or T on the second toss, so we now have 4 outcomes: HH, HT, TH, TT  With the third toss, each of our four outcomes could end with H or T, giving us 8 outcomes: HHH, HTH, THH, TTH, HHT, HTT, THT, TTT.  Out of these 8 possible outcomes, there are 3 outcomes with exactly 2 heads: HTH, THH, HHT.  We can also see the possibilies using a possibility tree , where the first (top) level represents the first toss, the second level, the second toss, and the third level, the third toss. The blue paths show the outcomes with exactly two Heads.   Possibility tree for tossing a coin three times      In , we saw that each toss doubled the number of outcomes from the previous toss. For example, if we tossed the coin 4 times, we would have outcomes. We are using the multiplication rule to determine the number of outcomes.   Multiplication Rule  Supose we have a process with steps, where  the first step can be done in ways;  the second step can be done in ways;  the step can be done in ways.  Then the total operation can be done in ways.   Suppose a restaurant offers 3 appetizers, 3 entrees, and 2 desserts.  Draw a possibility tree for how many different meals (one appetizer, one entree, and one dessert) you can create.  How many total meals can you create?  Multiplication Rule: License Plates  Find the number of license plates that can be made if each one consists of two letters from A through E, followed by four digits from 1 through 9.  There are 5 choices for the letters: A, B, C, D, E.  There are 9 choices for the digits: 1, 2, 3, 4, 5, 6, 7, 8, 9.  First choose a letter, then another letter, then choose each of the numbers. We can use the multiplication rule since we can choose each character as a process.  Thus, we have license plates.  Now, suppose you cannot repeat a number in any one license plate. How many license plates can we make?  When choosing the numbers, first we have 9 choices, then 8, since we can't choose the same number as the first digit, etc.  The total number of license plates if we can't repeat a number is .   Suppose a license plate consists of 3 letters followed by 2 digits.  How many license plates can you make?  How many license plates can you make if you cannot repeat a letter or number?  A string of length over string is a list of characters where the characters come from set . A binary string string binary or bit string bit string is a string with . The null string null string is the string of length 0, denoted .  Multiplication Rule: Strings  Find the number of bit strings of length 5.   Find the number of words of length 4. These are just strings where is the alphabet.   Find the number of strings of length 7, where .    A permutation permutation of a set is an ordering of the elements of in a row.  Permutations of a Set  Let . Then a permutation of is a list of elements in . List all the permutations of .  Since we have 3 choices for our first element, then 2 choices for the second, and 1 for the last, there are permutations.  The permutations are abc, acb, bca, bac, cab, cba.  How many permutations are there of the set ?    List all the permutations of . There are 6.  How many permutations are there of a set with 5 elements?  How many permutations are there of a set with elements?  gives us a formula for finding the number of permutations of a set with elements.  The number of permutations of a set with elements is factorial, .  An -permutation -permutation of a set is an ordered selection of elements taken from the elements of in a row. We use the notation the number of -permutations from a set of elements for the number of -permutations from a set of elements.  -Permutations of a Set  Let . Then a 3-permutation of is a list of 3 (non-repeating) elements from . For example, ace, dbe, bda are all 3-permutations.  Find the number of 3-permutations of , .  We have 5 choices for the first letter, 4 choices for the second, and 3 choices for the last. Thus, .  How many 4-permutations are there of the standard English alphabet?    How many 2-permutations are there of ?  How many 3-permutations are there of ? Think of finding a way to count them using the multiplication rule rather than writing them all down.  Try to find a general formula for counting all -permutations in a set of elements.  gives us a formula for finding the number of -permutations of a set with elements.  The number of -permutations of a set with elements is which is often easier to calculate using  Find .  Finding Four-Digit Integers  How many odd integers are there from 1000 to 9999?  The number is a string of 4 digits. The first digit cannot be 0, so there are 9 choices: 1 through 9. The second and third digits can be anything from 0 to 9, so there are 10 choices for each. The last digit must be odd, so the only choices are 1, 3, 5, 7, 9.  Thus, there are odd numbers.  How many integers are there from 1000 to 9999 that have distict digits?  The first digit cannot be 0, so there are 9 choices: 1 through 9. The second digit can be anything from 0 to 9, except for whatever the first digit is, so there are 9 choices. Similarly, there are 8 choices for the third digit, and 7 for the last digit.  Thus, there are numbers with distinct digits.    Check Your Understanding  Toss a coin 4 times. How many ways are there to get exactly 1 Head?      Correct.      Incorrect. Try writing out all possible strings of 4 Heads and Tails which have only 1 Head.      Toss a coin 4 times. How many ways are there to get exactly 2 Heads?     Correct.      Incorrect. For help see .      Toss a coin 4 times. How many ways are there to get 0 Heads?     Correct.      Incorrect. If there are no heads, what is the only possible outcome?      How many 3 digit numbers begin with 1 or 2 and end with 2, 3, or 4?     Correct, using the multiplication rule, .      Incorrect. Remember, 0 is a digit.      Incorrect. Use the multiplication rule: how many choices do you have for the first digit, the second digit, the third digit?      How many 3 digit numbers are divisible by 5?     Correct, using the multiplication rule, .      Incorrect. Remember, a 3 digit number can't start with 0.      Incorrect. Remember, 0 is a digit, so it can occur in the second digit.      Incorrect. Use the multiplication rule: how many choices do you have for the first digit, the second digit, the third digit? What are the possible last digits if a number is divisible by 5?      Calculate the number of permutations of a set with 6 elements.     Correct.       Incorrect. See .      Calculate .     Correct.       Incorrect. See .      Calculate .     Correct.       Incorrect. See .        A bag contains two green balls (labeled and ) and one purple ball. A second bag contains one green ball and two purple balls (labeled and ). Suppose the following experiment is performed: One of the two bags is chosen at random. Next a ball is randomly chosen from the bag. Then a second ball is chosen from the same bag without replacing the first ball.    Construct the possibility tree showing all possible outcomes of the experiment.    What is the total number of outcomes in this experiment?    What is the probability that two green balls are chosen?    What is the probability that two balls of different colors are chosen?     A person buying a computer system is offered a choice of three models of the basic unit, two models of the keyboard, and two models of printer. How many distinct systems can be purchased?    Recall that a bit string is a finite sequence of 0’s and 1’s.    How many bit strings have length 8?    How many bit strings have length 8 and begin with 3 0’s?    How many bit strings have length 8 and begin and end with a 1?      A coin is tossed four times. Each time the result for heads or for tails is recorded. Assume heads and tails are equally likely on each toss.    How many distinct outcomes are possible?    What is the probability that exactly two heads occur?    What is the probability that exactly one head occurs?      Suppose a license plate consists of four letters followed by three digits.    How many different license plates are possible?    How many license plates could begin with an and end with 0?    How many license plates could begin with ?    How many license plates are possible if you cannot repeat a letter or number (all the letters and numbers are distinct)?    How many license plates could begin with and have no repeated letters or numbers?      Consider all two digit integers 10-99.    How many integers are there from 10 through 99?    How many odd integers are there from 10 through 99?    How many integers from 10 through 99 have distinct digits?    How many odd integers from 10 through 99 have distinct digits?    What is the probability that a randomly chosen two-digit number has distinct digits? has distinct digits and is odd?      We want to count the number of possible functions from a finite set to a finite set. You may need to recall the definition of a function, .    How many functions are there from a set with three elements to a set with four elements?    How many functions are there from a set with five elements to a set with two elements?    How many functions are there from a set with elements to a set with elements, where and are positive integers?      We consider various arrangements of the letters in the word .    How many ways can the letters of the word be arranged in a row?    How many ways can the letters of the word be arranged in a row if and must remain together (in order) as a unit?    How many ways can the letters of the word be arranged in a row if the letters must remain together (in order) as a unit?      "
 },
 {
   "id": "E_cointosscount",
@@ -8407,9 +8416,9 @@ var ptx_lunr_docs = [
   "body": "Coin Toss  Toss a coin three times. How many ways can you get exactly two heads in the three tosses?  First toss: H or T  Second toss: H or T  Third toss: H or T  If we think about what happens after the first toss, we have H or T. For each of those outcomes, we get H or T on the second toss, so we now have 4 outcomes: HH, HT, TH, TT  With the third toss, each of our four outcomes could end with H or T, giving us 8 outcomes: HHH, HTH, THH, TTH, HHT, HTT, THT, TTT.  Out of these 8 possible outcomes, there are 3 outcomes with exactly 2 heads: HTH, THH, HHT.  We can also see the possibilies using a possibility tree , where the first (top) level represents the first toss, the second level, the second toss, and the third level, the third toss. The blue paths show the outcomes with exactly two Heads.   Possibility tree for tossing a coin three times     "
 },
 {
-  "id": "activity-147",
+  "id": "activity-148",
   "level": "2",
-  "url": "multrule9-2.html#activity-147",
+  "url": "multrule9-2.html#activity-148",
   "type": "Activity",
   "number": "9.2.1",
   "title": "",
@@ -8425,18 +8434,18 @@ var ptx_lunr_docs = [
   "body": "Multiplication Rule: License Plates  Find the number of license plates that can be made if each one consists of two letters from A through E, followed by four digits from 1 through 9.  There are 5 choices for the letters: A, B, C, D, E.  There are 9 choices for the digits: 1, 2, 3, 4, 5, 6, 7, 8, 9.  First choose a letter, then another letter, then choose each of the numbers. We can use the multiplication rule since we can choose each character as a process.  Thus, we have license plates.  Now, suppose you cannot repeat a number in any one license plate. How many license plates can we make?  When choosing the numbers, first we have 9 choices, then 8, since we can't choose the same number as the first digit, etc.  The total number of license plates if we can't repeat a number is .  "
 },
 {
-  "id": "activity-148",
+  "id": "activity-149",
   "level": "2",
-  "url": "multrule9-2.html#activity-148",
+  "url": "multrule9-2.html#activity-149",
   "type": "Activity",
   "number": "9.2.2",
   "title": "",
   "body": "Suppose a license plate consists of 3 letters followed by 2 digits.  How many license plates can you make?  How many license plates can you make if you cannot repeat a letter or number? "
 },
 {
-  "id": "p-2830",
+  "id": "p-2831",
   "level": "2",
-  "url": "multrule9-2.html#p-2830",
+  "url": "multrule9-2.html#p-2831",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -8470,18 +8479,18 @@ var ptx_lunr_docs = [
   "body": "Permutations of a Set  Let . Then a permutation of is a list of elements in . List all the permutations of .  Since we have 3 choices for our first element, then 2 choices for the second, and 1 for the last, there are permutations.  The permutations are abc, acb, bca, bac, cab, cba.  How many permutations are there of the set ?   "
 },
 {
-  "id": "activity-149",
+  "id": "activity-150",
   "level": "2",
-  "url": "multrule9-2.html#activity-149",
+  "url": "multrule9-2.html#activity-150",
   "type": "Activity",
   "number": "9.2.3",
   "title": "",
   "body": "List all the permutations of . There are 6. "
 },
 {
-  "id": "activity-150",
+  "id": "activity-151",
   "level": "2",
-  "url": "multrule9-2.html#activity-150",
+  "url": "multrule9-2.html#activity-151",
   "type": "Activity",
   "number": "9.2.4",
   "title": "",
@@ -8524,18 +8533,18 @@ var ptx_lunr_docs = [
   "body": "-Permutations of a Set  Let . Then a 3-permutation of is a list of 3 (non-repeating) elements from . For example, ace, dbe, bda are all 3-permutations.  Find the number of 3-permutations of , .  We have 5 choices for the first letter, 4 choices for the second, and 3 choices for the last. Thus, .  How many 4-permutations are there of the standard English alphabet?   "
 },
 {
-  "id": "activity-152",
+  "id": "activity-153",
   "level": "2",
-  "url": "multrule9-2.html#activity-152",
+  "url": "multrule9-2.html#activity-153",
   "type": "Activity",
   "number": "9.2.6",
   "title": "",
   "body": "How many 2-permutations are there of ? "
 },
 {
-  "id": "activity-153",
+  "id": "activity-154",
   "level": "2",
-  "url": "multrule9-2.html#activity-153",
+  "url": "multrule9-2.html#activity-154",
   "type": "Activity",
   "number": "9.2.7",
   "title": "",
@@ -8560,9 +8569,9 @@ var ptx_lunr_docs = [
   "body": "The number of -permutations of a set with elements is which is often easier to calculate using "
 },
 {
-  "id": "activity-155",
+  "id": "activity-156",
   "level": "2",
-  "url": "multrule9-2.html#activity-155",
+  "url": "multrule9-2.html#activity-156",
   "type": "Activity",
   "number": "9.2.9",
   "title": "",
@@ -8692,7 +8701,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "9.2.5",
   "title": "",
-  "body": " Suppose a license plate consists of four letters followed by three digits.    How many different license plates are possible?    How many license plates could begin with and and end with 0?    How many license plates could begin with ?    How many license plates are possible if you cannot repeat a letter or number (all the letters and numbers are distinct)?    How many license plates could begin with and have no repeated letters or numbers?    "
+  "body": " Suppose a license plate consists of four letters followed by three digits.    How many different license plates are possible?    How many license plates could begin with an and end with 0?    How many license plates could begin with ?    How many license plates are possible if you cannot repeat a letter or number (all the letters and numbers are distinct)?    How many license plates could begin with and have no repeated letters or numbers?    "
 },
 {
   "id": "exercise-502",
@@ -8740,18 +8749,18 @@ var ptx_lunr_docs = [
   "body": "Addition Rule: Counting Numbers Divisible by 5  How many 3 digit numbers are divisible by 5?  We were able to count 3 digit numbers in the last section by constructing the number as a sequence of digits. We will use this example to think about how to count these as disjoint sets.  Let be the set of 3 digit numbers ending in 5.  Let be the set of 3 digit numbers ending in 0.  , where we are using the multiplication rule as in .  .  Since no number ends in both 5 and 0, . Thus, by the addition rule,  "
 },
 {
-  "id": "activity-156",
+  "id": "activity-157",
   "level": "2",
-  "url": "additionrule9-3.html#activity-156",
+  "url": "additionrule9-3.html#activity-157",
   "type": "Activity",
   "number": "9.3.1",
   "title": "",
   "body": "How many 3 digit numbers are divisible by 10? "
 },
 {
-  "id": "activity-157",
+  "id": "activity-158",
   "level": "2",
-  "url": "additionrule9-3.html#activity-157",
+  "url": "additionrule9-3.html#activity-158",
   "type": "Activity",
   "number": "9.3.2",
   "title": "",
@@ -8776,27 +8785,27 @@ var ptx_lunr_docs = [
   "body": "Inclusion-Exclusion: Counting Multiples  How many integers from 1 to 1000 are multiples of 3 or multiples of 5?  Let be the set of multiples of 3. Let be the set of multiples of 5.  Then is the set of multiples of 3 and 5, so multiples of 15.  We need a good way to count the multiples of 3. We know they have the form . Since , we have that . Hence, . Since , . Thus,  Similarly, since , Since ,  By Inclusion-Exclusion,  "
 },
 {
-  "id": "activity-158",
+  "id": "activity-159",
   "level": "2",
-  "url": "additionrule9-3.html#activity-158",
+  "url": "additionrule9-3.html#activity-159",
   "type": "Activity",
   "number": "9.3.3",
   "title": "",
   "body": "We want to count the number of integers from 1-50 that are divisible by 3 or 7.   How many integers from 1-50 are divisible by 3?  How many integers from 1-50 are divisible by 7?  What is the number of integers from 1-50 divisible by 3 or 7? You can pretty easily check you answer by writing them all down. Can you use inclusion-exclusion to calculate this?  "
 },
 {
-  "id": "activity-159",
+  "id": "activity-160",
   "level": "2",
-  "url": "additionrule9-3.html#activity-159",
+  "url": "additionrule9-3.html#activity-160",
   "type": "Activity",
   "number": "9.3.4",
   "title": "",
   "body": "We want to count the number of integers from 1-1000 that are divisible by 4, 7 or 9.  How many integers from 1-1000 are divisible by 4?  How many integers from 1-1000 are divisible by 7?  How many integers from 1-1000 are divisible by 9?  Now calculate the number of integers 1-1000 divisible by 4, 7, or 9 using inclusion-exclusion. What other sets do you need to calculate? You'll need the 3 set version of Inclusion-Exclusion "
 },
 {
-  "id": "activity-160",
+  "id": "activity-161",
   "level": "2",
-  "url": "additionrule9-3.html#activity-160",
+  "url": "additionrule9-3.html#activity-161",
   "type": "Activity",
   "number": "9.3.5",
   "title": "",
@@ -8974,18 +8983,18 @@ var ptx_lunr_docs = [
   "body": "Counting Socks  In a drawer with 5 pairs of red socks and 5 pairs of blue socks, how many socks do you need to randomly pull out of the drawer to be certain that you have a pair?  Note, there are 10 socks of each color.  3 socks, since the first two might be different colors. If that happens the third sock must match one of the first two.  In this example, the socks are the objects and the colors are the boxes.  Now, what if you need to make sure you have a red pair?  12 socks.  "
 },
 {
-  "id": "activity-161",
+  "id": "activity-162",
   "level": "2",
-  "url": "pigeonhole9-4.html#activity-161",
+  "url": "pigeonhole9-4.html#activity-162",
   "type": "Activity",
   "number": "9.4.1",
   "title": "",
   "body": "In a group of 10 people, must 2 be born in the same month? What is the most people that can be born in the same month? "
 },
 {
-  "id": "activity-162",
+  "id": "activity-163",
   "level": "2",
-  "url": "pigeonhole9-4.html#activity-162",
+  "url": "pigeonhole9-4.html#activity-163",
   "type": "Activity",
   "number": "9.4.2",
   "title": "",
@@ -9001,18 +9010,18 @@ var ptx_lunr_docs = [
   "body": "Finding Sums of Integers  Let . How many integers do you need to choose from to guarantee that 2 numbers will sum to 11?  Since we are looking for sums of 11, our boxes can be pairs of numbers that sum to 11: . Then our objects are the numbers themselves. We need the number of numbers to be greater than the number of boxes, which is 5. Thus, if we choose 6 numbers from , we are guaranteed to have 2 from the same subset. This means with 6 numbers we must have two numbers that sum to 11. "
 },
 {
-  "id": "activity-163",
+  "id": "activity-164",
   "level": "2",
-  "url": "pigeonhole9-4.html#activity-163",
+  "url": "pigeonhole9-4.html#activity-164",
   "type": "Activity",
   "number": "9.4.3",
   "title": "",
   "body": "Let . If 5 integers are selected from , must at least one pair have a sum of 9? If 4 integers are selected from , must at least one pair have a sum of 9? "
 },
 {
-  "id": "activity-164",
+  "id": "activity-165",
   "level": "2",
-  "url": "pigeonhole9-4.html#activity-164",
+  "url": "pigeonhole9-4.html#activity-165",
   "type": "Activity",
   "number": "9.4.4",
   "title": "",
@@ -9037,18 +9046,18 @@ var ptx_lunr_docs = [
   "body": "Generalized Pigeonhole  Suppose you have 23 books that are placed in 4 boxes.  Must at least one box contain at least one book?  Yes  Must at least one box contain at least two books?  Yes  Must at least one box contain at least six books?  Yes  Must at least one box contain at least seven books?  No  What is the most books that can be in a box?  23  What is the fewest books that can be in a box?  0  "
 },
 {
-  "id": "activity-165",
+  "id": "activity-166",
   "level": "2",
-  "url": "pigeonhole9-4.html#activity-165",
+  "url": "pigeonhole9-4.html#activity-166",
   "type": "Activity",
   "number": "9.4.5",
   "title": "",
   "body": "If you have 8 books and want to place them in 3 boxes, must at least one box have 4 books? Must at least one box have 3 books? "
 },
 {
-  "id": "activity-166",
+  "id": "activity-167",
   "level": "2",
-  "url": "pigeonhole9-4.html#activity-166",
+  "url": "pigeonhole9-4.html#activity-167",
   "type": "Activity",
   "number": "9.4.6",
   "title": "",
@@ -9217,18 +9226,18 @@ var ptx_lunr_docs = [
   "body": "Let be nonnegative integers with . An -combination combination of a set of elements is the number of subsets of size that can be chosen from a set of elements. We denote it , which is read choose . choose "
 },
 {
-  "id": "activity-167",
+  "id": "activity-168",
   "level": "2",
-  "url": "combinations9-5.html#activity-167",
+  "url": "combinations9-5.html#activity-168",
   "type": "Activity",
   "number": "9.5.1",
   "title": "",
   "body": "Calculate and . "
 },
 {
-  "id": "activity-168",
+  "id": "activity-169",
   "level": "2",
-  "url": "combinations9-5.html#activity-168",
+  "url": "combinations9-5.html#activity-169",
   "type": "Activity",
   "number": "9.5.2",
   "title": "",
@@ -9253,18 +9262,18 @@ var ptx_lunr_docs = [
   "body": "Binary Strings How many binary strings of length 5 can have exactly 2 ones?  We can think of forming a binary string with 2 ones as a list of 5 places where we need to choose 2 places for the ones. Once we've done that, the other places must have 0's. Thus, we have five places and choose 2:  How many binary strings of length 5 can have at most 2 ones?  Here we can count the strings with 2 ones, 1 one, and 0 ones. We add them since the strings with different numbers of ones are disjoint:  "
 },
 {
-  "id": "activity-169",
+  "id": "activity-170",
   "level": "2",
-  "url": "combinations9-5.html#activity-169",
+  "url": "combinations9-5.html#activity-170",
   "type": "Activity",
   "number": "9.5.3",
   "title": "",
   "body": "How many binary strings of length 7 have exactly 3 ones? Think of this as a list of 7 digits. How many ways are there to place the ones? "
 },
 {
-  "id": "activity-170",
+  "id": "activity-171",
   "level": "2",
-  "url": "combinations9-5.html#activity-170",
+  "url": "combinations9-5.html#activity-171",
   "type": "Activity",
   "number": "9.5.4",
   "title": "",
@@ -9289,18 +9298,18 @@ var ptx_lunr_docs = [
   "body": "Alternate Rearranging Letters How many ways are there to order the letters in the word letter ?  We can think of the string of letters as 6 places where we can choose to put letters. First we can think of all the letters as distinct. Then we have 6 letters to choose for the first place, 5 for the second, 4 for the third, etc. Thus we have ways to place 6 distinct letters.  But the letters are not distinct, so we need to divide by the number of ways we over-counted. For each permutation we just counted, switching the two e s gives us the same word, so we need to divide by the number of ways to rearrange the two e s: Similarly, we need to divide by equivalent arrangements of the two t s: .  Putting this together we have  "
 },
 {
-  "id": "activity-171",
+  "id": "activity-172",
   "level": "2",
-  "url": "combinations9-5.html#activity-171",
+  "url": "combinations9-5.html#activity-172",
   "type": "Activity",
   "number": "9.5.5",
   "title": "",
   "body": "How many ways are there to order the letters in book ? First place all the b s--how many ways can you do this? Then count how many ways to place all the o s, then all the k s. "
 },
 {
-  "id": "activity-172",
+  "id": "activity-173",
   "level": "2",
-  "url": "combinations9-5.html#activity-172",
+  "url": "combinations9-5.html#activity-173",
   "type": "Activity",
   "number": "9.5.6",
   "title": "",
@@ -9514,18 +9523,18 @@ var ptx_lunr_docs = [
   "body": "Give an algebraic proof for Pascal's Formula: Start with the right-hand side. Use the definition of choose, then find a common denominator. Note, you will save yourself a lot of work if you find the least common denominator. "
 },
 {
-  "id": "p-3215",
+  "id": "p-3216",
   "level": "2",
-  "url": "binomial9-6.html#p-3215",
+  "url": "binomial9-6.html#p-3216",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "binomial coefficients "
 },
 {
-  "id": "p-3221",
+  "id": "p-3222",
   "level": "2",
-  "url": "binomial9-6.html#p-3221",
+  "url": "binomial9-6.html#p-3222",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -9559,18 +9568,18 @@ var ptx_lunr_docs = [
   "body": "Prove by induction on .  Base step: Let . Then . Also,  Induction step: Assume .  Show   Now we want to change the index of the second sum. This is just a substitution of variable that allows us to shift how we index the terms. If we were to write out the sum, rather than have it in summation notation, we would not need this step. But it allows us to easily combine like terms in the two summations. So, in the second sum, let , so when ; when , and . We get  "
 },
 {
-  "id": "activity-174",
+  "id": "activity-175",
   "level": "2",
-  "url": "binomial9-6.html#activity-174",
+  "url": "binomial9-6.html#activity-175",
   "type": "Activity",
   "number": "9.6.2",
   "title": "",
   "body": "Show the Binomial Theorem holds for and . "
 },
 {
-  "id": "p-3232",
+  "id": "p-3233",
   "level": "2",
-  "url": "binomial9-6.html#p-3232",
+  "url": "binomial9-6.html#p-3233",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -9586,18 +9595,18 @@ var ptx_lunr_docs = [
   "body": "Expressing a Sum in Closed Form  Express the sum, , in closed form.  For problems such as this, we need to identify and as in the Binomial Theorem.  We can see that , since the power of matches the power of . Since there does not appear to be any term for , we can let . Thus, the closed form is . "
 },
 {
-  "id": "activity-175",
+  "id": "activity-176",
   "level": "2",
-  "url": "binomial9-6.html#activity-175",
+  "url": "binomial9-6.html#activity-176",
   "type": "Activity",
   "number": "9.6.3",
   "title": "",
   "body": "Use the Binomial Theorem to find . In this expression, what are ? "
 },
 {
-  "id": "activity-176",
+  "id": "activity-177",
   "level": "2",
-  "url": "binomial9-6.html#activity-176",
+  "url": "binomial9-6.html#activity-177",
   "type": "Activity",
   "number": "9.6.4",
   "title": "",
@@ -9784,9 +9793,9 @@ var ptx_lunr_docs = [
   "body": " Graphs graph  This section focuses on some of the terminology associated with graphs. We will also define some special types of graphs, such as complete graphs.  A graph graph is a collection of vertices vertex and edges edge .   Example of a graph,     is an example of a graph. We have labeled the vertices with and the edges with .    A graph, , consists of a finite set, , of vertices vertex and a finite set, , of edges edge . Each edge is assocated with two vertices (it may be the same vertex) called endpoints endpoints of an edge .  In the above example, , . The endpoints of edge are .  If two edges have the same endpoints, we say they are parallel parallel edges edge parallel .  A loop loop is an edge where both endpoints are the same vertex.  Two vertices connected by an edge are called adjacent adjacent vertices vertex adjacent . For example, in  is adjacent to , but is not adjacent to .  A vertex of a loop is adjacent to itself.  An edge is incident on incident edge each of its endpoints.  Two edges that are incident on the same vertex are adjacent adjacent edges edge adjacent . For example, in  and are adjacent, but and are not adjacent.  An isolated vertex isolated vertex is one with no incident edges.  A graph with no vertices is the empty graph empty graph .  In , edges and are parallel edges, while edge is a loop. We also have an isolated vertex, .   Example of a graph with parallel edges and a loop     Graph Terminology  Consider the graph, given in the figure.   Graph     Find .   Find .   Find the endpoints for .   Find the endpoints for .   Find the endpoints for .   Find the edges incident on .   Find all vertices adjacent to .   Does have any parallel edges?  Yes.  Does have any loops?  No.   It is important to note that it is possible to draw the same graph in different ways.   The same graph drawn in two different ways     The two graphs in are the same graph since they have the same vertex and edge sets, and a given edge still has the same endpoints.  A directed graph directed graph or digraph digraph graph directed consists of a set of vertices, and directed edges (arrows), , where each edge is associated with an ordered pair of of vertices called endpoints, .  We saw directed graphs in and . For example, see . In this example, we have an edge with endpoints , but not .  Really, the vertices of a graph represent a set, while the edges represent relationships between elements of that set. There are lots of examples of graphs as representations of relationships or networks. For example, graphs are used to represent communications systems, flight patterns, and friendship networks. Graphs can even be used to find strategies in games such as sudoku.  A graph with no parallel edges or loops is called simple simple graph . For example, is simple, while is not.  Now we want to define a couple special graphs.  A complete graph on vertices complete graph graph complete , , is a simple graph with vertices whose set of edges contains exactly one edge for every pair of vertices.  are given in the following figure.   Examples of complete graphs     Draw the complete graphs on 5 vertices and 6 vertices, and .   Let . A complete bipartite graph on vertices complete bipartite graph graph complete bipartite , , is a simple graph with vertices and , such that  there is an edge from to for all and ;  there are no edges from to for all ;  there are no edges from to for all .     Complete bipartite graph,     Draw the complete bipartite graphs and .  A graph is a subgraph subgraph of if every vertex in is also a vertex in , and every edge in is also an edge in such that the edges in have the same endpoints as in .  In the following figure, and are subgraphs of .   Examples of subgraphs, , of the graph     The degree degree of a vertex vertex degree of a vertex , , is the number of edges incident on . Loops are counted twice. The total degree total degree graph total degree of a graph is the sum of the degrees of all vertices in .  Degree  Let be the graph in .  Find .  3  Find .  2  Find the total degree of .  10  Let be the graph in .  Find .  4  Find .  0  Find the total degree of .  6  Is there a relationship between the number of edges in and the total degree?   As you might have seen in , there is a relationship between the total degree of a graph and the number of edges.  The total degree of a graph is where is the number of edges in .  We will not provide a formal proof, but the theorem is not hard to show as each edge must be incident on two vertices. Thus, each edge is counted twice in the total degree.  Draw any graph with 6 edges. Find the total degree of your graph. Verify that the total degree is twice the number of edges.  The total degree of any graph is even.  Explain why in any graph there is an even number of vertices of odd degree.  For each of the following either draw an example of the graph or explain why it is impossible.  A graph with 4 vertices of degrees 1, 1, 2, 3.  A graph with 4 vertices of degrees 1, 1, 2, 2.  A simple graph with 4 vertices of degrees 1, 1, 2, 2.  A graph with 4 vertices of degrees 1, 2, 3, 3.  A simple graph with 4 vertices of degrees 1, 2, 3, 4.  A simple graph with 6 edges and all vertices of degrees 3.    Check Your Understanding  Use the following graph for questions about .   The graph for Check Your Understanding     List the edges of , , incident on . There are 5 edges.  True or false , , has parallel edges. Edges are parallel. Yes,  True or false: in , , and are adjacent. True  True or false: in , , and are adjacent. False  True or false: in , , and are adjacent. True  In , , find the degree of .     Correct.      Incorrect. See .      In , , find the degree of .     Correct.      Incorrect. See .      What is the total degree of , ?     Correct.      Incorrect. See . Add the degrees of all the vertices.      Draw . How many edges does it have?  What is the degree of each vertex?     Correct. It has 10 edges.      Incorrect. See . Make sure you have connected every vertex to every other vertex exactly once.        Correct. Every edge has degree 4.      Incorrect. See .     It has 10 edges. All vertices have degree 4.  True or false: there exists a graph with 4 vertices of degrees 1, 2, 1, 2. One example is a line (path) with 4 vertices. True. One example is a line (path) with 4 vertices.  True or false: there exists a graph with 4 vertices of degrees 1, 2, 1, 3. The total degree would be odd. False. Total degree would be odd.  True or false: there exists a graph with 4 vertices of degrees 4, 4, 4, 4. One example has parallel edges between each vertex. Can also have an example with loops. True. One example has parallel edges between each vertex. You can also have an example with loops.  True or false: there exists a simple graph with 4 vertices of degrees 4, 4, 4, 4. In a simple graph, you can't have more edges than the complete graph on 4 vertices. False. Can't have more edges than the complete graph on 4 vertices.    Draw the graph given by the following information: Graph has vertex set and edge set with edge-endpoint function given by the table.    Edge  Endpoints                     Show that the two drawings represent the same graph by labeling the vertices and edges of the right-hand drawing to correspond to those of the left-hand drawing.      Show that the two drawings represent the same graph by labeling the vertices and edges of the right-hand drawing to correspond to those of the left-hand drawing.      Consider the graph       Find all edges that are incident on .    Find all vertices that are adjacent to .    Find all edges that are adjacent to .    Find all loops.    Find all parallel edges.    Find all isolated vertices.    Find the degree of .    Find the total degree of the graph.     A graph has vertices of degrees 0, 2, 2, 3, and 9. How many edges does the graph have?   For each of the following, draw the graph if it exists or explain why no such graph exists.    A graph with four vertices of degrees 1, 1, 1, and 4.    A graph with four vertices of degrees 1, 2, 3, and 4.    A simple graph with 9 edges and all vertices of degree 3.     In a group of 25 people, is it possible for each person to shake hands with exactly 3 other people? Explain your answer.   Recall that denotes the complete bipartite graph on vertices.    Draw .    Draw .    Draw .    How many vertices of have of degree ? degree ?    What is the total degree of ?    Find a formula in terms of and for the number of edges of .      Recall is the complete graph on vertices.    Draw .    Show that for all integers , the number of edges of is .    There are two possible approaches for the proof. One is to try a counting argument, the other is to do induction on .   "
 },
 {
-  "id": "p-3286",
+  "id": "p-3287",
   "level": "2",
-  "url": "graphs10-1.html#p-3286",
+  "url": "graphs10-1.html#p-3287",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -9811,22 +9820,13 @@ var ptx_lunr_docs = [
   "body": "  A graph, , consists of a finite set, , of vertices vertex and a finite set, , of edges edge . Each edge is assocated with two vertices (it may be the same vertex) called endpoints endpoints of an edge . "
 },
 {
-  "id": "p-3290",
-  "level": "2",
-  "url": "graphs10-1.html#p-3290",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "parallel "
-},
-{
   "id": "p-3291",
   "level": "2",
   "url": "graphs10-1.html#p-3291",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "loop "
+  "body": "parallel "
 },
 {
   "id": "p-3292",
@@ -9835,16 +9835,16 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "adjacent "
+  "body": "loop "
 },
 {
-  "id": "p-3294",
+  "id": "p-3293",
   "level": "2",
-  "url": "graphs10-1.html#p-3294",
+  "url": "graphs10-1.html#p-3293",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "incident on "
+  "body": "adjacent "
 },
 {
   "id": "p-3295",
@@ -9853,7 +9853,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "adjacent "
+  "body": "incident on "
 },
 {
   "id": "p-3296",
@@ -9862,12 +9862,21 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "isolated vertex "
+  "body": "adjacent "
 },
 {
   "id": "p-3297",
   "level": "2",
   "url": "graphs10-1.html#p-3297",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "isolated vertex "
+},
+{
+  "id": "p-3298",
+  "level": "2",
+  "url": "graphs10-1.html#p-3298",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -9910,9 +9919,9 @@ var ptx_lunr_docs = [
   "body": "A directed graph directed graph or digraph digraph graph directed consists of a set of vertices, and directed edges (arrows), , where each edge is associated with an ordered pair of of vertices called endpoints, . "
 },
 {
-  "id": "p-3314",
+  "id": "p-3315",
   "level": "2",
-  "url": "graphs10-1.html#p-3314",
+  "url": "graphs10-1.html#p-3315",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -9937,9 +9946,9 @@ var ptx_lunr_docs = [
   "body": " Examples of complete graphs    "
 },
 {
-  "id": "activity-177",
+  "id": "activity-178",
   "level": "2",
-  "url": "graphs10-1.html#activity-177",
+  "url": "graphs10-1.html#activity-178",
   "type": "Activity",
   "number": "10.1.1",
   "title": "",
@@ -9964,9 +9973,9 @@ var ptx_lunr_docs = [
   "body": " Complete bipartite graph,    "
 },
 {
-  "id": "activity-178",
+  "id": "activity-179",
   "level": "2",
-  "url": "graphs10-1.html#activity-178",
+  "url": "graphs10-1.html#activity-179",
   "type": "Activity",
   "number": "10.1.2",
   "title": "",
@@ -10018,9 +10027,9 @@ var ptx_lunr_docs = [
   "body": "The total degree of a graph is where is the number of edges in . "
 },
 {
-  "id": "activity-179",
+  "id": "activity-180",
   "level": "2",
-  "url": "graphs10-1.html#activity-179",
+  "url": "graphs10-1.html#activity-180",
   "type": "Activity",
   "number": "10.1.3",
   "title": "",
@@ -10036,18 +10045,18 @@ var ptx_lunr_docs = [
   "body": "The total degree of any graph is even. "
 },
 {
-  "id": "activity-180",
+  "id": "activity-181",
   "level": "2",
-  "url": "graphs10-1.html#activity-180",
+  "url": "graphs10-1.html#activity-181",
   "type": "Activity",
   "number": "10.1.4",
   "title": "",
   "body": "Explain why in any graph there is an even number of vertices of odd degree. "
 },
 {
-  "id": "activity-181",
+  "id": "activity-182",
   "level": "2",
-  "url": "graphs10-1.html#activity-181",
+  "url": "graphs10-1.html#activity-182",
   "type": "Activity",
   "number": "10.1.5",
   "title": "",
@@ -10288,9 +10297,9 @@ var ptx_lunr_docs = [
   "body": "For each of the following terms we have a list of vertices and edges, , that represent a way to traverse through the graph. So, for example, must be an endpoint of , must be an endpoint of and , etc. For each of the following terms we indicate whether we can repeat vertices and\/or edges in the list.  A walk walk from to has . It can repeat edges and vertices. It can begin at any vertex and end at any vertex.  A trail trail from to has . It cannot repeat edges. It can begin at any vertex and end at any vertex.  A path path from to has . It cannot repeat edges or vertices. It can begin at any vertex and end at any vertex.  A closed walk closed walk walk closed must start and end at the same vertex , . It can repeat edges and vertices.  A circuit circuit must start and end at the same vertex , . It cannot repeat edges. It can repeat vertices.  A simple circuit simple circuit circuit simple must start and end at the same vertex , . It cannot repeat edges or vertices, except for the initial and terminal vertex.   "
 },
 {
-  "id": "p-3410",
+  "id": "p-3411",
   "level": "2",
-  "url": "pathscircuits10-2.html#p-3410",
+  "url": "pathscircuits10-2.html#p-3411",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -10333,9 +10342,9 @@ var ptx_lunr_docs = [
   "body": "If is a connected graph then any two distinct vertices of can be connected by a simple path. "
 },
 {
-  "id": "activity-182",
+  "id": "activity-183",
   "level": "2",
-  "url": "pathscircuits10-2.html#activity-182",
+  "url": "pathscircuits10-2.html#activity-183",
   "type": "Activity",
   "number": "10.2.1",
   "title": "",
@@ -10351,9 +10360,9 @@ var ptx_lunr_docs = [
   "body": "If and are part of a circuit in and one edge is removed, then there still exists a path from to in . "
 },
 {
-  "id": "activity-183",
+  "id": "activity-184",
   "level": "2",
-  "url": "pathscircuits10-2.html#activity-183",
+  "url": "pathscircuits10-2.html#activity-184",
   "type": "Activity",
   "number": "10.2.2",
   "title": "",
@@ -10369,9 +10378,9 @@ var ptx_lunr_docs = [
   "body": "If is a connected graph and contains a nontrivial circuit, then an edge of the circuit can be removed without disconnecting . "
 },
 {
-  "id": "activity-184",
+  "id": "activity-185",
   "level": "2",
-  "url": "pathscircuits10-2.html#activity-184",
+  "url": "pathscircuits10-2.html#activity-185",
   "type": "Activity",
   "number": "10.2.3",
   "title": "",
@@ -10396,9 +10405,9 @@ var ptx_lunr_docs = [
   "body": "Finding Euler Circuits  Is it possible to find an Euler circuit for the graph in ?      Yes. For example .  Is it possible to find an Euler circuit for the Konigsberg bridge graph in ?      No.  "
 },
 {
-  "id": "activity-185",
+  "id": "activity-186",
   "level": "2",
-  "url": "pathscircuits10-2.html#activity-185",
+  "url": "pathscircuits10-2.html#activity-186",
   "type": "Activity",
   "number": "10.2.4",
   "title": "",
@@ -10423,9 +10432,9 @@ var ptx_lunr_docs = [
   "body": "If every vertex of a nonempty graph has even degree and is connected, then the graph has an Euler circuit. "
 },
 {
-  "id": "activity-186",
+  "id": "activity-187",
   "level": "2",
-  "url": "pathscircuits10-2.html#activity-186",
+  "url": "pathscircuits10-2.html#activity-187",
   "type": "Activity",
   "number": "10.2.5",
   "title": "",
@@ -10450,9 +10459,9 @@ var ptx_lunr_docs = [
   "body": "A graph has an Euler path from to if and only if is connected, and have odd degree, and all other vertices of have even degree. "
 },
 {
-  "id": "activity-187",
+  "id": "activity-188",
   "level": "2",
-  "url": "pathscircuits10-2.html#activity-187",
+  "url": "pathscircuits10-2.html#activity-188",
   "type": "Activity",
   "number": "10.2.6",
   "title": "",
@@ -10468,9 +10477,9 @@ var ptx_lunr_docs = [
   "body": "A Hamiltonian circuit Hamiltonian circuit circuit Hamiltonian for is a simple circuit that includes every vertex of . "
 },
 {
-  "id": "activity-188",
+  "id": "activity-189",
   "level": "2",
-  "url": "pathscircuits10-2.html#activity-188",
+  "url": "pathscircuits10-2.html#activity-189",
   "type": "Activity",
   "number": "10.2.7",
   "title": "",
@@ -10666,9 +10675,9 @@ var ptx_lunr_docs = [
   "body": "A graph is a tree tree if it is connected and circuit-free. "
 },
 {
-  "id": "p-3486",
+  "id": "p-3487",
   "level": "2",
-  "url": "trees10-3.html#p-3486",
+  "url": "trees10-3.html#p-3487",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -10702,9 +10711,9 @@ var ptx_lunr_docs = [
   "body": "A terminal vertex terminal vertex or leaf leaf is a vertex of degree 1. Vertices of degree greater than 1 are internal internal vertex or branch branch vertex vertex branch vertices. "
 },
 {
-  "id": "p-3490",
+  "id": "p-3491",
   "level": "2",
-  "url": "trees10-3.html#p-3490",
+  "url": "trees10-3.html#p-3491",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -10720,18 +10729,18 @@ var ptx_lunr_docs = [
   "body": "Rooted Tree    A rooted tree     In the example, let be the root of the tree.  Then is at level 2, is at level 4, and is at level 0.  The height of the tree is 4.  The children of are and .  The only sibling of is ; the parent of is .  The ancestors of are and . The descendants of are .  "
 },
 {
-  "id": "p-3497",
+  "id": "p-3498",
   "level": "2",
-  "url": "trees10-3.html#p-3497",
+  "url": "trees10-3.html#p-3498",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "binary tree "
 },
 {
-  "id": "p-3498",
+  "id": "p-3499",
   "level": "2",
-  "url": "trees10-3.html#p-3498",
+  "url": "trees10-3.html#p-3499",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -10747,18 +10756,18 @@ var ptx_lunr_docs = [
   "body": "Full Binary Tree    A full binary tree of height 3     "
 },
 {
-  "id": "activity-189",
+  "id": "activity-190",
   "level": "2",
-  "url": "trees10-3.html#activity-189",
+  "url": "trees10-3.html#activity-190",
   "type": "Activity",
   "number": "10.3.1",
   "title": "",
   "body": "Draw the full binary tree of height 4. How many leaves does it have? "
 },
 {
-  "id": "activity-190",
+  "id": "activity-191",
   "level": "2",
-  "url": "trees10-3.html#activity-190",
+  "url": "trees10-3.html#activity-191",
   "type": "Activity",
   "number": "10.3.2",
   "title": "",
@@ -10774,9 +10783,9 @@ var ptx_lunr_docs = [
   "body": "For any positive integer, , any tree with vertices has edges. "
 },
 {
-  "id": "activity-191",
+  "id": "activity-192",
   "level": "2",
-  "url": "trees10-3.html#activity-191",
+  "url": "trees10-3.html#activity-192",
   "type": "Activity",
   "number": "10.3.3",
   "title": "",

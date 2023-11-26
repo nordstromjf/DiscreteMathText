@@ -12,7 +12,36 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical"><ul class="disc">
+<li>
 <div class="para">How many groups of 7 can be chosen that contain 4 juniors and 3 seniors?</div>
+<a href="" class="answer-knowl original" data-knowl="./knowl/answer-401-hidden.html" title="Answer 1"><span class="type">Answer</span><span class="period">.</span></a>
+</li>
+<li>
+<div class="para">How many groups of 7 can be chosen so that there is at least one senior?</div>
+<a href="" class="answer-knowl original" data-knowl="./knowl/answer-402-hidden.html" title="Answer 1"><span class="type">Answer</span><span class="period">.</span></a>
+</li>
+<li>
+<div class="para">How many groups of 7 can be chosen so that there are at most 3 juniors?</div>
+<a href="" class="answer-knowl original" data-knowl="./knowl/answer-403-hidden.html" title="Answer 1"><span class="type">Answer</span><span class="period">.</span></a>
+</li>
+<li>
+<div class="para">How many groups of 7 can be chosen if two people refuse to work together?</div>
+<div class="para">Call the two people A and B.</div>
+<div class="para">Find the number of groups with A and not B: <span class="process-math">\(\binom{11}{6}\text{.}\)</span> Note, we only need to choose 6 out of 11 since we know A is in the group and B is not, so we just need to choose the other 6 members.</div>
+<div class="para">Similarly, find the number of groups with B and not A: <span class="process-math">\(\binom{11}{6}\text{.}\)</span>
+</div>
+<div class="para">Now, find the number of groups with neither A nor B: <span class="process-math">\(\binom{11}{7}\text{.}\)</span> Note, we need to choose 7 out of 11 since we know A and B cannot be chosen.</div>
+<div class="para logical">
+<div class="para">Since the sets of each type of group (with A, with B, with neither) are disjoint, we use the addition rule:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\binom{11}{6}+\binom{11}{6}+ \binom{11}{7}.
+\end{equation*}
+</div>
+</div>
+</li>
+</ul></div>
 <span class="incontext"><a href="combinations9-5.html#p-3122" class="internal">in-context</a></span>
 </body>
 </html>
