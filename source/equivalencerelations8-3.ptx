@@ -341,10 +341,10 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.</
       </statement></exercise>
       <exercise><statement>
         <p>
-    Prove <m>n \equiv m\ \text{mod}\ 4</m> is an equivalence relation on <m>\mathbb{Z}</m>. Then describe the distinct equivalence classes for this relation.
+    Prove <m>a \equiv b\ \text{mod}\ 4</m> is an equivalence relation on <m>\mathbb{Z}</m>. Then describe the distinct equivalence classes for this relation.
   </p>
       </statement><hint><p>
-    Use that <m>nRm \iff n \equiv m\ \text{mod}\ 4\iff 4\mid (m-n)</m>.
+    Use that <m>aRb \iff a \equiv b\ \text{mod}\ 4\iff 4\mid (a-b)</m>.
   </p></hint></exercise>
 
   <exercise xml:id="X_modn"><statement>
@@ -352,7 +352,7 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.</
     Prove <m>a \equiv b\ \text{mod}\ n</m> is an equivalence relation on <m>\mathbb{Z}</m>. Then describe the distinct equivalence classes for this relation.
   </p>
       </statement><hint><p>
-    Use that <m>aRb \iff a \equiv b\ \text{mod}\ n\iff 4\mid (a-b)</m>.
+    Use that <m>aRb \iff a \equiv b\ \text{mod}\ n\iff n\mid (a-b)</m>.
   </p></hint></exercise>
       <exercise><statement>
         <p>

@@ -84,15 +84,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.2.2';
+eBookConfig.runestone_version = '7.2.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.2.2/prefix-runtime.ea89cba5970a9192.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.2.2/prefix-347.8328b60515045466.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.2.2/prefix-runestone.f9281f94d8420c68.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.2.2/prefix-347.f9add1ca35d5ad93.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.2.2/prefix-runestone.f64dcc3632d7a0c3.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.2.8/prefix-runtime.ec55fa20f167401c.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.2.8/prefix-347.8328b60515045466.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.2.8/prefix-runestone.aeac7cf9ad5c07ef.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.2.8/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.2.8/prefix-runestone.f64dcc3632d7a0c3.css">
 </head>
 <body id="DiscreteMathText" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
@@ -580,12 +580,12 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="pathscircuits10-2"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">10.2</span> <span class="title">Paths and Circuits</span>
 </h2>
-<div class="para" id="p-3407">The origin story for this section is the Konigsberg Bridge Problem, which involves seven bridges, as pictured in <a href="" class="xref" data-knowl="./knowl/F_Kbridge.html" title="Figure 10.2.1">Figure 10.2.1</a>. The story is that the challenge of Konigsberg was to try to traverse all the bridges, without repeating one, and return to where you started. Euler found a way to represent the problem as a graph, also pictured. The vertices are the land masses and the edges are the bridges. This representation makes it easier to try to answer the question. Before moving on, try to solve the bridge problem by finding a route through the graph that starts and ends at some vertex and traverses each edge exactly once.</div>
+<div class="para" id="p-3408">The origin story for this section is the Konigsberg Bridge Problem, which involves seven bridges, as pictured in <a href="" class="xref" data-knowl="./knowl/F_Kbridge.html" title="Figure 10.2.1">Figure 10.2.1</a>. The story is that the challenge of Konigsberg was to try to traverse all the bridges, without repeating one, and return to where you started. Euler found a way to represent the problem as a graph, also pictured. The vertices are the land masses and the edges are the bridges. This representation makes it easier to try to answer the question. Before moving on, try to solve the bridge problem by finding a route through the graph that starts and ends at some vertex and traverses each edge exactly once.</div>
 <figure class="figure figure-like" id="F_Kbridge"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/konigsbergbridge.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.2.1<span class="period">.</span></span><span class="space"> </span>Konigsberg bridge problem, <span class="process-math">\(G\)</span></figcaption></figure><article class="definition definition-like" id="D_pathscircuits"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.2.2</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-3408">
+<div class="para logical" id="p-3409">
 <div class="para">For each of the following terms we have a list of vertices and edges, <span class="process-math">\(v_0e_1v_1e_2\cdots e_nv_v\text{,}\)</span>  that represent a way to traverse through the graph. So, for example, <span class="process-math">\(v_0\)</span> must be an endpoint of <span class="process-math">\(e_1\text{,}\)</span> <span class="process-math">\(v_1\)</span> must be an endpoint of <span class="process-math">\(e_1\)</span> and <span class="process-math">\(e_2\text{,}\)</span> etc. For each of the following terms we indicate whether we can repeat vertices and/or edges in the list.</div>
 <ul class="disc">
 <li id="li-756"><div class="para" id="p-derived-li-756">A <dfn class="terminology">walk</dfn> from <span class="process-math">\(v\)</span> to <span class="process-math">\(w\)</span> has <span class="process-math">\(v=v_0, w=v_n\text{.}\)</span> It can repeat edges and vertices. It can begin at any vertex and end at any vertex.</div></li>
@@ -595,31 +595,31 @@ eBookConfig.enable_chatcodes =  false;
 <li id="li-760"><div class="para" id="p-derived-li-760">A <dfn class="terminology">circuit</dfn> must start and end at the same vertex <span class="process-math">\(v\text{,}\)</span>  <span class="process-math">\(v=v_0, v=v_n\text{.}\)</span> It cannot repeat edges. It can repeat vertices.</div></li>
 <li id="li-761"><div class="para" id="p-derived-li-761">A <dfn class="terminology">simple circuit</dfn> must start and end at the same vertex <span class="process-math">\(v\text{,}\)</span>  <span class="process-math">\(v=v_0, v=v_n\text{.}\)</span> It cannot repeat edges or vertices, except for the initial and terminal vertex.</div></li>
 </ul>
-</div></article><div class="para" id="p-3409">If it is clear which vertices we must use, we often just use the edges, <span class="process-math">\(e_1e_2\cdots e_n\text{,}\)</span> to describe paths, curcuits, walks, etc.</div>
-<div class="para" id="p-3410">The <dfn class="terminology">trivial walk</dfn> is just the single vertex <span class="process-math">\(v\text{.}\)</span> This is also the <dfn class="terminology">trivial circuit</dfn>.</div>
+</div></article><div class="para" id="p-3410">If it is clear which vertices we must use, we often just use the edges, <span class="process-math">\(e_1e_2\cdots e_n\text{,}\)</span> to describe paths, curcuits, walks, etc.</div>
+<div class="para" id="p-3411">The <dfn class="terminology">trivial walk</dfn> is just the single vertex <span class="process-math">\(v\text{.}\)</span> This is also the <dfn class="terminology">trivial circuit</dfn>.</div>
 <article class="example example-like" id="E_pathsandcircuits"><a href="" data-knowl="" class="id-ref example-knowl original has-image" data-refid="hk-E_pathsandcircuits"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Paths and Circuits.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_pathsandcircuits"><article class="example example-like"> <div class="para" id="p-3411">Consider the graph <span class="process-math">\(G\text{.}\)</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_pathsandcircuits"><article class="example example-like"> <div class="para" id="p-3412">Consider the graph <span class="process-math">\(G\text{.}\)</span>
 </div> <figure class="figure figure-like" id="F_pathcircuit"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/bridgegraph.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.2.4<span class="period">.</span></span><span class="space"> </span>The graph <span class="process-math">\(G\)</span> for <a href="" class="xref" data-knowl="./knowl/E_pathsandcircuits.html" title="Example 10.2.3: Paths and Circuits">Example 10.2.3</a></figcaption></figure> <div class="para" id="p-3412">For each list of vertices and edges, decide if it is a walk, trail, path, closed walk, circuit, simple circuit.</div> <div class="para logical" id="p-3413"><ol class="decimal">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.2.4<span class="period">.</span></span><span class="space"> </span>The graph <span class="process-math">\(G\)</span> for <a href="" class="xref" data-knowl="./knowl/E_pathsandcircuits.html" title="Example 10.2.3: Paths and Circuits">Example 10.2.3</a></figcaption></figure> <div class="para" id="p-3413">For each list of vertices and edges, decide if it is a walk, trail, path, closed walk, circuit, simple circuit.</div> <div class="para logical" id="p-3414"><ol class="decimal">
 <li id="li-762">
-<div class="para" id="p-3414"><span class="process-math">\(\displaystyle v_2e_2v_1e_5v_4e_6v_2e_2v_1\)</span></div>
+<div class="para" id="p-3415"><span class="process-math">\(\displaystyle v_2e_2v_1e_5v_4e_6v_2e_2v_1\)</span></div>
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-447" id="answer-447"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-447"><div class="answer solution-like">walk</div></div>
 </li>
 <li id="li-763">
-<div class="para" id="p-3415"><span class="process-math">\(\displaystyle v_2e_2v_1e_5v_4e_6v_2e_1v_1\)</span></div>
+<div class="para" id="p-3416"><span class="process-math">\(\displaystyle v_2e_2v_1e_5v_4e_6v_2e_1v_1\)</span></div>
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-448" id="answer-448"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-448"><div class="answer solution-like">walk, trail</div></div>
 </li>
 <li id="li-764">
-<div class="para" id="p-3416"><span class="process-math">\(\displaystyle v_2e_2v_1e_5v_4e_6v_2\)</span></div>
+<div class="para" id="p-3417"><span class="process-math">\(\displaystyle v_2e_2v_1e_5v_4e_6v_2\)</span></div>
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-449" id="answer-449"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-449"><div class="answer solution-like">walk, trail, closed walk, circuit, simple circuit</div></div>
 </li>
 <li id="li-765">
-<div class="para" id="p-3417"><span class="process-math">\(\displaystyle v_2e_2v_1e_5v_4e_6v_2e_1v_1\)</span></div>
+<div class="para" id="p-3418"><span class="process-math">\(\displaystyle v_2e_2v_1e_5v_4e_6v_2e_1v_1\)</span></div>
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-450" id="answer-450"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-450"><div class="answer solution-like">walk, trail</div></div>
 </li>
 <li id="li-766">
-<div class="para" id="p-3418"><span class="process-math">\(\displaystyle v_2e_2v_1e_1v_2e_3v_3e_4v_2\)</span></div>
+<div class="para" id="p-3419"><span class="process-math">\(\displaystyle v_2e_2v_1e_1v_2e_3v_3e_4v_2\)</span></div>
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-451" id="answer-451"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-451"><div class="answer solution-like">walk, trail, closed walk, circuit</div></div>
 </li>
 </ol></div></article></div>
@@ -627,184 +627,184 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.2.5</span><span class="period">.</span>
 </h3>Two vertices, <span class="process-math">\(v, w\text{,}\)</span> are <dfn class="terminology">connected</dfn> if there is a walk from <span class="process-math">\(v\)</span> to <span class="process-math">\(w\text{.}\)</span></article><article class="definition definition-like" id="D_connectedgraph"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.2.6</span><span class="period">.</span>
-</h3>A graph, <span class="process-math">\(G\text{,}\)</span> is <dfn class="terminology">connected</dfn> if given any two vertices <span class="process-math">\(v, w\text{,}\)</span> there is a walk from <span class="process-math">\(v\)</span> to <span class="process-math">\(w\text{.}\)</span></article><div class="para" id="p-3419">Basically, a graph is connected if it is in one piece. <a href="" class="xref" data-knowl="./knowl/F_pathcircuit.html" title="Figure 10.2.4">Figure 10.2.4</a> is an example of a connected graph. The example in <a href="" class="xref" data-knowl="./knowl/F_parallelandloop.html" title="Figure 10.1.3">Figure 10.1.3</a> with the isolated vertex, is an example of a graph that is not connected.</div>
-<div class="para" id="p-3420">We state several propositions in this section without proof. You are encouraged to sketch examples of graphs to try to verify the propositions for yourself.</div>
+</h3>A graph, <span class="process-math">\(G\text{,}\)</span> is <dfn class="terminology">connected</dfn> if given any two vertices <span class="process-math">\(v, w\text{,}\)</span> there is a walk from <span class="process-math">\(v\)</span> to <span class="process-math">\(w\text{.}\)</span></article><div class="para" id="p-3420">Basically, a graph is connected if it is in one piece. <a href="" class="xref" data-knowl="./knowl/F_pathcircuit.html" title="Figure 10.2.4">Figure 10.2.4</a> is an example of a connected graph. The example in <a href="" class="xref" data-knowl="./knowl/F_parallelandloop.html" title="Figure 10.1.3">Figure 10.1.3</a> with the isolated vertex, is an example of a graph that is not connected.</div>
+<div class="para" id="p-3421">We state several propositions in this section without proof. You are encouraged to sketch examples of graphs to try to verify the propositions for yourself.</div>
 <article class="proposition theorem-like" id="P_connectsimple"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">10.2.7</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-3421">If <span class="process-math">\(G\)</span> is a connected graph then any two distinct vertices of <span class="process-math">\(G\)</span> can be connected by a simple path.</div></article><article class="activity project-like" id="activity-182"><h3 class="heading">
+<div class="para" id="p-3422">If <span class="process-math">\(G\)</span> is a connected graph then any two distinct vertices of <span class="process-math">\(G\)</span> can be connected by a simple path.</div></article><article class="activity project-like" id="activity-183"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">10.2.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-3422">Draw several examples of connected graphs. Verify for yourself that if <span class="process-math">\(G\)</span> is connected then any two distinct vertices of <span class="process-math">\(G\)</span> can be connected by a simple path.</div></article><article class="proposition theorem-like" id="P_circuitremove"><h3 class="heading">
+<div class="para" id="p-3423">Draw several examples of connected graphs. Verify for yourself that if <span class="process-math">\(G\)</span> is connected then any two distinct vertices of <span class="process-math">\(G\)</span> can be connected by a simple path.</div></article><article class="proposition theorem-like" id="P_circuitremove"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">10.2.8</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-3423">If <span class="process-math">\(v\)</span> and <span class="process-math">\(w\)</span> are part of a circuit in <span class="process-math">\(G\)</span> and one edge is removed, then there still exists a path from <span class="process-math">\(v\)</span> to <span class="process-math">\(w\)</span> in <span class="process-math">\(G\text{.}\)</span>
-</div></article><article class="activity project-like" id="activity-183"><h3 class="heading">
+<div class="para" id="p-3424">If <span class="process-math">\(v\)</span> and <span class="process-math">\(w\)</span> are part of a circuit in <span class="process-math">\(G\)</span> and one edge is removed, then there still exists a path from <span class="process-math">\(v\)</span> to <span class="process-math">\(w\)</span> in <span class="process-math">\(G\text{.}\)</span>
+</div></article><article class="activity project-like" id="activity-184"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">10.2.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-3424">Draw several examples of graphs with a circuit. Verify for yourself that if <span class="process-math">\(v\)</span> and <span class="process-math">\(w\)</span> are part of a circuit and one edge is removed then there still exists a path from <span class="process-math">\(v\)</span> to <span class="process-math">\(w\)</span> in <span class="process-math">\(G\text{.}\)</span>
+<div class="para" id="p-3425">Draw several examples of graphs with a circuit. Verify for yourself that if <span class="process-math">\(v\)</span> and <span class="process-math">\(w\)</span> are part of a circuit and one edge is removed then there still exists a path from <span class="process-math">\(v\)</span> to <span class="process-math">\(w\)</span> in <span class="process-math">\(G\text{.}\)</span>
 </div></article><article class="proposition theorem-like" id="P_stayconnected"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">10.2.9</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-3425">If <span class="process-math">\(G\)</span> is a connected graph and contains a nontrivial circuit, then an edge of the circuit can be removed without disconnecting <span class="process-math">\(G\text{.}\)</span>
-</div></article><article class="activity project-like" id="activity-184"><h3 class="heading">
+<div class="para" id="p-3426">If <span class="process-math">\(G\)</span> is a connected graph and contains a nontrivial circuit, then an edge of the circuit can be removed without disconnecting <span class="process-math">\(G\text{.}\)</span>
+</div></article><article class="activity project-like" id="activity-185"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">10.2.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-3426">Draw several examples of connected graphs containing a nontrivial circuit. Verify for yourself that if <span class="process-math">\(G\)</span> is connected and contains a nontrivial circuit then an edge of the circuit can be removed without disconnecting <span class="process-math">\(G\text{.}\)</span>
+<div class="para" id="p-3427">Draw several examples of connected graphs containing a nontrivial circuit. Verify for yourself that if <span class="process-math">\(G\)</span> is connected and contains a nontrivial circuit then an edge of the circuit can be removed without disconnecting <span class="process-math">\(G\text{.}\)</span>
 </div></article><article class="definition definition-like" id="D_eulercircuit"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.2.10</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-3427">An <dfn class="terminology">Euler circuit</dfn> for a graph <span class="process-math">\(G\)</span> is a circuit that contains every vertex and every edge of <span class="process-math">\(G\text{.}\)</span>
-</div></article><div class="para" id="p-3428">An Euler circuit must start and end at the same vertex and include every vertex and every edge. It can repeat vertices, but it cannot repeat edges. If you look back at the Konigsberg bridge problem, you can see that to solve the bridge problem is to find an Euler circuit for the associated graph. Were you able to find such a circuit?</div>
+<div class="para" id="p-3428">An <dfn class="terminology">Euler circuit</dfn> for a graph <span class="process-math">\(G\)</span> is a circuit that contains every vertex and every edge of <span class="process-math">\(G\text{.}\)</span>
+</div></article><div class="para" id="p-3429">An Euler circuit must start and end at the same vertex and include every vertex and every edge. It can repeat vertices, but it cannot repeat edges. If you look back at the Konigsberg bridge problem, you can see that to solve the bridge problem is to find an Euler circuit for the associated graph. Were you able to find such a circuit?</div>
 <article class="example example-like" id="E_findingEcircuits"><a href="" data-knowl="" class="id-ref example-knowl original has-image" data-refid="hk-E_findingEcircuits"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.2.11</span><span class="period">.</span><span class="space"> </span><span class="title">Finding Euler Circuits.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_findingEcircuits"><article class="example example-like"> <div class="para" id="p-3429">Is it possible to find an Euler circuit for the graph in <a href="" class="xref" data-knowl="./knowl/F_beachballEC.html" title="Figure 10.2.12">Figure 10.2.12</a>?</div> <figure class="figure figure-like" id="F_beachballEC"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/beachballe.svg" role="img" class="contained"></div>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_findingEcircuits"><article class="example example-like"> <div class="para" id="p-3430">Is it possible to find an Euler circuit for the graph in <a href="" class="xref" data-knowl="./knowl/F_beachballEC.html" title="Figure 10.2.12">Figure 10.2.12</a>?</div> <figure class="figure figure-like" id="F_beachballEC"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/beachballe.svg" role="img" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.2.12<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-452" id="answer-452"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-452"><div class="answer solution-like">Yes. For example <span class="process-math">\(e_1e_5e_2e_3e_6e_4\text{.}\)</span>
-</div></div> <div class="para" id="p-3430">Is it possible to find an Euler circuit for the Konigsberg bridge graph in <a href="" class="xref" data-knowl="./knowl/F_KbergEC.html" title="Figure 10.2.13">Figure 10.2.13</a>?</div> <figure class="figure figure-like" id="F_KbergEC"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/bridgegraph2.svg" role="img" class="contained"></div>
+</div></div> <div class="para" id="p-3431">Is it possible to find an Euler circuit for the Konigsberg bridge graph in <a href="" class="xref" data-knowl="./knowl/F_KbergEC.html" title="Figure 10.2.13">Figure 10.2.13</a>?</div> <figure class="figure figure-like" id="F_KbergEC"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/bridgegraph2.svg" role="img" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.2.13<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-453" id="answer-453"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-453"><div class="answer solution-like">No.</div></div></article></div>
-<article class="activity project-like" id="activity-185"><h3 class="heading">
+<article class="activity project-like" id="activity-186"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">10.2.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-3431">Draw the complete bipartite graphs <span class="process-math">\(K_{2, 3}\text{,}\)</span> <span class="process-math">\(K_{2, 4}\text{,}\)</span> <span class="process-math">\(K_{3, 3}\)</span> and <span class="process-math">\(K_{4, 4}\text{.}\)</span> Determine if each of these graphs has an Euler circuit.</div></article><div class="para" id="p-3432">We want to decide when a graph has an Euler circuit. The following two theorems completely characterize when a graph has an Euler circuit.</div>
+<div class="para" id="p-3432">Draw the complete bipartite graphs <span class="process-math">\(K_{2, 3}\text{,}\)</span> <span class="process-math">\(K_{2, 4}\text{,}\)</span> <span class="process-math">\(K_{3, 3}\)</span> and <span class="process-math">\(K_{4, 4}\text{.}\)</span> Determine if each of these graphs has an Euler circuit.</div></article><div class="para" id="p-3433">We want to decide when a graph has an Euler circuit. The following two theorems completely characterize when a graph has an Euler circuit.</div>
 <article class="theorem theorem-like" id="T_ECtheneven"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.2.14</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-3433">If a graph has an Euler circuit, then every vertex has even degree.</div></article><div class="para" id="p-3434">Although we will not prove this formally, the basic idea is that to create an Euler circuit for each vertex you need to be able to arrive at the vertex along an edge and then leave the vertex along a different edge. In the case of the inital vertex, you need to be able to leave the vertex and then return.</div>
-<div class="para" id="p-3435">
+<div class="para" id="p-3434">If a graph has an Euler circuit, then every vertex has even degree.</div></article><div class="para" id="p-3435">Although we will not prove this formally, the basic idea is that to create an Euler circuit for each vertex you need to be able to arrive at the vertex along an edge and then leave the vertex along a different edge. In the case of the inital vertex, you need to be able to leave the vertex and then return.</div>
+<div class="para" id="p-3436">
 <a href="" class="xref" data-knowl="./knowl/T_ECtheneven.html" title="Theorem 10.2.14">Theorem 10.2.14</a> tells us that the Konigsberg bridge graph cannot have an Euler circuit since we have vertices of odd degree.</div>
 <article class="theorem theorem-like" id="T_eventhenEC"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.2.15</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-3436">If every vertex of a nonempty graph has even degree and is connected, then the graph has an Euler circuit.</div></article><div class="para" id="p-3437">
+<div class="para" id="p-3437">If every vertex of a nonempty graph has even degree and is connected, then the graph has an Euler circuit.</div></article><div class="para" id="p-3438">
 <a href="" class="xref" data-knowl="./knowl/T_eventhenEC.html" title="Theorem 10.2.15">Theorem 10.2.15</a> tells us that the graph in <a href="" class="xref" data-knowl="./knowl/F_beachballEC.html" title="Figure 10.2.12">Figure 10.2.12</a> has an Euler circuit since all vertices have even degree, and the graph is connected. The graph in <a href="" class="xref" data-knowl="./knowl/F_parallelandloop.html" title="Figure 10.1.3">Figure 10.1.3</a> does not have an Euler circuit since it is not connected (although every vertex has even degree).</div>
-<article class="activity project-like" id="activity-186"><h3 class="heading">
+<article class="activity project-like" id="activity-187"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">10.2.5</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-3438">Verify <a href="" class="xref" data-knowl="./knowl/T_ECtheneven.html" title="Theorem 10.2.14">Theorem 10.2.14</a> and <a href="" class="xref" data-knowl="./knowl/T_eventhenEC.html" title="Theorem 10.2.15">Theorem 10.2.15</a> on <span class="process-math">\(K_{2, 3}\text{,}\)</span> <span class="process-math">\(K_{2, 4}\text{,}\)</span> <span class="process-math">\(K_{3, 3}\)</span> and <span class="process-math">\(K_{4, 4}\text{.}\)</span>
+<div class="para" id="p-3439">Verify <a href="" class="xref" data-knowl="./knowl/T_ECtheneven.html" title="Theorem 10.2.14">Theorem 10.2.14</a> and <a href="" class="xref" data-knowl="./knowl/T_eventhenEC.html" title="Theorem 10.2.15">Theorem 10.2.15</a> on <span class="process-math">\(K_{2, 3}\text{,}\)</span> <span class="process-math">\(K_{2, 4}\text{,}\)</span> <span class="process-math">\(K_{3, 3}\)</span> and <span class="process-math">\(K_{4, 4}\text{.}\)</span>
 </div></article><article class="definition definition-like" id="D_eulerpath"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.2.16</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-3439">An <dfn class="terminology">Euler path</dfn> from <span class="process-math">\(v\)</span> to <span class="process-math">\(w\)</span> is a sequence of adjacent edges and vertices that starts at <span class="process-math">\(v\)</span> and ends at <span class="process-math">\(w\)</span> passing through every vertex of <span class="process-math">\(G\)</span> at least once and traversing every edge exactly once.</div></article><div class="para" id="p-3440">An Euler path is a path that covers every edge and vertex of <span class="process-math">\(G\)</span> without repeating edges.</div>
+<div class="para" id="p-3440">An <dfn class="terminology">Euler path</dfn> from <span class="process-math">\(v\)</span> to <span class="process-math">\(w\)</span> is a sequence of adjacent edges and vertices that starts at <span class="process-math">\(v\)</span> and ends at <span class="process-math">\(w\)</span> passing through every vertex of <span class="process-math">\(G\)</span> at least once and traversing every edge exactly once.</div></article><div class="para" id="p-3441">An Euler path is a path that covers every edge and vertex of <span class="process-math">\(G\)</span> without repeating edges.</div>
 <article class="corollary theorem-like" id="C_eulerpathodd"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">10.2.17</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-3441">A graph <span class="process-math">\(G\)</span> has an Euler path from <span class="process-math">\(v\)</span> to <span class="process-math">\(w\)</span> if and only if <span class="process-math">\(G\)</span> is connected, <span class="process-math">\(v\)</span> and <span class="process-math">\(w\)</span> have odd degree, and all other vertices of <span class="process-math">\(G\)</span> have even degree.</div></article><article class="activity project-like" id="activity-187"><h3 class="heading">
+<div class="para" id="p-3442">A graph <span class="process-math">\(G\)</span> has an Euler path from <span class="process-math">\(v\)</span> to <span class="process-math">\(w\)</span> if and only if <span class="process-math">\(G\)</span> is connected, <span class="process-math">\(v\)</span> and <span class="process-math">\(w\)</span> have odd degree, and all other vertices of <span class="process-math">\(G\)</span> have even degree.</div></article><article class="activity project-like" id="activity-188"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">10.2.6</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-3442">Draw a graph that has an Euler path but not an Euler circuit.</div></article><div class="para" id="p-3443">We've been focusing on traversing a graph by covering each edge exactly once, but what if we want to traverse each vertex exactly once?</div>
+<div class="para" id="p-3443">Draw a graph that has an Euler path but not an Euler circuit.</div></article><div class="para" id="p-3444">We've been focusing on traversing a graph by covering each edge exactly once, but what if we want to traverse each vertex exactly once?</div>
 <article class="definition definition-like" id="hamiltoniancircuit"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.2.18</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-3444">A <dfn class="terminology">Hamiltonian circuit</dfn> for <span class="process-math">\(G\)</span> is a simple circuit that includes every vertex of <span class="process-math">\(G\text{.}\)</span>
-</div></article><div class="para" id="p-3445">A Hamiltonian circuit starts and ends at the same vertex, passes through all other vertices without repeating, does not repeat edges, but does not need to use all the edges. For example, in the Konigsberg bridge graph <a href="" class="xref" data-knowl="./knowl/F_KbergEC.html" title="Figure 10.2.13">Figure 10.2.13</a>, we have Hamiltonian circuit <span class="process-math">\(v_1e_5v_4e_7v_3e_3v_2e_1v_1\text{.}\)</span>
+<div class="para" id="p-3445">A <dfn class="terminology">Hamiltonian circuit</dfn> for <span class="process-math">\(G\)</span> is a simple circuit that includes every vertex of <span class="process-math">\(G\text{.}\)</span>
+</div></article><div class="para" id="p-3446">A Hamiltonian circuit starts and ends at the same vertex, passes through all other vertices without repeating, does not repeat edges, but does not need to use all the edges. For example, in the Konigsberg bridge graph <a href="" class="xref" data-knowl="./knowl/F_KbergEC.html" title="Figure 10.2.13">Figure 10.2.13</a>, we have Hamiltonian circuit <span class="process-math">\(v_1e_5v_4e_7v_3e_3v_2e_1v_1\text{.}\)</span>
 </div>
-<article class="activity project-like" id="activity-188"><h3 class="heading">
+<article class="activity project-like" id="activity-189"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">10.2.7</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-3446">Draw the complete bipartite graphs <span class="process-math">\(K_{2, 3}\text{,}\)</span> <span class="process-math">\(K_{2, 4}\text{,}\)</span> <span class="process-math">\(K_{3, 3}\)</span> and <span class="process-math">\(K_{4, 4}\text{.}\)</span> Determine if these graphs have an Hamiltonian circuit.</div></article><section class="reading-questions" id="reading-questions-39"><h3 class="heading hide-type">
+<div class="para" id="p-3447">Draw the complete bipartite graphs <span class="process-math">\(K_{2, 3}\text{,}\)</span> <span class="process-math">\(K_{2, 4}\text{,}\)</span> <span class="process-math">\(K_{3, 3}\)</span> and <span class="process-math">\(K_{4, 4}\text{.}\)</span> Determine if these graphs have an Hamiltonian circuit.</div></article><section class="reading-questions" id="reading-questions-39"><h3 class="heading hide-type">
 <span class="type">Reading Questions</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
-<div class="para" id="p-3447">Use the following graph for questions about <span class="process-math">\(G\text{.}\)</span>
+<div class="para" id="p-3448">Use the following graph for questions about <span class="process-math">\(G\text{.}\)</span>
 </div>
 <figure class="figure figure-like" id="F_readingquestions2"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/readquest2.svg" role="img" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.2.19<span class="period">.</span></span><span class="space"> </span>The graph <span class="process-math">\(G\)</span> for Check Your Understanding</figcaption></figure><article class="exercise exercise-like" id="DMT_paths_CYU_257path"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_paths_CYU_257path">
-<div class="para" id="p-3448">True or false: <span class="process-math">\(v_1e_2v_3e_5v_2e_7v_2\)</span> is a path in <span class="process-math">\(G\text{,}\)</span> <a href="" class="xref" data-knowl="./knowl/F_readingquestions2.html" title="Figure 10.2.19">Figure 10.2.19</a>.</div>
+<div class="para" id="p-3449">True or false: <span class="process-math">\(v_1e_2v_3e_5v_2e_7v_2\)</span> is a path in <span class="process-math">\(G\text{,}\)</span> <a href="" class="xref" data-knowl="./knowl/F_readingquestions2.html" title="Figure 10.2.19">Figure 10.2.19</a>.</div>
 <li data-component="answer" id="DMT_paths_CYU_257path_opt_t"><p>True.</p></li>
-<li data-component="feedback" id="DMT_paths_CYU_257path_opt_t"><div class="para" id="p-3449">It repeats <span class="process-math">\(v_2\text{.}\)</span>
+<li data-component="feedback" id="DMT_paths_CYU_257path_opt_t"><div class="para" id="p-3450">It repeats <span class="process-math">\(v_2\text{.}\)</span>
 </div></li>
 <li data-component="answer" id="DMT_paths_CYU_257path_opt_f" data-correct=""><p>False.</p></li>
-<li data-component="feedback" id="DMT_paths_CYU_257path_opt_f"><div class="para" id="p-3449">It repeats <span class="process-math">\(v_2\text{.}\)</span>
+<li data-component="feedback" id="DMT_paths_CYU_257path_opt_f"><div class="para" id="p-3450">It repeats <span class="process-math">\(v_2\text{.}\)</span>
 </div></li>
 </ul></div></div></article><article class="exercise exercise-like" id="DMT_paths_CYU_257clwalk"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_paths_CYU_257clwalk">
-<div class="para" id="p-3450">True or false: <span class="process-math">\(v_1e_2v_3e_5v_2e_7v_2\)</span> is a closed walk in <span class="process-math">\(G\text{,}\)</span> <a href="" class="xref" data-knowl="./knowl/F_readingquestions2.html" title="Figure 10.2.19">Figure 10.2.19</a>.</div>
+<div class="para" id="p-3451">True or false: <span class="process-math">\(v_1e_2v_3e_5v_2e_7v_2\)</span> is a closed walk in <span class="process-math">\(G\text{,}\)</span> <a href="" class="xref" data-knowl="./knowl/F_readingquestions2.html" title="Figure 10.2.19">Figure 10.2.19</a>.</div>
 <li data-component="answer" id="DMT_paths_CYU_257clwalk_opt_t"><p>True.</p></li>
-<li data-component="feedback" id="DMT_paths_CYU_257clwalk_opt_t"><div class="para" id="p-3451">It starts and ends at different vertices.</div></li>
+<li data-component="feedback" id="DMT_paths_CYU_257clwalk_opt_t"><div class="para" id="p-3452">It starts and ends at different vertices.</div></li>
 <li data-component="answer" id="DMT_paths_CYU_257clwalk_opt_f" data-correct=""><p>False.</p></li>
-<li data-component="feedback" id="DMT_paths_CYU_257clwalk_opt_f"><div class="para" id="p-3451">It starts and ends at different vertices.</div></li>
+<li data-component="feedback" id="DMT_paths_CYU_257clwalk_opt_f"><div class="para" id="p-3452">It starts and ends at different vertices.</div></li>
 </ul></div></div></article><article class="exercise exercise-like" id="DMT_paths_CYU_2571circuit"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_paths_CYU_2571circuit">
-<div class="para" id="p-3452">True or false: <span class="process-math">\(v_1e_2v_3e_5v_2e_7v_2e_1v_1\)</span> is a circuit in <span class="process-math">\(G\text{,}\)</span> <a href="" class="xref" data-knowl="./knowl/F_readingquestions2.html" title="Figure 10.2.19">Figure 10.2.19</a>.</div>
+<div class="para" id="p-3453">True or false: <span class="process-math">\(v_1e_2v_3e_5v_2e_7v_2e_1v_1\)</span> is a circuit in <span class="process-math">\(G\text{,}\)</span> <a href="" class="xref" data-knowl="./knowl/F_readingquestions2.html" title="Figure 10.2.19">Figure 10.2.19</a>.</div>
 <li data-component="answer" id="DMT_paths_CYU_2571circuit_opt_t" data-correct=""><p>True.</p></li>
 <li data-component="feedback" id="DMT_paths_CYU_2571circuit_opt_t">
 <li data-component="answer" id="DMT_paths_CYU_2571circuit_opt_f"><p>False.</p></li>
 <li data-component="feedback" id="DMT_paths_CYU_2571circuit_opt_f">
 </ul></div></div></article><article class="exercise exercise-like" id="DMT_paths_CYU_2571simcir"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_paths_CYU_2571simcir">
-<div class="para" id="p-3453">True or false: <span class="process-math">\(v_1e_2v_3e_5v_2e_7v_2e_1v_1\)</span> is a simple circuit in <span class="process-math">\(G\text{,}\)</span> <a href="" class="xref" data-knowl="./knowl/F_readingquestions2.html" title="Figure 10.2.19">Figure 10.2.19</a>.</div>
+<div class="para" id="p-3454">True or false: <span class="process-math">\(v_1e_2v_3e_5v_2e_7v_2e_1v_1\)</span> is a simple circuit in <span class="process-math">\(G\text{,}\)</span> <a href="" class="xref" data-knowl="./knowl/F_readingquestions2.html" title="Figure 10.2.19">Figure 10.2.19</a>.</div>
 <li data-component="answer" id="DMT_paths_CYU_2571simcir_opt_t"><p>True.</p></li>
-<li data-component="feedback" id="DMT_paths_CYU_2571simcir_opt_t"><div class="para" id="p-3454">It repeats <span class="process-math">\(v_2\text{.}\)</span>
+<li data-component="feedback" id="DMT_paths_CYU_2571simcir_opt_t"><div class="para" id="p-3455">It repeats <span class="process-math">\(v_2\text{.}\)</span>
 </div></li>
 <li data-component="answer" id="DMT_paths_CYU_2571simcir_opt_f" data-correct=""><p>False.</p></li>
-<li data-component="feedback" id="DMT_paths_CYU_2571simcir_opt_f"><div class="para" id="p-3454">It repeats <span class="process-math">\(v_2\text{.}\)</span>
+<li data-component="feedback" id="DMT_paths_CYU_2571simcir_opt_f"><div class="para" id="p-3455">It repeats <span class="process-math">\(v_2\text{.}\)</span>
 </div></li>
 </ul></div></div></article><article class="exercise exercise-like" id="DMT_paths_CYU_36simcir"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_paths_CYU_36simcir">
-<div class="para" id="p-3455">True or false <span class="process-math">\(v_4e_3v_2e_6v_4\)</span> is a simple circuit in <span class="process-math">\(G\text{,}\)</span> <a href="" class="xref" data-knowl="./knowl/F_readingquestions2.html" title="Figure 10.2.19">Figure 10.2.19</a>.</div>
+<div class="para" id="p-3456">True or false <span class="process-math">\(v_4e_3v_2e_6v_4\)</span> is a simple circuit in <span class="process-math">\(G\text{,}\)</span> <a href="" class="xref" data-knowl="./knowl/F_readingquestions2.html" title="Figure 10.2.19">Figure 10.2.19</a>.</div>
 <li data-component="answer" id="DMT_paths_CYU_36simcir_opt_t" data-correct=""><p>True.</p></li>
 <li data-component="feedback" id="DMT_paths_CYU_36simcir_opt_t">
 <li data-component="answer" id="DMT_paths_CYU_36simcir_opt_f"><p>False.</p></li>
 <li data-component="feedback" id="DMT_paths_CYU_36simcir_opt_f">
 </ul></div></div></article><article class="exercise exercise-like" id="DMT_paths_CYU_Eulercir"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_paths_CYU_Eulercir">
-<div class="para" id="p-3456">True or false: <span class="process-math">\(G\text{,}\)</span> <a href="" class="xref" data-knowl="./knowl/F_readingquestions2.html" title="Figure 10.2.19">Figure 10.2.19</a>, has an Euler circuit.</div>
+<div class="para" id="p-3457">True or false: <span class="process-math">\(G\text{,}\)</span> <a href="" class="xref" data-knowl="./knowl/F_readingquestions2.html" title="Figure 10.2.19">Figure 10.2.19</a>, has an Euler circuit.</div>
 <li data-component="answer" id="DMT_paths_CYU_Eulercir_opt_t"><p>True.</p></li>
-<li data-component="feedback" id="DMT_paths_CYU_Eulercir_opt_t"><div class="para" id="p-3457">There are vertices of odd degree.</div></li>
+<li data-component="feedback" id="DMT_paths_CYU_Eulercir_opt_t"><div class="para" id="p-3458">There are vertices of odd degree.</div></li>
 <li data-component="answer" id="DMT_paths_CYU_Eulercir_opt_f" data-correct=""><p>False.</p></li>
-<li data-component="feedback" id="DMT_paths_CYU_Eulercir_opt_f"><div class="para" id="p-3457">There are vertices of odd degree.</div></li>
+<li data-component="feedback" id="DMT_paths_CYU_Eulercir_opt_f"><div class="para" id="p-3458">There are vertices of odd degree.</div></li>
 </ul></div></div></article><article class="exercise exercise-like" id="DMT_paths_CYU_Eulerpath"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_paths_CYU_Eulerpath">
-<div class="para" id="p-3458">True or false: <span class="process-math">\(G\text{,}\)</span> <a href="" class="xref" data-knowl="./knowl/F_readingquestions2.html" title="Figure 10.2.19">Figure 10.2.19</a>, has an Euler path.</div>
+<div class="para" id="p-3459">True or false: <span class="process-math">\(G\text{,}\)</span> <a href="" class="xref" data-knowl="./knowl/F_readingquestions2.html" title="Figure 10.2.19">Figure 10.2.19</a>, has an Euler path.</div>
 <li data-component="answer" id="DMT_paths_CYU_Eulerpath_opt_t" data-correct=""><p>True.</p></li>
-<li data-component="feedback" id="DMT_paths_CYU_Eulerpath_opt_t"><div class="para" id="p-3459">A path can start at <span class="process-math">\(v_1\text{,}\)</span> end at <span class="process-math">\(v_4\text{.}\)</span>
+<li data-component="feedback" id="DMT_paths_CYU_Eulerpath_opt_t"><div class="para" id="p-3460">A path can start at <span class="process-math">\(v_1\text{,}\)</span> end at <span class="process-math">\(v_4\text{.}\)</span>
 </div></li>
 <li data-component="answer" id="DMT_paths_CYU_Eulerpath_opt_f"><p>False.</p></li>
-<li data-component="feedback" id="DMT_paths_CYU_Eulerpath_opt_f"><div class="para" id="p-3459">A path can start at <span class="process-math">\(v_1\text{,}\)</span> end at <span class="process-math">\(v_4\text{.}\)</span>
+<li data-component="feedback" id="DMT_paths_CYU_Eulerpath_opt_f"><div class="para" id="p-3460">A path can start at <span class="process-math">\(v_1\text{,}\)</span> end at <span class="process-math">\(v_4\text{.}\)</span>
 </div></li>
 </ul></div></div></article><article class="exercise exercise-like" id="DMT_paths_CYU_Hamcir"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" data-multipleanswers="false" id="DMT_paths_CYU_Hamcir">
-<div class="para" id="p-3460">True or false: <span class="process-math">\(G\text{,}\)</span> <a href="" class="xref" data-knowl="./knowl/F_readingquestions2.html" title="Figure 10.2.19">Figure 10.2.19</a>, has a Hamiltonian circuit.</div>
+<div class="para" id="p-3461">True or false: <span class="process-math">\(G\text{,}\)</span> <a href="" class="xref" data-knowl="./knowl/F_readingquestions2.html" title="Figure 10.2.19">Figure 10.2.19</a>, has a Hamiltonian circuit.</div>
 <li data-component="answer" id="DMT_paths_CYU_Hamcir_opt_t" data-correct=""><p>True.</p></li>
-<li data-component="feedback" id="DMT_paths_CYU_Hamcir_opt_t"><div class="para" id="p-3461">For example, <span class="process-math">\(e_2e_5e_6e_4\text{.}\)</span>
+<li data-component="feedback" id="DMT_paths_CYU_Hamcir_opt_t"><div class="para" id="p-3462">For example, <span class="process-math">\(e_2e_5e_6e_4\text{.}\)</span>
 </div></li>
 <li data-component="answer" id="DMT_paths_CYU_Hamcir_opt_f"><p>False.</p></li>
-<li data-component="feedback" id="DMT_paths_CYU_Hamcir_opt_f"><div class="para" id="p-3461">For example, <span class="process-math">\(e_2e_5e_6e_4\text{.}\)</span>
+<li data-component="feedback" id="DMT_paths_CYU_Hamcir_opt_f"><div class="para" id="p-3462">For example, <span class="process-math">\(e_2e_5e_6e_4\text{.}\)</span>
 </div></li>
 </ul></div></div></article></section><section class="exercises" id="exercises-39"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="exercise-600"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-3462">In the graph below, determine whether the following walks are trails, paths, closed walks, circuits, simple circuits, or just walks.</div> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/expaths1.svg" role="img" class="contained"></div> <ol class="lower-alpha">
-<li id="li-767"><div class="para" id="p-3463"><span class="process-math">\(\displaystyle v_0e_1v_1e_{10}v_5e_9v_2v_1\)</span></div></li>
-<li id="li-768"><div class="para" id="p-3464"><span class="process-math">\(\displaystyle v_4e_7v_2e_9v_5e_{10}v_1e_3v_2e_9v_5\)</span></div></li>
-<li id="li-769"><div class="para" id="p-3465"><span class="process-math">\(\displaystyle v_2\)</span></div></li>
-<li id="li-770"><div class="para" id="p-3466"><span class="process-math">\(\displaystyle v_5v_2v_3v_4v_4v_5\)</span></div></li>
-<li id="li-771"><div class="para" id="p-3467"><span class="process-math">\(\displaystyle v_2v_3v_4v_5v_2v_4v_3v_2\)</span></div></li>
-<li id="li-772"><div class="para" id="p-3468"><span class="process-math">\(\displaystyle e_5e_8e_{10}e_3\)</span></div></li>
+<div class="para" id="p-3463">In the graph below, determine whether the following walks are trails, paths, closed walks, circuits, simple circuits, or just walks.</div> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/expaths1.svg" role="img" class="contained"></div> <ol class="lower-alpha">
+<li id="li-767"><div class="para" id="p-3464"><span class="process-math">\(\displaystyle v_0e_1v_1e_{10}v_5e_9v_2v_1\)</span></div></li>
+<li id="li-768"><div class="para" id="p-3465"><span class="process-math">\(\displaystyle v_4e_7v_2e_9v_5e_{10}v_1e_3v_2e_9v_5\)</span></div></li>
+<li id="li-769"><div class="para" id="p-3466"><span class="process-math">\(\displaystyle v_2\)</span></div></li>
+<li id="li-770"><div class="para" id="p-3467"><span class="process-math">\(\displaystyle v_5v_2v_3v_4v_4v_5\)</span></div></li>
+<li id="li-771"><div class="para" id="p-3468"><span class="process-math">\(\displaystyle v_2v_3v_4v_5v_2v_4v_3v_2\)</span></div></li>
+<li id="li-772"><div class="para" id="p-3469"><span class="process-math">\(\displaystyle e_5e_8e_{10}e_3\)</span></div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-601"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-3469">Consider the following graph.</div> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/expaths2.svg" role="img" class="contained"></div> <ol class="lower-alpha">
-<li id="li-773"><div class="para" id="p-3470">How many paths are there from <span class="process-math">\(v_1\)</span> to <span class="process-math">\(v_4\text{?}\)</span>
+<div class="para" id="p-3470">Consider the following graph.</div> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/expaths2.svg" role="img" class="contained"></div> <ol class="lower-alpha">
+<li id="li-773"><div class="para" id="p-3471">How many paths are there from <span class="process-math">\(v_1\)</span> to <span class="process-math">\(v_4\text{?}\)</span>
 </div></li>
-<li id="li-774"><div class="para" id="p-3471">How many trails are there from <span class="process-math">\(v_1\)</span> to <span class="process-math">\(v_4\text{?}\)</span>
+<li id="li-774"><div class="para" id="p-3472">How many trails are there from <span class="process-math">\(v_1\)</span> to <span class="process-math">\(v_4\text{?}\)</span>
 </div></li>
-<li id="li-775"><div class="para" id="p-3472">How many walks are there from <span class="process-math">\(v_1\)</span> to <span class="process-math">\(v_4\text{?}\)</span>
+<li id="li-775"><div class="para" id="p-3473">How many walks are there from <span class="process-math">\(v_1\)</span> to <span class="process-math">\(v_4\text{?}\)</span>
 </div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-602"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-3473">Each of (a)-(c) describes a graph. In each case answer <em class="emphasis">yes, no</em> or <em class="emphasis">not necessarily</em> to whether the graph has an Euler circuit. Justify your answer.</div> <ol class="lower-alpha">
-<li id="li-776"><div class="para" id="p-3474">
+<div class="para" id="p-3474">Each of (a)-(c) describes a graph. In each case answer <em class="emphasis">yes, no</em> or <em class="emphasis">not necessarily</em> to whether the graph has an Euler circuit. Justify your answer.</div> <ol class="lower-alpha">
+<li id="li-776"><div class="para" id="p-3475">
 <span class="process-math">\(G\)</span> is a connected graph with 5 vertices of degrees 2, 2, 3, 3, and 4.</div></li>
-<li id="li-777"><div class="para" id="p-3475">
+<li id="li-777"><div class="para" id="p-3476">
 <span class="process-math">\(G\)</span> is a connected graph with 5 vertices of degrees 2, 2, 4, 4, and 6.</div></li>
-<li id="li-778"><div class="para" id="p-3476">
+<li id="li-778"><div class="para" id="p-3477">
 <span class="process-math">\(G\)</span> is a graph with 5 vertices of degrees 2, 2, 4, 4, and 6.</div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-603"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-3477">Determine whether the following graph has an Euler circuit. If it does, describe it, if it doesn’t, explain why not.</div> <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/exeulertriangles.svg" role="img" class="contained"></div></article><article class="exercise exercise-like" id="exercise-604"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-3478">Determine whether the following graph has an Euler circuit. If it does, describe it, if it doesn’t, explain why not.</div> <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/exeulerstar.svg" role="img" class="contained"></div></article><article class="exercise exercise-like" id="exercise-605"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-3479">Find a Hamiltonian circuit for the graph below.</div> <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/exhamil.svg" role="img" class="contained"></div></article><article class="exercise exercise-like" id="exercise-606"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-3480">Show that the following graph does not have a Hamiltonian circuit.</div> <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/exhamil2.svg" role="img" class="contained"></div></article><article class="exercise exercise-like" id="exercise-607"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="p-3481">Give two examples of graphs that have Euler circuits but not Hamiltonian circuits. Your graphs must have a different number of edges from each other.</div></article><article class="exercise exercise-like" id="exercise-608"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<div class="para" id="p-3482">Give two examples of graphs that have Hamiltonian circuits but not Euler circuits. Your graphs must have a different number of edges from each other.</div></article></section></section></div>
+<div class="para" id="p-3478">Determine whether the following graph has an Euler circuit. If it does, describe it, if it doesn’t, explain why not.</div> <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/exeulertriangles.svg" role="img" class="contained"></div></article><article class="exercise exercise-like" id="exercise-604"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="p-3479">Determine whether the following graph has an Euler circuit. If it does, describe it, if it doesn’t, explain why not.</div> <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/exeulerstar.svg" role="img" class="contained"></div></article><article class="exercise exercise-like" id="exercise-605"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="p-3480">Find a Hamiltonian circuit for the graph below.</div> <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/exhamil.svg" role="img" class="contained"></div></article><article class="exercise exercise-like" id="exercise-606"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="p-3481">Show that the following graph does not have a Hamiltonian circuit.</div> <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/exhamil2.svg" role="img" class="contained"></div></article><article class="exercise exercise-like" id="exercise-607"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para" id="p-3482">Give two examples of graphs that have Euler circuits but not Hamiltonian circuits. Your graphs must have a different number of edges from each other.</div></article><article class="exercise exercise-like" id="exercise-608"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="para" id="p-3483">Give two examples of graphs that have Hamiltonian circuits but not Euler circuits. Your graphs must have a different number of edges from each other.</div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="graphs10-1.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="trees10-3.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

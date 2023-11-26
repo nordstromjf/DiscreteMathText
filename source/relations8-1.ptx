@@ -447,7 +447,7 @@
         <p>
     Let <m>A=\{2, 3, 4, 5, 6, 7, 8\}</m>. Define the relation <m>S</m> on <m>A</m> by <me>x\ S\ y \iff x\mid y.</me>
 
-    Draw the directed graph for <m>R</m>.
+    Draw the directed graph for <m>S</m>.
   </p>
       </statement></exercise>
       <exercise><statement>

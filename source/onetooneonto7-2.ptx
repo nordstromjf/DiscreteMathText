@@ -377,7 +377,7 @@
       </statement></exercise>
       <exercise><statement>
         <p>
-    Define <m>g:\mathbb{R}\rightarrow\mathbb{R}</m> by <m>f(x)=4x-5</m>.
+    Define <m>g:\mathbb{R}\rightarrow\mathbb{R}</m> by <m>g(x)=4x-5</m>.
   </p>
 
   <ol marker="a">

@@ -261,7 +261,7 @@
     <condition number="180">
     <feedback>
       <p>
-        Correct, using the multiplication rule, <m>(9)(10)(2)=60</m>.
+        Correct, using the multiplication rule, <m>(9)(10)(2)=180</m>.
       </p>
     </feedback>
     </condition>
@@ -317,7 +317,7 @@
     <condition number="840">
     <feedback>
       <p>
-        Correct. <m>(7)(6)(5)(4)=720.</m>
+        Correct. <m>(7)(6)(5)(4)=840.</m>
       </p>
     </feedback>
     </condition>
@@ -459,7 +459,7 @@
 
     <li>
       <p>
-    How many license plates could begin with and <m>A</m> and end with 0?
+    How many license plates could begin with an <m>A</m> and end with 0?
   </p>
     </li>
 
