@@ -257,7 +257,7 @@
 <activity><introduction><p>In this activity we will explore the relationship between the number of edges and the number of vertices in a tree.</p></introduction>
 <task><p>Draw a forest with 10 vertices that is <em>not</em> a tree.</p></task>
 <task><p>Draw three different trees, each with 10 vertices.</p></task>
-<task><p>How many edges does each graph in (b) have? Check with other students on the class. How many edges do their graphs have?</p></task>
+<task><p>How many edges does each graph in (b) have? Check with other students in the class. How many edges do their graphs have?</p></task>
 <task><p>Draw a tree with 5 vertices and one with 12 vertices. How many edges do they have?</p></task>
 <task><p>Can you draw a tree with 5 vertices with 7 edges? What about 5 edges? What is the most number of edges you can have? What is the fewest?</p></task>
 <task><p>Form a conjecture about how many edges a tree with 10 vertices has. What about a tree with 5 vertices?</p></task></activity>
@@ -269,11 +269,11 @@
 
     <theorem xml:id="T_numberofedgesinatree"><statement><p>For any positive integer, <m>n</m>, any tree with <m>n</m> vertices has <m>n-1</m> edges.</p></statement></theorem>
 
-    <activity><introduction><p>In this activity we explore graphs with <m>n</m> edges and <m>n-1</m> edges more generally.</p></introduction>
+    <activity><introduction><p>In this activity we explore graphs with <m>n</m> vertices and <m>n-1</m> edges more generally.</p></introduction>
     <task><p>Draw a graph with 7 vertices and 6 edges that is <em>not</em> a tree. </p></task>
     <task><p>Draw a connected graph with 7 vertices and 6 edges that is <em>not</em> a tree. </p></task>
-    <task><p>Draw a graph with 7 vertices and 6 edges that is not connected and is <em>not</em> a tree.</p></task>
-    <task><p>Do you think any of the tasks in (a), (b), and (c) are impossible?</p></task>
+   <!-- <task><p>Draw a graph with 7 vertices and 6 edges that is not connected and is <em>not</em> a tree.</p></task>-->
+    <task><p>Do you think either of the tasks in (a) or (b) is impossible?</p></task>
     <task><p>Form a conjecture about graphs with <m>n</m> vertices and <m>n-1</m> edges.</p></task></activity>
 
     <!--<p>Now try drawing several graphs with 5 vertices and 4 edges. Can you draw one that is not a tree? Can you draw a connected graph with 5 vertices and 4 edges that is not tree? Can you draw a graph with 5 vertices and 4 edges that is not connected and is not a tree?</p>-->

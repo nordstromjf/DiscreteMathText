@@ -3,7 +3,7 @@
 
   <p>In this section we look at a method of counting that uses a correspondence between two sets. We can think of one set as a set of objects and the other as a set of boxes. The name of the principle comes from thinking of a set of letters and pigeonholes, which is what they used to call rows of letterboxes. Though it is also fun to think about correspondences between pigeons and pigeonholes.</p>
 
-  <theorem xml:id="T_pigeonhole"><title>Pigeonhole Principle</title><idx>pigeonhole principle</idx><statement><p>A function from one fnite set to a smaller finite set cannot be one-to-one. There must be at least two elements in the domain that have the same image in the codomain.</p></statement></theorem>
+  <theorem xml:id="T_pigeonhole"><title>Pigeonhole Principle</title><idx>pigeonhole principle</idx><statement><p>A function from one finite set to a smaller finite set cannot be one-to-one. There must be at least two elements in the domain that have the same image in the codomain.</p></statement></theorem>
 
   <p>The Pigeonhole Principle really just says that if there are more objects (pigeons) than boxes (pigeonholes) then there must be at least one box with more than one object.</p>
 
@@ -227,7 +227,7 @@
         <ol marker="a">
     <li>
       <p>
-    If 13 cards are selected from he deck, must at least 2 be of the same denomination?
+    If 13 cards are selected from the deck, must at least 2 be of the same denomination?
   </p>
     </li>
 

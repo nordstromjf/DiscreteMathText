@@ -436,7 +436,7 @@
 
     <li>
       <p>
-    How many groups of ten questions contain fat least one that requires proof?
+    How many groups of ten questions contain at least one that requires proof?
   </p>
     </li>
 
@@ -465,7 +465,7 @@
       </statement></exercise>
       <exercise><statement>
         <p>
-    A coin is tossed ten times. in each case the outcome (H or T) is recorded.
+    A coin is tossed ten times. In each case the outcome (H or T) is recorded.
   </p>
 
   <ol marker="a">

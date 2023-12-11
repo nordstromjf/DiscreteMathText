@@ -20,7 +20,7 @@
 </ul></p>
 </statement></definition>
 
-<p>If it is clear which vertices we must use, we often just use the edges, <m>e_1e_2\cdots e_n</m>, to describe paths, curcuits, walks, etc. </p>
+<p>If it is clear which vertices we must use, we often just use the edges, <m>e_1e_2\cdots e_n</m>, to describe paths, circuits, walks, etc. </p>
 
 <p>The <term>trivial walk</term><idx><h>walk</h><h>trivial</h></idx> is just the single vertex <m>v</m>. This is also the <term>trivial circuit</term><idx><h>circuit</h><h>trivial</h></idx>.</p>
 
@@ -318,7 +318,7 @@
   <ol marker="a">
     <li>
       <p>
-    <m>v_0e_1v_1e_{10}v_5e_9v_2v_1</m>
+    <m>v_0e_1v_1e_{10}v_5e_9v_2e_2v_1</m>
   </p>
     </li>
 
@@ -449,7 +449,7 @@
 \node[main node](4)[label=below:$x$][right=1.0cm of 3]{};
 \node[main node](5)[label=left:$s$][above right=.6cm and .6cm of 1]{};
 \node[main node](6)[label=below:$u$][right=1.0cm of 5]{};
-\node[main node](7)[label=right:$x$][right=1.0cm of 6]{};
+\node[main node](7)[label=right:$w$][right=1.0cm of 6]{};
 \node[main node](8)[label=above:$t$][above right=.6cm and .6cm of 5]{};
 \node[main node](9)[label=above:$v$][right=1.0cm of 8]{};
 
