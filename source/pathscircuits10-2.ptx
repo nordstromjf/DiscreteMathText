@@ -6,7 +6,7 @@
   
   <figure xml:id="F_Kbridge">
   <caption>Konigsberg bridge problem, <m>G</m></caption>
-  <image source="konigsbergbridge.png" width="70%" xml:id="konigsbergbridge"><description><p>Image on the left is a diagram of the land (labeled <m>A, B, C,, D</m>), river, and bridges of the city of Konigsberg. The image on the right is the graph version consiting of vertices (<m>A, B, C, D</m>) for the land and edges for the bridges.</p></description></image>
+  <image source="konigsbergbridge.png" width="70%" xml:id="konigsbergbridge"><description><p>Image on the left is a diagram of the land (labeled <m>A, B, C, D</m>), river, and bridges of the city of Konigsberg. The image on the right is the graph version consisting of vertices (<m>A, B, C, D</m>) for the land and edges for the bridges.</p></description></image>
 </figure>
 
 <definition xml:id="D_pathscircuits"><statement><p>For each of the following terms we have a list of vertices and edges, <m>v_0e_1v_1e_2\cdots e_nv_v</m>,  that represent a way to traverse through the graph. So, for example, <m>v_0</m> must be an endpoint of <m>e_1</m>, <m>v_1</m> must be an endpoint of <m>e_1</m> and <m>e_2</m>, etc. For each of the following terms we indicate whether we can repeat vertices and/or edges in the list.
