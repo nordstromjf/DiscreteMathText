@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-green                   *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Proof by Induction: Summation Formula.</span>
+</h2>
+<div class="para">Prove <span class="process-math">\(\sum_{i=1}^{n}i=\frac{n(n+1)}{2}\)</span> for <span class="process-math">\(n\geq 1\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_sumofninduction-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical">
+<div class="para">Base Step: Let <span class="process-math">\(n=1\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{gather*}
+\sum_{i=1}^{n}i=\sum_{i=1}^{1}i=1\\
+\frac{n(n+1)}{2}=\frac{1(1+1)}{2}=1
+\end{gather*}
+</div>
+<div class="para">Since the left hand side of the equation equals the right hand side, <span class="process-math">\(\sum_{i=1}^{n}i=\frac{n(n+1)}{2}\)</span> for <span class="process-math">\(n=1\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_sumofninduction-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Induction Step:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_sumofninduction-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Assume <span class="process-math">\(\sum_{i=1}^{k}i=\frac{k(k+1)}{2}\)</span> for some <span class="process-math">\(k\geq 1\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_sumofninduction-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Show <span class="process-math">\(\sum_{i=1}^{k+1}i=\frac{(k+1)(k+2)}{2}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_sumofninduction-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Proof of induction step:</div>
+<div class="displaymath process-math">
+\begin{align*}
+\sum_{i=1}^{k}i&amp;=\frac{k(k+1)}{2}\ \  \textrm{ by the induction assumption}\\
+\sum_{i=1}^{k+1}i&amp;= \sum_{i=1}^{k}i+(k+1)\ \  \textrm{ add the } k+1 \textrm{ term of the sum}\\
+&amp;=\frac{k(k+1)}{2}+(k+1)\\
+&amp;=\frac{k(k+1)}{2}+\frac{2(k+1)}{2}\\
+&amp;=\frac{k(k+1)+2(k+1)}{2}\ \ \textrm{ factor out }(k+1) \textrm{ on the top}\\
+&amp;=\frac{(k+1)(k+2)}{2}.
+\end{align*}
+</div>
+<div class="para">Thus, <span class="process-math">\(\sum_{i=1}^{k+1}i=\frac{(k+1)(k+2)}{2}\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_sumofninduction-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Hence, by induction <span class="process-math">\(\sum_{i=1}^{n}i=\frac{n(n+1)}{2}\)</span> for <span class="process-math">\(n\geq 1\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_sumofninduction-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 5.2.1.1"><a tabindex="-1" href="#E_sumofninduction-3" title="Copy heading and permalink for Proof 5.2.1.1" aria-label="Copy heading and permalink for Proof 5.2.1.1">🔗</a></div>
+</article></details><div class="autopermalink" aria-hidden="true" data-description="Example 5.2.1: Proof by Induction: Summation Formula"><a tabindex="-1" href="#E_sumofninduction" title="Copy heading and permalink for Example 5.2.1: Proof by Induction: Summation Formula" aria-label="Copy heading and permalink for Example 5.2.1: Proof by Induction: Summation Formula">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="induction5-2.html#E_sumofninduction">In Context</a></span>
+</body>
+</html>
