@@ -6,7 +6,7 @@
 <assemblage xml:id="B_strongind"><idx>strong induction</idx><idx><h>induction</h><h>strong</h></idx>
   <title>Strong Induction</title>
   <p>Let <m>P(n)</m> be a property defined for integers <m>n</m>. If 
-  <ol marker="1">
+  <ol marker="1.">
   <li><m>P(1), \ldots P(a)</m> are true for some <m>a</m>, and</li>
   <li>if <m>P(i)</m> is true for all <m>1\leq i\leq k</m>, then <m>P(k+1)</m> is true;</li>
  </ol>
@@ -20,7 +20,7 @@
 <assemblage xml:id="B_structurestronind">
   <title>Structure of a Strong Induction Proof</title><idx><h>strong induction</h><h>proof structure</h></idx>
 
-  <p><ol marker="1">
+  <p><ol marker="1.">
   <li><title>Base Step</title> Assume <m>P(1)</m> is true. </li>
   <li><title>Induction Step</title> Assume <m>P(i)</m> is true for all <m>1\leq i\leq k</m>. Show <m>P(k+1)</m> is true.</li>
  </ol></p>
@@ -48,7 +48,7 @@
 
 <p><q>Proof</q> of induction step:</p>
 <p>Case 1: <m>k+1</m> is prime. Now, <m>k+1\mid k+1</m> and hence <m>k+1</m> is divisible by a prime.</p>
-<p>Case 2: <m>k+1</m> is not prime. This is were we get stuck, since although we know <m>k</m> is divisible by a prime, that doesn't tell us anything about <m>k+1</m>. In fact, we showed that any prime dividing <m>k</m> <em>cannot</em> divide <m>k+1</m>.</p>
+<p>Case 2: <m>k+1</m> is not prime. This is where we get stuck, since although we know <m>k</m> is divisible by a prime, that doesn't tell us anything about <m>k+1</m>. In fact, we showed that any prime dividing <m>k</m> <em>cannot</em> divide <m>k+1</m>.</p>
 
 <p>Thus, regular induction is not going to work for this proof.
 </p>
@@ -81,18 +81,18 @@
 
 <p>In regular induction, we use that we know the statement holds for <m>k</m> to get that it holds for <m>k+1</m>. Strong induction is useful when we need to use some smaller case (not just <m>k</m>) to get the statement for <m>k+1</m>.</p>
 
-<activity><introduction><p> Let <m>a_0, a_1, a_2,  \ldots</m> be the sequence defined as
-<me>a_0=1, a_1=2, a_2=3</me>
-<me>a_k=a_{k-1}+a_{k-2}+a_{k-3}, k\geq3.</me></p></introduction>
-<task><p>Write out the first 6 terms of the sequence.</p></task>
-<task><p>Convince yourself that for the first six terms of the sequence, <m>a_n\leq 3^n</m>.</p></task>
-<task><p>Now try to write a standard induction proof to prove <m>a_n\leq 3^n</m> for all <m>n\geq 0</m>. Does anything go wrong?</p></task>
-<task><p>The proof requires strong induction. For the base step, how many previous terms do you need before you can first compute <m>a_k</m> using the formula provided in defining the sequence? You need to show the base step for each of these initial terms since the induction won't apply to them. Check the base step for each of these terms.</p></task>
+<activity label="strongind-seqsum3"><introduction><p> Let <m>a_0, a_1, a_2,  \ldots</m> be the sequence defined as
+<md>a_0=1, a_1=2, a_2=3</md>
+<md>a_k=a_{k-1}+a_{k-2}+a_{k-3}, k\geq3.</md></p></introduction>
+<task label="strongind-seqsum3-6term"><statement><p>Write out the first 6 terms of the sequence.</p></statement><response/></task>
+<task label="strongind-seqsum3-checkbase"><statement><p>Convince yourself that for the first six terms of the sequence, <m>a_n\leq 3^n</m>.</p></statement><response/></task>
+<task label="strongind-seqsum3-regind"><statement><p>Now try to write a standard induction proof to prove <m>a_n\leq 3^n</m> for all <m>n\geq 0</m>. Does anything go wrong?</p></statement><response/></task>
+<task label="strongind-seqsum3-pfbase"><statement><p>The proof requires strong induction. For the base step, how many previous terms do you need before you can first compute <m>a_k</m> using the formula provided in defining the sequence? You need to show the base step for each of these initial terms since the induction won't apply to them. Check the base step for each of these terms.</p></statement><response/></task>
 
-<task><p>Write the <q>assume</q> and <q>show</q> statements for the inductive step. Make sure your <q>assume</q> statement is in the form for strong induction.</p></task>
-<task><p>Now prove the inductive step.</p></task></activity>
+<task label="strongind-seqsum3-assumestr"><statement><p>Write the <q>assume</q> and <q>show</q> statements for the inductive step. Make sure your <q>assume</q> statement is in the form for strong induction.</p></statement><response/></task>
+<task label="strongind-seqsum3-pfstrind"><statement><p>Now prove the inductive step.</p></statement><response/></task></activity>
 
-<p>For the remainder of the section, we are going to switch gears a bit, a prove the existence part of the Quotient-Remainder Theorem. Before we do that we need the Well-Ordering Principle, which we will state without a proof.</p>
+<p>For the remainder of the section, we are going to switch gears a bit and prove the existence part of the Quotient-Remainder Theorem. Before we do that we need the Well-Ordering Principle, which we will state without a proof.</p>
 
 
   <theorem xml:id="T_wellordering"><title>Well-Ordering Principle</title><idx>Well-Ordering Principle</idx><p>Let <m>S</m> be a set containing one or more integers, all of which are greater than some fixed integer. Then <m>S</m> has a least element.</p></theorem>
@@ -107,7 +107,7 @@
 
 <example xml:id="E_wop"><title>Well-Ordering Principle</title>
 <p>First note that the Well-Ordering Principle does not apply if the set is not integers. For example,
-<me>\{1/n : n\in \mathbb{Z}, n\geq 1\}.</me>
+<md>\{1/n : n\in \mathbb{Z}, n\geq 1\}.</md>
 This is not a subset of the integers and does not have a least element, even though every element is greater than 0.</p>
 
 <p>Now consider <m>S=\{2k+1 : k\geq 0\}</m>. Check each of the conditions.
@@ -119,23 +119,23 @@ This is not a subset of the integers and does not have a least element, even tho
 
 </example>
 
-<activity><introduction><p>Determine if the conditions of the Well-Ordering Principle apply to each of the following sets.</p></introduction>
-<task><p>Let <m>k\in \mathbb{Z}</m>,  <m>S=\{2k: k\geq 3\}</m>.</p></task>
+<activity label="strongind-WOP1"><introduction><p>Determine if the conditions of the Well-Ordering Principle apply to each of the following sets. Explain your answer.</p></introduction>
+<task label="strongind-WOP1-even"><statement><p>Let <m>k\in \mathbb{Z}</m>,  <m>S=\{2k: k\geq 3\}</m>.</p></statement><response/></task>
 
-<task><p>Let <m>k, j\in \mathbb{Z}</m>, <m>S=\{2k+3j: 2k+3j\geq 0\}</m>.</p></task>
-<task><p> <m>S=\{r\in \mathbb{Q}: r\geq 0\}?</m></p></task>
+<task label="strongind-WOP1-lincom"><statement><p>Let <m>k, j\in \mathbb{Z}</m>, <m>S=\{2k+3j: 2k+3j\geq 0\}</m>.</p></statement><response/></task>
+<task label="strongind-WOP1-rational"><statement><p> <m>S=\{r\in \mathbb{Q}: r\geq 0\}?</m></p></statement><response/></task>
 </activity>
 
-<activity><introduction><p>Give three elements of each set, then determine if the conditions of the Well-Ordering Principle apply to each of the following sets.</p></introduction>
-<task><p><m>S=\{7-3k: 7-3k\geq 0, k\in \mathbb{Z}\}.</m></p></task>
+<activity label="strongind-WOP2"><introduction><p>Give three elements of each set, then determine if the conditions of the Well-Ordering Principle apply to each of the following sets. Explain your answer.</p></introduction>
+<task label="strongind-WOP2-QRpos"><statement><p><m>S=\{7-3k: 7-3k\geq 0, k\in \mathbb{Z}\}.</m></p></statement><response/></task>
 
-<task><p><m>S=\{-8-3k: -8-3k\geq 0, k\in \mathbb{Z}\}.</m></p></task>
+<task label="strongind-WOP2-QRneg"><statement><p><m>S=\{-8-3k: -8-3k\geq 0, k\in \mathbb{Z}\}.</m></p></statement><response/></task>
 
-<task><p>Let <m>n, d\in \mathbb{Z}</m>, and <m>d>0</m>, <m>S=\{n-dk: n-dk\geq 0, k\in \mathbb{Z}\}.</m></p></task>
+<task label="strongind-WOP2-QRgen"><statement><p>Let <m>n, d\in \mathbb{Z}</m>, and <m>d>0</m>, <m>S=\{n-dk: n-dk\geq 0, k\in \mathbb{Z}\}.</m></p></statement><response/></task>
 </activity>
 
 <p>We now prove the existence part of the Quotient-Remainder Theorem.</p>
-<p><xref ref="T_divisionalgorthm"/>: Given any <m>n, d\in \mathbb{Z}</m> with <m>d>0</m>, there exist <m>q, r</m> such that <m>n=dq+r</m> and <m>0\leq r&lt; d</m>.<idx>Quotient-Remainder Theorem</idx></p>
+<p><xref ref="T_divisionalgorthm"/>: Given any <m>n, d\in \mathbb{Z}</m> with <m>d>0</m>, there exist <m>q, r</m> such that <md>n=dq+r</md> and <m>0\leq r&lt; d</m>.<idx>Quotient-Remainder Theorem</idx></p>
 
 <proof><p>Let <m>S=\{n-dk : n-dk\geq 0, k\in\mathbb{Z}\}</m>. Show <m>S</m> satisfies the Well-Ordering Principle. Clearly <m>S</m> is a set of integers, and by definition, every element is greater than or equal to 0. So we just need to show that <m>S\neq\emptyset</m>.</p>
 <p>If <m>n\geq 0</m>, we can let <m>k=0</m>. Then <m>n-dk=n\geq 0</m>. Hence <m>n\in S</m>.</p>
@@ -164,19 +164,19 @@ But then <m>n-d(q+1)\in S</m> and <m>n-d(q+1)&lt; n-dq=r</m>. This contradicts t
       <answer><p>False, the elements aren't all integers.</p></answer></exercise>
 
       <exercise label="DMT_strongind_CYU_3nwop"><statement correct="yes"><p>True or false: <m>S=\{3n : n\in \mathbb{Z}, n\geq 0\}</m> satisfies the conditions of the Well-Ordering Principle.</p></statement>
-      <feedback><p>Check that the set satifies the three conditions.</p></feedback>
+      <feedback><p>Check that the set satisfies the three conditions.</p></feedback>
       <answer><p>True.</p></answer></exercise>
 
       <exercise label="DMT_strongind_CYU_negnwop"><statement correct="no"><p>True or false: <m>S=\{-n : n\in \mathbb{Z}, n\geq 0\}</m> satisfies the conditions of the Well-Ordering Principle.</p></statement>
-      <feedback><p>The elements aren't all greater that some integer.</p></feedback>
-      <answer><p>False, the elements aren't all greater that some integer.</p></answer></exercise>
+      <feedback><p>The elements aren't all greater than some integer.</p></feedback>
+      <answer><p>False, the elements aren't all greater than some integer.</p></answer></exercise>
 
       <exercise label="DMT_strongind_CYU_3npmkwop"><statement correct="yes"><p>True or false: <m>S=\{3n-k : n,k\in \mathbb{Z}, 3n-k\geq 0\}</m> satisfies the conditions of the Well-Ordering Principle.</p></statement>
-      <feedback><p>Check that the set satifies the three conditions.</p></feedback>
+      <feedback><p>Check that the set satisfies the three conditions.</p></feedback>
       <answer><p>True.</p></answer></exercise>
 
       <exercise label="DMT_strongind_CYU_alt1wop"><statement correct="yes"><p>True or false: <m>S=\{(-1)^n : n\in \mathbb{Z}\}</m> satisfies the conditions of the Well-Ordering Principle.</p></statement>
-      <feedback><p>Check that the set satifies the three conditions.</p></feedback>
+      <feedback><p>Check that the set satisfies the three conditions.</p></feedback>
       <answer><p>True.</p></answer></exercise>
 
 
@@ -187,14 +187,14 @@ But then <m>n-d(q+1)\in S</m> and <m>n-d(q+1)&lt; n-dq=r</m>. This contradicts t
 
     <exercises>
       <exercise><statement><p>
-    Let <m>a_1, a_2, a_3,  \ldots</m> be the sequence defined as <me>a_1=1, a_2=3,</me> <me>a_k=a_{k-2}+2a_{k-1}, k\geq3.</me>
+    Let <m>a_1, a_2, a_3,  \ldots</m> be the sequence defined as <md>a_1=1, a_2=3,</md> <md>a_k=a_{k-2}+2a_{k-1}, k\geq3.</md>
   </p>
 
   <p>
     Prove that <m>a_n</m> is odd for all integers <m>n \geq 1</m>.
   </p></statement></exercise>
   <exercise><statement><p>
-    Let <m>b_1, b_2, b_3,  \ldots</m> be the sequence defined as <me>b_1=4, b_2=12,</me> <me>b_k=b_{k-2}+b_{k-1}, k\geq3.</me>
+    Let <m>b_1, b_2, b_3,  \ldots</m> be the sequence defined as <md>b_1=4, b_2=12,</md> <md>b_k=b_{k-2}+b_{k-1}, k\geq3.</md>
   </p>
 
   <p>
@@ -202,7 +202,7 @@ But then <m>n-d(q+1)\in S</m> and <m>n-d(q+1)&lt; n-dq=r</m>. This contradicts t
   </p></statement></exercise>
   <exercise><statement>
     <p>
-    Let <m>c_1, c_2, c_3,  \ldots</m> be the sequence defined as <me>c_1=3, c_2=5,</me> <me>c_k=3c_{k-1}-2c_{k-2}, k\geq3.</me>
+    Let <m>c_1, c_2, c_3,  \ldots</m> be the sequence defined as <md>c_1=3, c_2=5,</md> <md>c_k=3c_{k-1}-2c_{k-2}, k\geq3.</md>
   </p>
 
   <p>
@@ -211,7 +211,7 @@ But then <m>n-d(q+1)\in S</m> and <m>n-d(q+1)&lt; n-dq=r</m>. This contradicts t
   </statement></exercise>
   <exercise><statement>
     <p>
-    Let <m>a_1, a_2, a_3,  \ldots</m> be the sequence defined as <me>a_1=1, a_2=3,</me> <me>a_k=a_{k-1}+a_{k-2}, k\geq3.</me>
+    Let <m>a_1, a_2, a_3,  \ldots</m> be the sequence defined as <md>a_1=1, a_2=3,</md> <md>a_k=a_{k-1}+a_{k-2}, k\geq3.</md>
   </p>
 
   <p>

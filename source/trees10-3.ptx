@@ -64,7 +64,7 @@
 \end{tikzpicture}
 
 
-</latex-image></image>
+</latex-image><description><p>Three graphs, the first has 13 vertices, is connected, and has no cycles. The second is a single line with 4 vertices. The third is a single vertex.</p></description></image>
 </figure>
 
 <figure xml:id="F_nottrees">
@@ -121,7 +121,7 @@
 \end{tikzpicture}
 
 
-</latex-image></image>
+</latex-image><description><p>Three graphs, the first has 13 vertices, is connected, and has one cycles. The second is a single line with 4 vertices, but also an additional parallel edge between the middle two vertices. The third is a single vertex with loop.</p></description></image>
 </figure>
 </example>
 
@@ -183,7 +183,7 @@
 \end{tikzpicture}
 
 
-</latex-image></image>
+</latex-image><description><p>A graph with no cycles. The top vertex is labeled <m>r</m>. There are three edges from <m>r</m> to the next level, with one vertex labels <m>p</m>. There are two edges from each two of those vertices, including <m>p</m>, to the next level, which has 4 vertices. The vertices below <m>p</m> are labeled <m>v</m> and <m>s</m>. The next level has one edge from an unlabeled vertex, two edges from <m>v</m>, and two from <m>s</m>. The vertices under <m>v</m> are labeled <m>c_1</m> and <m>c_2</m>. There is an edge from <m>c_1</m> to vertex <m>d</m>.</p></description></image>
 </figure>
 <p>In the example, let <m>r</m> be the root of the tree.</p>
 <p>Then <m>v</m> is at level 2, <m>d</m> is at level 4, and <m>r</m> is at level 0.</p>
@@ -245,22 +245,22 @@
 
 
 
-</latex-image></image>
+</latex-image><description><p>There is a top vertex which branches into two edges and vertices. Each of those branches into two edges/vertices. Each of those branch into two, and each of those branch into two.</p></description></image>
 </figure>
 
 
 
 
 </example>
-<activity><statement><p>Draw the full binary tree of height 4. How many leaves does it have?</p></statement></activity>
+<activity label="trees-binary4" attachment="yes"><statement><p>Draw the full binary tree of height 4. How many leaves does it have?</p></statement><response/></activity>
 
-<activity><introduction><p>In this activity we will explore the relationship between the number of edges and the number of vertices in a tree.</p></introduction>
-<task><p>Draw a forest with 10 vertices that is <em>not</em> a tree.</p></task>
-<task><p>Draw three different trees, each with 10 vertices.</p></task>
-<task><p>How many edges does each graph in (b) have? Check with other students in the class. How many edges do their graphs have?</p></task>
-<task><p>Draw a tree with 5 vertices and one with 12 vertices. How many edges do they have?</p></task>
-<task><p>Can you draw a tree with 5 vertices with 7 edges? What about 5 edges? What is the most number of edges you can have? What is the fewest?</p></task>
-<task><p>Form a conjecture about how many edges a tree with 10 vertices has. What about a tree with 5 vertices?</p></task></activity>
+<activity label="trees-treeedges"><introduction><p>In this activity we will explore the relationship between the number of edges and the number of vertices in a tree.</p></introduction>
+<task label="trees-treeedges-10forest" attachment="yes"><statement><p>Draw a forest with 10 vertices that is <em>not</em> a tree.</p></statement><response/></task>
+<task label="trees-treeedges-10trees" attachment="yes"><statement><p>Draw three different trees, each with 10 vertices.</p></statement><response/></task>
+<task label="trees-treeedges-numedges"><statement><p>How many edges does each graph in (b) have? Check with other students in the class. How many edges do their graphs have?</p></statement><response/></task>
+<task label="trees-treeedges-5and12trees" attachment="yes"><statement><p>Draw a tree with 5 vertices and one with 12 vertices. How many edges do they have?</p></statement><response/></task>
+<task label="trees-treeedges-5vert7edge" attachment="yes"><statement><p>Can you draw a tree with 5 vertices with 7 edges? What about 5 edges? What is the most number of edges you can have? What is the fewest?</p></statement><response/></task>
+<task label="trees-treeedges-edgeconject"><statement><p>Form a conjecture about how many edges a tree with 10 vertices has. What about a tree with 5 vertices?</p></statement><response/></task></activity>
 
     <!--full binary tree of heighth 3-->
    <!-- <p>Try drawing several examples of trees with 5 vertices. How many edges do you have? Can you draw a tree with 5 vertices with 7 edges? What about 5 edges? What is the most number of edges you can have? What is the fewest?</p>-->
@@ -269,12 +269,12 @@
 
     <theorem xml:id="T_numberofedgesinatree"><statement><p>For any positive integer, <m>n</m>, any tree with <m>n</m> vertices has <m>n-1</m> edges.</p></statement></theorem>
 
-    <activity><introduction><p>In this activity we explore graphs with <m>n</m> vertices and <m>n-1</m> edges more generally.</p></introduction>
-    <task><p>Draw a graph with 7 vertices and 6 edges that is <em>not</em> a tree. </p></task>
-    <task><p>Draw a connected graph with 7 vertices and 6 edges that is <em>not</em> a tree. </p></task>
+    <activity label="trees-vertandedges"><introduction><p>In this activity we explore graphs with <m>n</m> vertices and <m>n-1</m> edges more generally.</p></introduction>
+    <task label="trees-vertandedges-7v6e" attachment="yes"><statement><p>Draw a graph with 7 vertices and 6 edges that is <em>not</em> a tree. </p></statement><response/></task>
+    <task label="trees-vertandedges-con7v6e" attachment="yes"><statement><p>Draw a connected graph with 7 vertices and 6 edges that is <em>not</em> a tree. </p></statement><response/></task>
    <!-- <task><p>Draw a graph with 7 vertices and 6 edges that is not connected and is <em>not</em> a tree.</p></task>-->
-    <task><p>Do you think either of the tasks in (a) or (b) is impossible?</p></task>
-    <task><p>Form a conjecture about graphs with <m>n</m> vertices and <m>n-1</m> edges.</p></task></activity>
+    <task label="trees-vertandedges-possible"><statement><p>Do you think either of the tasks in (a) or (b) is impossible?</p></statement><response/></task>
+    <task label="trees-vertandedges-conject"><statement><p>Form a conjecture about graphs with <m>n</m> vertices and <m>n-1</m> edges.</p></statement><response/></task></activity>
 
     <!--<p>Now try drawing several graphs with 5 vertices and 4 edges. Can you draw one that is not a tree? Can you draw a connected graph with 5 vertices and 4 edges that is not tree? Can you draw a graph with 5 vertices and 4 edges that is not connected and is not a tree?</p>-->
 
@@ -311,14 +311,14 @@
           <statement><p>All values of <m>n\geq 1</m>.</p></statement>
         </choice>
       </choices>
-      <answer>Just <m>n=1, 2</m>.</answer></exercise>
+      <answer><p>Just <m>n=1, 2</m>.</p></answer></exercise>
 
       <exercise label="DMT_trees_CYU_multipleparent"><statement correct="no"><p>True or false: In a rooted tree, a vertex can have more than one parent.</p></statement>
-      <answer>False.</answer></exercise>
+      <answer><p>False.</p></answer></exercise>
 
       <exercise label="DMT_trees_CYU_0parent"><statement correct="yes"><p>True or false: In a rooted tree, a vertex can have 0 parents.</p></statement>
       <feedback><p>The root has 0 parents.</p></feedback>
-      <answer>True, the root has 0 parents.</answer></exercise>
+      <answer><p>True, the root has 0 parents.</p></answer></exercise>
 
       <exercise label="DMT_trees_CYU_childrenr"><statement><p>In the rooted tree in <xref ref="F_rootedtree"/>, how many children does <m>r</m> have? <var /></p></statement>
       <setup>
@@ -340,7 +340,7 @@
     </condition>
     </var>
   </setup>
-      <answer>3</answer></exercise>
+      <answer><p><m>3</m></p></answer></exercise>
 
       <exercise label="DMT_trees_CYU_descendp"><statement><p>In the rooted tree in <xref ref="F_rootedtree"/>, how many descendants does <m>p</m> have? <var /></p></statement>
       <setup>
@@ -362,7 +362,7 @@
     </condition>
     </var>
   </setup>
-      <answer>7</answer></exercise>
+      <answer><p><m>7</m></p></answer></exercise>
 
       <exercise label="DMT_trees_CYU_levelp"><statement><p>In the rooted tree in <xref ref="F_rootedtree"/>, what is the level of <m>p</m>? <var /></p></statement>
       <setup>
@@ -384,7 +384,7 @@
     </condition>
     </var>
   </setup>
-      <answer>1</answer></exercise>
+      <answer><p><m>1</m></p></answer></exercise>
 
       <exercise label="DMT_trees_CYU_leavesfbt4"><statement><p>How many leaves does the full binary tree of height 4 have? <var /></p></statement>
       <setup>
@@ -406,28 +406,28 @@
     </condition>
     </var>
   </setup>
-      <answer>16</answer></exercise>
+      <answer><p><m>16</m></p></answer></exercise>
 
       <exercise label="DMT_trees_CYU_tree7v9e"><statement correct="no"><p>True or false: There exists a tree with 7 vertices and 9 edges.</p></statement>
-      <answer>False.</answer></exercise>
+      <answer><p>False.</p></answer></exercise>
 
       <exercise label="DMT_trees_CYU_tree7v5e"><statement correct="no"><p>True or false: There exists a tree with 7 vertices and 5 edges.</p></statement>
-      <answer>False.</answer></exercise>
+      <answer><p>False.</p></answer></exercise>
       
       <exercise label="DMT_trees_CYU_forest7v5e"><statement correct="yes"><p>True or false: There exists a forest with 7 vertices and 5 edges.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       <exercise label="DMT_trees_CYU_8v7etree"><statement correct="no"><p>True or false: If a graph has 8 vertices and 7 edges it must be a tree.</p></statement>
-      <answer>False.</answer></exercise>
+      <answer><p>False.</p></answer></exercise>
 
       <exercise label="DMT_trees_CYU_conn8v7etree"><statement correct="yes"><p>True or false: If a connected graph has 8 vertices and 7 edges it must be a tree.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       <exercise label="DMT_trees_CYU_tree8v2l"><statement correct="yes"><p>True or false: There exists a tree with 8 vertices and 2 leaves.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       <exercise label="DMT_trees_CYU_tree8v7l"><statement correct="yes"><p>True or false: There exists a tree with 8 vertices and 7 leaves.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
 
     </reading-questions>
@@ -449,7 +449,7 @@
     For each of the following, either draw a graph with the given properties or explain why no such graph exists.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     Tree, nine vertices, nine edges.

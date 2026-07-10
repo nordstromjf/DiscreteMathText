@@ -1,7 +1,7 @@
 <section xml:id="sequences5-1">
   <title>Sequences</title><idx>sequence</idx><idx>sum</idx><idx>product</idx>
 
-  <p>In this section we look at the mathematical concept of sequences. Although many sequences themselves are straightfoward, such as <m>2, 4, 6, 8, \ldots</m>, we need to introduce notation and terminology for working with general sequences.</p>
+  <p>In this section we look at the mathematical concept of sequences. Although many sequences themselves are straightforward, such as <m>2, 4, 6, 8, \ldots</m>, we need to introduce notation and terminology for working with general sequences.</p>
 
   <definition xml:id="D_sequence"><statement><p>A <term>sequence</term><idx>sequence</idx> is an ordered list.</p></statement></definition>
 
@@ -18,7 +18,7 @@
   <example xml:id="E_generalsequences"><title>Explicitly Defined Sequences</title><p>
     We can define a sequence by giving the general term.</p>
     <p>Let <m>a_k=2^k, k\geq 0</m>. Give the first five terms of the sequence.</p>
-    <answer>1, 2, 4, 8, 16</answer>
+    <answer><p>1, 2, 4, 8, 16</p></answer>
 
     <p>Let <m>a_k=2^k, k\geq 0</m>. Give the <m>k+1</m> term of the sequence.</p>
     <answer><p><m>a_{k+1}=2^{k+1}</m></p></answer>
@@ -27,28 +27,28 @@
     <answer><p>1/2, 1/3, 1/4, 1/5, 1/6</p></answer>
 
     <p>Let <m>a_k=\frac{1}{k+1}, k\geq 1</m>. Give the <m>k+1</m> term of the sequence.</p>
-    <answer><m>a_{k+1}=\frac{1}{k+2}</m></answer>
+    <answer><p><m>a_{k+1}=\frac{1}{k+2}</m></p></answer>
 
   </example>
 
-  <activity><introduction><p>Consider the sequence <m>a_k=(-1)^k</m> for <m>k\geq 0</m>.</p></introduction>
-<task><p>Write the first 5 terms of the sequence.</p></task>
-<task><p>What is the initial term? </p></task>
+  <activity label="sequence-alt"><introduction><p>Consider the sequence <m>a_k=(-1)^k</m> for <m>k\geq 0</m>.</p></introduction>
+<task label="sequence-alt-five"><statement><p>Write the first 5 terms of the sequence.</p></statement><response/></task>
+<task label="sequence-alt-initial"><statement><p>What is the initial term? </p></statement><response/></task>
 </activity>
 
-<activity><introduction><p>Consider the sequence <m>a_k=\frac{1}{k-1}</m> for <m>k\geq 3</m>.</p></introduction>
-<task><p>Write the first 5 terms of the sequence.</p></task>
-<task><p>What is the initial term? </p></task>
+<activity label="sequence-frac"><introduction><p>Consider the sequence <m>a_k=\frac{1}{k-1}</m> for <m>k\geq 3</m>.</p></introduction>
+<task label="sequence-frac-five"><statement><p>Write the first 5 terms of the sequence.</p></statement><response/></task>
+<task label="sequence-frac-initial"><statement><p>What is the initial term? </p></statement><response/></task>
 </activity>
 
-<activity><statement><p>Consider the sequence <m>0, 1, -2, 3, -4, 5,  \ldots</m>. Find a general formula for the <m>k</m>th term, <m>a_k</m>.</p></statement>
+<activity label="sequence-general"><statement><p>Consider the sequence <m>0, 1, -2, 3, -4, 5,  \ldots</m>. Find a general formula for the <m>k</m>th term, <m>a_k</m>.</p></statement><response/>
 </activity>
 
   <p>We are going to look at many examples where we want to add terms in a sequence. The following notation will be helpful when working with sums.</p>
 
 <assemblage xml:id="B_sumnotation">
   <title>Summation Notation</title><idx>summation notation</idx>
-  <p>We can write a sum using sigma or summation notation: <me>a_1+a_2+\cdots +a_n=\sum_{k=1}^{n}a_k.</me>
+  <p>We can write a sum using sigma or summation notation: <md>a_1+a_2+\cdots +a_n=\sum_{k=1}^{n}a_k.</md>
 We read <m>\sum_{k=1}^{n}a_k</m><notation><usage><m>\sum_{k=1}^{n}a_k</m></usage><description>the sum of <m>a_k</m> from <m>k=1</m> to <m>n</m></description></notation> as <q>the sum of <m>a_k</m> from <m>k=1</m> to <m>n</m>.</q></p>
 </assemblage>
 
@@ -71,22 +71,22 @@ We read <m>\sum_{k=1}^{n}a_k</m><notation><usage><m>\sum_{k=1}^{n}a_k</m></usage
 
   <p>Note, we can write the sum of only the <m>m^{th}</m> term, <m>\sum_{k=m}^{m}a_k=a_m</m>.</p>
 
-  <activity><statement>Consider the sum <m>\sum_{k=1}^{5}(2k-1)</m>. Write out the summation and find the sum.</statement></activity>
+  <activity label="sequence-sumodd"><statement>Consider the sum <m>\sum_{k=1}^{5}(2k-1)</m>. Write out the summation and find the sum.</statement><response/></activity>
 
-  <activity><introduction><p>Consider the sum <m>\sum_{k=1}^{n}\frac{1}{k}</m>. </p></introduction>
-    <task><p>Write out the summation.</p></task>
-    <task><p>Write out the summation for <m>\sum_{k=1}^{n+1}\frac{1}{k}</m>. How do (a) and (b) differ?</p></task>
-    <task><p>Write out the summation for <m>\sum_{k=0}^{n}\frac{1}{k+1}</m>. Is this the same as either of the previous sums?</p></task>
+  <activity label="sequence-sumfrac"><introduction><p>Consider the sum <m>\sum_{k=1}^{n}\frac{1}{k}</m>. </p></introduction>
+    <task label="sequence-sumfrac-sum1n"><statement><p>Write out the summation.</p></statement><response/></task>
+    <task label="sequence-sumfrac-sumnplus1"><statement><p>Write out the summation for <m>\sum_{k=1}^{n+1}\frac{1}{k}</m>. How do (a) and (b) differ?</p></statement><response/></task>
+    <task label="sequence-sumfrac-sum0n"><statement><p>Write out the summation for <m>\sum_{k=0}^{n}\frac{1}{k+1}</m>. Is this the same as either of the previous sums?</p></statement><response/></task>
   </activity>
 
-  <activity><introduction><p>Consider the sum <m>\sum_{k=1}^{n}\frac{1}{k(k+1)}</m>. </p></introduction>
-    <task><p>Write out the summation.</p></task>
-    <task><p>Write out the summation for <m>\sum_{k=1}^{n+1}\frac{1}{k(k+1)}</m>. How do (a) and (b) differ?</p></task>
+  <activity label="sequence-sumfracprod"><introduction><p>Consider the sum <m>\sum_{k=1}^{n}\frac{1}{k(k+1)}</m>. </p></introduction>
+    <task label="sequence-sumfracprod-sum1n"><statement><p>Write out the summation.</p></statement><response/></task>
+    <task label="sequence-sumfracprod-sumnplus1"><statement><p>Write out the summation for <m>\sum_{k=1}^{n+1}\frac{1}{k(k+1)}</m>. How do (a) and (b) differ?</p></statement><response/></task>
 
   </activity>
 
-  <p>Just as we can add several terms of a sequence, the following notation alllows us to multiply several terms of a sequence using <term>product notation</term>:<idx>product notation</idx>
-  <me>a_1\cdot a_2\cdot a_3\cdots a_n=\prod_{k=1}^{n}a_k.</me><notation><usage><m>\prod_{k=1}^{n}a_k</m></usage><description></description>the product of <m>a_k</m> from <m>k=1</m> to <m>n</m></notation></p>
+  <p>Just as we can add several terms of a sequence, the following notation allows us to multiply several terms of a sequence using <term>product notation</term>:<idx>product notation</idx>
+  <md>a_1\cdot a_2\cdot a_3\cdots a_n=\prod_{k=1}^{n}a_k.</md><notation><usage><m>\prod_{k=1}^{n}a_k</m></usage><description></description>the product of <m>a_k</m> from <m>k=1</m> to <m>n</m></notation></p>
 
   <example xml:id="E_prodnotation"><title>Product Notation</title>
     
@@ -98,9 +98,9 @@ We read <m>\sum_{k=1}^{n}a_k</m><notation><usage><m>\sum_{k=1}^{n}a_k</m></usage
 
   </example>
 
-  <activity><introduction><p>Write out the following products.</p></introduction>
-    <task><p><m>\prod_{k=1}^{5}(2k-1)</m></p></task>
-    <task><p><m>\prod_{k=1}^{n+1}(2k)</m></p></task>
+  <activity label="sequence-prod"><introduction><p>Write out the following products.</p></introduction>
+    <task label="sequence-prod-a"><statement><p><m>\prod_{k=1}^{5}(2k-1)</m></p></statement><response/></task>
+    <task label="sequence-prod-b"><statement><p><m>\prod_{k=1}^{n+1}(2k)</m></p></statement><response/></task>
 
   </activity>
 
@@ -110,7 +110,7 @@ We read <m>\sum_{k=1}^{n}a_k</m><notation><usage><m>\sum_{k=1}^{n}a_k</m></usage
 
 <assemblage xml:id="B_propsumprod">
   <title>Properties of Sums and Products</title>
-<p><ol marker="1">
+<p><ol marker="1.">
   <li><m>\sum_{k=m}^{n}a_k+\sum_{k=m}^{n}b_k=\sum_{k=m}^{n}(a_k+b_k)</m></li>
   <li><m>c\sum_{k=m}^{n}a_k=\sum_{k=m}^{n}(ca_k)</m></li>
   <li><m>\biggl(\prod_{k=m}^{n}a_k\biggr)\biggl(\prod_{k=m}^{n}b_k\biggr)=\prod_{k=m}^{n}(a_k\cdot b_k)</m></li>
@@ -119,13 +119,13 @@ We read <m>\sum_{k=1}^{n}a_k</m><notation><usage><m>\sum_{k=1}^{n}a_k</m></usage
   </p>
 </assemblage>
 
-  <activity><statement><p>Prove <m>\sum_{k=1}^{n}a_k + \sum_{k=1}^{n}b_k=\sum_{k=1}^{n}(a_k+b_k)</m>.</p></statement><hint><p>Try writing out the sum rather than using summation notation.</p></hint></activity>
+  <activity label="sequence-pfsum"><statement><p>Prove <m>\sum_{k=1}^{n}a_k + \sum_{k=1}^{n}b_k=\sum_{k=1}^{n}(a_k+b_k)</m>.</p></statement><response/><hint><p>Try writing out the sum rather than using summation notation.</p></hint></activity>
 
 
 <definition xml:id="D_choose"><statement><p>The number of subsets of size <m>r</m> that can be chosen from a set of <m>n</m> elements is <m>n</m> <term>choose</term><idx>choose</idx> <m>r</m>. Notation <m>\binom{n}{r}</m><notation><usage><m>\binom{n}{r}</m></usage><description><m>n</m> choose <m>r</m></description></notation>, read <q><m>n</m> choose <m>r</m>.</q></p></statement></definition>
 
 <p>We can calculate the number of sets of <m>r</m> objects chosen from <m>n</m> objects with the following formula:
-<me>\binom{n}{r}=\frac{n!}{r!(n-r)!}.</me></p>
+<md>\binom{n}{r}=\frac{n!}{r!(n-r)!}.</md></p>
 
 <example xml:id="E_nchooser"><title>Finding <m>n</m> choose <m>r</m></title>
     
@@ -143,10 +143,10 @@ We read <m>\sum_{k=1}^{n}a_k</m><notation><usage><m>\sum_{k=1}^{n}a_k</m></usage
 
   </example>
 
-  <activity><statement><p>Find <m>{6 \choose 3}</m> and <m>{6 \choose 0}</m>.</p></statement></activity>
+  <activity label="sequence-6binom"><statement><p>Find <m>{6 \choose 3}</m> and <m>{6 \choose 0}</m>.</p></statement><response/></activity>
 
 <p>When we get to mathematical induction in the next section, it will be important that we can work with summations when we want to add <q>the <m>n+1</m> term</q> to a summation. In particular, the following observation is useful:
-<me>\biggl(\sum_{k=1}^{n}a_{k}\biggr)+a_{n+1}=\sum_{k=1}^{n+1}a_k.</me>
+<md>\biggl(\sum_{k=1}^{n}a_{k}\biggr)+a_{n+1}=\sum_{k=1}^{n+1}a_k.</md>
 
 </p>
 
@@ -166,39 +166,39 @@ We read <m>\sum_{k=1}^{n}a_k</m><notation><usage><m>\sum_{k=1}^{n}a_k</m></usage
       
       <exercise label="DMT_sequence_CYU_termskp1dkp3"><statement><p>Write the terms of <m>\frac{k+1}{k+3}, 0\leq k\leq 4</m>.</p></statement>
       <response />
-      <answer><m>\frac{1}{3}, \frac{2}{4}, \frac{3}{5}, \frac{4}{6}, \frac{5}{7}</m></answer></exercise>
+      <answer><p><m>\frac{1}{3}, \frac{2}{4}, \frac{3}{5}, \frac{4}{6}, \frac{5}{7}</m></p></answer></exercise>
 
       <exercise label="DMT_sequence_CYU_termsaltd2k"><statement><p>Write the terms of <m>\frac{(-1)^k}{2k}, 1\leq k\leq 6</m>.</p></statement>
       <response />
-      <answer><m>\frac{-1}{2}, \frac{1}{4}, \frac{-1}{6}, \frac{1}{8}, \frac{-1}{10}, \frac{1}{12}</m></answer></exercise>
+      <answer><p><m>\frac{-1}{2}, \frac{1}{4}, \frac{-1}{6}, \frac{1}{8}, \frac{-1}{10}, \frac{1}{12}</m></p></answer></exercise>
 
       <exercise label="DMT_sequence_CYU_termsaltkd2"><statement><p>Write the terms of <m>\frac{(-1)^kk}{2}, 1\leq k\leq 4</m>.</p></statement>
       <response />
-      <answer><m>\frac{-1}{2}, \frac{2}{2}, \frac{-3}{2}, \frac{4}{2}</m></answer></exercise>
+      <answer><p><m>\frac{-1}{2}, \frac{2}{2}, \frac{-3}{2}, \frac{4}{2}</m></p></answer></exercise>
 
       <exercise label="DMT_sequence_CYU_sum42km1"><statement><p>Write out the summation notation as a sum of terms: <m>\sum_{k=1}^4 2k-1</m></p></statement>
       <response />
-      <answer><m>1+3+5+7</m></answer></exercise>
+      <answer><p><m>1+3+5+7</m></p></answer></exercise>
 
       <exercise label="DMT_sequence_CYU_sumnk3"><statement><p>Write out the summation notation as a sum of terms: <m>\sum_{k=1}^n k^3</m></p></statement>
       <response />
-      <answer><m>1^3+2^3+3^3+\cdots+n^3</m></answer></exercise>
+      <answer><p><m>1^3+2^3+3^3+\cdots+n^3</m></p></answer></exercise>
 
       <exercise label="DMT_sequence_CYU_sumnp1k3"><statement><p>Write out the summation notation as a sum of terms: <m>\sum_{k=1}^{n+1} k^3</m></p></statement>
       <response />
-      <answer><m>1^3+2^3+3^3+\cdots+(n+1)^3</m></answer></exercise>
+      <answer><p><m>1^3+2^3+3^3+\cdots+(n+1)^3</m></p></answer></exercise>
 
       <exercise label="DMT_sequence_CYU_sum4altdk"><statement><p>Write out the summation notation as a sum of terms: <m>\sum_{k=1}^4 \frac{(-1)^k}{k}</m></p></statement>
       <response />
-      <answer><m>(-1/1)+(1/2)+(-1/3)+(1/4)</m></answer></exercise>
+      <answer><p><m>(-1/1)+(1/2)+(-1/3)+(1/4)</m></p></answer></exercise>
 
       <exercise label="DMT_sequence_CYU_sumnaltdk"><statement><p>Write out the summation notation as a sum of terms: <m>\sum_{k=1}^n \frac{(-1)^k}{k}</m></p></statement>
       <response />
-      <answer><m>(-1/1)+(1/2)+(-1/3)\cdots+((-1)^n/n)</m></answer></exercise>
+      <answer><p><m>(-1/1)+(1/2)+(-1/3)\cdots+((-1)^n/n)</m></p></answer></exercise>
 
       <exercise label="DMT_sequence_CYU_sumnp1altdk"><statement><p>Write out the summation notation as a sum of terms: <m>\sum_{k=1}^{n+1} \frac{(-1)^k}{k}</m></p></statement>
       <response />
-      <answer><m>(-1/1)+(1/2)+(-1/3)\cdots+((-1)^{n+1}/(n+1))</m></answer></exercise>
+      <answer><p><m>(-1/1)+(1/2)+(-1/3)\cdots+((-1)^{n+1}/(n+1))</m></p></answer></exercise>
 
     
 
@@ -206,7 +206,7 @@ We read <m>\sum_{k=1}^{n}a_k</m><notation><usage><m>\sum_{k=1}^{n}a_k</m></usage
 
     <exercises>
       <exercise><statement><p>Find an explicit formula for the following sequences with the given initial terms.</p>
-      <ol marker="a">
+      <ol marker="a.">
         <li>
       <p>
     <m>\frac{1}{3}, \frac{4}{9},\frac{9}{27}, \frac{16}{81},\frac{25}{243}, \frac{36}{729}</m>
@@ -221,7 +221,7 @@ We read <m>\sum_{k=1}^{n}a_k</m><notation><usage><m>\sum_{k=1}^{n}a_k</m></usage
      
     </statement></exercise>
      <exercise><statement><p>Compute the given product or sum.</p>
-     <ol marker="a">
+     <ol marker="a.">
       <li>
       <p>
    <m>\prod_{k=2}^{4}{k^2}</m>
@@ -241,7 +241,7 @@ We read <m>\sum_{k=1}^{n}a_k</m><notation><usage><m>\sum_{k=1}^{n}a_k</m></usage
     </li></ol>
       </statement></exercise>
       <exercise><statement><p>Write out the sum in expanded form.</p>
-      <ol marker="a">
+      <ol marker="a.">
         <li><p><m>\sum_{j=1}^{n}{j(j+1)}</m></p></li>
       <li><p><m>\sum_{i=1}^{k+1}{i(i!)}</m></p></li>
     </ol></statement></exercise>
@@ -252,26 +252,26 @@ We read <m>\sum_{k=1}^{n}a_k</m><notation><usage><m>\sum_{k=1}^{n}a_k</m></usage
       </statement></exercise>
       <exercise><statement>
         <p>
-    Write using product notation: <me>(2^2-1)\cdot(3^2-1)\cdot(4^2-1).</me>
+    Write using product notation: <md>(2^2-1)\cdot(3^2-1)\cdot(4^2-1).</md>
   </p>
       </statement></exercise>
       <exercise><statement>
         <p>
-    Write using summation notation: <me>1^3+2^3+3^3+\cdots+n^3.</me>
+    Write using summation notation: <md>1^3+2^3+3^3+\cdots+n^3.</md>
   </p>
       </statement></exercise>
       <exercise><statement>
         <p>
-    Transform the sum by making the change of variable <m>j=i-1</m>: <me>\sum_{i=1}^{n+1}\frac{(i-1)^2}{i\cdot n}.</me>
+    Transform the sum by making the change of variable <m>j=i-1</m>: <md>\sum_{i=1}^{n+1}\frac{(i-1)^2}{i\cdot n}.</md>
   </p>
       </statement></exercise>
       <exercise><statement><p>Simplify.</p>
-      <ol marker="a">
+      <ol marker="a.">
         <li><m>\frac{((n+1)!)^2}{(n!)^2}</m></li>
       <li><m>\frac{n!}{(n-k+1)!}</m></li>
     </ol></statement></exercise>
       <exercise><statement><p>Compute.</p>
-      <ol marker="a">
+      <ol marker="a.">
         <li><m>{3 \choose 0}</m></li>
         <li><m>{n \choose n-1}</m></li>
         <li><m>{n+1 \choose n-1}</m></li>

@@ -5,64 +5,38 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-green                   *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Negating Quantified Statements</title>
-<meta name="Keywords" content="Authored in PreTeXt">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
-<meta property="book:title" content="Discrete Mathematics">
-<meta property="book:author" content="Jennifer Firkins Nordstrom">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
-  },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
-  },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
-  },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
-  },
-  startup: {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  },
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
-<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+<meta name="twitter:title" content="Discrete Mathematics: An Active Approach to Mathematical Reasoning">
+<meta property="og:title" content="Discrete Mathematics: An Active Approach to Mathematical Reasoning">
+<meta property="book:title" content="Discrete Mathematics: An Active Approach to Mathematical Reasoning">
+<meta name="twitter:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
+<meta property="og:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.43"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -84,133 +58,53 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.2.8';
+eBookConfig.runestone_version = '8.1.9';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.2.8/prefix-runtime.ec55fa20f167401c.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.2.8/prefix-347.8328b60515045466.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/7.2.8/prefix-runestone.aeac7cf9ad5c07ef.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.2.8/prefix-347.f9add1ca35d5ad93.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/7.2.8/prefix-runestone.f64dcc3632d7a0c3.css">
+<script src="_static/prefix-runtime.846a0d6fafaa99e0.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.bbcfc02849ebc023.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body id="DiscreteMathText" class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics:</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
 <p class="byline">Jennifer Firkins Nordstrom</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="DiscreteMath-14-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
-<div id="searchresultsplaceholder" style="display: none">
-<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
-</h2>
-<div id="searchempty"><span>No results.</span></div>
-<ol id="searchresults"></ol>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
-</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
-<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden avatar">
-<li data-val="You!" tabindex="-1">
-<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
-<li data-val="😺" tabindex="-1">
-<span id="the😺" class="avatarcheck"></span>😺</li>
-<li data-val="👤" tabindex="-1">
-<span id="the👤" class="avatarcheck"></span>👤</li>
-<li data-val="👽" tabindex="-1">
-<span id="the👽" class="avatarcheck"></span>👽</li>
-<li data-val="🐶" tabindex="-1">
-<span id="the🐶" class="avatarcheck"></span>🐶</li>
-<li data-val="🐼" tabindex="-1">
-<span id="the🐼" class="avatarcheck"></span>🐼</li>
-<li data-val="🌈" tabindex="-1">
-<span id="the🌈" class="avatarcheck"></span>🌈</li>
-</ol>
-</li>
-<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden fontfamily">
-<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
-<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
-</li>
-<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
-<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
-</li>
-</ol>
-</li>
-<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden fonts">
-<li>Size</li>
-<li><span id="thesize">12</span></li>
-<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
-<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
-<li>Width</li>
-<li><span id="thewdth">100</span></li>
-<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
-<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
-<li>Weight</li>
-<li><span id="thewght">400</span></li>
-<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
-<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
-<li>Letter spacing</li>
-<li>
-<span id="thelspace">0</span><span class="byunits">/200</span>
-</li>
-<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
-<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
-<li>Word spacing</li>
-<li>
-<span id="thewspace">0</span><span class="byunits">/50</span>
-</li>
-<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
-<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
-<li>Line Spacing</li>
-<li>
-<span id="theheight">135</span><span class="byunits">/100</span>
-</li>
-<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
-<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
-</ol>
-</li>
-<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden atmosphere">
-<li data-val="default" tabindex="-1">
-<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
-<li data-val="pastel" tabindex="-1">
-<span id="thepastel" class="atmospherecheck"></span>pastel</li>
-<li data-val="darktwilight" tabindex="-1">
-<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
-<li data-val="dark" tabindex="-1">
-<span id="thedark" class="atmospherecheck"></span>dark</li>
-<li data-val="darkmidnight" tabindex="-1">
-<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
-</ol>
-</li>
-<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden ruler">
-<li data-val="none" tabindex="-1">
-<span id="thenone" class="rulercheck">✔️</span>none</li>
-<li data-val="underline" tabindex="-1">
-<span id="theunderline" class="rulercheck"></span>underline</li>
-<li data-val="lunderline" tabindex="-1">
-<span id="thelunderline" class="rulercheck"></span>L-underline</li>
-<li data-val="greybar" tabindex="-1">
-<span id="thegreybar" class="rulercheck"></span>grey bar</li>
-<li data-val="lightbox" tabindex="-1">
-<span id="thelightbox" class="rulercheck"></span>light box</li>
-<li data-val="sunrise" tabindex="-1">
-<span id="thesunrise" class="rulercheck"></span>sunrise</li>
-<li data-val="sunriseunderline" tabindex="-1">
-<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
-<li class="moveQ">Motion by:</li>
-<li data-val="mouse" tabindex="-1">
-<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
-<li data-val="arrow" tabindex="-1">
-<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
-<li data-val="eye" tabindex="-1">
-<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
-</ol>
-</li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="quantifiersI3-1.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter3.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="multiplequant3-3.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
-<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
-</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \newcommand{\MyTikzmark}[2]{
+<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="quantifiersI3-1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter3.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="multiplequant3-3.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \newcommand{\MyTikzmark}[2]{
      \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
 \newcommand{\DrawVLine}[3][]{
   \begin{tikzpicture}[overlay,remember picture]
@@ -229,613 +123,945 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
-<li>
-<div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li><div class="toc-item"><a href="preface-1.html" class="internal"><span class="title">Preface</span></a></div></li>
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Preface</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="chapter1.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to Mathematical Language</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="variables1-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Variables and Statements</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="variables1-1.html#reading-questions-1" class="internal"><span class="codenumber">1.1</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="variables1-1.html#exercises-1" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter1.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to Mathematical Language</span></a></div>
+<ul id="ptx-toc-group-chapter1" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="variables1-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Variables and Statements</span></a></div>
+<ul id="ptx-toc-group-variables1-1" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="variables1-1.html#variables1-1-11" class="internal"><span class="codenumber">1.1</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="variables1-1.html#variables1-1-12" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="lang_sets1-2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Introduction to Sets</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="lang_sets1-2.html#reading-questions-2" class="internal"><span class="codenumber">1.2</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="lang_sets1-2.html#exercises-2" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="lang_sets1-2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Introduction to Sets</span></a></div>
+<ul id="ptx-toc-group-lang_sets1-2" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="lang_sets1-2.html#lang_sets1-2-26" class="internal"><span class="codenumber">1.2</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="lang_sets1-2.html#lang_sets1-2-27" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="lang_relations1-3.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Introduction to Relations and Functions</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="lang_relations1-3.html#reading-questions-3" class="internal"><span class="codenumber">1.3</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="lang_relations1-3.html#exercises-3" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="chapter2.html" class="internal"><span class="codenumber">2</span> <span class="title">Logic</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="logical_form2-1.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Truth-Tables and Logical Equivalence</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="logical_form2-1.html#reading-questions-4" class="internal"><span class="codenumber">2.1</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="logical_form2-1.html#exercises-4" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="conditional2-2.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Conditional Statements</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="conditional2-2.html#reading-questions-5" class="internal"><span class="codenumber">2.2</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="conditional2-2.html#exercises-5" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="arguments2-3.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Valid and Invalid Arguments</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="arguments2-3.html#reading-questions-6" class="internal"><span class="codenumber">2.3</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="arguments2-3.html#exercises-6" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="lang_relations1-3.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Introduction to Relations and Functions</span></a></div>
+<ul id="ptx-toc-group-lang_relations1-3" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="lang_relations1-3.html#lang_relations1-3-22" class="internal"><span class="codenumber">1.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="lang_relations1-3.html#lang_relations1-3-23" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="chapter3.html" class="internal"><span class="codenumber">3</span> <span class="title">Logic with Quantifiers</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="quantifiersI3-1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Quantifiers</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="quantifiersI3-1.html#reading-questions-7" class="internal"><span class="codenumber">3.1</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="quantifiersI3-1.html#exercises-7" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter2.html" class="internal"><span class="codenumber">2</span> <span class="title">Logic</span></a></div>
+<ul id="ptx-toc-group-chapter2" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="logical_form2-1.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Truth-Tables and Logical Equivalence</span></a></div>
+<ul id="ptx-toc-group-logical_form2-1" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="logical_form2-1.html#logical_form2-1-36" class="internal"><span class="codenumber">2.1</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="logical_form2-1.html#logical_form2-1-37" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="active">
-<div class="toc-item"><a href="negquant3-2.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Negating Quantified Statements</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="negquant3-2.html#reading-questions-8" class="internal"><span class="codenumber">3.2</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="negquant3-2.html#exercises-8" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="conditional2-2.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Conditional Statements</span></a></div>
+<ul id="ptx-toc-group-conditional2-2" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="conditional2-2.html#conditional2-2-30" class="internal"><span class="codenumber">2.2</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="conditional2-2.html#conditional2-2-31" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="multiplequant3-3.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Statements with Multiple Quantifiers</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="multiplequant3-3.html#reading-questions-9" class="internal"><span class="codenumber">3.3</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="multiplequant3-3.html#exercises-9" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="argumentsquant3-4.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Arguments with Quantifiers</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="argumentsquant3-4.html#reading-questions-10" class="internal"><span class="codenumber">3.4</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="argumentsquant3-4.html#exercises-10" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="arguments2-3.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Valid and Invalid Arguments</span></a></div>
+<ul id="ptx-toc-group-arguments2-3" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="arguments2-3.html#arguments2-3-24" class="internal"><span class="codenumber">2.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="arguments2-3.html#arguments2-3-25" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="chapter4.html" class="internal"><span class="codenumber">4</span> <span class="title">Proof Techniques</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="directproof4-1.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Direct Proof and Counterexample</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="directproof4-1.html#reading-questions-11" class="internal"><span class="codenumber">4.1</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="directproof4-1.html#exercises-11" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="chapter3.html" class="internal"><span class="codenumber">3</span> <span class="title">Logic with Quantifiers</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-chapter3">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="quantifiersI3-1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Quantifiers</span></a></div>
+<ul id="ptx-toc-group-quantifiersI3-1" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="quantifiersI3-1.html#quantifiersI3-1-32" class="internal"><span class="codenumber">3.1</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="quantifiersI3-1.html#quantifiersI3-1-33" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="rationals4-2.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Rational Numbers</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="rationals4-2.html#reading-questions-12" class="internal"><span class="codenumber">4.2</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="rationals4-2.html#exercises-12" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="negquant3-2.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Negating Quantified Statements</span></a></div>
+<ul class="structural toc-item-list active" id="ptx-toc-group-negquant3-2">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="negquant3-2.html#negquant3-2-23" class="internal"><span class="codenumber">3.2</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="negquant3-2.html#negquant3-2-24" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="divisibility4-3.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Divisibility</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="divisibility4-3.html#reading-questions-13" class="internal"><span class="codenumber">4.3</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="divisibility4-3.html#exercises-13" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="multiplequant3-3.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Statements with Multiple Quantifiers</span></a></div>
+<ul id="ptx-toc-group-multiplequant3-3" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="multiplequant3-3.html#multiplequant3-3-16" class="internal"><span class="codenumber">3.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="multiplequant3-3.html#multiplequant3-3-17" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="cases4-4.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Proof by Cases</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="cases4-4.html#reading-questions-14" class="internal"><span class="codenumber">4.4</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="cases4-4.html#exercises-14" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="contradiction4-5.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Proof by Contradiction and Contrapositive</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="contradiction4-5.html#reading-questions-15" class="internal"><span class="codenumber">4.5</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="contradiction4-5.html#exercises-15" class="internal"><span class="codenumber">4.5</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="morecontradiction4-6.html" class="internal"><span class="codenumber">4.6</span> <span class="title">More Proof by Contradiction and Contrapositive</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="morecontradiction4-6.html#reading-questions-16" class="internal"><span class="codenumber">4.6</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="morecontradiction4-6.html#exercises-16" class="internal"><span class="codenumber">4.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="argumentsquant3-4.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Arguments with Quantifiers</span></a></div>
+<ul id="ptx-toc-group-argumentsquant3-4" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="argumentsquant3-4.html#argumentsquant3-4-26" class="internal"><span class="codenumber">3.4</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="argumentsquant3-4.html#argumentsquant3-4-27" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="chapter5.html" class="internal"><span class="codenumber">5</span> <span class="title">Sequences and Mathematical Induction</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="sequences5-1.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Sequences</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="sequences5-1.html#reading-questions-17" class="internal"><span class="codenumber">5.1</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="sequences5-1.html#exercises-17" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter4.html" class="internal"><span class="codenumber">4</span> <span class="title">Proof Techniques</span></a></div>
+<ul id="ptx-toc-group-chapter4" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="directproof4-1.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Direct Proof and Counterexample</span></a></div>
+<ul id="ptx-toc-group-directproof4-1" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="directproof4-1.html#directproof4-1-40" class="internal"><span class="codenumber">4.1</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="directproof4-1.html#directproof4-1-41" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="induction5-2.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Mathematical Induction</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="induction5-2.html#reading-questions-18" class="internal"><span class="codenumber">5.2</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="induction5-2.html#exercises-18" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="rationals4-2.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Rational Numbers</span></a></div>
+<ul id="ptx-toc-group-rationals4-2" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="rationals4-2.html#rationals4-2-20" class="internal"><span class="codenumber">4.2</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="rationals4-2.html#rationals4-2-21" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="moreinduction5-3.html" class="internal"><span class="codenumber">5.3</span> <span class="title">More Mathematical Induction</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="moreinduction5-3.html#reading-questions-19" class="internal"><span class="codenumber">5.3</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="moreinduction5-3.html#exercises-19" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="divisibility4-3.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Divisibility</span></a></div>
+<ul id="ptx-toc-group-divisibility4-3" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="divisibility4-3.html#divisibility4-3-33" class="internal"><span class="codenumber">4.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="divisibility4-3.html#divisibility4-3-34" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="stronginduction5-4.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Strong Induction</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="stronginduction5-4.html#reading-questions-20" class="internal"><span class="codenumber">5.4</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="stronginduction5-4.html#exercises-20" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="cases4-4.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Proof by Cases</span></a></div>
+<ul id="ptx-toc-group-cases4-4" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="cases4-4.html#cases4-4-28" class="internal"><span class="codenumber">4.4</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cases4-4.html#cases4-4-29" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="recursion5-5.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Defining Sequences Recursively</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="recursion5-5.html#reading-questions-21" class="internal"><span class="codenumber">5.5</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="recursion5-5.html#exercises-21" class="internal"><span class="codenumber">5.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="contradiction4-5.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Proof by Contradiction and Contrapositive</span></a></div>
+<ul id="ptx-toc-group-contradiction4-5" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="contradiction4-5.html#contradiction4-5-18" class="internal"><span class="codenumber">4.5</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="contradiction4-5.html#contradiction4-5-19" class="internal"><span class="codenumber">4.5</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="iteration5-6.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Solving Recurrence Relations by Iteration</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="iteration5-6.html#reading-questions-22" class="internal"><span class="codenumber">5.6</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="iteration5-6.html#exercises-22" class="internal"><span class="codenumber">5.6</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="chapter6.html" class="internal"><span class="codenumber">6</span> <span class="title">Set Theory</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="sets6-1.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Set Theory</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="sets6-1.html#reading-questions-23" class="internal"><span class="codenumber">6.1</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="sets6-1.html#exercises-23" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="propertiesofsets6-2.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Properties of Sets</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="propertiesofsets6-2.html#reading-questions-24" class="internal"><span class="codenumber">6.2</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="propertiesofsets6-2.html#exercises-24" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="algebraicsets6-3.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Algebraic Proofs and Counterexamples</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="algebraicsets6-3.html#reading-questions-25" class="internal"><span class="codenumber">6.3</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="algebraicsets6-3.html#exercises-25" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="morecontradiction4-6.html" class="internal"><span class="codenumber">4.6</span> <span class="title">More Proof by Contradiction and Contrapositive</span></a></div>
+<ul id="ptx-toc-group-morecontradiction4-6" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="morecontradiction4-6.html#morecontradiction4-6-18" class="internal"><span class="codenumber">4.6</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="morecontradiction4-6.html#morecontradiction4-6-19" class="internal"><span class="codenumber">4.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="chapter7.html" class="internal"><span class="codenumber">7</span> <span class="title">Functions</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="functions7-1.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Functions</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="functions7-1.html#reading-questions-26" class="internal"><span class="codenumber">7.1</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="functions7-1.html#exercises-26" class="internal"><span class="codenumber">7.1</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter5.html" class="internal"><span class="codenumber">5</span> <span class="title">Sequences and Mathematical Induction</span></a></div>
+<ul id="ptx-toc-group-chapter5" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sequences5-1.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Sequences</span></a></div>
+<ul id="ptx-toc-group-sequences5-1" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sequences5-1.html#sequences5-1-35" class="internal"><span class="codenumber">5.1</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sequences5-1.html#sequences5-1-36" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="onetooneonto7-2.html" class="internal"><span class="codenumber">7.2</span> <span class="title">One-to-One, Onto, Inverse Functions</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="onetooneonto7-2.html#reading-questions-27" class="internal"><span class="codenumber">7.2</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="onetooneonto7-2.html#exercises-27" class="internal"><span class="codenumber">7.2</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="induction5-2.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Mathematical Induction</span></a></div>
+<ul id="ptx-toc-group-induction5-2" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="induction5-2.html#induction5-2-24" class="internal"><span class="codenumber">5.2</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="induction5-2.html#induction5-2-25" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="moreinduction5-3.html" class="internal"><span class="codenumber">5.3</span> <span class="title">More Mathematical Induction</span></a></div>
+<ul id="ptx-toc-group-moreinduction5-3" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="moreinduction5-3.html#moreinduction5-3-14" class="internal"><span class="codenumber">5.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="moreinduction5-3.html#moreinduction5-3-15" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="chapter8.html" class="internal"><span class="codenumber">8</span> <span class="title">Relations</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="relations8-1.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Relations on Sets</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="relations8-1.html#reading-questions-28" class="internal"><span class="codenumber">8.1</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="relations8-1.html#exercises-28" class="internal"><span class="codenumber">8.1</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="stronginduction5-4.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Strong Induction</span></a></div>
+<ul id="ptx-toc-group-stronginduction5-4" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="stronginduction5-4.html#stronginduction5-4-26" class="internal"><span class="codenumber">5.4</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="stronginduction5-4.html#stronginduction5-4-27" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="rstrelations8-2.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Reflexive, Symmetric, Transitive Properties</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="rstrelations8-2.html#reading-questions-29" class="internal"><span class="codenumber">8.2</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="rstrelations8-2.html#exercises-29" class="internal"><span class="codenumber">8.2</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="recursion5-5.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Defining Sequences Recursively</span></a></div>
+<ul id="ptx-toc-group-recursion5-5" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="recursion5-5.html#recursion5-5-22" class="internal"><span class="codenumber">5.5</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="recursion5-5.html#recursion5-5-23" class="internal"><span class="codenumber">5.5</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="equivalencerelations8-3.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Equivalence Relations</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="equivalencerelations8-3.html#reading-questions-30" class="internal"><span class="codenumber">8.3</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="equivalencerelations8-3.html#exercises-30" class="internal"><span class="codenumber">8.3</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="modarith8-4.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Modular Arithmetic</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="modarith8-4.html#reading-questions-31" class="internal"><span class="codenumber">8.4</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="modarith8-4.html#exercises-31" class="internal"><span class="codenumber">8.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="iteration5-6.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Solving Recurrence Relations by Iteration</span></a></div>
+<ul id="ptx-toc-group-iteration5-6" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="iteration5-6.html#iteration5-6-19" class="internal"><span class="codenumber">5.6</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="iteration5-6.html#iteration5-6-20" class="internal"><span class="codenumber">5.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="chapter9.html" class="internal"><span class="codenumber">9</span> <span class="title">Probability and Counting</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="probability9-1.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Probability</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="probability9-1.html#reading-questions-32" class="internal"><span class="codenumber">9.1</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="probability9-1.html#exercises-32" class="internal"><span class="codenumber">9.1</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter6.html" class="internal"><span class="codenumber">6</span> <span class="title">Set Theory</span></a></div>
+<ul id="ptx-toc-group-chapter6" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sets6-1.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Set Theory</span></a></div>
+<ul id="ptx-toc-group-sets6-1" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sets6-1.html#sets6-1-39" class="internal"><span class="codenumber">6.1</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sets6-1.html#sets6-1-40" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="multrule9-2.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Multiplication Rule</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="multrule9-2.html#reading-questions-33" class="internal"><span class="codenumber">9.2</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="multrule9-2.html#exercises-33" class="internal"><span class="codenumber">9.2</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="propertiesofsets6-2.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Properties of Sets</span></a></div>
+<ul id="ptx-toc-group-propertiesofsets6-2" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="propertiesofsets6-2.html#propertiesofsets6-2-27" class="internal"><span class="codenumber">6.2</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="propertiesofsets6-2.html#propertiesofsets6-2-28" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="additionrule9-3.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Addition Rule</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="additionrule9-3.html#reading-questions-34" class="internal"><span class="codenumber">9.3</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="additionrule9-3.html#exercises-34" class="internal"><span class="codenumber">9.3</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="pigeonhole9-4.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Pigeonhole Principle</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="pigeonhole9-4.html#reading-questions-35" class="internal"><span class="codenumber">9.4</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="pigeonhole9-4.html#exercises-35" class="internal"><span class="codenumber">9.4</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="combinations9-5.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Combinations</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="combinations9-5.html#reading-questions-36" class="internal"><span class="codenumber">9.5</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="combinations9-5.html#exercises-36" class="internal"><span class="codenumber">9.5</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="binomial9-6.html" class="internal"><span class="codenumber">9.6</span> <span class="title">Binomial Theorem</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="binomial9-6.html#reading-questions-37" class="internal"><span class="codenumber">9.6</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="binomial9-6.html#exercises-37" class="internal"><span class="codenumber">9.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="algebraicsets6-3.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Algebraic Proofs and Counterexamples</span></a></div>
+<ul id="ptx-toc-group-algebraicsets6-3" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="algebraicsets6-3.html#algebraicsets6-3-21" class="internal"><span class="codenumber">6.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="algebraicsets6-3.html#algebraicsets6-3-22" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="chapter10.html" class="internal"><span class="codenumber">10</span> <span class="title">Graph Theory</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="graphs10-1.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphs</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="graphs10-1.html#reading-questions-38" class="internal"><span class="codenumber">10.1</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="graphs10-1.html#exercises-38" class="internal"><span class="codenumber">10.1</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter7.html" class="internal"><span class="codenumber">7</span> <span class="title">Functions</span></a></div>
+<ul id="ptx-toc-group-chapter7" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="functions7-1.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Functions</span></a></div>
+<ul id="ptx-toc-group-functions7-1" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="functions7-1.html#functions7-1-23" class="internal"><span class="codenumber">7.1</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="functions7-1.html#functions7-1-24" class="internal"><span class="codenumber">7.1</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="pathscircuits10-2.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Paths and Circuits</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="pathscircuits10-2.html#reading-questions-39" class="internal"><span class="codenumber">10.2</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="pathscircuits10-2.html#exercises-39" class="internal"><span class="codenumber">10.2</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="trees10-3.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Trees</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="trees10-3.html#reading-questions-40" class="internal"><span class="codenumber">10.3</span> <span class="title">Check Your Understanding</span></a></div></li>
-<li><div class="toc-item"><a href="trees10-3.html#exercises-40" class="internal"><span class="codenumber">10.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="onetooneonto7-2.html" class="internal"><span class="codenumber">7.2</span> <span class="title">One-to-One, Onto, Inverse Functions</span></a></div>
+<ul id="ptx-toc-group-onetooneonto7-2" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="onetooneonto7-2.html#onetooneonto7-2-35" class="internal"><span class="codenumber">7.2</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="onetooneonto7-2.html#onetooneonto7-2-36" class="internal"><span class="codenumber">7.2</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="references-1.html" class="internal"><span class="title">References</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-1.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
-<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
-<li><div class="toc-item"><a href="colophon-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter8.html" class="internal"><span class="codenumber">8</span> <span class="title">Relations</span></a></div>
+<ul id="ptx-toc-group-chapter8" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="relations8-1.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Relations on Sets</span></a></div>
+<ul id="ptx-toc-group-relations8-1" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="relations8-1.html#relations8-1-25" class="internal"><span class="codenumber">8.1</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="relations8-1.html#relations8-1-26" class="internal"><span class="codenumber">8.1</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="rstrelations8-2.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Reflexive, Symmetric, Transitive Properties</span></a></div>
+<ul id="ptx-toc-group-rstrelations8-2" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="rstrelations8-2.html#rstrelations8-2-21" class="internal"><span class="codenumber">8.2</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="rstrelations8-2.html#rstrelations8-2-22" class="internal"><span class="codenumber">8.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="equivalencerelations8-3.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Equivalence Relations</span></a></div>
+<ul id="ptx-toc-group-equivalencerelations8-3" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="equivalencerelations8-3.html#equivalencerelations8-3-35" class="internal"><span class="codenumber">8.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="equivalencerelations8-3.html#equivalencerelations8-3-36" class="internal"><span class="codenumber">8.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="modarith8-4.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Modular Arithmetic</span></a></div>
+<ul id="ptx-toc-group-modarith8-4" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="modarith8-4.html#modarith8-4-30" class="internal"><span class="codenumber">8.4</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="modarith8-4.html#modarith8-4-31" class="internal"><span class="codenumber">8.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter9.html" class="internal"><span class="codenumber">9</span> <span class="title">Probability and Counting</span></a></div>
+<ul id="ptx-toc-group-chapter9" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="probability9-1.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Probability</span></a></div>
+<ul id="ptx-toc-group-probability9-1" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="probability9-1.html#probability9-1-14" class="internal"><span class="codenumber">9.1</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="probability9-1.html#probability9-1-15" class="internal"><span class="codenumber">9.1</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="multrule9-2.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Multiplication Rule</span></a></div>
+<ul id="ptx-toc-group-multrule9-2" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="multrule9-2.html#multrule9-2-28" class="internal"><span class="codenumber">9.2</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="multrule9-2.html#multrule9-2-29" class="internal"><span class="codenumber">9.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="additionrule9-3.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Addition Rule</span></a></div>
+<ul id="ptx-toc-group-additionrule9-3" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="additionrule9-3.html#additionrule9-3-19" class="internal"><span class="codenumber">9.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="additionrule9-3.html#additionrule9-3-20" class="internal"><span class="codenumber">9.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="pigeonhole9-4.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Pigeonhole Principle</span></a></div>
+<ul id="ptx-toc-group-pigeonhole9-4" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="pigeonhole9-4.html#pigeonhole9-4-22" class="internal"><span class="codenumber">9.4</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="pigeonhole9-4.html#pigeonhole9-4-23" class="internal"><span class="codenumber">9.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="combinations9-5.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Combinations</span></a></div>
+<ul id="ptx-toc-group-combinations9-5" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="combinations9-5.html#combinations9-5-23" class="internal"><span class="codenumber">9.5</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="combinations9-5.html#combinations9-5-24" class="internal"><span class="codenumber">9.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="binomial9-6.html" class="internal"><span class="codenumber">9.6</span> <span class="title">Binomial Theorem</span></a></div>
+<ul id="ptx-toc-group-binomial9-6" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="binomial9-6.html#binomial9-6-28" class="internal"><span class="codenumber">9.6</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="binomial9-6.html#binomial9-6-29" class="internal"><span class="codenumber">9.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter10.html" class="internal"><span class="codenumber">10</span> <span class="title">Graph Theory</span></a></div>
+<ul id="ptx-toc-group-chapter10" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="graphs10-1.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphs</span></a></div>
+<ul id="ptx-toc-group-graphs10-1" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="graphs10-1.html#graphs10-1-47" class="internal"><span class="codenumber">10.1</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="graphs10-1.html#graphs10-1-48" class="internal"><span class="codenumber">10.1</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="pathscircuits10-2.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Paths and Circuits</span></a></div>
+<ul id="ptx-toc-group-pathscircuits10-2" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="pathscircuits10-2.html#pathscircuits10-2-41" class="internal"><span class="codenumber">10.2</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="pathscircuits10-2.html#pathscircuits10-2-42" class="internal"><span class="codenumber">10.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="trees10-3.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Trees</span></a></div>
+<ul id="ptx-toc-group-trees10-3" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="trees10-3.html#trees10-3-24" class="internal"><span class="codenumber">10.3</span> <span class="title">Check Your Understanding</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="trees10-3.html#trees10-3-25" class="internal"><span class="codenumber">10.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="DiscreteMath-14.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul id="ptx-toc-group-DiscreteMath-14" class="structural toc-item-list">
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="DiscreteMath-14-1.html" class="internal"><span class="title">References</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="DiscreteMath-14-3.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="DiscreteMath-14-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="negquant3-2"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">3.2</span> <span class="title">Negating Quantified Statements</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="negquant3-2">
+<h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Negating Quantified Statements</span>
 </h2>
-<div class="para" id="p-583">In this section we will look at how to negate statements involving quantifiers.</div>
-<div class="para" id="p-584">If you look back at the Check your Understanding questions in <a href="quantifiersI3-1.html" class="internal" title="Section 3.1: Quantifiers">Section 3.1</a>, you should notice that both <span class="process-math">\(\forall x\in D, P(x)\)</span> and <span class="process-math">\(\forall x\in D, \sim P(x)\)</span> were false, which means they are not negations of each other. Similarly, both <span class="process-math">\(\exists x\in D, P(x)\)</span> and <span class="process-math">\(\exists x \in D, \sim P(x)\)</span> were true. In general, the two statements won't necessarily have the same truth values, but the examples were chosen to make sure we can see that they are not negations of each other.</div>
-<article class="assemblage assemblage-like" id="B_negquantstate"><h3 class="heading"><span class="title">Negating Quantified Statements.</span></h3>
-<div class="para" id="p-585">The negation of <span class="process-math">\(\forall x\in D, P(x)\)</span> is <span class="process-math">\(\exists x\in D, \sim P(x)\text{.}\)</span>
+<div class="para" id="negquant3-2-3">In this section we will look at how to negate statements involving quantifiers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="p-586">
+<div class="para" id="negquant3-2-4">If you look back at the Check your Understanding questions in <a href="quantifiersI3-1.html" class="internal" title="Section 3.1: Quantifiers">Section 3.1</a>, you should notice that both <span class="process-math">\(\forall x\in D, P(x)\)</span> and <span class="process-math">\(\forall x\in D, \sim P(x)\)</span> were false, which means they are not negations of each other. Similarly, both <span class="process-math">\(\exists x\in D, P(x)\)</span> and <span class="process-math">\(\exists x \in D, \sim P(x)\)</span> were true. In general, the two statements won’t necessarily have the same truth values, but the examples were chosen to make sure we can see that they are not negations of each other.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="assemblage assemblage-like" id="B_negquantstate"><h3 class="heading"><span class="title">Negating Quantified Statements.</span></h3>
+<div class="para" id="B_negquantstate-3">The negation of <span class="process-math">\(\forall x\in D, P(x)\)</span> is <span class="process-math">\(\exists x\in D, \sim P(x)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#B_negquantstate-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="B_negquantstate-4">
 <div class="para">In notation:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="B_negquantstate-4-1">
 \begin{equation*}
 \sim(\forall x\in D, P(x))\equiv \exists x\in D, \sim P(x).
 \end{equation*}
 </div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#B_negquantstate-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="p-587">The negation of <span class="process-math">\(\exists x\in D, P(x)\)</span> is <span class="process-math">\(\forall x\in D, \sim P(x)\text{.}\)</span>
+<div class="para" id="B_negquantstate-5">The negation of <span class="process-math">\(\exists x\in D, P(x)\)</span> is <span class="process-math">\(\forall x\in D, \sim P(x)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#B_negquantstate-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="p-588">
+<div class="para logical" id="B_negquantstate-6">
 <div class="para">In notation:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="B_negquantstate-6-1">
 \begin{equation*}
 \sim(\exists x\in D, P(x))\equiv \forall x\in D, \sim P(x).
 \end{equation*}
 </div>
-</div></article><div class="para" id="p-589">We can think of negation as switching the quantifier and negating <span class="process-math">\(P(x)\text{,}\)</span> but it will be really helpful if we can understand <em class="emphasis">why</em> this is the negation. Thinking about negating a “for all” statement, we need the statement to not be true for all things, which means it must be false for something, Thus, there exists something making <span class="process-math">\(\sim P(x)\)</span> true. Thinking about negating a “there exists” statement, we need there not to exist anything making <span class="process-math">\(P(x)\)</span> true, which means <span class="process-math">\(P(x)\)</span> must be false for everything. Thus, everything makes <span class="process-math">\(\sim P(x)\)</span> true.</div>
-<article class="example example-like" id="E_negquant1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_negquant1"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Negating a Quantified Statement.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_negquant1"><article class="example example-like"> <div class="para" id="p-590">Negate the statement: For all primes <span class="process-math">\(p\text{,}\)</span> <span class="process-math">\(p\)</span> is odd. Is this statement true or false?</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-62" id="answer-62"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-62"><div class="answer solution-like"><div class="para" id="p-591">There exist a prime <span class="process-math">\(p\)</span> such that <span class="process-math">\(p\)</span> is not odd. The original statement is false, since we can find an even prime (<span class="process-math">\(p=2\)</span>).</div></div></div> <div class="para" id="p-592">Negate the statement: There exists a real number <span class="process-math">\(x\text{,}\)</span> such that <span class="process-math">\(x^2&lt; 0\text{.}\)</span> Is this statement true or false?</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-63" id="answer-63"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-63"><div class="answer solution-like"><div class="para" id="p-593">For all real numbers <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(x^2\geq 0\text{.}\)</span> The original statement is false, since the negation is true.</div></div></div></article></div>
-<article class="activity project-like" id="A_simpleneg"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#B_negquantstate-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Assemblage: Negating Quantified Statements"><a tabindex="-1" href="#B_negquantstate" title="Copy heading and permalink for Assemblage: Negating Quantified Statements" aria-label="Copy heading and permalink for Assemblage: Negating Quantified Statements">🔗</a></div>
+</article>
+<div class="para" id="negquant3-2-6">We can think of negation as switching the quantifier and negating <span class="process-math">\(P(x)\text{,}\)</span> but it will be really helpful if we can understand <em class="emphasis">why</em> this is the negation. Thinking about negating a “for all” statement, we need the statement to not be true for all things, which means it must be false for something. Thus, there exists something making <span class="process-math">\(\sim P(x)\)</span> true. Thinking about negating a “there exists” statement, we need there not to exist anything making <span class="process-math">\(P(x)\)</span> true, which means <span class="process-math">\(P(x)\)</span> must be false for everything. Thus, everything makes <span class="process-math">\(\sim P(x)\)</span> true.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_negquant1" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Negating a Quantified Statement.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="E_negquant1-2">Negate the statement: For all primes <span class="process-math">\(p\text{,}\)</span> <span class="process-math">\(p\)</span> is odd. Is this statement true or false?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_negquant1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_negquant1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para" id="E_negquant1-3-1">There exist a prime <span class="process-math">\(p\)</span> such that <span class="process-math">\(p\)</span> is not odd. The original statement is false, since we can find an even prime (<span class="process-math">\(p=2\)</span>).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_negquant1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.2.1.1"><a tabindex="-1" href="#E_negquant1-3" title="Copy heading and permalink for Answer 3.2.1.1" aria-label="Copy heading and permalink for Answer 3.2.1.1">🔗</a></div>
+</div></details>
+<div class="para" id="E_negquant1-4">Negate the statement: There exists a real number <span class="process-math">\(x\text{,}\)</span> such that <span class="process-math">\(x^2&lt; 0\text{.}\)</span> Is this statement true or false?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_negquant1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_negquant1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para" id="E_negquant1-5-1">For all real numbers <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(x^2\geq 0\text{.}\)</span> The original statement is false, since the negation is true.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_negquant1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.2.1.2"><a tabindex="-1" href="#E_negquant1-5" title="Copy heading and permalink for Answer 3.2.1.2" aria-label="Copy heading and permalink for Answer 3.2.1.2">🔗</a></div>
+</div></details><div class="autopermalink" aria-hidden="true" data-description="Example 3.2.1: Negating a Quantified Statement"><a tabindex="-1" href="#E_negquant1" title="Copy heading and permalink for Example 3.2.1: Negating a Quantified Statement" aria-label="Copy heading and permalink for Example 3.2.1: Negating a Quantified Statement">🔗</a></div>
+</article></details>
+<article class="activity project-like" id="negquant-negEng"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="introduction" id="introduction-14"><div class="para" id="p-594">Write the negation of the following statements (in English).</div></div>
-<article class="task exercise-like" id="task-39"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-595">For all integers <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(\sqrt{n}\)</span> is an integer.</div></article><article class="task exercise-like" id="task-40"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-596">There exists an integer <span class="process-math">\(n\text{,}\)</span> such that <span class="process-math">\(n^2=5\text{.}\)</span>
-</div></article></article><div class="para" id="p-597">Many of our quantified statements may have predicates involving other logical connectives. So it is going to be important to remember how to negate "and"s, "or"s, and "if...then"s. The following summarizes the rules we have already seen for negating statements with connectives</div>
+<div class="introduction" id="negquant-negEng-1">
+<div class="para" id="negquant-negEng-1-1">Write the negation of the following statements (in English).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant-negEng-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="negquant-negEng-forall"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="negquant-negEng-forall-1-1">For all integers <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(\sqrt{n}\)</span> is an integer.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant-negEng-forall-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.2.1.a"><a tabindex="-1" href="#negquant-negEng-forall" title="Copy heading and permalink for Task 3.2.1.a" aria-label="Copy heading and permalink for Task 3.2.1.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="negquant-negEng-exist"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="negquant-negEng-exist-1-1">There exists an integer <span class="process-math">\(n\text{,}\)</span> such that <span class="process-math">\(n^2=5\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant-negEng-exist-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.2.1.b"><a tabindex="-1" href="#negquant-negEng-exist" title="Copy heading and permalink for Task 3.2.1.b" aria-label="Copy heading and permalink for Task 3.2.1.b">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 3.2.1"><a tabindex="-1" href="#negquant-negEng" title="Copy heading and permalink for Activity 3.2.1" aria-label="Copy heading and permalink for Activity 3.2.1">🔗</a></div>
+</article>
+<div class="para" id="negquant3-2-9">Many of our quantified statements may have predicates involving other logical connectives. So it is going to be important to remember how to negate “and”s, “or”s, and “if...then”s. The following summarizes the rules we have already seen for negating statements with connectives<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="assemblage assemblage-like" id="B_negconnectives"><h3 class="heading"><span class="title">Negations of Logical Statements.</span></h3>
-<div class="para logical" id="p-598"><ul class="disc">
-<li id="li-160">
-<span class="heading"><span class="title">AND statement.</span></span><div class="para" id="p-derived-li-160"> <span class="process-math">\(\sim(p\wedge q)\equiv \sim p\ \vee \sim q\text{.}\)</span> This is DeMorgan's Law.</div>
+<div class="para logical" id="B_negconnectives-3">
+<ul class="disc" id="B_negconnectives-3-1">
+<li id="B_negconnectives-3-1-1">
+<span class="heading li--heading"><span class="title li--heading-title">AND statement.</span></span><div class="para" id="p-derived-B_negconnectives-3-1-1"> <span class="process-math">\(\sim(p\wedge q)\equiv \sim p\ \vee \sim q\text{.}\)</span> This is DeMorgan’s Law.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item: AND statement"><a tabindex="-1" href="#B_negconnectives-3-1-1" title="Copy heading and permalink for Item: AND statement" aria-label="Copy heading and permalink for Item: AND statement">🔗</a></div>
 </li>
-<li id="li-161">
-<span class="heading"><span class="title">OR statement.</span></span><div class="para" id="p-derived-li-161"> <span class="process-math">\(\sim(p\vee q)\equiv \sim p\ \wedge \sim q\text{.}\)</span> This is DeMorgan's Law.</div>
+<li id="B_negconnectives-3-1-2">
+<span class="heading li--heading"><span class="title li--heading-title">OR statement.</span></span><div class="para" id="p-derived-B_negconnectives-3-1-2"> <span class="process-math">\(\sim(p\vee q)\equiv \sim p\ \wedge \sim q\text{.}\)</span> This is DeMorgan’s Law.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item: OR statement"><a tabindex="-1" href="#B_negconnectives-3-1-2" title="Copy heading and permalink for Item: OR statement" aria-label="Copy heading and permalink for Item: OR statement">🔗</a></div>
 </li>
-<li id="li-162">
-<span class="heading"><span class="title">IF...THEN statement.</span></span><div class="para" id="p-derived-li-162"> <span class="process-math">\(\sim(p\rightarrow q)\equiv p\ \wedge \sim q\text{.}\)</span> The negation of a conditional is NOT a conditional.</div>
+<li id="B_negconnectives-3-1-3">
+<span class="heading li--heading"><span class="title li--heading-title">IF...THEN statement.</span></span><div class="para" id="p-derived-B_negconnectives-3-1-3"> <span class="process-math">\(\sim(p\rightarrow q)\equiv p\ \wedge \sim q\text{.}\)</span> The negation of a conditional is NOT a conditional.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item: IF...THEN statement"><a tabindex="-1" href="#B_negconnectives-3-1-3" title="Copy heading and permalink for Item: IF...THEN statement" aria-label="Copy heading and permalink for Item: IF...THEN statement">🔗</a></div>
 </li>
-<li id="li-163">
-<span class="heading"><span class="title">Universal conditional.</span></span><div class="para" id="p-derived-li-163"><div class="displaymath process-math" id="md-1">
+<li id="B_negconnectives-3-1-4">
+<span class="heading li--heading"><span class="title li--heading-title">Universal conditional.</span></span><div class="para" id="p-derived-B_negconnectives-3-1-4"><div class="displaymath process-math" id="B_negconnectives-3-1-4-2">
 \begin{align*}
 \sim(\forall x\in D, P(x)\rightarrow Q(x)) &amp; \equiv \exists x\in D, \sim(P(x)\rightarrow Q(x))\\
 &amp;\equiv \exists x\in D, P(x)\wedge \sim Q(x)
 \end{align*}
 </div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item: Universal conditional"><a tabindex="-1" href="#B_negconnectives-3-1-4" title="Copy heading and permalink for Item: Universal conditional" aria-label="Copy heading and permalink for Item: Universal conditional">🔗</a></div>
 </li>
-</ul></div></article><article class="activity project-like" id="A_complexneg"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#B_negconnectives-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Assemblage: Negations of Logical Statements"><a tabindex="-1" href="#B_negconnectives" title="Copy heading and permalink for Assemblage: Negations of Logical Statements" aria-label="Copy heading and permalink for Assemblage: Negations of Logical Statements">🔗</a></div>
+</article>
+<article class="activity project-like" id="negquant-neglogic"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="introduction" id="introduction-15"><div class="para" id="p-599">Write the negation of the following statements (in English).</div></div>
-<article class="task exercise-like" id="task-41"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-600">There exists an integer <span class="process-math">\(n\text{,}\)</span> such that <span class="process-math">\(1 &lt; n &lt; 2\text{.}\)</span>
-</div></article><article class="task exercise-like" id="task-42"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-601">For all real numbers  <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x+5&gt;7\text{.}\)</span>
-</div></article><article class="task exercise-like" id="task-43"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-602">For all functions <span class="process-math">\(f\text{,}\)</span> if <span class="process-math">\(f\)</span> is continuous, then <span class="process-math">\(f\)</span> is differentiable.</div></article></article><div class="para" id="p-603">Recall from <a href="conditional2-2.html" class="internal" title="Section 2.2: Conditional Statements">Section 2.2</a> the contapositive of <span class="process-math">\(p\rightarrow q\)</span> is <span class="process-math">\(\sim q\rightarrow \sim p\text{.}\)</span> We can use this to define the contrapositive of a universal conditional statement.</div>
+<div class="introduction" id="negquant-neglogic-1">
+<div class="para" id="negquant-neglogic-1-1">Write the negation of the following statements (in English).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant-neglogic-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="negquant-neglogic-exist"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="negquant-neglogic-exist-1-1">There exists an integer <span class="process-math">\(n\text{,}\)</span> such that <span class="process-math">\(1 &lt; n &lt; 2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant-neglogic-exist-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.2.2.a"><a tabindex="-1" href="#negquant-neglogic-exist" title="Copy heading and permalink for Task 3.2.2.a" aria-label="Copy heading and permalink for Task 3.2.2.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="negquant-neglogic-univcond1"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="negquant-neglogic-univcond1-1-1">For all real numbers  <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x+5&gt;7\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant-neglogic-univcond1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.2.2.b"><a tabindex="-1" href="#negquant-neglogic-univcond1" title="Copy heading and permalink for Task 3.2.2.b" aria-label="Copy heading and permalink for Task 3.2.2.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="negquant-neglogic-univcond2"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="negquant-neglogic-univcond2-1-1">For all functions <span class="process-math">\(f\text{,}\)</span> if <span class="process-math">\(f\)</span> is continuous, then <span class="process-math">\(f\)</span> is differentiable.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant-neglogic-univcond2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.2.2.c"><a tabindex="-1" href="#negquant-neglogic-univcond2" title="Copy heading and permalink for Task 3.2.2.c" aria-label="Copy heading and permalink for Task 3.2.2.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 3.2.2"><a tabindex="-1" href="#negquant-neglogic" title="Copy heading and permalink for Activity 3.2.2" aria-label="Copy heading and permalink for Activity 3.2.2">🔗</a></div>
+</article>
+<div class="para" id="negquant3-2-12">Recall from <a href="conditional2-2.html" class="internal" title="Section 2.2: Conditional Statements">Section 2.2</a> the contrapositive of <span class="process-math">\(p\rightarrow q\)</span> is <span class="process-math">\(\sim q\rightarrow \sim p\text{.}\)</span> We can use this to define the contrapositive of a universal conditional statement.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="D_contrapositiveuc"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="p-604">The universal conditional statement <span class="process-math">\(\forall x\in D, P(x)\rightarrow Q(x)\)</span> has <dfn class="terminology">contrapositive</dfn> <span class="process-math">\(\forall x\in D, \sim Q(x)\rightarrow \sim P(x)\text{.}\)</span>
-</div></article><div class="para" id="p-605">Similarly, the converse of <span class="process-math">\(p\rightarrow q\)</span> is <span class="process-math">\(q\rightarrow p\text{.}\)</span>
+<div class="para" id="D_contrapositiveuc-1-1">The universal conditional statement <span class="process-math">\(\forall x\in D, P(x)\rightarrow Q(x)\)</span> has <dfn class="terminology">contrapositive</dfn> <span class="process-math">\(\forall x\in D, \sim Q(x)\rightarrow \sim P(x)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_contrapositiveuc-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.2.2"><a tabindex="-1" href="#D_contrapositiveuc" title="Copy heading and permalink for Definition 3.2.2" aria-label="Copy heading and permalink for Definition 3.2.2">🔗</a></div>
+</article>
+<div class="para" id="negquant3-2-14">Similarly, the converse of <span class="process-math">\(p\rightarrow q\)</span> is <span class="process-math">\(q\rightarrow p\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="D_converseuc"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="p-606">The universal conditional statement <span class="process-math">\(\forall x\in D, P(x)\rightarrow Q(x)\)</span> has <dfn class="terminology">converse</dfn> <span class="process-math">\(\forall x\in D, Q(x)\rightarrow P(x)\text{.}\)</span>
-</div></article><article class="activity project-like" id="A_contrapos1"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="period">.</span>
-</h3>
-<div class="introduction" id="introduction-16"><div class="para" id="p-607">Consider the statement “For all real numbers  <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\((x+1)(x-2)&gt;0\)</span> then <span class="process-math">\(x &lt; -1\)</span> or <span class="process-math">\(x&gt;2\text{.}\)</span>”</div></div>
-<article class="task exercise-like" id="task-44"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-608">Write the negation of the statement.</div></article><article class="task exercise-like" id="task-45"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-609">Write the contrapositive of the statement.</div></article></article><article class="activity project-like" id="A_contrapos2"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.4</span><span class="period">.</span>
-</h3>
-<div class="introduction" id="introduction-17"><div class="para" id="p-610">Consider the statement “For all integers  <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n\)</span> has a factor of 15, then <span class="process-math">\(n\)</span> has a factor of 3 and <span class="process-math">\(n\)</span> has a factor of 5.”</div></div>
-<article class="task exercise-like" id="task-46"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-611">Write the negation of the statement.</div></article><article class="task exercise-like" id="task-47"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-612">Write the contrapositive of the statement.</div></article></article><div class="para" id="p-613">The relationship between “for all” and “there exists” can be used to show some surprising things. What happens if our domain, <span class="process-math">\(D\text{,}\)</span> has nothing in it? In particular, let <span class="process-math">\(D=\emptyset\text{,}\)</span> the empty set. Is <span class="process-math">\(\forall x\in D, P(x)\)</span> true or false? Well, let's look at the negation: <span class="process-math">\(\exists x\in D, \sim P(x)\text{.}\)</span> Now the negation <em class="emphasis">must</em> be false since <span class="process-math">\(D\)</span> has nothing in it, so there can't exist something in <span class="process-math">\(D\)</span> making <span class="process-math">\(\sim P(x)\)</span> true. Since the negation is false, the original statement is true! We say <span class="process-math">\(\forall x\in D, P(x)\)</span> is <dfn class="terminology">vacuously</dfn> true.</div>
-<article class="example example-like" id="E_vacuouslytrue"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_vacuouslytrue"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Vacuously True Statement.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_vacuouslytrue"><article class="example example-like"> <div class="para" id="p-614">Consider the statement “For all llamas, <span class="process-math">\(L\text{,}\)</span> in Discrete Math, <span class="process-math">\(L\)</span> is getting an A.” The negation is “There exists a llama, <span class="process-math">\(L\text{,}\)</span> in Discrete Math, such that  <span class="process-math">\(L\)</span> is not getting an A.” Since no such llama exists, the negation is false. Making the original true. So every llama in Discrete is getting an A.</div></article></div>
-<div class="para" id="p-615">As one additional note, it can be helpful in deciding if your negation is correct by finding the truth value of both the original and the negation. They should have opposite values. Similarly, if you need to determine the truth value of a complex statement, it might be easier to find the truth value of the negation.</div>
-<article class="activity project-like" id="activity-46"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.5</span><span class="period">.</span>
-</h3>
-<div class="introduction" id="introduction-18"><div class="para" id="p-616">Determine if each of the following statements are true or false. It may be helpful to look at the negations you founds in the above activities, <a href="" class="xref" data-knowl="./knowl/A_simpleneg.html" title="Activity 3.2.1">Activity 3.2.1</a>, <a href="" class="xref" data-knowl="./knowl/A_complexneg.html" title="Activity 3.2.2">Activity 3.2.2</a>, <a href="" class="xref" data-knowl="./knowl/A_contrapos1.html" title="Activity 3.2.3">Activity 3.2.3</a>, and <a href="" class="xref" data-knowl="./knowl/A_contrapos2.html" title="Activity 3.2.4">Activity 3.2.4</a>.</div></div>
-<article class="task exercise-like" id="task-48"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-617">For all integers <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(\sqrt{n}\)</span> is an integer.</div></article><article class="task exercise-like" id="task-49"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-618">There exists an integer <span class="process-math">\(n\text{,}\)</span> such that <span class="process-math">\(n^2=5\text{.}\)</span>
-</div></article><article class="task exercise-like" id="task-50"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-619">There exists an integer <span class="process-math">\(n\text{,}\)</span> such that <span class="process-math">\(1 &lt; n &lt; 2\text{.}\)</span>
-</div></article><article class="task exercise-like" id="task-51"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="p-620">For all real numbers  <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x+5&gt;7\text{.}\)</span>
-</div></article><article class="task exercise-like" id="task-52"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="p-621">For all functions <span class="process-math">\(f\text{,}\)</span> if <span class="process-math">\(f\)</span> is continuous, then <span class="process-math">\(f\)</span> is differentiable.</div></article><article class="task exercise-like" id="task-53"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="p-622">For all real numbers  <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\((x+1)(x-2)&gt;0\)</span> then <span class="process-math">\(x &lt; -1\)</span> or <span class="process-math">\(x&gt;2\text{.}\)</span>
-</div></article><article class="task exercise-like" id="task-54"><h4 class="heading"><span class="codenumber">(g)</span></h4>
-<div class="para" id="p-623">For all integers  <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n\)</span> has a factor of 15, then <span class="process-math">\(n\)</span> has a factor of 3 and <span class="process-math">\(n\)</span> has a factor of 5.</div></article></article><section class="reading-questions" id="reading-questions-8"><h3 class="heading hide-type">
-<span class="type">Reading Questions</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
-</h3>
-<article class="exercise exercise-like" id="DMT_negquant_CYU_forall"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="DMT_negquant_CYU_forall" data-multipleanswers="false" data-random="">
-<div class="para" id="p-624">Determine the negation of <span class="process-math">\(\forall n\in \mathbb{Z}, n&gt;0\text{.}\)</span>
+<div class="para" id="D_converseuc-1-1">The universal conditional statement <span class="process-math">\(\forall x\in D, P(x)\rightarrow Q(x)\)</span> has <dfn class="terminology">converse</dfn> <span class="process-math">\(\forall x\in D, Q(x)\rightarrow P(x)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_converseuc-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<li data-component="answer" id="DMT_negquant_CYU_forall_opt_a" data-correct=""><div class="para" id="p-625"><span class="process-math">\(\exists n\in \mathbb{Z}, n\leq 0.\)</span></div></li>
-<li data-component="feedback" id="DMT_negquant_CYU_forall_opt_a">
-<li data-component="answer" id="DMT_negquant_CYU_forall_opt_b"><div class="para" id="p-626"><span class="process-math">\(\exists n\in \mathbb{Z}, n&gt; 0.\)</span></div></li>
-<li data-component="feedback" id="DMT_negquant_CYU_forall_opt_b">
-<li data-component="answer" id="DMT_negquant_CYU_forall_opt_c"><div class="para" id="p-627"><span class="process-math">\(\forall n\in \mathbb{Z}, n\leq 0.\)</span></div></li>
-<li data-component="feedback" id="DMT_negquant_CYU_forall_opt_c">
-<li data-component="answer" id="DMT_negquant_CYU_forall_opt_d"><div class="para" id="p-628"><span class="process-math">\(\forall n\in \mathbb{Z}, n&gt; 0.\)</span></div></li>
-<li data-component="feedback" id="DMT_negquant_CYU_forall_opt_d">
-</ul></div></div></article><article class="exercise exercise-like" id="DMT_negquant_CYU_forallcond"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="DMT_negquant_CYU_forallcond" data-multipleanswers="false" data-random="">
-<div class="para" id="p-629">Determine the negation of <span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n&gt;0\)</span> then <span class="process-math">\(n^3&gt;0\text{.}\)</span>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.2.3"><a tabindex="-1" href="#D_converseuc" title="Copy heading and permalink for Definition 3.2.3" aria-label="Copy heading and permalink for Definition 3.2.3">🔗</a></div>
+</article>
+<article class="activity project-like" id="negquant-zeros"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="introduction" id="negquant-zeros-1">
+<div class="para" id="negquant-zeros-1-1">Consider the statement “For all real numbers  <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\((x+1)(x-2)&gt;0\)</span> then <span class="process-math">\(x &lt; -1\)</span> or <span class="process-math">\(x&gt;2\text{.}\)</span>”<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant-zeros-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<li data-component="answer" id="DMT_negquant_CYU_forallcond_opt_a"><div class="para" id="p-630">
+</div>
+<article class="task exercise-like" id="negquant-zeros-neg"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="negquant-zeros-neg-1-1">Write the negation of the statement.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant-zeros-neg-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.2.3.a"><a tabindex="-1" href="#negquant-zeros-neg" title="Copy heading and permalink for Task 3.2.3.a" aria-label="Copy heading and permalink for Task 3.2.3.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="negquant-zeros-contr"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="negquant-zeros-contr-1-1">Write the contrapositive of the statement.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant-zeros-contr-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.2.3.b"><a tabindex="-1" href="#negquant-zeros-contr" title="Copy heading and permalink for Task 3.2.3.b" aria-label="Copy heading and permalink for Task 3.2.3.b">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 3.2.3"><a tabindex="-1" href="#negquant-zeros" title="Copy heading and permalink for Activity 3.2.3" aria-label="Copy heading and permalink for Activity 3.2.3">🔗</a></div>
+</article>
+<article class="activity project-like" id="negquant-factors"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="introduction" id="negquant-factors-1">
+<div class="para" id="negquant-factors-1-1">Consider the statement “For all integers  <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n\)</span> has a factor of 15, then <span class="process-math">\(n\)</span> has a factor of 3 and <span class="process-math">\(n\)</span> has a factor of 5.”<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant-factors-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="negquant-factors-neg"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="negquant-factors-neg-1-1">Write the negation of the statement.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant-factors-neg-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.2.4.a"><a tabindex="-1" href="#negquant-factors-neg" title="Copy heading and permalink for Task 3.2.4.a" aria-label="Copy heading and permalink for Task 3.2.4.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="negquant-factors-contr"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="negquant-factors-contr-1-1">Write the contrapositive of the statement.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant-factors-contr-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.2.4.b"><a tabindex="-1" href="#negquant-factors-contr" title="Copy heading and permalink for Task 3.2.4.b" aria-label="Copy heading and permalink for Task 3.2.4.b">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 3.2.4"><a tabindex="-1" href="#negquant-factors" title="Copy heading and permalink for Activity 3.2.4" aria-label="Copy heading and permalink for Activity 3.2.4">🔗</a></div>
+</article>
+<div class="para" id="negquant3-2-18">The relationship between “for all” and “there exists” can be used to show some surprising things. What happens if our domain, <span class="process-math">\(D\text{,}\)</span> has nothing in it? In particular, let <span class="process-math">\(D=\emptyset\text{,}\)</span> the empty set. Is <span class="process-math">\(\forall x\in D, P(x)\)</span> true or false? Well, let’s look at the negation: <span class="process-math">\(\exists x\in D, \sim P(x)\text{.}\)</span> Now the negation <em class="emphasis">must</em> be false since <span class="process-math">\(D\)</span> has nothing in it, so there can’t exist something in <span class="process-math">\(D\)</span> making <span class="process-math">\(\sim P(x)\)</span> true. Since the negation is false, the original statement is true! We say <span class="process-math">\(\forall x\in D, P(x)\)</span> is <dfn class="terminology">vacuously</dfn> true.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_vacuouslytrue" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Vacuously True Statement.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="E_vacuouslytrue-2">Consider the statement “For all llamas, <span class="process-math">\(L\text{,}\)</span> in Discrete Math, <span class="process-math">\(L\)</span> is getting an A.” The negation is “There exists a llama, <span class="process-math">\(L\text{,}\)</span> in Discrete Math, such that  <span class="process-math">\(L\)</span> is not getting an A.” Since no such llama exists, the negation is false. Making the original true. So every llama in Discrete Math is getting an A.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_vacuouslytrue-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 3.2.4: Vacuously True Statement"><a tabindex="-1" href="#E_vacuouslytrue" title="Copy heading and permalink for Example 3.2.4: Vacuously True Statement" aria-label="Copy heading and permalink for Example 3.2.4: Vacuously True Statement">🔗</a></div>
+</article></details>
+<div class="para" id="negquant3-2-20">As one additional note, it can be helpful in deciding if your negation is correct by finding the truth value of both the original and the negation. They should have opposite values. Similarly, if you need to determine the truth value of a complex statement, it might be easier to find the truth value of the negation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="negquant-TF"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="ptx-runestone-container"><div class="runestone cardsort_section"><ul data-component="dragndrop" data-question_label="" style="visibility: hidden;" id="rs-negquant-TF">
+<span data-subcomponent="question">
+<div class="para" id="negquant-TF-1-1">Determine if each of the following statements are true or false. It may be helpful to look at the negations you found in the above activities, <a href="negquant3-2.html#negquant-negEng" class="xref" data-knowl="./knowl/xref/A_simpleneg.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.2.1">Activity 3.2.1</a>, <a href="negquant3-2.html#negquant-neglogic" class="xref" data-knowl="./knowl/xref/A_complexneg.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.2.2">Activity 3.2.2</a>, <a href="negquant3-2.html#negquant-zeros" class="xref" data-knowl="./knowl/xref/A_contrapos1.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.2.3">Activity 3.2.3</a>, and <a href="negquant3-2.html#negquant-factors" class="xref" data-knowl="./knowl/xref/A_contrapos2.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.2.4">Activity 3.2.4</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant-TF-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></span><li data-subcomponent="draggable" id="rs-negquant-TF_drag1" data-category="1">
+<div class="para" id="negquant-TF-2-1-1-1">For all real numbers  <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x+5&gt;7\text{.}\)</span>
+</div>
+</li>
+<li data-subcomponent="draggable" id="rs-negquant-TF_drag2" data-category="1">
+<div class="para" id="negquant-TF-2-1-2-1">For all real numbers  <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\((x+1)(x-2)&gt;0\)</span> then <span class="process-math">\(x &lt; -1\)</span> or <span class="process-math">\(x&gt;2\text{.}\)</span>
+</div>
+</li>
+<li data-subcomponent="draggable" id="rs-negquant-TF_drag3" data-category="1">
+<div class="para" id="negquant-TF-2-1-3-1">For all integers  <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n\)</span> has a factor of 15, then <span class="process-math">\(n\)</span> has a factor of 3 and <span class="process-math">\(n\)</span> has a factor of 5.</div>
+</li>
+<li data-subcomponent="dropzone" for="rs-negquant-TF_drag1" data-category="1">
+<div class="para" id="negquant-TF-2-1-4-1">True</div>
+</li>
+<li data-subcomponent="draggable" id="rs-negquant-TF_drag4" data-category="2">
+<div class="para" id="negquant-TF-2-2-1-1">For all integers <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(\sqrt{n}\)</span> is an integer.</div>
+</li>
+<li data-subcomponent="draggable" id="rs-negquant-TF_drag5" data-category="2">
+<div class="para" id="negquant-TF-2-2-2-1">There exists an integer <span class="process-math">\(n\text{,}\)</span> such that <span class="process-math">\(n^2=5\text{.}\)</span>
+</div>
+</li>
+<li data-subcomponent="draggable" id="rs-negquant-TF_drag6" data-category="2">
+<div class="para" id="negquant-TF-2-2-3-1">There exists an integer <span class="process-math">\(n\text{,}\)</span> such that <span class="process-math">\(1 &lt; n &lt; 2\text{.}\)</span>
+</div>
+</li>
+<li data-subcomponent="draggable" id="rs-negquant-TF_drag7" data-category="2">
+<div class="para" id="negquant-TF-2-2-4-1">For all functions <span class="process-math">\(f\text{,}\)</span> if <span class="process-math">\(f\)</span> is continuous, then <span class="process-math">\(f\)</span> is differentiable.</div>
+</li>
+<li data-subcomponent="dropzone" for="rs-negquant-TF_drag2" data-category="2">
+<div class="para" id="negquant-TF-2-2-5-1">False</div>
+</li>
+</ul></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 3.2.5"><a tabindex="-1" href="#negquant-TF" title="Copy heading and permalink for Activity 3.2.5" aria-label="Copy heading and permalink for Activity 3.2.5">🔗</a></div>
+</article>
+<article class="activity project-like" id="negquant-TFexplain"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="introduction" id="negquant-TFexplain-1">
+<div class="para" id="negquant-TFexplain-1-1">Consider the statements in the previous activity, <a href="negquant3-2.html#negquant-TF" class="xref" data-knowl="./knowl/xref/A_quantifiersort.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.2.5">Activity 3.2.5</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant-TFexplain-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="negquant-TFexplain-T"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="negquant-TFexplain-T-1-1">Choose one of the true statements and explain why you know it is true.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant-TFexplain-T-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.2.6.a"><a tabindex="-1" href="#negquant-TFexplain-T" title="Copy heading and permalink for Task 3.2.6.a" aria-label="Copy heading and permalink for Task 3.2.6.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="negquant-TFexplain-F"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="negquant-TFexplain-F-1-1">Choose one of the false statements and explain why you know it is false.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant-TFexplain-F-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.2.6.b"><a tabindex="-1" href="#negquant-TFexplain-F" title="Copy heading and permalink for Task 3.2.6.b" aria-label="Copy heading and permalink for Task 3.2.6.b">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 3.2.6"><a tabindex="-1" href="#negquant-TFexplain" title="Copy heading and permalink for Activity 3.2.6" aria-label="Copy heading and permalink for Activity 3.2.6">🔗</a></div>
+</article>
+<section class="reading-questions" id="negquant3-2-23">
+<h3 class="heading hide-type">
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Check Your Understanding</span>
+</h3>
+<article class="exercise exercise-like" id="DMT_negquant_CYU_forall"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement">
+<div class="para" id="DMT_negquant_CYU_forall-1-1">Determine the negation of <span class="process-math">\(\forall n\in \mathbb{Z}, n&gt;0\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_negquant_CYU_forall-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-DMT_negquant_CYU_forall" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-DMT_negquant_CYU_forall_opt_a" data-correct="">
+<div class="para" id="DMT_negquant_CYU_forall-2-1-1-1"><span class="process-math">\(\exists n\in \mathbb{Z}, n\leq 0.\)</span></div>
+</li>
+<li data-component="feedback" id="rs-DMT_negquant_CYU_forall_opt_a">
+<li data-component="answer" id="rs-DMT_negquant_CYU_forall_opt_b">
+<div class="para" id="DMT_negquant_CYU_forall-2-2-1-1"><span class="process-math">\(\exists n\in \mathbb{Z}, n&gt; 0.\)</span></div>
+</li>
+<li data-component="feedback" id="rs-DMT_negquant_CYU_forall_opt_b">
+<li data-component="answer" id="rs-DMT_negquant_CYU_forall_opt_c">
+<div class="para" id="DMT_negquant_CYU_forall-2-3-1-1"><span class="process-math">\(\forall n\in \mathbb{Z}, n\leq 0.\)</span></div>
+</li>
+<li data-component="feedback" id="rs-DMT_negquant_CYU_forall_opt_c">
+<li data-component="answer" id="rs-DMT_negquant_CYU_forall_opt_d">
+<div class="para" id="DMT_negquant_CYU_forall-2-4-1-1"><span class="process-math">\(\forall n\in \mathbb{Z}, n&gt; 0.\)</span></div>
+</li>
+<li data-component="feedback" id="rs-DMT_negquant_CYU_forall_opt_d">
+</ul>
+</div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 3.2.1"><a tabindex="-1" href="#DMT_negquant_CYU_forall" title="Copy heading and permalink for Reading Question 3.2.1" aria-label="Copy heading and permalink for Reading Question 3.2.1">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="DMT_negquant_CYU_forallcond"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement">
+<div class="para" id="DMT_negquant_CYU_forallcond-1-1">Determine the negation of <span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n&gt;0\)</span> then <span class="process-math">\(n^3&gt;0\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_negquant_CYU_forallcond-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-DMT_negquant_CYU_forallcond" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-DMT_negquant_CYU_forallcond_opt_a">
+<div class="para" id="DMT_negquant_CYU_forallcond-2-1-1-1">
 <span class="process-math">\(\exists n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n\leq 0\)</span> then <span class="process-math">\(n^3\leq 0\)</span>
-</div></li>
-<li data-component="feedback" id="DMT_negquant_CYU_forallcond_opt_a">
-<li data-component="answer" id="DMT_negquant_CYU_forallcond_opt_b"><div class="para" id="p-631">
+</div>
+</li>
+<li data-component="feedback" id="rs-DMT_negquant_CYU_forallcond_opt_a">
+<li data-component="answer" id="rs-DMT_negquant_CYU_forallcond_opt_b">
+<div class="para" id="DMT_negquant_CYU_forallcond-2-2-1-1">
 <span class="process-math">\(\exists n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n\leq 0\)</span> and <span class="process-math">\(n^3\leq 0.\)</span>
-</div></li>
-<li data-component="feedback" id="DMT_negquant_CYU_forallcond_opt_b">
-<li data-component="answer" id="DMT_negquant_CYU_forallcond_opt_c" data-correct=""><div class="para" id="p-632">
+</div>
+</li>
+<li data-component="feedback" id="rs-DMT_negquant_CYU_forallcond_opt_b">
+<li data-component="answer" id="rs-DMT_negquant_CYU_forallcond_opt_c" data-correct="">
+<div class="para" id="DMT_negquant_CYU_forallcond-2-3-1-1">
 <span class="process-math">\(\exists n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n&gt;0\)</span> and <span class="process-math">\(n^3\leq 0.\)</span>
-</div></li>
-<li data-component="feedback" id="DMT_negquant_CYU_forallcond_opt_c">
-<li data-component="answer" id="DMT_negquant_CYU_forallcond_opt_d"><div class="para" id="p-633">
+</div>
+</li>
+<li data-component="feedback" id="rs-DMT_negquant_CYU_forallcond_opt_c">
+<li data-component="answer" id="rs-DMT_negquant_CYU_forallcond_opt_d">
+<div class="para" id="DMT_negquant_CYU_forallcond-2-4-1-1">
 <span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n\leq 0\)</span> then <span class="process-math">\(n^3\leq 0\)</span>
-</div></li>
-<li data-component="feedback" id="DMT_negquant_CYU_forallcond_opt_d">
-</ul></div></div></article><article class="exercise exercise-like" id="DMT_negquant_CYU_existand"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="DMT_negquant_CYU_existand" data-multipleanswers="false" data-random="">
-<div class="para" id="p-634">Determine the negation of <span class="process-math">\(\exists n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n&gt;5\)</span> and <span class="process-math">\(n^2\leq 10\text{.}\)</span>
 </div>
-<li data-component="answer" id="DMT_negquant_CYU_existand_opt_a" data-correct=""><div class="para" id="p-635">
+</li>
+<li data-component="feedback" id="rs-DMT_negquant_CYU_forallcond_opt_d">
+</ul>
+</div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 3.2.2"><a tabindex="-1" href="#DMT_negquant_CYU_forallcond" title="Copy heading and permalink for Reading Question 3.2.2" aria-label="Copy heading and permalink for Reading Question 3.2.2">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="DMT_negquant_CYU_existand"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement">
+<div class="para" id="DMT_negquant_CYU_existand-1-1">Determine the negation of <span class="process-math">\(\exists n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n&gt;5\)</span> and <span class="process-math">\(n^2\leq 10\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_negquant_CYU_existand-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-DMT_negquant_CYU_existand" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-DMT_negquant_CYU_existand_opt_a" data-correct="">
+<div class="para" id="DMT_negquant_CYU_existand-2-1-1-1">
 <span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n\leq 5\)</span> or <span class="process-math">\(n^2&gt; 10.\)</span>
-</div></li>
-<li data-component="feedback" id="DMT_negquant_CYU_existand_opt_a">
-<li data-component="answer" id="DMT_negquant_CYU_existand_opt_b"><div class="para" id="p-636">
+</div>
+</li>
+<li data-component="feedback" id="rs-DMT_negquant_CYU_existand_opt_a">
+<li data-component="answer" id="rs-DMT_negquant_CYU_existand_opt_b">
+<div class="para" id="DMT_negquant_CYU_existand-2-2-1-1">
 <span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n\leq 5\)</span> and <span class="process-math">\(n^2&gt; 10.\)</span>
-</div></li>
-<li data-component="feedback" id="DMT_negquant_CYU_existand_opt_b">
-<li data-component="answer" id="DMT_negquant_CYU_existand_opt_c"><div class="para" id="p-637">
+</div>
+</li>
+<li data-component="feedback" id="rs-DMT_negquant_CYU_existand_opt_b">
+<li data-component="answer" id="rs-DMT_negquant_CYU_existand_opt_c">
+<div class="para" id="DMT_negquant_CYU_existand-2-3-1-1">
 <span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n &gt;5\)</span> or <span class="process-math">\(n^2\leq 10.\)</span>
-</div></li>
-<li data-component="feedback" id="DMT_negquant_CYU_existand_opt_c">
-<li data-component="answer" id="DMT_negquant_CYU_existand_opt_d"><div class="para" id="p-638">
+</div>
+</li>
+<li data-component="feedback" id="rs-DMT_negquant_CYU_existand_opt_c">
+<li data-component="answer" id="rs-DMT_negquant_CYU_existand_opt_d">
+<div class="para" id="DMT_negquant_CYU_existand-2-4-1-1">
 <span class="process-math">\(\exists n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n &gt;5\)</span> or <span class="process-math">\(n^2\leq 10.\)</span>
-</div></li>
-<li data-component="feedback" id="DMT_negquant_CYU_existand_opt_d">
-<li data-component="answer" id="DMT_negquant_CYU_existand_opt_e"><div class="para" id="p-639">
+</div>
+</li>
+<li data-component="feedback" id="rs-DMT_negquant_CYU_existand_opt_d">
+<li data-component="answer" id="rs-DMT_negquant_CYU_existand_opt_e">
+<div class="para" id="DMT_negquant_CYU_existand-2-5-1-1">
 <span class="process-math">\(\exists n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n\leq 5\)</span> and <span class="process-math">\(n^2&gt; 10.\)</span>
-</div></li>
-<li data-component="feedback" id="DMT_negquant_CYU_existand_opt_e">
-</ul></div></div></article><article class="exercise exercise-like" id="DMT_negquant_CYU_existcond"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="DMT_negquant_CYU_existcond" data-multipleanswers="false" data-random="">
-<div class="para" id="p-640">Determine the negation of <span class="process-math">\(\exists n\in \mathbb{Z}\text{,}\)</span> such that if <span class="process-math">\(n^2&gt;4\)</span> then <span class="process-math">\(n&gt;2\)</span> or <span class="process-math">\(n&lt;-2.\)</span>
 </div>
-<li data-component="answer" id="DMT_negquant_CYU_existcond_opt_a"><div class="para" id="p-641">
+</li>
+<li data-component="feedback" id="rs-DMT_negquant_CYU_existand_opt_e">
+</ul>
+</div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 3.2.3"><a tabindex="-1" href="#DMT_negquant_CYU_existand" title="Copy heading and permalink for Reading Question 3.2.3" aria-label="Copy heading and permalink for Reading Question 3.2.3">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="DMT_negquant_CYU_existcond"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement">
+<div class="para" id="DMT_negquant_CYU_existcond-1-1">Determine the negation of <span class="process-math">\(\exists n\in \mathbb{Z}\text{,}\)</span> such that if <span class="process-math">\(n^2&gt;4\)</span> then <span class="process-math">\(n&gt;2\)</span> or <span class="process-math">\(n&lt;-2.\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_negquant_CYU_existcond-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-DMT_negquant_CYU_existcond" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-DMT_negquant_CYU_existcond_opt_a">
+<div class="para" id="DMT_negquant_CYU_existcond-2-1-1-1">
 <span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n^2\leq 4\)</span> then <span class="process-math">\(n\leq 2\)</span> or <span class="process-math">\(n\geq -2.\)</span>
-</div></li>
-<li data-component="feedback" id="DMT_negquant_CYU_existcond_opt_a">
-<li data-component="answer" id="DMT_negquant_CYU_existcond_opt_b"><div class="para" id="p-642">
-<span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n^2\leq 4\)</span> then <span class="process-math">\(-2\leq n\leq 2.\)</span>
-</div></li>
-<li data-component="feedback" id="DMT_negquant_CYU_existcond_opt_b">
-<li data-component="answer" id="DMT_negquant_CYU_existcond_opt_c" data-correct=""><div class="para" id="p-643">
-<span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n^2&gt;4\)</span> and <span class="process-math">\(-2\leq n\leq 2.\)</span>
-</div></li>
-<li data-component="feedback" id="DMT_negquant_CYU_existcond_opt_c">
-<li data-component="answer" id="DMT_negquant_CYU_existcond_opt_d"><div class="para" id="p-644">
-<span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n^2\leq 4\)</span> and <span class="process-math">\(-2\leq n\leq 2.\)</span>
-</div></li>
-<li data-component="feedback" id="DMT_negquant_CYU_existcond_opt_d">
-<li data-component="answer" id="DMT_negquant_CYU_existcond_opt_e"><div class="para" id="p-645">
-<span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n^2\leq 4\)</span> and <span class="process-math">\(n\leq 2\)</span> or <span class="process-math">\(n\geq -2.\)</span>
-</div></li>
-<li data-component="feedback" id="DMT_negquant_CYU_existcond_opt_e">
-</ul></div></div></article><article class="exercise exercise-like" id="DMT_negquant_CYU_contraall"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="DMT_negquant_CYU_contraall" data-multipleanswers="false" data-random="">
-<div class="para" id="p-646">Determine the contrapositive of <span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n&gt;0\)</span> then <span class="process-math">\(n^3&gt;0\text{.}\)</span>
 </div>
-<li data-component="answer" id="DMT_negquant_CYU_contraall_opt_a"><div class="para" id="p-647">
+</li>
+<li data-component="feedback" id="rs-DMT_negquant_CYU_existcond_opt_a">
+<li data-component="answer" id="rs-DMT_negquant_CYU_existcond_opt_b">
+<div class="para" id="DMT_negquant_CYU_existcond-2-2-1-1">
+<span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n^2\leq 4\)</span> then <span class="process-math">\(-2\leq n\leq 2.\)</span>
+</div>
+</li>
+<li data-component="feedback" id="rs-DMT_negquant_CYU_existcond_opt_b">
+<li data-component="answer" id="rs-DMT_negquant_CYU_existcond_opt_c" data-correct="">
+<div class="para" id="DMT_negquant_CYU_existcond-2-3-1-1">
+<span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n^2&gt;4\)</span> and <span class="process-math">\(-2\leq n\leq 2.\)</span>
+</div>
+</li>
+<li data-component="feedback" id="rs-DMT_negquant_CYU_existcond_opt_c">
+<li data-component="answer" id="rs-DMT_negquant_CYU_existcond_opt_d">
+<div class="para" id="DMT_negquant_CYU_existcond-2-4-1-1">
+<span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n^2\leq 4\)</span> and <span class="process-math">\(-2\leq n\leq 2.\)</span>
+</div>
+</li>
+<li data-component="feedback" id="rs-DMT_negquant_CYU_existcond_opt_d">
+<li data-component="answer" id="rs-DMT_negquant_CYU_existcond_opt_e">
+<div class="para" id="DMT_negquant_CYU_existcond-2-5-1-1">
+<span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n^2\leq 4\)</span> and <span class="process-math">\(n\leq 2\)</span> or <span class="process-math">\(n\geq -2.\)</span>
+</div>
+</li>
+<li data-component="feedback" id="rs-DMT_negquant_CYU_existcond_opt_e">
+</ul>
+</div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 3.2.4"><a tabindex="-1" href="#DMT_negquant_CYU_existcond" title="Copy heading and permalink for Reading Question 3.2.4" aria-label="Copy heading and permalink for Reading Question 3.2.4">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="DMT_negquant_CYU_contraall"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement">
+<div class="para" id="DMT_negquant_CYU_contraall-1-1">Determine the contrapositive of <span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n&gt;0\)</span> then <span class="process-math">\(n^3&gt;0\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_negquant_CYU_contraall-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-DMT_negquant_CYU_contraall" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-DMT_negquant_CYU_contraall_opt_a">
+<div class="para" id="DMT_negquant_CYU_contraall-2-1-1-1">
 <span class="process-math">\(\exists n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n^3\leq 0\)</span> then <span class="process-math">\(n\leq 0.\)</span>
-</div></li>
-<li data-component="feedback" id="DMT_negquant_CYU_contraall_opt_a">
-<li data-component="answer" id="DMT_negquant_CYU_contraall_opt_b"><div class="para" id="p-648">
+</div>
+</li>
+<li data-component="feedback" id="rs-DMT_negquant_CYU_contraall_opt_a">
+<li data-component="answer" id="rs-DMT_negquant_CYU_contraall_opt_b">
+<div class="para" id="DMT_negquant_CYU_contraall-2-2-1-1">
 <span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n\leq 0\)</span> then <span class="process-math">\(n^3\leq 0.\)</span>
-</div></li>
-<li data-component="feedback" id="DMT_negquant_CYU_contraall_opt_b">
-<li data-component="answer" id="DMT_negquant_CYU_contraall_opt_c"><div class="para" id="p-649">
+</div>
+</li>
+<li data-component="feedback" id="rs-DMT_negquant_CYU_contraall_opt_b">
+<li data-component="answer" id="rs-DMT_negquant_CYU_contraall_opt_c">
+<div class="para" id="DMT_negquant_CYU_contraall-2-3-1-1">
 <span class="process-math">\(\exists n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n\leq 0\)</span> then <span class="process-math">\(n^3\leq 0.\)</span>
-</div></li>
-<li data-component="feedback" id="DMT_negquant_CYU_contraall_opt_c">
-<li data-component="answer" id="DMT_negquant_CYU_contraall_opt_d" data-correct=""><div class="para" id="p-650">
+</div>
+</li>
+<li data-component="feedback" id="rs-DMT_negquant_CYU_contraall_opt_c">
+<li data-component="answer" id="rs-DMT_negquant_CYU_contraall_opt_d" data-correct="">
+<div class="para" id="DMT_negquant_CYU_contraall-2-4-1-1">
 <span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n^3\leq 0\)</span> then <span class="process-math">\(n\leq 0.\)</span>
-</div></li>
-<li data-component="feedback" id="DMT_negquant_CYU_contraall_opt_d">
-</ul></div></div></article></section><section class="exercises" id="exercises-8"><h3 class="heading hide-type">
-<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</div>
+</li>
+<li data-component="feedback" id="rs-DMT_negquant_CYU_contraall_opt_d">
+</ul>
+</div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Reading Question 3.2.5"><a tabindex="-1" href="#DMT_negquant_CYU_contraall" title="Copy heading and permalink for Reading Question 3.2.5" aria-label="Copy heading and permalink for Reading Question 3.2.5">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 3.2: Check Your Understanding"><a tabindex="-1" href="#negquant3-2-23" title="Copy heading and permalink for Reading Questions 3.2: Check Your Understanding" aria-label="Copy heading and permalink for Reading Questions 3.2: Check Your Understanding">🔗</a></div>
+</section>
+<section class="exercises" id="negquant3-2-24">
+<h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-100"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-651">Which of the following is a negation for “All discrete math students are athletic”? More than one answer may be correct.</div> <ol class="lower-alpha">
-<li id="li-164"><div class="para" id="p-652">There is a discrete math student who is nonathletic.</div></li>
-<li id="li-165"><div class="para" id="p-653">All discrete math students are nonathletic.</div></li>
-<li id="li-166"><div class="para" id="p-654">There is an athletic person who is a discrete math student.</div></li>
-<li id="li-167"><div class="para" id="p-655">No discrete math students are athletic.</div></li>
-<li id="li-168"><div class="para" id="p-656">Some discrete math students are nonathletic.</div></li>
-<li id="li-169"><div class="para" id="p-657">No athletic people are discrete math students.</div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-101"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-658">Write an informal negation for each of the following statements. Be careful to avoid negations that are ambiguous.</div> <ol class="lower-alpha">
-<li id="li-170"><div class="para" id="p-659">All dogs are friendly.</div></li>
-<li id="li-171"><div class="para" id="p-660">All people are happy.</div></li>
-<li id="li-172"><div class="para" id="p-661">Some apples are red.</div></li>
-<li id="li-173"><div class="para" id="p-662">Some teams are undefeated.</div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-102"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-663">Write a negation for each of the following statements.</div> <ol class="lower-alpha">
-<li id="li-174"><div class="para" id="p-664">Any valid argument has a true conclusion.</div></li>
-<li id="li-175"><div class="para" id="p-665">Every real number is positive, negative, or zero.</div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-103"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-666">Write the negation of each of the statements.</div> <ol class="lower-alpha">
-<li id="li-176"><div class="para" id="p-667">
-<span class="process-math">\(\forall\)</span> real numbers <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\(x&gt;3\)</span> then <span class="process-math">\(x^2&gt;9\text{.}\)</span>
-</div></li>
-<li id="li-177"><div class="para" id="p-668">
-<span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n\)</span> is prime then <span class="process-math">\(n\)</span> is odd or <span class="process-math">\(n=2\text{.}\)</span>
-</div></li>
-<li id="li-178"><div class="para" id="p-669">
-<span class="process-math">\(\forall\)</span> integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n\)</span> is divisible by 6, then <span class="process-math">\(n\)</span> is divisible by 2 and <span class="process-math">\(n\)</span> is divisible by 3.</div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-104"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-670">Determine whether the proposed negation is correct. If it is not, write a correct negation.</div> <div class="para" id="p-671">
-<em class="emphasis">Statement:</em> The sum of any two irrational numbers is irrational.</div> <div class="para" id="p-672">
-<em class="emphasis">Proposed negation:</em> The sum of any two irrational numbers is rational.</div></article><article class="exercise exercise-like" id="exercise-105"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-673">Determine whether the proposed negation is correct. If it is not, write a correct negation.</div> <div class="para" id="p-674">
-<em class="emphasis">Statement:</em> For all integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n^2\)</span> is even then <span class="process-math">\(n\)</span> is even.</div> <div class="para" id="p-675">
-<em class="emphasis">Proposed negation:</em> For all integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n^2\)</span> is even, then <span class="process-math">\(n\)</span> is not even.</div></article><article class="exercise exercise-like" id="exercise-106"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-676">Consider the following sequence of digits: 2300204. A person claims that all of the 1’s in the sequence are to the left of all of the 0’s in the sequence. Is this true? Justify your answer.</div>
+<article class="exercise exercise-like" id="negquant3-2-24-1"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="negquant3-2-24-1-1-1">Which of the following is a negation for “All discrete math students are athletic”? More than one answer may be correct.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-24-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<ol class="lower-alpha ol-marker-1" id="negquant3-2-24-1-1-2">
+<li id="negquant3-2-24-1-1-2-1">
+<div class="para" id="negquant3-2-24-1-1-2-1-1">There is a discrete math student who is nonathletic.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-24-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.2.1.a"><a tabindex="-1" href="#negquant3-2-24-1-1-2-1" title="Copy heading and permalink for Item 3.2.1.a" aria-label="Copy heading and permalink for Item 3.2.1.a">🔗</a></div>
+</li>
+<li id="negquant3-2-24-1-1-2-2">
+<div class="para" id="negquant3-2-24-1-1-2-2-1">All discrete math students are nonathletic.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-24-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.2.1.b"><a tabindex="-1" href="#negquant3-2-24-1-1-2-2" title="Copy heading and permalink for Item 3.2.1.b" aria-label="Copy heading and permalink for Item 3.2.1.b">🔗</a></div>
+</li>
+<li id="negquant3-2-24-1-1-2-3">
+<div class="para" id="negquant3-2-24-1-1-2-3-1">There is an athletic person who is a discrete math student.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-24-1-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.2.1.c"><a tabindex="-1" href="#negquant3-2-24-1-1-2-3" title="Copy heading and permalink for Item 3.2.1.c" aria-label="Copy heading and permalink for Item 3.2.1.c">🔗</a></div>
+</li>
+<li id="negquant3-2-24-1-1-2-4">
+<div class="para" id="negquant3-2-24-1-1-2-4-1">No discrete math students are athletic.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-24-1-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.2.1.d"><a tabindex="-1" href="#negquant3-2-24-1-1-2-4" title="Copy heading and permalink for Item 3.2.1.d" aria-label="Copy heading and permalink for Item 3.2.1.d">🔗</a></div>
+</li>
+<li id="negquant3-2-24-1-1-2-5">
+<div class="para" id="negquant3-2-24-1-1-2-5-1">Some discrete math students are nonathletic.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-24-1-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.2.1.e"><a tabindex="-1" href="#negquant3-2-24-1-1-2-5" title="Copy heading and permalink for Item 3.2.1.e" aria-label="Copy heading and permalink for Item 3.2.1.e">🔗</a></div>
+</li>
+<li id="negquant3-2-24-1-1-2-6">
+<div class="para" id="negquant3-2-24-1-1-2-6-1">No athletic people are discrete math students.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-24-1-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.2.1.f"><a tabindex="-1" href="#negquant3-2-24-1-1-2-6" title="Copy heading and permalink for Item 3.2.1.f" aria-label="Copy heading and permalink for Item 3.2.1.f">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.1"><a tabindex="-1" href="#negquant3-2-24-1" title="Copy heading and permalink for Exercise 3.2.1" aria-label="Copy heading and permalink for Exercise 3.2.1">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="negquant3-2-24-2"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="negquant3-2-24-2-1-1">Write an informal negation for each of the following statements. Be careful to avoid negations that are ambiguous.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-24-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<ol class="lower-alpha ol-marker-1" id="negquant3-2-24-2-1-2">
+<li id="negquant3-2-24-2-1-2-1">
+<div class="para" id="negquant3-2-24-2-1-2-1-1">All dogs are friendly.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-24-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.2.2.a"><a tabindex="-1" href="#negquant3-2-24-2-1-2-1" title="Copy heading and permalink for Item 3.2.2.a" aria-label="Copy heading and permalink for Item 3.2.2.a">🔗</a></div>
+</li>
+<li id="negquant3-2-24-2-1-2-2">
+<div class="para" id="negquant3-2-24-2-1-2-2-1">All people are happy.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-24-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.2.2.b"><a tabindex="-1" href="#negquant3-2-24-2-1-2-2" title="Copy heading and permalink for Item 3.2.2.b" aria-label="Copy heading and permalink for Item 3.2.2.b">🔗</a></div>
+</li>
+<li id="negquant3-2-24-2-1-2-3">
+<div class="para" id="negquant3-2-24-2-1-2-3-1">Some apples are red.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-24-2-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.2.2.c"><a tabindex="-1" href="#negquant3-2-24-2-1-2-3" title="Copy heading and permalink for Item 3.2.2.c" aria-label="Copy heading and permalink for Item 3.2.2.c">🔗</a></div>
+</li>
+<li id="negquant3-2-24-2-1-2-4">
+<div class="para" id="negquant3-2-24-2-1-2-4-1">Some teams are undefeated.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-24-2-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.2.2.d"><a tabindex="-1" href="#negquant3-2-24-2-1-2-4" title="Copy heading and permalink for Item 3.2.2.d" aria-label="Copy heading and permalink for Item 3.2.2.d">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.2"><a tabindex="-1" href="#negquant3-2-24-2" title="Copy heading and permalink for Exercise 3.2.2" aria-label="Copy heading and permalink for Exercise 3.2.2">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="negquant3-2-24-3"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="negquant3-2-24-3-1-1">Write a negation for each of the following statements.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-24-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<ol class="lower-alpha ol-marker-1" id="negquant3-2-24-3-1-2">
+<li id="negquant3-2-24-3-1-2-1">
+<div class="para" id="negquant3-2-24-3-1-2-1-1">Any valid argument has a true conclusion.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-24-3-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.2.3.a"><a tabindex="-1" href="#negquant3-2-24-3-1-2-1" title="Copy heading and permalink for Item 3.2.3.a" aria-label="Copy heading and permalink for Item 3.2.3.a">🔗</a></div>
+</li>
+<li id="negquant3-2-24-3-1-2-2">
+<div class="para" id="negquant3-2-24-3-1-2-2-1">Every real number is positive, negative, or zero.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-24-3-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.2.3.b"><a tabindex="-1" href="#negquant3-2-24-3-1-2-2" title="Copy heading and permalink for Item 3.2.3.b" aria-label="Copy heading and permalink for Item 3.2.3.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3"><a tabindex="-1" href="#negquant3-2-24-3" title="Copy heading and permalink for Exercise 3.2.3" aria-label="Copy heading and permalink for Exercise 3.2.3">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="negquant3-2-24-4"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="negquant3-2-24-4-1-1">Write the negation of each of the statements.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-24-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<ol class="lower-alpha ol-marker-1" id="negquant3-2-24-4-1-2">
+<li id="negquant3-2-24-4-1-2-1">
+<div class="para" id="negquant3-2-24-4-1-2-1-1">
+<span class="process-math">\(\forall\)</span> real numbers <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\(x&gt;3\)</span> then <span class="process-math">\(x^2&gt;9\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-24-4-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.2.4.a"><a tabindex="-1" href="#negquant3-2-24-4-1-2-1" title="Copy heading and permalink for Item 3.2.4.a" aria-label="Copy heading and permalink for Item 3.2.4.a">🔗</a></div>
+</li>
+<li id="negquant3-2-24-4-1-2-2">
+<div class="para" id="negquant3-2-24-4-1-2-2-1">
+<span class="process-math">\(\forall n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n\)</span> is prime then <span class="process-math">\(n\)</span> is odd or <span class="process-math">\(n=2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-24-4-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.2.4.b"><a tabindex="-1" href="#negquant3-2-24-4-1-2-2" title="Copy heading and permalink for Item 3.2.4.b" aria-label="Copy heading and permalink for Item 3.2.4.b">🔗</a></div>
+</li>
+<li id="negquant3-2-24-4-1-2-3">
+<div class="para" id="negquant3-2-24-4-1-2-3-1">
+<span class="process-math">\(\forall\)</span> integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n\)</span> is divisible by 6, then <span class="process-math">\(n\)</span> is divisible by 2 and <span class="process-math">\(n\)</span> is divisible by 3.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-24-4-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.2.4.c"><a tabindex="-1" href="#negquant3-2-24-4-1-2-3" title="Copy heading and permalink for Item 3.2.4.c" aria-label="Copy heading and permalink for Item 3.2.4.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.4"><a tabindex="-1" href="#negquant3-2-24-4" title="Copy heading and permalink for Exercise 3.2.4" aria-label="Copy heading and permalink for Exercise 3.2.4">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="negquant3-2-24-5"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="negquant3-2-24-5-1-1">Determine whether the proposed negation is correct. If it is not, write a correct negation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-24-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="negquant3-2-24-5-1-2">
+<em class="emphasis">Statement:</em> The sum of any two irrational numbers is irrational.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-24-5-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="negquant3-2-24-5-1-3">
+<em class="emphasis">Proposed negation:</em> The sum of any two irrational numbers is rational.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-24-5-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.5"><a tabindex="-1" href="#negquant3-2-24-5" title="Copy heading and permalink for Exercise 3.2.5" aria-label="Copy heading and permalink for Exercise 3.2.5">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="negquant3-2-24-6"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="negquant3-2-24-6-1-1">Determine whether the proposed negation is correct. If it is not, write a correct negation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-24-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="negquant3-2-24-6-1-2">
+<em class="emphasis">Statement:</em> For all integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n^2\)</span> is even then <span class="process-math">\(n\)</span> is even.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-24-6-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="negquant3-2-24-6-1-3">
+<em class="emphasis">Proposed negation:</em> For all integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n^2\)</span> is even, then <span class="process-math">\(n\)</span> is not even.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-24-6-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.6"><a tabindex="-1" href="#negquant3-2-24-6" title="Copy heading and permalink for Exercise 3.2.6" aria-label="Copy heading and permalink for Exercise 3.2.6">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="negquant3-2-24-7"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="negquant3-2-24-7-1-1">Consider the following sequence of digits: 2300204. A person claims that all of the 1’s in the sequence are to the left of all of the 0’s in the sequence. Is this true? Justify your answer.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-24-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><div class="para" id="p-677">Write the claim formally and write a formal negation for it. Is the negation true or false?</div></div></div>
-</div></article></section></section></div>
-<div class="ptx-content-footer">
-<a class="previous-button button" href="quantifiersI3-1.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="multiplequant3-3.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<details id="negquant3-2-24-7-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="negquant3-2-24-7-2-1">Write the claim formally and write a formal negation for it. Is the negation true or false?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#negquant3-2-24-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Hint 3.2.7.1"><a tabindex="-1" href="#negquant3-2-24-7-2" title="Copy heading and permalink for Hint 3.2.7.1" aria-label="Copy heading and permalink for Hint 3.2.7.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.7"><a tabindex="-1" href="#negquant3-2-24-7" title="Copy heading and permalink for Exercise 3.2.7" aria-label="Copy heading and permalink for Exercise 3.2.7">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercises 3.2"><a tabindex="-1" href="#negquant3-2-24" title="Copy heading and permalink for Exercises 3.2" aria-label="Copy heading and permalink for Exercises 3.2">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 3.2: Negating Quantified Statements"><a tabindex="-1" href="#negquant3-2" title="Copy heading and permalink for Section 3.2: Negating Quantified Statements" aria-label="Copy heading and permalink for Section 3.2: Negating Quantified Statements">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="quantifiersI3-1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="multiplequant3-3.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
-<div id="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 <!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
 var sc_project=12894193;

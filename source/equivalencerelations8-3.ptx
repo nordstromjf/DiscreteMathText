@@ -16,7 +16,7 @@
 
  <definition xml:id="D_mod"><statement><p>Let <m>m, n, d\in \mathbb{Z}, d>0</m>. Then <m>m</m> and <m>n</m> are <term>congruent modulo <m>d</m></term><idx>congruent mod <m>d</m></idx> if <m>d\mid (m-n)</m>.</p></statement></definition>
 
- <p>We often just say <m>m</m> is congruent to <m>n</m> mod <m>d</m>, and denote it <me>m\equiv n \mod d.</me><notation><usage><m>m\equiv n \mod d</m></usage><description><m>m</m> is congruent to <m>n</m> mod <m>d</m>; <m>d\mid (m-n)</m></description></notation></p>
+ <p>We often just say <m>m</m> is congruent to <m>n</m> mod <m>d</m>, and denote it <md>m\equiv n \mod d.</md><notation><usage><m>m\equiv n \mod d</m></usage><description><m>m</m> is congruent to <m>n</m> mod <m>d</m>; <m>d\mid (m-n)</m></description></notation></p>
 
   <example xml:id="E_mod"><title>Congruence mod 3</title>
 
@@ -35,7 +35,7 @@
   </example>
 
   <p>Let <m>R</m> be an equivalence relation on <m>A</m>. Let <m>a\in A</m>. The set 
-<me>[a]=\{b\in A : b R a\}</me>
+<md>[a]=\{b\in A : b R a\}</md>
 is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.</p>
 
 <p>Given a specific <m>a\in A</m>, we find the equivalence class of <m>a</m> by finding all the elements that are related to <m>a</m>. Keep in mind the equivalence class is a set, denoted <m>[a]</m>.<notation><usage><m>[a]</m></usage><description>the equivalence class of <m>a</m></description></notation></p>
@@ -44,17 +44,17 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.</
 
   <p>Consider the equivalence relation <m>m\equiv n \mod 3</m>, on <m>\mathbb{Z}</m>.</p>
 
-  <p>Find <m>[0]</m>, the set of elements in <m>\mathbb{Z}</m> equivalent to 0.</p>
-  <answer><m>[0]=\{0, 3, -3, 6, -6, \ldots\}=\{3k : k\in \mathbb{Z}\}</m></answer>
-  <p>Find <m>[1]</m>, the set of elements in <m>\mathbb{Z}</m> equivalent to 1.</p>
-  <answer><m>[1]=\{1, 4, -2, -5, 7, 10, \ldots\}=\{3k+1: k\in \mathbb{Z}\}</m></answer>
+  <p>Find <m>[0]</m>, the set of elements in <m>\mathbb{Z}</m> equivalent to <m>0</m>.</p>
+  <answer><p><m>[0]=\{0, 3, -3, 6, -6, \ldots\}=\{3k : k\in \mathbb{Z}\}</m></p></answer>
+  <p>Find <m>[1]</m>, the set of elements in <m>\mathbb{Z}</m> equivalent to <m>1</m>.</p>
+  <answer><p><m>[1]=\{1, 4, -2, -5, 7, 10, \ldots\}=\{3k+1: k\in \mathbb{Z}\}</m></p></answer>
 
-  <p>Find <m>[2]</m>, the set of elements in <m>\mathbb{Z}</m> equivalent to 2.</p>
-  <answer><m>[2]=\{2, 5, -1, -4, -7, \ldots\}=\{3k+2: k\in \mathbb{Z}\}</m></answer>
-  <p>Find <m>[3]</m>, the set of elements in <m>\mathbb{Z}</m> equivalent to 3.</p>
-  <answer><m>[3]=\{0, 3, -3, 6, -6, \ldots\}=\{3k : k\in \mathbb{Z}\}</m></answer>
-  <p>Find <m>[-1]</m>, the set of elements in <m>\mathbb{Z}</m> equivalent to -1.</p>
-  <answer><m>[-1]=\{2, 5, -1, -4, -7, \ldots\}=\{3k+2: k\in \mathbb{Z}\}</m></answer>
+  <p>Find <m>[2]</m>, the set of elements in <m>\mathbb{Z}</m> equivalent to <m>2</m>.</p>
+  <answer><p><m>[2]=\{2, 5, -1, -4, -7, \ldots\}=\{3k+2: k\in \mathbb{Z}\}</m></p></answer>
+  <p>Find <m>[3]</m>, the set of elements in <m>\mathbb{Z}</m> equivalent to <m>3</m>.</p>
+  <answer><p><m>[3]=\{0, 3, -3, 6, -6, \ldots\}=\{3k : k\in \mathbb{Z}\}</m></p></answer>
+  <p>Find <m>[-1]</m>, the set of elements in <m>\mathbb{Z}</m> equivalent to <m>-1</m>.</p>
+  <answer><p><m>[-1]=\{2, 5, -1, -4, -7, \ldots\}=\{3k+2: k\in \mathbb{Z}\}</m></p></answer>
 
   </example>
 
@@ -71,34 +71,34 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.</
   <p>This is the relation where two subsets of <m>\{1, 2, 3\}</m> are related if they have the same number of elements. You can check that this is an equivalence relation.</p>
 
   <p>Find <m>[\emptyset]</m>, the set of elements in <m>\mathcal{P}(\{1, 2, 3\})</m> equivalent to <m>\emptyset</m>.</p>
-  <answer><m>[\emptyset]=\{\emptyset\}</m>, since this is the only subset with 0 elements.</answer>
+  <answer><p><m>[\emptyset]=\{\emptyset\}</m>, since this is the only subset with 0 elements.</p></answer>
   <p>Find <m>[\{1\}]</m>.</p>
-  <answer><m>[\{1\}]=\{\{1\}, \{2\}, \{3\}\}</m>, since these all have 1 element.</answer>
+  <answer><p><m>[\{1\}]=\{\{1\}, \{2\}, \{3\}\}</m>, since these all have 1 element.</p></answer>
 
   <p>Find <m>[\{1, 2\}]</m>.</p>
-  <answer><m>[\{1, 2\}]=\{\{1, 2\}, \{2, 3\}, \{1, 3\}\}</m></answer>
+  <answer><p><m>[\{1, 2\}]=\{\{1, 2\}, \{2, 3\}, \{1, 3\}\}</m></p></answer>
 
   <p>Find <m>[\{1, 2, 3\}]</m>.</p>
-  <answer><m>[\{1, 2, 3\}]=\{\{1, 2, 3\}\}</m></answer>
+  <answer><p><m>[\{1, 2, 3\}]=\{\{1, 2, 3\}\}</m></p></answer>
 
   </example>
 
   <p>Once again, the distinct equivalence classes are disjoint--they have no elements in common. Furthermore, the equivalence classes <m>[\emptyset], [\{1\}], [\{1, 2\}], [\{1, 2, 3\}]</m> partition the power set by size of the subset.</p>
 
-  <activity><introduction><p>Define the relation on <m>\mathbb{Z}</m> by <m>xRy \iff |x|=|y|</m>.</p></introduction>
-<task><p>Prove <m>R</m> is an equivalence relation.</p></task>
-<task><p>Find <m>[0]</m> and <m>[-5]</m>.</p></task></activity>
+  <activity label="equivrel-absval"><introduction><p>Define the relation on <m>\mathbb{Z}</m> by <m>xRy \iff |x|=|y|</m>.</p></introduction>
+<task label="equivrel-absval-pf"><statement><p>Prove <m>R</m> is an equivalence relation.</p></statement><response/></task>
+<task label="equivrel-absval-class"><statement><p>Find <m>[0]</m> and <m>[-5]</m>.</p></statement><response/></task></activity>
 
-<activity><introduction><p>Recall that <m>n \equiv m \mod 5\iff 5\mid (m-n)</m>.</p></introduction>
-<task><p>Prove the relation <m>nRm \iff n \equiv m \mod 5</m> is an equivalence relation on <m>\mathbb{Z}</m>. </p></task>
-<task><p>Find <m>[0]</m> and <m>[2]</m>.</p></task></activity>
+<activity label="equivrel-mod5"><introduction><p>Recall that <m>n \equiv m \mod 5\iff 5\mid (m-n)</m>.</p></introduction>
+<task label="equivrel-mod5-pf"><statement><p>Prove the relation <m>nRm \iff n \equiv m \mod 5</m> is an equivalence relation on <m>\mathbb{Z}</m>. </p></statement><response/></task>
+<task label="equivrel-mod5-class"><statement><p>Find <m>[0]</m> and <m>[2]</m>.</p></statement><response/></task></activity>
 
-  <activity xml:id="A_partasequivrel"><introduction><p>Let <m>S=\{1, 2, 3, 4, 5, 6\}</m>. Let <m>A_1=\{1, 2, 3\}, A_2=\{4\}, A_3=\{5, 6\}</m>.</p></introduction>
-<task><p>Check the conditions in <xref ref="D_partition"/> to show <m>\{A_i\}</m> is a partition of <m>S</m>.</p></task>
-<task><p>Define the relation on <m>S</m>, <m>xRy \iff</m> <m>x</m> and <m>y</m> are in the same subset of the partition. Draw the directed graph for <m>R</m>.</p></task>
-<task><p>Show <m>R</m> is reflexive, symmetric and transitive.</p></task>
-<task><p>Find <m>[1]</m>, the equivalence class of 1. </p></task>
-<task><p>Do you think this particular partition matters? Could we define this relation on any partition of any set and still have it be reflexive, symmetric and transitive?</p></task></activity>
+  <activity xml:id="A_partasequivrel" label="equivrel-partequiv"><introduction><p>Let <m>S=\{1, 2, 3, 4, 5, 6\}</m>. Let <m>A_1=\{1, 2, 3\}, A_2=\{4\}, A_3=\{5, 6\}</m>.</p></introduction>
+<task label="equivrel-partequiv-cond"><statement><p>Check the conditions in <xref ref="D_partition"/> to show <m>\{A_i\}</m> is a partition of <m>S</m>.</p></statement><response/></task>
+<task label="equivrel-partequiv-graph" attachment="yes"><statement><p>Define the relation on <m>S</m>, <m>xRy \iff</m> <m>x</m> and <m>y</m> are in the same subset of the partition. Draw the directed graph for <m>R</m>.</p></statement><response/></task>
+<task label="equivrel-partequiv-RST"><statement><p>Show <m>R</m> is reflexive, symmetric and transitive.</p></statement><response/></task>
+<task label="equivrel-partequiv-class"><statement><p>Find <m>[1]</m>, the equivalence class of <m>1</m>. </p></statement><response/></task>
+<task label="equivrel-partequiv-anypart"><statement><p>Do you think this particular partition matters? Could we define this relation on any partition of any set and still have it be reflexive, symmetric and transitive?</p></statement><response/></task></activity>
 
   <p>There is an important connection between equivalence classes and partitions, as we see in the next two theorems.</p>
 
@@ -139,7 +139,7 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.</
       <!--<p>Let <m>A=\{1, 2, 3\}, B=\{2, 4, 6, 8\}, C=\{0, 1\}</m>.</p>-->
   
       <exercise label="DMT_equivrel_CYU_leqA"><statement><p>Determine if the relation is an equivalence relation. If it is, give the number of distinct equivalence classes. <m>R</m> is the relation on <m>A=\{1, 2, 3\}</m> given by 
-      <me>a R b \Leftrightarrow a\leq b.</me></p></statement>
+      <md>a R b \Leftrightarrow a\leq b.</md></p></statement>
       <choices>
         <choice correct="yes"><statement><p>Not an equivalence relation.</p></statement>
         <feedback><p>Correct.</p></feedback>
@@ -154,10 +154,10 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.</
         <feedback><p><m>R</m> is not symmetric.</p></feedback>
         </choice>
       </choices>
-     <answer>Not an equivalence relation.</answer></exercise>
+     <answer><p>Not an equivalence relation.</p></answer></exercise>
 
       <exercise label="DMT_equivrel_CYU_apbevenC"><statement><p>Determine if the relation is an equivalence relation. If it is, give the number of distinct equivalence classes. <m>R</m> is the relation on <m>C=\{0, 1\}</m> given by 
-      <me>a R b \Leftrightarrow a+b \text{ is even}.</me></p></statement>
+      <md>a R b \Leftrightarrow a+b \text{ is even}.</md></p></statement>
       <choices>
         <choice><statement><p>Not an equivalence relation.</p></statement>
         <feedback><p>Check that <m>R</m> is reflexive, symmetric, and transitive.</p></feedback>
@@ -169,10 +169,10 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.</
         <feedback><p>Correct. The equivalence classes are <m>[0]=\{0\}, [1]=\{1\}</m>.</p></feedback>
         </choice>
       </choices>
-      <answer>Equivalence relation. <m>[0]=\{0\}, [1]=\{1\}</m></answer></exercise>
+      <answer><p>Equivalence relation. <m>[0]=\{0\}, [1]=\{1\}</m></p></answer></exercise>
 
       <exercise label="DMT_equivrel_CYU_apbevenB"><statement><p>Determine if the relation is an equivalence relation. If it is, give the number of distinct equivalence classes. <m>R</m> is the relation on <m>B=\{2, 4, 6, 8\}</m> given by 
-      <me>a R b \Leftrightarrow a+b \text{ is even}.</me></p></statement>
+      <md>a R b \Leftrightarrow a+b \text{ is even}.</md></p></statement>
       <choices>
         <choice><statement><p>Not an equivalence relation.</p></statement>
         <feedback><p>Check that <m>R</m> is reflexive, symmetric, and transitive.</p></feedback>
@@ -184,10 +184,10 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.</
         <feedback><p>Check that the sum of any two elements in <m>B</m> is even. Thus, all elements are related to each other.</p></feedback>
         </choice>
       </choices>
-      <answer>Equivalence relation. <m>[2]=\{2, 4, 6, 8\}</m></answer></exercise>
+      <answer><p>Equivalence relation. <m>[2]=\{2, 4, 6, 8\}</m></p></answer></exercise>
 
       <exercise label="DMT_equivrel_CYU_apbevenA"><statement><p>Determine if the relation is an equivalence relation. If it is, give the number of distinct equivalence classes. <m>R</m> is the relation on <m>A=\{1, 2, 3\}</m> given by 
-      <me>a R b \Leftrightarrow a+b \text{ is even}.</me></p></statement>
+      <md>a R b \Leftrightarrow a+b \text{ is even}.</md></p></statement>
       <choices>
         <choice><statement><p>Not an equivalence relation.</p></statement>
         <feedback><p>Check that <m>R</m> is reflexive, symmetric, and transitive.</p></feedback>
@@ -202,10 +202,10 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.</
         <feedback><p>Note, <m>1+3</m> is even, so 1 is related to 3.</p></feedback>
         </choice>
       </choices>
-      <answer>Equivalence relation. <m>[1]=\{1, 3\}, [2]=\{2\}</m></answer></exercise>
+      <answer><p>Equivalence relation. <m>[1]=\{1, 3\}, [2]=\{2\}</m></p></answer></exercise>
 
       <exercise label="DMT_equivrel_CYU_divB"><statement><p>Determine if the relation is an equivalence relation. If it is, give the number of distinct equivalence classes. <m>R</m> is the relation on <m>B=\{2, 4, 6, 8\}</m> given by 
-      <me>a R b \Leftrightarrow a\mid b.</me></p></statement>
+      <md>a R b \Leftrightarrow a\mid b.</md></p></statement>
       <choices>
         <choice correct="yes"><statement><p>Not an equivalence relation.</p></statement>
         <feedback><p>Correct.</p></feedback>
@@ -220,10 +220,10 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.</
         <feedback><p><m>R</m> is not symmetric.</p></feedback>
         </choice>
       </choices>
-      <answer>Not an equivalence relation.</answer></exercise>
+      <answer><p>Not an equivalence relation.</p></answer></exercise>
 
       <exercise label="DMT_equivrel_CYU_apbe0Z"><statement><p>Determine if the relation is an equivalence relation. If it is, give the number of distinct equivalence classes. <m>R</m> is the relation on <m>\mathbb{Z}</m> given by 
-      <me>a R b \Leftrightarrow a+b=0.</me></p></statement>
+      <md>a R b \Leftrightarrow a+b=0.</md></p></statement>
       <choices>
         <choice correct="yes"><statement><p>Not an equivalence relation.</p></statement>
         <feedback><p>Correct.</p></feedback>
@@ -238,10 +238,10 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.</
         <feedback><p><m>R</m> is not transitive.</p></feedback>
         </choice>
       </choices>
-      <answer>Not an equivalence relation.</answer></exercise>
+      <answer><p>Not an equivalence relation.</p></answer></exercise>
 
       <exercise label="DMT_equivrel_CYU_mod4"><statement><p>Determine if the relation is an equivalence relation. If it is, find the equivalence classes. <m>R</m> is the relation on <m>\mathbb{Z}</m> given by 
-      <me>a R b \Leftrightarrow a\equiv b \mod 4.</me></p></statement>
+      <md>a R b \Leftrightarrow a\equiv b \mod 4.</md></p></statement>
       <choices>
         <choice><statement><p>Not an equivalence relation.</p></statement>
         <feedback><p>Check that <m>R</m> is reflexive, symmetric, and transitive.</p></feedback>
@@ -256,7 +256,7 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.</
         <feedback><p>Although each equivalence class has infinitely many elements, there are only as many equivalence classes as possible remainders when dividing by 4.</p></feedback>
         </choice>
       </choices>
-      <answer>Equivalence relation. <m>[0]=\{4k : k\in \mathbb{Z}\}</m>, <m>[1]=\{4k+1: k\in \mathbb{Z}\}</m>, <m>[2]=\{4k+2 : k\in \mathbb{Z}\}</m>, <m>[3]=\{4k+3 : k\in \mathbb{Z}\}</m></answer></exercise>
+      <answer><p>Equivalence relation. <m>[0]=\{4k : k\in \mathbb{Z}\}</m>, <m>[1]=\{4k+1: k\in \mathbb{Z}\}</m>, <m>[2]=\{4k+2 : k\in \mathbb{Z}\}</m>, <m>[3]=\{4k+3 : k\in \mathbb{Z}\}</m></p></answer></exercise>
 
 
 
@@ -273,28 +273,28 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.</
         <p>
     Let <m>A=\{0, 1, 2, 3, 4\}</m>. Let
   
-    <me>R=\{(0, 0), (0, 4), (1, 1), (1, 3), (2, 2), (3, 1), (3, 3), (4, 0), (4, 4)\}.</me>
+    <md>R=\{(0, 0), (0, 4), (1, 1), (1, 3), (2, 2), (3, 1), (3, 3), (4, 0), (4, 4)\}.</md>
   
     Find the equivalence classes of <m>R</m>.
   </p>
       </statement></exercise>
       <exercise><statement>
         <p>
-    Let <m>A=\{0, 1, 2, 3, 4, \ldots, 20\}</m>. Let <m>R</m> be the relation on <m>A</m> given by <me>x\ R\ y\iff 4\mid (x-y).</me>
+    Let <m>A=\{0, 1, 2, 3, 4, \ldots, 20\}</m>. Let <m>R</m> be the relation on <m>A</m> given by <md>x\ R\ y\iff 4\mid (x-y).</md>
 
     Find the equivalence classes of <m>R</m>.
   </p>
       </statement></exercise>
       <exercise><statement>
         <p>
-    Let <m>A=\{-4, -3, -2, -1, 0, 1, 2, 3, 4, 5\}</m>. Let <m>R</m> be the relation on <m>A</m> given by <me>x\ R\ y\iff 3\mid (x-y).</me>
+    Let <m>A=\{-4, -3, -2, -1, 0, 1, 2, 3, 4, 5\}</m>. Let <m>R</m> be the relation on <m>A</m> given by <md>x\ R\ y\iff 3\mid (x-y).</md>
  
     Find the equivalence classes of <m>R</m>.
   </p>
       </statement></exercise>
       <exercise><statement>
         <p>
-    Let <m>X=\{a, b, c\}</m> and <m>A={\cal P}(X)</m>. Let <m>R</m> be the relation on <m>A</m> given by <me>U\ R\ V\iff N(U)=N(V)</me> where <m>N(U)</m> is the number of elements in <m>U</m>. Find the equivalence classes of <m>R</m>.
+    Let <m>X=\{a, b, c\}</m> and <m>A={\cal P}(X)</m>. Let <m>R</m> be the relation on <m>A</m> given by <md>U\ R\ V\iff N(U)=N(V)</md> where <m>N(U)</m> is the number of elements in <m>U</m>. Find the equivalence classes of <m>R</m>.
   </p>
       </statement></exercise>
       <exercise><statement>
@@ -302,7 +302,7 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.</
     Determine if the following are true or false.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     <m>17 \equiv 2 \mod 5</m>.
@@ -331,12 +331,12 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.</
       </statement></exercise>
       <exercise><statement>
         <p>
-    Let <m>R</m> be the relation <q>congruence modulo 3.</q> Which of the following equivalence classes are equal? <me>[7], [-4], [-6], [17], [4], [27], [19]</me>
+    Let <m>R</m> be the relation <q>congruence modulo 3.</q> Which of the following equivalence classes are equal? <md>[7], [-4], [-6], [17], [4], [27], [19]</md>
   </p>
       </statement></exercise>
       <exercise><statement>
         <p>
-    Let <m>R</m> be the relation <q>congruence modulo 7.</q> Which of the following equivalence classes are equal? <me>[35], [3], [-7], [12], [0], [-2], [17]</me>
+    Let <m>R</m> be the relation <q>congruence modulo 7.</q> Which of the following equivalence classes are equal? <md>[35], [3], [-7], [12], [0], [-2], [17]</md>
   </p>
       </statement></exercise>
       <exercise><statement>
@@ -356,10 +356,10 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.</
   </p></hint></exercise>
       <exercise><statement>
         <p>
-    Define <m>A</m> to be the <q>absolute value</q> relation on <m>\mathbb{R}</m> by <me>x\ A\ y \iff |x|=|y|.</me>
+    Define <m>A</m> to be the <q>absolute value</q> relation on <m>\mathbb{R}</m> by <md>x\ A\ y \iff |x|=|y|.</md>
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     Prove <m>A</m> is an equivalence relation on <m>\mathbb{R}</m>.

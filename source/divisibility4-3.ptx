@@ -28,61 +28,61 @@
 <example xml:id="E_divides"><title>Finding Divisors</title>
   <p>
   Find the divisors of 6.</p>
-  <answer>1, 2, 3, 6, -1, -2, -3, -6</answer>
+  <answer><p>1, 2, 3, 6, -1, -2, -3, -6</p></answer>
   <p>
   Find the divisors of 5.</p>
-  <answer>1, 5, -1, -5</answer>
+  <answer><p>1, 5, -1, -5</p></answer>
   <p>
   Find the divisors of 1.</p>
-  <answer>1, -1</answer>
+  <answer><p>1, -1</p></answer>
 </example>
 
-<p>If <m>d</m> does not divide <m>n</m>, then for every <m>k\in \mathbb{Z}, n\neq dk</m>. This can be difficult to show in general, but if <m>n</m> and <m>d</m> are specific integers, you could show <m>\frac{n}{d}</m> is not an integer. This is the <em>only</em> time a fraction can show up in proofs about divibilty.</p>
+<p>If <m>d</m> does not divide <m>n</m>, then for every <m>k\in \mathbb{Z}, n\neq dk</m>. This can be difficult to show in general, but if <m>n</m> and <m>d</m> are specific integers, you could show <m>\frac{n}{d}</m> is not an integer. This is the <em>only</em> time a fraction can show up in proofs about divisibilty.</p>
 <p>We use the notation <m>d\nmid n</m><notation><useage><m>d\nmid n</m></useage><description><m>d</m> does not divide <m>n</m></description></notation> for <m>d</m> does not divide <m>n</m>.</p>
 
 <example xml:id="E_TFdivides"><title>Determining Divisibility</title>
   <p>
   True or false: <m>8\mid 24</m>.</p>
-  <answer>True, <m>24=8(3)</m>.</answer>
+  <answer><p>True, <m>24=8(3)</m>.</p></answer>
   <p>
   True or false: <m>8\mid 4</m>.</p>
-  <answer>False, <m>4=8(k)</m> has no integer solutions since <m>k=1/2</m>.</answer>
+  <answer><p>False, <m>4=8(k)</m> has no integer solutions since <m>k=1/2</m>.</p></answer>
 
   <p>
   True or false: <m>8\mid 10</m>.</p>
-  <answer>False, <m>10=8(k)</m> has no integer solutions since <m>k=5/4</m>.</answer>
+  <answer><p>False, <m>10=8(k)</m> has no integer solutions since <m>k=5/4</m>.</p></answer>
 
    <p>
   True or false: <m>8\mid -8</m>.</p>
-  <answer>True, <m>-8=8(-1)</m>.</answer>
+  <answer><p>True, <m>-8=8(-1)</m>.</p></answer>
 
    <p>
   True or false: <m>-2\mid 8</m>.</p>
-  <answer>True, <m>8=-2(-4)</m>.</answer>
+  <answer><p>True, <m>8=-2(-4)</m>.</p></answer>
 
    <p>
   True or false: <m>1\mid 4</m>.</p>
-  <answer>True, <m>4=1(4)</m>.</answer>
+  <answer><p>True, <m>4=1(4)</m>.</p></answer>
 
    <p>
   True or false: <m>8\mid 0</m>.</p>
-  <answer>True, <m>0=8(0)</m>.</answer>
+  <answer><p>True, <m>0=8(0)</m>.</p></answer>
 
   <p>
   True or false: <m>4\mid 1</m>.</p>
-  <answer>False, <m>1=4(k)</m> has no integer solutions since <m>k=1/4</m>.</answer>
+  <answer><p>False, <m>1=4(k)</m> has no integer solutions since <m>k=1/4</m>.</p></answer>
 
   <p>
   True or false: <m>0\mid 8</m>.</p>
-  <answer>False, <m>8=0(k)</m> has no integer solutions.</answer>
+  <answer><p>False, <m>8=0(k)</m> has no integer solutions.</p></answer>
 </example>
 
-<activity><introduction><p>Determine if the following divisibility statements are true or false, and justify your answer.</p></introduction>
-<task><m>3\mid 10</m></task>
-<task><m>3\mid 0</m></task>
-<task><m>3\mid 36</m></task>
-<task><m>12\mid 4</m></task>
-<task><m>0\mid 4</m></task>
+<activity label="div-TF"><introduction><p>Determine if the following divisibility statements are true or false, and justify your answer.</p></introduction>
+<task label="div-TF-a"><statement><p><m>3\mid 10</m></p></statement><response/></task>
+<task label="div-TF-b"><statement><p><m>3\mid 0</m></p></statement><response/></task>
+<task label="div-TF-c"><statement><p><m>3\mid 36</m></p></statement><response/></task>
+<task label="div-TF-d"><statement><p><m>12\mid 4</m></p></statement><response/></task>
+<task label="div-TF-e"><statement><p><m>0\mid 4</m></p></statement><response/></task>
 </activity>
 
 
@@ -93,11 +93,25 @@
 
 <proof><p>Let <m>a, b, c\in \mathbb{Z}</m>. Assume <m>a\mid b</m> and <m>b\mid c</m>. Then by definition, <m>b=ak</m> for some <m>k\in \mathbb{Z}</m> and <m>c=bj</m> for some <m>j\in \mathbb{Z}</m>. Substituting the first equation into the second, <m>c=(ak)j=a(kj)</m>. Since <m>kj\in\mathbb{Z}</m>, <m>a\mid c</m>.</p></proof>
 
-<activity><statement><p>Prove if 15 divides <m>n</m>, then 5 divides <m>n</m>.</p></statement></activity>
+<activity label="div-pf12div" adaptive="yes"><statement><p>Let <m>n</m> be an integer. Prove if 12 divides <m>n</m>, then 4 divides <m>n</m>.</p></statement>
+<blocks>
+  <block><p>Assume 12 divides <m>n</m>.</p></block>
+  <block><p><m>n=12k</m> for some <m>k\in \mathbb{Z}</m>.</p></block>
+  <block><p><m>n=4(3k)</m> where <m>3k\in \mathbb{Z}</m>.</p></block>
+  <block><p>Thus, 4 divides <m>n</m>.</p></block>
 
-<activity><statement><p>Prove or disprove if 6 divides <m>n</m>, then 12 divides <m>n</m>.</p></statement></activity>
+  <block correct="no"><p>Assume 4 divides <m>n</m>.</p></block>
+  <block correct="no"><p><m>k=12n</m> for some <m>k\in \mathbb{Z}</m>.</p></block>
+  <block correct="no"><p><m>k=\frac{n}{12}</m>.</p></block>
+  <block correct="no"><p>Thus, 12 divides <m>n</m>.</p></block>
+</blocks>
+</activity>
 
-<activity><statement><p>Prove if <m>d\mid n</m> and <m>d\mid m</m>, then <m>d\mid (n+m)</m>.</p></statement></activity>
+<activity label="div-pf15div"><statement><p>Let <m>n</m> be an integer. Prove if 15 divides <m>n</m>, then 5 divides <m>n</m>.</p></statement><response/></activity>
+
+<activity label="div-pvdis6div"><statement><p>Let <m>n</m> be an integer. Prove or disprove if 6 divides <m>n</m>, then 12 divides <m>n</m>.</p></statement><response/></activity>
+
+<activity label="div-pfdivsum"><statement><p>Let <m>d, m, n</m> be integers. Prove if <m>d\mid n</m> and <m>d\mid m</m>, then <md>d\mid (n+m)</md>.</p></statement><response/></activity>
 
 
 <p>Now that we have the concept of divisibility, we can look at some bigger mathematical theorems involving divisibility by primes.</p>
@@ -105,7 +119,7 @@
 <theorem xml:id="T_divbyprime"><statement>Any integer <m>n>1</m> is divisible by a prime.</statement></theorem>
 <proof><p>We will divide this proof into two cases, where <m>n</m> is prime and where <m>n</m> is composite.</p>
 <p>
-  Case 1: <m>n</m> is prime. We can see that <m>n\mid n</m>. Since <n>n</n> is prime, <m>n</m> is divisible by a prime.
+  Case 1: <m>n</m> is prime. We can see that <m>n\mid n</m>. Since <m>n</m> is prime, <m>n</m> is divisible by a prime.
 </p>
 
 <p>Case 2: <m>n</m> is composite. Then <m>n=r_0s_0</m> where <m>1&lt; r_0 &lt; n</m>, and <m>r_0, s_0\in \mathbb{Z}</m>. If <m>r_0</m> is prime, then <m>n</m> is divisible by a prime.</p>
@@ -118,7 +132,7 @@
 
 </proof>
 
-<p>We now state a big theorem in discrete mathematics, but leave the proof for later. This theorem is more commonly called the Fundamental Theorem of Arthmetic.<idx><h>Fundamental Theorem of Arithmetic</h><see>Unique Factorization Theorem</see></idx></p>
+<p>We now state a big theorem in discrete mathematics, but leave the proof for later. This theorem is more commonly called the Fundamental Theorem of Arithmetic.<idx><h>Fundamental Theorem of Arithmetic</h><see>Unique Factorization Theorem</see></idx></p>
 
 <theorem xml:id="T_FTofArith"><title>Unique Factorization Theorem</title><idx>Unique Factorization Theorem</idx>
 <statement><p>Given any integer <m>n>1</m> there exists a positive integer <m>k</m>, distinct primes <m>p_1, p_2, \ldots, p_k</m>, and positive integers <m>e_1, e_2, \ldots e_k</m>, such that <m>n=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}</m>. This factorization of <m>n</m> into powers of primes is unique except for the order of the factors.</p></statement></theorem>
@@ -131,35 +145,35 @@
 
 <example xml:id="E_primefactorization"><title>Prime Factorization</title>
 <p>Find the prime factorization of 252 in standard form.</p>
-<answer><m>252=(2^2)(3^2)(7)</m>.</answer>
+<answer><p><m>252=(2^2)(3^2)(7)</m>.</p></answer>
 
 <p>Find the prime factorization of 17 in standard form.</p>
-<answer><m>17</m>, since it is prime.</answer>
+<answer><p><m>17</m>, since it is prime.</p></answer>
 
 <p>Find the prime factorization of 195 in standard form.</p>
-<answer><m>195=(3)(5)(13)</m>.</answer>
+<answer><p><m>195=(3)(5)(13)</m>.</p></answer>
 
 <p>Find the prime factorization of <m>8!</m> in standard form.</p>
-<answer>
-  <md><mrow>8!=(8)(7)(6)(5)(4)(3)(2)(1)</mrow>
+<answer><p>
+  <md><mrow>8!&amp;=(8)(7)(6)(5)(4)(3)(2)(1)</mrow>
   <mrow>&amp;=(2^3)(7)(2\cdot 3)(5)(2^2)(3)(2)</mrow>
-  <mrow>&amp;=(2^7)(3^3)(5)(7)</mrow></md>.</answer>
+  <mrow>&amp;=(2^7)(3^3)(5)(7)</mrow></md>.</p></answer>
 
 </example>
 
-<activity><statement><p>Give the prime factorization of 600 in standard form.</p></statement></activity>
+<activity label="div-pfact600"><statement><p>Give the prime factorization of 600 in standard form.</p></statement><response/></activity>
 
-<activity><statement><p>Give the prime factorization of <m>9!</m> (9 factorial). Is 10 a factor of <m>9!</m>? Is <m>10^2</m>?</p></statement></activity>
+<activity label="div-pfact9fact"><statement><p>Give the prime factorization of <m>9!</m> (9 factorial). Is 10 a factor of <m>9!</m>? Is <m>10^2</m>?</p></statement><response/></activity>
 
 
 
 <p><xref ref="T_FTofArith" /> is more powerful than it may seem. Although you have probably found prime factorizations before, you may not have thought much about the fact that they are unique. Consider the statement <m>3\mid 2^{101}</m>. Is this true or false? Well, since <m>2^{101}</m> is a prime factorization, the only prime divisor it has is 2. Thus, <m>3\mid 2^{101}</m> is false. If you have the prime factorization of an integer, then you know exactly which primes (and which powers of primes) divide the integer. </p>
 
-<activity><introduction><p>Determine if the following are true or false. Give a reason for your answer.</p></introduction>
-<task><p>5 divides <m>3^{600}</m>.</p></task>
-<task><p>6 divides <m>3^{600}</m>.</p></task>
-<task><p>9 divides <m>3^{600}</m>.</p></task>
-<task><p>300 divides <m>3^{600}</m>.</p></task>
+<activity label="div-TFFTA"><introduction><p>Determine if the following are true or false. Give a reason for your answer.</p></introduction>
+<task label="div-TFFTA-5"><statement><p>5 divides <m>3^{600}</m>.</p></statement><response/></task>
+<task label="div-TFFTA-6"><statement><p>6 divides <m>3^{600}</m>.</p></statement><response/></task>
+<task label="div-TFFTA-9"><statement><p>9 divides <m>3^{600}</m>.</p></statement><response/></task>
+<task label="div-TFFTA-300"><statement><p>300 divides <m>3^{600}</m>.</p></statement><response/></task>
 </activity>
 
 
@@ -167,52 +181,52 @@
       <title>Check Your Understanding</title>
       
       <exercise label="DMT_divis_CYU_6div24"><statement correct="yes"><p>True or false: <m>6\mid 24</m>.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       <exercise label="DMT_divis_CYU_1div9"><statement correct="yes"><p>True or false: <m>1\mid 9</m>.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       <exercise label="DMT_divis_CYU_0div9"><statement correct="no"><p>True or false: <m>0\mid 9</m>.</p></statement>
-      <answer>False.</answer></exercise>
+      <answer><p>False.</p></answer></exercise>
 
       <exercise label="DMT_divis_CYU_6div3"><statement correct="no"><p>True or false: <m>6\mid 3</m>.</p></statement>
-      <answer>False.</answer></exercise>
+      <answer><p>False.</p></answer></exercise>
 
       <exercise label="DMT_divis_CYU_6div6"><statement correct="yes"><p>True or false: <m>6\mid 6</m>.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       <exercise label="DMT_divis_CYU_6divneg30"><statement correct="yes"><p>True or false: <m>6\mid -30</m>.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       <exercise label="DMT_divis_CYU_6div0"><statement correct="yes"><p>True or false: <m>6\mid 0</m>.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       <exercise label="DMT_divis_CYU_6div21"><statement correct="no"><p>True or false: <m>6\mid 21</m>.</p></statement>
-      <answer>False.</answer></exercise>
+      <answer><p>False.</p></answer></exercise>
 
       <exercise label="DMT_divis_CYU_5div3sup56"><statement correct="no"><p>True or false: <m>5\mid 3^{56}</m>.</p></statement>
-      <answer>False.</answer></exercise>
+      <answer><p>False.</p></answer></exercise>
 
       <exercise label="DMT_divis_CYU_6div3sup102sup5"><statement correct="yes"><p>True or false: <m>6\mid 3^{10}2^{5}5^{9}</m>.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       
       <exercise label="DMT_divis_CYU_factor7fac"><statement><p>Give the prime factorization for <m>7!</m>.</p></statement>
       <response />
-      <answer><m>7!=(7)(6)(5)(4)(3)(2)(1)=(7)(2\cdot 3)(5)(2\cdot 2)(3)(2)(1)=(2^4)(3^2)(5)(7)</m>.</answer></exercise>
+      <answer><p><m>7!=(7)(6)(5)(4)(3)(2)(1)=(7)(2\cdot 3)(5)(2\cdot 2)(3)(2)(1)=(2^4)(3^2)(5)(7)</m>.</p></answer></exercise>
 
       <exercise label="DMT_divis_CYU_10div7fac"><statement correct="yes"><p>True or false: <m>10\mid 7!</m>.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
        <exercise label="DMT_divis_CYU_100div7fac"><statement correct="no"><p>True or false: <m>100\mid 7!</m>.</p></statement>
        <feedback><p><m>100=2^25^2</m>, so <m>7!</m> would need a factor of <m>5^2</m>.</p></feedback>
-      <answer>False, <m>100=2^25^2</m>, so <m>7!</m> would need a factor of <m>5^2</m>.</answer></exercise>
+      <answer><p>False, <m>100=2^25^2</m>, so <m>7!</m> would need a factor of <m>5^2</m>.</p></answer></exercise>
 
     </reading-questions>
 
     <exercises>
       <exercise><statement><p>Determine if the following statements are true or false. Justify your answer.</p>
-        <ol marker="a">
+        <ol marker="a.">
         <li>
         <p><m>5\mid 0</m></p>
         </li>
@@ -227,7 +241,7 @@
     </statement></exercise>
       <exercise><statement>
         <p>Let <m>n\in \mathbb{Z}</m>. Determine if the following statements are true or false. Justify your answer.</p>
-        <ol marker="a">
+        <ol marker="a.">
         <li>
         <p>3 divides <m>(3n+1)(3n+2)(3n+3)</m>.</p>
         </li>
@@ -248,7 +262,7 @@
       <exercise><statement>
         
 <p>Recall that the standard factored form of an integer is a product of powers of a prime, as in <xref ref="T_FTofArith"/>.
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     Write <m>6!</m> in standard factored form.

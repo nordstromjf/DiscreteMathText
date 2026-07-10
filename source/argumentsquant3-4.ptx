@@ -3,31 +3,31 @@
 
   <p>In <xref ref="arguments2-3"/> we studied arguments with logical statements. In this chapter we've looked at statements with quantifiers. Now we want to combine the two ideas.</p>
 
-  <p>Recall, an argument is <term>valid</term><idx><h>argument</h><h>quantifier</h></idx><idx>valid argument</idx> if it whenever the premises are true, the conclusion <em>must</em> be true. An argument is <term>invalid</term><idx>invalid argument</idx> if it possible for the premises to be true and the conclusion false.</p>
+  <p>Recall, an argument is <term>valid</term><idx><h>argument</h><h>quantifier</h></idx><idx>valid argument</idx> if whenever the premises are true, the conclusion <em>must</em> be true. An argument is <term>invalid</term><idx>invalid argument</idx> if it is possible for the premises to be true and the conclusion false.</p>
 
 <example xml:id="argwquant1"><title>An Argument with Quantified Statements</title>
-<p>
+<p>Is the following argument valid or invalid?
   <tabular>
     <row><cell>All computer science majors take Discrete Math before graduation.</cell></row>
       <row bottom="minor"><cell>Anna is a computer science major.</cell></row>
       <row><cell><m>\therefore\ </m>Anna takes Discrete Math before graduation.</cell></row>
     </tabular>
-    Is this argument valid or invalid?</p>
-    <answer>This argument is valid.</answer> 
+    </p>
+    <answer><p>This argument is valid.</p></answer> 
 </example>
 
 <example xml:id="argwquant2"><title>Another Argument with Quantified Statements</title>
-<p>
+<p>Is the following argument valid or invalid?
   <tabular>
     <row><cell>All computer science majors take Discrete Math before graduation.</cell></row>
       <row bottom="minor"><cell>Troy did not take Discrete Math before graduation.</cell></row>
       <row><cell><m>\therefore\ </m>Troy is not a computer science major.</cell></row>
     </tabular>
-    Is this argument valid or invalid?</p>
-    <answer>This argument is valid.</answer> 
+    </p>
+    <answer><p>This argument is valid.</p></answer> 
 </example>
 
-<p>Although <xref ref="argwquant1" /> and <xref ref="argwquant2"/> are a valid arguments, we will have trouble using a truth-table to determine validity. In this section we will develop other tools for analyzing quantified arguments. These examples are extentions of modus ponens and modus tollens from <xref ref="B_commonvalid" text="title"/>.</p>
+<p>Although <xref ref="argwquant1" /> and <xref ref="argwquant2"/> are valid arguments, we will have trouble using a truth-table to determine validity. In this section we will develop other tools for analyzing quantified arguments. These examples are extensions of modus ponens and modus tollens from <xref ref="B_commonvalid" text="title"/>.</p>
 
 <assemblage xml:id="B_universalmodpon">
   <title>Common Forms of Arguments with Quantifiers</title>
@@ -62,7 +62,7 @@
 
 <figure xml:id="venndiagEx1">
   <caption> Venn diagram for the argument in <xref ref="argwquant1" /></caption>
-  <image width="20%" xml:id="modusponens1">
+  <image width="30%" xml:id="modusponens1">
     <latex-image>
   \begin{tikzpicture}
   \def\firstcircle{(0,-.2) circle (1.0cm)}
@@ -72,7 +72,8 @@
     \draw  node (c) at (0, -0.7)  {$\bullet\text{Anna}$};
 \end{tikzpicture}  
 
-</latex-image></image>
+</latex-image>
+<description><p>One circle inside another circle, with a point in the inside circle. The outer circle is labeled <q>Discrete Math</q>, the inner circle is labeled <q>CS majors</q>, the point is labeled <q>Anna</q>.</p></description></image>
 </figure>
 
 <p>The picture represents the two premises of the argument. In the Venn diagram we have a circle representing students taking Discrete Math (<q>Discrete Math</q>) and a circle representing computer science majors (<q>CS majors</q>). The CS major circle is completely inside the Discrete Math circle since the first statement in the argument is that all computer science majors take Discrete Math. This means the set of computer science majors is a subset of the set of students taking Discrete Math. The second statement in the argument is that Anna is a computer science major. This means Anna is an element (represented by a point) of the set of CS majors. </p>
@@ -83,12 +84,12 @@
 <title>Process for Using a Venn diagram to Determine Validity</title>
 
 <p>
-<ol marker="1">
+<ol marker="1.">
 <li><p>Draw the Venn diagram for each premise.</p> <p>Statements such as <q>All A are B</q> mean A is a subset of B.</p></li>
 <li><p>Make sure you distinguish between sets (lots of things have a certain property) and elements (a specific thing with a property).</p></li>
 
 <li><p>See if it is possible for the premises to be true and the conclusion false.</p>
- <p>Sometimes there is a choice about where to place a certain element of set. For example, if I know <m>x</m> is not in set A, then <m>x</m> might be in set B or it might not be in B. We can use these choices to see if we can make the premises true and the conclusion false.</p></li>
+ <p>Sometimes there is a choice about where to place a certain element of a set. For example, if I know <m>x</m> is not in set A, then <m>x</m> might be in set B or it might not be in B. We can use these choices to see if we can make the premises true and the conclusion false.</p></li>
 </ol></p>
 </assemblage>
 
@@ -105,7 +106,7 @@
 
     <!--<figure xml:id="venndiagmodtoll">
   <caption> Venn diagram for the argument in <xref ref="argwquant1" /></caption>-->
-  <image width="20%" xml:id="modustollens1">
+  <image width="30%" xml:id="modustollens1">
     <latex-image>
     \begin{tikzpicture}
   \def\firstcircle{(0,-.2) circle (0.7cm)}
@@ -114,21 +115,22 @@
     \draw \secondcircle node (b) at (0, 1.0) {$\mathbb{Q}$};
     \draw  node (c) at (2.1, 0)  {$\bullet\sqrt{2}$};
 \end{tikzpicture}  
-    </latex-image></image>
+    </latex-image>
+    <description><p>One circle inside another circle, with a point outside both circles. The outer circle is labeled <q><m>\mathbb Q</m></q>, the inner circle is labeled <q><m>\mathbb Z</m></q>, the point is labeled <q><m>\sqrt{2}</m></q>.</p></description></image>
     <p>We can see from the diagram that it is impossible to make the conclusion false. In particular, <m>\sqrt{2}</m> cannot be in the set of integers. 
 </p></example>
 
-<activity><introduction><p>Consider the general form of universal modus ponens.</p></introduction>
-  <task><p>Draw the Venn diagram for universal modus ponens. You should have a circle labeled <q>P</q> and one labeled <q>Q.</q></p></task>
-  <task><p>Write your own argument that has the form of universal modus ponens.</p></task>
-  <task><p>Use a Venn diagram with appropriate labels to show that your argument is valid.</p></task>
+<activity label="argquant-modpon"><introduction><p>Consider the general form of universal modus ponens.</p></introduction>
+  <task label="argquant-modpon-venn" attachment="yes"><statement><p>Draw the Venn diagram for universal modus ponens. You should have a circle labeled <q>P</q> and one labeled <q>Q.</q></p></statement><response/></task>
+  <task label="argquant-modpon-ex"><statement><p>Write your own argument that has the form of universal modus ponens.</p></statement><response/></task>
+  <task label="argquant-modpon-vennex" attachment="yes"><statement><p>Use a Venn diagram with appropriate labels to show that your argument is valid.</p></statement><response/></task>
 </activity>
 
 
-<activity><introduction><p>Consider the general form of universal modus tollens.</p></introduction>
-  <task><p>Draw the Venn diagram for universal modus tollens. You should have a circle labeled <q>P</q> and one labeled <q>Q.</q></p></task>
-  <task><p>Write your own argument that has the form of universal modus tollens.</p></task>
-  <task><p>Use a Venn diagram with appropriate labels to show that your argument is valid.</p></task>
+<activity label="argquant-modtol"><introduction><p>Consider the general form of universal modus tollens.</p></introduction>
+  <task label="argquant-modtol-venn" attachment="yes"><statement><p>Draw the Venn diagram for universal modus tollens. You should have a circle labeled <q>P</q> and one labeled <q>Q.</q></p></statement><response/></task>
+  <task label="argquant-modtol-ex"><statement><p>Write your own argument that has the form of universal modus tollens.</p></statement><response/></task>
+  <task label="argquant-modtol-vennex" attachment="yes"><statement><p>Use a Venn diagram with appropriate labels to show that your argument is valid.</p></statement><response/></task>
 </activity>
 
 <example xml:id="invalidargquant"><title>An Invalid Argument</title>
@@ -142,7 +144,7 @@
 
     <!--<figure xml:id="venndiagmodtoll">
   <caption> Venn diagram for the argument in <xref ref="argwquant1" /></caption>-->
-  <image width="20%" xml:id="integerrational">
+  <image width="30%" xml:id="integerrational">
     <latex-image>
     \begin{tikzpicture}
       \def\firstcircle{(0,-.2) circle (0.7cm)}
@@ -150,11 +152,12 @@
     \draw \firstcircle node (a) at (0,0) {$\mathbb{Z}$};
     \draw \secondcircle node (b) at (0, 1.0) {$\mathbb{Q}$};
     \end{tikzpicture}  
-    </latex-image></image>
+    </latex-image>
+  <description><p>One circle inside another circle. The outer circle is labeled <q><m>\mathbb Q</m></q>, the inner circle is labeled <q><m>\mathbb Z</m></q>.</p></description></image>
 
     <p>But we need to be careful about where we place <m>x</m>. The second premise just says it needs to be inside the rational circle. Is it possible to place it in the rational circle so that the conclusion is false? Yes, we can place <m>x</m> inside the rational circle, but not in the integer circle. So the following diagram shows how it is possible to have true premises and a false conclusion.</p>
 
-  <image width="20%" xml:id="integerrationalinvalid">
+  <image width="30%" xml:id="integerrationalinvalid">
     <latex-image>
     \begin{tikzpicture}
       \def\firstcircle{(0,-.2) circle (0.7cm)}
@@ -163,7 +166,8 @@
     \draw \secondcircle node (b) at (0, 1.0) {$\mathbb{Q}$};
     \draw  node (c) at (1.0, .5)  {$\bullet x$};
     \end{tikzpicture}  
-    </latex-image></image>
+    </latex-image>
+  <description><p>One circle inside another circle, with a point inside the outer circle, but outside the inner circle. The outer circle is labeled <q><m>\mathbb Q</m></q>, the inner circle is labeled <q><m>\mathbb Z</m></q>, the point is labeled <q><m>x</m></q>.</p></description></image>
 
     <p>Therefore, the argument is invalid.</p>
 
@@ -188,7 +192,7 @@
     </tabular></p>
 </assemblage>
 
-<activity><statement><p>Write your own example of inverse error. Use a Venn diagram to show your argument is invalid.</p></statement></activity>
+<activity label="argquant-inverr" attachment="yes"><statement><p>Write your own example of inverse error. Use a Venn diagram to show your argument is invalid.</p></statement><response/></activity>
 
 
 
@@ -198,8 +202,8 @@
 <title>Venn Diagrams for Common Statements</title><idx>Venn diagram</idx>
 
 <p><ul>
-<li><p>All B are A.</p>
-<image width="20%" xml:id="allAareB">
+<li><p>All <m>B</m> are <m>A</m>.</p>
+<image width="30%" xml:id="allAareB">
     <latex-image>
     \begin{tikzpicture}
       \def\firstcircle{(0,-.2) circle (0.7cm)}
@@ -207,10 +211,11 @@
     \draw \firstcircle node (a) at (0,0) {B};
     \draw \secondcircle node (b) at (0, 1.0) {A};
     \end{tikzpicture}  
-    </latex-image></image></li>
+    </latex-image>
+  <description><p>One circle inside another circle. The outer circle is labeled <q><m>A</m></q>, the inner circle is labeled <q><m>B</m></q>.</p></description></image></li>
 
-    <li><p>Some A are B, or there exists an A that is a B.</p>
-    <image width="20%" xml:id="someAareB">
+    <li><p>Some <m>A</m> are <m>B</m>, or there exists an <m>A</m> that is a <m>B</m>.</p>
+    <image width="30%" xml:id="someAareB">
     <latex-image>
     \begin{tikzpicture}
   \def\firstcircle{(-.6,0) circle (1.0cm)}
@@ -219,10 +224,11 @@
     \draw \secondcircle node (b) at (.7, 0) {B};
     \draw  node (c) at (0, 0)  {$\bullet$};
 \end{tikzpicture}  
-</latex-image></image></li>
+</latex-image>
+<description><p>Two circles next to each other with some overlapping area. The left circle is labeled <q><m>A</m></q>, the right circle is labeled <q><m>B</m></q>. There is an unlabeled point in the center of the overlapping area.</p></description></image></li>
 
-<li><p>No A are B.</p>
-    <image width="20%" xml:id="noAareB">
+<li><p>No <m>A</m> are <m>B</m>.</p>
+    <image width="30%" xml:id="noAareB">
     <latex-image>
     \begin{tikzpicture}
   \def\firstcircle{(-1.0,0) circle (0.8cm)}
@@ -231,39 +237,42 @@
     \draw \secondcircle node (b) at (1.0, 0) {B};
  
 \end{tikzpicture}   
-</latex-image></image></li>
+</latex-image>
+<description><p>Two circles next to each other with no overlapping area. The left circle is labeled <q><m>A</m></q>, the right circle is labeled <q><m>B</m></q>.</p></description></image></li>
 </ul></p>
 </assemblage>
 
-<activity><introduction><p>For each argument use a Venn diagram to determine if the argument is valid or invalid.</p></introduction>
-<task><tabular>
-<row><cell>Every Linfield student lives on campus.</cell></row>
-<row bottom="medium"><cell>Freya lives on campus.</cell></row> 
-<row><cell><m>\therefore</m> Freya is a Linfield student.</cell></row> 
-</tabular>
+<activity label="argquant-validity1"><introduction><p>For each argument use a Venn diagram to determine if the argument is valid or invalid.</p></introduction>
+<task label="argquant-validity1-campus" attachment="yes">
+  <statement><p>
+    <tabular>
+    <row><cell>Every University student lives on campus.</cell></row>
+    <row bottom="medium"><cell>Freya lives on campus.</cell></row> 
+    <row><cell><m>\therefore</m> Freya is a University student.</cell></row> 
+    </tabular></p></statement><response/>
 </task>
-<task><tabular>
+<task label="argquant-validity1-poly" attachment="yes"><statement><p><tabular>
 <row><cell>Every polynomial function is differentiable.</cell></row>
 <row bottom="medium"><cell><m>f(x)=|x|</m> is not a polynomial function.</cell></row> 
 <row><cell><m>\therefore f(x)=|x|</m> is not differentiable. </cell></row> 
-</tabular>
+</tabular></p></statement><response/>
 </task>
 </activity>
 
-<activity><introduction><p>For each argument use a Venn diagram to determine if the argument is valid or invalid.</p></introduction>
-<task><tabular>
+<activity label="argquant-validity2"><introduction><p>For each argument use a Venn diagram to determine if the argument is valid or invalid.</p></introduction>
+<task label="argquant-validity2-Gauss" attachment="yes"><statement><p><tabular>
 <row><cell><m>\forall\ x</m>, if <m>x</m> studies then <m>x</m> will do well on the exams.</cell></row>
 <row bottom="medium"><cell><m>\forall\ x</m>, if <m>x</m> does well on the exams then <m>x</m> will get an A in Discrete Math.</cell></row> 
 <row><cell><m>\therefore</m> If Gauss studies then Gauss will get an A in Discrete Math.</cell></row> 
-</tabular>
+</tabular></p></statement><response/>
 </task>
-<task><tabular>
+<task label="argquant-validity2-Newton" attachment="yes"><statement><p><tabular>
 <row><cell><m>\forall\ x</m>, if <m>x</m> studies then <m>x</m> will do well on the exams.</cell></row>
 <row bottom="medium"><cell><m>\forall\ x</m>, if <m>x</m> does well on the exams then <m>x</m> will get an A in Discrete Math.</cell></row> 
 <row><cell><m>\therefore</m> Newton will get an A in Discrete Math.</cell></row> 
-</tabular>
+</tabular></p></statement><response/>
 </task>
-<task><p>Compare your answers to the two arguments. What is different? How does the difference affect the argument?</p></task>
+<task label="argquant-validity2-comp"><statement><p>Compare your answers to the two arguments. What is different? How does the difference affect the argument?</p></statement><response/></task>
 </activity>
 
 
@@ -375,7 +384,7 @@
     Determine if the argument is valid or invalid. If it is valid, state whether it is an example of modus ponens or modus tollens. If it is invalid, state whether it exhibits converse error or inverse error.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
     <tabular>
     <row >
@@ -475,7 +484,7 @@
         <p>
     Determine if the argument is valid or invalid. Support your answer by drawing a Venn diagram.
   </p>
-  <ol marker="a">
+  <ol marker="a.">
     <li><tabular>
     <row >
       <cell halign="left">All people are mice.</cell>

@@ -8,7 +8,7 @@
 
   <p>To find an explicit formula for a recursive sequence using the methods of iteration:
 
-  <ol marker="1">
+  <ol marker="1.">
     <li>Calculate several terms of the sequence, often without simplifying the terms.</li>
     <li>See a pattern.</li>
     <li>Guess an explicit formula for the pattern. Keep in mind your formula should just depend on <m>n</m>.</li>
@@ -17,8 +17,8 @@
 </assamblage>
 
   <example xml:id="E_arithmetic"><title>Finding an Explicit Formula</title><idx><h>explicit formula</h><h>by iteration</h></idx>
-  <p>Find the first five terms of the sequence given by <m>a_k=a_{k-1}+3, k\geq 1</m>, <m>a_0=4</m>.</p>
-<answer><m>a_0=4, a_1=7, a_2=10, a_3=13, a_4=16</m></answer>
+  <p>Find the first five terms of the sequence given by <md>a_k=a_{k-1}+3, k\geq 1, a_0=4</md>.</p>
+<answer><p><m>a_0=4, a_1=7, a_2=10, a_3=13, a_4=16</m></p></answer>
 <p>It might be difficult to see a pattern, so we will calculate the terms without simplifying <em>at all</em>.</p>
 <md>
   <mrow>a_0&amp; =4</mrow>
@@ -45,30 +45,30 @@ Therefore, by induction, <m>a_n=4+3n, n\geq 0</m>.</p>
 </proof></example>
 
 <definition xml:id="D_arithseq"><p>An <term>arithmetic sequence</term><idx>arthmetic sequence</idx><idx><h>sequence</h><h>arithmetic</h></idx> is given recursively by 
-<me>a_k=a_{k-1}+d</me>
+<md>a_k=a_{k-1}+d</md>
 where <m>d</m> is constant.</p></definition>
 
 
 
-<activity><introduction><p>Generalize <xref ref="E_arithmetic"/> to find an explicit formula for an arithmetic sequence.</p></introduction>
-<task><p>Let <m>d=5, a_0=2</m>. Write out the first 6 terms of the arithmetic sequence. Can you find an explicit formula for the sequence (one that just depends on <m>n</m>)?</p></task>
-<task><p>Write out the first 6 terms of the sequence <em>without simplifying at all</em>. Now can you find an explicit formula?</p></task>
-<task><p>Using the same technique of writing out the terms without simplifying, find an explicit formula for the general form, <m>a_k=a_{k-1}+d</m>, of an arithmetic sequence.</p></task>
+<activity label="iterat-arith"><introduction><p>Generalize <xref ref="E_arithmetic"/> to find an explicit formula for an arithmetic sequence.</p></introduction>
+<task label="iterat-arith-first6"><statement><p>Let <m>d=5, a_0=2</m>. Write out the first 6 terms of the arithmetic sequence. Can you find an explicit formula for the sequence (one that just depends on <m>n</m>)?</p></statement><reponse/></task>
+<task label="iterat-arith-nosimp"><statement><p>Write out the first 6 terms of the sequence <em>without simplifying at all</em>. Now can you find an explicit formula?</p></statement><reponse/></task>
+<task label="iterat-arith-expform"><statement><p>Using the same technique of writing out the terms without simplifying, find an explicit formula for the general form, <m>a_k=a_{k-1}+d</m>, of an arithmetic sequence.</p></statement><reponse/></task>
 
 </activity>
 
 
 
 <definition xml:id="D_geomseq"><p>A <term>geometric sequence</term><idx>geometric sequence</idx><idx><h>sequence</h><h>geometric</h></idx> is given recursively by 
-<me>a_k=ra_{k-1}</me>
+<md>a_k=ra_{k-1}</md>
 where <m>r</m> is constant.</p></definition>
 
 
 
-<activity><introduction><p>Use the method of iteration to find an explicit formula for a geometric sequence.</p></introduction>
-<task><p>Let <m>r=2, a_0=3</m>. Write out the first 6 terms of the geometric sequence. Can you find an explicit formula for the sequence (one that just depends on <m>n</m>)?</p></task>
-<task><p>Write out the first 6 terms of the sequence <em>without simplifying at all</em>. Now can you find an explicit formula?</p></task>
-<task><p>Using the same technique of writing out the terms without simplifying, find an explicit formula for the general form, <m>a_k=ra_{k-1}</m>, of a geometric sequence.</p></task>
+<activity label="iterat-geom"><introduction><p>Use the method of iteration to find an explicit formula for a geometric sequence.</p></introduction>
+<task label="iterat-geom-first6"><statement><p>Let <m>r=2, a_0=3</m>. Write out the first 6 terms of the geometric sequence. Can you find an explicit formula for the sequence (one that just depends on <m>n</m>)?</p></statement><response/></task>
+<task label="iterat-geom-nosimp"><statement><p>Write out the first 6 terms of the sequence <em>without simplifying at all</em>. Now can you find an explicit formula?</p></statement><reponse/></task>
+<task label="iterat-geom-expform"><statement><p>Using the same technique of writing out the terms without simplifying, find an explicit formula for the general form, <m>a_k=ra_{k-1}</m>, of a geometric sequence.</p></statement><reponse/></task>
 
 </activity>
 
@@ -82,13 +82,13 @@ where <m>r</m> is constant.</p></definition>
 </p>
 </assemblage>
 
-<activity><statement><p>Prove if <m>a_0=2</m> and <m>a_k=a_{k-1}+5</m>, then <m>a_n=2+5n</m> for <m>n\geq 0</m> by induction.</p></statement><hint><p>You are assuming the recursive relationship holds. The statement you are proving by induction is that <m>a_n=2+5n</m> for <m>n\geq 0</m>.</p></hint></activity>
+<activity label="iterat-pfarithind"><statement><p>Prove if <m>a_0=2</m> and <m>a_k=a_{k-1}+5</m>, then <m>a_n=2+5n</m> for <m>n\geq 0</m> by induction.</p></statement><reponse/><hint><p>You are assuming the recursive relationship holds. The statement you are proving by induction is that <m>a_n=2+5n</m> for <m>n\geq 0</m>.</p></hint></activity>
 
-<activity><statement><p>Prove if <m>a_k=ra_{k-1}</m>, then <m>a_n=a_0r^n</m> for <m>n\geq 0</m> by induction.</p></statement><hint><p>You are assuming the recursive relationship holds. The statement you are proving by induction is that <m>a_n=a_0r^n</m> for <m>n\geq 0</m>.</p></hint></activity>
+<activity label="iterat-pfgeoind"><statement><p>Prove if <m>a_k=ra_{k-1}</m>, then <m>a_n=a_0r^n</m> for <m>n\geq 0</m> by induction.</p></statement><response/><hint><p>You are assuming the recursive relationship holds. The statement you are proving by induction is that <m>a_n=a_0r^n</m> for <m>n\geq 0</m>.</p></hint></activity>
 
 <p>As promised, in <xref ref="E_explicitfib" /> we will prove an explicit formula for the Fibonacci sequence. We will not derive it as that is beyond the scope of this course. But we can prove that it works using induction. Before working through the proof, it will be helpful to see the algebraic simplification in the next activity.</p>
 
-<activity><statement><p>Simplify <m>\Bigl(\frac{1+\sqrt{5}}{2}\Bigr)^2</m> and <m>\Bigl(\frac{1-\sqrt{5}}{2}\Bigr)^2</m>.</p></statement></activity>
+<activity label="iterat-simpgoldrat"><statement><p>Simplify <m>\Bigl(\frac{1+\sqrt{5}}{2}\Bigr)^2</m> and <m>\Bigl(\frac{1-\sqrt{5}}{2}\Bigr)^2</m>.</p></statement><response/></activity>
 
 
 
@@ -98,17 +98,19 @@ where <m>r</m> is constant.</p></definition>
 <proof>
   <p>Let <m>F_k=F_{k-1}+F_{k-2}, F_0=1, F_1=1</m>. </p>
   <p>Base Step: Let <m>n=0</m>. Then <m>F_0=1</m>. And 
-  <me>
+  <md>
     \frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{0+1}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{0+1}\biggr]
     =
-    \frac{1}{\sqrt{5}}\biggl[\frac{2\sqrt{5}}{2}\biggr]=1</me></p>
+    \frac{1}{\sqrt{5}}\biggl[\frac{2\sqrt{5}}{2}\biggr]=1</md></p>
 
     <p>Let <m>n=1</m>. Then <m>F_1=1</m>. And 
-  <me>\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{1+1}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{1+1}\biggr]=
-    \frac{1}{\sqrt{5}}\biggl[\frac{6+2\sqrt{5}}{4}-\frac{6-2\sqrt{5}}{4}\biggr]=1</me></p>
+  <md>
+    <mrow>\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{1+1}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{1+1}\biggr]</mrow>
+    <mrow> =\frac{1}{\sqrt{5}}\biggl[\frac{6+2\sqrt{5}}{4}-\frac{6-2\sqrt{5}}{4}\biggr]=1</mrow>
+  </md></p>
 
-  <p>Induction Step: Assume <me>F_i=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{i+1}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{i+1}\biggr], 0\leq i\leq k</me> for some <m>k\geq 0</m> (strong induction).</p>
-  <p>Show <me>F_{k+1}=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k+2}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k+2}\biggr].</me></p>
+  <p>Induction Step: Assume <md>F_i=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{i+1}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{i+1}\biggr], 0\leq i\leq k</md> for some <m>k\geq 0</m> (strong induction).</p>
+  <p>Show <md>F_{k+1}=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k+2}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k+2}\biggr].</md></p>
   <p>Proof of induction step: By the recursive definition of the sequence, <m>F_{k+1}=F_{k}+F_{k-1}</m>. Thus, 
   <md>
     <mrow>F_{k+1}&amp;=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k+1}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{k+1}\biggr]+
@@ -134,7 +136,7 @@ Therefore, by induction, <m>F_n=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}
   <title>Summary of Techniques for Sequences</title><idx><h>sequence</h><h>explicit formula proof</h></idx><idx><h>sequence</h><h>recursive formula proof</h></idx>
   <p>If you are given a sequence where each term is just a formula for <m>n</m>:
   <ul>
-    <li><p>You sequence is defined explicitly.</p></li>
+    <li><p>Your sequence is defined explicitly.</p></li>
     <li><p>For example, <m>a_n=n^2+5</m>.</p></li>
     <li><p>To prove a recurrence relation, use LHS/RHS proof.</p></li>
     <li><p>You are assuming the explicit formula and proving the recurrence relation. Thus, use the explicit formula in your proof. Do not assume the recurrence relation.</p></li>
@@ -142,7 +144,7 @@ Therefore, by induction, <m>F_n=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}
 
   <p>If you are given a sequence where each term is defined by previous terms:
   <ul>
-    <li><p>You sequence is defined recursively.</p></li>
+    <li><p>Your sequence is defined recursively.</p></li>
     <li><p>For example, <m>a_n=3a_{n-1}+2a_{n-2}</m>.</p></li>
     <li><p>To prove an explicit formula, use induction on the explicit formula.</p></li>
     <li><p>You are assuming the recurrence formula and proving the explicit formula. Thus, use the recurrence formula in your proof, generally in the induction step. Your base step, assume statement, and show statement all involve the explicit formula.</p></li>
@@ -181,17 +183,17 @@ Therefore, by induction, <m>F_n=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}
 
     <exercises>
       <exercise xml:id="X_itform1"><statement><p>
-    Use iteration to conjecture an explicit formula for the sequence <me>a_0=1</me> <me>a_k=ka_{k-1}, k\geq1.</me>
+    Use iteration to conjecture an explicit formula for the sequence <md>a_0=1</md> <md>a_k=ka_{k-1}, k\geq1.</md>
   </p></statement></exercise>
       <exercise xml:id="X_itform2"><statement>
         <p>
-    Use iteration to conjecture an explicit formula for the sequence <me>b_1=1</me> <me>b_k=3b_{k-1}+1, k\geq2.</me>
+    Use iteration to conjecture an explicit formula for the sequence <md>b_1=1</md> <md>b_k=3b_{k-1}+1, k\geq2.</md>
   </p>
       </statement><hint><p>
     The formula for a geometric sum, <xref ref="Q_geosum"/>, might be helpful.
   </p></hint></exercise>
       <exercise xml:id="X_itform3"><statement><p>
-    Use iteration to conjecture an explicit formula for the sequence <me>r_0=3</me> <me>r_k=r_{k-1}+2k, k\geq1.</me>
+    Use iteration to conjecture an explicit formula for the sequence <md>r_0=3</md> <md>r_k=r_{k-1}+2k, k\geq1.</md>
   </p></statement><hint><p>
     The formula for the sum of the first <m>n</m> integers, <xref ref="Q_sumofn"/> might be helpful.
   </p></hint></exercise>

@@ -19,7 +19,7 @@
  <p>When writing induction proofs, make sure you use the actual statement you are proving rather than the notation <m>P(1), P(k), P(n)</m>.</p>-->
 
 
-<activity><statement><p>Prove  <m>\sum_{i=1}^{n}i^2=\frac{n(n+1)(2n+1)}{6}</m> for all <m>n\geq 1</m> by induction. Make sure your proof follows the form above.</p></statement>
+<activity label="moreind-pfsumsqr"><statement><p>Prove  <m>\sum_{i=1}^{n}i^2=\frac{n(n+1)(2n+1)}{6}</m> for all <m>n\geq 1</m> by induction. Your proof should follow the same form as the examples in <xref ref="induction5-2"/>.</p></statement><response/>
 
   </activity>
 
@@ -36,12 +36,14 @@
 <p>Assume <m>3\mid (k^3-k)</m> for some <m>k\geq 0</m>.</p>
 <p>Show <m>3\mid ((k+1)^3-(k+1))</m>.</p>
 
-<p>Scratchwork: before proving the induction step, we might need to do some scratchwork. This is <em>not</em> part of the proof, but will help us structure a clear proof. We can do some algebra on the expression we in the <q>show</q> statement: 
+<p>Scratchwork: before proving the induction step, we might need to do some scratchwork. This is <em>not</em> part of the proof, but will help us structure a clear proof. We can do some algebra on the expression in the <q>show</q> statement: 
 <md>
   <mrow>(k+1)^3-(k+1)&amp;=k^3+3k^2+3k+1-k-1</mrow>
-  <mrow>&amp;=(k^3-k)+3k^2+3k\ \ \textrm{ rearranged terms and cancelled 1's}</mrow>
+  <mrow>&amp;=(k^3-k)+3k^2+3k,</mrow>
 </md>
-But by our assumption, <m>3\mid (k^3-k)</m> and since the remaining terms are multiples of 3, <m>3\mid 3k^2+3k</m>.</p>
+where we rearranged the terms and cancelled the 1's.</p>
+
+<p>By our assumption, <m>3\mid (k^3-k)</m>, and since the remaining terms are multiples of 3, <m>3\mid 3k^2+3k</m>.</p>
 <p>Now we are ready to use our scratch work to write the proof of the induction step.</p>
 
 <p>Proof of induction step: 
@@ -88,7 +90,7 @@ Which is what we wanted to show.
   <mrow> &amp;\ \ \ \ \ \ \ \textrm{ but we are looking for multiples of 3}</mrow>
   <mrow>&amp;=3\cdot 2^{2k}+2^{2k}-1\ \ \textrm{ distribute}</mrow>
 </md>
-But by our assumption, <m>3\mid 2^{2k}-1</m> and since the remaining term is a multiple of 3, <m>3\mid 3\cdot 2^{2k}+2^{2k}-1</m>.</p>
+By our assumption, <m>3\mid 2^{2k}-1</m>, and since the remaining term is a multiple of 3, <m>3\mid 3\cdot 2^{2k}+2^{2k}-1</m>.</p>
 <p>Now we are ready to use our scratchwork to write the proof of the induction step.</p>
 
 <p>Proof of induction step: 
@@ -108,7 +110,7 @@ Which is what we wanted to show.
 </proof>
 </example>
 
-<activity><statement><p>Prove  <m>8 \mid 3^{2n}-1</m> for all <m>n\geq 0</m> by induction. It may be helpful to do scratchwork first. </p></statement></activity>
+<activity label="moreind-pf8div"><statement><p>Prove  <m>8 \mid 3^{2n}-1</m> for all <m>n\geq 0</m> by induction. It may be helpful to do scratchwork first. </p></statement><response/></activity>
 
 <p>Now we apply induction to statements involving inequalities. These will be some of the most challenging induction proofs as they often take a bit more trial and error in the scratchwork. When dealing with <em>equalities</em>, you know that you have to add the same thing to both sides. However, with <em>inequalities</em> you can change one side as long as you maintain the inequality. For example, if you know <m>P>Q</m>, then you also know <m>P+2>Q</m>. The fact that we can change one side of the expression makes it more challenging to see what steps to take.</p>
 
@@ -125,24 +127,28 @@ Which is what we wanted to show.
 
 <p>Scratchwork: 
 <md>
-  <mrow>\text{LHS: } 2(k+1)+1=2k+2+1=2k+1+2</mrow>
-  <mrow>\text{RHS: } 2^{k+1}=2(2^k)</mrow>
+  <mrow>\text{LHS: }&amp; 2(k+1)+1=2k+2+1=2k+1+2</mrow>
+  <mrow>\text{RHS: }&amp; 2^{k+1}=2(2^k)</mrow>
 </md>
-Now we want to make a useful observation: in the LHS expression we are addding. In the RHS expression we are multiplying. We need a way to go between them. One way is to notice that <m>2(A)=A+A</m>. Then
+Now we want to make a useful observation: in the LHS expression we are adding. In the RHS expression we are multiplying. We need a way to go between them. One way is to notice that <m>2(A)=A+A</m>. Then
 <md>
   <mrow>2^{k+1}=2(2^k)=2^k+2^k</mrow>
 </md>
 We know <m>2k+1&lt; 2^k</m> and <m>2&lt;2^k</m>, so we can put all this together into the proof.
 </p>
-<p>Proof of induction step: 
+<p>Proof of induction step:
+By the induction assumption, 
 <md>
-  <mrow>2k+1&lt; 2^k\ \  \textrm{ by the induction assumption}</mrow>
-  <mrow>2(k+1)+1 &amp;= 2k+2+1</mrow>
+  <mrow>2k+1&lt; 2^k.</mrow>
+ </md>
+ Then, 
+ <md> 
+  <mrow>&amp;2(k+1)+1 = 2k+2+1</mrow>
   <mrow>&amp;=2k+1+2</mrow>
   <mrow>&amp;&lt;2^k+2\ \ \textrm{ by the induction assumption}</mrow>
   <mrow>&amp;&lt;2^k+2^k\ \ \textrm{ since } 2&lt; 2^k</mrow>
   <mrow>&amp;=2(2^k)</mrow>
-  <mrow>&amp;=2^{k+1}</mrow>
+  <mrow>&amp;=2^{k+1}.</mrow>
 </md>
 Thus, <m>2(k+1)+1&lt; 2^{k+1}</m>, which is what we wanted to show.
 </p>
@@ -168,16 +174,16 @@ Thus, <m>2(k+1)+1&lt; 2^{k+1}</m>, which is what we wanted to show.
 
       <exercise label="DMT_moreind_CYU_8divinda"><statement><p>Suppose you want to prove <m>8\mid 3^{2n}-1</m>. What should you assume in the induction step?</p></statement>
       <response />
-      <answer><m>8\mid 3^{2k}-1</m></answer></exercise>
+      <answer><p><m>8\mid 3^{2k}-1</m></p></answer></exercise>
 
       <exercise label="DMT_moreind_CYU_8divinds"><statement><p>Suppose you want to prove <m>8\mid 3^{2n}-1</m>. What should you show in the induction step?</p></statement>
       <response />
-      <answer><m>8\mid 3^{2(k+1)}-1</m></answer></exercise>
+      <answer><p><m>8\mid 3^{2(k+1)}-1</m></p></answer></exercise>
 
       <exercise label="DMT_moreind_CYU_8divmult8"><statement><p>If you know <m>8\mid 3^{2k}-1</m>, rewrite <m>3^{2(k+1)}-1</m> so that it is a sum of terms that are multiples of 8.</p></statement>
       <response />
       <hint><p>Be careful with the algebra, especially with rules of exponents. It is also helpful to notice that <m>3^2=9=8+1</m>.</p></hint>
-      <answer><m>3^{2(k+1)}-1=3^{2k+2}-1=3^23^{2k}-1=(8+1)3^{2k}-1=(3^{2k}-1)+8(3^{2k})</m></answer></exercise>
+      <answer><p><m>3^{2(k+1)}-1=3^{2k+2}-1=3^23^{2k}-1=(8+1)3^{2k}-1=(3^{2k}-1)+8(3^{2k})</m></p></answer></exercise>
 
 
     

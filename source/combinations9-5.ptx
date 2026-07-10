@@ -5,17 +5,17 @@
 
   <definition xml:id="D_combination"><statement><p>Let <m>n, r</m> be nonnegative integers with <m>r\leq n</m>. An <term><m>r</m>-combination</term><idx>combination</idx> of a set of <m>n</m> elements is the number of subsets of size <m>r</m> that can be chosen from a set of <m>n</m> elements. We denote it <m>\binom{n}{r}</m>, which is read <q><m>n</m> choose <m>r</m>.</q><notation><usage><m>\binom{n}{r}</m></usage><description><m>n</m> choose <m>r</m></description></notation></p></statement></definition>
 
-  <p>Other common notation are <m>C(n, r)</m>, or <m>nCr</m>. We will use <m>\binom{n}{r}</m> notation, which we first saw in <xref ref="sequences5-1" />. For example, <m>\binom{5}{4}</m> is the number of subsets of size 4 chosen from a set of 5 elements.</p>
+  <p>Other common notations are <m>C(n, r)</m>, or <m>nCr</m>. We will use <m>\binom{n}{r}</m> notation, which we first saw in <xref ref="sequences5-1" />. For example, <m>\binom{5}{4}</m> is the number of subsets of size 4 chosen from a set of 5 elements.</p>
 
   <p>Since order does not matter in a set, the order in which we choose elements of a set does not matter. Recall, when counting permutations, the order in which we chose our elements did matter. We can use what we know about permutations, though, to count combinations.</p>
 
-  <p>We can calculate combinations by first finding all the <m>r</m>-permuatations of a set, then dividing by all the possible orderings of that subset: <m>\frac{P(n, r)}{r!}</m>. This can be rewritten to be the standard formula for calculating combinations:<me>\binom{n}{r}=\frac{n!}{r!(n-r)!}</me>.</p>
+  <p>We can calculate combinations by first finding all the <m>r</m>-permutations of a set, then dividing by all the possible orderings of that subset: <m>\frac{P(n, r)}{r!}</m>. This can be rewritten to be the standard formula for calculating combinations:<md>\binom{n}{r}=\frac{n!}{r!(n-r)!}</md>.</p>
 
   <p>Note, since <m>0!=1</m>,  <m>\binom{n}{0}=1</m> and <m>\binom{0}{0}=1</m>. This also makes sense with the definition, as there is only one set with 0 elements, the empty set.</p>
 
-  <activity><statement><p>Calculate <m>{6 \choose 2}</m> and <m>{6 \choose 4}</m>.</p></statement></activity>
+  <activity label="comb-6Cn"><statement><p>Calculate <m>{6 \choose 2}</m> and <m>{6 \choose 4}</m>.</p></statement><response/></activity>
 
-  <activity><statement><p>Calculate <m>{4 \choose 0}</m> and <m>{4 \choose 4}</m>.</p></statement></activity>
+  <activity label="comb-4Cn"><statement><p>Calculate <m>{4 \choose 0}</m> and <m>{4 \choose 4}</m>.</p></statement><response/></activity>
 
 
 
@@ -29,25 +29,25 @@
     
   </example>
 
-  <p>In deciding whether to use combinations or permutations, you need to decide whether order matters. For combinations, order doesn't matter; think about choosing subsets. For permuations, order does matter; think about choosing ordered lists.</p>
+  <p>In deciding whether to use combinations or permutations, you need to decide whether order matters. For combinations, order doesn't matter; think about choosing subsets. For permutations, order does matter; think about choosing ordered lists.</p>
 
   <p>Recall, a binary string is just a list of 0s and 1s</p>
 
   <example xml:id="E_binstrings"><title>Binary Strings</title><p>How many binary strings of length 5 can have exactly 2 ones?</p>
-  <p>We can think of forming a binary string with 2 ones as a list of 5 places where we need to choose 2 places for the ones. Once we've done that, the other places must have 0's. Thus, we have five places and choose 2: <me>\binom{5}{2}=\frac{5!}{2!3!}=10.</me></p>
+  <p>We can think of forming a binary string with 2 ones as a list of 5 places where we need to choose 2 places for the ones. Once we've done that, the other places must have 0's. Thus, we have five places and choose 2: <md>\binom{5}{2}=\frac{5!}{2!3!}=10.</md></p>
   <p>How many binary strings of length 5 can have at most 2 ones?</p>
-  <p>Here we can count the strings with 2 ones, 1 one, and 0 ones. We add them since the strings with different numbers of ones are disjoint: <me>\binom{5}{2}+\binom{5}{1}+\binom{5}{0}=10+5+1=16.</me></p>
+  <p>Here we can count the strings with 2 ones, 1 one, and 0 ones. We add them since the strings with different numbers of ones are disjoint: <md>\binom{5}{2}+\binom{5}{1}+\binom{5}{0}=10+5+1=16.</md></p>
   </example>
 
-  <activity><statement><p>How many binary strings of length 7 have exactly 3 ones? </p></statement><hint><p>Think of this as a list of 7 digits. How many ways are there to place the ones? </p></hint></activity>
+  <activity label="comb-binstr3"><statement><p>How many binary strings of length 7 have exactly 3 ones? </p></statement><response/><hint><p>Think of this as a list of 7 digits. How many ways are there to place the ones? </p></hint></activity>
 
-  <activity><statement><p>How many binary strings of length 7 have at most 2 ones? </p></statement><hint><p>First count how many have 0 ones, then 1 one, then 2 ones. Should you use the addition rule or multiplication rule to find the total number?</p></hint></activity>
+  <activity label="comb-binstrmost2"><statement><p>How many binary strings of length 7 have at most 2 ones? </p></statement><response/><hint><p>First count how many have 0 ones, then 1 one, then 2 ones. Should you use the addition rule or multiplication rule to find the total number?</p></hint></activity>
 
   <example xml:id="E_reorderletters"><title>Rearranging Letters</title><p>How many ways are there to order the letters in the word <q>letter</q>?</p>
   <p>We can think of the string of letters as 6 places where we can choose to put letters. First we can choose the place to put the <q>l</q>: we have 6 places, we need to choose 1: <m>\binom{6}{1}.</m></p>
   <p>Next we choose the places to put the two <q>e</q>s: we now only have 5 places (since one has the l), we need to choose 2: <m>\binom{5}{2}.</m></p>
   <p>We continue in this way, with 3 places to put the two <q>t</q>s: <m>\binom{3}{2}</m>, and one remaining place to put the <q>r</q>: <m>\binom{1}{1}</m>.</p>
-  <p>Since placing each letter is a process (we don't have a complete string until we have placed all the letters), we need to use the multiplication rule: <me>\binom{6}{1}\cdot \binom{5}{2}\cdot \binom{3}{2}\cdot \binom{1}{1}=6\cdot 10\cdot 3\cdot 1=180.</me></p>
+  <p>Since placing each letter is a process (we don't have a complete string until we have placed all the letters), we need to use the multiplication rule: <md>\binom{6}{1}\cdot \binom{5}{2}\cdot \binom{3}{2}\cdot \binom{1}{1}=6\cdot 10\cdot 3\cdot 1=180.</md></p>
   </example>
 
   <p>There is another way to calculate the previous example.</p>
@@ -56,17 +56,17 @@
   <p>We can think of the string of letters as 6 places where we can choose to put letters. First we can think of all the letters as distinct. Then we have 6 letters to choose for the first place, 5 for the second, 4 for the third, etc. Thus we have <m>6!</m> ways to place 6 distinct letters.</p>
   <p>But the letters are not distinct, so we need to divide by the number of ways we over-counted. For each permutation we just counted, switching the two <q>e</q>s gives us the same word, so we need to divide by the number of ways to rearrange the two <q>e</q>s: <m>2!.</m> Similarly, we need to divide by equivalent arrangements of the two <q>t</q>s: <m>2!</m>.</p>
 
-  <p>Putting this together we have <me>\frac{6!}{2!2!}=180.</me></p>
+  <p>Putting this together we have <md>\frac{6!}{2!2!}=180.</md></p>
   </example>
 
-  <activity><statement><p>How many ways are there to order the letters in <q>book</q>? </p></statement><hint><p>First place all the <q>b</q>s--how many ways can you do this? Then count how many ways to place all the <q>o</q>s, then all the <q>k</q>s.</p></hint></activity>
+  <activity label="comb-BOOK"><statement><p>How many ways are there to order the letters in <q>book</q>? </p></statement><response/><hint><p>First place all the <q>b</q>s--how many ways can you do this? Then count how many ways to place all the <q>o</q>s, then all the <q>k</q>s.</p></hint></activity>
 
-  <activity><statement><p>How many ways are there to order the letters in <q>infinity</q>? </p></statement></activity>
+  <activity label="comb-INFINTY"><statement><p>How many ways are there to order the letters in <q>infinity</q>? </p></statement><response/></activity>
 
   
   <example xml:id="E_committees"><title>Forming Committees</title>
     <p>A class has 13 students. How many ways can a group of 7 be chosen?</p>
-    <answer><m>\binom{13}{7}</m></answer>
+    <answer><p><m>\binom{13}{7}</m></p></answer>
     <p>Suppose in this class of 13 there are 7 juniors and 6 seniors.</p>
 
     <p><ul>
@@ -86,7 +86,7 @@
     <p>Now, find the number of groups with neither A nor B: <m>\binom{11}{7}</m>. Note, we need to choose 7 out of 11 since we know A and B cannot be chosen.</p>
 
     <p>Since the sets of each type of group (with A, with B, with neither) are disjoint, we use the addition rule:
-    <me>\binom{11}{6}+\binom{11}{6}+ \binom{11}{7}.</me> </p></li>
+    <md>\binom{11}{6}+\binom{11}{6}+ \binom{11}{7}.</md> </p></li>
   </ul></p>
 
     
@@ -125,7 +125,7 @@
     </condition>
     </var>
   </setup>
-      <answer><m>\frac{6!}{4!2!}=15</m></answer></exercise>
+      <answer><p><m>\frac{6!}{4!2!}=15</m></p></answer></exercise>
 
        <exercise label="DMT_comb_CYU_7choose4"><statement><p>Calculate <m>\binom{7}{4}</m>. <var /></p></statement>
   <setup>
@@ -147,7 +147,7 @@
     </condition>
     </var>
   </setup>
-      <answer><m>\frac{7!}{4!3!}=35</m></answer></exercise>
+      <answer><p><m>\frac{7!}{4!3!}=35</m></p></answer></exercise>
 
       <exercise label="DMT_comb_CYU_7choose2"><statement><p>Calculate <m>\binom{7}{2}</m>. <var /></p></statement>
       <setup>
@@ -169,7 +169,7 @@
     </condition>
     </var>
   </setup>
-      <answer><m>21</m></answer></exercise>
+      <answer><p><m>21</m></p></answer></exercise>
 
       <exercise label="DMT_comb_CYU_7choose1"><statement><p>Calculate <m>\binom{7}{1}</m>. <var /></p></statement>
       <setup>
@@ -191,7 +191,7 @@
     </condition>
     </var>
   </setup>
-      <answer><m>7</m></answer></exercise>
+      <answer><p><m>7</m></p></answer></exercise>
 
       <exercise label="DMT_comb_CYU_7choose7"><statement><p>Calculate <m>\binom{7}{7}</m>. <var /></p></statement>
       <setup>
@@ -213,7 +213,7 @@
     </condition>
     </var>
   </setup>
-      <answer><m>1</m></answer></exercise>
+      <answer><p><m>1</m></p></answer></exercise>
       <exercise label="DMT_comb_CYU_7choose0"><statement><p>Calculate <m>\binom{7}{0}</m>. <var /></p></statement>
       <setup>
     <var>
@@ -234,7 +234,7 @@
     </condition>
     </var>
   </setup>
-      <answer><m>1</m></answer></exercise>
+      <answer><p><m>1</m></p></answer></exercise>
 
       <exercise label="DMT_comb_CYU_7bit40s"><statement><p>Find the number of binary strings of length 7 with 4 zeros. <var /></p></statement>
       <setup>
@@ -256,7 +256,7 @@
     </condition>
     </var>
   </setup>
-      <answer><m>\binom{7}{4}</m></answer></exercise>
+      <answer><p><m>\binom{7}{4}</m></p></answer></exercise>
 
       <exercise label="DMT_comb_CYU_7bitmost20s"><statement><p>Find the number of binary strings of length 7 with at most 2 zeros. <var /></p></statement>
        <setup>
@@ -278,7 +278,7 @@
     </condition>
     </var>
   </setup>
-      <answer><m>\binom{7}{0}+\binom{7}{1}+\binom{7}{2}</m></answer></exercise>
+      <answer><p><m>\binom{7}{0}+\binom{7}{1}+\binom{7}{2}</m></p></answer></exercise>
 
       <exercise label="DMT_comb_CYU_calculate"><statement><p>Find the number of strings that can be formed from the letters in the word <q>calculate</q>. <var /></p></statement>
       <setup>
@@ -300,7 +300,7 @@
     </condition>
     </var>
   </setup>
-      <answer><m>\binom{9}{2}\cdot\binom{7}{2}\cdot\binom{5}{2}\cdot\binom{3}{1}\cdot\binom{2}{1}\cdot\binom{1}{1}</m> or <m>\frac{9!}{2!2!2!}</m></answer></exercise>
+      <answer><p><m>\binom{9}{2}\cdot\binom{7}{2}\cdot\binom{5}{2}\cdot\binom{3}{1}\cdot\binom{2}{1}\cdot\binom{1}{1}</m> or <m>\frac{9!}{2!2!2!}</m></p></answer></exercise>
 
       
 
@@ -312,7 +312,7 @@
     Calculate
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     <m>{6 \choose 0}</m>
@@ -362,7 +362,7 @@
     A student council consists of 15 students.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     In how many ways can a committee of 6 be selected from the membership of the council?
@@ -386,7 +386,7 @@
     Suppose the council contains 8 seniors and 7 juniors.
   </p>
 
-  <p><ol marker="i">
+  <p><ol marker="i.">
     <li>
       <p>
     How many committees of six contain three seniors and three juniors?
@@ -415,7 +415,7 @@
     An instructor gives an exam with fourteen questions. Students are allowed to choose any ten questions to answer.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     How many different choices of ten questions are there?
@@ -427,7 +427,7 @@
     Suppose six questions require proof and eight do not.
   </p>
 
-  <p><ol marker="i">
+  <p><ol marker="i.">
     <li>
       <p>
     How many groups of ten questions contain four that require proof and six that do not?
@@ -468,7 +468,7 @@
     A coin is tossed ten times. In each case the outcome (H or T) is recorded.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     What is the total number of possible outcomes of the coin tossing experiment?
@@ -506,7 +506,7 @@
     A binary or bit string consists of just 0’s and 1’s. A bit string of length 16 is called a 16-bit string.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     How many 16-bit strings contain exactly seven 1’s?
@@ -535,7 +535,7 @@
       </statement></exercise>
       <exercise><statement>
         <p>Consider the word <m>NINETEENTH</m></p>
-        <ol marker="a">
+        <ol marker="a.">
     <li>
       <p>
     How many distinguishable ways are there to order the letters in the word <m>NINETEENTH</m>?

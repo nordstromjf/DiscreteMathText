@@ -7,7 +7,7 @@
   
   <assemblage xml:id="B_pfcontradiction">
 <title>Method of Proof by Contradiction</title><idx><h>proof</h><h>by contradiction</h></idx><idx><h>contradiction</h><h>proof</h></idx>
-<p><ol marker="1">
+<p><ol marker="1.">
   <li><p>Assume the statement to be proved is false. Or, assume the negation is true.</p></li>
   <li><p>Show you reach some logical contradiction.</p></li>
   <li><p>Conclude the original statement is true.</p></li>
@@ -28,19 +28,19 @@
 </ul>
 </p>
 
-<activity><introduction><p>Consider the statement: The sum of a rational number and an irrational number is irrational.</p></introduction>
-<task><p>Try to determine if the statement is true or false by trying examples and looking for a counterexample.</p></task>
-<task><p>Write the statement using variables and quantifiers.</p></task>
-<task><p>Write the negation of the statement.</p></task>
-<task><p>Now assume the negation is true and find a contradiction.</p></task>
-<task><p>The work in (d) is your scratch work. Write a careful proof by contradiction to show the original statement is true.</p></task></activity>
+<activity label="contrad-sumratirr"><introduction><p>Consider the statement: The sum of a rational number and an irrational number is irrational.</p></introduction>
+<task label="contrad-sumratirr-TF"><statement><p>Try to determine if the statement is true or false by trying examples and looking for a counterexample.</p></statement><response/></task>
+<task label="contrad-sumratirr-state"><statement><p>Write the statement using variables and quantifiers.</p></statement><response/></task>
+<task label="contrad-sumratirr-neg"><statement><p>Write the negation of the statement.</p></statement><response/></task>
+<task label="contrad-sumratirr-contrad"><statement><p>Now assume the negation is true and find a contradiction.</p></statement><response/></task>
+<task label="contrad-sumratirr-pf"><statement><p>The work in (d) is your scratch work. Write a careful proof by contradiction to show the original statement is true.</p></statement><response/></task></activity>
 
 <p>Recall from <xref ref="conditional2-2"/> that a conditional, <m>p\rightarrow q</m>, and its contrapositive, <m>\sim q\rightarrow \sim p</m>, are logically equivalent. This means we can prove the contrapositive rather than the original statement.</p>
 
 <assemblage xml:id="B_pfcontrapositive">
 
 <title>Method of Proof by Contrapositive</title><idx><h>proof</h><h>by contrapositive</h></idx><idx><h>contrapositive</h><h>proof</h></idx>
-<p><ol marker="1">
+<p><ol marker="1.">
   <li><p>Write the statement to be proved in the form <m>\forall x\in D</m>, if <m>P(x)</m> then <m>Q(x)</m>.</p></li>
   <li><p>Write the contrapositive of the statement: <m>\forall x\in D</m>, if <m>\sim Q(x)</m> then <m>\sim P(x)</m>.</p></li>
   <li><p>Prove the contrapositive directly: assume <m>\sim Q(x)</m>, show <m>\sim P(x)</m>.</p></li>
@@ -55,11 +55,11 @@
 </p></proof>
 </example>
 
-<activity xml:id="A_n2evenneven"><introduction><p>Consider the statement: For all integers <m>n</m>, if <m>n^2</m> is even then <m>n</m> is even.</p></introduction>
-<task><p>Write the contrapositive of the statement.</p></task>
-<task><p>To prove the statement by contrapositive, what should you assume?</p></task>
-<task><p>To prove the statement by contrapositive, what should you show?</p></task>
-<task><p>Give a direct proof of the contrapositive. You have now proven the original statement by contrapositive. </p></task>
+<activity xml:id="A_n2evenneven" label="contrad-pfn2even"><introduction><p>Consider the statement: For all integers <m>n</m>, if <m>n^2</m> is even then <m>n</m> is even.</p></introduction>
+<task label="contrad-pfn2even-contrap"><statement><p>Write the contrapositive of the statement.</p></statement><response/></task>
+<task label="contrad-pfn2even-assump"><statement><p>To prove the statement by contrapositive, what should you assume?</p></statement><response/></task>
+<task label="contrad-pfn2even-show"><statement><p>To prove the statement by contrapositive, what should you show?</p></statement><response/></task>
+<task label="contrad-pfn2even-proof"><statement><p>Give a direct proof of the contrapositive. You have now proven the original statement by contrapositive. </p></statement><response/></task>
 </activity>
 
 <p>Since we can use either contradiction or contrapositive on statements of the form <m>p\rightarrow q</m>, the following comparison may be helpful.</p>
@@ -141,7 +141,7 @@
     Consider the statement: For all integers <m>n</m>, if <m>n^2</m> is odd then <m>n</m> is odd.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     Write what you would assume and what you would need to show to prove this statement by contradiction.
@@ -164,7 +164,7 @@
     Use this test to determine if the following numbers are prime or not.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     527
@@ -183,7 +183,7 @@
         <p>
     Carefully write the negation of each statement then prove the statement by contradiction.
   </p>
-  <ol marker="a">
+  <ol marker="a.">
     <li><p>
     There is no greatest even integer.
   </p></li>

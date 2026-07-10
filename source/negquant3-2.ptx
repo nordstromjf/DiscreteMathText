@@ -9,13 +9,13 @@
   <title>Negating Quantified Statements</title><idx><h>quantifier</h><h>negation</h></idx>
 
   <p>The negation of <m>\forall x\in D, P(x)</m> is <m>\exists x\in D, \sim P(x)</m>.</p>
-  <p>In notation: <me>\sim(\forall x\in D, P(x))\equiv \exists x\in D, \sim P(x).</me></p>
+  <p>In notation: <md>\sim(\forall x\in D, P(x))\equiv \exists x\in D, \sim P(x).</md></p>
   <p>The negation of <m>\exists x\in D, P(x)</m> is <m>\forall x\in D, \sim P(x)</m>.</p>
-  <p>In notation: <me>\sim(\exists x\in D, P(x))\equiv \forall x\in D, \sim P(x).</me></p>
+  <p>In notation: <md>\sim(\exists x\in D, P(x))\equiv \forall x\in D, \sim P(x).</md></p>
 
 </assemblage>
 
-  <p>We can think of negation as switching the quantifier and negating <m>P(x)</m>, but it will be really helpful if we can understand <em>why</em> this is the negation. Thinking about negating a <q>for all</q> statement, we need the statement to not be true for all things, which means it must be false for something, Thus, there exists something making <m>\sim P(x)</m> true. Thinking about negating a <q>there exists</q> statement, we need there not to exist anything making <m>P(x)</m> true, which means <m>P(x)</m> must be false for everything. Thus, everything makes <m>\sim P(x)</m> true.</p>
+  <p>We can think of negation as switching the quantifier and negating <m>P(x)</m>, but it will be really helpful if we can understand <em>why</em> this is the negation. Thinking about negating a <q>for all</q> statement, we need the statement to not be true for all things, which means it must be false for something. Thus, there exists something making <m>\sim P(x)</m> true. Thinking about negating a <q>there exists</q> statement, we need there not to exist anything making <m>P(x)</m> true, which means <m>P(x)</m> must be false for everything. Thus, everything makes <m>\sim P(x)</m> true.</p>
 
   <example xml:id="E_negquant1"><title>Negating a Quantified Statement</title>
     <p>Negate the statement: For all primes <m>p</m>, <m>p</m> is odd. Is this statement true or false?</p>
@@ -25,11 +25,11 @@
     <answer><p>For all real numbers <m>x</m>, <m>x^2\geq 0</m>. The original statement is false, since the negation is true.</p></answer>
   </example>
 
-  <activity xml:id="A_simpleneg"><introduction><p>Write the negation of the following statements (in English).</p></introduction>
-<task><p>For all integers <m>n</m>, <m>\sqrt{n}</m> is an integer.</p></task>
-<task><p>There exists an integer <m>n</m>, such that <m>n^2=5</m>.</p></task>
+  <activity xml:id="A_simpleneg" label="negquant-negEng"><introduction><p>Write the negation of the following statements (in English).</p></introduction>
+<task label="negquant-negEng-forall"><statement><p>For all integers <m>n</m>, <m>\sqrt{n}</m> is an integer.</p></statement><response/></task>
+<task label="negquant-negEng-exist"><statement><p>There exists an integer <m>n</m>, such that <m>n^2=5</m>.</p></statement><response/></task>
 </activity>
-  <p>Many of our quantified statements may have predicates involving other logical connectives. So it is going to be important to remember how to negate "and"s, "or"s, and "if...then"s. The following summarizes the rules we have already seen for negating statements with connectives</p>
+  <p>Many of our quantified statements may have predicates involving other logical connectives. So it is going to be important to remember how to negate <q>and</q>s, <q>or</q>s, and <q>if...then</q>s. The following summarizes the rules we have already seen for negating statements with connectives</p>
 
 <assemblage xml:id="B_negconnectives">
   <title>Negations of Logical Statements</title><idx><h>negation</h><h>logical statement</h></idx>
@@ -45,14 +45,14 @@
   </ul></p>
 </assemblage>
 
-    <activity xml:id="A_complexneg"><introduction><p>Write the negation of the following statements (in English).</p></introduction>
-<task><p>There exists an integer <m>n</m>, such that <m>1 &lt; n &lt; 2</m>.</p></task>
-<task><p>For all real numbers  <m>x</m>, if <m>x>2</m> then <m>x+5>7</m>.</p></task>
-<task><p>For all functions <m>f</m>, if <m>f</m> is continuous, then <m>f</m> is differentiable.</p></task>
+    <activity xml:id="A_complexneg" label="negquant-neglogic"><introduction><p>Write the negation of the following statements (in English).</p></introduction>
+<task label="negquant-neglogic-exist"><statement><p>There exists an integer <m>n</m>, such that <m>1 &lt; n &lt; 2</m>.</p></statement><response/></task>
+<task label="negquant-neglogic-univcond1"><statement><p>For all real numbers  <m>x</m>, if <m>x>2</m> then <m>x+5>7</m>.</p></statement><response/></task>
+<task label="negquant-neglogic-univcond2"><statement><p>For all functions <m>f</m>, if <m>f</m> is continuous, then <m>f</m> is differentiable.</p></statement><response/></task>
 
 </activity>
 
-<p>Recall from <xref ref="conditional2-2"/> the contapositive of <m>p\rightarrow q</m> is <m>\sim q\rightarrow \sim p</m>. We can use this to define the contrapositive of a universal conditional statement.</p>
+<p>Recall from <xref ref="conditional2-2"/> the contrapositive of <m>p\rightarrow q</m> is <m>\sim q\rightarrow \sim p</m>. We can use this to define the contrapositive of a universal conditional statement.</p>
 
   <definition xml:id="D_contrapositiveuc"><statement>
   <p>The universal conditional statement <m>\forall x\in D, P(x)\rightarrow Q(x)</m> has <term>contrapositive</term><idx><h>contrapositive</h><h>universal conditional</h></idx><idx><h>universal conditional</h><h>contrapositive</h></idx> <m>\forall x\in D, \sim Q(x)\rightarrow \sim P(x)</m>.</p></statement></definition>
@@ -62,26 +62,46 @@
   <definition xml:id="D_converseuc"><statement>
   <p>The universal conditional statement <m>\forall x\in D, P(x)\rightarrow Q(x)</m> has <term>converse</term><idx><h>converse</h><h>universal conditional</h></idx><idx><h>universal conditional</h><h>converse</h></idx> <m>\forall x\in D, Q(x)\rightarrow P(x)</m>.</p></statement></definition>
 
-  <activity xml:id="A_contrapos1"><introduction><p>Consider the statement <q>For all real numbers  <m>x</m>, if <m>(x+1)(x-2)>0</m> then <m>x &lt; -1</m> or <m>x>2</m>.</q></p></introduction>
-  <task><p>Write the negation of the statement.</p></task>
-  <task><p>Write the contrapositive of the statement.</p></task>
+  <activity xml:id="A_contrapos1" label="negquant-zeros"><introduction><p>Consider the statement <q>For all real numbers  <m>x</m>, if <m>(x+1)(x-2)>0</m> then <m>x &lt; -1</m> or <m>x>2</m>.</q></p></introduction>
+  <task label="negquant-zeros-neg"><statement><p>Write the negation of the statement.</p></statement><response/></task>
+  <task label="negquant-zeros-contr"><statement><p>Write the contrapositive of the statement.</p></statement><response/></task>
 </activity>
 
- <activity xml:id="A_contrapos2"><introduction><p>Consider the statement <q>For all integers  <m>n</m>, if <m>n</m> has a factor of 15, then <m>n</m> has a factor of 3 and <m>n</m> has a factor of 5.</q></p></introduction>
-  <task><p>Write the negation of the statement.</p></task>
-  <task><p>Write the contrapositive of the statement.</p></task>
+ <activity xml:id="A_contrapos2" label="negquant-factors"><introduction><p>Consider the statement <q>For all integers  <m>n</m>, if <m>n</m> has a factor of 15, then <m>n</m> has a factor of 3 and <m>n</m> has a factor of 5.</q></p></introduction>
+  <task label="negquant-factors-neg"><statement><p>Write the negation of the statement.</p></statement><response/></task>
+  <task label="negquant-factors-contr"><statement><p>Write the contrapositive of the statement.</p></statement><response/></task>
 </activity>
   
   <p>The relationship between <q>for all</q> and <q>there exists</q> can be used to show some surprising things. What happens if our domain, <m>D</m>, has nothing in it? In particular, let <m>D=\emptyset</m>, the empty set. Is <m>\forall x\in D, P(x)</m> true or false? Well, let's look at the negation: <m>\exists x\in D, \sim P(x)</m>. Now the negation <em>must</em> be false since <m>D</m> has nothing in it, so there can't exist something in <m>D</m> making <m>\sim P(x)</m> true. Since the negation is false, the original statement is true! We say <m>\forall x\in D, P(x)</m> is <term>vacuously</term> true.<idx><h>statement</h><h>vacuously true</h></idx><idx>vacuously true</idx> </p>
 
 
   <example xml:id="E_vacuouslytrue"><title>Vacuously True Statement</title>
-    <p>Consider the statement <q>For all llamas, <m>L</m>, in Discrete Math, <m>L</m> is getting an A.</q> The negation is <q>There exists a llama, <m>L</m>, in Discrete Math, such that  <m>L</m> is not getting an A.</q> Since no such llama exists, the negation is false. Making the original true. So every llama in Discrete is getting an A.</p>
+    <p>Consider the statement <q>For all llamas, <m>L</m>, in Discrete Math, <m>L</m> is getting an A.</q> The negation is <q>There exists a llama, <m>L</m>, in Discrete Math, such that  <m>L</m> is not getting an A.</q> Since no such llama exists, the negation is false. Making the original true. So every llama in Discrete Math is getting an A.</p>
   </example>
 
   <p>As one additional note, it can be helpful in deciding if your negation is correct by finding the truth value of both the original and the negation. They should have opposite values. Similarly, if you need to determine the truth value of a complex statement, it might be easier to find the truth value of the negation.</p>
 
-  <activity><introduction><p>Determine if each of the following statements are true or false. It may be helpful to look at the negations you founds in the above activities, <xref ref="A_simpleneg" />, <xref ref="A_complexneg" />, <xref ref="A_contrapos1" />, and <xref ref="A_contrapos2" />.</p></introduction>
+  <activity xml:id="A_quantifiersort" label="negquant-TF"><statement><p>Determine if each of the following statements are true or false. It may be helpful to look at the negations you found in the above activities, <xref ref="A_simpleneg" />, <xref ref="A_complexneg" />, <xref ref="A_contrapos1" />, and <xref ref="A_contrapos2" />.</p></statement>
+  <cardsort>
+    <match>
+      <premise><p>For all real numbers  <m>x</m>, if <m>x>2</m> then <m>x+5>7</m>.</p></premise> 
+      <premise><p>For all real numbers  <m>x</m>, if <m>(x+1)(x-2)>0</m> then <m>x &lt; -1</m> or <m>x>2</m>.</p></premise>
+      <premise><p>For all integers  <m>n</m>, if <m>n</m> has a factor of 15, then <m>n</m> has a factor of 3 and <m>n</m> has a factor of 5.</p></premise>
+      <response><p>True</p></response>
+    </match>
+    <match>  
+      <premise><p>For all integers <m>n</m>, <m>\sqrt{n}</m> is an integer.</p></premise>
+      <premise><p>There exists an integer <m>n</m>, such that <m>n^2=5</m>.</p></premise>
+      <premise><p>There exists an integer <m>n</m>, such that <m>1 &lt; n &lt; 2</m>.</p></premise>
+      <premise><p>For all functions <m>f</m>, if <m>f</m> is continuous, then <m>f</m> is differentiable.</p></premise>
+      <response><p>False</p></response>
+    </match>
+</cardsort>
+</activity>
+
+
+
+ <!-- <activity label="negquant-TF"><introduction><p>Determine if each of the following statements are true or false. It may be helpful to look at the negations you founds in the above activities, <xref ref="A_simpleneg" />, <xref ref="A_complexneg" />, <xref ref="A_contrapos1" />, and <xref ref="A_contrapos2" />.</p></introduction>
   <task><p>For all integers <m>n</m>, <m>\sqrt{n}</m> is an integer.</p></task>
   <task><p>There exists an integer <m>n</m>, such that <m>n^2=5</m>.</p></task>
   <task><p>There exists an integer <m>n</m>, such that <m>1 &lt; n &lt; 2</m>.</p></task>
@@ -91,6 +111,12 @@
   <task><p>For all integers  <m>n</m>, if <m>n</m> has a factor of 15, then <m>n</m> has a factor of 3 and <m>n</m> has a factor of 5.</p></task>
 
 
+</activity>-->
+
+<activity label="negquant-TFexplain"><introduction><p>Consider the statements in the previous activity, <xref ref="A_quantifiersort" />.</p></introduction>
+<task label="negquant-TFexplain-T"><statement><p>Choose one of the true statements and explain why you know it is true.</p></statement><response/></task>
+<task label="negquant-TFexplain-F"><statement><p>Choose one of the false statements and explain why you know it is false.</p></statement><response/></task>
+  
 </activity>
 
   
@@ -107,7 +133,7 @@
       </choice>
       <choice><statement><p><m>\forall n\in \mathbb{Z}, n> 0.</m></p></statement></choice>
     </choices>
-      <answer><m>\exists n\in \mathbb{Z}, n\leq 0.</m></answer></exercise>
+      <answer><p><m>\exists n\in \mathbb{Z}, n\leq 0.</m></p></answer></exercise>
 
       <exercise label="DMT_negquant_CYU_forallcond"><statement><p>Determine the negation of <m>\forall n\in \mathbb{Z}</m>, if <m>n>0</m> then <m>n^3>0</m>.</p></statement>
       <choices randomize="yes">
@@ -119,7 +145,7 @@
       </choice>
       <choice><statement><p><m>\forall n\in \mathbb{Z}</m>, if <m>n\leq 0</m> then <m>n^3\leq 0</m></p></statement></choice>
     </choices>
-      <answer><m>\exists n\in \mathbb{Z}</m>, <m>n>0</m> and <m>n^3\leq 0.</m></answer></exercise>
+      <answer><p><m>\exists n\in \mathbb{Z}</m>, <m>n>0</m> and <m>n^3\leq 0.</m></p></answer></exercise>
 
       <exercise label="DMT_negquant_CYU_existand"><statement><p>Determine the negation of <m>\exists n\in \mathbb{Z}</m>, <m>n>5</m> and <m>n^2\leq 10</m>.</p></statement>
       <choices randomize="yes">
@@ -132,7 +158,7 @@
       </choice>
       <choice><statement><p><m>\exists n\in \mathbb{Z}</m>, <m>n\leq 5</m> and <m>n^2> 10.</m></p></statement></choice>
     </choices>
-      <answer><m>\forall n\in \mathbb{Z}</m>, <m>n\leq 5</m> or <m>n^2> 10.</m></answer></exercise>
+      <answer><p><m>\forall n\in \mathbb{Z}</m>, <m>n\leq 5</m> or <m>n^2> 10.</m></p></answer></exercise>
 
       <exercise label="DMT_negquant_CYU_existcond"><statement><p>Determine the negation of <m>\exists n\in \mathbb{Z}</m>, such that if <m>n^2>4</m> then <m>n>2</m> or <m>n&lt;-2.</m></p></statement>
       <choices randomize="yes">
@@ -145,7 +171,7 @@
       <choice><statement><p><m>\forall n\in \mathbb{Z}</m>, <m>n^2\leq 4</m> and <m>-2\leq n\leq 2.</m></p></statement></choice>
     <choice><statement><p><m>\forall n\in \mathbb{Z}</m>, <m>n^2\leq 4</m> and <m>n\leq 2</m> or <m>n\geq -2.</m></p></statement></choice>
     </choices>
-      <answer><m>\forall n\in \mathbb{Z}</m>, <m>n^2>4</m> and <m>n\leq 2</m> and <m>n\geq -2.</m> Note, we can also write this as <m>\forall n\in \mathbb{Z}</m>, <m>n^2>4</m> and <m>-2\leq n\leq 2.</m></answer></exercise>
+      <answer><p><m>\forall n\in \mathbb{Z}</m>, <m>n^2>4</m> and <m>n\leq 2</m> and <m>n\geq -2.</m> Note, we can also write this as <m>\forall n\in \mathbb{Z}</m>, <m>n^2>4</m> and <m>-2\leq n\leq 2.</m></p></answer></exercise>
 
       <exercise label="DMT_negquant_CYU_contraall"><statement><p>Determine the contrapositive of <m>\forall n\in \mathbb{Z}</m>, if <m>n>0</m> then <m>n^3>0</m>.</p></statement>
       <choices randomize="yes">
@@ -157,7 +183,7 @@
       <choice correct="yes"><statement><p><m>\forall n\in \mathbb{Z}</m>, if <m>n^3\leq 0</m> then <m>n\leq 0.</m></p></statement>
       </choice>
     </choices>
-      <answer><m>\forall n\in \mathbb{Z}</m>, if <m>n^3\leq 0</m> then <m>n\leq 0.</m></answer></exercise>
+      <answer><p><m>\forall n\in \mathbb{Z}</m>, if <m>n^3\leq 0</m> then <m>n\leq 0.</m></p></answer></exercise>
 
       
 
@@ -168,7 +194,7 @@
         <p>
     Which of the following is a negation for <q>All discrete math students are athletic</q>? More than one answer may be correct.
   </p>
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     There is a discrete math student who is nonathletic.
@@ -211,7 +237,7 @@
     Write an informal negation for each of the following statements. Be careful to avoid negations that are ambiguous.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     All dogs are friendly.
@@ -243,7 +269,7 @@
     Write a negation for each of the following statements.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     Any valid argument has a true conclusion.
@@ -261,7 +287,7 @@
       <exercise><statement>
         <p>
     Write the negation of each of the statements.</p>
-    <ol marker="a">
+    <ol marker="a.">
     <li><p><m>\forall</m> real numbers <m>x</m>, if <m>x&gt;3</m> then <m>x^2&gt;9</m>.
   </p></li>
   <li><p>

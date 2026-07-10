@@ -1,26 +1,26 @@
 <section xml:id="rationals4-2">
   <title>Rational Numbers</title><idx>rational number</idx>
 
-  <p>In this section we introduce the formal definition of a rational number and use it practice with the technique of direct proof.</p>
+  <p>In this section we introduce the formal definition of a rational number and use it to practice with the technique of direct proof.</p>
 
-<definition><statement><p>A real number, <m>r</m>, is <term>rational</term><idx>rational number</idx> if there exist <m>a, b\in \mathbb{Z}</m> such that <m>r=\frac{a}{b}</m> and <m>b\neq 0</m>. Notation: <m>\mathbb{Q}</m><notation><usage><m>\mathbb{Q}</m></usage><description>the set of ratioanl numbers</description></notation> is the set of rational numbers.</p></statement></definition>
+<definition><statement><p>A real number, <m>r</m>, is <term>rational</term><idx>rational number</idx> if there exist <m>a, b\in \mathbb{Z}</m> such that <m>r=\frac{a}{b}</m> and <m>b\neq 0</m>. Notation: <m>\mathbb{Q}</m><notation><usage><m>\mathbb{Q}</m></usage><description>the set of rational numbers</description></notation> is the set of rational numbers.</p></statement></definition>
 
-<definition><statement><p>A real number, <m>r</m>, that is not rational is <term>irrational</term><idx>irrational number</idx>. There is not a nice notation for the irrational numbers. We will use <m>\mathbb{R}\setminus\mathbb{Q}</m><notation><usage><m>\mathbb{R}\setminus\mathbb{Q}</m></usage><description>the set of irratioanl numbers</description></notation>, which is the set of real numbers <q>minus</q> the set of rationals.</p></statement></definition>
+<definition><statement><p>A real number, <m>r</m>, that is not rational is <term>irrational</term><idx>irrational number</idx>. There is not a nice notation for the irrational numbers. We will use <m>\mathbb{R}\setminus\mathbb{Q}</m><notation><usage><m>\mathbb{R}\setminus\mathbb{Q}</m></usage><description>the set of irrational numbers</description></notation>, which is the set of real numbers <q>minus</q> the set of rationals.</p></statement></definition>
 
 <p>To determine if a given number is rational, we need to be able to find a way to write it as a fraction of integers. To prove a number is rational is really a type of existence proof--we need to show <m>a, b\in \mathbb{Z}</m> exist. To prove a number is not rational, we need to show there is no possible way to write it as a fraction of integers. Also, keep in mind that rational and irrational numbers first need to be real numbers. It is possible that a number that is not rational is not a real number, and thus, not irrational either.</p>
 
 <example xml:id="E_rationals"><title>Rational Numbers</title>
-<p>Is O is rational?</p>
-<answer>Yes: <m>0=0/1</m>.</answer>
+<p>Is <m>0</m> is rational?</p>
+<answer><p>Yes: <m>0=0/1</m>.</p></answer>
 
-<p>Is 2 rational?</p>
-<answer>Yes: <m>2=2/1</m>.</answer>
+<p>Is <m>2</m> rational?</p>
+<answer><p>Yes: <m>2=2/1</m>.</p></answer>
 
 <p>Is <m>9/5</m> rational?</p>
-<answer>Yes: is already has the form of an integer over an integer.</answer>
+<answer><p>Yes: it already has the form of an integer over an integer.</p></answer>
 
 <p>Is <m>2/0</m> rational?</p>
-<answer>No: the denominator cannot be 0. In fact, <m>2/0</m> is not a number.</answer>
+<answer><p>No: the denominator cannot be <m>0</m>. In fact, <m>2/0</m> is not a number.</p></answer>
 
 </example>
 
@@ -44,10 +44,10 @@ Resulting in <m>123=999x</m>. Now we just solve for <m>x</m>: <m>x=123/999</m>.<
 <p>Letting <m>a=123, b=999</m>, we can see that <m>a, b\in \mathbb{Z}, b\neq 0</m>.</p>
 </example>
 
-<activity><introduction><p>Prove the following numbers, <m>x</m>, are rational by finding integers, <m>a</m> and <m>b</m> so that <m>x=\frac{a}{b}</m>.</p></introduction>
-<task><m>x=12.345</m></task>
-<task><m>x=12.\overline{3}</m></task>
-<task><m>x=1.2\overline{34}</m></task>
+<activity label="rational-decimal"><introduction><p>Prove the following numbers, <m>x</m>, are rational by finding integers, <m>a</m> and <m>b</m> so that <m>x=\frac{a}{b}</m>.</p></introduction>
+<task label="rational-decimal-term"><statement><p><m>x=12.345</m></p></statement><response/></task>
+<task label="rational-decimal-rep1"><statement><p><m>x=12.\overline{3}</m></p></statement><response/></task>
+<task label="rational-decimal-rep2"><statement><p><m>x=1.2\overline{34}</m></p></statement><response/></task>
 </activity>
 
 
@@ -57,9 +57,9 @@ Resulting in <m>123=999x</m>. Now we just solve for <m>x</m>: <m>x=123/999</m>.<
 <proof>
   <p>Let <m>r, s</m> be rational. Show <m>r+s</m> is rational.</p>
   <p>Since <m>r</m> is rational, it can be written as <m>\frac{a}{b}</m> for some <m>a, b\in \mathbb{Z}, b\neq 0</m>. Similarly, since <m>s</m> is rational, it can be written as <m>\frac{p}{q}</m> for some <m>p, q\in \mathbb{Z}, q\neq 0</m>. (Note, we need to use different letters since <m>r</m> and <m>s</m> are not necessarily the same.) Now, 
-  <me>r+s=\frac{a}{b}+\frac{p}{q}.</me>
+  <md>r+s=\frac{a}{b}+\frac{p}{q}.</md>
   Finding a common denominator,
-  <me>r+s=\frac{aq+bp}{pq}.</me>
+  <md>r+s=\frac{aq+bp}{pq}.</md>
 </p>
 <p>Then <m>aq+pb, pq \in \mathbb{Z}</m> and, since <m>p, q\neq 0, pq\neq 0</m>. Therefore, <m>r+s</m> is rational.</p>
 </proof>
@@ -69,10 +69,10 @@ Resulting in <m>123=999x</m>. Now we just solve for <m>x</m>: <m>x=123/999</m>.<
 <corollary><statement><p>The double of a rational number is rational.</p></statement></corollary>
 <proof><p>Let <m>r</m> be a rational number. We want to show <m>2r</m> is rational. But <m>2r=r+r</m>. By <xref ref="T_sumofrationals"/>, <m>r+r</m> is rational.</p></proof>
 
-<activity><introduction><p>Let <m>r, s</m> be rational numbers.</p></introduction>
-<task><p>Prove <m>r/2</m> is rational.</p></task>
-<task><p>Prove <m>5r-2s</m> is rational.</p></task>
-<task><p>Prove or disprove <m>\frac{1}{r}</m> is rational.</p></task>
+<activity label="rational-proof"><introduction><p>Let <m>r, s</m> be rational numbers.</p></introduction>
+<task label="rational-proof-a"><statement><p>Prove <m>r/2</m> is rational.</p></statement><response/></task>
+<task label="rational-proof-b"><statement><p>Prove <m>5r-2s</m> is rational.</p></statement><response/></task>
+<task label="rational-proof-c"><statement><p>Prove or disprove <m>\frac{1}{r}</m> is rational.</p></statement><response/></task>
 
 </activity>
 
@@ -80,37 +80,37 @@ Resulting in <m>123=999x</m>. Now we just solve for <m>x</m>: <m>x=123/999</m>.<
       <title>Check Your Understanding</title>
       
       <exercise label="DMT_rational_CYU_neg9rat"><statement correct="yes"><p>True or false: <m>-9</m> is rational.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       <exercise label="DMT_rational_CYU_neg6d13rat"><statement correct="yes"><p>True or false: <m>-\frac{6}{13}</m> is rational.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       <exercise label="DMT_rational_CYU_pt3rptrat"><statement correct="yes"><p>True or false: <m>0.\overline{3}</m> is rational.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       <exercise label="DMT_rational_CYU_6d0rat"><statement correct="no"><p>True or false: <m>\frac{6}{0}</m> is rational.</p></statement>
-      <answer>False.</answer></exercise>
+      <answer><p>False.</p></answer></exercise>
 
       <exercise label="DMT_rational_CYU_6d0irrat"><statement correct="no"><p>True or false: <m>\frac{6}{0}</m> is irrational.</p></statement>
       <feedback><p><m>\frac{6}{0}</m> is not a real number.</p></feedback>
-      <answer>False. Not a real number.</answer></exercise>
+      <answer><p>False. Not a real number.</p></answer></exercise>
 
       <exercise label="DMT_rational_CYU_14pt5467rat"><statement correct="yes"><p>True or false: <m>14.5467</m> is rational.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       <exercise label="DMT_rational_CYU_49pt45rptrat"><statement correct="yes"><p>True or false: <m>49.1122\overline{45}</m> is rational.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       <exercise label="DMT_rational_CYU_pt9rptrat"><statement correct="yes"><p>True or false: <m>0.\overline{9}</m> is rational.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       <exercise label="DMT_rational_CYU_sqrt2rat"><statement correct="no"><p>True or false: <m>\sqrt{3}</m> is rational.</p></statement>
       <feedback><p>Although this is false, we need more proof techniques to prove it.</p> </feedback>
-      <answer>False. But hard to prove right now.</answer></exercise>
+      <answer><p>False. But hard to prove right now.</p></answer></exercise>
 
       <exercise label="DMT_rational_CYU_sqrt4rat"><statement correct="yes"><p>True or false: <m>\sqrt{4}</m> is rational.</p></statement>
       <feedback><p><m>\sqrt{4}=2</m></p></feedback>
-      <answer>True. <m>\sqrt{4}=2.</m></answer></exercise>
+      <answer><p>True. <m>\sqrt{4}=2.</m></p></answer></exercise>
 
       
 
@@ -122,7 +122,7 @@ Resulting in <m>123=999x</m>. Now we just solve for <m>x</m>: <m>x=123/999</m>.<
     Prove the following numbers are rational by writing them as a ratio of two integers.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     <m>\frac{3}{7}+\frac{5}{9}</m>
@@ -142,7 +142,7 @@ Resulting in <m>123=999x</m>. Now we just solve for <m>x</m>: <m>x=123/999</m>.<
     The <term>zero product property</term> says that if a product of two real numbers is 0 then one of the numbers must be zero.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     Write this property formally using quantifiers and variables.
@@ -178,7 +178,7 @@ Resulting in <m>123=999x</m>. Now we just solve for <m>x</m>: <m>x=123/999</m>.<
   </p>
 
   <p>
-    <term><q>Proof</q>:</term> Suppose <m>r</m> and <m>s</m> are rational numbers. If <m>r+s</m> is rational, then by definition of rational <m>r+s=a/b</m> for integers <m>a</m> and <m>b</m> with <m>b\neq0</m>. Since <m>r</m> and <m>s</m> are rational, <m>r=i/j</m> and <m>s=m/n</m> for integers <m>i, j, m</m> and <m>n</m> with <m>j\neq 0</m> and <m>n\neq 0</m>. Thus <me>r+s=\frac{i}{j}+\frac{m}{n}=\frac{a}{b},</me> which is the quotient of two integers with nonzero denominator. Thus, it is rational.
+    <term><q>Proof</q>:</term> Suppose <m>r</m> and <m>s</m> are rational numbers. If <m>r+s</m> is rational, then by definition of rational <m>r+s=a/b</m> for integers <m>a</m> and <m>b</m> with <m>b\neq0</m>. Since <m>r</m> and <m>s</m> are rational, <m>r=i/j</m> and <m>s=m/n</m> for integers <m>i, j, m</m> and <m>n</m> with <m>j\neq 0</m> and <m>n\neq 0</m>. Thus <md>r+s=\frac{i}{j}+\frac{m}{n}=\frac{a}{b},</md> which is the quotient of two integers with nonzero denominator. Thus, it is rational.
   </p>
       </statement></exercise>
       <exercise><statement><p>
@@ -204,7 +204,7 @@ Resulting in <m>123=999x</m>. Now we just solve for <m>x</m>: <m>x=123/999</m>.<
     Determine if the following statements are true or false. For <em>true</em> statements provide a proof. For <em>false</em> statements provide a counterexample <em>and</em> determine if a small change would make the statement true. If so, correct the statement and provide a proof of the new statement.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     The quotient of any two rational numbers is a rational number.
@@ -221,7 +221,7 @@ Resulting in <m>123=999x</m>. Now we just solve for <m>x</m>: <m>x=123/999</m>.<
       </statement></exercise>
       <exercise><statement>
         <p>
-    Suppose <m>a</m>, <m>b</m>, <m>c</m>, and <m>d</m> are integers and <m>a\neq c</m>. Suppose also that <m>x</m> is a real number that satisfies the equation <me>\frac{ax+b}{cx+d}=1.</me> Must <m>x</m> be rational? If so, express <m>x</m> as a ratio of two integers. Is the condition <m>a\neq c</m> important? 
+    Suppose <m>a</m>, <m>b</m>, <m>c</m>, and <m>d</m> are integers and <m>a\neq c</m>. Suppose also that <m>x</m> is a real number that satisfies the equation <md>\frac{ax+b}{cx+d}=1.</md> Must <m>x</m> be rational? If so, express <m>x</m> as a ratio of two integers. Is the condition <m>a\neq c</m> important? 
   </p>
       </statement><hint><p>Solve for <m>x</m>.</p></hint></exercise>
     </exercises>

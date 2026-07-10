@@ -6,7 +6,7 @@
   
   <figure xml:id="F_Kbridge">
   <caption>Konigsberg bridge problem, <m>G</m></caption>
-  <image source="konigsbergbridge.png" width="70%" xml:id="konigsbergbridge"/>
+  <image source="konigsbergbridge.png" width="70%" xml:id="konigsbergbridge"><description><p>Image on the left is a diagram of the land (labeled <m>A, B, C,, D</m>), river, and bridges of the city of Konigsberg. The image on the right is the graph version consiting of vertices (<m>A, B, C, D</m>) for the land and edges for the bridges.</p></description></image>
 </figure>
 
 <definition xml:id="D_pathscircuits"><statement><p>For each of the following terms we have a list of vertices and edges, <m>v_0e_1v_1e_2\cdots e_nv_v</m>,  that represent a way to traverse through the graph. So, for example, <m>v_0</m> must be an endpoint of <m>e_1</m>, <m>v_1</m> must be an endpoint of <m>e_1</m> and <m>e_2</m>, etc. For each of the following terms we indicate whether we can repeat vertices and/or edges in the list.
@@ -56,21 +56,21 @@
 
 
 
-</latex-image></image>
+</latex-image><description><p>The Konigsberg bridge graph with four vertices, <m>v_1, v_2, v_3, v_4</m>, and 7 edges labeled <m>e_1, e_2, e_3, e_4, e_5, e_6, e_7</m>. <m>e_1</m> connects <m>v_1</m> and <m>v_2</m>, <m>e_2</m> connects <m>v_1</m> and <m>v_2</m>, <m>e_3</m> connects <m>v_2</m> and <m>v_3</m>, <m>e_4</m> connects <m>v_2</m> and <m>v_3</m>, <m>e_5</m> connects <m>v_1</m> and <m>v_4</m>, <m>e_6</m> connects <m>v_2</m> and <m>v_4</m>, <m>e_7</m> connects <m>v_3</m> and <m>v_4</m>.</p></description></image>
 </figure>
 
 <p>For each list of vertices and edges, decide if it is a walk, trail, path, closed walk, circuit, simple circuit.</p>
 <p>
   <ol><li><p><m>v_2e_2v_1e_5v_4e_6v_2e_2v_1</m></p>
-  <answer>walk</answer></li>
+  <answer><p>walk</p></answer></li>
   <li><p><m>v_2e_2v_1e_5v_4e_6v_2e_1v_1</m></p>
-  <answer>walk, trail</answer></li>
+  <answer><p>walk, trail</p></answer></li>
   <li><p><m>v_2e_2v_1e_5v_4e_6v_2</m></p>
-  <answer>walk, trail, closed walk, circuit, simple circuit</answer></li>
+  <answer><p>walk, trail, closed walk, circuit, simple circuit</p></answer></li>
   <li><p><m>v_2e_2v_1e_5v_4e_6v_2e_1v_1</m></p>
-  <answer>walk, trail</answer></li>
+  <answer><p>walk, trail</p></answer></li>
   <li><p><m>v_2e_2v_1e_1v_2e_3v_3e_4v_2</m></p>
-  <answer>walk, trail, closed walk, circuit</answer></li>
+  <answer><p>walk, trail, closed walk, circuit</p></answer></li>
 </ol></p>
 </example>
 
@@ -84,15 +84,15 @@
 
 <proposition xml:id="P_connectsimple"><statement><p>If <m>G</m> is a connected graph then any two distinct vertices of <m>G</m> can be connected by a simple path.</p></statement></proposition>
 
-<activity><statement><p>Draw several examples of connected graphs. Verify for yourself that if <m>G</m> is connected then any two distinct vertices of <m>G</m> can be connected by a simple path. </p></statement></activity>
+<activity label="paths-connex" attachment="yes"><statement><p>Draw several examples of connected graphs. Verify for yourself that if <m>G</m> is connected then any two distinct vertices of <m>G</m> can be connected by a simple path. </p></statement><response/></activity>
 
 <proposition xml:id="P_circuitremove"><statement><p>If <m>v</m> and <m>w</m> are part of a circuit in <m>G</m> and one edge is removed, then there still exists a path from <m>v</m> to <m>w</m> in <m>G</m>.</p></statement></proposition>
 
-<activity><statement><p>Draw several examples of graphs with a circuit. Verify for yourself that if <m>v</m> and <m>w</m> are part of a circuit and one edge is removed then there still exists a path from <m>v</m> to <m>w</m> in <m>G</m>. </p></statement></activity>
+<activity label="paths-circuitex" attachment="yes"><statement><p>Draw several examples of graphs with a circuit. Verify for yourself that if <m>v</m> and <m>w</m> are part of a circuit and one edge is removed then there still exists a path from <m>v</m> to <m>w</m> in <m>G</m>. </p></statement><response/></activity>
 
 <proposition xml:id="P_stayconnected"><statement><p>If <m>G</m> is a connected graph and contains a nontrivial circuit, then an edge of the circuit can be removed without disconnecting <m>G</m>.</p></statement></proposition>
 
-<activity><statement><p>Draw several examples of connected graphs containing a nontrivial circuit. Verify for yourself that if <m>G</m> is connected and contains a nontrivial circuit then an edge of the circuit can be removed without disconnecting <m>G</m>.</p></statement></activity>
+<activity label="paths-remciruit" attachment="yes"><statement><p>Draw several examples of connected graphs containing a nontrivial circuit. Verify for yourself that if <m>G</m> is connected and contains a nontrivial circuit then an edge of the circuit can be removed without disconnecting <m>G</m>.</p></statement><response/></activity>
 
 <definition xml:id="D_eulercircuit"><statement><p>An <term>Euler circuit</term><idx>Euler circuit</idx><idx><h>circuit</h><h>Euler</h></idx> for a graph <m>G</m> is a circuit that contains every vertex and every edge of <m>G</m>.</p></statement></definition>
 <p>An Euler circuit must start and end at the same vertex and include every vertex and every edge. It can repeat vertices, but it cannot repeat edges. If you look back at the Konigsberg bridge problem, you can see that to solve the bridge problem is to find an Euler circuit for the associated graph. Were you able to find such a circuit?</p>
@@ -125,10 +125,10 @@
 
 
 
-</latex-image></image>
+</latex-image><description><p>Four vertices labeled <m>v_1, v_2, v_3, v_4</m>. Six edges labeled <m>e_1, e_2, e_3, e_4, e_5, e_6</m>, where <m>e_1</m> connects <m>v_1</m> and <m>v_2</m>, <m>e_2</m> connects <m>v_1</m> and <m>v_3</m>, <m>e_3</m> connects <m>v_1</m> and <m>v_3</m>, <m>e_4</m> connects <m>v_1</m> and <m>v_4</m>, <m>e_5</m> connects <m>v_2</m> and <m>v_3</m>, <m>e_6</m> connects <m>v_3</m> and <m>v_4</m>.</p></description></image>
 </figure>
 
-<answer>Yes. For example <m>e_1e_5e_2e_3e_6e_4</m>.</answer>
+<answer><p>Yes, for example <m>e_1e_5e_2e_3e_6e_4</m>.</p></answer>
 
 <p>Is it possible to find an Euler circuit for the Konigsberg bridge graph in <xref ref="F_KbergEC"/>?</p>
 
@@ -161,18 +161,18 @@
 
 
 
-</latex-image></image>
+</latex-image><description><p>The Konigsberg bridge graph with four vertices, <m>v_1, v_2, v_3, v_4</m>, and 7 edges labeled <m>e_1, e_2, e_3, e_4, e_5, e_6, e_7</m>. <m>e_1</m> connects <m>v_1</m> and <m>v_2</m>, <m>e_2</m> connects <m>v_1</m> and <m>v_2</m>, <m>e_3</m> connects <m>v_2</m> and <m>v_3</m>, <m>e_4</m> connects <m>v_2</m> and <m>v_3</m>, <m>e_5</m> connects <m>v_1</m> and <m>v_4</m>, <m>e_6</m> connects <m>v_2</m> and <m>v_4</m>, <m>e_7</m> connects <m>v_3</m> and <m>v_4</m>.</p></description></image>
 </figure>
-<answer>No.</answer>
+<answer><p>No.</p></answer>
 </example>
 
-<activity><statement><p>Draw the complete bipartite graphs <m>K_{2, 3}</m>, <m>K_{2, 4}</m>, <m>K_{3, 3}</m> and <m>K_{4, 4}</m>. Determine if each of these graphs has an Euler circuit.</p></statement></activity>
+<activity label="paths-combipart" attachment="yes"><statement><p>Draw the complete bipartite graphs <m>K_{2, 3}</m>, <m>K_{2, 4}</m>, <m>K_{3, 3}</m> and <m>K_{4, 4}</m>. Determine if each of these graphs has an Euler circuit.</p></statement><response/></activity>
 
 <p>We want to decide when a graph has an Euler circuit. The following two theorems completely characterize when a graph has an Euler circuit.</p>
 
 <theorem xml:id="T_ECtheneven"><statement><p>If a graph has an Euler circuit, then every vertex has even degree.</p></statement></theorem>
 
-<p>Although we will not prove this formally, the basic idea is that to create an Euler circuit for each vertex you need to be able to arrive at the vertex along an edge and then leave the vertex along a different edge. In the case of the inital vertex, you need to be able to leave the vertex and then return.</p>
+<p>Although we will not prove this formally, the basic idea is that to create an Euler circuit for each vertex you need to be able to arrive at the vertex along an edge and then leave the vertex along a different edge. In the case of the initial vertex, you need to be able to leave the vertex and then return.</p>
 
 <p><xref ref="T_ECtheneven"/> tells us that the Konigsberg bridge graph cannot have an Euler circuit since we have vertices of odd degree.</p>
 
@@ -180,7 +180,7 @@
 
 <p><xref ref="T_eventhenEC"/> tells us that the graph in <xref ref="F_beachballEC" /> has an Euler circuit since all vertices have even degree, and the graph is connected. The graph in <xref ref="F_parallelandloop"/> does not have an Euler circuit since it is not connected (although every vertex has even degree).</p>
 
-<activity><statement><p>Verify <xref ref="T_ECtheneven" /> and <xref ref="T_eventhenEC" /> on <m>K_{2, 3}</m>, <m>K_{2, 4}</m>, <m>K_{3, 3}</m> and <m>K_{4, 4}</m>. </p></statement></activity>
+<activity label="paths-verifyThms" attachment="yes"><statement><p>Verify <xref ref="T_ECtheneven" /> and <xref ref="T_eventhenEC" /> on <m>K_{2, 3}</m>, <m>K_{2, 4}</m>, <m>K_{3, 3}</m> and <m>K_{4, 4}</m>. </p></statement><response/></activity>
 
 <definition xml:id="D_eulerpath"><statement><p>An <term>Euler path</term><idx>Euler path</idx> from <m>v</m> to <m>w</m> is a sequence of adjacent edges and vertices that starts at <m>v</m> and ends at <m>w</m> passing through every vertex of <m>G</m> at least once and traversing every edge exactly once.</p></statement></definition>
 
@@ -188,7 +188,7 @@
 
 <corollary xml:id="C_eulerpathodd"><statement><p>A graph <m>G</m> has an Euler path from <m>v</m> to <m>w</m> if and only if <m>G</m> is connected, <m>v</m> and <m>w</m> have odd degree, and all other vertices of <m>G</m> have even degree.</p></statement></corollary>
 
-<activity><statement><p>Draw a graph that has an Euler path but not an Euler circuit.</p></statement></activity>
+<activity label="paths-EpnotEc" attachment="yes"><statement><p>Draw a graph that has an Euler path but not an Euler circuit.</p></statement><response/></activity>
 
 <p>We've been focusing on traversing a graph by covering each edge exactly once, but what if we want to traverse each vertex exactly once?</p>
 
@@ -197,7 +197,7 @@
 <p>A Hamiltonian circuit starts and ends at the same vertex, passes through all other vertices without repeating, does not repeat edges, but does not need to use all the edges. For example, in the Konigsberg bridge graph <xref ref="F_KbergEC"/>, we have Hamiltonian circuit <m>v_1e_5v_4e_7v_3e_3v_2e_1v_1</m>.</p>
 
 
-<activity><statement><p>Draw the complete bipartite graphs <m>K_{2, 3}</m>, <m>K_{2, 4}</m>, <m>K_{3, 3}</m> and <m>K_{4, 4}</m>. Determine if these graphs have an Hamiltonian circuit.</p></statement></activity>
+<activity label="paths-Hamil" attachment="yes"><statement><p>Draw the complete bipartite graphs <m>K_{2, 3}</m>, <m>K_{2, 4}</m>, <m>K_{3, 3}</m> and <m>K_{4, 4}</m>. Determine if these graphs have a Hamiltonian circuit.</p></statement></activity>
   
 
     <reading-questions>
@@ -235,40 +235,40 @@
 
 
 
-</latex-image></image>
+</latex-image><description><p>Four vertices labeled <m>v_1, v_2, v_3, v_4</m>. Seven edges labeled <m>e_1, e_2, e_3, e_4, e_5, e_6, e_7</m>, where <m>e_1</m> connects <m>v_1</m> and <m>v_2</m>, <m>e_2</m> connects <m>v_1</m> and <m>v_3</m>, <m>e_3</m> connects <m>v_2</m> and <m>v_4</m>, <m>e_4</m> connects <m>v_1</m> and <m>v_4</m>, <m>e_5</m> connects <m>v_2</m> and <m>v_3</m>, <m>e_6</m> connects <m>v_2</m> and <m>v_4</m>, <m>e_7</m> connects <m>v_2</m> to itself.</p></description></image>
 </figure>
       
 
       <exercise label="DMT_paths_CYU_257path"><statement correct="no"><p>True or false: <m>v_1e_2v_3e_5v_2e_7v_2</m> is a path in <m>G</m>, <xref ref="F_readingquestions2" />.</p></statement>
       <feedback><p>It repeats <m>v_2</m>.</p></feedback>
-      <answer>False. Repeats <m>v_2</m>.</answer></exercise>
+      <answer><p>False. Repeats <m>v_2</m>.</p></answer></exercise>
 
       <exercise label="DMT_paths_CYU_257clwalk"><statement correct="no"><p>True or false: <m>v_1e_2v_3e_5v_2e_7v_2</m> is a closed walk in <m>G</m>, <xref ref="F_readingquestions2" />.</p></statement>
       <feedback><p>It starts and ends at different vertices.</p></feedback>
-      <answer>False. Starts and ends at different vertices.</answer></exercise>
+      <answer><p>False. Starts and ends at different vertices.</p></answer></exercise>
 
       <exercise label="DMT_paths_CYU_2571circuit"><statement correct="yes"><p>True or false: <m>v_1e_2v_3e_5v_2e_7v_2e_1v_1</m> is a circuit in <m>G</m>, <xref ref="F_readingquestions2" />.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       <exercise label="DMT_paths_CYU_2571simcir"><statement correct="no"><p>True or false: <m>v_1e_2v_3e_5v_2e_7v_2e_1v_1</m> is a simple circuit in <m>G</m>, <xref ref="F_readingquestions2" />.</p></statement>
       <feedback><p>It repeats <m>v_2</m>.</p></feedback>
-      <answer>False. Repeats <m>v_2</m>.</answer></exercise>
+      <answer><p>False. Repeats <m>v_2</m>.</p></answer></exercise>
 
       <exercise label="DMT_paths_CYU_36simcir"><statement correct="yes"><p>True or false <m>v_4e_3v_2e_6v_4</m> is a simple circuit in <m>G</m>, <xref ref="F_readingquestions2" />.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
 
       <exercise label="DMT_paths_CYU_Eulercir"><statement correct="no"><p>True or false: <m>G</m>, <xref ref="F_readingquestions2" />, has an Euler circuit.</p></statement>
       <feedback><p>There are vertices of odd degree.</p></feedback>
-      <answer>False. There are vertices of odd degree.</answer></exercise>
+      <answer><p>False. There are vertices of odd degree.</p></answer></exercise>
 
       <exercise label="DMT_paths_CYU_Eulerpath"><statement correct="yes"><p>True or false: <m>G</m>, <xref ref="F_readingquestions2" />, has an Euler path.</p></statement>
       <feedback><p>A path can start at <m>v_1</m>, end at <m>v_4</m>.</p></feedback>
-      <answer>True. Can start at <m>v_1</m>, end at <m>v_4</m>.</answer></exercise>
+      <answer><p>True. Can start at <m>v_1</m>, end at <m>v_4</m>.</p></answer></exercise>
 
       <exercise label="DMT_paths_CYU_Hamcir"><statement correct="yes"><p>True or false: <m>G</m>, <xref ref="F_readingquestions2" />, has a Hamiltonian circuit.</p></statement>
       <feedback><p>For example, <m>e_2e_5e_6e_4</m>.</p></feedback>
-      <answer>True. For example, <m>e_2e_5e_6e_4</m>.</answer></exercise>
+      <answer><p>True. For example, <m>e_2e_5e_6e_4</m>.</p></answer></exercise>
 
       
       
@@ -315,7 +315,7 @@
 
 </latex-image></image>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     <m>v_0e_1v_1e_{10}v_5e_9v_2e_2v_1</m>
@@ -385,7 +385,7 @@
 
 </latex-image></image>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     How many paths are there from <m>v_1</m> to <m>v_4</m>?
@@ -411,7 +411,7 @@
     Each of (a)-(c) describes a graph. In each case answer <em>yes, no</em> or <em>not necessarily</em> to whether the graph has an Euler circuit. Justify your answer.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     <m>G</m> is a connected graph with 5 vertices of degrees 2, 2, 3, 3, and 4.

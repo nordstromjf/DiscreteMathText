@@ -4,7 +4,7 @@
   <p>The Binomial Theorem has applications in many areas of mathematics, from calculus, to number theory, to probability. In this section we look at some examples of combinatorial proofs using binomial coefficients and ultimately prove the Binomial Theorem using induction.</p>
   
   <theorem xml:id="T_requalsnminusr"><statement><p>Let <m>n, r</m> be nonnegative integers with <m>r\leq n</m>. Then
-<me>\binom{n}{r}=\binom{n}{n-r}.</me></p></statement></theorem>
+<md>\binom{n}{r}=\binom{n}{n-r}.</md></p></statement></theorem>
 
 <p>An algebraic proof is straightforward and left as an exercise (see <xref ref="X_pfofthm1"/>). We will give a combinatorial proof. This means we will prove the two sides of the equation are equal by showing that they are two different ways to count the same set. In general, a combinatorial proof is done by giving a counting argument.</p>
 
@@ -12,7 +12,7 @@
 <p>We can create a set of <m>r</m> objects by specifying which objects are in the set or by specifying which objects are <em>not</em> in the set. We note that there are <m>n-r</m> objects not in the set. Thus, <m>\binom{n}{n-r}</m> counts the ways to find a set of <m>r</m> objects out of <m>n</m> objects by finding the ways to not include <m>n-r</m> objects. Thus, both <m>\binom{n}{r}</m> and <m>\binom{n}{n-r}</m> count subsets of <m>r</m> objects from <m>n</m>, one by counting the objects in the set, one by counting the objects not in the set.</p></proof>
 
 <theorem xml:id="T_pascalsformula"><title>Pascal's Formula</title><idx>Pascal's Formula</idx><statement><p>Let <m>n, r</m> be nonnegative integers with <m>r\leq n</m>. Then
-<me>\binom{n+1}{r}=\binom{n}{r-1}+\binom{n}{r}.</me></p></statement></theorem>
+<md>\binom{n+1}{r}=\binom{n}{r-1}+\binom{n}{r}.</md></p></statement></theorem>
 
 <p>We leave the algebraic proof as an exercise (see <xref ref="A_pascalalg" />), and instead provide a combinatorial proof.</p>
 <proof><p>By definition, <m>\binom{n+1}{r}</m> counts the subsets of <m>r</m> objects chosen from <m>n+1</m> objects.</p>
@@ -20,7 +20,7 @@
 </proof>
 
 <activity xml:id="A_pascalalg"><statement><p>Give an algebraic proof for Pascal's Formula:
-<me>{{n+1}\choose {r}}={n\choose {r-1}}+{n \choose r}.</me></p></statement><hint><p>Start with the right-hand side. Use the definition of <q>choose,</q> then find a common denominator. Note, you will save yourself a lot of work if you find the <em>least</em> common denominator.</p></hint></activity>
+<md>{{n+1}\choose {r}}={n\choose {r-1}}+{n \choose r}.</md></p></statement><hint><p>Start with the right-hand side. Use the definition of <q>choose,</q> then find a common denominator. Note, you will save yourself a lot of work if you find the <em>least</em> common denominator.</p></hint></activity>
 
 <p>We often call terms of the form <m>\binom{n}{r}</m> <term>binomial coefficients</term><idx>binomial coefficient</idx>.</p>
 
@@ -52,14 +52,14 @@
 <p>The Binomial Theorem gives a formula for calculating <m>(a+b)^n</m>. We can prove the Binomial Theorem combinatorially or algebraically. We will provide the algebraic proof, which is a proof by induction. Although we do not provide the details of the combinatorial proof, the next example should give some insight into the combinatorial argument.</p>
 
 <example xml:id="E_combbinomialthm"><title>A Combinatorial Calculation for <m>(a+b)^3</m></title>
-<p>Suppose we want to expand (or multiply) <m>(a+b)^3=(a+b)(a+b)(a+b)</m>. We can think of the multiplication in this way, 
+<p>Suppose we want to expand (or multiply) <md>(a+b)^3=(a+b)(a+b)(a+b)</md>. We can think of the multiplication in this way, 
 <ul>
   <li>there is 1 way to get <m>a^3</m>: choose 0 <m>b</m>'s from the three factors.</li>
   <li>there are 3 ways to get <m>a^2b</m>: choose 1 <m>b</m> from the three factors.</li>
-  <li>there are 3 ways to get <m>ab^2</m>: choose 2 <m>b</m>'s' from the three factors.</li>
+  <li>there are 3 ways to get <m>ab^2</m>: choose 2 <m>b</m>'s from the three factors.</li>
   <li>there is 1 way to get <m>b^3</m>: choose 3 <m>b</m>'s from the three factors.</li>
 </ul> 
-This give us <me>(a+b)^3=\binom{3}{0}a^3+\binom{3}{1}a^2b+\binom{3}{2}ab^2+\binom{3}{3}b^3.</me>
+This gives us <md>(a+b)^3=\binom{3}{0}a^3+\binom{3}{1}a^2b+\binom{3}{2}ab^2+\binom{3}{3}b^3.</md>
 </p>
 </example>
 
@@ -71,10 +71,10 @@ This give us <me>(a+b)^3=\binom{3}{0}a^3+\binom{3}{1}a^2b+\binom{3}{2}ab^2+\bino
   <mrow>&amp;=\sum_{k=0}^{n}\binom{n}{k}a^{n-k}b^k.</mrow>
 </md></statement></theorem>
 
-<proof><p>Prove <me>(a+b)^n=\sum_{i=0}^{n}\binom{n}{i}a^{n-i}b^i</me>
+<proof><p>Prove <md>(a+b)^n=\sum_{i=0}^{n}\binom{n}{i}a^{n-i}b^i</md>
 by induction on <m>n</m>.</p>
 
-<p>Base step: Let <m>n=0</m>. Then <me>(a+b)^0=1</me>. Also, <me>\sum_{i=0}^{0}\binom{0}{i}a^{0-i}b^i=a^0b^0=1.</me></p>
+<p>Base step: Let <m>n=0</m>. Then <md>(a+b)^0=1</md>. Also, <md>\sum_{i=0}^{0}\binom{0}{i}a^{0-i}b^i=a^0b^0=1.</md></p>
 <p>Induction step: Assume <m>(a+b)^k=\sum_{i=0}^{k}\binom{k}{i}a^{k-i}b^i</m>.</p>
 <p>Show <m>(a+b)^{k+1}=\sum_{i=0}^{k+1}\binom{k+1}{i}a^{k+1-i}b^i</m></p>
 <p><md>
@@ -100,7 +100,7 @@ by induction on <m>n</m>.</p>
 </md></p>
 </proof>
 
-<activity><statement><p>Show the Binomial Theorem holds for <m>n=2</m> and <m>n=3</m>.</p></statement></activity>
+<activity label="binomthm-n2n3"><statement><p>Show the Binomial Theorem holds for <m>n=2</m> and <m>n=3</m>.</p></statement><response/></activity>
 
 <p>The Binomial Theorem relates a sum to a power of a binomial. Although we often think of using the Binomial Theorem as a way to calculate the coefficients for expanding <m>(a+b)^n</m>, it can also be used to simplify certain sums. In this case, the power of the binomial is the <term>closed form</term><idx><h>closed form</h><h>sum</h></idx><idx><h>sum</h><h>closed form</h></idx>.</p>
 
@@ -112,9 +112,9 @@ by induction on <m>n</m>.</p>
 <p>We can see that <m>x=b</m>, since the power of <m>x</m> matches the power of <m>b</m>. Since there does not appear to be any term for <m>a</m>, we can let <m>a=1</m>. Thus, the closed form is <m>(1+x)^n</m>.</p></example>
 
   
-<activity><statement><p>Use the Binomial Theorem to find <m>(3-2x)^3</m>.</p></statement><hint><p>In this expression, what are <m>a, b, n</m>?</p></hint></activity>
+<activity label="binonthm-poly"><statement><p>Use the Binomial Theorem to find <m>(3-2x)^3</m>.</p></statement><response/><hint><p>In this expression, what are <m>a, b, n</m>?</p></hint></activity>
 
-<activity><statement><p>Prove <m>2^n=\sum_{k=0}^n{n \choose k}</m>.</p></statement><hint><p>Use that <m>2=(1+1)</m>.</p></hint></activity>
+<activity label="binomthm-pfsumbincoef"><statement><p>Prove <m>2^n=\sum_{k=0}^n{n \choose k}</m>.</p></statement><response/><hint><p>Use that <m>2=(1+1)</m>.</p></hint></activity>
   
 
 
@@ -125,17 +125,17 @@ by induction on <m>n</m>.</p>
        <exercise label="DMT_binomthm_CYU_apbtt4"><statement><p>Use the Binomial Theorem to find <m>(a+b)^4</m>.</p></statement>
        <response />
        <hint><p>There should be 5 terms in your answer.</p></hint>
-      <answer><m>a^4+4a^3b+6a^2b^2+4ab^3+b^4</m></answer></exercise>
+      <answer><p><m>a^4+4a^3b+6a^2b^2+4ab^3+b^4</m></p></answer></exercise>
 
       <exercise label="DMT_binomthm_CYU_ap2tt4"><statement><p>Use the Binomial Theorem to find <m>(a+2)^4</m>.</p></statement>
       <response />
        <hint><p>There should be 5 terms in your answer.</p></hint>
-      <answer><m>a^4+4a^32+6a^22^2+4a2^3+2^4=a^4+8a^3+24a^2+32a+16</m></answer></exercise>
+      <answer><p><m>a^4+4a^32+6a^22^2+4a2^3+2^4=a^4+8a^3+24a^2+32a+16</m></p></answer></exercise>
 
       <exercise label="DMT_binomthm_CYU_ambtt4"><statement><p>Use the Binomial Theorem to find <m>(a-2)^4</m>.</p></statement>
       <response />
        <hint><p>There should be 5 terms in your answer.</p></hint>
-      <answer><m>a^4+4a^3(-2)+6a^2(-2)^2+4a(-2)^3+(-2)^4=a^4-8a^3+24a^2-32a+16</m></answer></exercise>
+      <answer><p><m>a^4+4a^3(-2)+6a^2(-2)^2+4a(-2)^3+(-2)^4=a^4-8a^3+24a^2-32a+16</m></p></answer></exercise>
 
       <exercise label="DMT_binomthm_CYU_coefx2y2"><statement><p>Use the Binomial Theorem to find the coefficient of <m>x^2y^2</m> in <m>(3x-2y)^4</m>.</p>
       <p> <var /> Note, your answer should not include any variables.</p></statement>
@@ -171,7 +171,7 @@ by induction on <m>n</m>.</p>
     </condition>
     </var>
   </setup>
-      <answer><m>\binom{4}{2}3^2(-2)^2=216</m></answer></exercise>
+      <answer><p><m>\binom{4}{2}3^2(-2)^2=216</m></p></answer></exercise>
 
       <exercise label="DMT_binomthm_CYU_coefx5y2"><statement><p>Use the Binomial Theorem to find the coefficient of <m>x^5y^2</m> in <m>(3x-2y)^7</m>.</p>
     <p> <var /> Note, your answer should not include any variables.</p></statement>
@@ -206,7 +206,7 @@ by induction on <m>n</m>.</p>
     </condition>
     </var>
   </setup>
-      <answer><m>\binom{7}{2}3^5(-2)^2=20412</m></answer></exercise>
+      <answer><p><m>\binom{7}{2}3^5(-2)^2=20412</m></p></answer></exercise>
       <exercise label="DMT_binomthm_CYU_coefx4y3"><statement><p>Use the Binomial Theorem to find the coefficient of <m>x^4y^3</m> in <m>(3x-2y)^7</m>.</p>
     <p> <var /> Note, your answer should not include any variables.</p></statement>
       <setup>
@@ -247,19 +247,19 @@ by induction on <m>n</m>.</p>
     </condition>
     </var>
   </setup>
-      <answer><m>\binom{7}{3}3^4(-2)^3=-22680</m></answer></exercise>
+      <answer><p><m>\binom{7}{3}3^4(-2)^3=-22680</m></p></answer></exercise>
 
 
     </reading-questions>
     <exercises>
       <exercise xml:id="X_pfofthm1"><statement>
         <p>
-    Give an algebraic proof for the formula in <xref ref="T_requalsnminusr"/>: <me>{{n}\choose {r}}={n\choose {n-r}}</me> for integers <m>n</m> and <m>r</m> with <m>0\leq r\leq n</m>.
+    Give an algebraic proof for the formula in <xref ref="T_requalsnminusr"/>: <md>{{n}\choose {r}}={n\choose {n-r}}</md> for integers <m>n</m> and <m>r</m> with <m>0\leq r\leq n</m>.
   </p>
       </statement></exercise>
       <exercise><statement>
         <p>Use Pascal's triangle to find the following binomial coefficients.
-          <ol marker="a">
+          <ol marker="a.">
     <li>
       <p>
     Find the values of <m>{6\choose 2}, {6\choose 3}, {6\choose 4}</m> and <m>{6\choose 5}</m>.
@@ -282,7 +282,7 @@ by induction on <m>n</m>.</p>
       </statement></exercise>
       <exercise><statement>
         <p>
-    The row of Pascal’s triangle that corresponds to <m>n=8</m> is <me>1\ \ \ 8\ \ \ 28\ \ \ 56\ \ \ 70\ \ \ 56\ \ \ 28\ \ \ 8\ \ \ 1.</me>
+    The row of Pascal’s triangle that corresponds to <m>n=8</m> is <md>1\ \ \ 8\ \ \ 28\ \ \ 56\ \ \ 70\ \ \ 56\ \ \ 28\ \ \ 8\ \ \ 1.</md>
   </p>
 
   <p>
@@ -321,22 +321,22 @@ by induction on <m>n</m>.</p>
       </statement></exercise>
       <exercise><statement>
         <p>
-    Use Pascal’s Formula to prove by mathematical induction that if <m>n</m> is an integer and <m>n\geq 1</m>, then <me>\sum_{i=2}^{n+1}{i\choose 2}={2\choose 2}+{3\choose 2}+\ldots +{{n+1}\choose 2}={{n+2}\choose 3}.</me>
+    Use Pascal’s Formula to prove by mathematical induction that if <m>n</m> is an integer and <m>n\geq 1</m>, then <md>\sum_{i=2}^{n+1}{i\choose 2}={2\choose 2}+{3\choose 2}+\ldots +{{n+1}\choose 2}={{n+2}\choose 3}.</md>
   </p>
       </statement></exercise>
       <exercise><statement><p>
-    Think of a set with <m>m+n</m> elements as composed of two parts, one with <m>m</m> elements and one with <m>n</m> elements. Give a combinatorial argument to show that <me>{{m+n}\choose r}={m\choose 0}{n\choose r}+{m\choose 1}{n\choose r-1}+\ldots +{m\choose r}{n\choose 0}.</me>
+    Think of a set with <m>m+n</m> elements as composed of two parts, one with <m>m</m> elements and one with <m>n</m> elements. Give a combinatorial argument to show that <md>{{m+n}\choose r}={m\choose 0}{n\choose r}+{m\choose 1}{n\choose r-1}+\ldots +{m\choose r}{n\choose 0}.</md>
   </p></statement><hint><p>Think of counting a single set in two different ways, where one side of the equation represents one way and the other side represents the other way. Since they both count the same set, they should be equal.
   </p></hint></exercise>
       <exercise><statement><p>
     Use the Binomial Theorem to prove for all integers <m>n\geq 1</m>,
-    <me>{n\choose 0}-{n\choose 1}+{n\choose 2}-\ldots +(-1)^n{n\choose n}=0.</me>
+    <md>{n\choose 0}-{n\choose 1}+{n\choose 2}-\ldots +(-1)^n{n\choose n}=0.</md>
   </p></statement><hint><p>Use the fact that <m>1+(-1)=0</m>.</p></hint></exercise>
       <exercise><statement>
         <p>
     Use the Binomial Theorem to prove for all integers <m>n\geq 0</m>,
 
-    <me>3^n={n\choose 0}+2{n\choose 1}+2^2{n\choose 2}+\ldots +2^n{n\choose n}.</me>
+    <md>3^n={n\choose 0}+2{n\choose 1}+2^2{n\choose 2}+\ldots +2^n{n\choose n}.</md>
   </p>
       </statement></exercise>
 

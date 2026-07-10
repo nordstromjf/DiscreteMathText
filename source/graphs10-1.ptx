@@ -30,14 +30,14 @@
 
 
 
-</latex-image></image>
+</latex-image><description><p>Four points (vertices) labeled <m>v_1, v_2, v_3, v_4</m>. Five line segments (edges) labeled <m>e_1, e_2, e_3, e_4, e_5</m>, where <m>e_1</m> connects <m>v_1</m> and <m>v_2</m>, <m>e_2</m> connects <m>v_1</m> and <m>v_3</m>, <m>e_3</m> connects <m>v_2</m> and <m>v_3</m>, <m>e_4</m> connects <m>v_1</m> and <m>v_4</m>, <m>e_5</m> connects <m>v_2</m> and <m>v_4</m>.</p></description></image>
 </figure>
 
 <p><xref ref="F_basicgraph"/> is an example of a graph. We have labeled the vertices with<m>v_1, v_2, v_3, v_4</m> and the edges with <m>e_1, e_2, e_3, e_4, e_5</m>.</p>
 
 <definition xml:id="D_graphterms">
   <statement>
-    <p>A graph, <m>G</m>, consists of a finite set, <m>V(G)</m>, of <term>vertices</term><idx>vertex</idx> and a finite set, <m>E(G)</m>, of <term>edges</term><idx>edge</idx>. Each edge is assocated with two vertices (it may be the same vertex) called <term>endpoints</term><idx>endpoints of an edge</idx>.</p></statement></definition>
+    <p>A graph, <m>G</m>, consists of a finite set, <m>V(G)</m>, of <term>vertices</term><idx>vertex</idx> and a finite set, <m>E(G)</m>, of <term>edges</term><idx>edge</idx>. Each edge is associated with two vertices (it may be the same vertex) called <term>endpoints</term><idx>endpoints of an edge</idx>.</p></statement></definition>
 
     <p>In the above example, <xref ref="F_basicgraph"/>, <m>V(G)=\{v_1, v_2, v_3, v_4\}, E(G)=\{e_1, e_2, e_3, e_4, e_5\}</m>. The endpoints of edge <m>e_1</m> are <m>v_1, v_2</m>.</p> 
 
@@ -61,7 +61,7 @@
 
 <figure xml:id="F_parallelandloop">
   <caption>Example of a graph with parallel edges and a loop</caption>
-  <image width="40%" xml:id="parallelgraph">
+  <image width="50%" xml:id="parallelgraph">
     <latex-image>
 \begin{tikzpicture}
 %parallel edges, loops
@@ -83,7 +83,7 @@
 
 
 
-</latex-image></image>
+</latex-image><description><p>Three vertices labeled <m>v_1, v_2, v_3</m>. Two line segments (edges) labeled <m>e_1, e_2</m>, where <m>e_1, e_2</m> connect <m>v_1</m> and <m>v_2</m>. A loop <m>e_3</m> connects <m>v_2</m> to itself, and <m>v_3</m> is an isolated point.</p></description></image>
 </figure>
 
 
@@ -116,27 +116,27 @@
 
 
 
-</latex-image></image>
+</latex-image><description><p>Four vertices labeled <m>v_1, v_2, v_3, v_4</m>. Six edges labeled <m>e_1, e_2, e_3, e_4, e_5, e_6</m>, where <m>e_1</m> connects <m>v_1</m> and <m>v_2</m>, <m>e_2</m> connects <m>v_1</m> and <m>v_3</m>, <m>e_3</m> connects <m>v_1</m> and <m>v_3</m>, <m>e_4</m> connects <m>v_1</m> and <m>v_4</m>, <m>e_5</m> connects <m>v_2</m> and <m>v_3</m>, <m>e_6</m> connects <m>v_3</m> and <m>v_4</m>.</p></description></image>
 </figure>
 
     <p>Find <m>V(G)</m>.</p>
-    <answer><m>V(G)=\{v_1, v_2, v_3, v_4\}</m></answer>
+    <answer><p><m>V(G)=\{v_1, v_2, v_3, v_4\}</m></p></answer>
     <p>Find <m>E(G)</m>.</p>
-    <answer><m>E(G)=\{e_1, e_2, \ldots, e_6\}</m></answer>
+    <answer><p><m>E(G)=\{e_1, e_2, \ldots, e_6\}</m></p></answer>
     <p>Find the endpoints for <m>e_1</m>.</p>
-    <answer><m>\{v_1, v_2\}</m></answer>
+    <answer><p><m>\{v_1, v_2\}</m></p></answer>
     <p>Find the endpoints for <m>e_3</m>.</p>
-    <answer><m>\{v_1, v_3\}</m></answer>
+    <answer><p><m>\{v_1, v_3\}</m></p></answer>
     <p>Find the endpoints for <m>e_6</m>.</p>
-    <answer><m>\{v_3, v_4\}</m></answer>
+    <answer><p><m>\{v_3, v_4\}</m></p></answer>
     <p>Find the edges incident on <m>v_1</m>.</p>
-    <answer><m>e_1, e_2, e_3, e_4</m></answer>
+    <answer><p><m>e_1, e_2, e_3, e_4</m></p></answer>
     <p>Find all vertices adjacent to <m>v_4</m>.</p>
-    <answer><m>\{v_1, v_3\}</m></answer>
+    <answer><p><m>\{v_1, v_3\}</m></p></answer>
     <p>Does <m>G</m> have any parallel edges?</p>
-    <answer>Yes. <m>e_2, e_3</m></answer>
+    <answer><p>Yes, <m>e_2, e_3</m>.</p></answer>
     <p>Does <m>G</m> have any loops?</p>
-    <answer>No.</answer>
+    <answer><p>No.</p></answer>
     
   </example>
 
@@ -179,11 +179,11 @@
 
 
 
-</latex-image></image>
+</latex-image><description><p>The graph on the left is the same as the graph above with four vertices and four edges. The graph on the right has the same vertices and edges, but the orientaion of the vertices and edges is different.</p></description></image>
 </figure>
 <p>The two graphs in <xref ref="F_isographs" /> are the same graph since they have the same vertex and edge sets, and a given edge still has the same endpoints.</p>
 
-<definition xml:id="digraph"><statement><p>A <term>directed graph</term><idx>directed graph</idx> or <term>digraph</term><idx>digraph</idx><idx><h>graph</h><h>directed</h></idx> consists of a set of vertices, <m>V(G)</m> and directed edges (arrows), <m>D(G)</m>, where each edge is associated with an <alert>ordered</alert> pair of of vertices called endpoints, <m>(v, w)</m>.</p></statement></definition>
+<definition xml:id="digraph"><statement><p>A <term>directed graph</term><idx>directed graph</idx> or <term>digraph</term><idx>digraph</idx><idx><h>graph</h><h>directed</h></idx> consists of a set of vertices, <m>V(G)</m> and directed edges (arrows), <m>D(G)</m>, where each edge is associated with an <alert>ordered</alert> pair of vertices called endpoints, <m>(v, w)</m>.</p></statement></definition>
 
 <p>We saw directed graphs in <xref ref="relations8-1"/> and <xref ref="rstrelations8-2"/>. For example, see <xref ref="F_digraphlessthan"/>. In this example, we have an edge with endpoints <m>(1, 2)</m>, but not <m>(2, 1)</m>.</p>
 
@@ -195,7 +195,7 @@
 
 <definition xml:id="D_completegraph"><statement><p>A <term>complete graph on <m>n</m> vertices</term><idx>complete graph</idx><idx><h>graph</h><h>complete</h></idx>, <m>K_n</m>, is a simple graph with <m>n</m> vertices whose set of edges contains exactly one edge for every pair of vertices.</p></statement></definition>
 
-<p><m>K_1, \ldots, K_4</m> are given in the following figure.</p>
+<p><m>K_1, K_2, K_3,</m> and <m>K_4</m> are given in the following figure.</p>
 <figure xml:id="F_completegraphs">
   <caption>Examples of complete graphs</caption>
   <image width="60%" xml:id="compgraphs">
@@ -237,10 +237,10 @@
 
 
 
-</latex-image></image>
+</latex-image><description><p>Four graphs labeled <m>K_1, K_2, K_3, K_4</m>. <m>K_1</m> has one vertex; <m>K_2</m> has two vertices and one edge connecting them; <m>K_3</m> has three vertices and edges connecting each pair of vertices; <m>K_4</m> has four vertices and edges connecting every pair of vertices.</p></description></image>
 </figure>
 
-<activity><statement><p>Draw the complete graphs on 5 vertices and 6 vertices, <m>K_5</m> and <m>K_6</m>.</p></statement></activity>
+<activity label="graphs-K5K6" attachment="yes"><statement><p>Draw the complete graphs on 5 vertices and 6 vertices, <m>K_5</m> and <m>K_6</m>.</p></statement><response/></activity>
 
 <definition xml:id="D_compbipartite"><statement>
   <p>Let <m>m, n\in \mathbb{Z}^{+}</m>. A <term>complete bipartite graph on <m>(m, n)</m> vertices</term><idx>complete bipartite graph</idx><idx><h>graph</h><h>complete bipartite</h></idx>, <m>K_{m, n}</m>, is a simple graph with vertices <m>v_1, v_2, \ldots, v_m</m> and <m>w_1, w_2, \ldots w_n</m>, such that 
@@ -278,10 +278,10 @@
 
 
 
-</latex-image></image>
+</latex-image><description><p>Two vertices on the top, three vertices on the bottom. Each top vertex has three edges connecting to the bottom three vertices.</p></description></image>
 </figure>
 
-<activity><statement><p>Draw the complete bipartite graphs <m>K_{3, 3}</m> and <m>K_{4, 5}</m>.</p></statement></activity>
+<activity label="graphs-K33K45" attachment="yes"><statement><p>Draw the complete bipartite graphs <m>K_{3, 3}</m> and <m>K_{4, 5}</m>.</p></statement><response/></activity>
 
 <definition xml:id="D_subgraph"><statement><p>A graph <m>H</m> is a <term>subgraph</term><idx>subgraph</idx> of <m>G</m> if every vertex in <m>H</m> is also a vertex in <m>G</m>, and every edge in <m>H</m> is also an edge in <m>G</m> such that the edges in <m>H</m> have the same endpoints as in <m>G</m>.</p></statement></definition>
 
@@ -289,7 +289,7 @@
 
 <figure xml:id="F_subgraph">
   <caption>Examples of subgraphs, <m>H_1, H_2</m>, of the graph <m>G</m></caption>
-  <image width="60%" xml:id="subgraphs">
+  <image width="80%" xml:id="subgraphs">
     <latex-image>
 \begin{tikzpicture}
 %subgraphs
@@ -340,7 +340,7 @@
 
 
 
-</latex-image></image>
+</latex-image><description><p>The left graph, <m>G</m> is the same graph as in the first example. The middle graph, labeled <m>H_1</m> has the same four vertices, <m>v_1, v_2, v_3, v_4</m>, but only the edges <m>e_1, e_2, e_3</m> from <m>G</m>. The right graph labeled <m>H_2</m> has the three vertices, <m>v_1, v_2, v_3</m>, and only the edges <m>e_1, e_2, e_5</m> from <m>G</m>.</p></description></image>
 </figure>
 
 <definition xml:id="D_degree"><statement><p>The <term>degree</term><idx><h>degree</h><h>of a vertex</h></idx><idx><h>vertex</h><h>degree</h></idx> of a vertex <m>v</m>, <m>\text{deg}(v)</m>, is the number of edges incident on <m>v</m>. Loops are counted twice. The <term>total degree</term><idx>total degree</idx><idx><h>graph</h><h>total degree</h></idx> of a graph <m>G</m> is the sum of the degrees of all vertices in <m>G</m>.</p></statement></definition>
@@ -348,23 +348,23 @@
 <example xml:id="E_degree"><title>Degree</title>
 <p>Let <m>G</m> be the graph in <xref ref="F_basicgraph"/>.</p>
 <p>Find <m>\text{deg}(v_2)</m>.</p>
-<answer>3</answer>
+<answer><p><m>3</m></p></answer>
 
 <p>Find <m>\text{deg}(v_4)</m>.</p>
-<answer>2</answer>
+<answer><p><m>2</m></p></answer>
 
 <p>Find the total degree of <m>G</m>.</p>
-<answer>10</answer>
+<answer><p><m>10</m></p></answer>
 
 <p>Let <m>G</m> be the graph in <xref ref="F_parallelandloop"/>.</p>
 <p>Find <m>\text{deg}(v_2)</m>.</p>
-<answer>4</answer>
+<answer><p><m>4</m></p></answer>
 
 <p>Find <m>\text{deg}(v_3)</m>.</p>
-<answer>0</answer>
+<answer><p><m>0</m></p></answer>
 
 <p>Find the total degree of <m>G</m>.</p>
-<answer>6</answer>
+<answer><p><m>6</m></p></answer>
 
 <p>Is there a relationship between the number of edges in <m>G</m> and the total degree?</p>
 </example>
@@ -374,19 +374,19 @@
 
 <p>We will not provide a formal proof, but the theorem is not hard to show as each edge must be incident on two vertices. Thus, each edge is counted twice in the total degree.</p>
 
-<activity><statement><p>Draw any graph with 6 edges. Find the total degree of your graph. Verify that the total degree is twice the number of edges.</p></statement></activity>
+<activity label="graphs-6degree" attachment="yes"><statement><p>Draw any graph with 6 edges. Find the total degree of your graph. Verify that the total degree is twice the number of edges.</p></statement><response/></activity>
 
 <corollary xml:id="C_totaldegreeeven"><statement><p>The total degree of any graph is even.</p></statement></corollary>
   
-<activity><statement><p>Explain why in any graph there is an even number of vertices of odd degree.</p></statement></activity>
+<activity label="graphs-evenofodd"><statement><p>Explain why in any graph there is an even number of vertices of odd degree.</p></statement></activity>
 
-<activity><introduction><p>For each of the following either draw an example of the graph or explain why it is impossible.</p></introduction>
-<task><p>A graph with 4 vertices of degrees 1, 1, 2, 3.</p></task>
-<task><p>A graph with 4 vertices of degrees 1, 1, 2, 2.</p></task>
-<task><p>A simple graph with 4 vertices of degrees 1, 1, 2, 2.</p></task>
-<task><p>A graph with 4 vertices of degrees 1, 2, 3, 3.</p></task>
-<task><p>A simple graph with 4 vertices of degrees 1, 2, 3, 4.</p></task>
-<task><p>A simple graph with 6 edges and all vertices of degrees 3.</p></task>
+<activity label="graphs-draw"><introduction><p>For each of the following either draw an example of the graph or explain why it is impossible.</p></introduction>
+<task label="graphs-draw-1123" attachment="yes"><statement><p>A graph with 4 vertices of degrees 1, 1, 2, 3.</p></statement><response/></task>
+<task label="graphs-draw-1122" attachment="yes"><statement><p>A graph with 4 vertices of degrees 1, 1, 2, 2.</p></statement><response/></task>
+<task label="graphs-draw-simp1122" attachment="yes"><statement><p>A simple graph with 4 vertices of degrees 1, 1, 2, 2.</p></statement><response/></task>
+<task label="graphs-draw-1233" attachment="yes"><statement><p>A graph with 4 vertices of degrees 1, 2, 3, 3.</p></statement><response/></task>
+<task label="graphs-draw-simp1234" attachment="yes"><statement><p>A simple graph with 4 vertices of degrees 1, 2, 3, 4.</p></statement><response/></task>
+<task label="graphs-draw-simpalldeg3" attachment="yes"><statement><p>A simple graph with 6 edges and all vertices of degrees 3.</p></statement><response/></task>
 </activity>
     <reading-questions>
       <title>Check Your Understanding</title>
@@ -423,27 +423,27 @@
 
 
 
-</latex-image></image>
+</latex-image><description><p>Four vertices labeled <m>v_1, v_2, v_3, v_4</m>. Seven edges labeled <m>e_1, e_2, e_3, e_4, e_5, e_6, e_7</m>, where <m>e_1</m> connects <m>v_1</m> and <m>v_2</m>, <m>e_2</m> connects <m>v_1</m> and <m>v_3</m>, <m>e_3</m> connects <m>v_2</m> and <m>v_4</m>, <m>e_4</m> connects <m>v_1</m> and <m>v_4</m>, <m>e_5</m> connects <m>v_2</m> and <m>v_3</m>, <m>e_6</m> connects <m>v_2</m> and <m>v_4</m>, <m>e_7</m> connects <m>v_2</m> to itself.</p></description></image>
 </figure>
       
 
       <exercise label="DMT_graphs_CYU_edgeincid2"><statement><p>List the edges of <m>G</m>, <xref ref="F_readingquestions"/>, incident on <m>v_2</m>.</p></statement>
       <response />
       <hint><p>There are 5 edges.</p></hint>
-      <answer><m>e_1, e_3, e_5, e_6, e_7</m></answer></exercise>
+      <answer><p><m>e_1, e_3, e_5, e_6, e_7</m></p></answer></exercise>
 
       <exercise label="DMT_graphs_CYU_parallel"><statement correct="yes"><p>True or false <m>G</m>, <xref ref="F_readingquestions"/>, has parallel edges.</p></statement>
       <feedback><p>Edges <m>e_3, e_6</m> are parallel.</p></feedback>
-      <answer>Yes, <m>e_3, e_6</m></answer></exercise>
+      <answer><p>Yes, <m>e_3, e_6</m></p></answer></exercise>
 
       <exercise label="DMT_graphs_CYU_v12adjacent"><statement correct="yes"><p>True or false: in <m>G</m>, <xref ref="F_readingquestions"/>, <m>v_1</m> and <m>v_2</m> are adjacent.</p></statement>
-      <answer>True</answer></exercise>
+      <answer><p>True</p></answer></exercise>
 
       <exercise label="DMT_graphs_CYU_v34adjacent"><statement correct="no"><p>True or false: in <m>G</m>, <xref ref="F_readingquestions"/>, <m>v_3</m> and <m>v_4</m> are adjacent.</p></statement>
-      <answer>False</answer></exercise>
+      <answer><p>False</p></answer></exercise>
 
       <exercise label="DMT_graphs_CYU_e36adjacent"><statement correct="yes"><p>True or false: in <m>G</m>, <xref ref="F_readingquestions"/>, <m>e_3</m> and <m>e_6</m> are adjacent.</p></statement>
-      <answer>True</answer></exercise>
+      <answer><p>True</p></answer></exercise>
 
        <exercise label="DMT_graphs_CYU_degreev4"><statement><p>In <m>G</m>, <xref ref="F_readingquestions"/>, find the degree of <m>v_4</m>. <var /></p></statement>
        <setup>
@@ -465,7 +465,7 @@
     </condition>
     </var>
   </setup>
-      <answer><m>3</m></answer></exercise>
+      <answer><p><m>3</m></p></answer></exercise>
 
       <exercise label="DMT_graphs_CYU_degreev2"><statement><p>In <m>G</m>, <xref ref="F_readingquestions"/>, find the degree of <m>v_2</m>. <var /></p></statement>
       <setup>
@@ -487,7 +487,7 @@
     </condition>
     </var>
   </setup>
-      <answer><m>6</m></answer></exercise>
+      <answer><p><m>6</m></p></answer></exercise>
 
       <exercise label="DMT_graphs_CYU_totdeg"><statement><p>What is the total degree of <m>G</m>, <xref ref="F_readingquestions"/>? <var /></p></statement>
       <setup>
@@ -509,7 +509,7 @@
     </condition>
     </var>
   </setup>
-      <answer><m>14</m></answer></exercise>
+      <answer><p><m>14</m></p></answer></exercise>
 
        
 
@@ -555,20 +555,20 @@
 
       <exercise label="DMT_graphs_CYU_exist1212"><statement correct="yes"><p>True or false: there exists a graph with 4 vertices of degrees 1, 2, 1, 2.</p></statement>
       <feedback><p>One example is a line (path) with 4 vertices.</p></feedback>
-      <answer>True. One example is a line (path) with 4 vertices.</answer></exercise>
+      <answer><p>True. One example is a line (path) with 4 vertices.</p></answer></exercise>
 
       <exercise label="DMT_graphs_CYU_exist1213"><statement correct="no"><p>True or false: there exists a graph with 4 vertices of degrees 1, 2, 1, 3.</p></statement>
       <feedback><p>The total degree would be odd.</p></feedback>
-      <answer>False. Total degree would be odd.</answer></exercise>
+      <answer><p>False. Total degree would be odd.</p></answer></exercise>
 
 
       <exercise label="DMT_graphs_CYU_exist4444"><statement correct="yes"><p>True or false: there exists a graph with 4 vertices of degrees 4, 4, 4, 4.</p></statement>
       <feedback><p>One example has parallel edges between each vertex. Can also have an example with loops.</p></feedback>
-      <answer>True. One example has parallel edges between each vertex. You can also have an example with loops.</answer></exercise>
+      <answer><p>True. One example has parallel edges between each vertex. You can also have an example with loops.</p></answer></exercise>
 
       <exercise label="DMT_graphs_CYU_existsimp4444"><statement correct="no"><p>True or false: there exists a simple graph with 4 vertices of degrees 4, 4, 4, 4.</p></statement>
       <feedback><p>In a simple graph, you can't have more edges than the complete graph on 4 vertices.</p></feedback>
-      <answer>False. Can't have more edges than the complete graph on 4 vertices.</answer></exercise>
+      <answer><p>False. Can't have more edges than the complete graph on 4 vertices.</p></answer></exercise>
 
       
 
@@ -744,7 +744,7 @@
 </latex-image></image>
 <!--</figure>-->
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     Find all edges that are incident on <m>V_1</m>.
@@ -804,7 +804,7 @@
     For each of the following, draw the graph if it exists or explain why no such graph exists.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     A graph with four vertices of degrees 1, 1, 1, and 4.
@@ -833,7 +833,7 @@
     Recall that <m>K_{m,n}</m> denotes the complete bipartite graph on <m>(m, n)</m> vertices.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     Draw <m>K_{4, 2}</m>.
@@ -854,7 +854,7 @@
 
     <li>
       <p>
-    How many vertices of <m>K_{m, n}</m> have of degree <m>m</m>? degree <m>n</m>?
+    How many vertices of <m>K_{m, n}</m> have degree <m>m</m>? degree <m>n</m>?
   </p>
     </li>
 
@@ -877,7 +877,7 @@
     Recall <m>K_n</m> is the complete graph on <m>n</m> vertices.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     Draw <m>K_6</m>.

@@ -16,7 +16,7 @@
   <example xml:id="E_propofsets"><title>Reflexive, Symmetric, Transitive</title>
 
   <p>Let <m>A=\{1, 2, 3\}</m>, define the relation on <m>A</m> by 
-  <me>R=\{(1, 1), (2, 2), (3, 3)\}.</me></p>
+  <md>R=\{(1, 1), (2, 2), (3, 3)\}.</md></p>
 
   <p><m>R</m> is reflexive since <m>(x, x)\in R</m> for each <m>x\in A</m>. </p>
   <p><m>R</m> is symmetric since if <m>(x, y)\in R</m> then <m>(y, x)\in R</m>.  Note, this property does not mean <m>(x, y)\in R</m>, just that if a pair is in <m>R</m>, then the reverse is as well.</p>
@@ -27,7 +27,7 @@
   <example xml:id="E_propofsets2"><title>Another Look at the Properties</title>
 
   <p>Let <m>A=\{1, 2, 3\}</m>, define the relation on <m>A</m> by 
-  <me>R=\{(1, 2), (1, 3), (2, 3)\}.</me></p>
+  <md>R=\{(1, 2), (1, 3), (2, 3)\}.</md></p>
 
   <p><m>R</m> is not reflexive since <m>(1, 1)\notin R</m>. </p>
   <p><m>R</m> is not symmetric since <m>(1, 2)\in R</m>, but not <m>(2, 1)</m>.</p>
@@ -42,7 +42,7 @@
 
   <figure xml:id="F_digraphreflexive">
   <caption>Directed graph for reflexive property</caption>
-  <image width="20%" xml:id="gdreflexive">
+  <image width="25%" xml:id="gdreflexive">
     <latex-image>
   \begin{tikzpicture}
 %directed graph reflexive
@@ -61,7 +61,7 @@
 \end{tikzpicture}
 
 
-</latex-image></image>
+</latex-image><description><p>There are three points, labeled <m>x_1</m>, <m>x_2</m>, and <m>x_3</m>. There is an arrow from each point back to itself.</p></description></image>
 </figure>
 </li>
   <li><title>Symmetric</title><p>If a relation is symmetric, then whenever the directed graph has an arrow from vertex, <m>v</m> to vertex <m>u</m>, there is a corresponding arrow  going from <m>u</m> to <m>v</m>.</p>
@@ -85,7 +85,7 @@
 
 \end{tikzpicture}
 
-</latex-image></image>
+</latex-image><description><p>There are two points, labeled <m>x_1</m> and <m>x_2</m>. There is an arrow from <m>x_1</m> to <m>x_2</m> and an arrow from <m>x_2</m> to <m>x_1</m>.</p></description></image>
 </figure>
 </li>
   <li><title>Transitive</title><p>If a relation is transitive, then whenever the directed graph has an arrow from vertex, <m>v</m> to vertex <m>u</m> followed by an arrow from <m>u</m> to <m>w</m>, there is a corresponding arrow  going from <m>v</m> to <m>w</m>.</p>
@@ -109,7 +109,7 @@
 
 \end{tikzpicture}
 
-</latex-image></image>
+</latex-image><description><p>There are three points, labeled <m>x_1</m>, <m>x_2</m>, and <m>x_3</m>. There is an arrow from <m>x_1</m> to <m>x_2</m>, an arrow from <m>x_1</m> to <m>x_3</m>, and an arrow from <m>x_2</m> to <m>x_3</m>.</p></description></image>
 </figure>
 </li>
 </ul>
@@ -122,18 +122,18 @@
 
   
 
-    <activity xml:id="A_relationset1"><introduction><p>Let <m>A=\{1, 2, 3\}</m>. Let <m>R=\{(1, 1), (1, 2), (1, 3), (2, 1), (3, 1)\}</m>.</p></introduction>
-    <task><p>Determine if <m>R</m> is reflexive.</p></task>
-    <task><p>Determine if <m>R</m> is symmetric.</p></task>
-    <task><p>Determine if <m>R</m> is transitive.</p></task>
-    <task><p>Draw the directed graph for <m>R</m>.</p></task>
+    <activity xml:id="A_relationset1" label="rst-relset1"><introduction><p>Let <m>A=\{1, 2, 3\}</m>. Let <m>R=\{(1, 1), (1, 2), (1, 3), (2, 1), (3, 1)\}</m>.</p></introduction>
+    <task label="rst-relset1-refl"><statement><p>Determine if <m>R</m> is reflexive.</p></statement><response/></task>
+    <task label="rst-relset1-sym"><statement><p>Determine if <m>R</m> is symmetric.</p></statement><response/></task>
+    <task label="rst-relset1-tran"><statement><p>Determine if <m>R</m> is transitive.</p></statement><response/></task>
+    <task label="rst-relset1-graph" attachment="yes"><statement><p>Draw the directed graph for <m>R</m>.</p></statement>><response/></task>
     </activity>
 
-    <activity xml:id="A_relationset2"><introduction><p>Let <m>A=\{1, 2, 3, 4\}</m>. Let <m>R=\{(1, 1), (1, 3), (2, 2), (3, 2), (3, 3)\}</m>.</p></introduction>
-    <task><p>Determine if <m>R</m> is reflexive.</p></task>
-    <task><p>Determine if <m>R</m> is symmetric.</p></task>
-    <task><p>Determine if <m>R</m> is transitive.</p></task>
-    <task><p>Draw the directed graph for <m>R</m>.</p></task>
+    <activity xml:id="A_relationset2" label="rst-relset2"><introduction><p>Let <m>A=\{1, 2, 3, 4\}</m>. Let <m>R=\{(1, 1), (1, 3), (2, 2), (3, 2), (3, 3)\}</m>.</p></introduction>
+    <task label="rst-relset2-refl"><statement><p>Determine if <m>R</m> is reflexive.</p></statement><response/></task>
+    <task label="rst-relset2-sym"><statement><p>Determine if <m>R</m> is symmetric.</p></statement><response/></task>
+    <task label="rst-relset2-tran"><statement><p>Determine if <m>R</m> is transitive.</p></statement><response/></task>
+    <task label="rst-relset2-graph" attachment="yes"><statement><p>Draw the directed graph for <m>R</m>.</p></statement><response/></task>
     </activity>
 
     <p>The <term>transitive closure</term><idx>transitive closure</idx> of a relation <m>R</m>, denoted <m>R^{t}</m>, is the set of ordered pairs in <m>R</m> as well as all additional ordered pairs to make the relation transitive.</p>
@@ -144,9 +144,9 @@
     <p>Let <m>R=\{(1, 2), (3, 2), (4, 1), (4, 3)\}</m>. Then in <m>R^{t}</m> we need <m>(4, 2)</m>. You can check with a directed graph to see this is the only pair we need to add. Thus, <m>R^{t}=\{(1, 2), (3, 2), (4, 1), (4, 3), (4, 2)\}</m>.
     </p></example>
 
-     <activity><introduction><p>For the relations in <xref ref="A_relationset1"/> and <xref ref="A_relationset2"/>, find the transitive closure.</p></introduction>
-    <task><p>Let <m>R=\{(1, 1), (1, 2), (1, 3), (2, 1), (3, 1)\}</m>. What ordered pairs, if any, should you add to the relation to make <m>R</m> transitive?</p></task>
-  <task><p>Let <m>R=\{(1, 1), (1, 3), (2, 2), (3, 2), (3, 3)\}</m>. What ordered pairs, if any, should you add to the relation to make <m>R</m> transitive?</p></task></activity>
+     <activity label="rst-tranclose"><introduction><p>For the relations in <xref ref="A_relationset1"/> and <xref ref="A_relationset2"/>, find the transitive closure.</p></introduction>
+    <task label="rst-tranclose-relset1"><statement><p>Let <m>R=\{(1, 1), (1, 2), (1, 3), (2, 1), (3, 1)\}</m>. What ordered pairs, if any, should you add to the relation to make <m>R</m> transitive?</p></statement><response/></task>
+  <task label="rst-tranclose-relset2"><statement><p>Let <m>R=\{(1, 1), (1, 3), (2, 2), (3, 2), (3, 3)\}</m>. What ordered pairs, if any, should you add to the relation to make <m>R</m> transitive?</p></statement><response/></task></activity>
 
   <p>Checking that a relation is reflexive, symmetric, or transitive on a small finite set can be done by checking that the property holds for all the elements of <m>R</m>. But if <m>A</m> is infinite we need to prove the properties more generally.</p>
 
@@ -179,16 +179,16 @@
   <p>Then <m>3\mid (x-y)</m> and <m>3\mid (y-z)</m>. This implies <m>x-y=3k</m> for some <m>k\in\mathbb{Z}</m> and <m>y-z=3j</m> for some <m>j\in\mathbb{Z}</m>. But then <m>x-z=x-y+y-z=3k+3j=3(j+k)</m>, where <m>k+j\in \mathbb{Z}</m>. Thus, <m>3\mid (x-z)</m>. Hence, <m>(x, z)\in R</m>.</p>
 </example>
 
-<activity><introduction><p>Define the relation on <m>\mathbb{R}</m> by <m>xRy \iff x=y</m>.</p></introduction>
-<task><p>Prove or disprove <m>R</m> is reflexive.</p></task>
-<task><p>Prove or disprove <m>R</m> is symmetric.</p></task>
-<task><p>Prove or disprove <m>R</m> is transitive.</p></task>
+<activity label="rst-equal"><introduction><p>Define the relation on <m>\mathbb{R}</m> by <m>xRy \iff x=y</m>.</p></introduction>
+<task label="rst-equal-pfref"><statement><p>Prove or disprove <m>R</m> is reflexive.</p></statement><response/></task>
+<task label="rst-equal-pfsym"><statement><p>Prove or disprove <m>R</m> is symmetric.</p></statement><response/></task>
+<task label="rst-equal-pftran"><statement><p>Prove or disprove <m>R</m> is transitive.</p></statement><response/></task>
 </activity>
 
-<activity><introduction><p>Define the relation on <m>\mathbb{R}</m> by <m>xRy \iff x &lt; y</m>.</p></introduction>
-<task><p>Prove or disprove <m>R</m> is reflexive.</p></task>
-<task><p>Prove or disprove <m>R</m> is symmetric.</p></task>
-<task><p>Prove or disprove <m>R</m> is transitive.</p></task>
+<activity label="rst-less"><introduction><p>Define the relation on <m>\mathbb{R}</m> by <m>xRy \iff x &lt; y</m>.</p></introduction>
+<task label="rst-less-pfref"><statement><p>Prove or disprove <m>R</m> is reflexive.</p></statement><response/></task>
+<task label="rst-less-pfsym"><statement><p>Prove or disprove <m>R</m> is symmetric.</p></statement><response/></task>
+<task label="rst-less-pftran"><statement><p>Prove or disprove <m>R</m> is transitive.</p></statement><response/></task>
 </activity>
 
 
@@ -198,7 +198,7 @@
       <!--<p>Let <m>A=\{1, 2, 3\}, B=\{2, 4, 6, 8\}, C=\{0, 1\}</m>.</p>-->
   
       <exercise label="DMT_rst_CYU_leq"><statement><p>Determine if the relation is reflexive, symmetric, transitive where <m>R</m> is the relation on <m>A=\{1, 2, 3\}</m> given by 
-      <me>a R b \Leftrightarrow a\leq b.</me></p></statement>
+      <md>a R b \Leftrightarrow a\leq b.</md></p></statement>
       <choices>
         <choice correct="yes">
           <statement><p>Reflexive</p></statement>
@@ -213,10 +213,10 @@
           <feedback><p>If <m>a \leq b</m>, and <m>b\leq c</m>, then <m>a\leq c</m>.</p></feedback>
         </choice>
       </choices>
-     <answer>Reflexive, transitive, not symmetric</answer></exercise>
+     <answer><p>Reflexive, transitive, not symmetric</p></answer></exercise>
 
       <exercise label="DMT_rst_CYU_apbeven"><statement><p>Determine if the relation is reflexive, symmetric, transitive where <m>R</m> is the relation on <m>C=\{0, 1\}</m> given by 
-      <me>a R b \Leftrightarrow a+b \text{ is even}.</me></p></statement>
+      <md>a R b \Leftrightarrow a+b \text{ is even}.</md></p></statement>
       <choices>
         <choice correct="yes">
           <statement><p>Reflexive</p></statement>
@@ -228,13 +228,13 @@
         </choice>
         <choice correct="yes">
           <statement><p>Transitive</p></statement>
-          <feedback><p>Since <m>R=\{(0, 0), (1, 1)\}</m>, it is straightforward to check reflexive by hand.</p></feedback>
+          <feedback><p>Since <m>R=\{(0, 0), (1, 1)\}</m>, it is straightforward to check transitive by hand.</p></feedback>
         </choice>
       </choices>
-      <answer>Reflexive, symmetric, transitive</answer></exercise>
+      <answer><p>Reflexive, symmetric, transitive</p></answer></exercise>
 
       <exercise label="DMT_rst_CYU_div"><statement><p>Determine if the relation is reflexive, symmetric, transitive where <m>R</m> is the relation on <m>B=\{2, 4, 6, 8\}</m> given by 
-      <me>a R b \Leftrightarrow a\mid b.</me></p></statement>
+      <md>a R b \Leftrightarrow a\mid b.</md></p></statement>
       <choices>
         <choice correct="yes">
           <statement><p>Reflexive</p></statement>
@@ -249,10 +249,10 @@
           <feedback><p>If <m>a \mid b</m>, and <m>b\mid c</m>, then <m>a\mid c</m>.</p></feedback>
         </choice>
       </choices>
-      <answer>Reflexive, transitive, not symmetric</answer></exercise>
+      <answer><p>Reflexive, transitive, not symmetric</p></answer></exercise>
 
       <exercise label="DMT_rst_CYU_apbe0"><statement><p>Determine if the relation is reflexive, symmetric, transitive where <m>R</m> is the relation on <m>\mathbb{Z}</m> given by 
-      <me>a R b \Leftrightarrow a+b=0.</me></p></statement>
+      <md>a R b \Leftrightarrow a+b=0.</md></p></statement>
       <choices>
         <choice>
           <statement><p>Reflexive</p></statement>
@@ -267,7 +267,7 @@
           <feedback><p>For example, <m>1+(-1)=0</m>, and <m>(-1)+1=0</m>, but <m>1+1\neq 0</m>.</p></feedback>
         </choice>
       </choices>
-      <answer>Symmetric, not reflexive, not transitive</answer></exercise>
+      <answer><p>Symmetric, not reflexive, not transitive</p></answer></exercise>
 
 
 
@@ -283,7 +283,7 @@
     Let <m>A=\{0, 1, 2, 3\}</m>. Let <m>R_1=\{(0, 0), (0, 1), (0, 3), (1, 1), (1, 0), (2, 3), (3, 3)\}</m>.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     Draw the directed graph for <m>R_1</m>.
@@ -315,7 +315,7 @@
     Let <m>A=\{0, 1, 2, 3\}</m>. Let <m>R_2=\{(1, 2), (2, 1), (1, 3), (3, 1)\}</m>.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     Draw the directed graph for <m>R_2</m>.
@@ -347,7 +347,7 @@
     Let <m>A=\{0, 1, 2, 3\}</m>. Let <m>R_3=\{(0, 0), (0, 1), (0, 2), (1, 2)\}</m>.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     Draw the directed graph for <m>R_3</m>.
@@ -376,10 +376,10 @@
       </statement></exercise>
       <exercise><statement>
         <p>
-    Let <m>G</m> be the relation on <m>\mathbb{R}</m> defined by <me>x\ G\ y\iff xy\geq 0.</me>
+    Let <m>G</m> be the relation on <m>\mathbb{R}</m> defined by <md>x\ G\ y\iff xy\geq 0.</md>
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     Determine if <m>G</m> is reflexive. Justify your answer.
@@ -402,10 +402,10 @@
       </statement></exercise>
       <exercise><statement>
         <p>
-    Let <m>D</m> be the relation on <m>\mathbb{Z}^+</m> defined by <me>m\ D\ n\iff m\mid n.</me>
+    Let <m>D</m> be the relation on <m>\mathbb{Z}^+</m> defined by <md>m\ D\ n\iff m\mid n.</md>
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     Determine if <m>D</m> is reflexive. Justify your answer.
@@ -428,10 +428,10 @@
       </statement></exercise>
       <exercise><statement>
         <p>
-    Let <m>F</m> be the relation on <m>\mathbb{R}\times \mathbb{R}</m> defined by <me>(x_1, y_1)\ F\ (x_2, y_2)\iff x_1=x_2.</me>
+    Let <m>F</m> be the relation on <m>\mathbb{R}\times \mathbb{R}</m> defined by <md>(x_1, y_1)\ F\ (x_2, y_2)\iff x_1=x_2.</md>
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     Determine if <m>F</m> is reflexive. Justify your answer.
@@ -454,10 +454,10 @@
       </statement></exercise>
       <exercise><statement>
         <p>
-    Define the relation <m>R</m> on <m>\mathbb{Z}</m> by <me>m\ R\ n \iff 5\mid(m-n).</me>
+    Define the relation <m>R</m> on <m>\mathbb{Z}</m> by <md>m\ R\ n \iff 5\mid(m-n).</md>
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     Prove or disprove <m>R</m> is reflexive.
@@ -480,10 +480,10 @@
       </statement></exercise>
       <exercise><statement>
         <p>
-    Let <m>X=\{a, b, c\}</m> and <m>{\cal P}(X)</m> be the power set of <m>X</m>. Define the relation <m>L</m> on <m>{\cal P}(X)</m> by <me>A\ L\ B \iff \text{ the number of elements in $A$ is less than the number of elements in $B$.}</me>
+    Let <m>X=\{a, b, c\}</m> and <m>{\cal P}(X)</m> be the power set of <m>X</m>. Define the relation <m>L</m> on <m>{\cal P}(X)</m> by <md>A\ L\ B \iff \text{ the number of elements in $A$ is less than the number of elements in $B$.}</md>
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     Prove or disprove <m>L</m> is reflexive.
@@ -506,10 +506,10 @@
       </statement></exercise>
       <exercise><statement>
         <p>
-    Let <m>X</m> be a nonempty set and <m>{\cal P}(X)</m> be the power set of <m>X</m>. Define the <q>subset</q> relation <m>S</m> on <m>{\cal P}(X)</m> by <me>A\ S\ B \iff A\subseteq B.</me>
+    Let <m>X</m> be a nonempty set and <m>{\cal P}(X)</m> be the power set of <m>X</m>. Define the <q>subset</q> relation <m>S</m> on <m>{\cal P}(X)</m> by <md>A\ S\ B \iff A\subseteq B.</md>
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     Prove or disprove <m>S</m> is reflexive.

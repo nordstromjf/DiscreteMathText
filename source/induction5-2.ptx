@@ -7,7 +7,7 @@
 <assemblage xml:id="B_principleinduction">
   <title>Principle of Mathematical Induction</title>
   <p>Let <m>P(n)</m> be a property defined for integers <m>n</m>, and let <m>a</m> be a fixed integer. Suppose the following are true:
-<ol marker="1"><li><m>P(a)</m> is true;</li>
+<ol marker="1."><li><m>P(a)</m> is true;</li>
 <li>For all <m>k\in\mathbb{Z}</m> with <m>k\geq a</m>, if <m>P(k)</m> is true then <m>P(k+1)</m> is true;</li></ol>
 
 then for all <m>n\geq a</m>, <m>P(n)</m> is true.
@@ -39,14 +39,14 @@ then for all <m>n\geq a</m>, <m>P(n)</m> is true.
  Conclude <m>P(n)</m> is true for all <m>n\geq 1</m></p>
 </assemblage>
 
- <p>In the above structure we used <m>a=1</m> for simplicitiy, but an induction proof could have a base step starting at a different <m>a</m>. Most commonly, the base step starts with 0 or 1.</p>
+ <p>In the above structure we used <m>a=1</m> for simplicity, but an induction proof could have a base step starting at a different <m>a</m>. Most commonly, the base step starts with 0 or 1.</p>
 
  <p>When writing induction proofs, make sure you use the actual statement you are proving rather than the notation <m>P(1), P(k), P(n)</m>.</p>
 
- <activity><introduction><p>Since the induction step in mathematical induction connects a statement about <m>k</m> to a statement about <m>k+1</m>, we need to be comfortable with the relationship between sums of <m>k</m> terms and sums of <m>k+1</m> terms.</p></introduction>
-    <task><p>Write out the summation for <m>\sum_{i=1}^{k}i</m>.</p></task>
-    <task><p>Write out the summation for <m>\sum_{i=1}^{k+1}i</m>.</p></task>
-    <task><p>How do (a) and (b) differ?</p></task>
+ <activity label="induction-sumi"><introduction><p>Since the induction step in mathematical induction connects a statement about <m>k</m> to a statement about <m>k+1</m>, we need to be comfortable with the relationship between sums of <m>k</m> terms and sums of <m>k+1</m> terms.</p></introduction>
+    <task label="induction-sumi-1tok"><statement><p>Write out the summation for <m>\sum_{i=1}^{k}i</m>.</p></statement><response/></task>
+    <task label="induction-sumi-1tokplus1"><statement><p>Write out the summation for <m>\sum_{i=1}^{k+1}i</m>.</p></statement><response/></task>
+    <task label="induction-sumi-differ"><statement><p>How do (a) and (b) differ?</p></statement><response/></task>
 
   </activity>
 
@@ -81,12 +81,12 @@ Thus, <m>\sum_{i=1}^{k+1}i=\frac{(k+1)(k+2)}{2}</m>.</p>
 <p>Note, in the base step we looked at each side of what we wanted to show separately. We can refer to this as a <q>left hand side/ right hand side proof</q>, or in short hand, a LHS/RHS proof. If we just start with the equation we want to show, then we are assuming what we are trying to prove. To avoid this, it is best, when trying to show two things are equal in the base step, to do a LHS/ RHS proof.</p>
 
 <p><xref ref="E_sumofninduction"/> now gives us a useful formula for finding the sum of 1 through <m>n</m>:
-<men xml:id="Q_sumofn">\sum_{i=1}^{n}i=\frac{n(n+1)}{2}.</men></p>
+<md number="yes" xml:id="Q_sumofn">\sum_{i=1}^{n}i=\frac{n(n+1)}{2}.</md></p>
 
-<activity><introduction><p>Before the next example, we practice the relationship between sums of <m>k</m> terms and sums of <m>k+1</m> terms.</p></introduction>
-    <task><p>Write out the summation for <m>\sum_{i=0}^{n}r^i</m>.</p></task>
-    <task><p>Write out the summation for <m>\sum_{i=0}^{n+1}r^i</m>.</p></task>
-    <task><p>How do (a) and (b) differ?</p></task>
+<activity label="induction-geosum"><introduction><p>Before the next example, we practice the relationship between sums of <m>k</m> terms and sums of <m>k+1</m> terms.</p></introduction>
+    <task label="induction-geosum-0tok"><statement><p>Write out the summation for <m>\sum_{i=0}^{k}r^i</m>.</p></statement><response/></task>
+    <task label="induction-geosum-0tokplus1"><statement><p>Write out the summation for <m>\sum_{i=0}^{k+1}r^i</m>.</p></statement><response/></task>
+    <task label="induction-geosum-differ"><statement><p>How do (a) and (b) differ?</p></statement><response/></task>
 
   </activity>
 
@@ -122,14 +122,47 @@ Thus, <m>\sum_{i=0}^{k+1}r^i=\frac{r^{k+2}-1}{r-1}</m>.</p>
 </example>
 
 <p>The sum in <xref ref="E_geosuminduction"/> is called a <term>geometric sum</term><idx>geometric sum</idx>. Now we have a useful formula for the sum of <m>r^i</m> for various values of <m>r>1</m>:
-<men xml:id="Q_geosum">\sum_{i=0}^{n}r^i=\frac{r^{n+1}-1}{r-1}.</men>
+<md number="yes" xml:id="Q_geosum">\sum_{i=0}^{n}r^i=\frac{r^{n+1}-1}{r-1}.</md>
 </p>
 
-<activity><introduction><p>Suppose you want to prove <m>\sum_{i=1}^{n}i^2=\frac{n(n+1)(2n+1)}{6}</m> for all <m>n\geq 1</m> by induction. </p></introduction>
-    <task><p>What would you want to prove in the base step?</p></task>
-    <task><p>What should you assume in the induction step?</p></task>
-    <task><p>What should you show in the induction step?</p></task>
-    <task><p>Now try to put this all together in the form of an induction proof. If you are unable to prove it, where do you get stuck?</p></task>
+<activity label="induction-geo3"><introduction><p>To help understand the general geometric sum proof, let's do the proof just for <m>r=3</m>. In particular, prove  <m>\sum_{i=0}^{n}3^i=\frac{3^{n+1}-1}{2}</m> for <m>n\geq 0</m>.</p></introduction>
+<task label="induction-geo3-base" adaptive="yes"><statement><p>Prove the Base Step.</p></statement>
+<blocks>
+  <block><p>Let <m>n=0</m>.</p></block>
+  <block><m>\sum_{i=0}^{0}3^i=r^0=1</m></block>
+  <block><m>\frac{3^{0+1}-1}{2}=\frac{2}{2}=1</m></block>
+  <block><p>Thus, <m>\sum_{i=0}^{n}3^i=\frac{3^{n+1}-1}{2}</m> for <m>n=0</m>.</p></block>
+
+  <block correct="no"><p>Substituting <m>n=0</m>, <m>\sum_{i=0}^{0}3^i=\frac{3^{0+1}-1}{2}</m>.</p></block>
+  <block correct="no"><p>Thus, <m>1=1</m>.</p></block>
+  <block correct="no"><p>Let <m>n=1</m>.</p></block>
+</blocks></task>
+
+<task label="induction-geo3-ind" adaptive="yes"><statement><p>Prove the Induction Step.</p></statement>
+  <blocks>
+    <block><p>Assume <m>\sum_{i=0}^{k}3^i=\frac{3^{k+1}-1}{2}</m> for some <m>k\geq 0</m>.</p></block>
+    <block><p>Show <m>\sum_{i=0}^{k+1}3^i=\frac{3^{k+2}-1}{2}</m>.</p></block>
+    <!--<block><p><m>\sum_{i=0}^{k}3^i=\frac{3^{k+1}-1}{2}</m></p></block>-->
+    <block><p><m>\sum_{i=0}^{k+1}3^i= \sum_{i=0}^{k}3^i+(3^{k+1})</m>.</p></block>
+    <block><p><m>\sum_{i=0}^{k+1}3^i=\frac{3^{k+1}-1}{2}+(3^{k+1})</m>.</p></block>
+    <block><p><m>\sum_{i=0}^{k+1}3^i=\frac{3^{k+1}-1}{2}+\frac{(2)(3^{k+1})}{2}</m>.</p></block>
+    <block><p><m>\sum_{i=0}^{k+1}3^i=\frac{(3)3^{k+1}-1}{2}</m>.</p></block>
+    <block><p><m>\sum_{i=0}^{k+1}3^i=\frac{3^{k+2}-1}{2}</m></p></block>
+    <!--<block><p>Thus, <m>\sum_{i=0}^{k+1}3^i=\frac{3^{k+2}-1}{2}</m>.</p></block>-->
+
+    <block correct="no"><p>Assume <m>\sum_{i=0}^{k}3^i=\frac{3^{k+1}-1}{2}</m> for all <m>k\geq 0</m>.</p></block>
+    <block correct="no"><p>Assume <m>\sum_{i=0}^{k+1}3^i=\frac{3^{k+2}-1}{2}</m>.</p></block>
+    <block correct="no"><p><m>\sum_{i=0}^{k+1}3^i= \sum_{i=0}^{k}3^i+(k+1)</m>.</p></block>
+    <block correct="no"><p><m>\sum_{i=0}^{k+1}3^i=\frac{(2)3^{k+1}-1}{2}</m>.</p></block>
+  </blocks>
+</task>
+</activity>
+
+<activity label="induction-pfsumsqrs"><introduction><p>Suppose you want to prove <m>\sum_{i=1}^{n}i^2=\frac{n(n+1)(2n+1)}{6}</m> for all <m>n\geq 1</m> by induction. </p></introduction>
+    <task label="induction-pfsumsqrs-base"><statement><p>What would you want to prove in the base step?</p></statement><response/></task>
+    <task label="induction-pfsumsqrs-indassump"><statement><p>What should you assume in the induction step?</p></statement><response/></task>
+    <task label="induction-pfsumsqrs-indshow"><statement><p>What should you show in the induction step?</p></statement><response/></task>
+    <task label="induction-pfsumsqrs-indpf"><statement><p>Now try to put this all together in the form of an induction proof. If you are unable to prove it, where do you get stuck?</p></statement><response/></task>
 
   </activity>
 
@@ -150,7 +183,7 @@ Thus, <m>\sum_{i=0}^{k+1}r^i=\frac{r^{k+2}-1}{r-1}</m>.</p>
       <title>Check Your Understanding</title>
       
       <exercise label="DMT_induction_CYU_sumformn38"><statement><p>Determine the values of <m>a, n</m> in the summation formula to find <m>3+4+5+6+7+8</m>.
-        <me>\sum_{i=a}^{n}i=\sum_{i=1}^{n}i-(1+2)=\frac{n(n+1)}{2}-(3)=33</me></p>
+        <md>\sum_{i=a}^{n}i=\sum_{i=1}^{n}i-(1+2)=\frac{n(n+1)}{2}-(3)=33</md></p>
         <p><m>a</m>:<var width="3" />, <m>n</m>:<var width="3" /></p>
       <p></p></statement>
       <setup>
@@ -171,10 +204,10 @@ Thus, <m>\sum_{i=0}^{k+1}r^i=\frac{r^{k+2}-1}{r-1}</m>.</p>
           </condition>
         </var>
       </setup>
-      <answer><m>\sum_{i=3}^{8}i=\sum_{i=1}^{8}i-(1+2)=\frac{8(8+1)}{2}-(3)=33</m></answer></exercise>
+      <answer><p><m>\sum_{i=3}^{8}i=\sum_{i=1}^{8}i-(1+2)=\frac{8(8+1)}{2}-(3)=33</m></p></answer></exercise>
 
       <exercise label="DMT_induction_CYU_sumform2n212"><statement><p>Determine the values of <m>a, n</m> in the summation formula to find <m>2+4+6+8+10+12</m>.
-      <me>\sum_{i=a}^{n}2i=2\sum_{i=a}^{n}i=(2)\frac{n(n+1)}{2}=42</me></p>
+      <md>\sum_{i=a}^{n}2i=2\sum_{i=a}^{n}i=(2)\frac{n(n+1)}{2}=42</md></p>
     <p><m>a</m>:<var width="3" />, <m>n</m>:<var width="3" /></p></statement>
     <setup>
         <var>
@@ -194,10 +227,10 @@ Thus, <m>\sum_{i=0}^{k+1}r^i=\frac{r^{k+2}-1}{r-1}</m>.</p>
           </condition>
         </var>
       </setup>
-      <answer><m>\sum_{i=1}^{6}2i=2\sum_{i=1}^{6}i=(2)\frac{6(6+1)}{2}=42</m></answer></exercise>
+      <answer><p><m>\sum_{i=1}^{6}2i=2\sum_{i=1}^{6}i=(2)\frac{6(6+1)}{2}=42</m></p></answer></exercise>
 
       <exercise label="DMT_induction_CYU_sumformr1625"><statement><p>Determine the values of <m>n, r</m> in the summation formula to find <m>1+5+25+125+625</m>.
-      <me>\sum_{i=0}^{n}r^i=\frac{r^{n+1}-1}{r-1}=781</me></p>
+      <md>\sum_{i=0}^{n}r^i=\frac{r^{n+1}-1}{r-1}=781</md></p>
     <p><m>n</m>:<var width="3" />, <m>r</m>:<var width="3" /></p></statement>
     <setup>
         <var>
@@ -217,10 +250,10 @@ Thus, <m>\sum_{i=0}^{k+1}r^i=\frac{r^{k+2}-1}{r-1}</m>.</p>
           </condition>
         </var>
       </setup>
-      <answer><m>\sum_{i=0}^{4}5^i=\frac{5^{4+1}-1}{4}=781</m></answer></exercise>
+      <answer><p><m>\sum_{i=0}^{4}5^i=\frac{5^{4+1}-1}{4}=781</m></p></answer></exercise>
 
       <exercise label="DMT_induction_CYU_sumformr1750"><statement><p>Determine the values of <m>n, r</m> in the summation formula to find <m>1+7+7^2+\cdots+7^{50}</m>.
-    <me>\sum_{i=0}^{n}r^i=\frac{r^{n+1}-1}{r-1}=781</me></p>
+    <md>\sum_{i=0}^{n}r^i=\frac{r^{n+1}-1}{r-1}=781</md></p>
     <p><m>n</m>:<var width="3" />, <m>r</m>:<var width="3" /></p></statement>
     <setup>
         <var>
@@ -240,12 +273,12 @@ Thus, <m>\sum_{i=0}^{k+1}r^i=\frac{r^{k+2}-1}{r-1}</m>.</p>
           </condition>
         </var>
       </setup>
-      <answer><m>\sum_{i=0}^{50}7^i=\frac{7^{50+1}-1}{6}=\frac{7^{51}-1}{6}</m></answer></exercise>
+      <answer><p><m>\sum_{i=0}^{50}7^i=\frac{7^{50+1}-1}{6}=\frac{7^{51}-1}{6}</m></p></answer></exercise>
 
       <exercise label="DMT_induction_CYU_sumformr17n"><statement><p>Write out the rest of the summation formula for <m>1+7+7^2+\cdots+7^{n}</m>.
-      <me>\sum_{i=0}^{n}7^i=</me></p></statement>
+      <md>\sum_{i=0}^{n}7^i=</md></p></statement>
       <response />
-      <answer><m>\sum_{i=0}^{n}7^i=\frac{7^{n+1}-1}{6}</m></answer></exercise>
+      <answer><p><m>\sum_{i=0}^{n}7^i=\frac{7^{n+1}-1}{6}</m></p></answer></exercise>
 
       <exercise label="DMT_induction_CYU_pfn1sumi2"><statement><p>Suppose you want to prove <m>\sum_{i=1}^n i^2=\frac{n(n+1)(2n+1)}{6}</m>. Show the formula holds for <m>n=1</m>.</p></statement>
       <response />
@@ -255,50 +288,50 @@ Thus, <m>\sum_{i=0}^{k+1}r^i=\frac{r^{k+2}-1}{r-1}</m>.</p>
       <exercise label="DMT_induction_CYU_pfindasumi2"><statement><p>Suppose you want to prove <m>\sum_{i=1}^n i^2=\frac{n(n+1)(2n+1)}{6}</m>. What should you assume in the induction step?</p></statement>
       <response />
       <hint><p>Let <m>n=k</m>.</p></hint>
-      <answer><m>\sum_{i=1}^k i^2=\frac{k(k+1)(2k+1)}{6}</m></answer></exercise>
+      <answer><p><m>\sum_{i=1}^k i^2=\frac{k(k+1)(2k+1)}{6}</m></p></answer></exercise>
 
       <exercise label="DMT_induction_CYU_pfindssumi2"><statement><p>Suppose you want to prove <m>\sum_{i=1}^n i^2=\frac{n(n+1)(2n+1)}{6}</m>. What should you show in the induction step?</p></statement>
       <response />
       <hint><p>Let <m>n=k+1</m>.</p></hint>
-      <answer><m>\sum_{i=1}^{k+1} i^2=\frac{(k+1)(k+2)(2(k+1)+1)}{6}=\frac{(k+1)(k+2)(2k+3)}{6}</m></answer></exercise>
+      <answer><p><m>\sum_{i=1}^{k+1} i^2=\frac{(k+1)(k+2)(2(k+1)+1)}{6}=\frac{(k+1)(k+2)(2k+3)}{6}</m></p></answer></exercise>
 
       
 
       <exercise label="DMT_induction_CYU_sumi3kp1term"><statement><p>Consider <m>\sum_{i=1}^{k} i^3</m>. What is the <m>k+1</m> term in the sum?</p></statement>
       <response />
-      <answer><m>(k+1)^3</m></answer></exercise>
+      <answer><p><m>(k+1)^3</m></p></answer></exercise>
 
       <exercise label="DMT_induction_CYU_sum1dkp2kp1term"><statement><p>Consider <m>\sum_{i=1}^{k} \frac{1}{i+1}</m>. What is the <m>k+1</m> term in the sum?</p></statement>
       <response />
-      <answer><m>\frac{1}{k+2}</m></answer></exercise>
+      <answer><p><m>\frac{1}{k+2}</m></p></answer></exercise>
 
     
 
     </reading-questions>
     <exercises>
       <exercise><statement><p>
-    Use one of the formulas <xref ref="Q_sumofn"/> or <xref ref="Q_geosum" /> to evaluate <me>4+8+12+16+\cdots +200.</me>
+    Use one of the formulas <xref ref="Q_sumofn"/> or <xref ref="Q_geosum" /> to evaluate <md>4+8+12+16+\cdots +200.</md>
   </p></statement></exercise>
       <exercise><statement>
         <p>
     Use one of the formulas <xref ref="Q_sumofn"/> or <xref ref="Q_geosum" /> to write the closed form of the following sums.</p>
-    <ol marker="a">
-      <li><me>1+2+3+\cdots +(k-1), \text{ where } k\in\mathbb{Z} \text{ and } k\geq 2.</me>
+    <ol marker="a.">
+      <li><md>1+2+3+\cdots +(k-1), \text{ where } k\in\mathbb{Z} \text{ and } k\geq 2.</md>
     </li>
 
     <li>
-      <me>3+3^2+3^3+\cdots +3^n, \text{ where } n\in\mathbb{Z} \text{ and } n\geq 1.</me>
+      <md>3+3^2+3^3+\cdots +3^n, \text{ where } n\in\mathbb{Z} \text{ and } n\geq 1.</md>
     </li>
 
     <li>
-      <me>1+\frac{1}{2}+\frac{1}{2^2}+\cdots +\frac{1}{2^n}, \text{ where } n\in\mathbb{Z} \text{ and } n\geq 0.</me></li>
+      <md>1+\frac{1}{2}+\frac{1}{2^2}+\cdots +\frac{1}{2^n}, \text{ where } n\in\mathbb{Z} \text{ and } n\geq 0.</md></li>
     </ol>
   
       </statement></exercise>
       <exercise><statement><p>
-    For each integer <m>n</m> with <m>n\geq 2</m>, let <m>P(n)</m> be the formula <me>\sum_{i=1}^{n-1}i(i+1)=\frac{n(n-1)(n+1)}{3}.</me>
+    For each integer <m>n</m> with <m>n\geq 2</m>, let <m>P(n)</m> be the formula <md>\sum_{i=1}^{n-1}i(i+1)=\frac{n(n-1)(n+1)}{3}.</md>
   </p>
-      <ol marker="a">
+      <ol marker="a.">
       <li>  <p>
     Write out the statement <m>P(2)</m>. Is <m>P(2)</m> true?
   </p>
@@ -326,17 +359,17 @@ Thus, <m>\sum_{i=0}^{k+1}r^i=\frac{r^{k+2}-1}{r-1}</m>.</p>
       </statement></exercise>
       <exercise><statement>
         <p>
-    Use mathematical induction to prove for all integers <m>n\geq 1</m>, <me>\sum_{i=1}^{n}2i=n^2+n.</me>
+    Use mathematical induction to prove for all integers <m>n\geq 1</m>, <md>\sum_{i=1}^{n}2i=n^2+n.</md>
   </p>
       </statement></exercise>
       <exercise><statement>
         <p>
-    Use mathematical induction to prove for all integers <m>n\geq 1</m>, <me>\sum_{i=1}^{n}i^3=\Bigl[\frac{n(n+1)}{2}\Bigr]^2.</me>
+    Use mathematical induction to prove for all integers <m>n\geq 1</m>, <md>\sum_{i=1}^{n}i^3=\Bigl[\frac{n(n+1)}{2}\Bigr]^2.</md>
   </p>
       </statement></exercise>
       <exercise><statement>
         <p>
-    Use mathematical induction to prove for all integers <m>n\geq 1</m>, <me>\sum_{i=1}^{n}i(i!)=(n+1)!-1.</me>
+    Use mathematical induction to prove for all integers <m>n\geq 1</m>, <md>\sum_{i=1}^{n}i(i!)=(n+1)!-1.</md>
   </p>
       </statement></exercise>
 

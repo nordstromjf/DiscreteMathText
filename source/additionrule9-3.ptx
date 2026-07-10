@@ -5,7 +5,7 @@
 
 <assemblage xml:id="B_addrule">
   <title>Addition Rule</title><idx>addition rule</idx>
-  <p>If <m>A</m> is the union of <m>k</m> distinct, mutually disjoint sets, <m>A_1, A_2, \ldots, A_k</m>, then the number of elements in <m>A</m> is given by <me>N(A)=N(A_1)+N(A_2)+\cdots +N(A_k).</me></p>
+  <p>If <m>A</m> is the union of <m>k</m> distinct, mutually disjoint sets, <m>A_1, A_2, \ldots, A_k</m>, then the number of elements in <m>A</m> is given by <md>N(A)=N(A_1)+N(A_2)+\cdots +N(A_k).</md></p>
 </assemblage>
 
   <example xml:id="E_divby5"><title>Addition Rule: Counting Numbers Divisible by 5</title>
@@ -15,12 +15,12 @@
     <p>Let <m>A_2</m> be the set of 3 digit numbers ending in 0.</p>
     <p><m>N(A_1)=9\cdot 10 \cdot 1</m>, where we are using the multiplication rule as in <xref ref="multrule9-2"  />.</p>
     <p><m>N(A_2)=9\cdot 10 \cdot 1</m>.</p>
-    <p>Since no number ends in both 5 and 0, <m>A_1\cap A_2=\emptyset</m>. Thus, by the addition rule, <me>N(A)=90+90=180.</me></p>
+    <p>Since no number ends in both 5 and 0, <m>A_1\cap A_2=\emptyset</m>. Thus, by the addition rule, <md>N(A)=90+90=180.</md></p>
     
   </example>
 
-  <activity><statement><p>How many 3 digit numbers are divisible by 10?</p></statement></activity>
-  <activity><statement><p>How many 3 digit numbers are divisible by 2?</p></statement></activity>
+  <activity label="addrule-divby10"><statement><p>How many 3 digit numbers are divisible by 10? Explain your answer.</p></statement><response/></activity>
+  <activity label="addrule-divby2"><statement><p>How many 3 digit numbers are divisible by 2? Explain your answer.</p></statement><response/></activity>
 
   <p>It is going to take practice to be able to see when to use the multiplication rule and when to use the addition rule. If you are counting elements of different sets, use addition. If you are counting elements that are constructed in a process (can you determine step 1, step 2, etc?), then use the multiplication rule. Many problems require both rules, as we saw in <xref ref="E_divby5"/>.</p>
 
@@ -28,10 +28,10 @@
 
   <p>If <m>A</m> is finite and <m>B\subseteq A</m>, then <m>N(A-B)=N(A)-N(B)</m>.</p>
 
-  <p>If we want to count the number of elements in <m>A\cup B</m>, we can count those in <m>A</m> and those in <m>B</m>. But every element in the intersection has now been counted twice. so we need to subtract <m>N(A\cap B)</m>. This is the idea behind the Inclusion-Exclusion Rule.</p>
+  <p>If we want to count the number of elements in <m>A\cup B</m>, we can count those in <m>A</m> and those in <m>B</m>. But every element in the intersection has now been counted twice. So we need to subtract <m>N(A\cap B)</m>. This is the idea behind the Inclusion-Exclusion Rule.</p>
 
   <theorem xml:id="T_inclusionexclusion"><title>Inclusion-Exclusion Rule</title><idx>inclusion-exclusion rule</idx><statement><p>Let <m>A, B, C</m> be finite sets.
-    <me>N(A\cup B)=N(A)+N(B)-N(A\cap B).</me>
+    <md>N(A\cup B)=N(A)+N(B)-N(A\cap B).</md>
     <md>
       <mrow>N(A\cup B\cup C)=&amp;N(A)+N(B)+N(C)</mrow>
        <mrow> &amp; -N(A\cap B)-N(A\cap C)-N(B\cap C)</mrow>
@@ -45,27 +45,27 @@
     <p>Let <m>A</m> be the set of multiples of 3. Let <m>B</m> be the set of multiples of 5.</p>
     <p>Then <m>A\cap B</m> is the set of multiples of 3 and 5, so multiples of 15.</p>
 
-    <p>We need a good way to count the multiples of 3. We know they have the form <m>n=3k</m>. Since <m>1\leq n\leq 1000</m>, we have that <m>1\leq 3k \leq 1000</m>. Hence, <m>1/3\leq k\leq 1000/3\approx 333.3</m>. Since <m>k\in \mathbb{Z}</m>, <m>1\leq k\leq 333</m>. Thus, <me>A=\{3k : 1\leq k\leq 333\}.</me></p>
+    <p>We need a good way to count the multiples of 3. We know they have the form <m>n=3k</m>. Since <m>1\leq n\leq 1000</m>, we have that <m>1\leq 3k \leq 1000</m>. Hence, <m>1/3\leq k\leq 1000/3\approx 333.3</m>. Since <m>k\in \mathbb{Z}</m>, <m>1\leq k\leq 333</m>. Thus, <md>A=\{3k : 1\leq k\leq 333\}.</md></p>
 
-    <p>Similarly, since <m>1000/5=200</m>, <me>B=\{5k : 1\leq k \leq 200\}.</me> Since <m>1000/15\approx 66.6</m>,<me>A\cap B=\{15k : 1\leq k \leq 66\}.</me></p>
+    <p>Similarly, since <m>1000/5=200</m>, <md>B=\{5k : 1\leq k \leq 200\}.</md> Since <m>1000/15\approx 66.6</m>,<md>A\cap B=\{15k : 1\leq k \leq 66\}.</md></p>
 
-    <p>By Inclusion-Exclusion, <me>N(A\cup B)=N(A)+N(B)-N(A\cap B)=333+200-66=467.</me></p>
+    <p>By Inclusion-Exclusion, <md>N(A\cup B)=N(A)+N(B)-N(A\cap B)=333+200-66=467.</md></p>
   </example>
 
-  <activity><introduction><p>We want to count the number of integers from 1-50 that are divisible by 3 or 7.</p>
+  <activity label="addrule-div3or7"><introduction><p>We want to count the number of integers from 1-50 that are divisible by 3 or 7.</p>
 </introduction>
-<task><p>How many integers from 1-50 are divisible by 3?</p></task>
-<task><p>How many integers from 1-50 are divisible by 7?</p></task>
-<task><p>What is the number of integers from 1-50 divisible by 3 or 7? You can pretty easily check you answer by writing them all down. Can you use inclusion-exclusion to calculate this?</p></task>
+<task label="addrule-div3or7-3"><statement><p>How many integers from 1-50 are divisible by 3?</p></statement><response/></task>
+<task label="addrule-div3or7-7"><statement><p>How many integers from 1-50 are divisible by 7?</p></statement><response/></task>
+<task label="addrule-div3or7-total"><statement><p>What is the number of integers from 1-50 divisible by 3 or 7? You can pretty easily check you answer by writing them all down. Can you use inclusion-exclusion to calculate this?</p></statement><response/></task>
 </activity>
 
-<activity><introduction><p>We want to count the number of integers from 1-1000 that are divisible by 4, 7 or 9.</p></introduction>
-<task><p>How many integers from 1-1000 are divisible by 4?</p></task>
-<task><p>How many integers from 1-1000 are divisible by 7?</p></task>
-<task><p>How many integers from 1-1000 are divisible by 9?</p></task>
-<task><statement><p>Now calculate the number of integers 1-1000 divisible by 4, 7, or 9 using inclusion-exclusion. What other sets do you need to calculate?</p></statement><hint><p>You'll need the 3 set version of Inclusion-Exclusion</p></hint></task></activity>
+<activity label="addrule-div4or7or9"><introduction><p>We want to count the number of integers from 1-1000 that are divisible by 4, 7 or 9.</p></introduction>
+<task label="addrule-div4or7or9-4"><statement><p>How many integers from 1-1000 are divisible by 4?</p></statement><response/></task>
+<task label="addrule-div4or7or9-7"><statement><p>How many integers from 1-1000 are divisible by 7?</p></statement><response/></task>
+<task label="addrule-div4or7or9-9"><statement><p>How many integers from 1-1000 are divisible by 9?</p></statement><response/></task>
+<task label="addrule-div4or7or9-total"><statement><p>Now calculate the number of integers 1-1000 divisible by 4, 7, or 9 using inclusion-exclusion. What other sets do you need to calculate?</p></statement><response/><hint><p>You'll need the 3 set version of Inclusion-Exclusion</p></hint></task></activity>
 
-<activity><statement><p>How many ways can the word THEORY be arranged if the TH must be next to each other as TH or HT? </p></statement><hint><p>Count the TH words, then the HT words, then figure out which rule you need to find the total.</p></hint></activity>
+<activity label="addrule-THEORY"><statement><p>How many ways can the word THEORY be arranged if the TH must be next to each other as TH or HT? </p></statement><response/><hint><p>Count the TH words, then the HT words, then figure out which rule you need to find the total.</p></hint></activity>
 
   <example xml:id="E_inclexcldrugs"><title>Inclusion-Exclusion: Drug Study</title>
   <p>Suppose a study was done with three drugs, A, B and C. A total of 50 subjects used all three drugs. They reported which drugs made them feel better, with the following results:
@@ -81,14 +81,14 @@
 Some of the subjects who had relief from, say, A, might also have had relief from another drug. So some of the 21 who reported feeling better with A, may also be included in the count of the 9 who felt better with A and B.
 </p>
 <p>How many had relief from none of the drugs?</p>
-<answer><m>50-41=9</m></answer>
+<answer><p><m>50-41=9</m></p></answer>
 
 <p>How many had relief from all three of the drugs?</p>
 <p>We need to calculate <m>N(A\cap B\cap C)</m>, which we can find by rewriting the Inclusion-Exclusion Rule:
 <md>
   <mrow>N(A\cap B\cap C)=&amp;N(A\cup B\cup C)-N(A)-N(B)-N(C)</mrow>
    <mrow>&amp; +N(A\cap B)+N(A\cap C)+N(B\cap C).</mrow></md></p>
-<answer><m>41-21-21-31+9+14+15=6</m></answer>
+<answer><p><m>41-21-21-31+9+14+15=6</m></p></answer>
 </example>
 
 
@@ -121,7 +121,7 @@ Some of the subjects who had relief from, say, A, might also have had relief fro
     </condition>
     </var>
   </setup>
-      <answer><m>1(10)(10)+1(10)(10)=200</m></answer></exercise>
+      <answer><p><m>1(10)(10)+1(10)(10)=200</m></p></answer></exercise>
 
       <exercise label="DMT_addrule_CYU_3de12"><statement><p>How many 3 digit numbers end with 1 or end with 2? <var /></p></statement>
       <setup>
@@ -149,7 +149,7 @@ Some of the subjects who had relief from, say, A, might also have had relief fro
     </condition>
     </var>
   </setup>
-      <answer><m>9(10)(1)+9(10)(1)=180</m></answer></exercise>
+      <answer><p><m>9(10)(1)+9(10)(1)=180</m></p></answer></exercise>
 
       <exercise label="DMT_addrule_CYU_3db1ore2"><statement><p>How many 3 digit numbers begin with 1 or end with a 2? <var /></p></statement>
       <setup>
@@ -177,7 +177,7 @@ Some of the subjects who had relief from, say, A, might also have had relief fro
     </condition>
     </var>
   </setup>
-      <answer><m>(1)(10)(10)+9(10)(1)-1(10)(1)=180</m></answer></exercise>
+      <answer><p><m>(1)(10)(10)+9(10)(1)-1(10)(1)=180</m></p></answer></exercise>
 
        <exercise label="DMT_addrule_CYU_3db12ore234"><statement><p>How many 3 digit numbers begin with 1 or 2 or end with 2, 3, or 4? <var /></p></statement>
         <setup>
@@ -205,7 +205,7 @@ Some of the subjects who had relief from, say, A, might also have had relief fro
     </condition>
     </var>
   </setup>
-      <answer><m>(2)(10)(10)+9(10)(3)-2(10)(3)=410</m></answer></exercise>
+      <answer><p><m>(2)(10)(10)+9(10)(3)-2(10)(3)=410</m></p></answer></exercise>
 
       <exercise label="DMT_addrule_CYU_mult3or5"><statement><p>How many integers from 1 to 2500 are multiples of 3 or multiples of 5? <var /></p></statement>
       <setup>
@@ -233,7 +233,7 @@ Some of the subjects who had relief from, say, A, might also have had relief fro
     </condition>
     </var>
   </setup>
-      <answer><m>833+500-166=1167</m></answer></exercise>
+      <answer><p><m>833+500-166=1167</m></p></answer></exercise>
 
       <exercise label="DMT_addrule_CYU_mult2or7"><statement><p>How many integers from 1 to 2500 are multiples of 2 or multiples of 7? <var /></p></statement>
       <setup>
@@ -261,7 +261,7 @@ Some of the subjects who had relief from, say, A, might also have had relief fro
     </condition>
     </var>
   </setup>
-      <answer><m>1250+357-178=1429</m></answer></exercise>
+      <answer><p><m>1250+357-178=1429</m></p></answer></exercise>
 
       
 
@@ -281,7 +281,7 @@ Some of the subjects who had relief from, say, A, might also have had relief fro
       <exercise><statement>
       <p>
     The hexadecimal numbers are constructed using 16 digits: 0-9, A, B, C, D, E, F. </p>
-    <ol marker="a">
+    <ol marker="a.">
       <li><p>How many strings of hexadecimal digits consist of from one through three digits?
   </p>
     </li>
@@ -294,7 +294,7 @@ Some of the subjects who had relief from, say, A, might also have had relief fro
       </statement></exercise>
       <exercise><statement>
         <p>Consider the integers 1-999.</p>
-        <ol marker="a">
+        <ol marker="a.">
           <li>
       <p>
     How many integers from 1 through 999 do not have any repeated digits?
@@ -315,7 +315,7 @@ Some of the subjects who had relief from, say, A, might also have had relief fro
       </statement></exercise>
       <exercise><statement>
         <p>Consider all five digit integers, 10,000-99,999.</p>
-        <ol marker="a">
+        <ol marker="a.">
           <li>
       <p>
     How many five-digit integers are divisible by 5?
@@ -361,7 +361,7 @@ Some of the subjects who had relief from, say, A, might also have had relief fro
   </ol>
       </statement></exercise>
       <exercise><statement><p>Consider the letters in the word <m>QUICK</m>.</p>
-      <ol marker="a">
+      <ol marker="a.">
     <li>
       <p>
     How many ways can the letters of the word <m>QUICK</m> be arranged in a row?
@@ -382,7 +382,7 @@ Some of the subjects who had relief from, say, A, might also have had relief fro
 
   </ol></statement></exercise>
       <exercise><statement><p>Assume any seven digits can be used to form a telephone number.</p>
-      <ol marker="a">
+      <ol marker="a.">
     <li>
       <p>
     How many seven-digit telephone numbers would not have any repeated digits?
@@ -407,7 +407,7 @@ Some of the subjects who had relief from, say, A, might also have had relief fro
     A college conducted a survey to explore the academic interests and achievements of its students. It asked students to place checks beside the numbers of all statements that were true of them. Statement #1 was <q>I was on the honor roll last term.</q> Statement #2 was <q>I belong to an academic club.</q> Statement #3 was <q>I am majoring in at least two subjects.</q> Out of a sample of 100 students, 28 checked #1, 26 checked #2, and 14 checked #3, 18 checked both #1 and #2, 4 checked both #1 and #3, 3 checked both #2 and #3, and 2 checked all three. Note that some of the students who checked #1 (or #2 or #3) may have also checked other numbers.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     How many of the students checked at least one of the statements?

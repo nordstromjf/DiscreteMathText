@@ -24,12 +24,22 @@
 
   </example>
 
-  <activity><introduction><p>Determine if the following congruences are true or false.</p></introduction>
-<task><p><m>12\equiv 0 \mod 6</m></p></task>
-<task><p><m>0\equiv 12 \mod 6</m></p></task>
-<task><p><m>12\equiv 5 \mod 7</m></p></task>
-<task><p><m>-5\equiv 5 \mod 6</m></p></task>
-<task><p><m>-1\equiv 7 \mod 8</m></p></task>
+  <activity label="mod-TF"><statement><p>Determine if the following congruences are true or false.</p></statement>
+  <cardsort>
+   
+  <match>
+    <premise><p><m>12\equiv 0 \mod 6</m></p></premise>
+    <premise><p><m>0\equiv 12 \mod 6</m></p></premise>
+    <premise><p><m>12\equiv 5 \mod 7</m></p></premise>
+    <premise><p><m>-1\equiv 7 \mod 8</m></p></premise>
+   <response><p>True</p></response> 
+  </match>
+  <match>
+    <premise><p><m>-5\equiv 5 \mod 6</m></p></premise>
+   <response><p>False</p></response> 
+  </match>
+
+</cardsort>
 
 </activity>
 
@@ -57,9 +67,20 @@
     <p>Now assume <m>a</m> and <m>b</m> have the same remainder when divided by <m>n</m>. By the Quotient-Remainder Theorem, <m>a=qn+r</m> and <m>b=q'n+r</m>. Substituting in for <m>r</m>, <m>a=qn+b-q'n=b+(q-q')n</m>. Since <m>(q-q')\in \mathbb{Z}</m>, let <m>k=q-q'</m>.</p>
   </proof>
 
-  <activity xml:id="A_Thm1imp3"><statement><p>Prove part (1) of <xref ref="T_modequvalences" /> implies part (3).</p></statement></activity>
+  <activity xml:id="A_Thm1imp3" label="mod-pf1imp3"><statement><p>Prove part (1) of <xref ref="T_modequvalences" /> implies part (3). In particular, prove if <m>n\mid a-b</m>, then <m>a=b+kn</m> for some <m>k\in \mathbb{Z}</m>.</p></statement>
+  <blocks>
+    <block><p>Assume <m>n\mid a-b</m>.</p></block>
+    <block><p><m>a-b=kn</m> for some <m>k\in \mathbb{Z}</m>.</p></block>
+    <block><p><m>a=b+kn</m> for some <m>k\in \mathbb{Z}</m>.</p></block>
 
-  <activity xml:id="A_Thm3imp1"><statement><p>Prove part (3) of <xref ref="T_modequvalences" /> implies part (1).</p></statement></activity>
+    <block correct="no"><p>Assume <m>a=b+kn</m> for some <m>k\in \mathbb{Z}</m>.</p></block>
+    <block correct="no"><p><m>b=a+kn</m> for some <m>k\in \mathbb{Z}</m>.</p></block>
+    <block correct="no"><p><m>n=(a-b)k</m> for some <m>k\in \mathbb{Z}</m>.</p></block>
+  </blocks>
+
+</activity>
+
+  <activity xml:id="A_Thm3imp1" label="mod-pf3imp1"><statement><p>Prove part (3) of <xref ref="T_modequvalences" /> implies part (1). In particular, prove if <m>a=b+kn</m> for some <m>k\in \mathbb{Z}</m>, then <m>n\mid a-b</m>.</p></statement><response/></activity>
 
   <defintion xml:id="D_residue"><statement><p>The <term>residue of <m>a</m> modulo <m>n</m></term><idx>residue</idx> is the remainder when <m>a</m> is divided by <m>n</m>. The set <m>\{0, 1, \ldots, n-1\}</m> forms a <term>complete set of residues mod <m>n</m></term><idx>complete set of residues</idx>.</p></statement></defintion>
 
@@ -69,7 +90,7 @@
 
   <p>For the proof, see <xref ref="X_modn"/>.</p>
 
-  <activity><statement><p>Find the equivalence classes for congruence mod 5. List several elements of each equivalence class. What do the elements of each congruence class look like? </p></statement><hint><p>Think about remainders.</p></hint></activity>
+  <activity label="mod-classmod5"><statement><p>Find the equivalence classes for congruence mod 5. List several elements of each equivalence class. What do the elements of each congruence class look like? </p></statement><response/><hint><p>Think about remainders.</p></hint></activity>
 
 <p><term>Modular arithmetic</term><idx>modular arithmetic</idx> is just the process of adding, subtracting, and multiplying, where we treat integers with the same remainder mod <m>n</m>, as equivalent. Thus, we can replace any integer with it's remainder.</p>
 
@@ -89,22 +110,22 @@
 <example xml:id="E_modarith"><title>Modular Arithmetic</title>
 <p>Use modular arithmetic to find </p>
 <p><m>10+25 \mod 6</m>.</p>
-<answer><m>10\equiv 4 \mod 6, 25\equiv 1\mod 6</m>, so <m>10+25\equiv 4+1\equiv 5 \mod 6</m></answer>
+<answer><p><m>10\equiv 4 \mod 6, 25\equiv 1\mod 6</m>, so <m>10+25\equiv 4+1\equiv 5 \mod 6</m></p></answer>
 <p><m>10\cdot 25 \mod 6</m>.</p>
-<answer><m>10\cdot 25\equiv 4\cdot 1\equiv 4 \mod 6</m></answer>
+<answer><p><m>10\cdot 25\equiv 4\cdot 1\equiv 4 \mod 6</m></p></answer>
 
 <p><m>25^{15} \mod 6</m>.</p>
-<answer><m>25\equiv 1\mod 6</m>, so <m>25^{15}\equiv 1^{15}\equiv 1 \mod 6</m></answer>
+<answer><p><m>25\equiv 1\mod 6</m>, so <m>25^{15}\equiv 1^{15}\equiv 1 \mod 6</m></p></answer>
 </example>
 
-<activity><statement><p>Find <m>(31+92) \mod 5</m> by first reducing 31 and 92 mod 5, then adding.</p></statement></activity>
+<activity label="mod-sum"><statement><p>Find <m>(31+92) \mod 5</m> by first reducing 31 and 92 mod 5, then adding.</p></statement><response/></activity>
 
-<activity><statement><p>Find <m>(56)^{21} \mod 5</m> by first reducing 56 mod 5, then raising to 21.</p></statement></activity>
+<activity label="mod-power"><statement><p>Find <m>(56)^{21} \mod 5</m> by first reducing 56 mod 5, then raising to 21.</p></statement><response/></activity>
 
-<activity xml:id="A_decimalexpan"><introduction><p>We can write integers using their decimal expansion. For example, we can write 592 as a decimal expansion: <m>(5\times 100)+(9\times 10)+2=5\times 10^2+9\times 10^1+2\times 10^0</m>.</p></introduction>
-<task><p>Write 1526 as a similar expansion using powers of 10.</p></task>
-<task><p>Find 10 mod 9 and <m>10^n</m> mod 9 for any <m>n\in \mathbb{Z}, n\geq 0</m>. </p></task>
-<task><p>Use the decimal expansion and (b) find (592 mod 9) and (1526 mod 9).</p></task></activity>
+<activity xml:id="A_decimalexpan" label="mod-decimal"><introduction><p>We can write integers using their decimal expansion. For example, we can write 592 as a decimal expansion: <m>(5\times 100)+(9\times 10)+2=5\times 10^2+9\times 10^1+2\times 10^0</m>.</p></introduction>
+<task label="mod-decimal-decex"><statement><p>Write 1526 as a similar expansion using powers of 10.</p></statement><response/></task>
+<task label="mod-decimal-power"><statement><p>Find 10 mod 9 and <m>10^n</m> mod 9 for any <m>n\in \mathbb{Z}, n\geq 0</m>. </p></statement><response/></task>
+<task label="mod-decimal-mod9"><statement><p>Use the decimal expansion and (b) find (592 mod 9) and (1526 mod 9).</p></statement><response/></task></activity>
 
 <p>If we are doing modular arithmetic we often work directly with the equivalence classes, rather than all of the integers.</p>
 
@@ -117,44 +138,44 @@
 
   
       <exercise label="DMT_mod_CYU_47equiv2mod5"><statement correct="yes"><p>True or false: <m>47\equiv 2\mod 5</m>.</p></statement>
-     <answer>True</answer></exercise>
+     <answer><p>True</p></answer></exercise>
 
 
       <exercise label="DMT_mod_CYU_45equiv0mod5"><statement correct="yes"><p>True or false: <m>45\equiv 0\mod 5</m>.</p></statement>
-     <answer>True</answer></exercise>
+     <answer><p>True</p></answer></exercise>
 
      <exercise label="DMT_mod_CYU_4equivn1mod5"><statement correct="yes"><p>True or false: <m>4\equiv -1\mod 5</m>.</p></statement>
-     <answer>True</answer></exercise>
+     <answer><p>True</p></answer></exercise>
 
      <exercise label="DMT_mod_CYU_14equiv1mod5"><statement correct="no"><p>True or false: <m>14\equiv 1\mod 5</m>.</p></statement>
-     <answer>False</answer></exercise>
+     <answer><p>False</p></answer></exercise>
 
      <exercise label="DMT_mod_CYU_47p45equiv2mod5"><statement correct="yes"><p>True or false: <m>47+45\equiv 2\mod 5</m>.</p></statement>
-     <answer>True</answer></exercise>
+     <answer><p>True</p></answer></exercise>
 
      <exercise label="DMT_mod_CYU_47tt2equiv4mod5"><statement correct="yes"><p>True or false: <m>(47)^2\equiv 4\mod 5</m>.</p></statement>
-     <answer>True</answer></exercise>
+     <answer><p>True</p></answer></exercise>
 
      <exercise label="DMT_mod_CYU_4tt500equiv1mod5"><statement correct="yes"><p>True or false: <m>4^{500}\equiv 1\mod 5</m>.</p></statement>
-     <answer>True</answer></exercise>
+     <answer><p>True</p></answer></exercise>
 
      <exercise label="DMT_mod_CYU_10equiv1mod9"><statement correct="yes"><p>True or false: <m>10\equiv 1\mod 9</m>.</p></statement>
-     <answer>True</answer></exercise>
+     <answer><p>True</p></answer></exercise>
 
      <exercise label="DMT_mod_CYU_10tt2equiv1mod9"><statement correct="yes"><p>True or false: <m>10^2\equiv 1\mod 9</m>.</p></statement>
-     <answer>True</answer></exercise>
+     <answer><p>True</p></answer></exercise>
 
      <exercise label="DMT_mod_CYU_10tt5equiv1mod9"><statement correct="yes"><p>True or false: <m>10^5\equiv 1\mod 9</m>.</p></statement>
-     <answer>True</answer></exercise>
+     <answer><p>True</p></answer></exercise>
 
      <exercise label="DMT_mod_CYU_10ttnequiv1mod9"><statement correct="yes"><p>True or false: <m>10^n\equiv 1\mod 9</m>.</p></statement>
-     <answer>True</answer></exercise>
+     <answer><p>True</p></answer></exercise>
 
 
       <exercise label="DMT_mod_CYU_equivclassmod5"><statement><p>Give the equivalence classes for  <m>a\equiv b \mod 5</m>.</p></statement>
       <response />
       <hint><p>There should be 5 equivalence classes. You only need to give a representative for each class in the form <m>[a]</m>.</p></hint>
-      <answer><m>[0], [1], [2], [3], [4]</m></answer></exercise>
+      <answer><p><m>[0], [1], [2], [3], [4]</m></p></answer></exercise>
 
       
     
@@ -167,7 +188,7 @@
     Let <m>a=25</m> and <m>b=19</m>.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     Use the definition of congruence modulo 3 to explain why <m>25\equiv 19 \mod 3</m>.
@@ -193,7 +214,7 @@
     Determine if the following are true or false.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     <m>58\equiv 14</m> mod <m>11</m>.
@@ -225,7 +246,7 @@
     Verify the following statements by simplifying each expression and using the definition of congruence mod 7.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     <m>128\equiv 2 \mod 7</m> and <m>61\equiv 5 \mod 7</m>

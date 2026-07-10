@@ -1,7 +1,7 @@
 <section xml:id="onetooneonto7-2">
   <title>One-to-One, Onto, Inverse Functions</title><idx>one-to-one function</idx><idx>onto function</idx><idx><h>inverse</h><h>function</h></idx><idx><h>function</h><h>one-to-one</h></idx><idx><h>function</h><h>onto</h></idx>
 
-  <p>In this section we will look at specific properties of functions. We will learn how to prove a function is one-to-one and/or onto its codomain. These properies are important as they are the exact properties we need in order for a function to have an inverse function.</p>
+  <p>In this section we will look at specific properties of functions. We will learn how to prove a function is one-to-one and/or onto its codomain. These properties are important as they are the exact properties we need in order for a function to have an inverse function.</p>
 
   <definition xml:id="D_onetoone"><statement><p>A function, <m>f:X\rightarrow Y</m>, is <term>one-to-one</term><idx>one-to-one function</idx> or <term>injective</term> if for all <m>x_1, x_2\in X</m>, if <m>f(x_1)=f(x_2)</m> then <m>x_1=x_2</m>.</p>
   </statement></definition>
@@ -30,9 +30,9 @@
   
   <figure xml:id="F_arrowdiagnotonetoone">
   <caption>A function which is not one-to-one </caption>
-  <image width="10%" xml:id="adnotonetoone">
+  <image width="15%" xml:id="adnotonetoone">
     <latex-image>
-  \begin{tikzpicture}[node distance = 1cm, thick]% 
+  \begin{tikzpicture}[node distance = 0.3cm, thin]% 
 %ontonotonetoone
         \node (1) {$a$};
         \node (2) [below=of 1] {$b$};
@@ -52,9 +52,9 @@
 
 
 
-</latex-image></image>
+</latex-image><description><p>A set labeled <m>X</m> on the left consisting of elements <m>a, b, c, d</m>. A set <m>Y</m> on the right consisting of elements <m>0, 1, 2</m>. There is an arrow from <m>a</m> to <m>1</m>, an arrow from <m>b</m> to <m>0</m>, an arrow from <m>c</m> to <m>2</m>, and an arrow from <m>d</m> to <m>2</m>.</p></description></image>
 </figure>
-<p>The function given in <xref ref="F_arrowdiagnotonetoone"/> in not one-to-one since <m>c</m> and <m>d</m> both map to the same value in <m>Y</m>.</p>
+<p>The function given in <xref ref="F_arrowdiagnotonetoone"/> is not one-to-one since <m>c</m> and <m>d</m> both map to the same value in <m>Y</m>.</p>
 </example>
 
 
@@ -104,9 +104,9 @@
   
   <figure xml:id="F_arrowdiagnotonto">
   <caption>A function which is not onto <m>Y</m> </caption>
-  <image width="10%" xml:id="adnotonto">
+  <image width="15%" xml:id="adnotonto">
     <latex-image>
-  \begin{tikzpicture}[node distance = 1cm, thick]% 
+  \begin{tikzpicture}[node distance = 0.3cm, thin]% 
 %onetoonenotonto
         \node (1) {$a$};
         \node (2) [below=of 1] {$b$};
@@ -126,9 +126,9 @@
 
 
 
-</latex-image></image>
+</latex-image><description><p>A set labeled <m>X</m> on the left consisting of elements <m>a, b, c</m>. A set <m>Y</m> on the right consisting of elements <m>0, 1, 2, 3</m>. There is an arrow from <m>a</m> to <m>1</m>, an arrow from <m>b</m> to <m>0</m>, and an arrow from <m>c</m> to <m>3</m>.</p></description></image>
 </figure>
-<p>The function given in <xref ref="F_arrowdiagnotonto"/> in not onto <m>Y</m> since 2 is not mapped to by any value in <m>X</m>.</p>
+<p>The function given in <xref ref="F_arrowdiagnotonto"/> is not onto <m>Y</m> since 2 is not mapped to by any value in <m>X</m>.</p>
 </example>
 
 
@@ -138,7 +138,7 @@
       <p>Let <m>y\in\mathbb{R}</m>. </p>
       <p>[Scratchwork: we want to find <m>x</m> so that <m>f(x)=y</m>. So we want <m>3x+2=y</m>, or <m>x=\frac{y-2}{3}</m>.]</p>
       <p>Let <m>x=\frac{y-2}{3}</m>. Then since <m>y\in \mathbb{R}, x\in\mathbb{R}</m>. Furthermore, 
-      <me>f(x)=f(\frac{y-2}{3})=3(\frac{y-2}{3})+2=y-2+2=y, </me>
+      <md>f(x)=f(\frac{y-2}{3})=3(\frac{y-2}{3})+2=y-2+2=y, </md>
       which is what we wanted to show.</p>
     </proof>
  </example>
@@ -183,7 +183,7 @@
 
  <p>We showed in the above examples that <m>f:\mathbb{R}\rightarrow\mathbb{R}</m> given by <m>f(x)=3x+2</m> is one-to-one and onto <m>\mathbb{R}</m>. Thus, it is an example of a one-to-one correspondence.</p>
 
- <theorem xml:id="T_inverse"><statement><p>If <m>f:X\rightarrow Y</m> is a one-to-one correspondence, then there exists a function <m>f^{-1}:Y\rightarrow X</m> such that <me>f^{-1}(y)=x\Leftrightarrow f(x)=y.</me><idx><h>function</h><h>inverse</h></idx><notation><usage><m>f^{-1}(x)</m></usage><description>the inverse of function <m>f</m></description></notation></p>
+ <theorem xml:id="T_inverse"><statement><p>If <m>f:X\rightarrow Y</m> is a one-to-one correspondence, then there exists a function <m>f^{-1}:Y\rightarrow X</m> such that <md>f^{-1}(y)=x\Leftrightarrow f(x)=y.</md><idx><h>function</h><h>inverse</h></idx><notation><usage><m>f^{-1}(x)</m></usage><description>the inverse of function <m>f</m></description></notation></p>
 </statement></theorem>
 
 <p>If it exists, we say <m>f^{-1}</m> is the <term>inverse</term><idx>inverse function</idx> of <m>f</m>.</p>
@@ -211,40 +211,40 @@
       <title>Check Your Understanding</title>
       
       <exercise label="DMT_1to1_CYU_1to1R5xm2"><statement correct="yes"><p>True or false: <m>f:\mathbb{R}\rightarrow \mathbb{R}, f(x)=5x-2</m> is one-to-one.</p></statement>
-      <answer>True</answer></exercise>
+      <answer><p>True</p></answer></exercise>
 
       <exercise label="DMT_1to1_CYU_ontoR5xm2"><statement correct="yes"><p>True or false: <m>f:\mathbb{R}\rightarrow \mathbb{R}, f(x)=5x-2</m> is onto <m>\mathbb{R}</m>.</p></statement>
-      <answer>True</answer></exercise>
+      <answer><p>True</p></answer></exercise>
 
       <exercise label="DMT_1to1_CYU_1to1Z5xm2"><statement correct="yes"><p>True or false: <m>f:\mathbb{Z}\rightarrow \mathbb{Z}, f(x)=5x-2</m> is one-to-one.</p></statement>
-      <answer>True</answer></exercise>
+      <answer><p>True</p></answer></exercise>
 
       <exercise label="DMT_1to1_CYU_ontoZ5xm2"><statement correct="no"><p>True or false: <m>f:\mathbb{Z}\rightarrow \mathbb{Z}, f(x)=5x-2</m> is onto <m>\mathbb{Z}</m>.</p></statement>
-      <answer>False</answer></exercise>
+      <answer><p>False</p></answer></exercise>
 
       <exercise label="DMT_1to1_CYU_1to1Rx3m3"><statement correct="yes"><p>True or false: <m>f:\mathbb{R}\rightarrow \mathbb{R}, f(x)=x^3-3</m> is one-to-one.</p></statement>
-      <answer>True</answer></exercise>
+      <answer><p>True</p></answer></exercise>
 
       <exercise label="DMT_1to1_CYU_ontoRx3m3"><statement correct="yes"><p>True or false: <m>f:\mathbb{R}\rightarrow \mathbb{R}, f(x)=x^3-3</m> is onto <m>\mathbb{R}</m>.</p></statement>
-      <answer>True</answer></exercise>
+      <answer><p>True</p></answer></exercise>
 
       <exercise label="DMT_1to1_CYU_1to1Zx3m3"><statement correct="yes"><p>True or false: <m>f:\mathbb{Z}\rightarrow \mathbb{Z}, f(x)=x^3-3</m> is one-to-one.</p></statement>
-      <answer>True</answer></exercise>
+      <answer><p>True</p></answer></exercise>
 
       <exercise label="DMT_1to1_CYU_ontoZx3m3"><statement correct="no"><p>True or false: <m>f:\mathbb{Z}\rightarrow \mathbb{Z}, f(x)=x^3-3</m> is onto <m>\mathbb{Z}</m>.</p></statement>
-      <answer>False</answer></exercise>
+      <answer><p>False</p></answer></exercise>
 
       <exercise label="DMT_1to1_CYU_1to1ZZx"><statement correct="no"><p>True or false: <m>f:\mathbb{Z}\times\mathbb{Z}\rightarrow \mathbb{Z}, f(x, y)=x</m> is one-to-one.</p></statement>
-      <answer>False</answer></exercise>
+      <answer><p>False</p></answer></exercise>
 
       <exercise label="DMT_1to1_CYU_ontoZZx"><statement correct="yes"><p>True or false: <m>f:\mathbb{Z}\times\mathbb{Z}\rightarrow \mathbb{Z}, f(x, y)=x</m> is onto <m>\mathbb{Z}</m>.</p></statement>
-      <answer>True</answer></exercise>
+      <answer><p>True</p></answer></exercise>
 
       <exercise label="DMT_1to1_CYU_1to1ZZyx"><statement correct="yes"><p>True or false: <m>f:\mathbb{Z}\times\mathbb{Z}\rightarrow \mathbb{Z}\times\mathbb{Z}, f(x, y)=(y, x)</m> is one-to-one.</p></statement>
-      <answer>True</answer></exercise>
+      <answer><p>True</p></answer></exercise>
 
       <exercise label="DMT_1to1_CYU_ontoZZyx"><statement correct="yes"><p>True or false: <m>f:\mathbb{Z}\times\mathbb{Z}\rightarrow \mathbb{Z}\times\mathbb{Z}, f(x, y)=(y, x)</m> is onto <m>\mathbb{Z}\times\mathbb{Z}</m>.</p></statement>
-      <answer>True</answer></exercise>
+      <answer><p>True</p></answer></exercise>
 
       
 
@@ -262,7 +262,7 @@
     All but two of the following are correct ways to express the fact that a function <m>f</m> is onto. Find the two that are incorrect.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     <m>f</m> is onto if and only if every element in its codomain is the image of some element in its domain.
@@ -300,7 +300,7 @@
     Let <m>X=\{1, 5, 9\}</m> and <m>Y=\{3, 4, 7\}</m>.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     Define <m>f:X\rightarrow Y</m> by specifying that <m>f(1)=4, f(5)=7, f(9)=4</m>.
@@ -328,7 +328,7 @@
     Let <m>X=\{1, 2, 3\}</m>, <m>Y=\{1, 2, 3, 4\}</m> and <m>Z=\{1, 2\}</m>.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     Define a function <m>f:X\rightarrow Y</m> that is one-to-one but not onto.
@@ -360,7 +360,7 @@
     Define <m>f:\mathbb{Z}\rightarrow\mathbb{Z}</m> by <m>f(n)=4n-5</m>.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     Prove or disprove <m>f</m> is one-to-one.
@@ -380,7 +380,7 @@
     Define <m>g:\mathbb{R}\rightarrow\mathbb{R}</m> by <m>g(x)=4x-5</m>.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     Prove or disprove <m>g</m> is one-to-one.
@@ -404,7 +404,7 @@
     <m>F(A)=</m> the number of elements in <m>A</m>.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     Prove or disprove <m>F</m> is one-to-one.
@@ -428,7 +428,7 @@
     <m>G(x, y)=(2y, -x)</m>.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     Prove or disprove <m>G</m> is one-to-one.
@@ -452,7 +452,7 @@
     <m>H(x, y)=(x+1, 2-y)</m>.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     Prove or disprove <m>H</m> is one-to-one.

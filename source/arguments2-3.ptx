@@ -31,7 +31,7 @@
       <row bottom="medium"><cell><m>p\wedge q</m></cell></row>
       <row><cell><m>\therefore\ </m><m>p</m></cell></row>
     </tabular>
-    We construct a truth-table with a columnn for each premise and conclusion.
+    We construct a truth-table with a column for each premise and conclusion.
     <table xml:id="T_validarg">
     <!--<title>Truth-table for <m>p\rightarrow q</m>.</title>-->
     <tabular top="minor" left="minor">
@@ -73,7 +73,7 @@
 
   </table></p>
 
-  <p>Since we are looking for where the premise is true, we only need to look at the first row (in bold). In this case, the conclusion is also true. Thus, whenever to premises are true the conclusion must be true. Hence, the argument is valid.</p>
+  <p>Since we are looking for where the premise is true, we only need to look at the first row (in bold). In this case, the conclusion is also true. Thus, whenever the premises are true the conclusion must be true. Hence, the argument is valid.</p>
 </example>
 
 <example xml:id="E_invalidarg"><title>Invalid Argument</title><p>
@@ -127,25 +127,25 @@
   <p>The first three rows all have true premises. However, in the case that <m>p</m> is false and <m>q</m> is true, the premise is true while the conclusion is false. Thus, it is possible to have true premises and a false conclusion. Hence, the argument is invalid.</p>
 </example>
 
-<activity><statement><p>Use a truth-table to determine if the following argument is valid or invalid.
+<activity label="valid-contra"><statement><p>Use a truth-table to determine if the following argument is valid or invalid.
 
   <tabular>
       <row><cell><m>p\rightarrow q</m></cell></row>
       <row bottom="medium"><cell><m>\sim q</m></cell></row>
       <row><cell><m>\therefore\ </m><m>\sim p</m></cell></row>
     </tabular>
-</p></statement></activity>
+</p></statement><response/></activity>
 
-<activity><statement><p>Use a truth-table to determine if the following argument is valid or invalid.
+<activity label="valid-inverse"><statement><p>Use a truth-table to determine if the following argument is valid or invalid.
 
   <tabular>
       <row><cell><m>p\rightarrow q</m></cell></row>
       <row bottom="medium"><cell><m>\sim p</m></cell></row>
       <row><cell><m>\therefore\ </m><m>\sim q</m></cell></row>
     </tabular>
-</p></statement></activity>
+</p></statement><response/></activity>
 
-<activity><statement><p>Use a truth-table to determine if the following argument is valid or invalid.
+<activity label="valid-3var"><statement><p>Use a truth-table to determine if the following argument is valid or invalid.
 
   <tabular>
       <row><cell><m>p\ \vee q</m></cell></row>
@@ -153,7 +153,7 @@
       <row bottom="medium"><cell><m>q\rightarrow r</m></cell></row>
       <row><cell><m>\therefore\ </m><m>r</m></cell></row>
     </tabular>
-</p></statement></activity>
+</p></statement><response/></activity>
 
 <example xml:id="E_argsentences"><title>An Argument with False Premises and False Conclusion</title>
   <p>Let's look at a more specific example:</p>
@@ -164,13 +164,13 @@
   <p>Although the two statements are false, the argument is still valid. It has the form of <xref ref="E_validarg"/>, which we determined was valid. But if we think about the definition of validity, we should be able to see that it would be impossible to have the premise be true while the conclusion is false.</p>
 </example>
 
-<activity xml:id="A_possibleforms"><introduction><p>If possible, give an example of an argument (in sentences, not variables) that meets the given criteria. If it is not possible, just state that it is not possible.</p></introduction>
-<task><p>A valid argument that has false premises and a true conclusion.</p></task>
-<task><p>An invalid argument that has false premises and a true conclusion.</p></task>
-<task><p>A valid argument that has true premises and a true conclusion.</p></task>
-<task><p>An invalid argument that has true premises and a true conclusion.</p></task>
-<task><p>A valid argument that has true premises and a false conclusion.</p></task>
-<task><p>An invalid argument that has true premises and a false conclusion.</p></task>
+<activity xml:id="A_possibleforms" label="valid-examples"><introduction><p>If possible, give an example of an argument (in sentences, not variables) that meets the given criteria. If it is not possible, just state that it is not possible.</p></introduction>
+<task label="valid-examples-VFT"><statement><p>A valid argument that has false premises and a true conclusion.</p></statement><response/></task>
+<task label="valid-examples-IFT"><statement><p>An invalid argument that has false premises and a true conclusion.</p></statement><response/></task>
+<task label="valid-examples-VTT"><statement><p>A valid argument that has true premises and a true conclusion.</p></statement><response/></task>
+<task label="valid-examples-ITT"><statement><p>An invalid argument that has true premises and a true conclusion.</p></statement><response/></task>
+<task label="valid-examples-VTF"><statement><p>A valid argument that has true premises and a false conclusion.</p></statement><response/></task>
+<task label="valid-examples-ITF"><statement><p>An invalid argument that has true premises and a false conclusion.</p></statement><response/></task>
 </activity>
 
 <assemblage xml:id="B_commonvalid">
@@ -323,7 +323,7 @@
   </definition>
 <p>Since a valid argument cannot have true premises and a false conclusion, if the premises are actually true, then the argument must have a true conclusion. Note, soundness of an argument <em>does</em> depend on the actual content of the statements.</p>
 
-<activity><statement><p>Which or your arguments in <xref ref="A_possibleforms"/> are sound?</p></statement></activity>
+<activity label="valid-examples-sound"><statement><p>Which of your arguments in <xref ref="A_possibleforms"/> are sound?</p></statement><response/></activity>
 
     <reading-questions>
       <title>Check Your Understanding</title>
@@ -337,11 +337,11 @@
               <col halign="center" right="minor"/>
               <col halign="center" right="minor"/>
               <row bottom="medium">
-              <cell><m>p</m></cell>
-              <cell><m>q</m></cell>
-              <cell><m>p\rightarrow q</m></cell>
-              <cell><m>q</m></cell>
-              <cell><m>p</m></cell>
+              <cell><m>\ p\ </m></cell>
+              <cell><m>\ q\ </m></cell>
+              <cell><m>\ p\rightarrow q\ </m></cell>
+              <cell><m>\ q\ </m></cell>
+              <cell><m>\ p\ </m></cell>
             </row>
             <row bottom="minor">
               <cell>T</cell>
@@ -391,7 +391,7 @@
         <feedback><p>To be invalid, you want to look for true premises.</p></feedback>
       </choice>
     </choices>
-      <answer>
+      <answer><p>
       <tabular top="minor" left="minor">
               <col halign="center" right="minor"/>
               <col halign="center" right="medium"/>
@@ -433,7 +433,7 @@
               <cell>F</cell>
               <cell>F</cell>
             </row>
-    </tabular>
+    </tabular></p>
     <p>We can see in the third row we have true premises and a false conclusion. Thus it is invalid.</p></answer></exercise>
 
 <exercise label="DMT_valid_CYU_validornot"><statement><p>Use a truth-table to determine if the following argument is valid or invalid.</p>
@@ -450,7 +450,7 @@
       <choice><statement><p>I am unable to determine if the argument is valid or invalid.</p></statement>
       <feedback><p>In the truth-table look for all rows in which all the premises are true. Is is possible to have a false conclusion (invalid), or must the conclusion be true (valid)?</p></feedback></choice>
     </choices>
-      <answer>
+      <answer><p>
       <tabular top="minor" left="minor">
               <col halign="center" right="minor"/>
               <col halign="center" right="medium"/>
@@ -492,13 +492,13 @@
               <cell>T</cell>
               <cell>F</cell>
             </row>
-    </tabular>
+    </tabular></p>
     <p>The third row is the only one with all true premises. In this case the conclusion is true. Thus it is valid.</p></answer></exercise>
-      <exercise label="DMT_valid_CYU_vFT"><statement correct="yes"><p>True or False: A valid argument can have false premises and a true conclusion.</p></statement><answer>True</answer></exercise>
-      <exercise label="DMT_valid_CYU_iTT"><statement correct="yes"><p>True or False: An invalid argument can have true premises and a true conclusion.</p></statement><answer>True</answer></exercise>
-      <exercise label="DMT_valid_CYU_vTF"><statement correct="no"><p>True or False: A valid argument can have true premises and a false conclusion.</p></statement><answer>False</answer></exercise>
-      <exercise label="DMT_valid_CYU_sFT"><statement correct="no"><p>True or False: A sound argument can have false premises and a true conclusion.</p></statement><answer>False</answer></exercise>
-      <exercise label="DMT_valid_CYU_sTF"><statement correct="no"><p>True or False: A sound argument can have true premises and a false conclusion.</p></statement><answer>False</answer></exercise>
+      <exercise label="DMT_valid_CYU_vFT"><statement correct="yes"><p>True or False: A valid argument can have false premises and a true conclusion.</p></statement><answer><p>True</p></answer></exercise>
+      <exercise label="DMT_valid_CYU_iTT"><statement correct="yes"><p>True or False: An invalid argument can have true premises and a true conclusion.</p></statement><answer><p>True</p></answer></exercise>
+      <exercise label="DMT_valid_CYU_vTF"><statement correct="no"><p>True or False: A valid argument can have true premises and a false conclusion.</p></statement><answer><p>False</p></answer></exercise>
+      <exercise label="DMT_valid_CYU_sFT"><statement correct="no"><p>True or False: A sound argument can have false premises and a true conclusion.</p></statement><answer><p>False</p></answer></exercise>
+      <exercise label="DMT_valid_CYU_sTF"><statement correct="no"><p>True or False: A sound argument can have true premises and a false conclusion.</p></statement><answer><p>False</p></answer></exercise>
 
     </reading-questions>
 
@@ -618,10 +618,12 @@
     Determine whether the following arguments are valid or invalid. If they are invalid, determine if they exhibit the converse error or the inverse error. Rewrite each argument using symbols to help determine validity.
   </p>
 
-  <p><ol marker="a">
+  <p><ol marker="a.">
     <li>
-    
-    <tabular>
+    <p>If Jules solved this problem correctly, then Jules obtained the answer <m>\pi</m>.</p>
+    <p>Jules obtained the answer <m>\pi</m>.</p>
+    <p><m>\therefore</m> Jules solved the problem correctly.</p>
+    <!--<tabular>
     <row >
       <cell halign="left">If Jules solved this problem correctly, then Jules obtained the answer <m>\pi</m>.</cell>
     </row>
@@ -631,14 +633,16 @@
     <row >
       <cell halign="left"><m>\therefore</m> Jules solved the problem correctly.</cell>
     </row>
-    </tabular>
+    </tabular>-->
 
     </li>
 
     <li>
+    <p>If at least one of these two numbers is divisible by 6, then the product of these two numbers is divisible by 6.</p>
+    <p>Neither of these two numbers is divisible by 6.</p>
+    <p><m>\therefore</m> The product of these two numbers is not divisible by 6.</p>
     
-    
-    <tabular>
+    <!--<tabular>
     <row >
       <cell halign="left">If at least one of these two numbers is divisible by 6, then the product of these two numbers is divisible by 6.</cell>
     </row>
@@ -648,7 +652,7 @@
     <row >
       <cell halign="left"><m>\therefore</m> The product of these two numbers is not divisible by 6.</cell>
     </row>
-    </tabular>
+    </tabular>-->
 
     </li>
 

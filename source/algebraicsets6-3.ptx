@@ -36,17 +36,31 @@
   </md></proof>
 </example>
 
-<activity><statement><p>Use identities from the <xref ref="L_SetIdent" text="title" /> to prove for all sets <m>A</m> and <m>B</m>, <m>A\cup(B-A)=A\cup B</m></p></statement></activity>
+<!--<activity><statement><p>Use identities from the <xref ref="L_SetIdent" text="title" /> to prove for all sets <m>A</m> and <m>B</m>, <m>A\cup(B-A)=A\cup B</m></p></statement></activity>-->
 
-<activity><statement><p>Prove or disprove for all sets <m>A, B</m> and <m>C</m>, <m>A-(B-C)=(A-B)-C</m>.</p></statement><hint><p> To decide if a statement is true or false, draw a Venn diagram for each side of the equality.  If the two diagrams are the same, provide a proof. If the two diagrams are different, provide a specific counterexample.</p></hint></activity>
+<activity label="algsets-pfAUB" adaptive="yes"><statement><p>Use identities from the <xref ref="L_SetIdent" text="title" /> to prove for all sets <m>A</m> and <m>B</m>, <md>A\cup(B-A)=A\cup B.</md></p></statement>
+<blocks>
+  <block><p><m>A\cup(B-A)</m></p></block>
+  <block><p><m>=A\cup (B\cap A^C)</m></p></block>
+  <block><p><m>=(A\cup B)\cap (A\cup A^C)</m></p></block>
+  <block><p><m>=(A\cup B)\cap (U)</m></p></block>
+  <block><p><m>=(A\cup B)</m></p></block>
 
-<activity><statement><p>Prove or disprove for all sets <m>A, B</m> and <m>C</m>, if <m>A\subseteq B</m> then <m>A\cap(B\cap C)^{C}=\emptyset</m>.</p></statement><hint><p>It might be easier to define a small universal set for this one.</p></hint></activity>
+  <block correct="no"><p><m>=A\cup (B\cap A)</m></p></block>
+  <block correct="no"><p><m>=(A\cap B)\cup (A\cap A^C)</m></p></block>
+  <block correct="no"><p><m>=(A\cup B)\cup (\emptyset)</m></p></block>
+</blocks>
+</activity>
+
+<activity label="algsets-pvdpdiff"><statement><p>Prove or disprove for all sets <m>A, B</m> and <m>C</m>, <m>A-(B-C)=(A-B)-C</m>.</p></statement><response/><hint><p> To decide if a statement is true or false, draw a Venn diagram for each side of the equality.  If the two diagrams are the same, provide a proof. If the two diagrams are different, provide a specific counterexample.</p></hint></activity>
+
+<activity label="algsets-pvdpdisj"><statement><p>Prove or disprove for all sets <m>A, B</m> and <m>C</m>, if <m>A\subseteq B</m> then <m>A\cap(B\cap C)^{C}=\emptyset</m>.</p></statement><response/><hint><p>It might be easier to define a small universal set for this one.</p></hint></activity>
 
   <p>Recall the power set of a set <m>A</m>, <m>\mathcal{P}(A)</m><idx>power set</idx>, is the set of all subsets of <m>A</m>.</p>
 
   <example xml:id="E_powersetproof"><title>Power Set Proof</title>
   <p>
-    Prove for all sets <m>A</m> and <m>B</m>, <me>\mathcal{P}(A\cap B)=\mathcal{P}(A)\cap \mathcal{P}(B)</me>.
+    Prove for all sets <m>A</m> and <m>B</m>, <md>\mathcal{P}(A\cap B)=\mathcal{P}(A)\cap \mathcal{P}(B)</md>.
     <proof>
       <p>Since we need to show two sets are equal we need to show both subsets. We should also note that elements of power sets are sets.</p>
       <p><m>(\subseteq)</m>: Let <m>C\in \mathcal{P}(A\cap B)</m>. Then <m>C</m> must be a subset of <m>A\cap B</m>. Then <m>C\subseteq A</m> and <m>C\subseteq B</m>. This implies <m>C\in \mathcal{P}(A)</m> and <m>C\in \mathcal{P}(B)</m>. Thus, <m>C\in\mathcal{P}(A)\cap\mathcal{P}(B)</m>.</p>
@@ -55,7 +69,7 @@
     </proof>
   </p></example>
 
-<p>You might have noticed in this last proof that each of the subset proofs are really just the reverse of each other. If all the implications in our proof are really <q>if and only if</q> statements, then we can write the proof more succinctly as a single <q>if and only if</q> proof. We will show this technique in the next example. Be careful with if and only if proofs, though. Make sure that at each step both directions of the conditional are true. If you are unsure, you can always write you proof in two stages, as we did in the previous example. We generally use the symbol <m>\Leftrightarrow</m><notation><usage><m>\Leftrigharrow</m></usage><description>if and only if in proofs</description></notation> to mean <q>if and only if</q> in proofs.</p>
+<p>You might have noticed in this last proof that each of the subset proofs are really just the reverse of each other. If all the implications in our proof are really <q>if and only if</q> statements, then we can write the proof more succinctly as a single <q>if and only if</q> proof. We will show this technique in the next example. Be careful with if and only if proofs, though. Make sure that at each step both directions of the conditional are true. If you are unsure, you can always write your proof in two stages, as we did in the previous example. We generally use the symbol <m>\Leftrightarrow</m><notation><usage><m>\Leftrightarrow</m></usage><description>if and only if in proofs</description></notation> to mean <q>if and only if</q> in proofs.</p>
 
 <example xml:id="E_shortpowersetproof"><title>Power Set Proof, Shortened</title>
   <p>
@@ -92,9 +106,9 @@
 <example xml:id="E_countingsubsets"><title>Counting the Number of Subsets</title>
 <p>Let <m>S=\{1, 2, 3\}</m>. We can separate out the last element so, as in the proof of <xref ref="T_numbereltspowerset"/>, <m>b=3, A=\{1, 2\}</m>.</p>
 <p>We can look at the subsets of <m>S</m> that do not contain 3:
-<me>\emptyset, \{1\}, \{2\}, \{1, 2\}.</me>
+<md>\emptyset, \{1\}, \{2\}, \{1, 2\}.</md>
 Now add 3 to each of these sets:
-<me>\{3\}, \{1, 3\}, \{2, 3\}, \{1, 2, 3\}.</me>
+<md>\{3\}, \{1, 3\}, \{2, 3\}, \{1, 2, 3\}.</md>
 You can check that we have all the possible subsets of <m>S</m>.
 </p>
 <p>If we count up the sets, we have <m>2^2</m> subsets not containing 3, and <m>2^2</m> subsets containing 3. Which gives us <m>2(2^2)=8=2^3</m> subsets of <m>S</m>. Hence, <m>|\mathcal{P}(S)|=2^3=8</m>.</p>
@@ -153,7 +167,7 @@ You can check that we have all the possible subsets of <m>S</m>.
         </var>
 
       </setup>
-      <answer><m>2^5=32</m></answer></exercise>
+      <answer><p><m>2^5=32</m></p></answer></exercise>
 
       
     
@@ -175,7 +189,7 @@ You can check that we have all the possible subsets of <m>S</m>.
     Write a negation for the following statements. Indicate which is true, the statement or the negation. Justify your answer.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     <m>\forall</m> sets <m>S</m>, <m>\exists</m> a set <m>T</m> such that <m>S\cap T=\emptyset</m>.
@@ -197,7 +211,7 @@ You can check that we have all the possible subsets of <m>S</m>.
       </statement></exercise>
       <exercise><statement>
         <p>
-    Supply a reason for each step in the algebraic proof of the statement: For all sets <m>A</m>, <m>B</m>, and <m>C</m>, <me>(A\cup B)\cap C=(A\cap C)\cup (B\cap C).</me>
+    Supply a reason for each step in the algebraic proof of the statement: For all sets <m>A</m>, <m>B</m>, and <m>C</m>, <md>(A\cup B)\cap C=(A\cap C)\cup (B\cap C).</md>
   </p>
 
   <p>
@@ -224,7 +238,7 @@ You can check that we have all the possible subsets of <m>S</m>.
       </statement></exercise>
       <exercise><statement>
         <p>
-    Supply a reason for each step in the algebraic proof of the statement: For all sets <m>A</m>, <m>B</m>, and <m>C</m>, <me>(A\cup B)- (C-A)=A\cup(B-C).</me>
+    Supply a reason for each step in the algebraic proof of the statement: For all sets <m>A</m>, <m>B</m>, and <m>C</m>, <md>(A\cup B)- (C-A)=A\cup(B-C).</md>
   </p>
 
   <p>
@@ -277,7 +291,7 @@ You can check that we have all the possible subsets of <m>S</m>.
       </statement></exercise>
       <exercise><statement>
         <p>
-    Prove or disprove for all sets <m>A, B</m> and <m>C</m>, <m>(A-B)\cap (C-B)=A-(B\cup C)</m>.
+    Prove or disprove for all sets <m>A, B</m> and <m>C</m>, <md>(A-B)\cap (C-B)=A-(B\cup C)</md>.
   </p>
       </statement></exercise>
       <exercise><statement>
@@ -287,7 +301,7 @@ You can check that we have all the possible subsets of <m>S</m>.
       </statement></exercise>
       <exercise><statement>
         <p>
-    Prove or disprove for all sets <m>A, B</m> and <m>C</m>, <me>A\cup (B-C)=(A\cup B)-(A\cup C).</me>
+    Prove or disprove for all sets <m>A, B</m> and <m>C</m>, <md>A\cup (B-C)=(A\cup B)-(A\cup C).</md>
   </p>
       </statement></exercise>
       <exercise><statement>
@@ -302,17 +316,17 @@ You can check that we have all the possible subsets of <m>S</m>.
       </statement></exercise>
       <exercise><statement>
         <p>
-    Give an algebraic proof of the statement: For all sets <m>A</m> and <m>B</m>, <m>(A-B)\cup(A\cap B)=A</m>.
+    Give an algebraic proof of the statement: For all sets <m>A</m> and <m>B</m>, <md>(A-B)\cup(A\cap B)=A</md>.
   </p>
       </statement></exercise>
       <exercise><statement>
         <p>
-    Give an algebraic proof of the statement: For all sets <m>A</m> and <m>B</m>, <m>(A-B)\cap(A\cap B)=\emptyset</m>.
+    Give an algebraic proof of the statement: For all sets <m>A</m> and <m>B</m>, <md>(A-B)\cap(A\cap B)=\emptyset</md>.
   </p>
       </statement></exercise>
       <exercise><statement>
         <p>
-    Simplify the statement using algebraic properties: <m>(A-(A\cap B))\cap(B-(A\cap B))</m>.
+    Simplify the statement using algebraic properties: <md>(A-(A\cap B))\cap(B-(A\cap B))</md>.
   </p>
       </statement></exercise>
     </exercises>

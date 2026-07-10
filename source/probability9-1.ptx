@@ -14,23 +14,23 @@
 
     <p>Find the probability you randomly choose a club from the deck.</p>
     <p>Note, <m>E</m> is the set of clubs, <m>S</m> is the set of cards.</p>
-    <answer><m>P(E)=\frac{13}{52}=\frac{1}{4}</m></answer>
+    <answer><p><m>P(E)=\frac{13}{52}=\frac{1}{4}</m></p></answer>
 
     <p>Find the probability you randomly choose a red card from the deck.</p>
     <p>Note, <m>E</m> is the set of hearts and diamonds, <m>S</m> is the set of cards.</p>
-    <answer><m>P(E)=\frac{26}{52}=\frac{1}{2}</m></answer>
+    <answer><p><m>P(E)=\frac{26}{52}=\frac{1}{2}</m></p></answer>
 
     <p>Find the probability you randomly choose a 2 from the deck.</p>
     <p>Note, <m>E</m> is the set of 2's, <m>S</m> is the set of cards.</p>
-    <answer><m>P(E)=\frac{4}{52}=\frac{1}{13}</m></answer>
+    <answer><p><m>P(E)=\frac{4}{52}=\frac{1}{13}</m></p></answer>
 </example>
 
-<activity><introduction><p>Suppose you toss a fair coin two times.</p></introduction>
-<task><p>List all the possible outcomes.</p></task>
-<task><p>What is the probability that you get exactly 2 heads?</p></task>
-<task><p>What is the probability that you get exactly 1 head?</p></task></activity>
+<activity label="prob-2toss"><introduction><p>Suppose you toss a fair coin two times.</p></introduction>
+<task label="prob-2toss-all"><statement><p>List all the possible outcomes.</p></statement><response/></task>
+<task label="prob-2toss-2H"><statement><p>What is the probability that you get exactly 2 heads?</p></statement><response/></task>
+<task label="prob-2toss-1H"><statement><p>What is the probability that you get exactly 1 head?</p></statement><response/></task></activity>
 
-<p>In order to calculate a probability, we need to be able to count <term>equally-likely</term> events. Just because there are, say, 3 outcomes, that doesn't mean all the outcomes are equally-likely. For example, the Linfied football team could win, lose, or tie a game. Given the team's winning streak, the three outcomes are not equally-likely. They have a much higher probability of winning than just 1/3.</p>
+<p>In order to calculate a probability, we need to be able to count <term>equally-likely</term> events. Just because there are, say, 3 outcomes, that doesn't mean all the outcomes are equally-likely. For example, the Linfield University football team could win, lose, or tie a game. Given the team's winning streak, the three outcomes are not equally-likely. They have a much higher probability of winning than just 1/3.</p>
 
 <p>Thus, the focus for the rest of the chapter will be on counting events. Once we can count outcomes, it is straight-forward to find the probability.</p>
 
@@ -43,6 +43,25 @@
   </ul>
 </p>
 
+<activity label="prob-eqlikely"><statement><p>Determine if the pairs of events are equally likely or not equally likely.</p></statement>
+
+<cardsort>
+<match>
+  <premise><p>Roll 1 die: rolling a 1; rolling a 5.</p></premise>
+  <premise><p>Toss a coin 4 times: getting exactly 1 Head; getting exactly 3 Heads.</p></premise>
+  <premise><p>Toss a coin 4 times: getting a Head on the first toss; getting a Head on the third toss.</p></premise>
+  <premise><p>Roll 1 die: rolling an even number; rolling an odd number.</p></premise>
+  <response><p>Equally likely</p></response>
+</match>
+<match>
+  <premise><p>Roll 2 dice: rolling a sum of 2; rolling a sum of 5.</p></premise>
+  <premise><p>Toss a coin 4 times: getting exactly 1 Head; getting no Heads.</p></premise>
+  <premise><p>Roll 2 dice: rolling two 6's; rolling a 2 and a 3.</p></premise>
+  <premise><p>Winning the lottery; not winning the lottery.</p></premise>
+  <response><p>Not equally likely</p></response>
+</match>
+
+</cardsort></activity>
 
 
     <reading-questions>
@@ -78,7 +97,7 @@
     </condition>
     </var>
   </setup>
-      <answer><m>\frac{4}{52}</m></answer></exercise>
+      <answer><p><m>\frac{4}{52}</m></p></answer></exercise>
 
        <exercise label="DMT_prob_CYU_drawface"><statement><p>In a standard deck of cards, find the probability of randomly drawing a face card (Jack, Queen, King). Give your answer to at least 3 decimal places.</p>
      <p>The probability is <var />.</p></statement>
@@ -109,7 +128,7 @@
     </condition>
     </var>
   </setup>
-      <answer><m>\frac{12}{52}</m></answer></exercise>
+      <answer><p><m>\frac{12}{52}</m></p></answer></exercise>
 
        <exercise label="DMT_prob_CYU_draweven"><statement><p>In a standard deck of cards, find the probability of randomly drawing an even numbered card. Give your answer to at least 3 decimal places.</p>
      <p>The probability is <var />.</p></statement>
@@ -140,7 +159,7 @@
     </condition>
     </var>
   </setup>
-      <answer><m>\frac{20}{52}</m></answer></exercise>
+      <answer><p><m>\frac{20}{52}</m></p></answer></exercise>
 
        <exercise label="DMT_prob_CYU_drawgreen"><statement><p>An urn contains 3 red balls, 2 green balls, 4 multicolored balls. Find the probability of drawing a green ball. Give your answer to at least 3 decimal places.</p>
      <p>The probability is <var />.</p></statement>
@@ -164,7 +183,7 @@
     </condition>
     </var>
   </setup>
-      <answer><m>\frac{2}{9}</m></answer></exercise>
+      <answer><p><m>\frac{2}{9}</m></p></answer></exercise>
 
       <exercise label="DMT_prob_CYU_drawsolid"><statement><p>An urn contains 3 red balls, 2 green balls, 4 multicolored balls. Find the probability of drawing a solid colored ball. Give your answer to at least 3 decimal places.</p>
     <p>The probability is <var />.</p></statement>
@@ -188,7 +207,7 @@
     </condition>
     </var>
   </setup>
-      <answer><m>\frac{5}{9}</m></answer></exercise>
+      <answer><p><m>\frac{5}{9}</m></p></answer></exercise>
 
     </reading-questions>
 
@@ -197,7 +216,7 @@
     Assume the sample space is a standard deck of 52 cards. Suppose you choose a random card from the deck.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     List all the possible outcomes of the card being red and not a face card.
@@ -216,7 +235,7 @@
     Assume the sample space is a standard deck of 52 cards. Suppose you choose a random card from the deck.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     List all the possible outcomes of the card being black and having an even number on it.
@@ -236,7 +255,7 @@
     Assume the sample space is the possible rolls of a pair of dice, one blue die and one red die.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     List all the possible outcomes where the sum of the numbers showing face up is 8.
@@ -256,7 +275,7 @@
     Assume the sample space is the possible rolls of a pair of dice, one blue die and one red die.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     List all the possible outcomes where the sum of the numbers showing face up is at most 6.
@@ -276,7 +295,7 @@
     Suppose a coin is tossed four times and the side showing face up on each toss is noted. Suppose also that heads and tails are equally-likely for the coin.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     List the 16 elements in the sample space as sequences of heads and tails.
@@ -308,7 +327,7 @@
     Suppose that on a true/false exam you have no idea about the answers to three questions. You choose your answers randomly and therefore have a 50-50 chance of being correct on any one question. For example, let <m>CCW</m> indicate that you were correct on the first two questions but wrong on the third.
   </p>
 
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     List all the elements of the sample space as the possible sequences of <m>C</m> and <m>W</m> for the three questions.

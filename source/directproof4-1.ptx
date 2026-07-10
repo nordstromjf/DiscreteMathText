@@ -1,34 +1,47 @@
 <section xml:id="directproof4-1">
   <title>Direct Proof and Counterexample</title><idx><h>proof</h><h>direct</h></idx><idx>direct proof</idx>
 
-  <p>Before starting proof techniques, we introduce a few mathematical definitons. Keep in mind, mathematical definitions are constructed to provide a common language for proofs. They are intended to provide rigor and precision. They are <em>not</em> intended to provide conceptual understanding. You need to develop conceptual understanding of the terms apart from the definition. However, we need to rely on definitions to provide structure for our proofs.  </p>
+  <p>Before starting proof techniques, we introduce a few mathematical definitions. Keep in mind, mathematical definitions are constructed to provide a common language for proofs. They are intended to provide rigor and precision. They are <em>not</em> intended to provide conceptual understanding. You need to develop conceptual understanding of the terms apart from the definition. However, we need to rely on definitions to provide structure for our proofs.  </p>
 
 <definition><statement><p>An integer, <m>n</m>, is <term>even</term><idx>even integer</idx> if it has the form <m>n=2k</m> for some <m>k\in \mathbb{Z}</m>.</p></statement></definition>
 
 <definition><statement><p>An integer <m>n</m>, is <term>odd</term><idx>odd integer</idx> if it has the form <m>n=2k+1</m> for some <m>k\in \mathbb{Z}</m>.</p></statement></definition>
 
-<p>You are probably familiar, generally, with even numbers such as 2, 4, 6, 8, and odd numbers such as 3, 5, 7, 9. But the next example uses the definitions to look at more examples.</p>
+<p>You are probably familiar, generally, with even numbers such as 2, 4, 6, 8, and odd numbers such as 3, 5, 7, 9. But the next example uses the definitions to look at more general ways to think about even and odd numbers.</p>
 
 <example xml:id="E_evenodd"><title>Even or Odd</title>
 <p>Is -5 even or odd?</p>
-<answer><m>-5=2(-3)+1</m> where <m>-3\in \mathbb{Z}</m>. Thus, -5 is odd.</answer>
+<answer><p><m>-5=2(-3)+1</m> where <m>-3\in \mathbb{Z}</m>. Thus, -5 is odd.</p></answer>
 
 <p>Is 0 even or odd?</p>
-<answer><m>0=2(0)</m> where <m>0\in \mathbb{Z}</m>. Thus, 0 is even.</answer>
+<answer><p><m>0=2(0)</m> where <m>0\in \mathbb{Z}</m>. Thus, 0 is even.</p></answer>
 
 <p>Let <m>a, b\in \mathbb{Z}</m>. Is <m>6a^2b</m> even or odd?</p>
-<answer><m>6a^2b=2(3a^2b)</m> where <m>3a^2b\in \mathbb{Z}</m>. Thus <m>6a^2b</m> is even.</answer>
+<answer><p><m>6a^2b=2(3a^2b)</m> where <m>3a^2b\in \mathbb{Z}</m>. Thus <m>6a^2b</m> is even.</p></answer>
 
 <p>Let <m>a, b\in \mathbb{Z}</m>. Is <m>20a-6b+1</m> even or odd?</p>
-<answer><m>20a-6b+1=2(10a-3b)+1</m> where <m>10a-3b\in \mathbb{Z}</m>. Thus <m>20a-6b+1</m> is odd.</answer>
+<answer><p><m>20a-6b+1=2(10a-3b)+1</m> where <m>10a-3b\in \mathbb{Z}</m>. Thus <m>20a-6b+1</m> is odd.</p></answer>
 </example>
 
-<activity><introduction><p>Let <m>a, b</m> be integers. Determine if each of the following are always even, always odd, or sometimes even/ sometimes odd. </p></introduction>
-<task><m>12ab^3</m></task>
-<task><m>3ab</m></task>
-<task><m>10b^2-4ab+1</m></task>
-<task><m>4b+3</m></task>
-<task><m>5a+3b</m></task>
+<activity label="direct-evenodd"><statement><p>Let <m>a, b</m> be integers. Determine if each of the following are always even, always odd, or sometimes even/ sometimes odd. </p></statement>
+<cardsort>
+  <match>
+    <premise><m>12ab^3</m></premise>
+    <response><p>Always Even</p></response>
+  </match>
+  <match>
+    <premise><m>10b^2-4ab+1</m></premise>
+    <premise><m>4b+3</m></premise>
+    <response><p>Always Odd</p></response>
+  </match>
+    
+  <match>
+    <premise><m>3ab</m></premise>
+    <premise><m>5a+3b</m></premise>
+    <response><p>Sometimes Even/Sometimes Odd</p></response>
+  </match>
+
+</cardsort>
 </activity>
 
 <p>We've now seen several examples of even/ odd integers. Are there integers which are both even and odd? Can an integer be neither even nor odd? The answer to both questions is no. However, proving that every integer is even or odd (and not both), is pretty challenging, and we won't try to do it, yet. We will use this fact, though, so if we know an integer is not even, then it must be odd, and vice versa.</p>
@@ -39,25 +52,24 @@
 
 <example xml:id="E_primecomposite"><title>Prime or Composite</title>
 <p>Is 1 prime?</p>
-<answer>No. The definiton requires <m>n>1</m>.</answer>
+<answer><p>No. The definition requires <m>n>1</m>.</p></answer>
 
 <p>Is 1 composite?</p>
-<answer>No. Again, the definiton requires <m>n>1</m>.</answer>
+<answer><p>No. Again, the definition requires <m>n>1</m>.</p></answer>
 
 <p>Is 121 prime?</p>
-<answer>No. <m>121=(11)(11)</m>. Thus, 121 is composite.</answer>
+<answer><p>No. <m>121=(11)(11)</m>. Thus, 121 is composite.</p></answer>
 
 <p>Let <m>a\in \mathbb{Z}</m>. Is <m>3a</m> composite?</p>
-<answer>It depends. If <m>a=1</m> then, no. We would need <m>a>1</m> for <m>3a</m> to be composite.</answer>
+<answer><p>It depends. If <m>a=1</m> then, no. We would need <m>a>1</m> for <m>3a</m> to be composite.</p></answer>
 
 </example>
 
-<activity>
+<activity label="direct-negprime">
   <introduction><p>Consider the statement <q>for all positive integers <m>r</m> and <m>s</m>, if <m>n=rs</m> then <m>r=1</m> or <m>s=1</m></q> from the definition for a prime number. </p></introduction>
-  <task><p>Write the statement symbolically using quantifiers and connectives.</p></task>
-  <task><p>
-   Write the negation of the statement symbolically.</p></task>
-   <task><p>How is the negation related to the definition of a composite number? Is every integer either prime or composite?</p></task>
+  <task label="direct-negprime-symb"><statement><p>Write the statement symbolically using quantifiers and connectives.</p></statement><response/></task>
+  <task label="direct-negprime-neg"><statement><p>Write the negation of the statement symbolically.</p></statement><response/></task>
+   <task label="direct-negprime-comp"><statement><p>How is the negation related to the definition of a composite number? Is every integer either prime or composite?</p></statement><response/></task>
 </activity>
 
 <p>We state our first proof technique.</p>
@@ -66,7 +78,7 @@
 <title>Proving Existential Statements</title><idx><h>existential</h><h>proof of</h></idx>
 <p>To prove <m>\exists x\in D, Q(x)</m>
 
-<ol marker="1">
+<ol marker="1.">
   <li><p>Find <m>x\in D</m> making, <m>Q(x)</m> true. Note, this step may happen as scratchwork, not part of your proof.</p></li>
   <li><p>For your proof, state <m>x</m>.</p></li>
   <li><p>Show <m>x\in D</m> and <m>Q(x)</m> is true.</p>
@@ -86,17 +98,31 @@
     <proof><p>Let <m>m=n+1</m>. Then <m>n+1\in \mathbb{Z}</m> since <m>n\in \mathbb{Z}</m> and <m>n+1>n</m>.</p></proof>
   </example>
 
-  <activity><statement><p>Let <m>r, s\in \mathbb{Z}</m>. Prove there exists <m>k\in \mathbb{Z}</m> such that <m>3k=12r+15s</m>.</p></statement></activity>
+  <!--<activity><statement><p>Let <m>r, s\in \mathbb{Z}</m>. Prove there exists <m>k\in \mathbb{Z}</m> such that <m>3k=12r+15s</m>.</p></statement></activity>-->
+
+  <activity label="direct-existence" adaptive="yes"><statement><p>Let <m>r, s\in \mathbb{Z}</m>. Prove there exists <m>k\in \mathbb{Z}</m> such that <m>3k=12r+15s</m>. Note, not all blocks may be used in the proof.</p></statement>
+  <blocks>
+    <block><p>Let <m>r</m> and <m>s</m> be integers.</p></block>
+    <block><p><m>12r+15s=3(4r+5s)</m></p></block>
+    <block><p>Let <m>k=4r+5s</m>.</p></block>
+    <block><p><m>k</m> is an integer since <m>r, s</m> are integers.</p></block>
+
+    <block correct="no"><p>Let <m>12r+15s=3k</m>.</p></block>
+    <block correct="no"><p>Since <m>k</m> is an integer, <m>r, s</m> are integers.</p></block>
+  </blocks>
+
+    
+  </activity>
 
   <p>There are other ways to prove existence. One common way is a proof by contradiction, which we will see later in <xref ref="contradiction4-5"/>. There are several examples of existence proofs in calculus where it can be shown that something exists without constructing a specific value. For example, take a look at a proof of Rolle's Theorem, the Mean Value Theorem, the Extreme Value Theorem, or the Taylor Remainder Theorem (Calc II).</p>
 
-  <p>Since the negation of a universal statement is an existential statement, we disprove a universal statements with a <term>counterexample</term><idx>counterexample</idx>.</p>
+  <p>Since the negation of a universal statement is an existential statement, we disprove a universal statement with a <term>counterexample</term><idx>counterexample</idx>.</p>
 
 <assemblage xml:id="B_counterexample">
   <title>Counterexamples</title><idx>counterexample</idx>
     <p>To disprove the statement <m>\forall x\in D, P(x)\rightarrow Q(x)</m>
 
-<ol marker="1">
+<ol marker="1.">
   <li><p>Find the negation of the statement: <m>\exists x\in D, P(x)\wedge \sim Q(x)</m>.</p></li>
   <li><p>Find <m>x\in D</m> making, <m>P(x)</m> true and <m>Q(x)</m> false. Note, this step may happen as scratchwork, not part of your counterexample.</p></li>
   <li><p>For your counterexample, state <m>x</m>.</p></li>
@@ -112,7 +138,7 @@
     <p>Let <m>p=2</m>. Then <m>2</m> is prime and <m>2</m> is not odd.</p>
   </example>
 
-  <activity><statement><p>Give a counterexample to show the following statement is false: For all <m>a, b\in \mathbb{R}</m> if <m>a^2=b^2</m> then <m>a=b</m>.</p></statement></activity>
+  <activity label="direct-counter"><statement><p>Give a counterexample to show the following statement is false: For all <m>a, b\in \mathbb{R}</m> if <m>a^2=b^2</m> then <m>a=b</m>.</p></statement><response/></activity>
 
   <p>One of the most common mathematical statements is the universal conditional. We will see several techniques for proving <m>\forall x\in D, P(x)\rightarrow Q(x)</m>. The first method, method of exhaustion, is very limited, but worth mentioning.</p>
 
@@ -128,7 +154,7 @@
 </ul></p>
 </assemblage>
 
-<example xml:id="E_pfbyexhaustion"><title>Method of Exaustion</title>
+<example xml:id="E_pfbyexhaustion"><title>Method of Exhaustion</title>
     <p>Prove for all <m>n\in \mathbb{Z}</m>, if <m>n</m> is even and <m>4\leq n\leq 16</m>, then <m>n</m> can be written as the sum of prime numbers.</p> 
     <proof><p> We can find all the integers that are even and <m>4\leq n\leq 16</m>. This is the set <m>\{4, 6, 8, 10, 12, 14, 16\}</m>. For each of these numbers we can demonstrate a way to write them as the sum of primes: <m>4=2+2, 6=3+3, 8=3+5, 10=3+7, 12=5+7, 14=7+7, 16=11+5</m>.</p></proof>
   </example>
@@ -165,17 +191,17 @@
       <li><p>Make the proof self-contained. Try not to reference many other mathematical facts. Many proofs in this course will rely entirely on definitions.</p></li>
       <li><p>Use complete sentences. Even equations have a sentence structure. Your proof should be able to be read in sentences.</p></li>
       <li><p>Give reasons. Connect your statements together. </p></li>
-      <li><p>Include words. Often using a word is better that using a symbol. Many proofs have no symbols in them at all.</p></li>
+      <li><p>Include words. Often using a word is better than using a symbol. Many proofs have no symbols in them at all.</p></li>
       <li><p>The audience for your proofs is not the instructor. Think of the audience as being your peers in the course or even yourself in a few weeks (or months) when you might have forgotten the specific content. Write so you will know what you meant later. </p></li>
       <li><p>The goal of a proof is to write a clear, easy to follow, argument--not to just get to the end. The <q>answer</q> is the proof itself. Use space, start a new line, set equations on their own line.</p></li>
-      <li><p>Never feel that you have to be able to know what the end of the proof will look like before you can start. Write proofs  one step at a time. Start with what you know. See if you can do one thing. See if you can do another thing. Look at where you want to go. Do not try to see the whole picture at once. This is also good advice for reading a proof. </p></li>
+      <li><p>Never feel that you have to be able to know what the end of the proof will look like before you can start. Write proofs one step at a time. Start with what you know. See if you can do one thing. See if you can do another thing. Look at where you want to go. Do not try to see the whole picture at once. This is also good advice for reading a proof. </p></li>
     </ul></p>
 
     <p>Some common proof-writing errors:
     <ul>
-      <li><p>Using an example for a proof. If you need to prove a statement for all <m>x</m>, it is not nough to show it for an example.</p></li>
+      <li><p>Using an example for a proof. If you need to prove a statement for all <m>x</m>, it is not enough to show it for an example.</p></li>
       <li><p>Using the same variable to represent two different things.</p></li>
-      <li><p>Jumping to conclusions. Giving inadequate reasons. This often occur if you rely on additional mathematical ideas or don't connect your ideas to each other.</p></li>
+      <li><p>Jumping to conclusions. Giving inadequate reasons. This often occurs if you rely on additional mathematical ideas or don't connect your ideas to each other.</p></li>
       <li><p>Assuming what you need to prove. This is a big one. This most often occurs when there is confusion about conditional statements. Be careful about identifying the <q>if</q> and the <q>then</q> in a statement.</p></li>
     </ul></p>
 
@@ -185,11 +211,11 @@
     <p>Prove or disprove there exists a positive integer <m>n</m> such that <m>n^2+3n+2</m> is prime.</p>
     <p>Since we need to try to decide if the statement is true or false, first try some examples.</p>
     
-    <answer><md>
+    <answer><p><md>
       <mrow>n=1; n^2+3n+2=6; \textrm{not prime}</mrow>
       <mrow>n=5; n^2+3n+2=42; \textrm{not prime}</mrow>
       <mrow>n=8; n^2+3n+2=90; \textrm{not prime}</mrow>
-    </md></answer>
+    </md></p></answer>
     <p>After trying several examples, we might guess that it is false. If we want to disprove the statement then we need to prove the negation. Find the negation of the statement.</p>
     <answer><p>For all positive integers <m>n, n^2+3n+2</m> is not prime (is composite).</p></answer>
 
@@ -198,38 +224,59 @@
     <p>Let <m>r=n+2, s=n+1</m>. We need to show that <m>r, s\neq 1</m>. Since <m>n>0, n+2>2</m> and <m>n+1>1</m>. Thus <m>r, s\neq 1</m>. Therefore, <m>n^2+3n+2</m> is not prime.</p>
   </example>
 
-  <activity><introduction><p>Prove or disprove the following statements.</p></introduction>
-<task><p>For all <m>n\in \mathbb{Z}</m>, if <m>n</m> is even, then <m>5n</m> is even.</p></task>
-<task><p>For all <m>n\in \mathbb{Z}</m>, if <m>n</m> is odd, then <m>5n+1</m> is odd.</p></task>
-<task><p>For all <m>m, n\in \mathbb{Z}</m>, if <m>n</m> and <m>m</m> are odd, then their product, <m>nm</m>,  is odd.</p></task>
+  <activity xml:id="oddproof" label="direct-proveodd" adaptive="yes"><statement><p>
+    In this activity practice using the proof writing advice. Think about what you need to assume and what you need to show. Make sure you do only one algebraic step at a time. Note, not all blocks may be used in the proof.</p>
+    <p>Prove if <m>n</m> is odd, then <m>7n+2</m> is odd.</p></statement>
+  <blocks>
+    <block><p>Let <m>n=2k+1</m> for some <m>k\in \mathbb{Z}</m>.</p></block>
+    <block><p><m>7n+2=7(2k+1)+2</m></p></block>
+    <block><p><m>7n+2=7(2k)+7+2</m></p></block>
+    <block><p><m>7n+2=2(7k)+8+1</m></p></block>
+    <block><p><m>7n+2=2(7k+4)+1</m></p></block>
+    <block><p><m>7k+4</m> is an integer.</p></block>
+    <block><p>Thus, <m>7n+2</m> is odd.</p></block>
+
+    <block correct="no"><p>Let <m>7n+2=2k+1</m>.</p></block>
+    <block correct="no"><p>Let <m>k=7k+4</m>.</p></block>
+    <block correct="no"><p><m>7n+2=7(2k)+1+2</m></p></block>
+    <block correct="no"><p>Let <m>n=1</m>, so <m>7(1)+2=9</m>.</p></block>
+  </blocks>
+    
+  </activity>
+  <activity label="direct-explainerr"><statement><p>Choose one of the unused blocks from <xref ref="oddproof"/>, and explain what type of proof-writing error it demonstrates.</p></statement><response/></activity>
+
+  <activity label="direct-pvdispv"><introduction><p>Prove or disprove the following statements.</p></introduction>
+<task label="direct-pvdispv-even"><statement><p>For all <m>n\in \mathbb{Z}</m>, if <m>n</m> is even, then <m>5n</m> is even.</p></statement><response/></task>
+<task label="direct-pvdispv-odd"><statement><p>For all <m>n\in \mathbb{Z}</m>, if <m>n</m> is odd, then <m>5n+1</m> is odd.</p></statement><response/></task>
+<task label="direct-pvdispv-prod"><statement><p>For all <m>m, n\in \mathbb{Z}</m>, if <m>n</m> and <m>m</m> are odd, then their product, <m>nm</m>,  is odd.</p></statement><response/></task>
 </activity>
 
     <reading-questions>
       <title>Check Your Understanding</title>
       
       <exercise label="DMT_direct_CYU_5np3odd"><statement correct="no"><p>True or false: <m>\forall n\in \mathbb{Z}, 5n+3</m> is odd.</p></statement>
-      <answer>False.</answer></exercise>
+      <answer><p>False.</p></answer></exercise>
 
       <exercise label="DMT_direct_CYU_5np3even"><statement correct="no"><p>True or false: <m>\forall n\in \mathbb{Z}, 5n+3</m> is even.</p></statement>
-      <answer>False.</answer></exercise>
+      <answer><p>False.</p></answer></exercise>
 
       <exercise label="DMT_direct_CYU_2np7odd"><statement correct="yes"><p>True or false: <m>\forall n\in \mathbb{Z}, 2n+7</m> is odd.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       <exercise label="DMT_direct_CYU_4np12even"><statement correct="yes"><p>True or false: <m>\forall n\in \mathbb{Z}, 4n+12</m> is even.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       <exercise label="DMT_direct_CYU_n2even"><statement correct="yes"><p>True or false: <m>\forall n\in \mathbb{Z},</m> if <m>n</m> is even, then <m>n^2</m> is even.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       <exercise label="DMT_direct_CYU_99comp"><statement correct="yes"><p>True or false: 99 is composite.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       <exercise label="DMT_direct_CYU_neg99comp"><statement correct="no"><p>True or false: -99 is composite.</p></statement>
-      <answer>False.</answer></exercise>
+      <answer><p>False.</p></answer></exercise>
 
       <exercise label="DMT_direct_CYU_n2p1prime"><statement correct="no"><p>True or false: <m>\forall n\in \mathbb{Z}, n^2+1</m> is prime.</p></statement>
-      <answer>False.</answer></exercise>
+      <answer><p>False.</p></answer></exercise>
 
       
 
@@ -241,7 +288,7 @@
         <p>
     Use the definitions of even, odd, prime, and composite to justify your answer to each of the following questions. Let <m>m</m> and <m>n</m> be integers.
   </p>
-  <ol marker="a">
+  <ol marker="a.">
     <li>
       <p>
     Is <m>6m+8n</m> even?
@@ -306,7 +353,7 @@
   </p>
 
   <p>
-    <term><q>Proof</q>:</term> Suppose <m>n</m> is an odd integer, and <m>m</m> is an even integer. By definition of odd, <m>n=2k+1</m> where <m>k</m> is an integer, and by definition of even <m>m=2k</m> where <m>k</m> is an integer. Then <me>n-m=2k+1-2k=1.</me> Since 1 is odd the difference between an odd integer and and even integer is odd.
+    <term><q>Proof</q>:</term> Suppose <m>n</m> is an odd integer, and <m>m</m> is an even integer. By definition of odd, <m>n=2k+1</m> where <m>k</m> is an integer, and by definition of even <m>m=2k</m> where <m>k</m> is an integer. Then <md>n-m=2k+1-2k=1.</md> Since 1 is odd the difference between an odd integer and an even integer is odd.
   </p>
 
       </statement></exercise>
@@ -328,9 +375,9 @@
       </statement></exercise>
       <exercise><statement>
         <p>
-    For the following problems determine if they are true of false. Prove the true statements and provide counterexamples for the false statements.
+    For the following problems determine if they are true or false. Prove the true statements and provide counterexamples for the false statements.
   </p>
-    <ol marker="a">
+    <ol marker="a.">
 
     <li>
       <p>

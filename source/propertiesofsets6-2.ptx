@@ -7,7 +7,7 @@
 
 <assemblage xml:id="B_ssrelations"><idx><h>subset</h><h>properties</h></idx>
   <title>Subset Relations</title>
-    <p><ol marker="1">
+    <p><ol marker="1.">
       <li><m>A\cap B\subseteq A</m>; <m>A\cap B\subseteq B</m>.</li>
       <li><m>A\subseteq A\cup B</m>; <m>B\subseteq A\cup B</m>.</li>
       <li><title>Transitivity</title> If <m>A\subseteq B</m> and  <m>B\subseteq C</m> then <m>A\subseteq C</m>.</li>
@@ -28,7 +28,7 @@
 </p>
 </assemblage>
 
-<p>Based in their definitions from <xref ref="sets6-1"/>, we can translate other sets into logical statements, as well. These translations are how we will prove properites of sets using elements.</p>
+<p>Based on their definitions from <xref ref="sets6-1"/>, we can translate other sets into logical statements, as well. These translations are how we will prove properties of sets using elements.</p>
 
 <assemblage xml:id="B_tranlationsforsets">
   <title>Translating Set Statements to Logical Statements</title>
@@ -55,18 +55,30 @@
 </proof>
 </example>
 
-<activity><statement><p>Prove <m>A\cap B\subseteq B</m>. Be sure to write what you want to assume and what you want to  show.</p></statement></activity>
+<activity label="propsets-pfAUBsubB"><statement><p>Prove <m>A\cap B\subseteq B</m>. Be sure to write what you want to assume and what you want to  show.</p></statement><response/></activity>
 
-<activity><statement><p>Prove <m>B\subseteq A\cup B</m>. Be sure to write what you want to assume and what you want to  show.</p></statement></activity>
+<activity label="propsets-pfAsubAUB" adaptive="yes"><statement><p>Prove <m>A\subseteq A\cup B</m>.</p></statement>
+<blocks>
+  <block><p>Let <m>x\in A</m>.</p></block>
+  <block><p>Since <m>x\in A</m>, <m>x\in A</m> or <m>x\in B</m>.</p></block>
+  <block><p>Thus, <m>x\in A\cup B</m>.</p></block>
 
-<activity><statement><p>Prove if <m>A\subseteq B</m> and <m>B\subseteq C</m> then <m>A\subseteq C</m>. Be sure to write what you want to assume and what you want to  show.</p></statement></activity>
+  <block correct="no"><p>Let <m>x\in A\cup B</m>.</p></block>
+  <block correct="no"><p>Thus, <m>x\in A</m>.</p></block>
+</blocks>
+
+</activity>
+
+<activity label="propsets-pfBsubAUB"><statement><p>Prove <m>B\subseteq A\cup B</m>. Be sure to write what you want to assume and what you want to  show.</p></statement><response/></activity>
+
+<activity label="propsets-pftrans"><statement><p>Prove if <m>A\subseteq B</m> and <m>B\subseteq C</m> then <m>A\subseteq C</m>. Be sure to write what you want to assume and what you want to  show.</p></statement><response/></activity>
 
 
 <assemblage xml:id="B_pfsetequality">
   <title>Proving Set Equality</title><idx><h>set</h><h>proof of equality</h></idx>
 
 <p>To prove <m>X=Y</m> show 
-<ol marker="1">
+<ol marker="1.">
   <li><m>X\subseteq Y</m>, ie, show if <m>x \in X</m> then <m>x \in Y</m>, and </li>
   <li><m>Y\subseteq X</m>, ie, show if <m>x \in Y</m> then <m>x \in X</m>.</li>
 </ol></p>
@@ -103,7 +115,7 @@
 <p>This means there exists <m>x\in \emptyset</m> such that <m>x\notin A</m>. But we cannot have <m>x\in \emptyset</m>. Hence, we have a contradiction. Therefore, <m>\emptyset\subseteq A</m>.</p>
 </proof>
 
-<p>There are many times in mathematics that we need to prove that a set is empty. We might need do do this if we need sets to be disjoint, or if we need to prove that there are no elements with a particular property. The common method for proving a set is empty is to use contradiction. Note, usually if we want to prove <m>A=B</m>, we show both subsets (<m>A\subseteq B</m>, <m>B\subseteq A</m>), but we just showed <m>\emptyset\subseteq A</m>, always. So we just need to show <m>A\subseteq \emptyset</m>. We do this by contradiction. </p>
+<p>There are many times in mathematics that we need to prove that a set is empty. We might need to do this if we need sets to be disjoint, or if we need to prove that there are no elements with a particular property. The common method for proving a set is empty is to use contradiction. Note, usually if we want to prove <m>A=B</m>, we show both subsets (<m>A\subseteq B</m>, <m>B\subseteq A</m>), but we just showed <m>\emptyset\subseteq A</m>, always. So we just need to show <m>A\subseteq \emptyset</m>. We do this by contradiction. </p>
 
 <assemblage xml:id="B_pfempty">
   <title>Proving a Set is Empty</title><idx><h>empty set</h><h>proof</h></idx>
@@ -122,15 +134,15 @@
   </proof>
 </p></example>
 
-<activity><statement><p>Prove <m>A\cap A^C=\emptyset</m>. Be sure to write what you want to assume and what you want to show.</p></statement></activity>
+<activity label="propsets-pfdisj"><statement><p>Prove <m>A\cap A^C=\emptyset</m>. Be sure to write what you want to assume and what you want to show.</p></statement><response/></activity>
 
-<activity><statement><p>Prove if <m>A\subseteq B</m> then <m>A\cup C\subseteq B\cup C</m>. Note, you need to show <m>A\cup C\subseteq B\cup C</m>. So how do you show a subset? What set should you assume  <m>x</m> is in?</p></statement></activity>
+<activity label="propsets-pfAUCssBUC"><statement><p>Prove if <m>A\subseteq B</m> then <m>A\cup C\subseteq B\cup C</m>. Note, you need to show <m>A\cup C\subseteq B\cup C</m>. So how do you show a subset? What set should you assume  <m>x</m> is in?</p></statement><response/></activity>
 
 <assemblage xml:id="L_SetIdent">
 <title>Summary of Set Identities</title><idx><h>set</h><h>identities</h></idx>
 
 <p>Let <m>U</m> be the universal set, and <m>A, B</m>, and <m>C</m> subsets of the universal set.
-<ol marker="1">
+<ol marker="1.">
 <li> <title>Commutative Laws</title> <m>A\cup B=B\cup A; \ \ A\cap B=B\cap A</m></li>
 <li> <title>Associative Laws</title> <m>(A\cup B)\cup C=A\cup(B\cup C);\ \ (A\cap B)\cap C=A\cap(B\cap C)</m></li>
 <li> <title>Distributive Laws</title> <m>A\cup(B\cap C)=(A\cup B)\cap (A\cup C);</m> <m>A\cap(B\cup C)=(A\cap B)\cup (A\cap C)</m></li>
@@ -154,19 +166,19 @@
       <p>Let <m>A, B, C</m> be sets.</p>
       
       <exercise label="DMT_propsets_CYU_AnCeCnA"><statement correct="yes"><p>True or false: <m>A\cap C=C\cap A</m>.</p></statement>
-      <answer>True</answer></exercise>
+      <answer><p>True</p></answer></exercise>
 
       <exercise label="DMT_propsets_CYU_AnBuCeAnBuAnC"><statement correct="yes"><p>True or false: <m>A\cap(B\cup C)=(A\cap B)\cup (A\cap C)</m>.</p></statement>
-      <answer>True</answer></exercise>
+      <answer><p>True</p></answer></exercise>
 
       <exercise label="DMT_propsets_CYU_AnBuCeAnBuC"><statement correct="no"><p>True or false: <m>A\cap(B\cup C)=(A\cap B)\cup C</m>.</p></statement>
-      <answer>False</answer></exercise>
+      <answer><p>False</p></answer></exercise>
 
       <exercise label="DMT_propsets_CYU_Auempeemp"><statement correct="no"><p>True or false: <m>A\cup \emptyset=\emptyset</m>.</p></statement>
-      <answer>False</answer></exercise>
+      <answer><p>False</p></answer></exercise>
 
       <exercise label="DMT_propsets_CYU_AuBceAcuBc"><statement correct="no"><p>True or false: <m>(A\cup B)^C=A^C\cup B^C</m>.</p></statement>
-      <answer>False</answer></exercise>
+      <answer><p>False</p></answer></exercise>
       
       <exercise label="DMT_propsets_CYU_BmAeAmB"><statement correct="no"><p>True or false:  <m>B-A=A-B</m>.</p></statement>
       <answer><p>False</p></answer></exercise>
@@ -185,7 +197,7 @@
 
     <exercises>
       <exercise><statement><p>Fill in the blanks.</p>
-        <ol marker="a">
+        <ol marker="a.">
     <li>
       <p>
     To say that an element is in <m>A\cap(B\cup C)</m> means that it is in ___ and in ___.
@@ -207,7 +219,7 @@
       <exercise><statement>
         <p>
     Illustrate the distributive laws by drawing the Venn diagrams for the given sets.</p>
-    <ol marker="a">
+    <ol marker="a.">
      <li><p><m>A\cup (B\cap C)</m> and <m>(A\cup B)\cap (A\cup C)</m></p></li>
      <li><p><m>A\cap (B\cup C)</m> and  <m>(A\cap B)\cup (A\cap C)</m></p></li>
    </ol>
@@ -216,7 +228,7 @@
       <exercise><statement>
          <p>
     Illustrate DeMorgan's laws by drawing the Venn diagrams for the given sets.</p>
-    <ol marker="a">
+    <ol marker="a.">
      <li><p><m>(A\cup B)^C</m> and <m>(A^C\cap B^C)</m></p></li>
      <li><p><m>(A\cap B)^C</m> and  <m>(A^C\cup B^C)</m></p></li>
    </ol>
@@ -250,7 +262,7 @@
         <p>
     Use an element argument to prove for all sets <m>A</m> and <m>B</m>, <m>(A\cap B)\cap (A\cap B^C)=\emptyset</m>. 
   </p>
-      </statement><hint>Proving a set is the empty set often involves a proof by contradiction.</hint></exercise>
+      </statement><hint><p>Proving a set is the empty set often involves a proof by contradiction.</p></hint></exercise>
       <exercise><statement>
         <p>
     Use an element argument to prove for all sets <m>A</m> and <m>B</m>, if <m>A\subseteq B</m> then <m>A\cap B^C=\emptyset</m>.
