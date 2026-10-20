@@ -19,15 +19,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-2 { system: extends decimal; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-3 { system: extends decimal; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-4 { system: extends lower-roman; prefix: ''; suffix: '. '; }
+</style>
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
 hasWebworkReps: false,
 hasSage: false,
 isReact: false,
 htmlPresentation: false,
+lang: "en-US",
 });
-</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta name="twitter:title" content="Discrete Mathematics: An Active Approach to Mathematical Reasoning">
@@ -36,7 +42,7 @@ htmlPresentation: false,
 <meta name="twitter:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta property="og:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.43"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.54"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.54"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -58,21 +64,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.9';
+eBookConfig.runestone_version = '8.3.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.846a0d6fafaa99e0.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.bbcfc02849ebc023.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/prefix-runtime.4beca1fdeed766a2.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.ebd33f6a21eed414.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.9963089870a016c8.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="DiscreteMathText" class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></div>
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="DiscreteMath-14-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
@@ -85,7 +91,17 @@ eBookConfig.enable_chatcodes =  false;
 <div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
 <ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
-<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
 <h2 class="heading">Readability settings</h2>
 <button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
@@ -134,6 +150,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter1.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to Mathematical Language</span></a></div>
 <ul id="ptx-toc-group-chapter1" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter1-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="variables1-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Variables and Statements</span></a></div>
 <ul id="ptx-toc-group-variables1-1" class="structural toc-item-list">
@@ -160,6 +177,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter2.html" class="internal"><span class="codenumber">2</span> <span class="title">Logic</span></a></div>
 <ul id="ptx-toc-group-chapter2" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter2-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="logical_form2-1.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Truth-Tables and Logical Equivalence</span></a></div>
 <ul id="ptx-toc-group-logical_form2-1" class="structural toc-item-list">
@@ -186,6 +204,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter3.html" class="internal"><span class="codenumber">3</span> <span class="title">Logic with Quantifiers</span></a></div>
 <ul id="ptx-toc-group-chapter3" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter3-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="quantifiersI3-1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Quantifiers</span></a></div>
 <ul id="ptx-toc-group-quantifiersI3-1" class="structural toc-item-list">
@@ -219,6 +238,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter4.html" class="internal"><span class="codenumber">4</span> <span class="title">Proof Techniques</span></a></div>
 <ul id="ptx-toc-group-chapter4" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter4-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="directproof4-1.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Direct Proof and Counterexample</span></a></div>
 <ul id="ptx-toc-group-directproof4-1" class="structural toc-item-list">
@@ -266,6 +286,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="chapter5.html" class="internal"><span class="codenumber">5</span> <span class="title">Sequences and Mathematical Induction</span></a></div>
 <ul class="structural toc-item-list contains-active" id="ptx-toc-group-chapter5">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter5-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sequences5-1.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Sequences</span></a></div>
 <ul id="ptx-toc-group-sequences5-1" class="structural toc-item-list">
@@ -313,6 +334,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter6.html" class="internal"><span class="codenumber">6</span> <span class="title">Set Theory</span></a></div>
 <ul id="ptx-toc-group-chapter6" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter6-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sets6-1.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Set Theory</span></a></div>
 <ul id="ptx-toc-group-sets6-1" class="structural toc-item-list">
@@ -339,6 +361,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter7.html" class="internal"><span class="codenumber">7</span> <span class="title">Functions</span></a></div>
 <ul id="ptx-toc-group-chapter7" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter7-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="functions7-1.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Functions</span></a></div>
 <ul id="ptx-toc-group-functions7-1" class="structural toc-item-list">
@@ -358,6 +381,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter8.html" class="internal"><span class="codenumber">8</span> <span class="title">Relations</span></a></div>
 <ul id="ptx-toc-group-chapter8" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter8-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="relations8-1.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Relations on Sets</span></a></div>
 <ul id="ptx-toc-group-relations8-1" class="structural toc-item-list">
@@ -391,6 +415,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter9.html" class="internal"><span class="codenumber">9</span> <span class="title">Probability and Counting</span></a></div>
 <ul id="ptx-toc-group-chapter9" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter9-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="probability9-1.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Probability</span></a></div>
 <ul id="ptx-toc-group-probability9-1" class="structural toc-item-list">
@@ -438,6 +463,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter10.html" class="internal"><span class="codenumber">10</span> <span class="title">Graph Theory</span></a></div>
 <ul id="ptx-toc-group-chapter10" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter10-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="graphs10-1.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphs</span></a></div>
 <ul id="ptx-toc-group-graphs10-1" class="structural toc-item-list">
@@ -465,7 +491,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="DiscreteMath-14.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul id="ptx-toc-group-DiscreteMath-14" class="structural toc-item-list">
 <li class="toc-item toc-references"><div class="toc-title-box"><a href="DiscreteMath-14-1.html" class="internal"><span class="title">References</span></a></div></li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A.</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="DiscreteMath-14-3.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="DiscreteMath-14-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
@@ -473,14 +499,14 @@ eBookConfig.enable_chatcodes =  false;
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="iteration5-6">
-<h2 class="heading hide-type">
+<h1 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Solving Recurrence Relations by Iteration</span>
-</h2>
+</h1>
 <div class="para" id="iteration5-6-4">Given a sequence defined recursively, we want to be able to find an explicit formula for the sequence. In general, this can be difficult and can involve very sophisticated mathematical tools. We will learn one method, the <dfn class="terminology">method of iteration</dfn>, just to get a taste for the ideas.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#iteration5-6-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="B_methoditeration-3">
 <div class="para">To find an explicit formula for a recursive sequence using the methods of iteration:</div>
-<ol class="decimal ol-marker-3" id="B_methoditeration-3-1">
+<ol class="decimal" style="list-style: ptx-marker-3;" id="B_methoditeration-3-1">
 <li id="B_methoditeration-3-1-1">
 <div class="para" id="p-derived-B_methoditeration-3-1-1">Calculate several terms of the sequence, often without simplifying the terms.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#B_methoditeration-3-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
@@ -501,9 +527,9 @@ eBookConfig.enable_chatcodes =  false;
 </ol>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#B_methoditeration-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_arithmetic" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding an Explicit Formula.</span>
-</h3></summary>
+<details id="E_arithmetic" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding an Explicit Formula.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para logical" id="E_arithmetic-3">
 <div class="para">Find the first five terms of the sequence given by</div>
@@ -536,7 +562,7 @@ a_4&amp; =(((4+3)+3)+3)+3
 </div>
 <div class="para" id="E_arithmetic-8">To prove this is the correct formula, we would assume <span class="process-math">\(a_k=a_{k-1}+3\)</span> and prove <span class="process-math">\(a_n=4+3n\)</span> by induction.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_arithmetic-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_arithmetic-9" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<details id="E_arithmetic-9" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
 <article class="hiddenproof knowl__content">
 <div class="para" id="E_arithmetic-9-1">Let <span class="process-math">\(a_k=a_{k-1}+3, a_0=4\text{.}\)</span> Prove <span class="process-math">\(a_n=4+3n, n\geq 0\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_arithmetic-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -562,9 +588,9 @@ a_{k+1}&amp;=a_k+3\\
 <div class="autopermalink" aria-hidden="true" data-description="Proof 5.6.1.1"><a tabindex="-1" href="#E_arithmetic-9" title="Copy heading and permalink for Proof 5.6.1.1" aria-label="Copy heading and permalink for Proof 5.6.1.1">🔗</a></div>
 </article></details><div class="autopermalink" aria-hidden="true" data-description="Example 5.6.1: Finding an Explicit Formula"><a tabindex="-1" href="#E_arithmetic" title="Copy heading and permalink for Example 5.6.1: Finding an Explicit Formula" aria-label="Copy heading and permalink for Example 5.6.1: Finding an Explicit Formula">🔗</a></div>
 </article></details>
-<article class="definition definition-like" id="D_arithseq"><h3 class="heading">
+<article class="definition definition-like" id="D_arithseq"><h2 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+</h2>
 <div class="para logical" id="D_arithseq-1">
 <div class="para">An <dfn class="terminology">arithmetic sequence</dfn> is given recursively by</div>
 <div class="displaymath process-math" id="D_arithseq-1-4">
@@ -577,32 +603,32 @@ a_k=a_{k-1}+d
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Definition 5.6.2"><a tabindex="-1" href="#D_arithseq" title="Copy heading and permalink for Definition 5.6.2" aria-label="Copy heading and permalink for Definition 5.6.2">🔗</a></div>
 </article>
-<article class="activity project-like" id="iterat-arith"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="iterat-arith"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="introduction" id="iterat-arith-1">
 <div class="para" id="iterat-arith-1-1">Generalize <a href="iteration5-6.html#E_arithmetic" class="xref" data-knowl="./knowl/xref/E_arithmetic.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.6.1: Finding an Explicit Formula">Example 5.6.1</a> to find an explicit formula for an arithmetic sequence.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#iterat-arith-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="iterat-arith-first6"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="iterat-arith-first6"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="iterat-arith-first6-1-1">Let <span class="process-math">\(d=5, a_0=2\text{.}\)</span> Write out the first 6 terms of the arithmetic sequence. Can you find an explicit formula for the sequence (one that just depends on <span class="process-math">\(n\)</span>)?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#iterat-arith-first6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.6.1.a"><a tabindex="-1" href="#iterat-arith-first6" title="Copy heading and permalink for Task 5.6.1.a" aria-label="Copy heading and permalink for Task 5.6.1.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.6.3.a"><a tabindex="-1" href="#iterat-arith-first6" title="Copy heading and permalink for Task 5.6.3.a" aria-label="Copy heading and permalink for Task 5.6.3.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="iterat-arith-nosimp"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="iterat-arith-nosimp"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="iterat-arith-nosimp-1-1">Write out the first 6 terms of the sequence <em class="emphasis">without simplifying at all</em>. Now can you find an explicit formula?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#iterat-arith-nosimp-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.6.1.b"><a tabindex="-1" href="#iterat-arith-nosimp" title="Copy heading and permalink for Task 5.6.1.b" aria-label="Copy heading and permalink for Task 5.6.1.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.6.3.b"><a tabindex="-1" href="#iterat-arith-nosimp" title="Copy heading and permalink for Task 5.6.3.b" aria-label="Copy heading and permalink for Task 5.6.3.b">🔗</a></div>
 </article>
-<article class="task exercise-like" id="iterat-arith-expform"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<article class="task exercise-like" id="iterat-arith-expform"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="iterat-arith-expform-1-1">Using the same technique of writing out the terms without simplifying, find an explicit formula for the general form, <span class="process-math">\(a_k=a_{k-1}+d\text{,}\)</span> of an arithmetic sequence.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#iterat-arith-expform-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.6.1.c"><a tabindex="-1" href="#iterat-arith-expform" title="Copy heading and permalink for Task 5.6.1.c" aria-label="Copy heading and permalink for Task 5.6.1.c">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 5.6.1"><a tabindex="-1" href="#iterat-arith" title="Copy heading and permalink for Activity 5.6.1" aria-label="Copy heading and permalink for Activity 5.6.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.6.3.c"><a tabindex="-1" href="#iterat-arith-expform" title="Copy heading and permalink for Task 5.6.3.c" aria-label="Copy heading and permalink for Task 5.6.3.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 5.6.3"><a tabindex="-1" href="#iterat-arith" title="Copy heading and permalink for Activity 5.6.3" aria-label="Copy heading and permalink for Activity 5.6.3">🔗</a></div>
 </article>
-<article class="definition definition-like" id="D_geomseq"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="definition definition-like" id="D_geomseq"><h2 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para logical" id="D_geomseq-1">
 <div class="para">A <dfn class="terminology">geometric sequence</dfn> is given recursively by</div>
 <div class="displaymath process-math" id="D_geomseq-1-4">
@@ -613,32 +639,32 @@ a_k=ra_{k-1}
 <div class="para">where <span class="process-math">\(r\)</span> is constant.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_geomseq-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definition 5.6.3"><a tabindex="-1" href="#D_geomseq" title="Copy heading and permalink for Definition 5.6.3" aria-label="Copy heading and permalink for Definition 5.6.3">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 5.6.4"><a tabindex="-1" href="#D_geomseq" title="Copy heading and permalink for Definition 5.6.4" aria-label="Copy heading and permalink for Definition 5.6.4">🔗</a></div>
 </article>
-<article class="activity project-like" id="iterat-geom"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="iterat-geom"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="introduction" id="iterat-geom-1">
 <div class="para" id="iterat-geom-1-1">Use the method of iteration to find an explicit formula for a geometric sequence.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#iterat-geom-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="iterat-geom-first6"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="iterat-geom-first6"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="iterat-geom-first6-1-1">Let <span class="process-math">\(r=2, a_0=3\text{.}\)</span> Write out the first 6 terms of the geometric sequence. Can you find an explicit formula for the sequence (one that just depends on <span class="process-math">\(n\)</span>)?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#iterat-geom-first6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.6.2.a"><a tabindex="-1" href="#iterat-geom-first6" title="Copy heading and permalink for Task 5.6.2.a" aria-label="Copy heading and permalink for Task 5.6.2.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.6.5.a"><a tabindex="-1" href="#iterat-geom-first6" title="Copy heading and permalink for Task 5.6.5.a" aria-label="Copy heading and permalink for Task 5.6.5.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="iterat-geom-nosimp"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="iterat-geom-nosimp"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="iterat-geom-nosimp-1-1">Write out the first 6 terms of the sequence <em class="emphasis">without simplifying at all</em>. Now can you find an explicit formula?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#iterat-geom-nosimp-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.6.2.b"><a tabindex="-1" href="#iterat-geom-nosimp" title="Copy heading and permalink for Task 5.6.2.b" aria-label="Copy heading and permalink for Task 5.6.2.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.6.5.b"><a tabindex="-1" href="#iterat-geom-nosimp" title="Copy heading and permalink for Task 5.6.5.b" aria-label="Copy heading and permalink for Task 5.6.5.b">🔗</a></div>
 </article>
-<article class="task exercise-like" id="iterat-geom-expform"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<article class="task exercise-like" id="iterat-geom-expform"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="iterat-geom-expform-1-1">Using the same technique of writing out the terms without simplifying, find an explicit formula for the general form, <span class="process-math">\(a_k=ra_{k-1}\text{,}\)</span> of a geometric sequence.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#iterat-geom-expform-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.6.2.c"><a tabindex="-1" href="#iterat-geom-expform" title="Copy heading and permalink for Task 5.6.2.c" aria-label="Copy heading and permalink for Task 5.6.2.c">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 5.6.2"><a tabindex="-1" href="#iterat-geom" title="Copy heading and permalink for Activity 5.6.2" aria-label="Copy heading and permalink for Activity 5.6.2">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.6.5.c"><a tabindex="-1" href="#iterat-geom-expform" title="Copy heading and permalink for Task 5.6.5.c" aria-label="Copy heading and permalink for Task 5.6.5.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 5.6.5"><a tabindex="-1" href="#iterat-geom" title="Copy heading and permalink for Activity 5.6.5" aria-label="Copy heading and permalink for Activity 5.6.5">🔗</a></div>
 </article>
-<article class="assemblage assemblage-like" id="B_pfexplictformula"><h3 class="heading"><span class="title">Proving a Recursive Sequence Satisfies an Explicit Formula.</span></h3>
+<article class="assemblage assemblage-like" id="B_pfexplictformula"><h2 class="heading"><span class="title">Proving a Recursive Sequence Satisfies an Explicit Formula.</span></h2>
 <div class="para logical" id="B_pfexplictformula-4">
 <div class="para">To prove a recursively defined sequence satisfies an explicit formula:</div>
 <ul class="disc" id="B_pfexplictformula-4-1">
@@ -655,9 +681,9 @@ a_k=ra_{k-1}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Assemblage: Proving a Recursive Sequence Satisfies an Explicit Formula"><a tabindex="-1" href="#B_pfexplictformula" title="Copy heading and permalink for Assemblage: Proving a Recursive Sequence Satisfies an Explicit Formula" aria-label="Copy heading and permalink for Assemblage: Proving a Recursive Sequence Satisfies an Explicit Formula">🔗</a></div>
 </article>
-<article class="activity project-like" id="iterat-pfarithind"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="iterat-pfarithind"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="iterat-pfarithind-1-1">Prove if <span class="process-math">\(a_0=2\)</span> and <span class="process-math">\(a_k=a_{k-1}+5\text{,}\)</span> then <span class="process-math">\(a_n=2+5n\)</span> for <span class="process-math">\(n\geq 0\)</span> by induction.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#iterat-pfarithind-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
@@ -665,14 +691,14 @@ a_k=ra_{k-1}
 <div class="hint solution-like knowl__content">
 <div class="para" id="iterat-pfarithind-3-1">You are assuming the recursive relationship holds. The statement you are proving by induction is that <span class="process-math">\(a_n=2+5n\)</span> for <span class="process-math">\(n\geq 0\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#iterat-pfarithind-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Hint 5.6.3.1"><a tabindex="-1" href="#iterat-pfarithind-3" title="Copy heading and permalink for Hint 5.6.3.1" aria-label="Copy heading and permalink for Hint 5.6.3.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Hint 5.6.6.1"><a tabindex="-1" href="#iterat-pfarithind-3" title="Copy heading and permalink for Hint 5.6.6.1" aria-label="Copy heading and permalink for Hint 5.6.6.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 5.6.3"><a tabindex="-1" href="#iterat-pfarithind" title="Copy heading and permalink for Activity 5.6.3" aria-label="Copy heading and permalink for Activity 5.6.3">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 5.6.6"><a tabindex="-1" href="#iterat-pfarithind" title="Copy heading and permalink for Activity 5.6.6" aria-label="Copy heading and permalink for Activity 5.6.6">🔗</a></div>
 </article>
-<article class="activity project-like" id="iterat-pfgeoind"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="iterat-pfgeoind"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="iterat-pfgeoind-1-1">Prove if <span class="process-math">\(a_k=ra_{k-1}\text{,}\)</span> then <span class="process-math">\(a_n=a_0r^n\)</span> for <span class="process-math">\(n\geq 0\)</span> by induction.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#iterat-pfgeoind-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
@@ -680,29 +706,29 @@ a_k=ra_{k-1}
 <div class="hint solution-like knowl__content">
 <div class="para" id="iterat-pfgeoind-3-1">You are assuming the recursive relationship holds. The statement you are proving by induction is that <span class="process-math">\(a_n=a_0r^n\)</span> for <span class="process-math">\(n\geq 0\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#iterat-pfgeoind-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Hint 5.6.4.1"><a tabindex="-1" href="#iterat-pfgeoind-3" title="Copy heading and permalink for Hint 5.6.4.1" aria-label="Copy heading and permalink for Hint 5.6.4.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Hint 5.6.7.1"><a tabindex="-1" href="#iterat-pfgeoind-3" title="Copy heading and permalink for Hint 5.6.7.1" aria-label="Copy heading and permalink for Hint 5.6.7.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 5.6.4"><a tabindex="-1" href="#iterat-pfgeoind" title="Copy heading and permalink for Activity 5.6.4" aria-label="Copy heading and permalink for Activity 5.6.4">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 5.6.7"><a tabindex="-1" href="#iterat-pfgeoind" title="Copy heading and permalink for Activity 5.6.7" aria-label="Copy heading and permalink for Activity 5.6.7">🔗</a></div>
 </article>
-<div class="para" id="iteration5-6-14">As promised, in <a href="iteration5-6.html#E_explicitfib" class="xref" data-knowl="./knowl/xref/E_explicitfib.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.6.4: Proving Explicit Formula for the Fibonacci Sequence">Example 5.6.4</a> we will prove an explicit formula for the Fibonacci sequence. We will not derive it as that is beyond the scope of this course. But we can prove that it works using induction. Before working through the proof, it will be helpful to see the algebraic simplification in the next activity.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#iteration5-6-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="iteration5-6-14">As promised, in <a href="iteration5-6.html#E_explicitfib" class="xref" data-knowl="./knowl/xref/E_explicitfib.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.6.9: Proving Explicit Formula for the Fibonacci Sequence">Example 5.6.9</a> we will prove an explicit formula for the Fibonacci sequence. We will not derive it as that is beyond the scope of this course. But we can prove that it works using induction. Before working through the proof, it will be helpful to see the algebraic simplification in the next activity.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#iteration5-6-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="activity project-like" id="iterat-simpgoldrat"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="iterat-simpgoldrat"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="iterat-simpgoldrat-1-1">Simplify <span class="process-math">\(\Bigl(\frac{1+\sqrt{5}}{2}\Bigr)^2\)</span> and <span class="process-math">\(\Bigl(\frac{1-\sqrt{5}}{2}\Bigr)^2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#iterat-simpgoldrat-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 5.6.5"><a tabindex="-1" href="#iterat-simpgoldrat" title="Copy heading and permalink for Activity 5.6.5" aria-label="Copy heading and permalink for Activity 5.6.5">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 5.6.8"><a tabindex="-1" href="#iterat-simpgoldrat" title="Copy heading and permalink for Activity 5.6.8" aria-label="Copy heading and permalink for Activity 5.6.8">🔗</a></div>
 </article>
-<details id="E_explicitfib" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Proving Explicit Formula for the Fibonacci Sequence.</span>
-</h3></summary>
+<details id="E_explicitfib" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.9</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Proving Explicit Formula for the Fibonacci Sequence.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_explicitfib-3">Let <span class="process-math">\(F_k=F_{k-1}+F_{k-2}, k\geq 1\text{,}\)</span> <span class="process-math">\(F_0=1, F_1=1\)</span> be the Fibonacci sequence.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_explicitfib-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="E_explicitfib-4">Prove <span class="process-math">\(F_n=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{n+1}-\biggl(\frac{1-\sqrt{5}}{2}\biggr)^{n+1}\biggr]\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_explicitfib-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_explicitfib-5" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<details id="E_explicitfib-5" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
 <article class="hiddenproof knowl__content">
 <div class="para" id="E_explicitfib-5-1">Let <span class="process-math">\(F_k=F_{k-1}+F_{k-2}, F_0=1, F_1=1\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_explicitfib-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -768,15 +794,15 @@ F_{k+1}&amp;=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k+1}-\
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_explicitfib-5-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Proof 5.6.4.1"><a tabindex="-1" href="#E_explicitfib-5" title="Copy heading and permalink for Proof 5.6.4.1" aria-label="Copy heading and permalink for Proof 5.6.4.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 5.6.9.1"><a tabindex="-1" href="#E_explicitfib-5" title="Copy heading and permalink for Proof 5.6.9.1" aria-label="Copy heading and permalink for Proof 5.6.9.1">🔗</a></div>
 </article></details>
 <div class="para" id="E_explicitfib-6">Note, the proof contains some algebraic steps that may not be obvious. But all of them can be checked. For example, it is easier to see that <span class="process-math">\(\biggl(\frac{3+\sqrt{5}}{2}\biggr)=\biggl(\frac{1+\sqrt{5}}{2}\biggr)^2\)</span> by squaring the RHS and simplifying.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_explicitfib-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Example 5.6.4: Proving Explicit Formula for the Fibonacci Sequence"><a tabindex="-1" href="#E_explicitfib" title="Copy heading and permalink for Example 5.6.4: Proving Explicit Formula for the Fibonacci Sequence" aria-label="Copy heading and permalink for Example 5.6.4: Proving Explicit Formula for the Fibonacci Sequence">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 5.6.9: Proving Explicit Formula for the Fibonacci Sequence"><a tabindex="-1" href="#E_explicitfib" title="Copy heading and permalink for Example 5.6.9: Proving Explicit Formula for the Fibonacci Sequence" aria-label="Copy heading and permalink for Example 5.6.9: Proving Explicit Formula for the Fibonacci Sequence">🔗</a></div>
 </article></details>
 <div class="para" id="iteration5-6-17">It can be confusing to remember when to use induction and when to use a LHS/RHS proof. The following summary gives guidelines for when to use each technique.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#iteration5-6-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="assemblage assemblage-like" id="B_summaryrecursiveexplicit"><h3 class="heading"><span class="title">Summary of Techniques for Sequences.</span></h3>
+<article class="assemblage assemblage-like" id="B_summaryrecursiveexplicit"><h2 class="heading"><span class="title">Summary of Techniques for Sequences.</span></h2>
 <div class="para logical" id="B_summaryrecursiveexplicit-4">
 <div class="para">If you are given a sequence where each term is just a formula for <span class="process-math">\(n\text{:}\)</span>
 </div>
@@ -833,40 +859,40 @@ F_{k+1}&amp;=\frac{1}{\sqrt{5}}\biggl[\biggl(\frac{1+\sqrt{5}}{2}\biggr)^{k+1}-\
 <div class="autopermalink" aria-hidden="true" data-description="Assemblage: Summary of Techniques for Sequences"><a tabindex="-1" href="#B_summaryrecursiveexplicit" title="Copy heading and permalink for Assemblage: Summary of Techniques for Sequences" aria-label="Copy heading and permalink for Assemblage: Summary of Techniques for Sequences">🔗</a></div>
 </article>
 <section class="reading-questions" id="iteration5-6-19">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Check Your Understanding</span>
-</h3>
-<article class="exercise exercise-like" id="DMT_iterat_CYU_rr3612"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</h2>
+<article class="exercise exercise-like" id="DMT_iterat_CYU_rr3612"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_iterat_CYU_rr3612-1-1">Find a recurrence relation for <span class="process-math">\(3, 6, 12, 24, 48, \ldots\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_iterat_CYU_rr3612-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 5.6.1"><a tabindex="-1" href="#DMT_iterat_CYU_rr3612" title="Copy heading and permalink for Reading Question 5.6.1" aria-label="Copy heading and permalink for Reading Question 5.6.1">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_iterat_CYU_exp3612"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_iterat_CYU_exp3612"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_iterat_CYU_exp3612-1-1">Find an explicit formula for <span class="process-math">\(3, 6, 12, 24, 48, \ldots\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_iterat_CYU_exp3612-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 5.6.2"><a tabindex="-1" href="#DMT_iterat_CYU_exp3612" title="Copy heading and permalink for Reading Question 5.6.2" aria-label="Copy heading and permalink for Reading Question 5.6.2">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_iterat_CYU_rr2610"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_iterat_CYU_rr2610"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_iterat_CYU_rr2610-1-1">Find a recurrence relation for <span class="process-math">\(2, 6, 10, 14, 18, \ldots\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_iterat_CYU_rr2610-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 5.6.3"><a tabindex="-1" href="#DMT_iterat_CYU_rr2610" title="Copy heading and permalink for Reading Question 5.6.3" aria-label="Copy heading and permalink for Reading Question 5.6.3">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_iterat_CYU_exp2610"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_iterat_CYU_exp2610"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_iterat_CYU_exp2610-1-1">Find an explicit formula for <span class="process-math">\(2, 6, 10, 14, 18, \ldots\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_iterat_CYU_exp2610-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 5.6.4"><a tabindex="-1" href="#DMT_iterat_CYU_exp2610" title="Copy heading and permalink for Reading Question 5.6.4" aria-label="Copy heading and permalink for Reading Question 5.6.4">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_iterat_CYU_simpgrat2"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_iterat_CYU_simpgrat2"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_iterat_CYU_simpgrat2-1-1">Simplify <span class="process-math">\(\biggl(\frac{1-\sqrt{5}}{2}\biggr)^2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_iterat_CYU_simpgrat2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 5.6.5"><a tabindex="-1" href="#DMT_iterat_CYU_simpgrat2" title="Copy heading and permalink for Reading Question 5.6.5" aria-label="Copy heading and permalink for Reading Question 5.6.5">🔗</a></div>
 </article><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 5.6: Check Your Understanding"><a tabindex="-1" href="#iteration5-6-19" title="Copy heading and permalink for Reading Questions 5.6: Check Your Understanding" aria-label="Copy heading and permalink for Reading Questions 5.6: Check Your Understanding">🔗</a></div>
 </section>
 <section class="exercises" id="iteration5-6-20">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
-</h3>
-<article class="exercise exercise-like" id="X_itform1"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</h2>
+<article class="exercise exercise-like" id="X_itform1"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para logical" id="X_itform1-1-1">
 <div class="para">Use iteration to conjecture an explicit formula for the sequence</div>
 <div class="displaymath process-math" id="X_itform1-1-1-1">
@@ -883,7 +909,7 @@ a_k=ka_{k-1}, k\geq1.
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 5.6.1"><a tabindex="-1" href="#X_itform1" title="Copy heading and permalink for Exercise 5.6.1" aria-label="Copy heading and permalink for Exercise 5.6.1">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="X_itform2"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="X_itform2"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para logical" id="X_itform2-1-1">
 <div class="para">Use iteration to conjecture an explicit formula for the sequence</div>
 <div class="displaymath process-math" id="X_itform2-1-1-1">
@@ -908,7 +934,7 @@ b_k=3b_{k-1}+1, k\geq2.
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 5.6.2"><a tabindex="-1" href="#X_itform2" title="Copy heading and permalink for Exercise 5.6.2" aria-label="Copy heading and permalink for Exercise 5.6.2">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="X_itform3"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="X_itform3"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para logical" id="X_itform3-1-1">
 <div class="para">Use iteration to conjecture an explicit formula for the sequence</div>
 <div class="displaymath process-math" id="X_itform3-1-1-1">
@@ -933,27 +959,27 @@ r_k=r_{k-1}+2k, k\geq1.
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 5.6.3"><a tabindex="-1" href="#X_itform3" title="Copy heading and permalink for Exercise 5.6.3" aria-label="Copy heading and permalink for Exercise 5.6.3">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="iteration5-6-20-4"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="iteration5-6-20-4"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="iteration5-6-20-4-1-1">Suppose <span class="process-math">\(d\)</span> is a fixed constant and <span class="process-math">\(a_0, a_1, a_2,\ldots\)</span> is a sequence that satisfies the recurrence relation <span class="process-math">\(a_k=a_{k-1}+d\)</span> for all integers <span class="process-math">\(k\geq 1\text{.}\)</span> Use mathematical induction to prove that <span class="process-math">\(a_n=a_0+nd\)</span> for all integers <span class="process-math">\(n\geq 0\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#iteration5-6-20-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 5.6.4"><a tabindex="-1" href="#iteration5-6-20-4" title="Copy heading and permalink for Exercise 5.6.4" aria-label="Copy heading and permalink for Exercise 5.6.4">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="iteration5-6-20-5"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="iteration5-6-20-5"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="iteration5-6-20-5-1-1">Suppose <span class="process-math">\(r\)</span> is a fixed constant and <span class="process-math">\(a_0, a_1, a_2,\ldots\)</span> is a sequence that satisfies the recurrence relation <span class="process-math">\(a_k=ra_{k-1}\)</span> for all integers <span class="process-math">\(k\geq 1\text{.}\)</span> Use mathematical induction to prove that <span class="process-math">\(a_n=a_0r^n\)</span> for all integers <span class="process-math">\(n\geq 0\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#iteration5-6-20-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 5.6.5"><a tabindex="-1" href="#iteration5-6-20-5" title="Copy heading and permalink for Exercise 5.6.5" aria-label="Copy heading and permalink for Exercise 5.6.5">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="iteration5-6-20-6"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="iteration5-6-20-6"><h3 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="iteration5-6-20-6-1-1">Use induction to prove your conjectured formula from <a href="iteration5-6.html#X_itform1" class="xref" data-knowl="./knowl/xref/X_itform1.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 5.6.1">Exercise 5.6.1</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#iteration5-6-20-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 5.6.6"><a tabindex="-1" href="#iteration5-6-20-6" title="Copy heading and permalink for Exercise 5.6.6" aria-label="Copy heading and permalink for Exercise 5.6.6">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="iteration5-6-20-7"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="iteration5-6-20-7"><h3 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="iteration5-6-20-7-1-1">Use induction to prove your conjectured formula from <a href="iteration5-6.html#X_itform2" class="xref" data-knowl="./knowl/xref/X_itform2.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 5.6.2">Exercise 5.6.2</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#iteration5-6-20-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 5.6.7"><a tabindex="-1" href="#iteration5-6-20-7" title="Copy heading and permalink for Exercise 5.6.7" aria-label="Copy heading and permalink for Exercise 5.6.7">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="iteration5-6-20-8"><h4 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="iteration5-6-20-8"><h3 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="iteration5-6-20-8-1-1">Use induction to prove your conjectured formula from <a href="iteration5-6.html#X_itform3" class="xref" data-knowl="./knowl/xref/X_itform3.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 5.6.3">Exercise 5.6.3</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#iteration5-6-20-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 5.6.8"><a tabindex="-1" href="#iteration5-6-20-8" title="Copy heading and permalink for Exercise 5.6.8" aria-label="Copy heading and permalink for Exercise 5.6.8">🔗</a></div>

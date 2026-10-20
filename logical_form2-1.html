@@ -19,15 +19,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-2 { system: extends decimal; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-3 { system: extends decimal; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-4 { system: extends lower-roman; prefix: ''; suffix: '. '; }
+</style>
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
 hasWebworkReps: false,
 hasSage: false,
 isReact: false,
 htmlPresentation: false,
+lang: "en-US",
 });
-</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta name="twitter:title" content="Discrete Mathematics: An Active Approach to Mathematical Reasoning">
@@ -36,7 +42,7 @@ htmlPresentation: false,
 <meta name="twitter:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta property="og:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.43"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.54"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.54"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -58,21 +64,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.9';
+eBookConfig.runestone_version = '8.3.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.846a0d6fafaa99e0.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.bbcfc02849ebc023.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/prefix-runtime.4beca1fdeed766a2.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.ebd33f6a21eed414.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.9963089870a016c8.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="DiscreteMathText" class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></div>
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="DiscreteMath-14-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
@@ -85,7 +91,17 @@ eBookConfig.enable_chatcodes =  false;
 <div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
 <ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
-<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
 <h2 class="heading">Readability settings</h2>
 <button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
@@ -103,7 +119,7 @@ eBookConfig.enable_chatcodes =  false;
 <legend>Assistive technologies</legend>
 <label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
 </fieldset>
-<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="chapter2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter2.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="conditional2-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="chapter2-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter2.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="conditional2-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \newcommand{\MyTikzmark}[2]{
      \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
 \newcommand{\DrawVLine}[3][]{
@@ -134,6 +150,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter1.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to Mathematical Language</span></a></div>
 <ul id="ptx-toc-group-chapter1" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter1-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="variables1-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Variables and Statements</span></a></div>
 <ul id="ptx-toc-group-variables1-1" class="structural toc-item-list">
@@ -160,6 +177,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="chapter2.html" class="internal"><span class="codenumber">2</span> <span class="title">Logic</span></a></div>
 <ul class="structural toc-item-list contains-active" id="ptx-toc-group-chapter2">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter2-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="logical_form2-1.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Truth-Tables and Logical Equivalence</span></a></div>
 <ul class="structural toc-item-list active" id="ptx-toc-group-logical_form2-1">
@@ -186,6 +204,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter3.html" class="internal"><span class="codenumber">3</span> <span class="title">Logic with Quantifiers</span></a></div>
 <ul id="ptx-toc-group-chapter3" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter3-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="quantifiersI3-1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Quantifiers</span></a></div>
 <ul id="ptx-toc-group-quantifiersI3-1" class="structural toc-item-list">
@@ -219,6 +238,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter4.html" class="internal"><span class="codenumber">4</span> <span class="title">Proof Techniques</span></a></div>
 <ul id="ptx-toc-group-chapter4" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter4-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="directproof4-1.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Direct Proof and Counterexample</span></a></div>
 <ul id="ptx-toc-group-directproof4-1" class="structural toc-item-list">
@@ -266,6 +286,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter5.html" class="internal"><span class="codenumber">5</span> <span class="title">Sequences and Mathematical Induction</span></a></div>
 <ul id="ptx-toc-group-chapter5" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter5-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sequences5-1.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Sequences</span></a></div>
 <ul id="ptx-toc-group-sequences5-1" class="structural toc-item-list">
@@ -313,6 +334,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter6.html" class="internal"><span class="codenumber">6</span> <span class="title">Set Theory</span></a></div>
 <ul id="ptx-toc-group-chapter6" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter6-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sets6-1.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Set Theory</span></a></div>
 <ul id="ptx-toc-group-sets6-1" class="structural toc-item-list">
@@ -339,6 +361,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter7.html" class="internal"><span class="codenumber">7</span> <span class="title">Functions</span></a></div>
 <ul id="ptx-toc-group-chapter7" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter7-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="functions7-1.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Functions</span></a></div>
 <ul id="ptx-toc-group-functions7-1" class="structural toc-item-list">
@@ -358,6 +381,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter8.html" class="internal"><span class="codenumber">8</span> <span class="title">Relations</span></a></div>
 <ul id="ptx-toc-group-chapter8" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter8-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="relations8-1.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Relations on Sets</span></a></div>
 <ul id="ptx-toc-group-relations8-1" class="structural toc-item-list">
@@ -391,6 +415,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter9.html" class="internal"><span class="codenumber">9</span> <span class="title">Probability and Counting</span></a></div>
 <ul id="ptx-toc-group-chapter9" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter9-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="probability9-1.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Probability</span></a></div>
 <ul id="ptx-toc-group-probability9-1" class="structural toc-item-list">
@@ -438,6 +463,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter10.html" class="internal"><span class="codenumber">10</span> <span class="title">Graph Theory</span></a></div>
 <ul id="ptx-toc-group-chapter10" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter10-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="graphs10-1.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphs</span></a></div>
 <ul id="ptx-toc-group-graphs10-1" class="structural toc-item-list">
@@ -465,7 +491,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="DiscreteMath-14.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul id="ptx-toc-group-DiscreteMath-14" class="structural toc-item-list">
 <li class="toc-item toc-references"><div class="toc-title-box"><a href="DiscreteMath-14-1.html" class="internal"><span class="title">References</span></a></div></li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A.</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="DiscreteMath-14-3.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="DiscreteMath-14-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
@@ -473,16 +499,16 @@ eBookConfig.enable_chatcodes =  false;
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="logical_form2-1">
-<h2 class="heading hide-type">
+<h1 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Truth-Tables and Logical Equivalence</span>
-</h2>
+</h1>
 <div class="para" id="logical_form2-1-2">We want to understand what makes a mathematical proof. One of the foundations for proofs is logical structure. If we build a good foundation in logic, then we can better understand mathematical statements and proof structures. So we begin by looking at logical forms, independent of content.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="logical_form2-1-3">A logical argument consists of premises and a conclusion. The premises and conclusion are statements. A <dfn class="terminology">statement</dfn> is a sentence that is either true or false (not both).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_statement" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Statements.</span>
-</h3></summary>
+<details id="E_statement" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Statements.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <ul class="disc" id="E_statement-2">
 <li id="E_statement-2-1">
@@ -510,7 +536,7 @@ eBookConfig.enable_chatcodes =  false;
 </article></details>
 <div class="para" id="logical_form2-1-5">If <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are variables representing statements, we can combine these statements into new statements using logical connectives.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="assemblage assemblage-like" id="B_connectives"><h3 class="heading"><span class="title">Logical Connectives: NOT, AND, OR.</span></h3>
+<article class="assemblage assemblage-like" id="B_connectives"><h2 class="heading"><span class="title">Logical Connectives: NOT, AND, OR.</span></h2>
 <div class="para logical" id="B_connectives-2">
 <ul class="disc" id="B_connectives-2-1">
 <li id="B_connectives-2-1-1">
@@ -662,44 +688,44 @@ eBookConfig.enable_chatcodes =  false;
 </table></div>
 </figure><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="activity project-like" id="truthtable-ttor"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="truthtable-ttor"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="truthtable-ttor-1-1">Give the truth-table for <span class="process-math">\(\sim p\  \vee \sim q\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#truthtable-ttor-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 2.1.1"><a tabindex="-1" href="#truthtable-ttor" title="Copy heading and permalink for Activity 2.1.1" aria-label="Copy heading and permalink for Activity 2.1.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.1.6"><a tabindex="-1" href="#truthtable-ttor" title="Copy heading and permalink for Activity 2.1.6" aria-label="Copy heading and permalink for Activity 2.1.6">🔗</a></div>
 </article>
-<article class="activity project-like" id="truthtable-ttorandor"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="truthtable-ttorandor"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="truthtable-ttorandor-1-1">Give the truth-table for <span class="process-math">\((p \vee q) \wedge \sim(p \wedge q)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#truthtable-ttorandor-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 2.1.2"><a tabindex="-1" href="#truthtable-ttorandor" title="Copy heading and permalink for Activity 2.1.2" aria-label="Copy heading and permalink for Activity 2.1.2">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.1.7"><a tabindex="-1" href="#truthtable-ttorandor" title="Copy heading and permalink for Activity 2.1.7" aria-label="Copy heading and permalink for Activity 2.1.7">🔗</a></div>
 </article>
-<article class="activity project-like" id="truthtable-tt3var"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="truthtable-tt3var"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="truthtable-tt3var-1-1">Truth-tables can have more than two variables. We just need to make sure we have a row for every possible combination of truth values for the variables. How many rows will you need in a truth-table for 3 variables? Give the truth-table for <span class="process-math">\((p \wedge q) \vee r\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#truthtable-tt3var-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 2.1.3"><a tabindex="-1" href="#truthtable-tt3var" title="Copy heading and permalink for Activity 2.1.3" aria-label="Copy heading and permalink for Activity 2.1.3">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.1.8"><a tabindex="-1" href="#truthtable-tt3var" title="Copy heading and permalink for Activity 2.1.8" aria-label="Copy heading and permalink for Activity 2.1.8">🔗</a></div>
 </article>
 <div class="para" id="logical_form2-1-19">One of the things we want to be able to do is to translate English (or mathematical) sentences into logical statements. We have to be careful about how common phrases are really hidden “and”s. For example, “<span class="process-math">\(p\)</span> but <span class="process-math">\(q\)</span>” is really <span class="process-math">\(p\wedge q\text{.}\)</span> Similarly, “neither <span class="process-math">\(p\)</span> nor <span class="process-math">\(q\)</span>” is really <span class="process-math">\(\sim p\ \wedge \sim q\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="definition definition-like" id="logical_form2-1-20"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="definition definition-like" id="logical_form2-1-20"><h2 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="logical_form2-1-20-1-1">A <dfn class="terminology">tautology</dfn> is a statement that is always true.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-20-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definition 2.1.6"><a tabindex="-1" href="#logical_form2-1-20" title="Copy heading and permalink for Definition 2.1.6" aria-label="Copy heading and permalink for Definition 2.1.6">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 2.1.9"><a tabindex="-1" href="#logical_form2-1-20" title="Copy heading and permalink for Definition 2.1.9" aria-label="Copy heading and permalink for Definition 2.1.9">🔗</a></div>
 </article>
 <div class="para" id="logical_form2-1-21">For example, <span class="process-math">\(p\ \vee \sim p\)</span> is a tautology. If you check the truth-table, you will see that the only values in the column for the statement are T.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="definition definition-like" id="logical_form2-1-22"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="definition definition-like" id="logical_form2-1-22"><h2 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="logical_form2-1-22-1-1">A <dfn class="terminology">contradiction</dfn> is a statement that is always false.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-22-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definition 2.1.7"><a tabindex="-1" href="#logical_form2-1-22" title="Copy heading and permalink for Definition 2.1.7" aria-label="Copy heading and permalink for Definition 2.1.7">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 2.1.10"><a tabindex="-1" href="#logical_form2-1-22" title="Copy heading and permalink for Definition 2.1.10" aria-label="Copy heading and permalink for Definition 2.1.10">🔗</a></div>
 </article>
 <div class="para" id="logical_form2-1-23">For example, <span class="process-math">\(p\ \wedge \sim p\)</span> is a contradiction. If you check the truth-table, you will see that the only values in the column for the statement are F.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -707,12 +733,12 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="logical_form2-1-25">If we want to make bigger statements using tautologies or contradictions, we can use <span class="process-math">\(\mathbf{t}\)</span> to represent a tautology and <span class="process-math">\(\mathbf{c}\)</span> to represent a contradiction. For example, we could find the truth-table for <span class="process-math">\(p\wedge \mathbf{t}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="logical_form2-1-26" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Example of <span class="process-math">\(p\wedge \mathbf{t}\)</span>.</span>
-</h3></summary>
+<details id="logical_form2-1-26" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.11</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Example of <span class="process-math">\(p\wedge \mathbf{t}\)</span>.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="logical_form2-1-26-2">
-<figure class="table table-like" id="T_ttwithtautology"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Truth-table for <span class="process-math">\(p\wedge \mathbf{t}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Table 2.1.9: Truth-table for p\wedge \mathbf{t}"><a tabindex="-1" href="#T_ttwithtautology" title="Copy heading and permalink for Table 2.1.9: Truth-table for p\wedge \mathbf{t}" aria-label="Copy heading and permalink for Table 2.1.9: Truth-table for p\wedge \mathbf{t}">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<figure class="table table-like" id="T_ttwithtautology"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Truth-table for <span class="process-math">\(p\wedge \mathbf{t}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Table 2.1.12: Truth-table for p\wedge \mathbf{t}"><a tabindex="-1" href="#T_ttwithtautology" title="Copy heading and permalink for Table 2.1.12: Truth-table for p\wedge \mathbf{t}" aria-label="Copy heading and permalink for Table 2.1.12: Truth-table for p\wedge \mathbf{t}">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r2 l1 t1 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t1 lines"><span class="process-math">\(\mathbf{t}\)</span></td>
@@ -731,49 +757,49 @@ eBookConfig.enable_chatcodes =  false;
 </table></div>
 </figure><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-26-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Example 2.1.8: Example of p\wedge \mathbf{t}"><a tabindex="-1" href="#logical_form2-1-26" title="Copy heading and permalink for Example 2.1.8: Example of p\wedge \mathbf{t}" aria-label="Copy heading and permalink for Example 2.1.8: Example of p\wedge \mathbf{t}">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 2.1.11: Example of p\wedge \mathbf{t}"><a tabindex="-1" href="#logical_form2-1-26" title="Copy heading and permalink for Example 2.1.11: Example of p\wedge \mathbf{t}" aria-label="Copy heading and permalink for Example 2.1.11: Example of p\wedge \mathbf{t}">🔗</a></div>
 </article></details>
-<article class="definition definition-like" id="D_logequiv"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="definition definition-like" id="D_logequiv"><h2 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="D_logequiv-1-1">Two statements are <dfn class="terminology">logically equivalent</dfn> if they have identical truth-tables. If statements <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> are logically equivalent, we denote it <span class="process-math">\(P\equiv Q\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_logequiv-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definition 2.1.10"><a tabindex="-1" href="#D_logequiv" title="Copy heading and permalink for Definition 2.1.10" aria-label="Copy heading and permalink for Definition 2.1.10">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 2.1.13"><a tabindex="-1" href="#D_logequiv" title="Copy heading and permalink for Definition 2.1.13" aria-label="Copy heading and permalink for Definition 2.1.13">🔗</a></div>
 </article>
-<div class="para" id="logical_form2-1-28">For example, we can see that <span class="process-math">\(p\)</span> is logically equivalent to <span class="process-math">\(p\wedge \mathbf{t}\)</span> by comparing the first and last columns of <a href="logical_form2-1.html#T_ttwithtautology" class="xref" data-knowl="./knowl/xref/T_ttwithtautology.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.1.9: Truth-table for p\wedge \mathbf{t}">Table 2.1.9</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="logical_form2-1-28">For example, we can see that <span class="process-math">\(p\)</span> is logically equivalent to <span class="process-math">\(p\wedge \mathbf{t}\)</span> by comparing the first and last columns of <a href="logical_form2-1.html#T_ttwithtautology" class="xref" data-knowl="./knowl/xref/T_ttwithtautology.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.1.12: Truth-table for p\wedge \mathbf{t}">Table 2.1.12</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="activity project-like" id="truthtable-distneg"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="truthtable-distneg"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="truthtable-distneg-1-1">Use a truth-table to determine if <span class="process-math">\(\sim(p \vee q)\)</span> and <span class="process-math">\(\sim p\  \vee \sim q\)</span> are logically equivalent. What does this tell you about “distributing” negation?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#truthtable-distneg-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 2.1.4"><a tabindex="-1" href="#truthtable-distneg" title="Copy heading and permalink for Activity 2.1.4" aria-label="Copy heading and permalink for Activity 2.1.4">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.1.14"><a tabindex="-1" href="#truthtable-distneg" title="Copy heading and permalink for Activity 2.1.14" aria-label="Copy heading and permalink for Activity 2.1.14">🔗</a></div>
 </article>
-<article class="activity project-like" id="truthtable-demorganor"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="truthtable-demorganor"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="truthtable-demorganor-1-1">Use a truth-table to show <span class="process-math">\(\sim(p \vee q)\)</span> and <span class="process-math">\(\sim p\ \wedge \sim q\)</span> are logically equivalent.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#truthtable-demorganor-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 2.1.5"><a tabindex="-1" href="#truthtable-demorganor" title="Copy heading and permalink for Activity 2.1.5" aria-label="Copy heading and permalink for Activity 2.1.5">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.1.15"><a tabindex="-1" href="#truthtable-demorganor" title="Copy heading and permalink for Activity 2.1.15" aria-label="Copy heading and permalink for Activity 2.1.15">🔗</a></div>
 </article>
-<article class="activity project-like" id="truthtable-demorganand"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="truthtable-demorganand"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="truthtable-demorganand-1-1">Use a truth-table to show <span class="process-math">\(\sim(p \wedge q)\)</span> and <span class="process-math">\(\sim p\ \vee \sim q\)</span> are logically equivalent.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#truthtable-demorganand-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 2.1.6"><a tabindex="-1" href="#truthtable-demorganand" title="Copy heading and permalink for Activity 2.1.6" aria-label="Copy heading and permalink for Activity 2.1.6">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 2.1.16"><a tabindex="-1" href="#truthtable-demorganand" title="Copy heading and permalink for Activity 2.1.16" aria-label="Copy heading and permalink for Activity 2.1.16">🔗</a></div>
 </article>
-<div class="para" id="logical_form2-1-32">The equivalences in <a href="logical_form2-1.html#truthtable-demorganor" class="xref" data-knowl="./knowl/xref/A_demorgan1.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.1.5">Activity 2.1.5</a> and <a href="logical_form2-1.html#truthtable-demorganand" class="xref" data-knowl="./knowl/xref/A_demorgan2.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.1.6">Activity 2.1.6</a> are called <dfn class="terminology">DeMorgan’s Laws</dfn>. These are useful equivalences and are worth committing to memory. As we’ve seen in the above activities, we cannot simply distribute a negation sign. However, DeMorgan’s Laws allow us to distribute the negation as long as we also change from “and” to “or” and vice versa. Given the importance of this concept in mathematics, it is useful at this point to convince yourself that the negation of an “and” statement is an “or” statement and vice versa using statements in English. For example, if the weather is not cold <em class="emphasis">and</em> rainy, then it is either not cold <em class="emphasis">or</em> not rainy.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-32" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="logical_form2-1-32">The equivalences in <a href="logical_form2-1.html#truthtable-demorganor" class="xref" data-knowl="./knowl/xref/A_demorgan1.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.1.15">Activity 2.1.15</a> and <a href="logical_form2-1.html#truthtable-demorganand" class="xref" data-knowl="./knowl/xref/A_demorgan2.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.1.16">Activity 2.1.16</a> are called <dfn class="terminology">DeMorgan’s Laws</dfn>. These are useful equivalences and are worth committing to memory. As we’ve seen in the above activities, we cannot simply distribute a negation sign. However, DeMorgan’s Laws allow us to distribute the negation as long as we also change from “and” to “or” and vice versa. Given the importance of this concept in mathematics, it is useful at this point to convince yourself that the negation of an “and” statement is an “or” statement and vice versa using statements in English. For example, if the weather is not cold <em class="emphasis">and</em> rainy, then it is either not cold <em class="emphasis">or</em> not rainy.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-32" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="logical_form2-1-33">One thing to be careful about with English statements is that they do not naturally contain parentheses, we often really have to think about the meaning of the statement and infer the intended parentheses. Even in the above cold and rainy sentence, we have to understand that we mean “not (cold and rainy)” rather than “(not cold) and rainy.”<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-33" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="logical_form2-1-34">The following is a list of important logical equivalences. All of them can be checked using truth-tables.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-34" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="assemblage assemblage-like" id="B_logicalequivalences"><h3 class="heading"><span class="title">Summary of Logical Equivalences.</span></h3>
+<article class="assemblage assemblage-like" id="B_logicalequivalences"><h2 class="heading"><span class="title">Summary of Logical Equivalences.</span></h2>
 <div class="para" id="B_logicalequivalences-3">Let <span class="process-math">\(p, q,\)</span> and <span class="process-math">\(r\)</span> be variables representing statements. Let <span class="process-math">\(\mathbf{t}\)</span> be a tautology and <span class="process-math">\(\mathbf{c}\)</span> be a contradiction.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#B_logicalequivalences-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="B_logicalequivalences-4">
-<ol class="decimal ol-marker-2" id="B_logicalequivalences-4-1">
+<ol class="decimal" style="list-style: ptx-marker-2;" id="B_logicalequivalences-4-1">
 <li id="B_logicalequivalences-4-1-1">
 <span class="heading li--heading"><span class="title li--heading-title">Commutative Laws.</span></span><div class="para" id="p-derived-B_logicalequivalences-4-1-1"> <span class="process-math">\(p \wedge q \equiv q \wedge p; \ \ \ p \vee q \equiv q \vee p\)</span>
 </div>
@@ -829,10 +855,10 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" aria-hidden="true" data-description="Assemblage: Summary of Logical Equivalences"><a tabindex="-1" href="#B_logicalequivalences" title="Copy heading and permalink for Assemblage: Summary of Logical Equivalences" aria-label="Copy heading and permalink for Assemblage: Summary of Logical Equivalences">🔗</a></div>
 </article>
 <section class="reading-questions" id="logical_form2-1-36">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Check Your Understanding</span>
-</h3>
-<article class="exercise exercise-like" id="DMT_truthtable_CYU_notor"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</h2>
+<article class="exercise exercise-like" id="DMT_truthtable_CYU_notor"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-DMT_truthtable_CYU_notor">
 <div class="para" id="DMT_truthtable_CYU_notor-1-1">Fill in the truth-table for <span class="process-math">\(\sim(\sim p \vee q)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_truthtable_CYU_notor-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -870,7 +896,7 @@ eBookConfig.enable_chatcodes =  false;
 </div></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 2.1.1"><a tabindex="-1" href="#DMT_truthtable_CYU_notor" title="Copy heading and permalink for Reading Question 2.1.1" aria-label="Copy heading and permalink for Reading Question 2.1.1">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_truthtable_CYU_or"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_truthtable_CYU_or"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-DMT_truthtable_CYU_or">
 <div class="para" id="DMT_truthtable_CYU_or-1-1">Fill in the truth-table for <span class="process-math">\((p\ \vee \sim q)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_truthtable_CYU_or-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -908,7 +934,7 @@ eBookConfig.enable_chatcodes =  false;
 </div></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 2.1.2"><a tabindex="-1" href="#DMT_truthtable_CYU_or" title="Copy heading and permalink for Reading Question 2.1.2" aria-label="Copy heading and permalink for Reading Question 2.1.2">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_truthtable_CYU_and"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_truthtable_CYU_and"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-DMT_truthtable_CYU_and">
 <div class="para" id="DMT_truthtable_CYU_and-1-1">Fill in the truth-table for <span class="process-math">\((p\ \wedge \sim q)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_truthtable_CYU_and-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -946,7 +972,7 @@ eBookConfig.enable_chatcodes =  false;
 </div></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 2.1.3"><a tabindex="-1" href="#DMT_truthtable_CYU_and" title="Copy heading and permalink for Reading Question 2.1.3" aria-label="Copy heading and permalink for Reading Question 2.1.3">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_truthtable_CYU_logequiv"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_truthtable_CYU_logequiv"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
 <div class="exercise-statement">
 <div class="para" id="DMT_truthtable_CYU_logequiv-1-1">Which of the three statements in the above exercises are logically equivalent?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_truthtable_CYU_logequiv-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -981,122 +1007,131 @@ eBookConfig.enable_chatcodes =  false;
 </article><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 2.1: Check Your Understanding"><a tabindex="-1" href="#logical_form2-1-36" title="Copy heading and permalink for Reading Questions 2.1: Check Your Understanding" aria-label="Copy heading and permalink for Reading Questions 2.1: Check Your Understanding">🔗</a></div>
 </section>
 <section class="exercises" id="logical_form2-1-37">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
-</h3>
-<article class="exercise exercise-like" id="logical_form2-1-37-2"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</h2>
+<article class="exercise exercise-like" id="logical_form2-1-37-2"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="logical_form2-1-37-2-1-1">Write the following statements in symbolic form using the logical connectives <span class="process-math">\(\sim, \vee, \wedge\)</span> and the indicated letters to represent component statements. Let <span class="process-math">\(h=\)</span> “Jane is healthy,” <span class="process-math">\(w=\)</span> “Jane is wealthy,” and <span class="process-math">\(s=\)</span> “Jane is wise.”<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="logical_form2-1-37-2-1-2">
-<li id="logical_form2-1-37-2-1-2-1">
-<div class="para" id="logical_form2-1-37-2-1-2-1-1">Jane is healthy and wealthy but not wise.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="logical_form2-1-37-2-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="logical_form2-1-37-2-1-2-1">
+<li id="logical_form2-1-37-2-1-2-1-1">
+<div class="para" id="logical_form2-1-37-2-1-2-1-1-1">Jane is healthy and wealthy but not wise.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-2-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 2.1.1.a"><a tabindex="-1" href="#logical_form2-1-37-2-1-2-1" title="Copy heading and permalink for Item 2.1.1.a" aria-label="Copy heading and permalink for Item 2.1.1.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2.1.1.a"><a tabindex="-1" href="#logical_form2-1-37-2-1-2-1-1" title="Copy heading and permalink for Item 2.1.1.a" aria-label="Copy heading and permalink for Item 2.1.1.a">🔗</a></div>
 </li>
-<li id="logical_form2-1-37-2-1-2-2">
-<div class="para" id="logical_form2-1-37-2-1-2-2-1">Jane is not wealthy but she is healthy and wise.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="logical_form2-1-37-2-1-2-1-2">
+<div class="para" id="logical_form2-1-37-2-1-2-1-2-1">Jane is not wealthy but she is healthy and wise.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-2-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 2.1.1.b"><a tabindex="-1" href="#logical_form2-1-37-2-1-2-2" title="Copy heading and permalink for Item 2.1.1.b" aria-label="Copy heading and permalink for Item 2.1.1.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2.1.1.b"><a tabindex="-1" href="#logical_form2-1-37-2-1-2-1-2" title="Copy heading and permalink for Item 2.1.1.b" aria-label="Copy heading and permalink for Item 2.1.1.b">🔗</a></div>
 </li>
-<li id="logical_form2-1-37-2-1-2-3">
-<div class="para" id="logical_form2-1-37-2-1-2-3-1">Jane is neither healthy, wealthy, nor wise.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-2-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="logical_form2-1-37-2-1-2-1-3">
+<div class="para" id="logical_form2-1-37-2-1-2-1-3-1">Jane is neither healthy, wealthy, nor wise.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-2-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 2.1.1.c"><a tabindex="-1" href="#logical_form2-1-37-2-1-2-3" title="Copy heading and permalink for Item 2.1.1.c" aria-label="Copy heading and permalink for Item 2.1.1.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2.1.1.c"><a tabindex="-1" href="#logical_form2-1-37-2-1-2-1-3" title="Copy heading and permalink for Item 2.1.1.c" aria-label="Copy heading and permalink for Item 2.1.1.c">🔗</a></div>
 </li>
-<li id="logical_form2-1-37-2-1-2-4">
-<div class="para" id="logical_form2-1-37-2-1-2-4-1">Jane is neither wealthy nor wise, but she is healthy.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-2-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="logical_form2-1-37-2-1-2-1-4">
+<div class="para" id="logical_form2-1-37-2-1-2-1-4-1">Jane is neither wealthy nor wise, but she is healthy.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-2-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 2.1.1.d"><a tabindex="-1" href="#logical_form2-1-37-2-1-2-4" title="Copy heading and permalink for Item 2.1.1.d" aria-label="Copy heading and permalink for Item 2.1.1.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2.1.1.d"><a tabindex="-1" href="#logical_form2-1-37-2-1-2-1-4" title="Copy heading and permalink for Item 2.1.1.d" aria-label="Copy heading and permalink for Item 2.1.1.d">🔗</a></div>
 </li>
-<li id="logical_form2-1-37-2-1-2-5">
-<div class="para" id="logical_form2-1-37-2-1-2-5-1">Jane is wealthy, but she is not both healthy and wise.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-2-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="logical_form2-1-37-2-1-2-1-5">
+<div class="para" id="logical_form2-1-37-2-1-2-1-5-1">Jane is wealthy, but she is not both healthy and wise.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-2-1-2-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 2.1.1.e"><a tabindex="-1" href="#logical_form2-1-37-2-1-2-5" title="Copy heading and permalink for Item 2.1.1.e" aria-label="Copy heading and permalink for Item 2.1.1.e">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2.1.1.e"><a tabindex="-1" href="#logical_form2-1-37-2-1-2-1-5" title="Copy heading and permalink for Item 2.1.1.e" aria-label="Copy heading and permalink for Item 2.1.1.e">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 2.1.1"><a tabindex="-1" href="#logical_form2-1-37-2" title="Copy heading and permalink for Exercise 2.1.1" aria-label="Copy heading and permalink for Exercise 2.1.1">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="logical_form2-1-37-3"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="logical_form2-1-37-3"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="logical_form2-1-37-3-1-1">Give the truth-table for <span class="process-math">\(\sim(p\ \wedge q)\vee (p \vee q)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 2.1.2"><a tabindex="-1" href="#logical_form2-1-37-3" title="Copy heading and permalink for Exercise 2.1.2" aria-label="Copy heading and permalink for Exercise 2.1.2">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="logical_form2-1-37-4"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="logical_form2-1-37-4"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="logical_form2-1-37-4-1-1">Use truth-tables to determine whether the two statements in each part are logically equivalent. Clearly state your conclusion about whether they are logically equivalent or not, and how your truth-table justifies your conclusion.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="logical_form2-1-37-4-1-2">
-<li id="logical_form2-1-37-4-1-2-1">
-<div class="para" id="logical_form2-1-37-4-1-2-1-1">
-<span class="process-math">\(p\ \vee (p\ \wedge q)\)</span> and <span class="process-math">\(p\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-4-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="logical_form2-1-37-4-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="logical_form2-1-37-4-1-2-1">
+<li id="logical_form2-1-37-4-1-2-1-1">
+<div class="para" id="logical_form2-1-37-4-1-2-1-1-1">
+<span class="process-math">\(p\ \vee (p\ \wedge q)\)</span> and <span class="process-math">\(p\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-4-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 2.1.3.a"><a tabindex="-1" href="#logical_form2-1-37-4-1-2-1" title="Copy heading and permalink for Item 2.1.3.a" aria-label="Copy heading and permalink for Item 2.1.3.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2.1.3.a"><a tabindex="-1" href="#logical_form2-1-37-4-1-2-1-1" title="Copy heading and permalink for Item 2.1.3.a" aria-label="Copy heading and permalink for Item 2.1.3.a">🔗</a></div>
 </li>
-<li id="logical_form2-1-37-4-1-2-2">
-<div class="para" id="logical_form2-1-37-4-1-2-2-1">
-<span class="process-math">\(\sim(p\ \wedge q)\)</span> and <span class="process-math">\(\sim p\ \wedge \sim q\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-4-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="logical_form2-1-37-4-1-2-1-2">
+<div class="para" id="logical_form2-1-37-4-1-2-1-2-1">
+<span class="process-math">\(\sim(p\ \wedge q)\)</span> and <span class="process-math">\(\sim p\ \wedge \sim q\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-4-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 2.1.3.b"><a tabindex="-1" href="#logical_form2-1-37-4-1-2-2" title="Copy heading and permalink for Item 2.1.3.b" aria-label="Copy heading and permalink for Item 2.1.3.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2.1.3.b"><a tabindex="-1" href="#logical_form2-1-37-4-1-2-1-2" title="Copy heading and permalink for Item 2.1.3.b" aria-label="Copy heading and permalink for Item 2.1.3.b">🔗</a></div>
 </li>
-<li id="logical_form2-1-37-4-1-2-3">
-<div class="para" id="logical_form2-1-37-4-1-2-3-1">
-<span class="process-math">\(p\ \wedge {\rm\bf{c}}\)</span> and <span class="process-math">\(p\ \vee {\rm\bf{c}}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-4-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="logical_form2-1-37-4-1-2-1-3">
+<div class="para" id="logical_form2-1-37-4-1-2-1-3-1">
+<span class="process-math">\(p\ \wedge {\rm\bf{c}}\)</span> and <span class="process-math">\(p\ \vee {\rm\bf{c}}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-4-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 2.1.3.c"><a tabindex="-1" href="#logical_form2-1-37-4-1-2-3" title="Copy heading and permalink for Item 2.1.3.c" aria-label="Copy heading and permalink for Item 2.1.3.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2.1.3.c"><a tabindex="-1" href="#logical_form2-1-37-4-1-2-1-3" title="Copy heading and permalink for Item 2.1.3.c" aria-label="Copy heading and permalink for Item 2.1.3.c">🔗</a></div>
 </li>
-<li id="logical_form2-1-37-4-1-2-4">
-<div class="para" id="logical_form2-1-37-4-1-2-4-1">
-<span class="process-math">\((p\ \wedge q) \vee r\)</span> and <span class="process-math">\(p\ \wedge (q\ \vee r)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-4-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="logical_form2-1-37-4-1-2-1-4">
+<div class="para" id="logical_form2-1-37-4-1-2-1-4-1">
+<span class="process-math">\((p\ \wedge q) \vee r\)</span> and <span class="process-math">\(p\ \wedge (q\ \vee r)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-4-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 2.1.3.d"><a tabindex="-1" href="#logical_form2-1-37-4-1-2-4" title="Copy heading and permalink for Item 2.1.3.d" aria-label="Copy heading and permalink for Item 2.1.3.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2.1.3.d"><a tabindex="-1" href="#logical_form2-1-37-4-1-2-1-4" title="Copy heading and permalink for Item 2.1.3.d" aria-label="Copy heading and permalink for Item 2.1.3.d">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 2.1.3"><a tabindex="-1" href="#logical_form2-1-37-4" title="Copy heading and permalink for Exercise 2.1.3" aria-label="Copy heading and permalink for Exercise 2.1.3">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="logical_form2-1-37-5"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="logical_form2-1-37-5"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="logical_form2-1-37-5-1-1">Use DeMorgan’s Laws to write the negation of the statement: Zoro is a math major and Zoro’s sister is a computer science major.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 2.1.4"><a tabindex="-1" href="#logical_form2-1-37-5" title="Copy heading and permalink for Exercise 2.1.4" aria-label="Copy heading and permalink for Exercise 2.1.4">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="logical_form2-1-37-6"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="logical_form2-1-37-6"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="logical_form2-1-37-6-1-1">Use DeMorgan’s Laws to write the negation of the statement: The units digit of <span class="process-math">\(4^{185}\)</span> is 4 or it is 6.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 2.1.5"><a tabindex="-1" href="#logical_form2-1-37-6" title="Copy heading and permalink for Exercise 2.1.5" aria-label="Copy heading and permalink for Exercise 2.1.5">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="logical_form2-1-37-7"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="logical_form2-1-37-7"><h3 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="logical_form2-1-37-7-1-1">Assume <span class="process-math">\(x\)</span> is a real number. Use DeMorgan’s Laws to write the negation of the statement: <span class="process-math">\(-8\leq x &lt;3\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 2.1.6"><a tabindex="-1" href="#logical_form2-1-37-7" title="Copy heading and permalink for Exercise 2.1.6" aria-label="Copy heading and permalink for Exercise 2.1.6">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="logical_form2-1-37-8"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="logical_form2-1-37-8"><h3 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="logical_form2-1-37-8-1-1">Use truth-tables to establish whether the following statements are tautologies, contradictions, or neither.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="logical_form2-1-37-8-1-2">
-<li id="logical_form2-1-37-8-1-2-1">
-<div class="para" id="logical_form2-1-37-8-1-2-1-1">
-<span class="process-math">\(\displaystyle \sim(p\ \wedge q)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-8-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="logical_form2-1-37-8-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="logical_form2-1-37-8-1-2-1">
+<li id="logical_form2-1-37-8-1-2-1-1">
+<div class="para" id="logical_form2-1-37-8-1-2-1-1-1">
+<span class="process-math">\(\displaystyle \sim(p\ \wedge q)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-8-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 2.1.7.a"><a tabindex="-1" href="#logical_form2-1-37-8-1-2-1" title="Copy heading and permalink for Item 2.1.7.a" aria-label="Copy heading and permalink for Item 2.1.7.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2.1.7.a"><a tabindex="-1" href="#logical_form2-1-37-8-1-2-1-1" title="Copy heading and permalink for Item 2.1.7.a" aria-label="Copy heading and permalink for Item 2.1.7.a">🔗</a></div>
 </li>
-<li id="logical_form2-1-37-8-1-2-2">
-<div class="para" id="logical_form2-1-37-8-1-2-2-1">
-<span class="process-math">\(\displaystyle (p\ \wedge \sim q) \wedge (\sim p\ \vee q)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-8-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="logical_form2-1-37-8-1-2-1-2">
+<div class="para" id="logical_form2-1-37-8-1-2-1-2-1">
+<span class="process-math">\(\displaystyle (p\ \wedge \sim q) \wedge (\sim p\ \vee q)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-8-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 2.1.7.b"><a tabindex="-1" href="#logical_form2-1-37-8-1-2-2" title="Copy heading and permalink for Item 2.1.7.b" aria-label="Copy heading and permalink for Item 2.1.7.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2.1.7.b"><a tabindex="-1" href="#logical_form2-1-37-8-1-2-1-2" title="Copy heading and permalink for Item 2.1.7.b" aria-label="Copy heading and permalink for Item 2.1.7.b">🔗</a></div>
 </li>
-<li id="logical_form2-1-37-8-1-2-3">
-<div class="para" id="logical_form2-1-37-8-1-2-3-1">
-<span class="process-math">\(\displaystyle (\sim p\ \vee q) \vee (p\ \wedge \sim q)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-8-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="logical_form2-1-37-8-1-2-1-3">
+<div class="para" id="logical_form2-1-37-8-1-2-1-3-1">
+<span class="process-math">\(\displaystyle (\sim p\ \vee q) \vee (p\ \wedge \sim q)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-8-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 2.1.7.c"><a tabindex="-1" href="#logical_form2-1-37-8-1-2-3" title="Copy heading and permalink for Item 2.1.7.c" aria-label="Copy heading and permalink for Item 2.1.7.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2.1.7.c"><a tabindex="-1" href="#logical_form2-1-37-8-1-2-1-3" title="Copy heading and permalink for Item 2.1.7.c" aria-label="Copy heading and permalink for Item 2.1.7.c">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#logical_form2-1-37-8-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 2.1.7"><a tabindex="-1" href="#logical_form2-1-37-8" title="Copy heading and permalink for Exercise 2.1.7" aria-label="Copy heading and permalink for Exercise 2.1.7">🔗</a></div>
 </article><div class="autopermalink" aria-hidden="true" data-description="Exercises 2.1: Exercises"><a tabindex="-1" href="#logical_form2-1-37" title="Copy heading and permalink for Exercises 2.1: Exercises" aria-label="Copy heading and permalink for Exercises 2.1: Exercises">🔗</a></div>
 </section><div class="autopermalink" aria-hidden="true" data-description="Section 2.1: Truth-Tables and Logical Equivalence"><a tabindex="-1" href="#logical_form2-1" title="Copy heading and permalink for Section 2.1: Truth-Tables and Logical Equivalence" aria-label="Copy heading and permalink for Section 2.1: Truth-Tables and Logical Equivalence">🔗</a></div>
 </section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="chapter2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="conditional2-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="chapter2-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="conditional2-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

@@ -19,15 +19,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-2 { system: extends decimal; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-3 { system: extends decimal; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-4 { system: extends lower-roman; prefix: ''; suffix: '. '; }
+</style>
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
 hasWebworkReps: false,
 hasSage: false,
 isReact: false,
 htmlPresentation: false,
+lang: "en-US",
 });
-</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta name="twitter:title" content="Discrete Mathematics: An Active Approach to Mathematical Reasoning">
@@ -36,7 +42,7 @@ htmlPresentation: false,
 <meta name="twitter:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta property="og:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.43"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.54"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.54"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -58,21 +64,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.9';
+eBookConfig.runestone_version = '8.3.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.846a0d6fafaa99e0.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.bbcfc02849ebc023.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/prefix-runtime.4beca1fdeed766a2.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.ebd33f6a21eed414.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.9963089870a016c8.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="DiscreteMathText" class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></div>
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="DiscreteMath-14-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
@@ -85,7 +91,17 @@ eBookConfig.enable_chatcodes =  false;
 <div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
 <ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
-<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
 <h2 class="heading">Readability settings</h2>
 <button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
@@ -103,7 +119,7 @@ eBookConfig.enable_chatcodes =  false;
 <legend>Assistive technologies</legend>
 <label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
 </fieldset>
-<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="chapter6.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter6.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="propertiesofsets6-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="chapter6-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter6.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="propertiesofsets6-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \newcommand{\MyTikzmark}[2]{
      \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
 \newcommand{\DrawVLine}[3][]{
@@ -134,6 +150,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter1.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to Mathematical Language</span></a></div>
 <ul id="ptx-toc-group-chapter1" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter1-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="variables1-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Variables and Statements</span></a></div>
 <ul id="ptx-toc-group-variables1-1" class="structural toc-item-list">
@@ -160,6 +177,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter2.html" class="internal"><span class="codenumber">2</span> <span class="title">Logic</span></a></div>
 <ul id="ptx-toc-group-chapter2" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter2-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="logical_form2-1.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Truth-Tables and Logical Equivalence</span></a></div>
 <ul id="ptx-toc-group-logical_form2-1" class="structural toc-item-list">
@@ -186,6 +204,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter3.html" class="internal"><span class="codenumber">3</span> <span class="title">Logic with Quantifiers</span></a></div>
 <ul id="ptx-toc-group-chapter3" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter3-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="quantifiersI3-1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Quantifiers</span></a></div>
 <ul id="ptx-toc-group-quantifiersI3-1" class="structural toc-item-list">
@@ -219,6 +238,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter4.html" class="internal"><span class="codenumber">4</span> <span class="title">Proof Techniques</span></a></div>
 <ul id="ptx-toc-group-chapter4" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter4-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="directproof4-1.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Direct Proof and Counterexample</span></a></div>
 <ul id="ptx-toc-group-directproof4-1" class="structural toc-item-list">
@@ -266,6 +286,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter5.html" class="internal"><span class="codenumber">5</span> <span class="title">Sequences and Mathematical Induction</span></a></div>
 <ul id="ptx-toc-group-chapter5" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter5-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sequences5-1.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Sequences</span></a></div>
 <ul id="ptx-toc-group-sequences5-1" class="structural toc-item-list">
@@ -313,6 +334,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="chapter6.html" class="internal"><span class="codenumber">6</span> <span class="title">Set Theory</span></a></div>
 <ul class="structural toc-item-list contains-active" id="ptx-toc-group-chapter6">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter6-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="sets6-1.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Set Theory</span></a></div>
 <ul class="structural toc-item-list active" id="ptx-toc-group-sets6-1">
@@ -339,6 +361,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter7.html" class="internal"><span class="codenumber">7</span> <span class="title">Functions</span></a></div>
 <ul id="ptx-toc-group-chapter7" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter7-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="functions7-1.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Functions</span></a></div>
 <ul id="ptx-toc-group-functions7-1" class="structural toc-item-list">
@@ -358,6 +381,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter8.html" class="internal"><span class="codenumber">8</span> <span class="title">Relations</span></a></div>
 <ul id="ptx-toc-group-chapter8" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter8-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="relations8-1.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Relations on Sets</span></a></div>
 <ul id="ptx-toc-group-relations8-1" class="structural toc-item-list">
@@ -391,6 +415,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter9.html" class="internal"><span class="codenumber">9</span> <span class="title">Probability and Counting</span></a></div>
 <ul id="ptx-toc-group-chapter9" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter9-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="probability9-1.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Probability</span></a></div>
 <ul id="ptx-toc-group-probability9-1" class="structural toc-item-list">
@@ -438,6 +463,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter10.html" class="internal"><span class="codenumber">10</span> <span class="title">Graph Theory</span></a></div>
 <ul id="ptx-toc-group-chapter10" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter10-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="graphs10-1.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphs</span></a></div>
 <ul id="ptx-toc-group-graphs10-1" class="structural toc-item-list">
@@ -465,7 +491,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="DiscreteMath-14.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul id="ptx-toc-group-DiscreteMath-14" class="structural toc-item-list">
 <li class="toc-item toc-references"><div class="toc-title-box"><a href="DiscreteMath-14-1.html" class="internal"><span class="title">References</span></a></div></li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A.</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="DiscreteMath-14-3.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="DiscreteMath-14-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
@@ -473,9 +499,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="sets6-1">
-<h2 class="heading hide-type">
+<h1 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Set Theory</span>
-</h2>
+</h1>
 <div class="para" id="sets6-1-3">In this section we review the set theory definitions of element and subset from <a href="lang_sets1-2.html" class="internal" title="Section 1.2: Introduction to Sets">Section 1.2</a>. Then we introduce several definitions for operations on sets.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sets6-1-4">We have been using some of the set notation throughout the course. We review it here for convenience. We usually use capital letters for sets, such as <span class="process-math">\(S\)</span> or <span class="process-math">\(A\text{.}\)</span> If we want to talk about elements in a set <span class="process-math">\(S\text{,}\)</span> we use the notation <span class="process-math">\(x\in S\text{.}\)</span> We read this notation as “<span class="process-math">\(x\)</span> is in <span class="process-math">\(S\)</span>” or “<span class="process-math">\(x\)</span> is an element of <span class="process-math">\(S\text{.}\)</span>” If <span class="process-math">\(x\)</span> is not in <span class="process-math">\(S\text{,}\)</span> then we use the notation <span class="process-math">\(x\notin S\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -492,11 +518,11 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="sets6-1-7">and read the statement as "<span class="process-math">\(x\)</span> in <span class="process-math">\(S\)</span> such that <span class="process-math">\(x\)</span> has property <span class="process-math">\(P\text{.}\)</span>"<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sets6-1-8">We gave an initial definition of subset in <a href="lang_sets1-2.html#D_sset" class="xref" data-knowl="./knowl/xref/D_sset.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.2.2">Definition 1.2.2</a>, and introduced the notation for subset: <span class="process-math">\(A\subseteq B\text{.}\)</span> Now that we will be working with sets more formally, we give a more formal definition of a subset, which will be easier to use in proofs.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sets6-1-8">We gave an initial definition of subset in <a href="lang_sets1-2.html#D_sset" class="xref" data-knowl="./knowl/xref/D_sset.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.2.3">Definition 1.2.3</a>, and introduced the notation for subset: <span class="process-math">\(A\subseteq B\text{.}\)</span> Now that we will be working with sets more formally, we give a more formal definition of a subset, which will be easier to use in proofs.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="definition definition-like" id="D_subset"><h3 class="heading">
+<article class="definition definition-like" id="D_subset"><h2 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+</h2>
 <div class="para" id="D_subset-1-1">
 <span class="process-math">\(A\)</span> is a <dfn class="terminology">subset</dfn> of <span class="process-math">\(B\text{,}\)</span> <span class="process-math">\(A\subseteq B\text{,}\)</span> if for all <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\(x\in A\)</span> then <span class="process-math">\(x\in B\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_subset-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -505,16 +531,16 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Definition 6.1.1"><a tabindex="-1" href="#D_subset" title="Copy heading and permalink for Definition 6.1.1" aria-label="Copy heading and permalink for Definition 6.1.1">🔗</a></div>
 </article>
-<article class="definition definition-like" id="D_setequal"><h3 class="heading">
+<article class="definition definition-like" id="D_setequal"><h2 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+</h2>
 <div class="para" id="D_setequal-1-1">We say two sets are <dfn class="terminology">equal</dfn>, <span class="process-math">\(A=B\text{,}\)</span> if <span class="process-math">\(A\subseteq B\)</span> and <span class="process-math">\(B\subseteq A\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_setequal-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Definition 6.1.2"><a tabindex="-1" href="#D_setequal" title="Copy heading and permalink for Definition 6.1.2" aria-label="Copy heading and permalink for Definition 6.1.2">🔗</a></div>
 </article>
-<article class="definition definition-like" id="D_propersubset"><h3 class="heading">
+<article class="definition definition-like" id="D_propersubset"><h2 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+</h2>
 <div class="para" id="D_propersubset-1-1">
 <span class="process-math">\(A\)</span> is a <dfn class="terminology">proper subset</dfn> of <span class="process-math">\(B\)</span> if <span class="process-math">\(A\subseteq B\)</span> and <span class="process-math">\(A\neq B\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_propersubset-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -524,9 +550,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="sets6-1-13">We now give the element definitions for common set operations, along with the Venn diagrams for each of the sets.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="definition definition-like" id="D_setunion"><h3 class="heading">
+<article class="definition definition-like" id="D_setunion"><h2 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+</h2>
 <div class="para" id="D_setunion-1-1">The set <span class="process-math">\(A\cup B\)</span> is the <dfn class="terminology">union</dfn> of sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> where <span class="process-math">\(x\in A\cup B\)</span> if and only if <span class="process-math">\(x\in A\)</span> or <span class="process-math">\(x\in B\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_setunion-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para" id="D_setunion-1-2">In set notation, <span class="process-math">\(A\cup B=\{x\in U : x\in A \text{ or } x\in B\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_setunion-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -541,9 +567,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Venn diagram for <span class="process-math">\(A\cup B\)</span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.1.5"><a tabindex="-1" href="#F_unionvenn" title="Copy heading and permalink for Figure 6.1.5" aria-label="Copy heading and permalink for Figure 6.1.5">🔗</a></div></figcaption>
 </figure>
-<article class="definition definition-like" id="D_setintersection"><h3 class="heading">
+<article class="definition definition-like" id="D_setintersection"><h2 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+</h2>
 <div class="para" id="D_setintersection-1-1">The set <span class="process-math">\(A\cap B\)</span> is the <dfn class="terminology">intersection</dfn> of sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> where <span class="process-math">\(x\in A\cap B\)</span> if and only if <span class="process-math">\(x\in A\)</span> and <span class="process-math">\(x\in B\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_setintersection-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para" id="D_setintersection-1-2">In set notation, <span class="process-math">\(A\cap B=\{x\in U : x\in A \text{ and } x\in B\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_setintersection-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -558,9 +584,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Venn diagram for <span class="process-math">\(A\cap B\)</span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.1.7"><a tabindex="-1" href="#F_intersetvenn" title="Copy heading and permalink for Figure 6.1.7" aria-label="Copy heading and permalink for Figure 6.1.7">🔗</a></div></figcaption>
 </figure>
-<article class="definition definition-like" id="D_setdifference"><h3 class="heading">
+<article class="definition definition-like" id="D_setdifference"><h2 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+</h2>
 <div class="para" id="D_setdifference-1-1">The set <span class="process-math">\(A-B\)</span>  is the <dfn class="terminology">set difference</dfn> of sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> where <span class="process-math">\(x\in A-B\)</span>  if and only if <span class="process-math">\(x\in A\)</span> and <span class="process-math">\(x\notin B\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_setdifference-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para" id="D_setdifference-1-2">In set notation, <span class="process-math">\(A-B=\{x\in U : x\in A \text{ and } x\notin B\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_setdifference-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -577,9 +603,9 @@ eBookConfig.enable_chatcodes =  false;
 </figure>
 <div class="para" id="sets6-1-20">A common alternate notation for set difference is <span class="process-math">\(A\setminus B\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="definition definition-like" id="D_setcomplement"><h3 class="heading">
+<article class="definition definition-like" id="D_setcomplement"><h2 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+</h2>
 <div class="para" id="D_setcomplement-1-1">The set <span class="process-math">\(A^C\)</span> is the <dfn class="terminology">complement</dfn> of set <span class="process-math">\(A\)</span> where <span class="process-math">\(x\in A^C\)</span> if and only if <span class="process-math">\(x\notin A\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_setcomplement-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para" id="D_setcomplement-1-2">In set notation, <span class="process-math">\(A^C=\{x\in U : x\notin A\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_setcomplement-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -594,9 +620,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Venn diagram for <span class="process-math">\(A^C\)</span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.1.11"><a tabindex="-1" href="#F_complementvenn" title="Copy heading and permalink for Figure 6.1.11" aria-label="Copy heading and permalink for Figure 6.1.11">🔗</a></div></figcaption>
 </figure>
-<details id="E_setops" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Operations on Sets.</span>
-</h3></summary>
+<details id="E_setops" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.12</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Operations on Sets.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_setops-2">Let <span class="process-math">\(A=\{x\in \mathbb{R} : 0\leq x\leq 4\}\)</span>  and <span class="process-math">\(B=\{x\in \mathbb{R} : -1&lt; x &lt; 1\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_setops-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -648,38 +674,38 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" aria-hidden="true" data-description="Answer 6.1.12.5"><a tabindex="-1" href="#E_setops-13" title="Copy heading and permalink for Answer 6.1.12.5" aria-label="Copy heading and permalink for Answer 6.1.12.5">🔗</a></div>
 </div></details><div class="autopermalink" aria-hidden="true" data-description="Example 6.1.12: Operations on Sets"><a tabindex="-1" href="#E_setops" title="Copy heading and permalink for Example 6.1.12: Operations on Sets" aria-label="Copy heading and permalink for Example 6.1.12: Operations on Sets">🔗</a></div>
 </article></details>
-<article class="activity project-like" id="sets-operex"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="sets-operex"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="introduction" id="sets-operex-1">
 <div class="para" id="sets-operex-1-1">Let <span class="process-math">\(A=\{1, 2, 3, 4, 5, 6\}\)</span> and <span class="process-math">\(B=\{2, 4, 6, 8, 10, 12\}\)</span> and the Universal set <span class="process-math">\(U=\{n\in\mathbb{Z}: 1\leq n\leq 12\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets-operex-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="sets-operex-un"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="sets-operex-un"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="sets-operex-un-1-1">Find <span class="process-math">\(A\cup B\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets-operex-un-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.1.a"><a tabindex="-1" href="#sets-operex-un" title="Copy heading and permalink for Task 6.1.1.a" aria-label="Copy heading and permalink for Task 6.1.1.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.13.a"><a tabindex="-1" href="#sets-operex-un" title="Copy heading and permalink for Task 6.1.13.a" aria-label="Copy heading and permalink for Task 6.1.13.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="sets-operex-in"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="sets-operex-in"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="sets-operex-in-1-1">Find <span class="process-math">\(A\cap B\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets-operex-in-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.1.b"><a tabindex="-1" href="#sets-operex-in" title="Copy heading and permalink for Task 6.1.1.b" aria-label="Copy heading and permalink for Task 6.1.1.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.13.b"><a tabindex="-1" href="#sets-operex-in" title="Copy heading and permalink for Task 6.1.13.b" aria-label="Copy heading and permalink for Task 6.1.13.b">🔗</a></div>
 </article>
-<article class="task exercise-like" id="sets-operex-dif"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<article class="task exercise-like" id="sets-operex-dif"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="sets-operex-dif-1-1">Find <span class="process-math">\(A- B\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets-operex-dif-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.1.c"><a tabindex="-1" href="#sets-operex-dif" title="Copy heading and permalink for Task 6.1.1.c" aria-label="Copy heading and permalink for Task 6.1.1.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.13.c"><a tabindex="-1" href="#sets-operex-dif" title="Copy heading and permalink for Task 6.1.13.c" aria-label="Copy heading and permalink for Task 6.1.13.c">🔗</a></div>
 </article>
-<article class="task exercise-like" id="sets-operex-fid"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<article class="task exercise-like" id="sets-operex-fid"><h3 class="heading"><span class="codenumber">(d)</span></h3>
 <div class="para" id="sets-operex-fid-1-1">Find <span class="process-math">\(B- A\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets-operex-fid-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.1.d"><a tabindex="-1" href="#sets-operex-fid" title="Copy heading and permalink for Task 6.1.1.d" aria-label="Copy heading and permalink for Task 6.1.1.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.13.d"><a tabindex="-1" href="#sets-operex-fid" title="Copy heading and permalink for Task 6.1.13.d" aria-label="Copy heading and permalink for Task 6.1.13.d">🔗</a></div>
 </article>
-<article class="task exercise-like" id="sets-operex-com"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<article class="task exercise-like" id="sets-operex-com"><h3 class="heading"><span class="codenumber">(e)</span></h3>
 <div class="para" id="sets-operex-com-1-1">Find <span class="process-math">\(B^{C}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets-operex-com-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.1.e"><a tabindex="-1" href="#sets-operex-com" title="Copy heading and permalink for Task 6.1.1.e" aria-label="Copy heading and permalink for Task 6.1.1.e">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 6.1.1"><a tabindex="-1" href="#sets-operex" title="Copy heading and permalink for Activity 6.1.1" aria-label="Copy heading and permalink for Activity 6.1.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.13.e"><a tabindex="-1" href="#sets-operex-com" title="Copy heading and permalink for Task 6.1.13.e" aria-label="Copy heading and permalink for Task 6.1.13.e">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 6.1.13"><a tabindex="-1" href="#sets-operex" title="Copy heading and permalink for Activity 6.1.13" aria-label="Copy heading and permalink for Activity 6.1.13">🔗</a></div>
 </article>
 <div class="para logical" id="sets6-1-25">
 <div class="para">We can take the union or intersection of many sets using notation similar to summation notation:</div>
@@ -709,49 +735,49 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="activity project-like" id="sets-inf"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="sets-inf"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="introduction" id="sets-inf-1">
 <div class="para" id="sets-inf-1-1">Let <span class="process-math">\(A_i=\{1, 2, 3, \ldots i\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets-inf-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="sets-inf-An"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="sets-inf-An"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="sets-inf-An-1">Find <span class="process-math">\(A_1, A_2, A_5,\)</span> and <span class="process-math">\(A_n\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets-inf-An-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.2.a"><a tabindex="-1" href="#sets-inf-An" title="Copy heading and permalink for Task 6.1.2.a" aria-label="Copy heading and permalink for Task 6.1.2.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.14.a"><a tabindex="-1" href="#sets-inf-An" title="Copy heading and permalink for Task 6.1.14.a" aria-label="Copy heading and permalink for Task 6.1.14.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="sets-inf-uA1to5"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="sets-inf-uA1to5"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="sets-inf-uA1to5-1-1">Find <span class="process-math">\(\bigcup_{i=1}^{5}A_i\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets-inf-uA1to5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.2.b"><a tabindex="-1" href="#sets-inf-uA1to5" title="Copy heading and permalink for Task 6.1.2.b" aria-label="Copy heading and permalink for Task 6.1.2.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.14.b"><a tabindex="-1" href="#sets-inf-uA1to5" title="Copy heading and permalink for Task 6.1.14.b" aria-label="Copy heading and permalink for Task 6.1.14.b">🔗</a></div>
 </article>
-<article class="task exercise-like" id="sets-inf-iA1to5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<article class="task exercise-like" id="sets-inf-iA1to5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="sets-inf-iA1to5-1-1">Find <span class="process-math">\(\bigcap_{i=1}^{5}A_i\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets-inf-iA1to5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.2.c"><a tabindex="-1" href="#sets-inf-iA1to5" title="Copy heading and permalink for Task 6.1.2.c" aria-label="Copy heading and permalink for Task 6.1.2.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.14.c"><a tabindex="-1" href="#sets-inf-iA1to5" title="Copy heading and permalink for Task 6.1.14.c" aria-label="Copy heading and permalink for Task 6.1.14.c">🔗</a></div>
 </article>
-<article class="task exercise-like" id="sets-inf-uninf"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<article class="task exercise-like" id="sets-inf-uninf"><h3 class="heading"><span class="codenumber">(d)</span></h3>
 <div class="para" id="sets-inf-uninf-1-1">Find <span class="process-math">\(\bigcup_{i=1}^{\infty}A_i\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets-inf-uninf-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.2.d"><a tabindex="-1" href="#sets-inf-uninf" title="Copy heading and permalink for Task 6.1.2.d" aria-label="Copy heading and permalink for Task 6.1.2.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.14.d"><a tabindex="-1" href="#sets-inf-uninf" title="Copy heading and permalink for Task 6.1.14.d" aria-label="Copy heading and permalink for Task 6.1.14.d">🔗</a></div>
 </article>
-<article class="task exercise-like" id="sets-inf-ininf"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<article class="task exercise-like" id="sets-inf-ininf"><h3 class="heading"><span class="codenumber">(e)</span></h3>
 <div class="para" id="sets-inf-ininf-1-1">Find <span class="process-math">\(\bigcap_{i=1}^{\infty}A_i\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets-inf-ininf-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.2.e"><a tabindex="-1" href="#sets-inf-ininf" title="Copy heading and permalink for Task 6.1.2.e" aria-label="Copy heading and permalink for Task 6.1.2.e">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 6.1.2"><a tabindex="-1" href="#sets-inf" title="Copy heading and permalink for Activity 6.1.2" aria-label="Copy heading and permalink for Activity 6.1.2">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.14.e"><a tabindex="-1" href="#sets-inf-ininf" title="Copy heading and permalink for Task 6.1.14.e" aria-label="Copy heading and permalink for Task 6.1.14.e">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 6.1.14"><a tabindex="-1" href="#sets-inf" title="Copy heading and permalink for Activity 6.1.14" aria-label="Copy heading and permalink for Activity 6.1.14">🔗</a></div>
 </article>
-<article class="definition definition-like" id="D_powerset"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="definition definition-like" id="D_powerset"><h2 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="D_powerset-1-1">The <dfn class="terminology">power set</dfn> of a set <span class="process-math">\(A\)</span> is the set of all subsets of <span class="process-math">\(A\text{.}\)</span> We denote it <span class="process-math">\(\mathcal{P}(A)\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_powerset-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definition 6.1.13"><a tabindex="-1" href="#D_powerset" title="Copy heading and permalink for Definition 6.1.13" aria-label="Copy heading and permalink for Definition 6.1.13">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 6.1.15"><a tabindex="-1" href="#D_powerset" title="Copy heading and permalink for Definition 6.1.15" aria-label="Copy heading and permalink for Definition 6.1.15">🔗</a></div>
 </article>
-<details id="E_powerset" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Power Set.</span>
-</h3></summary>
+<details id="E_powerset" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.16</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Power Set.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_powerset-2">Let <span class="process-math">\(A=\{1, 2\}\text{.}\)</span> Find <span class="process-math">\(\mathcal{P}(A)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_powerset-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -759,17 +785,17 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="E_powerset-4">The subsets are <span class="process-math">\(\emptyset, \{1\}, \{2\}, \{1, 2\}\text{.}\)</span> Thus, <span class="process-math">\(\mathcal{P}(A)=\{\emptyset, \{1\}, \{2\}, \{1, 2\}\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_powerset-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Example 6.1.14: Power Set"><a tabindex="-1" href="#E_powerset" title="Copy heading and permalink for Example 6.1.14: Power Set" aria-label="Copy heading and permalink for Example 6.1.14: Power Set">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 6.1.16: Power Set"><a tabindex="-1" href="#E_powerset" title="Copy heading and permalink for Example 6.1.16: Power Set" aria-label="Copy heading and permalink for Example 6.1.16: Power Set">🔗</a></div>
 </article></details>
-<article class="activity project-like" id="sets-power"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="sets-power"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="sets-power-1-1">Let <span class="process-math">\(A=\{2, 4, 6\}\text{.}\)</span> Find <span class="process-math">\({\cal{P}}(A)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets-power-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 6.1.3"><a tabindex="-1" href="#sets-power" title="Copy heading and permalink for Activity 6.1.3" aria-label="Copy heading and permalink for Activity 6.1.3">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 6.1.17"><a tabindex="-1" href="#sets-power" title="Copy heading and permalink for Activity 6.1.17" aria-label="Copy heading and permalink for Activity 6.1.17">🔗</a></div>
 </article>
 <div class="para logical" id="sets6-1-31">
-<div class="para">Recall, in <a href="lang_sets1-2.html#D_prodofsets" class="xref" data-knowl="./knowl/xref/D_prodofsets.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.2.6">Definition 1.2.6</a>, we defined the Cartesian product of two sets, <span class="process-math">\(A\times B\text{:}\)</span>
+<div class="para">Recall, in <a href="lang_sets1-2.html#D_prodofsets" class="xref" data-knowl="./knowl/xref/D_prodofsets.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.2.11">Definition 1.2.11</a>, we defined the Cartesian product of two sets, <span class="process-math">\(A\times B\text{:}\)</span>
 </div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/D_prodofsets.html" id="sets6-1-31-3">
 \begin{equation*}
@@ -778,9 +804,9 @@ A\times B=\{(a, b) : a\in A, b\in B\}.
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-31" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_cartprod2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cartesian Product of Sets.</span>
-</h3></summary>
+<details id="E_cartprod2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.18</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cartesian Product of Sets.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_cartprod2-2">Let <span class="process-math">\(A=\{1, 2, 3\}\)</span>  and <span class="process-math">\(B=\{2, 4\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_cartprod2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -791,19 +817,19 @@ A\times B=\{(a, b) : a\in A, b\in B\}.
 <div class="para" id="E_cartprod2-4-1">
 <span class="process-math">\(\{(1, 2), (1, 4), (2, 2), (2, 4), (3, 2), (3, 4)\}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_cartprod2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Answer 6.1.15.1"><a tabindex="-1" href="#E_cartprod2-4" title="Copy heading and permalink for Answer 6.1.15.1" aria-label="Copy heading and permalink for Answer 6.1.15.1">🔗</a></div>
-</div></details><div class="autopermalink" aria-hidden="true" data-description="Example 6.1.15: Cartesian Product of Sets"><a tabindex="-1" href="#E_cartprod2" title="Copy heading and permalink for Example 6.1.15: Cartesian Product of Sets" aria-label="Copy heading and permalink for Example 6.1.15: Cartesian Product of Sets">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 6.1.18.1"><a tabindex="-1" href="#E_cartprod2-4" title="Copy heading and permalink for Answer 6.1.18.1" aria-label="Copy heading and permalink for Answer 6.1.18.1">🔗</a></div>
+</div></details><div class="autopermalink" aria-hidden="true" data-description="Example 6.1.18: Cartesian Product of Sets"><a tabindex="-1" href="#E_cartprod2" title="Copy heading and permalink for Example 6.1.18: Cartesian Product of Sets" aria-label="Copy heading and permalink for Example 6.1.18: Cartesian Product of Sets">🔗</a></div>
 </article></details>
-<article class="definition definition-like" id="D_disjointsets"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="definition definition-like" id="D_disjointsets"><h2 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="D_disjointsets-1-1">We say two sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are <dfn class="terminology">disjoint</dfn> if <span class="process-math">\(A\cap B=\emptyset\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_disjointsets-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definition 6.1.16"><a tabindex="-1" href="#D_disjointsets" title="Copy heading and permalink for Definition 6.1.16" aria-label="Copy heading and permalink for Definition 6.1.16">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 6.1.19"><a tabindex="-1" href="#D_disjointsets" title="Copy heading and permalink for Definition 6.1.19" aria-label="Copy heading and permalink for Definition 6.1.19">🔗</a></div>
 </article>
-<article class="definition definition-like" id="D_partition"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="definition definition-like" id="D_partition"><h2 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para logical" id="D_partition-1-1">
 <div class="para">A set of subsets of a set <span class="process-math">\(B\text{,}\)</span> <span class="process-math">\(\{A_1, A_2, \ldots, A_n\}\text{,}\)</span> is a <dfn class="terminology">partition</dfn> of <span class="process-math">\(B\)</span> if</div>
 <ol class="decimal" id="D_partition-1-1-6">
@@ -820,23 +846,23 @@ A\times B=\{(a, b) : a\in A, b\in B\}.
 </ol>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_partition-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definition 6.1.17"><a tabindex="-1" href="#D_partition" title="Copy heading and permalink for Definition 6.1.17" aria-label="Copy heading and permalink for Definition 6.1.17">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 6.1.20"><a tabindex="-1" href="#D_partition" title="Copy heading and permalink for Definition 6.1.20" aria-label="Copy heading and permalink for Definition 6.1.20">🔗</a></div>
 </article>
 <div class="para" id="sets6-1-35">What this really says is that a set of subsets will be a partition of <span class="process-math">\(B\)</span> if the union of the subsets is all of <span class="process-math">\(B\text{,}\)</span> and the subsets are <dfn class="terminology">pairwise disjoint</dfn>, meaning the intersection of any pair of sets is empty.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-35" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_partition" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Partition.</span>
-</h3></summary>
+<details id="E_partition" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.21</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Partition.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_partition-2">Let <span class="process-math">\(B=\{1, 2, 3, 4, 5, 6\}\text{.}\)</span> Then let <span class="process-math">\(A_1=\{1\}, A_2=\{2, 4, 6\}, A_3=\{3, 5\}\text{.}\)</span> We can see that <span class="process-math">\(\{A_1, A_2, A_3\}\)</span> is a partition of <span class="process-math">\(B\)</span> since <span class="process-math">\(A_1\cup A_2\cup A_3=B\)</span> and the subsets have no elements in common, hence they are disjoint.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_partition-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="E_partition-3">Now if we let <span class="process-math">\(A_1=\{1, 2, 3, 4\}, A_2=\{2, 3, 4, 5, 6\}\text{.}\)</span> We can see that <span class="process-math">\(\{A_1, A_2\}\)</span> is not a partition of <span class="process-math">\(B\)</span> since <span class="process-math">\(A_1\cap A_2=\{2, 3, 4\}\neq\emptyset\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_partition-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Example 6.1.18: Partition"><a tabindex="-1" href="#E_partition" title="Copy heading and permalink for Example 6.1.18: Partition" aria-label="Copy heading and permalink for Example 6.1.18: Partition">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 6.1.21: Partition"><a tabindex="-1" href="#E_partition" title="Copy heading and permalink for Example 6.1.21: Partition" aria-label="Copy heading and permalink for Example 6.1.21: Partition">🔗</a></div>
 </article></details>
-<article class="activity project-like" id="sets-pfsubset"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="sets-pfsubset"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.22</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="ptx-runestone-container"><div class="runestone parsons_section" style="max-width: none;"><div data-component="parsons" class="parsons" id="rs-sets-pfsubset">
 <div class="parsons_question parsons-text">
 <div class="para" id="sets-pfsubset-1-1">To prove <span class="process-math">\(A\subseteq B\text{,}\)</span> assume <span class="process-math">\(x\in A\text{,}\)</span> show <span class="process-math">\(x\in B\text{.}\)</span> Prove <span class="process-math">\(\{6k:  k\in \mathbb{Z}\}\subseteq\{3k: k\in \mathbb{Z}\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets-pfsubset-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -873,23 +899,23 @@ A\times B=\{(a, b) : a\in A, b\in B\}.
 <div class="hint solution-like knowl__content">
 <div class="para" id="sets-pfsubset-3-1">It might help to identify what you need to assume and what you need to show.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets-pfsubset-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Hint 6.1.4.1"><a tabindex="-1" href="#sets-pfsubset-3" title="Copy heading and permalink for Hint 6.1.4.1" aria-label="Copy heading and permalink for Hint 6.1.4.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Hint 6.1.22.1"><a tabindex="-1" href="#sets-pfsubset-3" title="Copy heading and permalink for Hint 6.1.22.1" aria-label="Copy heading and permalink for Hint 6.1.22.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 6.1.4"><a tabindex="-1" href="#sets-pfsubset" title="Copy heading and permalink for Activity 6.1.4" aria-label="Copy heading and permalink for Activity 6.1.4">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 6.1.22"><a tabindex="-1" href="#sets-pfsubset" title="Copy heading and permalink for Activity 6.1.22" aria-label="Copy heading and permalink for Activity 6.1.22">🔗</a></div>
 </article>
-<article class="activity project-like" id="sets6-1-38"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="sets6-1-38"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.23</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="sets6-1-38-1-1">Find a counterexample to prove <span class="process-math">\(\{3k:  k\in \mathbb{Z}\}\nsubseteq\{6k: k\in \mathbb{Z}\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-38-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 6.1.5"><a tabindex="-1" href="#sets6-1-38" title="Copy heading and permalink for Activity 6.1.5" aria-label="Copy heading and permalink for Activity 6.1.5">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 6.1.23"><a tabindex="-1" href="#sets6-1-38" title="Copy heading and permalink for Activity 6.1.23" aria-label="Copy heading and permalink for Activity 6.1.23">🔗</a></div>
 </article>
 <section class="reading-questions" id="sets6-1-39">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Check Your Understanding</span>
-</h3>
-<article class="exercise exercise-like" id="DMT_sets_CYU_matchingsets"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</h2>
+<article class="exercise exercise-like" id="DMT_sets_CYU_matchingsets"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone cardsort_section"><ul data-component="dragndrop" data-question_label="" style="visibility: hidden;" id="rs-DMT_sets_CYU_matchingsets">
 <span data-subcomponent="question">
 <div class="para" id="DMT_sets_CYU_matchingsets-1-1">Let <span class="process-math">\(A=\{2, 4, 6, 8\}, B=\{3, 4\}, C=\{1, 2, 4\}, D=\{0, 1\}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_sets_CYU_matchingsets-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -914,7 +940,7 @@ A\times B=\{(a, b) : a\in A, b\in B\}.
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 6.1.1"><a tabindex="-1" href="#DMT_sets_CYU_matchingsets" title="Copy heading and permalink for Reading Question 6.1.1" aria-label="Copy heading and permalink for Reading Question 6.1.1">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_sets_CYU_BDeqDB"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_sets_CYU_BDeqDB"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_sets_CYU_BDeqDB">
 <div class="para" id="DMT_sets_CYU_BDeqDB-1-1">Let <span class="process-math">\(B=\{3, 4\}, D=\{0, 1\}.\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_sets_CYU_BDeqDB-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -927,7 +953,7 @@ A\times B=\{(a, b) : a\in A, b\in B\}.
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 6.1.2"><a tabindex="-1" href="#DMT_sets_CYU_BDeqDB" title="Copy heading and permalink for Reading Question 6.1.2" aria-label="Copy heading and permalink for Reading Question 6.1.2">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_sets_CYU_BmDeqDmB"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_sets_CYU_BmDeqDmB"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_sets_CYU_BmDeqDmB">
 <div class="para" id="DMT_sets_CYU_BmDeqDmB-1-1">Let <span class="process-math">\(B=\{3, 4\}, D=\{0, 1\}.\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_sets_CYU_BmDeqDmB-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -940,7 +966,7 @@ A\times B=\{(a, b) : a\in A, b\in B\}.
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 6.1.3"><a tabindex="-1" href="#DMT_sets_CYU_BmDeqDmB" title="Copy heading and permalink for Reading Question 6.1.3" aria-label="Copy heading and permalink for Reading Question 6.1.3">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_sets_CYU_AcupCeqCcupA"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_sets_CYU_AcupCeqCcupA"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_sets_CYU_AcupCeqCcupA">
 <div class="para" id="DMT_sets_CYU_AcupCeqCcupA-1-1">Let <span class="process-math">\(A=\{2, 4, 6, 8\}, C=\{1, 2, 4\}.\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_sets_CYU_AcupCeqCcupA-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -953,7 +979,7 @@ A\times B=\{(a, b) : a\in A, b\in B\}.
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 6.1.4"><a tabindex="-1" href="#DMT_sets_CYU_AcupCeqCcupA" title="Copy heading and permalink for Reading Question 6.1.4" aria-label="Copy heading and permalink for Reading Question 6.1.4">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_sets_CYU_powerB"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_sets_CYU_powerB"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_sets_CYU_powerB-1-1">Let <span class="process-math">\(B=\{3, 4\}.\)</span> Find  <span class="process-math">\(\mathcal{P}(B)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_sets_CYU_powerB-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
@@ -966,7 +992,7 @@ A\times B=\{(a, b) : a\in A, b\in B\}.
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 6.1.5"><a tabindex="-1" href="#DMT_sets_CYU_powerB" title="Copy heading and permalink for Reading Question 6.1.5" aria-label="Copy heading and permalink for Reading Question 6.1.5">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_sets_CYU_partA"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_sets_CYU_partA"><h3 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_sets_CYU_partA-1-1">Let <span class="process-math">\(A=\{2, 4, 6, 8\}.\)</span> Give a partition of <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_sets_CYU_partA-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
@@ -981,381 +1007,408 @@ A\times B=\{(a, b) : a\in A, b\in B\}.
 </article><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 6.1: Check Your Understanding"><a tabindex="-1" href="#sets6-1-39" title="Copy heading and permalink for Reading Questions 6.1: Check Your Understanding" aria-label="Copy heading and permalink for Reading Questions 6.1: Check Your Understanding">🔗</a></div>
 </section>
 <section class="exercises" id="sets6-1-40">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
-</h3>
-<article class="exercise exercise-like" id="sets6-1-40-1"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</h2>
+<article class="exercise exercise-like" id="sets6-1-40-1"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="sets6-1-40-1-1-1">For each of the following determine if <span class="process-math">\(A\subseteq B\text{.}\)</span> Then determine if <span class="process-math">\(B\subseteq A\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="sets6-1-40-1-1-2">
-<li id="sets6-1-40-1-1-2-1">
-<div class="para" id="sets6-1-40-1-1-2-1-1">
-<span class="process-math">\(A=\{2, \{2\}, (\sqrt{2})^2\}, B=\{2, \{2\}, \{\{2\}\}\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="sets6-1-40-1-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="sets6-1-40-1-1-2-1">
+<li id="sets6-1-40-1-1-2-1-1">
+<div class="para" id="sets6-1-40-1-1-2-1-1-1">
+<span class="process-math">\(A=\{2, \{2\}, (\sqrt{2})^2\}, B=\{2, \{2\}, \{\{2\}\}\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-1-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.1.a"><a tabindex="-1" href="#sets6-1-40-1-1-2-1" title="Copy heading and permalink for Item 6.1.1.a" aria-label="Copy heading and permalink for Item 6.1.1.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.1.a"><a tabindex="-1" href="#sets6-1-40-1-1-2-1-1" title="Copy heading and permalink for Item 6.1.1.a" aria-label="Copy heading and permalink for Item 6.1.1.a">🔗</a></div>
 </li>
-<li id="sets6-1-40-1-1-2-2">
-<div class="para" id="sets6-1-40-1-1-2-2-1">
-<span class="process-math">\(A=\{\{1, 2\}, \{2, 3\}\}, B=\{1, 2, 3\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-1-1-2-1-2">
+<div class="para" id="sets6-1-40-1-1-2-1-2-1">
+<span class="process-math">\(A=\{\{1, 2\}, \{2, 3\}\}, B=\{1, 2, 3\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-1-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.1.b"><a tabindex="-1" href="#sets6-1-40-1-1-2-2" title="Copy heading and permalink for Item 6.1.1.b" aria-label="Copy heading and permalink for Item 6.1.1.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.1.b"><a tabindex="-1" href="#sets6-1-40-1-1-2-1-2" title="Copy heading and permalink for Item 6.1.1.b" aria-label="Copy heading and permalink for Item 6.1.1.b">🔗</a></div>
 </li>
-<li id="sets6-1-40-1-1-2-3">
-<div class="para" id="sets6-1-40-1-1-2-3-1">
-<span class="process-math">\(A=\{a, b, c\}, B=\{\{a\}, \{b\}, \{c\}\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-1-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-1-1-2-1-3">
+<div class="para" id="sets6-1-40-1-1-2-1-3-1">
+<span class="process-math">\(A=\{a, b, c\}, B=\{\{a\}, \{b\}, \{c\}\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-1-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.1.c"><a tabindex="-1" href="#sets6-1-40-1-1-2-3" title="Copy heading and permalink for Item 6.1.1.c" aria-label="Copy heading and permalink for Item 6.1.1.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.1.c"><a tabindex="-1" href="#sets6-1-40-1-1-2-1-3" title="Copy heading and permalink for Item 6.1.1.c" aria-label="Copy heading and permalink for Item 6.1.1.c">🔗</a></div>
 </li>
-<li id="sets6-1-40-1-1-2-4">
-<div class="para" id="sets6-1-40-1-1-2-4-1">
-<span class="process-math">\(A=\{\sqrt{16}, \{4\}\}, B=\{4\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-1-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-1-1-2-1-4">
+<div class="para" id="sets6-1-40-1-1-2-1-4-1">
+<span class="process-math">\(A=\{\sqrt{16}, \{4\}\}, B=\{4\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-1-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.1.d"><a tabindex="-1" href="#sets6-1-40-1-1-2-4" title="Copy heading and permalink for Item 6.1.1.d" aria-label="Copy heading and permalink for Item 6.1.1.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.1.d"><a tabindex="-1" href="#sets6-1-40-1-1-2-1-4" title="Copy heading and permalink for Item 6.1.1.d" aria-label="Copy heading and permalink for Item 6.1.1.d">🔗</a></div>
 </li>
-<li id="sets6-1-40-1-1-2-5">
-<div class="para" id="sets6-1-40-1-1-2-5-1">
-<span class="process-math">\(A=\{x\in \mathbb{R}: \cos x \in \mathbb{Z}\}, B=\{x\in \mathbb{R}: \sin x \in \mathbb{Z}\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-1-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-1-1-2-1-5">
+<div class="para" id="sets6-1-40-1-1-2-1-5-1">
+<span class="process-math">\(A=\{x\in \mathbb{R}: \cos x \in \mathbb{Z}\}, B=\{x\in \mathbb{R}: \sin x \in \mathbb{Z}\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-1-1-2-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.1.e"><a tabindex="-1" href="#sets6-1-40-1-1-2-5" title="Copy heading and permalink for Item 6.1.1.e" aria-label="Copy heading and permalink for Item 6.1.1.e">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.1.e"><a tabindex="-1" href="#sets6-1-40-1-1-2-1-5" title="Copy heading and permalink for Item 6.1.1.e" aria-label="Copy heading and permalink for Item 6.1.1.e">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 6.1.1"><a tabindex="-1" href="#sets6-1-40-1" title="Copy heading and permalink for Exercise 6.1.1" aria-label="Copy heading and permalink for Exercise 6.1.1">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="sets6-1-40-2"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="sets6-1-40-2"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="sets6-1-40-2-1-1">Complete the following sentences without using the symbols <span class="process-math">\(\cup, \cap\text{,}\)</span> or <span class="process-math">\(-\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="sets6-1-40-2-1-2">
-<li id="sets6-1-40-2-1-2-1">
-<div class="para" id="sets6-1-40-2-1-2-1-1">
-<span class="process-math">\(x\notin A\cup B\)</span> if and only if ___.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="sets6-1-40-2-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="sets6-1-40-2-1-2-1">
+<li id="sets6-1-40-2-1-2-1-1">
+<div class="para" id="sets6-1-40-2-1-2-1-1-1">
+<span class="process-math">\(x\notin A\cup B\)</span> if and only if ___.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-2-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.2.a"><a tabindex="-1" href="#sets6-1-40-2-1-2-1" title="Copy heading and permalink for Item 6.1.2.a" aria-label="Copy heading and permalink for Item 6.1.2.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.2.a"><a tabindex="-1" href="#sets6-1-40-2-1-2-1-1" title="Copy heading and permalink for Item 6.1.2.a" aria-label="Copy heading and permalink for Item 6.1.2.a">🔗</a></div>
 </li>
-<li id="sets6-1-40-2-1-2-2">
-<div class="para" id="sets6-1-40-2-1-2-2-1">
-<span class="process-math">\(x\notin A\cap B\)</span> if and only if ___.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-2-1-2-1-2">
+<div class="para" id="sets6-1-40-2-1-2-1-2-1">
+<span class="process-math">\(x\notin A\cap B\)</span> if and only if ___.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-2-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.2.b"><a tabindex="-1" href="#sets6-1-40-2-1-2-2" title="Copy heading and permalink for Item 6.1.2.b" aria-label="Copy heading and permalink for Item 6.1.2.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.2.b"><a tabindex="-1" href="#sets6-1-40-2-1-2-1-2" title="Copy heading and permalink for Item 6.1.2.b" aria-label="Copy heading and permalink for Item 6.1.2.b">🔗</a></div>
 </li>
-<li id="sets6-1-40-2-1-2-3">
-<div class="para" id="sets6-1-40-2-1-2-3-1">
-<span class="process-math">\(x\notin A- B\)</span> if and only if ___.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-2-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-2-1-2-1-3">
+<div class="para" id="sets6-1-40-2-1-2-1-3-1">
+<span class="process-math">\(x\notin A- B\)</span> if and only if ___.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-2-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.2.c"><a tabindex="-1" href="#sets6-1-40-2-1-2-3" title="Copy heading and permalink for Item 6.1.2.c" aria-label="Copy heading and permalink for Item 6.1.2.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.2.c"><a tabindex="-1" href="#sets6-1-40-2-1-2-1-3" title="Copy heading and permalink for Item 6.1.2.c" aria-label="Copy heading and permalink for Item 6.1.2.c">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 6.1.2"><a tabindex="-1" href="#sets6-1-40-2" title="Copy heading and permalink for Exercise 6.1.2" aria-label="Copy heading and permalink for Exercise 6.1.2">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="sets6-1-40-3"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="sets6-1-40-3"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="sets6-1-40-3-1-1">Let <span class="process-math">\(A=\{1, 3, 5, 7, 9\}\text{,}\)</span> <span class="process-math">\(B=\{3, 6, 9\}\text{,}\)</span> and <span class="process-math">\(C=\{2, 4, 6, 8\}\text{.}\)</span> Find each of the following:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="sets6-1-40-3-1-2">
-<li id="sets6-1-40-3-1-2-1">
-<div class="para" id="sets6-1-40-3-1-2-1-1">
-<span class="process-math">\(A\cup B\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-3-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="sets6-1-40-3-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="sets6-1-40-3-1-2-1">
+<li id="sets6-1-40-3-1-2-1-1">
+<div class="para" id="sets6-1-40-3-1-2-1-1-1">
+<span class="process-math">\(A\cup B\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-3-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.3.a"><a tabindex="-1" href="#sets6-1-40-3-1-2-1" title="Copy heading and permalink for Item 6.1.3.a" aria-label="Copy heading and permalink for Item 6.1.3.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.3.a"><a tabindex="-1" href="#sets6-1-40-3-1-2-1-1" title="Copy heading and permalink for Item 6.1.3.a" aria-label="Copy heading and permalink for Item 6.1.3.a">🔗</a></div>
 </li>
-<li id="sets6-1-40-3-1-2-2">
-<div class="para" id="sets6-1-40-3-1-2-2-1">
-<span class="process-math">\(A\cap B\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-3-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-3-1-2-1-2">
+<div class="para" id="sets6-1-40-3-1-2-1-2-1">
+<span class="process-math">\(A\cap B\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-3-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.3.b"><a tabindex="-1" href="#sets6-1-40-3-1-2-2" title="Copy heading and permalink for Item 6.1.3.b" aria-label="Copy heading and permalink for Item 6.1.3.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.3.b"><a tabindex="-1" href="#sets6-1-40-3-1-2-1-2" title="Copy heading and permalink for Item 6.1.3.b" aria-label="Copy heading and permalink for Item 6.1.3.b">🔗</a></div>
 </li>
-<li id="sets6-1-40-3-1-2-3">
-<div class="para" id="sets6-1-40-3-1-2-3-1">
-<span class="process-math">\(A\cup C\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-3-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-3-1-2-1-3">
+<div class="para" id="sets6-1-40-3-1-2-1-3-1">
+<span class="process-math">\(A\cup C\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-3-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.3.c"><a tabindex="-1" href="#sets6-1-40-3-1-2-3" title="Copy heading and permalink for Item 6.1.3.c" aria-label="Copy heading and permalink for Item 6.1.3.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.3.c"><a tabindex="-1" href="#sets6-1-40-3-1-2-1-3" title="Copy heading and permalink for Item 6.1.3.c" aria-label="Copy heading and permalink for Item 6.1.3.c">🔗</a></div>
 </li>
-<li id="sets6-1-40-3-1-2-4">
-<div class="para" id="sets6-1-40-3-1-2-4-1">
-<span class="process-math">\(A\cap C\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-3-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-3-1-2-1-4">
+<div class="para" id="sets6-1-40-3-1-2-1-4-1">
+<span class="process-math">\(A\cap C\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-3-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.3.d"><a tabindex="-1" href="#sets6-1-40-3-1-2-4" title="Copy heading and permalink for Item 6.1.3.d" aria-label="Copy heading and permalink for Item 6.1.3.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.3.d"><a tabindex="-1" href="#sets6-1-40-3-1-2-1-4" title="Copy heading and permalink for Item 6.1.3.d" aria-label="Copy heading and permalink for Item 6.1.3.d">🔗</a></div>
 </li>
-<li id="sets6-1-40-3-1-2-5">
-<div class="para" id="sets6-1-40-3-1-2-5-1">
-<span class="process-math">\(A-B\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-3-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-3-1-2-1-5">
+<div class="para" id="sets6-1-40-3-1-2-1-5-1">
+<span class="process-math">\(A-B\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-3-1-2-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.3.e"><a tabindex="-1" href="#sets6-1-40-3-1-2-5" title="Copy heading and permalink for Item 6.1.3.e" aria-label="Copy heading and permalink for Item 6.1.3.e">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.3.e"><a tabindex="-1" href="#sets6-1-40-3-1-2-1-5" title="Copy heading and permalink for Item 6.1.3.e" aria-label="Copy heading and permalink for Item 6.1.3.e">🔗</a></div>
 </li>
-<li id="sets6-1-40-3-1-2-6">
-<div class="para" id="sets6-1-40-3-1-2-6-1">
-<span class="process-math">\(B-A\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-3-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-3-1-2-1-6">
+<div class="para" id="sets6-1-40-3-1-2-1-6-1">
+<span class="process-math">\(B-A\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-3-1-2-1-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.3.f"><a tabindex="-1" href="#sets6-1-40-3-1-2-6" title="Copy heading and permalink for Item 6.1.3.f" aria-label="Copy heading and permalink for Item 6.1.3.f">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.3.f"><a tabindex="-1" href="#sets6-1-40-3-1-2-1-6" title="Copy heading and permalink for Item 6.1.3.f" aria-label="Copy heading and permalink for Item 6.1.3.f">🔗</a></div>
 </li>
-<li id="sets6-1-40-3-1-2-7">
-<div class="para" id="sets6-1-40-3-1-2-7-1">
-<span class="process-math">\(B\cup C\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-3-1-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-3-1-2-1-7">
+<div class="para" id="sets6-1-40-3-1-2-1-7-1">
+<span class="process-math">\(B\cup C\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-3-1-2-1-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.3.g"><a tabindex="-1" href="#sets6-1-40-3-1-2-7" title="Copy heading and permalink for Item 6.1.3.g" aria-label="Copy heading and permalink for Item 6.1.3.g">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.3.g"><a tabindex="-1" href="#sets6-1-40-3-1-2-1-7" title="Copy heading and permalink for Item 6.1.3.g" aria-label="Copy heading and permalink for Item 6.1.3.g">🔗</a></div>
 </li>
-<li id="sets6-1-40-3-1-2-8">
-<div class="para" id="sets6-1-40-3-1-2-8-1">
-<span class="process-math">\(B\cap C\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-3-1-2-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-3-1-2-1-8">
+<div class="para" id="sets6-1-40-3-1-2-1-8-1">
+<span class="process-math">\(B\cap C\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-3-1-2-1-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.3.h"><a tabindex="-1" href="#sets6-1-40-3-1-2-8" title="Copy heading and permalink for Item 6.1.3.h" aria-label="Copy heading and permalink for Item 6.1.3.h">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.3.h"><a tabindex="-1" href="#sets6-1-40-3-1-2-1-8" title="Copy heading and permalink for Item 6.1.3.h" aria-label="Copy heading and permalink for Item 6.1.3.h">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 6.1.3"><a tabindex="-1" href="#sets6-1-40-3" title="Copy heading and permalink for Exercise 6.1.3" aria-label="Copy heading and permalink for Exercise 6.1.3">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="sets6-1-40-4"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="sets6-1-40-4"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="sets6-1-40-4-1-1">Let the universal set be <span class="process-math">\(\mathbb{R}\text{,}\)</span> and let <span class="process-math">\(A=\{x\in \mathbb{R}:0&lt; x\leq 2\}\text{,}\)</span> <span class="process-math">\(B=\{x\in \mathbb{R}:1\leq x&lt; 4\}\text{,}\)</span> and <span class="process-math">\(C=\{x\in \mathbb{R}:3\leq x&lt; 9\}\text{.}\)</span> Find each of the following:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="sets6-1-40-4-1-2">
-<li id="sets6-1-40-4-1-2-1">
-<div class="para" id="sets6-1-40-4-1-2-1-1">
-<span class="process-math">\(\displaystyle A\cup B\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-4-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="sets6-1-40-4-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="sets6-1-40-4-1-2-1">
+<li id="sets6-1-40-4-1-2-1-1">
+<div class="para" id="sets6-1-40-4-1-2-1-1-1">
+<span class="process-math">\(\displaystyle A\cup B\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-4-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.4.a"><a tabindex="-1" href="#sets6-1-40-4-1-2-1" title="Copy heading and permalink for Item 6.1.4.a" aria-label="Copy heading and permalink for Item 6.1.4.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.4.a"><a tabindex="-1" href="#sets6-1-40-4-1-2-1-1" title="Copy heading and permalink for Item 6.1.4.a" aria-label="Copy heading and permalink for Item 6.1.4.a">🔗</a></div>
 </li>
-<li id="sets6-1-40-4-1-2-2">
-<div class="para" id="sets6-1-40-4-1-2-2-1">
-<span class="process-math">\(\displaystyle A\cap B\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-4-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-4-1-2-1-2">
+<div class="para" id="sets6-1-40-4-1-2-1-2-1">
+<span class="process-math">\(\displaystyle A\cap B\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-4-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.4.b"><a tabindex="-1" href="#sets6-1-40-4-1-2-2" title="Copy heading and permalink for Item 6.1.4.b" aria-label="Copy heading and permalink for Item 6.1.4.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.4.b"><a tabindex="-1" href="#sets6-1-40-4-1-2-1-2" title="Copy heading and permalink for Item 6.1.4.b" aria-label="Copy heading and permalink for Item 6.1.4.b">🔗</a></div>
 </li>
-<li id="sets6-1-40-4-1-2-3">
-<div class="para" id="sets6-1-40-4-1-2-3-1">
-<span class="process-math">\(\displaystyle A^{C}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-4-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-4-1-2-1-3">
+<div class="para" id="sets6-1-40-4-1-2-1-3-1">
+<span class="process-math">\(\displaystyle A^{C}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-4-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.4.c"><a tabindex="-1" href="#sets6-1-40-4-1-2-3" title="Copy heading and permalink for Item 6.1.4.c" aria-label="Copy heading and permalink for Item 6.1.4.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.4.c"><a tabindex="-1" href="#sets6-1-40-4-1-2-1-3" title="Copy heading and permalink for Item 6.1.4.c" aria-label="Copy heading and permalink for Item 6.1.4.c">🔗</a></div>
 </li>
-<li id="sets6-1-40-4-1-2-4">
-<div class="para" id="sets6-1-40-4-1-2-4-1">
-<span class="process-math">\(\displaystyle A\cup C\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-4-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-4-1-2-1-4">
+<div class="para" id="sets6-1-40-4-1-2-1-4-1">
+<span class="process-math">\(\displaystyle A\cup C\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-4-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.4.d"><a tabindex="-1" href="#sets6-1-40-4-1-2-4" title="Copy heading and permalink for Item 6.1.4.d" aria-label="Copy heading and permalink for Item 6.1.4.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.4.d"><a tabindex="-1" href="#sets6-1-40-4-1-2-1-4" title="Copy heading and permalink for Item 6.1.4.d" aria-label="Copy heading and permalink for Item 6.1.4.d">🔗</a></div>
 </li>
-<li id="sets6-1-40-4-1-2-5">
-<div class="para" id="sets6-1-40-4-1-2-5-1">
-<span class="process-math">\(\displaystyle A\cap C\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-4-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-4-1-2-1-5">
+<div class="para" id="sets6-1-40-4-1-2-1-5-1">
+<span class="process-math">\(\displaystyle A\cap C\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-4-1-2-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.4.e"><a tabindex="-1" href="#sets6-1-40-4-1-2-5" title="Copy heading and permalink for Item 6.1.4.e" aria-label="Copy heading and permalink for Item 6.1.4.e">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.4.e"><a tabindex="-1" href="#sets6-1-40-4-1-2-1-5" title="Copy heading and permalink for Item 6.1.4.e" aria-label="Copy heading and permalink for Item 6.1.4.e">🔗</a></div>
 </li>
-<li id="sets6-1-40-4-1-2-6">
-<div class="para" id="sets6-1-40-4-1-2-6-1">
-<span class="process-math">\(\displaystyle B^{C}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-4-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-4-1-2-1-6">
+<div class="para" id="sets6-1-40-4-1-2-1-6-1">
+<span class="process-math">\(\displaystyle B^{C}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-4-1-2-1-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.4.f"><a tabindex="-1" href="#sets6-1-40-4-1-2-6" title="Copy heading and permalink for Item 6.1.4.f" aria-label="Copy heading and permalink for Item 6.1.4.f">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.4.f"><a tabindex="-1" href="#sets6-1-40-4-1-2-1-6" title="Copy heading and permalink for Item 6.1.4.f" aria-label="Copy heading and permalink for Item 6.1.4.f">🔗</a></div>
 </li>
-<li id="sets6-1-40-4-1-2-7">
-<div class="para" id="sets6-1-40-4-1-2-7-1">
-<span class="process-math">\(\displaystyle A^{C}\cap B^{C}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-4-1-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-4-1-2-1-7">
+<div class="para" id="sets6-1-40-4-1-2-1-7-1">
+<span class="process-math">\(\displaystyle A^{C}\cap B^{C}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-4-1-2-1-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.4.g"><a tabindex="-1" href="#sets6-1-40-4-1-2-7" title="Copy heading and permalink for Item 6.1.4.g" aria-label="Copy heading and permalink for Item 6.1.4.g">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.4.g"><a tabindex="-1" href="#sets6-1-40-4-1-2-1-7" title="Copy heading and permalink for Item 6.1.4.g" aria-label="Copy heading and permalink for Item 6.1.4.g">🔗</a></div>
 </li>
-<li id="sets6-1-40-4-1-2-8">
-<div class="para" id="sets6-1-40-4-1-2-8-1">
-<span class="process-math">\(\displaystyle A^{C}\cup B^{C}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-4-1-2-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-4-1-2-1-8">
+<div class="para" id="sets6-1-40-4-1-2-1-8-1">
+<span class="process-math">\(\displaystyle A^{C}\cup B^{C}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-4-1-2-1-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.4.h"><a tabindex="-1" href="#sets6-1-40-4-1-2-8" title="Copy heading and permalink for Item 6.1.4.h" aria-label="Copy heading and permalink for Item 6.1.4.h">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.4.h"><a tabindex="-1" href="#sets6-1-40-4-1-2-1-8" title="Copy heading and permalink for Item 6.1.4.h" aria-label="Copy heading and permalink for Item 6.1.4.h">🔗</a></div>
 </li>
-<li id="sets6-1-40-4-1-2-9">
-<div class="para" id="sets6-1-40-4-1-2-9-1">
-<span class="process-math">\(\displaystyle (A\cap B)^{C}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-4-1-2-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-4-1-2-1-9">
+<div class="para" id="sets6-1-40-4-1-2-1-9-1">
+<span class="process-math">\(\displaystyle (A\cap B)^{C}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-4-1-2-1-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.4.i"><a tabindex="-1" href="#sets6-1-40-4-1-2-9" title="Copy heading and permalink for Item 6.1.4.i" aria-label="Copy heading and permalink for Item 6.1.4.i">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.4.i"><a tabindex="-1" href="#sets6-1-40-4-1-2-1-9" title="Copy heading and permalink for Item 6.1.4.i" aria-label="Copy heading and permalink for Item 6.1.4.i">🔗</a></div>
 </li>
-<li id="sets6-1-40-4-1-2-10">
-<div class="para" id="sets6-1-40-4-1-2-10-1">
-<span class="process-math">\(\displaystyle (A\cup B)^{C}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-4-1-2-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-4-1-2-1-10">
+<div class="para" id="sets6-1-40-4-1-2-1-10-1">
+<span class="process-math">\(\displaystyle (A\cup B)^{C}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-4-1-2-1-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.4.j"><a tabindex="-1" href="#sets6-1-40-4-1-2-10" title="Copy heading and permalink for Item 6.1.4.j" aria-label="Copy heading and permalink for Item 6.1.4.j">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.4.j"><a tabindex="-1" href="#sets6-1-40-4-1-2-1-10" title="Copy heading and permalink for Item 6.1.4.j" aria-label="Copy heading and permalink for Item 6.1.4.j">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 6.1.4"><a tabindex="-1" href="#sets6-1-40-4" title="Copy heading and permalink for Exercise 6.1.4" aria-label="Copy heading and permalink for Exercise 6.1.4">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="sets6-1-40-5"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="sets6-1-40-5"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="sets6-1-40-5-1-1">Determine whether each of the following are true or false.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="sets6-1-40-5-1-2">
-<li id="sets6-1-40-5-1-2-1">
-<div class="para" id="sets6-1-40-5-1-2-1-1">
-<span class="process-math">\(\displaystyle \mathbb{Z}^+\subseteq \mathbb{Q}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-5-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="sets6-1-40-5-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="sets6-1-40-5-1-2-1">
+<li id="sets6-1-40-5-1-2-1-1">
+<div class="para" id="sets6-1-40-5-1-2-1-1-1">
+<span class="process-math">\(\displaystyle \mathbb{Z}^+\subseteq \mathbb{Q}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-5-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.5.a"><a tabindex="-1" href="#sets6-1-40-5-1-2-1" title="Copy heading and permalink for Item 6.1.5.a" aria-label="Copy heading and permalink for Item 6.1.5.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.5.a"><a tabindex="-1" href="#sets6-1-40-5-1-2-1-1" title="Copy heading and permalink for Item 6.1.5.a" aria-label="Copy heading and permalink for Item 6.1.5.a">🔗</a></div>
 </li>
-<li id="sets6-1-40-5-1-2-2">
-<div class="para" id="sets6-1-40-5-1-2-2-1">
-<span class="process-math">\(\displaystyle \mathbb{R}^-\subseteq \mathbb{Q}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-5-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-5-1-2-1-2">
+<div class="para" id="sets6-1-40-5-1-2-1-2-1">
+<span class="process-math">\(\displaystyle \mathbb{R}^-\subseteq \mathbb{Q}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-5-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.5.b"><a tabindex="-1" href="#sets6-1-40-5-1-2-2" title="Copy heading and permalink for Item 6.1.5.b" aria-label="Copy heading and permalink for Item 6.1.5.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.5.b"><a tabindex="-1" href="#sets6-1-40-5-1-2-1-2" title="Copy heading and permalink for Item 6.1.5.b" aria-label="Copy heading and permalink for Item 6.1.5.b">🔗</a></div>
 </li>
-<li id="sets6-1-40-5-1-2-3">
-<div class="para" id="sets6-1-40-5-1-2-3-1">
-<span class="process-math">\(\displaystyle \mathbb{Q}\subseteq \mathbb{Z}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-5-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-5-1-2-1-3">
+<div class="para" id="sets6-1-40-5-1-2-1-3-1">
+<span class="process-math">\(\displaystyle \mathbb{Q}\subseteq \mathbb{Z}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-5-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.5.c"><a tabindex="-1" href="#sets6-1-40-5-1-2-3" title="Copy heading and permalink for Item 6.1.5.c" aria-label="Copy heading and permalink for Item 6.1.5.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.5.c"><a tabindex="-1" href="#sets6-1-40-5-1-2-1-3" title="Copy heading and permalink for Item 6.1.5.c" aria-label="Copy heading and permalink for Item 6.1.5.c">🔗</a></div>
 </li>
-<li id="sets6-1-40-5-1-2-4">
-<div class="para" id="sets6-1-40-5-1-2-4-1">
-<span class="process-math">\(\displaystyle \mathbb{Z}^-\cup\mathbb{Z}^+= \mathbb{Z}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-5-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-5-1-2-1-4">
+<div class="para" id="sets6-1-40-5-1-2-1-4-1">
+<span class="process-math">\(\displaystyle \mathbb{Z}^-\cup\mathbb{Z}^+= \mathbb{Z}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-5-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.5.d"><a tabindex="-1" href="#sets6-1-40-5-1-2-4" title="Copy heading and permalink for Item 6.1.5.d" aria-label="Copy heading and permalink for Item 6.1.5.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.5.d"><a tabindex="-1" href="#sets6-1-40-5-1-2-1-4" title="Copy heading and permalink for Item 6.1.5.d" aria-label="Copy heading and permalink for Item 6.1.5.d">🔗</a></div>
 </li>
-<li id="sets6-1-40-5-1-2-5">
-<div class="para" id="sets6-1-40-5-1-2-5-1">
-<span class="process-math">\(\displaystyle \mathbb{Z}^-\cap\mathbb{Z}^+= \emptyset\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-5-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-5-1-2-1-5">
+<div class="para" id="sets6-1-40-5-1-2-1-5-1">
+<span class="process-math">\(\displaystyle \mathbb{Z}^-\cap\mathbb{Z}^+= \emptyset\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-5-1-2-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.5.e"><a tabindex="-1" href="#sets6-1-40-5-1-2-5" title="Copy heading and permalink for Item 6.1.5.e" aria-label="Copy heading and permalink for Item 6.1.5.e">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.5.e"><a tabindex="-1" href="#sets6-1-40-5-1-2-1-5" title="Copy heading and permalink for Item 6.1.5.e" aria-label="Copy heading and permalink for Item 6.1.5.e">🔗</a></div>
 </li>
-<li id="sets6-1-40-5-1-2-6">
-<div class="para" id="sets6-1-40-5-1-2-6-1">
-<span class="process-math">\(\displaystyle \mathbb{Q}\cap\mathbb{R}= \mathbb{Q}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-5-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-5-1-2-1-6">
+<div class="para" id="sets6-1-40-5-1-2-1-6-1">
+<span class="process-math">\(\displaystyle \mathbb{Q}\cap\mathbb{R}= \mathbb{Q}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-5-1-2-1-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.5.f"><a tabindex="-1" href="#sets6-1-40-5-1-2-6" title="Copy heading and permalink for Item 6.1.5.f" aria-label="Copy heading and permalink for Item 6.1.5.f">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.5.f"><a tabindex="-1" href="#sets6-1-40-5-1-2-1-6" title="Copy heading and permalink for Item 6.1.5.f" aria-label="Copy heading and permalink for Item 6.1.5.f">🔗</a></div>
 </li>
-<li id="sets6-1-40-5-1-2-7">
-<div class="para" id="sets6-1-40-5-1-2-7-1">
-<span class="process-math">\(\displaystyle \mathbb{Q}\cup\mathbb{Z}= \mathbb{Q}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-5-1-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-5-1-2-1-7">
+<div class="para" id="sets6-1-40-5-1-2-1-7-1">
+<span class="process-math">\(\displaystyle \mathbb{Q}\cup\mathbb{Z}= \mathbb{Q}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-5-1-2-1-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.5.g"><a tabindex="-1" href="#sets6-1-40-5-1-2-7" title="Copy heading and permalink for Item 6.1.5.g" aria-label="Copy heading and permalink for Item 6.1.5.g">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.5.g"><a tabindex="-1" href="#sets6-1-40-5-1-2-1-7" title="Copy heading and permalink for Item 6.1.5.g" aria-label="Copy heading and permalink for Item 6.1.5.g">🔗</a></div>
 </li>
-<li id="sets6-1-40-5-1-2-8">
-<div class="para" id="sets6-1-40-5-1-2-8-1">
-<span class="process-math">\(\displaystyle \mathbb{Z}^+\cap\mathbb{R}= \mathbb{Z}^+\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-5-1-2-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-5-1-2-1-8">
+<div class="para" id="sets6-1-40-5-1-2-1-8-1">
+<span class="process-math">\(\displaystyle \mathbb{Z}^+\cap\mathbb{R}= \mathbb{Z}^+\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-5-1-2-1-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.5.h"><a tabindex="-1" href="#sets6-1-40-5-1-2-8" title="Copy heading and permalink for Item 6.1.5.h" aria-label="Copy heading and permalink for Item 6.1.5.h">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.5.h"><a tabindex="-1" href="#sets6-1-40-5-1-2-1-8" title="Copy heading and permalink for Item 6.1.5.h" aria-label="Copy heading and permalink for Item 6.1.5.h">🔗</a></div>
 </li>
-<li id="sets6-1-40-5-1-2-9">
-<div class="para" id="sets6-1-40-5-1-2-9-1">
-<span class="process-math">\(\displaystyle \mathbb{Z}\cup\mathbb{Q}= \mathbb{Z}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-5-1-2-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-5-1-2-1-9">
+<div class="para" id="sets6-1-40-5-1-2-1-9-1">
+<span class="process-math">\(\displaystyle \mathbb{Z}\cup\mathbb{Q}= \mathbb{Z}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-5-1-2-1-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.5.i"><a tabindex="-1" href="#sets6-1-40-5-1-2-9" title="Copy heading and permalink for Item 6.1.5.i" aria-label="Copy heading and permalink for Item 6.1.5.i">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.5.i"><a tabindex="-1" href="#sets6-1-40-5-1-2-1-9" title="Copy heading and permalink for Item 6.1.5.i" aria-label="Copy heading and permalink for Item 6.1.5.i">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-5-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 6.1.5"><a tabindex="-1" href="#sets6-1-40-5" title="Copy heading and permalink for Exercise 6.1.5" aria-label="Copy heading and permalink for Exercise 6.1.5">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="sets6-1-40-6"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="sets6-1-40-6"><h3 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="sets6-1-40-6-1-1">Let <span class="process-math">\(A=\{a, b, c\}\text{,}\)</span> <span class="process-math">\(B=\{b, c, d\}\text{,}\)</span> and <span class="process-math">\(C=\{b, c, e\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="sets6-1-40-6-1-2">
-<li id="sets6-1-40-6-1-2-1">
-<div class="para" id="sets6-1-40-6-1-2-1-1">Find <span class="process-math">\(A\cup(B\cap C)\text{,}\)</span> <span class="process-math">\((A\cup B)\cap C\text{,}\)</span> and <span class="process-math">\((A\cup B)\cap (A\cup C)\text{.}\)</span> Which of these sets are equal?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-6-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="sets6-1-40-6-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="sets6-1-40-6-1-2-1">
+<li id="sets6-1-40-6-1-2-1-1">
+<div class="para" id="sets6-1-40-6-1-2-1-1-1">Find <span class="process-math">\(A\cup(B\cap C)\text{,}\)</span> <span class="process-math">\((A\cup B)\cap C\text{,}\)</span> and <span class="process-math">\((A\cup B)\cap (A\cup C)\text{.}\)</span> Which of these sets are equal?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-6-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.6.a"><a tabindex="-1" href="#sets6-1-40-6-1-2-1" title="Copy heading and permalink for Item 6.1.6.a" aria-label="Copy heading and permalink for Item 6.1.6.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.6.a"><a tabindex="-1" href="#sets6-1-40-6-1-2-1-1" title="Copy heading and permalink for Item 6.1.6.a" aria-label="Copy heading and permalink for Item 6.1.6.a">🔗</a></div>
 </li>
-<li id="sets6-1-40-6-1-2-2">
-<div class="para" id="sets6-1-40-6-1-2-2-1">Find <span class="process-math">\(A\cap(B\cup C)\text{,}\)</span> <span class="process-math">\((A\cap B)\cup C\text{,}\)</span> and <span class="process-math">\((A\cap B)\cup (A\cap C)\text{.}\)</span> Which of these sets are equal?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-6-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-6-1-2-1-2">
+<div class="para" id="sets6-1-40-6-1-2-1-2-1">Find <span class="process-math">\(A\cap(B\cup C)\text{,}\)</span> <span class="process-math">\((A\cap B)\cup C\text{,}\)</span> and <span class="process-math">\((A\cap B)\cup (A\cap C)\text{.}\)</span> Which of these sets are equal?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-6-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.6.b"><a tabindex="-1" href="#sets6-1-40-6-1-2-2" title="Copy heading and permalink for Item 6.1.6.b" aria-label="Copy heading and permalink for Item 6.1.6.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.6.b"><a tabindex="-1" href="#sets6-1-40-6-1-2-1-2" title="Copy heading and permalink for Item 6.1.6.b" aria-label="Copy heading and permalink for Item 6.1.6.b">🔗</a></div>
 </li>
-<li id="sets6-1-40-6-1-2-3">
-<div class="para" id="sets6-1-40-6-1-2-3-1">Find <span class="process-math">\((A-B)-C\)</span> and <span class="process-math">\(A-(B-C)\text{.}\)</span> Are these sets equal?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-6-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-6-1-2-1-3">
+<div class="para" id="sets6-1-40-6-1-2-1-3-1">Find <span class="process-math">\((A-B)-C\)</span> and <span class="process-math">\(A-(B-C)\text{.}\)</span> Are these sets equal?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-6-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.6.c"><a tabindex="-1" href="#sets6-1-40-6-1-2-3" title="Copy heading and permalink for Item 6.1.6.c" aria-label="Copy heading and permalink for Item 6.1.6.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.6.c"><a tabindex="-1" href="#sets6-1-40-6-1-2-1-3" title="Copy heading and permalink for Item 6.1.6.c" aria-label="Copy heading and permalink for Item 6.1.6.c">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-6-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 6.1.6"><a tabindex="-1" href="#sets6-1-40-6" title="Copy heading and permalink for Exercise 6.1.6" aria-label="Copy heading and permalink for Exercise 6.1.6">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="sets6-1-40-7"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="sets6-1-40-7"><h3 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="sets6-1-40-7-1-1">Determine if the following statements are true or false. Give a justification for your answer.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="sets6-1-40-7-1-2">
-<li id="sets6-1-40-7-1-2-1">
-<div class="para" id="sets6-1-40-7-1-2-1-1">The number 0 is in <span class="process-math">\(\emptyset\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-7-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="sets6-1-40-7-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="sets6-1-40-7-1-2-1">
+<li id="sets6-1-40-7-1-2-1-1">
+<div class="para" id="sets6-1-40-7-1-2-1-1-1">The number 0 is in <span class="process-math">\(\emptyset\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-7-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.7.a"><a tabindex="-1" href="#sets6-1-40-7-1-2-1" title="Copy heading and permalink for Item 6.1.7.a" aria-label="Copy heading and permalink for Item 6.1.7.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.7.a"><a tabindex="-1" href="#sets6-1-40-7-1-2-1-1" title="Copy heading and permalink for Item 6.1.7.a" aria-label="Copy heading and permalink for Item 6.1.7.a">🔗</a></div>
 </li>
-<li id="sets6-1-40-7-1-2-2">
-<div class="para" id="sets6-1-40-7-1-2-2-1">
-<span class="process-math">\(\displaystyle \emptyset= \{\emptyset\}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-7-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-7-1-2-1-2">
+<div class="para" id="sets6-1-40-7-1-2-1-2-1">
+<span class="process-math">\(\displaystyle \emptyset= \{\emptyset\}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-7-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.7.b"><a tabindex="-1" href="#sets6-1-40-7-1-2-2" title="Copy heading and permalink for Item 6.1.7.b" aria-label="Copy heading and permalink for Item 6.1.7.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.7.b"><a tabindex="-1" href="#sets6-1-40-7-1-2-1-2" title="Copy heading and permalink for Item 6.1.7.b" aria-label="Copy heading and permalink for Item 6.1.7.b">🔗</a></div>
 </li>
-<li id="sets6-1-40-7-1-2-3">
-<div class="para" id="sets6-1-40-7-1-2-3-1">
-<span class="process-math">\(\displaystyle \emptyset\in \{\emptyset\}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-7-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-7-1-2-1-3">
+<div class="para" id="sets6-1-40-7-1-2-1-3-1">
+<span class="process-math">\(\displaystyle \emptyset\in \{\emptyset\}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-7-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.7.c"><a tabindex="-1" href="#sets6-1-40-7-1-2-3" title="Copy heading and permalink for Item 6.1.7.c" aria-label="Copy heading and permalink for Item 6.1.7.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.7.c"><a tabindex="-1" href="#sets6-1-40-7-1-2-1-3" title="Copy heading and permalink for Item 6.1.7.c" aria-label="Copy heading and permalink for Item 6.1.7.c">🔗</a></div>
 </li>
-<li id="sets6-1-40-7-1-2-4">
-<div class="para" id="sets6-1-40-7-1-2-4-1">
-<span class="process-math">\(\displaystyle \emptyset\in \emptyset\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-7-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-7-1-2-1-4">
+<div class="para" id="sets6-1-40-7-1-2-1-4-1">
+<span class="process-math">\(\displaystyle \emptyset\in \emptyset\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-7-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.7.d"><a tabindex="-1" href="#sets6-1-40-7-1-2-4" title="Copy heading and permalink for Item 6.1.7.d" aria-label="Copy heading and permalink for Item 6.1.7.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.7.d"><a tabindex="-1" href="#sets6-1-40-7-1-2-1-4" title="Copy heading and permalink for Item 6.1.7.d" aria-label="Copy heading and permalink for Item 6.1.7.d">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-7-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 6.1.7"><a tabindex="-1" href="#sets6-1-40-7" title="Copy heading and permalink for Exercise 6.1.7" aria-label="Copy heading and permalink for Exercise 6.1.7">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="sets6-1-40-8"><h4 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="sets6-1-40-8"><h3 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="sets6-1-40-8-1-1">Let <span class="process-math">\(A_i=\{x\in \mathbb{R}: -i\leq x\leq i\}\)</span> (the interval <span class="process-math">\([-i, i]\)</span>) for all nonnegative integers <span class="process-math">\(i\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="sets6-1-40-8-1-2">
-<li id="sets6-1-40-8-1-2-1">
-<div class="para" id="sets6-1-40-8-1-2-1-1">Find <span class="process-math">\(\bigcup_{i=0}^{4}A_i\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-8-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="sets6-1-40-8-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="sets6-1-40-8-1-2-1">
+<li id="sets6-1-40-8-1-2-1-1">
+<div class="para" id="sets6-1-40-8-1-2-1-1-1">Find <span class="process-math">\(\bigcup_{i=0}^{4}A_i\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-8-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.8.a"><a tabindex="-1" href="#sets6-1-40-8-1-2-1" title="Copy heading and permalink for Item 6.1.8.a" aria-label="Copy heading and permalink for Item 6.1.8.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.8.a"><a tabindex="-1" href="#sets6-1-40-8-1-2-1-1" title="Copy heading and permalink for Item 6.1.8.a" aria-label="Copy heading and permalink for Item 6.1.8.a">🔗</a></div>
 </li>
-<li id="sets6-1-40-8-1-2-2">
-<div class="para" id="sets6-1-40-8-1-2-2-1">Find <span class="process-math">\(\bigcap_{i=0}^{4}A_i\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-8-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-8-1-2-1-2">
+<div class="para" id="sets6-1-40-8-1-2-1-2-1">Find <span class="process-math">\(\bigcap_{i=0}^{4}A_i\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-8-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.8.b"><a tabindex="-1" href="#sets6-1-40-8-1-2-2" title="Copy heading and permalink for Item 6.1.8.b" aria-label="Copy heading and permalink for Item 6.1.8.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.8.b"><a tabindex="-1" href="#sets6-1-40-8-1-2-1-2" title="Copy heading and permalink for Item 6.1.8.b" aria-label="Copy heading and permalink for Item 6.1.8.b">🔗</a></div>
 </li>
-<li id="sets6-1-40-8-1-2-3">
-<div class="para" id="sets6-1-40-8-1-2-3-1">Are <span class="process-math">\(A_0, A_1, A_2\ldots\)</span> pairwise disjoint? Explain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-8-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-8-1-2-1-3">
+<div class="para" id="sets6-1-40-8-1-2-1-3-1">Are <span class="process-math">\(A_0, A_1, A_2\ldots\)</span> pairwise disjoint? Explain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-8-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.8.c"><a tabindex="-1" href="#sets6-1-40-8-1-2-3" title="Copy heading and permalink for Item 6.1.8.c" aria-label="Copy heading and permalink for Item 6.1.8.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.8.c"><a tabindex="-1" href="#sets6-1-40-8-1-2-1-3" title="Copy heading and permalink for Item 6.1.8.c" aria-label="Copy heading and permalink for Item 6.1.8.c">🔗</a></div>
 </li>
-<li id="sets6-1-40-8-1-2-4">
-<div class="para" id="sets6-1-40-8-1-2-4-1">Find <span class="process-math">\(\bigcup_{i=0}^{n}A_i\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-8-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-8-1-2-1-4">
+<div class="para" id="sets6-1-40-8-1-2-1-4-1">Find <span class="process-math">\(\bigcup_{i=0}^{n}A_i\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-8-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.8.d"><a tabindex="-1" href="#sets6-1-40-8-1-2-4" title="Copy heading and permalink for Item 6.1.8.d" aria-label="Copy heading and permalink for Item 6.1.8.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.8.d"><a tabindex="-1" href="#sets6-1-40-8-1-2-1-4" title="Copy heading and permalink for Item 6.1.8.d" aria-label="Copy heading and permalink for Item 6.1.8.d">🔗</a></div>
 </li>
-<li id="sets6-1-40-8-1-2-5">
-<div class="para" id="sets6-1-40-8-1-2-5-1">Find <span class="process-math">\(\bigcap_{i=0}^{n}A_i\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-8-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-8-1-2-1-5">
+<div class="para" id="sets6-1-40-8-1-2-1-5-1">Find <span class="process-math">\(\bigcap_{i=0}^{n}A_i\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-8-1-2-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.8.e"><a tabindex="-1" href="#sets6-1-40-8-1-2-5" title="Copy heading and permalink for Item 6.1.8.e" aria-label="Copy heading and permalink for Item 6.1.8.e">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.8.e"><a tabindex="-1" href="#sets6-1-40-8-1-2-1-5" title="Copy heading and permalink for Item 6.1.8.e" aria-label="Copy heading and permalink for Item 6.1.8.e">🔗</a></div>
 </li>
-<li id="sets6-1-40-8-1-2-6">
-<div class="para" id="sets6-1-40-8-1-2-6-1">Find <span class="process-math">\(\bigcup_{i=1}^{\infty}A_i\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-8-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-8-1-2-1-6">
+<div class="para" id="sets6-1-40-8-1-2-1-6-1">Find <span class="process-math">\(\bigcup_{i=1}^{\infty}A_i\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-8-1-2-1-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.8.f"><a tabindex="-1" href="#sets6-1-40-8-1-2-6" title="Copy heading and permalink for Item 6.1.8.f" aria-label="Copy heading and permalink for Item 6.1.8.f">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.8.f"><a tabindex="-1" href="#sets6-1-40-8-1-2-1-6" title="Copy heading and permalink for Item 6.1.8.f" aria-label="Copy heading and permalink for Item 6.1.8.f">🔗</a></div>
 </li>
-<li id="sets6-1-40-8-1-2-7">
-<div class="para" id="sets6-1-40-8-1-2-7-1">Find <span class="process-math">\(\bigcap_{i=1}^{\infty}A_i\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-8-1-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-8-1-2-1-7">
+<div class="para" id="sets6-1-40-8-1-2-1-7-1">Find <span class="process-math">\(\bigcap_{i=1}^{\infty}A_i\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-8-1-2-1-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.8.g"><a tabindex="-1" href="#sets6-1-40-8-1-2-7" title="Copy heading and permalink for Item 6.1.8.g" aria-label="Copy heading and permalink for Item 6.1.8.g">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.8.g"><a tabindex="-1" href="#sets6-1-40-8-1-2-1-7" title="Copy heading and permalink for Item 6.1.8.g" aria-label="Copy heading and permalink for Item 6.1.8.g">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-8-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 6.1.8"><a tabindex="-1" href="#sets6-1-40-8" title="Copy heading and permalink for Exercise 6.1.8" aria-label="Copy heading and permalink for Exercise 6.1.8">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="sets6-1-40-9"><h4 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="sets6-1-40-9"><h3 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="sets6-1-40-9-1-1">Determine if the set of sets is a partition of the given set.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="sets6-1-40-9-1-2">
-<li id="sets6-1-40-9-1-2-1">
-<div class="para" id="sets6-1-40-9-1-2-1-1">Is <span class="process-math">\(\{\{a, d, e\}, \{b, c\}, \{d, f\}\}\)</span> a partition of <span class="process-math">\(\{a, b, c, d, e, f\}\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-9-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="sets6-1-40-9-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="sets6-1-40-9-1-2-1">
+<li id="sets6-1-40-9-1-2-1-1">
+<div class="para" id="sets6-1-40-9-1-2-1-1-1">Is <span class="process-math">\(\{\{a, d, e\}, \{b, c\}, \{d, f\}\}\)</span> a partition of <span class="process-math">\(\{a, b, c, d, e, f\}\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-9-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.9.a"><a tabindex="-1" href="#sets6-1-40-9-1-2-1" title="Copy heading and permalink for Item 6.1.9.a" aria-label="Copy heading and permalink for Item 6.1.9.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.9.a"><a tabindex="-1" href="#sets6-1-40-9-1-2-1-1" title="Copy heading and permalink for Item 6.1.9.a" aria-label="Copy heading and permalink for Item 6.1.9.a">🔗</a></div>
 </li>
-<li id="sets6-1-40-9-1-2-2">
-<div class="para" id="sets6-1-40-9-1-2-2-1">Is <span class="process-math">\(\{\{w, x, v\}, \{u, y, q\}, \{p, z\}\}\)</span> a partition of <span class="process-math">\(\{p, q, u, v, w, x, y, z \}\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-9-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-9-1-2-1-2">
+<div class="para" id="sets6-1-40-9-1-2-1-2-1">Is <span class="process-math">\(\{\{w, x, v\}, \{u, y, q\}, \{p, z\}\}\)</span> a partition of <span class="process-math">\(\{p, q, u, v, w, x, y, z \}\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-9-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.9.b"><a tabindex="-1" href="#sets6-1-40-9-1-2-2" title="Copy heading and permalink for Item 6.1.9.b" aria-label="Copy heading and permalink for Item 6.1.9.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.9.b"><a tabindex="-1" href="#sets6-1-40-9-1-2-1-2" title="Copy heading and permalink for Item 6.1.9.b" aria-label="Copy heading and permalink for Item 6.1.9.b">🔗</a></div>
 </li>
-<li id="sets6-1-40-9-1-2-3">
-<div class="para" id="sets6-1-40-9-1-2-3-1">Is <span class="process-math">\(\{\{5, 4\}, \{7, 2\}, \{1, 3, 4\}, \{6, 8\}\}\)</span> a partition of <span class="process-math">\(\{1, 2, 3, 4, 5, 6, 7, 8\}\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-9-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-9-1-2-1-3">
+<div class="para" id="sets6-1-40-9-1-2-1-3-1">Is <span class="process-math">\(\{\{5, 4\}, \{7, 2\}, \{1, 3, 4\}, \{6, 8\}\}\)</span> a partition of <span class="process-math">\(\{1, 2, 3, 4, 5, 6, 7, 8\}\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-9-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.9.c"><a tabindex="-1" href="#sets6-1-40-9-1-2-3" title="Copy heading and permalink for Item 6.1.9.c" aria-label="Copy heading and permalink for Item 6.1.9.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.9.c"><a tabindex="-1" href="#sets6-1-40-9-1-2-1-3" title="Copy heading and permalink for Item 6.1.9.c" aria-label="Copy heading and permalink for Item 6.1.9.c">🔗</a></div>
 </li>
-<li id="sets6-1-40-9-1-2-4">
-<div class="para" id="sets6-1-40-9-1-2-4-1">Is <span class="process-math">\(\{\{3, 7, 8\}, \{2, 9\}, \{1, 4, 5\}\}\)</span> a partition of <span class="process-math">\(\{1, 2, 3, 4, 5, 6, 7, 8, 9\}\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-9-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-9-1-2-1-4">
+<div class="para" id="sets6-1-40-9-1-2-1-4-1">Is <span class="process-math">\(\{\{3, 7, 8\}, \{2, 9\}, \{1, 4, 5\}\}\)</span> a partition of <span class="process-math">\(\{1, 2, 3, 4, 5, 6, 7, 8, 9\}\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-9-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.9.d"><a tabindex="-1" href="#sets6-1-40-9-1-2-4" title="Copy heading and permalink for Item 6.1.9.d" aria-label="Copy heading and permalink for Item 6.1.9.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.9.d"><a tabindex="-1" href="#sets6-1-40-9-1-2-1-4" title="Copy heading and permalink for Item 6.1.9.d" aria-label="Copy heading and permalink for Item 6.1.9.d">🔗</a></div>
 </li>
-<li id="sets6-1-40-9-1-2-5">
-<div class="para" id="sets6-1-40-9-1-2-5-1">Is <span class="process-math">\(\{\{1, 5\}, \{4, 7\}, \{2, 8, 6, 3\}\}\)</span> a partition of <span class="process-math">\(\{1, 2, 3, 4, 5, 6, 7, 8\}\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-9-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-9-1-2-1-5">
+<div class="para" id="sets6-1-40-9-1-2-1-5-1">Is <span class="process-math">\(\{\{1, 5\}, \{4, 7\}, \{2, 8, 6, 3\}\}\)</span> a partition of <span class="process-math">\(\{1, 2, 3, 4, 5, 6, 7, 8\}\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-9-1-2-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.9.e"><a tabindex="-1" href="#sets6-1-40-9-1-2-5" title="Copy heading and permalink for Item 6.1.9.e" aria-label="Copy heading and permalink for Item 6.1.9.e">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.9.e"><a tabindex="-1" href="#sets6-1-40-9-1-2-1-5" title="Copy heading and permalink for Item 6.1.9.e" aria-label="Copy heading and permalink for Item 6.1.9.e">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-9-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 6.1.9"><a tabindex="-1" href="#sets6-1-40-9" title="Copy heading and permalink for Exercise 6.1.9" aria-label="Copy heading and permalink for Exercise 6.1.9">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="sets6-1-40-10"><h4 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="sets6-1-40-10"><h3 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para logical" id="sets6-1-40-10-1-1">
 <div class="para">Let</div>
 <div class="displaymath process-math" id="sets6-1-40-10-1-1-1">
@@ -1374,42 +1427,45 @@ A_3&amp;=\{n\in\mathbb{Z}: n=4k+3 \text{ for some } k\in \mathbb{Z}\}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 6.1.10"><a tabindex="-1" href="#sets6-1-40-10" title="Copy heading and permalink for Exercise 6.1.10" aria-label="Copy heading and permalink for Exercise 6.1.10">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="sets6-1-40-11"><h4 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="sets6-1-40-11"><h3 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="sets6-1-40-11-1-1">Let <span class="process-math">\(A=\{1, 2\}\)</span> and <span class="process-math">\(B=\{2, 3\}\text{.}\)</span> Find<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="sets6-1-40-11-1-2">
-<li id="sets6-1-40-11-1-2-1">
-<div class="para" id="sets6-1-40-11-1-2-1-1">
-<span class="process-math">\({\cal{P}}(A\cap B)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-11-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="sets6-1-40-11-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="sets6-1-40-11-1-2-1">
+<li id="sets6-1-40-11-1-2-1-1">
+<div class="para" id="sets6-1-40-11-1-2-1-1-1">
+<span class="process-math">\({\cal{P}}(A\cap B)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-11-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.11.a"><a tabindex="-1" href="#sets6-1-40-11-1-2-1" title="Copy heading and permalink for Item 6.1.11.a" aria-label="Copy heading and permalink for Item 6.1.11.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.11.a"><a tabindex="-1" href="#sets6-1-40-11-1-2-1-1" title="Copy heading and permalink for Item 6.1.11.a" aria-label="Copy heading and permalink for Item 6.1.11.a">🔗</a></div>
 </li>
-<li id="sets6-1-40-11-1-2-2">
-<div class="para" id="sets6-1-40-11-1-2-2-1">
-<span class="process-math">\({\cal{P}}(A)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-11-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-11-1-2-1-2">
+<div class="para" id="sets6-1-40-11-1-2-1-2-1">
+<span class="process-math">\({\cal{P}}(A)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-11-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.11.b"><a tabindex="-1" href="#sets6-1-40-11-1-2-2" title="Copy heading and permalink for Item 6.1.11.b" aria-label="Copy heading and permalink for Item 6.1.11.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.11.b"><a tabindex="-1" href="#sets6-1-40-11-1-2-1-2" title="Copy heading and permalink for Item 6.1.11.b" aria-label="Copy heading and permalink for Item 6.1.11.b">🔗</a></div>
 </li>
-<li id="sets6-1-40-11-1-2-3">
-<div class="para" id="sets6-1-40-11-1-2-3-1">
-<span class="process-math">\({\cal{P}}(A\cup B)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-11-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-11-1-2-1-3">
+<div class="para" id="sets6-1-40-11-1-2-1-3-1">
+<span class="process-math">\({\cal{P}}(A\cup B)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-11-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.11.c"><a tabindex="-1" href="#sets6-1-40-11-1-2-3" title="Copy heading and permalink for Item 6.1.11.c" aria-label="Copy heading and permalink for Item 6.1.11.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.11.c"><a tabindex="-1" href="#sets6-1-40-11-1-2-1-3" title="Copy heading and permalink for Item 6.1.11.c" aria-label="Copy heading and permalink for Item 6.1.11.c">🔗</a></div>
 </li>
-<li id="sets6-1-40-11-1-2-4">
-<div class="para" id="sets6-1-40-11-1-2-4-1">
-<span class="process-math">\({\cal{P}}(A\times B)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-11-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sets6-1-40-11-1-2-1-4">
+<div class="para" id="sets6-1-40-11-1-2-1-4-1">
+<span class="process-math">\({\cal{P}}(A\times B)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-11-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.11.d"><a tabindex="-1" href="#sets6-1-40-11-1-2-4" title="Copy heading and permalink for Item 6.1.11.d" aria-label="Copy heading and permalink for Item 6.1.11.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6.1.11.d"><a tabindex="-1" href="#sets6-1-40-11-1-2-1-4" title="Copy heading and permalink for Item 6.1.11.d" aria-label="Copy heading and permalink for Item 6.1.11.d">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sets6-1-40-11-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 6.1.11"><a tabindex="-1" href="#sets6-1-40-11" title="Copy heading and permalink for Exercise 6.1.11" aria-label="Copy heading and permalink for Exercise 6.1.11">🔗</a></div>
 </article><div class="autopermalink" aria-hidden="true" data-description="Exercises 6.1"><a tabindex="-1" href="#sets6-1-40" title="Copy heading and permalink for Exercises 6.1" aria-label="Copy heading and permalink for Exercises 6.1">🔗</a></div>
 </section><div class="autopermalink" aria-hidden="true" data-description="Section 6.1: Set Theory"><a tabindex="-1" href="#sets6-1" title="Copy heading and permalink for Section 6.1: Set Theory" aria-label="Copy heading and permalink for Section 6.1: Set Theory">🔗</a></div>
 </section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="chapter6.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="propertiesofsets6-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="chapter6-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="propertiesofsets6-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

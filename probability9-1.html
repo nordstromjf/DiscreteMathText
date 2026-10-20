@@ -19,15 +19,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-2 { system: extends decimal; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-3 { system: extends decimal; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-4 { system: extends lower-roman; prefix: ''; suffix: '. '; }
+</style>
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
 hasWebworkReps: false,
 hasSage: false,
 isReact: false,
 htmlPresentation: false,
+lang: "en-US",
 });
-</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta name="twitter:title" content="Discrete Mathematics: An Active Approach to Mathematical Reasoning">
@@ -36,7 +42,7 @@ htmlPresentation: false,
 <meta name="twitter:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta property="og:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.43"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.54"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.54"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -58,21 +64,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.9';
+eBookConfig.runestone_version = '8.3.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.846a0d6fafaa99e0.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.bbcfc02849ebc023.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/prefix-runtime.4beca1fdeed766a2.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.ebd33f6a21eed414.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.9963089870a016c8.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="DiscreteMathText" class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></div>
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="DiscreteMath-14-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
@@ -85,7 +91,17 @@ eBookConfig.enable_chatcodes =  false;
 <div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
 <ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
-<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
 <h2 class="heading">Readability settings</h2>
 <button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
@@ -103,7 +119,7 @@ eBookConfig.enable_chatcodes =  false;
 <legend>Assistive technologies</legend>
 <label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
 </fieldset>
-<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="chapter9.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter9.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="multrule9-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="chapter9-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter9.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="multrule9-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \newcommand{\MyTikzmark}[2]{
      \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
 \newcommand{\DrawVLine}[3][]{
@@ -134,6 +150,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter1.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to Mathematical Language</span></a></div>
 <ul id="ptx-toc-group-chapter1" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter1-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="variables1-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Variables and Statements</span></a></div>
 <ul id="ptx-toc-group-variables1-1" class="structural toc-item-list">
@@ -160,6 +177,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter2.html" class="internal"><span class="codenumber">2</span> <span class="title">Logic</span></a></div>
 <ul id="ptx-toc-group-chapter2" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter2-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="logical_form2-1.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Truth-Tables and Logical Equivalence</span></a></div>
 <ul id="ptx-toc-group-logical_form2-1" class="structural toc-item-list">
@@ -186,6 +204,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter3.html" class="internal"><span class="codenumber">3</span> <span class="title">Logic with Quantifiers</span></a></div>
 <ul id="ptx-toc-group-chapter3" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter3-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="quantifiersI3-1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Quantifiers</span></a></div>
 <ul id="ptx-toc-group-quantifiersI3-1" class="structural toc-item-list">
@@ -219,6 +238,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter4.html" class="internal"><span class="codenumber">4</span> <span class="title">Proof Techniques</span></a></div>
 <ul id="ptx-toc-group-chapter4" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter4-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="directproof4-1.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Direct Proof and Counterexample</span></a></div>
 <ul id="ptx-toc-group-directproof4-1" class="structural toc-item-list">
@@ -266,6 +286,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter5.html" class="internal"><span class="codenumber">5</span> <span class="title">Sequences and Mathematical Induction</span></a></div>
 <ul id="ptx-toc-group-chapter5" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter5-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sequences5-1.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Sequences</span></a></div>
 <ul id="ptx-toc-group-sequences5-1" class="structural toc-item-list">
@@ -313,6 +334,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter6.html" class="internal"><span class="codenumber">6</span> <span class="title">Set Theory</span></a></div>
 <ul id="ptx-toc-group-chapter6" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter6-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sets6-1.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Set Theory</span></a></div>
 <ul id="ptx-toc-group-sets6-1" class="structural toc-item-list">
@@ -339,6 +361,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter7.html" class="internal"><span class="codenumber">7</span> <span class="title">Functions</span></a></div>
 <ul id="ptx-toc-group-chapter7" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter7-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="functions7-1.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Functions</span></a></div>
 <ul id="ptx-toc-group-functions7-1" class="structural toc-item-list">
@@ -358,6 +381,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter8.html" class="internal"><span class="codenumber">8</span> <span class="title">Relations</span></a></div>
 <ul id="ptx-toc-group-chapter8" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter8-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="relations8-1.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Relations on Sets</span></a></div>
 <ul id="ptx-toc-group-relations8-1" class="structural toc-item-list">
@@ -391,6 +415,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="chapter9.html" class="internal"><span class="codenumber">9</span> <span class="title">Probability and Counting</span></a></div>
 <ul class="structural toc-item-list contains-active" id="ptx-toc-group-chapter9">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter9-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="probability9-1.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Probability</span></a></div>
 <ul class="structural toc-item-list active" id="ptx-toc-group-probability9-1">
@@ -438,6 +463,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter10.html" class="internal"><span class="codenumber">10</span> <span class="title">Graph Theory</span></a></div>
 <ul id="ptx-toc-group-chapter10" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter10-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="graphs10-1.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphs</span></a></div>
 <ul id="ptx-toc-group-graphs10-1" class="structural toc-item-list">
@@ -465,7 +491,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="DiscreteMath-14.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul id="ptx-toc-group-DiscreteMath-14" class="structural toc-item-list">
 <li class="toc-item toc-references"><div class="toc-title-box"><a href="DiscreteMath-14-1.html" class="internal"><span class="title">References</span></a></div></li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A.</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="DiscreteMath-14-3.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="DiscreteMath-14-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
@@ -473,9 +499,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="probability9-1">
-<h2 class="heading hide-type">
+<h1 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Probability</span>
-</h2>
+</h1>
 <div class="para" id="probability9-1-3">Let <span class="process-math">\(S\)</span> be a set of possible outcomes, called a <dfn class="terminology">sample space</dfn>. Let <span class="process-math">\(E\)</span> be a subset of <span class="process-math">\(S\)</span> with some property. We call <span class="process-math">\(E\)</span> an <dfn class="terminology">event</dfn>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="probability9-1-4">The <dfn class="terminology">probability</dfn> of event <span class="process-math">\(E\text{,}\)</span> <span class="process-math">\(P(E)\text{,}\)</span> is the number of outcomes in <span class="process-math">\(E\)</span> divided by the total number of outcomes in <span class="process-math">\(S\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -484,9 +510,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="probability9-1-6">In notation, <span class="process-math">\(P(E)=\frac{N(E)}{N(S)}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_probcards" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding Probability of an Event.</span>
-</h3></summary>
+<details id="E_probcards" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding Probability of an Event.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_probcards-2">A standard deck of playing cards has 52 cards. Each card has a suit and a value. The deck has four suits: hearts, diamonds, spades, clubs. Each suit has 13 values: Ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, King. The spades and clubs are called “black” cards, the hearts and diamonds are called “red” cards.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_probcards-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -524,28 +550,28 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" aria-hidden="true" data-description="Answer 9.1.1.3"><a tabindex="-1" href="#E_probcards-11" title="Copy heading and permalink for Answer 9.1.1.3" aria-label="Copy heading and permalink for Answer 9.1.1.3">🔗</a></div>
 </div></details><div class="autopermalink" aria-hidden="true" data-description="Example 9.1.1: Finding Probability of an Event"><a tabindex="-1" href="#E_probcards" title="Copy heading and permalink for Example 9.1.1: Finding Probability of an Event" aria-label="Copy heading and permalink for Example 9.1.1: Finding Probability of an Event">🔗</a></div>
 </article></details>
-<article class="activity project-like" id="prob-2toss"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="prob-2toss"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="introduction" id="prob-2toss-1">
 <div class="para" id="prob-2toss-1-1">Suppose you toss a fair coin two times.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#prob-2toss-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="prob-2toss-all"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="prob-2toss-all"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="prob-2toss-all-1-1">List all the possible outcomes.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#prob-2toss-all-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 9.1.1.a"><a tabindex="-1" href="#prob-2toss-all" title="Copy heading and permalink for Task 9.1.1.a" aria-label="Copy heading and permalink for Task 9.1.1.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 9.1.2.a"><a tabindex="-1" href="#prob-2toss-all" title="Copy heading and permalink for Task 9.1.2.a" aria-label="Copy heading and permalink for Task 9.1.2.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="prob-2toss-2H"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="prob-2toss-2H"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="prob-2toss-2H-1-1">What is the probability that you get exactly 2 heads?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#prob-2toss-2H-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 9.1.1.b"><a tabindex="-1" href="#prob-2toss-2H" title="Copy heading and permalink for Task 9.1.1.b" aria-label="Copy heading and permalink for Task 9.1.1.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 9.1.2.b"><a tabindex="-1" href="#prob-2toss-2H" title="Copy heading and permalink for Task 9.1.2.b" aria-label="Copy heading and permalink for Task 9.1.2.b">🔗</a></div>
 </article>
-<article class="task exercise-like" id="prob-2toss-1H"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<article class="task exercise-like" id="prob-2toss-1H"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="prob-2toss-1H-1-1">What is the probability that you get exactly 1 head?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#prob-2toss-1H-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 9.1.1.c"><a tabindex="-1" href="#prob-2toss-1H" title="Copy heading and permalink for Task 9.1.1.c" aria-label="Copy heading and permalink for Task 9.1.1.c">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 9.1.1"><a tabindex="-1" href="#prob-2toss" title="Copy heading and permalink for Activity 9.1.1" aria-label="Copy heading and permalink for Activity 9.1.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 9.1.2.c"><a tabindex="-1" href="#prob-2toss-1H" title="Copy heading and permalink for Task 9.1.2.c" aria-label="Copy heading and permalink for Task 9.1.2.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 9.1.2"><a tabindex="-1" href="#prob-2toss" title="Copy heading and permalink for Activity 9.1.2" aria-label="Copy heading and permalink for Activity 9.1.2">🔗</a></div>
 </article>
 <div class="para" id="probability9-1-9">In order to calculate a probability, we need to be able to count <dfn class="terminology">equally-likely</dfn> events. Just because there are, say, 3 outcomes, that doesn’t mean all the outcomes are equally-likely. For example, the Linfield University football team could win, lose, or tie a game. Given the team’s winning streak, the three outcomes are not equally-likely. They have a much higher probability of winning than just 1/3.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -573,9 +599,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="activity project-like" id="prob-eqlikely"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="prob-eqlikely"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="ptx-runestone-container"><div class="runestone cardsort_section"><ul data-component="dragndrop" data-question_label="" style="visibility: hidden;" id="rs-prob-eqlikely">
 <span data-subcomponent="question">
 <div class="para" id="prob-eqlikely-1-1">Determine if the pairs of events are equally likely or not equally likely.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#prob-eqlikely-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -610,13 +636,13 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="prob-eqlikely-2-2-5-1">Not equally likely</div>
 </li>
 </ul></div></div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 9.1.2"><a tabindex="-1" href="#prob-eqlikely" title="Copy heading and permalink for Activity 9.1.2" aria-label="Copy heading and permalink for Activity 9.1.2">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 9.1.3"><a tabindex="-1" href="#prob-eqlikely" title="Copy heading and permalink for Activity 9.1.3" aria-label="Copy heading and permalink for Activity 9.1.3">🔗</a></div>
 </article>
 <section class="reading-questions" id="probability9-1-14">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Check Your Understanding</span>
-</h3>
-<article class="exercise exercise-like" id="DMT_prob_CYU_drawA"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</h2>
+<article class="exercise exercise-like" id="DMT_prob_CYU_drawA"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-DMT_prob_CYU_drawA">
 <div class="para" id="DMT_prob_CYU_drawA-1-1">In a standard deck of cards, find the probability of randomly drawing an Ace. Give your answer to at least 3 decimal places.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_prob_CYU_drawA-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -626,7 +652,7 @@ eBookConfig.enable_chatcodes =  false;
 </div></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 9.1.1"><a tabindex="-1" href="#DMT_prob_CYU_drawA" title="Copy heading and permalink for Reading Question 9.1.1" aria-label="Copy heading and permalink for Reading Question 9.1.1">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_prob_CYU_drawface"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_prob_CYU_drawface"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-DMT_prob_CYU_drawface">
 <div class="para" id="DMT_prob_CYU_drawface-1-1">In a standard deck of cards, find the probability of randomly drawing a face card (Jack, Queen, King). Give your answer to at least 3 decimal places.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_prob_CYU_drawface-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -636,7 +662,7 @@ eBookConfig.enable_chatcodes =  false;
 </div></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 9.1.2"><a tabindex="-1" href="#DMT_prob_CYU_drawface" title="Copy heading and permalink for Reading Question 9.1.2" aria-label="Copy heading and permalink for Reading Question 9.1.2">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_prob_CYU_draweven"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_prob_CYU_draweven"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-DMT_prob_CYU_draweven">
 <div class="para" id="DMT_prob_CYU_draweven-1-1">In a standard deck of cards, find the probability of randomly drawing an even numbered card. Give your answer to at least 3 decimal places.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_prob_CYU_draweven-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -646,7 +672,7 @@ eBookConfig.enable_chatcodes =  false;
 </div></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 9.1.3"><a tabindex="-1" href="#DMT_prob_CYU_draweven" title="Copy heading and permalink for Reading Question 9.1.3" aria-label="Copy heading and permalink for Reading Question 9.1.3">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_prob_CYU_drawgreen"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_prob_CYU_drawgreen"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-DMT_prob_CYU_drawgreen">
 <div class="para" id="DMT_prob_CYU_drawgreen-1-1">An urn contains 3 red balls, 2 green balls, 4 multicolored balls. Find the probability of drawing a green ball. Give your answer to at least 3 decimal places.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_prob_CYU_drawgreen-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -656,7 +682,7 @@ eBookConfig.enable_chatcodes =  false;
 </div></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 9.1.4"><a tabindex="-1" href="#DMT_prob_CYU_drawgreen" title="Copy heading and permalink for Reading Question 9.1.4" aria-label="Copy heading and permalink for Reading Question 9.1.4">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_prob_CYU_drawsolid"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_prob_CYU_drawsolid"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-DMT_prob_CYU_drawsolid">
 <div class="para" id="DMT_prob_CYU_drawsolid-1-1">An urn contains 3 red balls, 2 green balls, 4 multicolored balls. Find the probability of drawing a solid colored ball. Give your answer to at least 3 decimal places.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_prob_CYU_drawsolid-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -668,136 +694,154 @@ eBookConfig.enable_chatcodes =  false;
 </article><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 9.1: Check Your Understanding"><a tabindex="-1" href="#probability9-1-14" title="Copy heading and permalink for Reading Questions 9.1: Check Your Understanding" aria-label="Copy heading and permalink for Reading Questions 9.1: Check Your Understanding">🔗</a></div>
 </section>
 <section class="exercises" id="probability9-1-15">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
-</h3>
-<article class="exercise exercise-like" id="probability9-1-15-1"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</h2>
+<article class="exercise exercise-like" id="probability9-1-15-1"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="probability9-1-15-1-1-1">Assume the sample space is a standard deck of 52 cards. Suppose you choose a random card from the deck.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="probability9-1-15-1-1-2">
-<li id="probability9-1-15-1-1-2-1">
-<div class="para" id="probability9-1-15-1-1-2-1-1">List all the possible outcomes of the card being red and not a face card.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="probability9-1-15-1-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="probability9-1-15-1-1-2-1">
+<li id="probability9-1-15-1-1-2-1-1">
+<div class="para" id="probability9-1-15-1-1-2-1-1-1">List all the possible outcomes of the card being red and not a face card.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-1-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.1.a"><a tabindex="-1" href="#probability9-1-15-1-1-2-1" title="Copy heading and permalink for Item 9.1.1.a" aria-label="Copy heading and permalink for Item 9.1.1.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.1.a"><a tabindex="-1" href="#probability9-1-15-1-1-2-1-1" title="Copy heading and permalink for Item 9.1.1.a" aria-label="Copy heading and permalink for Item 9.1.1.a">🔗</a></div>
 </li>
-<li id="probability9-1-15-1-1-2-2">
-<div class="para" id="probability9-1-15-1-1-2-2-1">Calculate the probability of the event in (a).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="probability9-1-15-1-1-2-1-2">
+<div class="para" id="probability9-1-15-1-1-2-1-2-1">Calculate the probability of the event in (a).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-1-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.1.b"><a tabindex="-1" href="#probability9-1-15-1-1-2-2" title="Copy heading and permalink for Item 9.1.1.b" aria-label="Copy heading and permalink for Item 9.1.1.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.1.b"><a tabindex="-1" href="#probability9-1-15-1-1-2-1-2" title="Copy heading and permalink for Item 9.1.1.b" aria-label="Copy heading and permalink for Item 9.1.1.b">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.1.1"><a tabindex="-1" href="#probability9-1-15-1" title="Copy heading and permalink for Exercise 9.1.1" aria-label="Copy heading and permalink for Exercise 9.1.1">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="probability9-1-15-2"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="probability9-1-15-2"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="probability9-1-15-2-1-1">Assume the sample space is a standard deck of 52 cards. Suppose you choose a random card from the deck.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="probability9-1-15-2-1-2">
-<li id="probability9-1-15-2-1-2-1">
-<div class="para" id="probability9-1-15-2-1-2-1-1">List all the possible outcomes of the card being black and having an even number on it.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="probability9-1-15-2-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="probability9-1-15-2-1-2-1">
+<li id="probability9-1-15-2-1-2-1-1">
+<div class="para" id="probability9-1-15-2-1-2-1-1-1">List all the possible outcomes of the card being black and having an even number on it.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-2-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.2.a"><a tabindex="-1" href="#probability9-1-15-2-1-2-1" title="Copy heading and permalink for Item 9.1.2.a" aria-label="Copy heading and permalink for Item 9.1.2.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.2.a"><a tabindex="-1" href="#probability9-1-15-2-1-2-1-1" title="Copy heading and permalink for Item 9.1.2.a" aria-label="Copy heading and permalink for Item 9.1.2.a">🔗</a></div>
 </li>
-<li id="probability9-1-15-2-1-2-2">
-<div class="para" id="probability9-1-15-2-1-2-2-1">Calculate the probability of the event in (a).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="probability9-1-15-2-1-2-1-2">
+<div class="para" id="probability9-1-15-2-1-2-1-2-1">Calculate the probability of the event in (a).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-2-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.2.b"><a tabindex="-1" href="#probability9-1-15-2-1-2-2" title="Copy heading and permalink for Item 9.1.2.b" aria-label="Copy heading and permalink for Item 9.1.2.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.2.b"><a tabindex="-1" href="#probability9-1-15-2-1-2-1-2" title="Copy heading and permalink for Item 9.1.2.b" aria-label="Copy heading and permalink for Item 9.1.2.b">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.1.2"><a tabindex="-1" href="#probability9-1-15-2" title="Copy heading and permalink for Exercise 9.1.2" aria-label="Copy heading and permalink for Exercise 9.1.2">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="probability9-1-15-3"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="probability9-1-15-3"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="probability9-1-15-3-1-1">Assume the sample space is the possible rolls of a pair of dice, one blue die and one red die.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="probability9-1-15-3-1-2">
-<li id="probability9-1-15-3-1-2-1">
-<div class="para" id="probability9-1-15-3-1-2-1-1">List all the possible outcomes where the sum of the numbers showing face up is 8.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-3-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="probability9-1-15-3-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="probability9-1-15-3-1-2-1">
+<li id="probability9-1-15-3-1-2-1-1">
+<div class="para" id="probability9-1-15-3-1-2-1-1-1">List all the possible outcomes where the sum of the numbers showing face up is 8.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-3-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.3.a"><a tabindex="-1" href="#probability9-1-15-3-1-2-1" title="Copy heading and permalink for Item 9.1.3.a" aria-label="Copy heading and permalink for Item 9.1.3.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.3.a"><a tabindex="-1" href="#probability9-1-15-3-1-2-1-1" title="Copy heading and permalink for Item 9.1.3.a" aria-label="Copy heading and permalink for Item 9.1.3.a">🔗</a></div>
 </li>
-<li id="probability9-1-15-3-1-2-2">
-<div class="para" id="probability9-1-15-3-1-2-2-1">Calculate the probability of the event in (a).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-3-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="probability9-1-15-3-1-2-1-2">
+<div class="para" id="probability9-1-15-3-1-2-1-2-1">Calculate the probability of the event in (a).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-3-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.3.b"><a tabindex="-1" href="#probability9-1-15-3-1-2-2" title="Copy heading and permalink for Item 9.1.3.b" aria-label="Copy heading and permalink for Item 9.1.3.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.3.b"><a tabindex="-1" href="#probability9-1-15-3-1-2-1-2" title="Copy heading and permalink for Item 9.1.3.b" aria-label="Copy heading and permalink for Item 9.1.3.b">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.1.3"><a tabindex="-1" href="#probability9-1-15-3" title="Copy heading and permalink for Exercise 9.1.3" aria-label="Copy heading and permalink for Exercise 9.1.3">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="probability9-1-15-4"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="probability9-1-15-4"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="probability9-1-15-4-1-1">Assume the sample space is the possible rolls of a pair of dice, one blue die and one red die.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="probability9-1-15-4-1-2">
-<li id="probability9-1-15-4-1-2-1">
-<div class="para" id="probability9-1-15-4-1-2-1-1">List all the possible outcomes where the sum of the numbers showing face up is at most 6.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-4-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="probability9-1-15-4-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="probability9-1-15-4-1-2-1">
+<li id="probability9-1-15-4-1-2-1-1">
+<div class="para" id="probability9-1-15-4-1-2-1-1-1">List all the possible outcomes where the sum of the numbers showing face up is at most 6.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-4-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.4.a"><a tabindex="-1" href="#probability9-1-15-4-1-2-1" title="Copy heading and permalink for Item 9.1.4.a" aria-label="Copy heading and permalink for Item 9.1.4.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.4.a"><a tabindex="-1" href="#probability9-1-15-4-1-2-1-1" title="Copy heading and permalink for Item 9.1.4.a" aria-label="Copy heading and permalink for Item 9.1.4.a">🔗</a></div>
 </li>
-<li id="probability9-1-15-4-1-2-2">
-<div class="para" id="probability9-1-15-4-1-2-2-1">Calculate the probability of the event in (a).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-4-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="probability9-1-15-4-1-2-1-2">
+<div class="para" id="probability9-1-15-4-1-2-1-2-1">Calculate the probability of the event in (a).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-4-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.4.b"><a tabindex="-1" href="#probability9-1-15-4-1-2-2" title="Copy heading and permalink for Item 9.1.4.b" aria-label="Copy heading and permalink for Item 9.1.4.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.4.b"><a tabindex="-1" href="#probability9-1-15-4-1-2-1-2" title="Copy heading and permalink for Item 9.1.4.b" aria-label="Copy heading and permalink for Item 9.1.4.b">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.1.4"><a tabindex="-1" href="#probability9-1-15-4" title="Copy heading and permalink for Exercise 9.1.4" aria-label="Copy heading and permalink for Exercise 9.1.4">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="probability9-1-15-5"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="probability9-1-15-5"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="probability9-1-15-5-1-1">Suppose a coin is tossed four times and the side showing face up on each toss is noted. Suppose also that heads and tails are equally-likely for the coin.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="probability9-1-15-5-1-2">
-<li id="probability9-1-15-5-1-2-1">
-<div class="para" id="probability9-1-15-5-1-2-1-1">List the 16 elements in the sample space as sequences of heads and tails.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-5-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="probability9-1-15-5-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="probability9-1-15-5-1-2-1">
+<li id="probability9-1-15-5-1-2-1-1">
+<div class="para" id="probability9-1-15-5-1-2-1-1-1">List the 16 elements in the sample space as sequences of heads and tails.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-5-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.5.a"><a tabindex="-1" href="#probability9-1-15-5-1-2-1" title="Copy heading and permalink for Item 9.1.5.a" aria-label="Copy heading and permalink for Item 9.1.5.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.5.a"><a tabindex="-1" href="#probability9-1-15-5-1-2-1-1" title="Copy heading and permalink for Item 9.1.5.a" aria-label="Copy heading and permalink for Item 9.1.5.a">🔗</a></div>
 </li>
-<li id="probability9-1-15-5-1-2-2">
-<div class="para" id="probability9-1-15-5-1-2-2-1">List the set of outcomes and the probability for the event of exactly one toss resulting in a head.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-5-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="probability9-1-15-5-1-2-1-2">
+<div class="para" id="probability9-1-15-5-1-2-1-2-1">List the set of outcomes and the probability for the event of exactly one toss resulting in a head.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-5-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.5.b"><a tabindex="-1" href="#probability9-1-15-5-1-2-2" title="Copy heading and permalink for Item 9.1.5.b" aria-label="Copy heading and permalink for Item 9.1.5.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.5.b"><a tabindex="-1" href="#probability9-1-15-5-1-2-1-2" title="Copy heading and permalink for Item 9.1.5.b" aria-label="Copy heading and permalink for Item 9.1.5.b">🔗</a></div>
 </li>
-<li id="probability9-1-15-5-1-2-3">
-<div class="para" id="probability9-1-15-5-1-2-3-1">List the set of outcomes and the probability for the event that at least two tosses result in a head.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-5-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="probability9-1-15-5-1-2-1-3">
+<div class="para" id="probability9-1-15-5-1-2-1-3-1">List the set of outcomes and the probability for the event that at least two tosses result in a head.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-5-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.5.c"><a tabindex="-1" href="#probability9-1-15-5-1-2-3" title="Copy heading and permalink for Item 9.1.5.c" aria-label="Copy heading and permalink for Item 9.1.5.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.5.c"><a tabindex="-1" href="#probability9-1-15-5-1-2-1-3" title="Copy heading and permalink for Item 9.1.5.c" aria-label="Copy heading and permalink for Item 9.1.5.c">🔗</a></div>
 </li>
-<li id="probability9-1-15-5-1-2-4">
-<div class="para" id="probability9-1-15-5-1-2-4-1">List the set of outcomes and the probability for the event that no toss results in a head.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-5-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="probability9-1-15-5-1-2-1-4">
+<div class="para" id="probability9-1-15-5-1-2-1-4-1">List the set of outcomes and the probability for the event that no toss results in a head.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-5-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.5.d"><a tabindex="-1" href="#probability9-1-15-5-1-2-4" title="Copy heading and permalink for Item 9.1.5.d" aria-label="Copy heading and permalink for Item 9.1.5.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.5.d"><a tabindex="-1" href="#probability9-1-15-5-1-2-1-4" title="Copy heading and permalink for Item 9.1.5.d" aria-label="Copy heading and permalink for Item 9.1.5.d">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-5-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.1.5"><a tabindex="-1" href="#probability9-1-15-5" title="Copy heading and permalink for Exercise 9.1.5" aria-label="Copy heading and permalink for Exercise 9.1.5">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="probability9-1-15-6"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="probability9-1-15-6"><h3 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="probability9-1-15-6-1-1">Suppose that on a true/false exam you have no idea about the answers to three questions. You choose your answers randomly and therefore have a 50-50 chance of being correct on any one question. For example, let <span class="process-math">\(CCW\)</span> indicate that you were correct on the first two questions but wrong on the third.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="probability9-1-15-6-1-2">
-<li id="probability9-1-15-6-1-2-1">
-<div class="para" id="probability9-1-15-6-1-2-1-1">List all the elements of the sample space as the possible sequences of <span class="process-math">\(C\)</span> and <span class="process-math">\(W\)</span> for the three questions.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-6-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="probability9-1-15-6-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="probability9-1-15-6-1-2-1">
+<li id="probability9-1-15-6-1-2-1-1">
+<div class="para" id="probability9-1-15-6-1-2-1-1-1">List all the elements of the sample space as the possible sequences of <span class="process-math">\(C\)</span> and <span class="process-math">\(W\)</span> for the three questions.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-6-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.6.a"><a tabindex="-1" href="#probability9-1-15-6-1-2-1" title="Copy heading and permalink for Item 9.1.6.a" aria-label="Copy heading and permalink for Item 9.1.6.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.6.a"><a tabindex="-1" href="#probability9-1-15-6-1-2-1-1" title="Copy heading and permalink for Item 9.1.6.a" aria-label="Copy heading and permalink for Item 9.1.6.a">🔗</a></div>
 </li>
-<li id="probability9-1-15-6-1-2-2">
-<div class="para" id="probability9-1-15-6-1-2-2-1">List the set of outcomes and the probability for the event that exactly one answer is correct.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-6-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="probability9-1-15-6-1-2-1-2">
+<div class="para" id="probability9-1-15-6-1-2-1-2-1">List the set of outcomes and the probability for the event that exactly one answer is correct.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-6-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.6.b"><a tabindex="-1" href="#probability9-1-15-6-1-2-2" title="Copy heading and permalink for Item 9.1.6.b" aria-label="Copy heading and permalink for Item 9.1.6.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.6.b"><a tabindex="-1" href="#probability9-1-15-6-1-2-1-2" title="Copy heading and permalink for Item 9.1.6.b" aria-label="Copy heading and permalink for Item 9.1.6.b">🔗</a></div>
 </li>
-<li id="probability9-1-15-6-1-2-3">
-<div class="para" id="probability9-1-15-6-1-2-3-1">List the set of outcomes and the probability for the event that at least two answers are correct.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-6-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="probability9-1-15-6-1-2-1-3">
+<div class="para" id="probability9-1-15-6-1-2-1-3-1">List the set of outcomes and the probability for the event that at least two answers are correct.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-6-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.6.c"><a tabindex="-1" href="#probability9-1-15-6-1-2-3" title="Copy heading and permalink for Item 9.1.6.c" aria-label="Copy heading and permalink for Item 9.1.6.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.6.c"><a tabindex="-1" href="#probability9-1-15-6-1-2-1-3" title="Copy heading and permalink for Item 9.1.6.c" aria-label="Copy heading and permalink for Item 9.1.6.c">🔗</a></div>
 </li>
-<li id="probability9-1-15-6-1-2-4">
-<div class="para" id="probability9-1-15-6-1-2-4-1">List the set of outcomes and the probability for the event that no answers are correct.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-6-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="probability9-1-15-6-1-2-1-4">
+<div class="para" id="probability9-1-15-6-1-2-1-4-1">List the set of outcomes and the probability for the event that no answers are correct.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-6-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.6.d"><a tabindex="-1" href="#probability9-1-15-6-1-2-4" title="Copy heading and permalink for Item 9.1.6.d" aria-label="Copy heading and permalink for Item 9.1.6.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.1.6.d"><a tabindex="-1" href="#probability9-1-15-6-1-2-1-4" title="Copy heading and permalink for Item 9.1.6.d" aria-label="Copy heading and permalink for Item 9.1.6.d">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#probability9-1-15-6-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.1.6"><a tabindex="-1" href="#probability9-1-15-6" title="Copy heading and permalink for Exercise 9.1.6" aria-label="Copy heading and permalink for Exercise 9.1.6">🔗</a></div>
 </article><div class="autopermalink" aria-hidden="true" data-description="Exercises 9.1"><a tabindex="-1" href="#probability9-1-15" title="Copy heading and permalink for Exercises 9.1" aria-label="Copy heading and permalink for Exercises 9.1">🔗</a></div>
 </section><div class="autopermalink" aria-hidden="true" data-description="Section 9.1: Probability"><a tabindex="-1" href="#probability9-1" title="Copy heading and permalink for Section 9.1: Probability" aria-label="Copy heading and permalink for Section 9.1: Probability">🔗</a></div>
 </section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="chapter9.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="multrule9-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="chapter9-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="multrule9-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

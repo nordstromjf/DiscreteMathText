@@ -19,15 +19,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-2 { system: extends decimal; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-3 { system: extends decimal; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-4 { system: extends lower-roman; prefix: ''; suffix: '. '; }
+</style>
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
 hasWebworkReps: false,
 hasSage: false,
 isReact: false,
 htmlPresentation: false,
+lang: "en-US",
 });
-</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta name="twitter:title" content="Discrete Mathematics: An Active Approach to Mathematical Reasoning">
@@ -36,7 +42,7 @@ htmlPresentation: false,
 <meta name="twitter:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta property="og:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.43"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.54"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.54"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -58,21 +64,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.9';
+eBookConfig.runestone_version = '8.3.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.846a0d6fafaa99e0.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.bbcfc02849ebc023.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/prefix-runtime.4beca1fdeed766a2.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.ebd33f6a21eed414.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.9963089870a016c8.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="DiscreteMathText" class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></div>
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="DiscreteMath-14-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
@@ -85,7 +91,17 @@ eBookConfig.enable_chatcodes =  false;
 <div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
 <ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
-<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
 <h2 class="heading">Readability settings</h2>
 <button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
@@ -134,6 +150,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter1.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to Mathematical Language</span></a></div>
 <ul id="ptx-toc-group-chapter1" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter1-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="variables1-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Variables and Statements</span></a></div>
 <ul id="ptx-toc-group-variables1-1" class="structural toc-item-list">
@@ -160,6 +177,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter2.html" class="internal"><span class="codenumber">2</span> <span class="title">Logic</span></a></div>
 <ul id="ptx-toc-group-chapter2" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter2-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="logical_form2-1.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Truth-Tables and Logical Equivalence</span></a></div>
 <ul id="ptx-toc-group-logical_form2-1" class="structural toc-item-list">
@@ -186,6 +204,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter3.html" class="internal"><span class="codenumber">3</span> <span class="title">Logic with Quantifiers</span></a></div>
 <ul id="ptx-toc-group-chapter3" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter3-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="quantifiersI3-1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Quantifiers</span></a></div>
 <ul id="ptx-toc-group-quantifiersI3-1" class="structural toc-item-list">
@@ -219,6 +238,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="chapter4.html" class="internal"><span class="codenumber">4</span> <span class="title">Proof Techniques</span></a></div>
 <ul class="structural toc-item-list contains-active" id="ptx-toc-group-chapter4">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter4-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="directproof4-1.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Direct Proof and Counterexample</span></a></div>
 <ul id="ptx-toc-group-directproof4-1" class="structural toc-item-list">
@@ -266,6 +286,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter5.html" class="internal"><span class="codenumber">5</span> <span class="title">Sequences and Mathematical Induction</span></a></div>
 <ul id="ptx-toc-group-chapter5" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter5-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sequences5-1.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Sequences</span></a></div>
 <ul id="ptx-toc-group-sequences5-1" class="structural toc-item-list">
@@ -313,6 +334,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter6.html" class="internal"><span class="codenumber">6</span> <span class="title">Set Theory</span></a></div>
 <ul id="ptx-toc-group-chapter6" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter6-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sets6-1.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Set Theory</span></a></div>
 <ul id="ptx-toc-group-sets6-1" class="structural toc-item-list">
@@ -339,6 +361,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter7.html" class="internal"><span class="codenumber">7</span> <span class="title">Functions</span></a></div>
 <ul id="ptx-toc-group-chapter7" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter7-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="functions7-1.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Functions</span></a></div>
 <ul id="ptx-toc-group-functions7-1" class="structural toc-item-list">
@@ -358,6 +381,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter8.html" class="internal"><span class="codenumber">8</span> <span class="title">Relations</span></a></div>
 <ul id="ptx-toc-group-chapter8" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter8-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="relations8-1.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Relations on Sets</span></a></div>
 <ul id="ptx-toc-group-relations8-1" class="structural toc-item-list">
@@ -391,6 +415,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter9.html" class="internal"><span class="codenumber">9</span> <span class="title">Probability and Counting</span></a></div>
 <ul id="ptx-toc-group-chapter9" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter9-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="probability9-1.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Probability</span></a></div>
 <ul id="ptx-toc-group-probability9-1" class="structural toc-item-list">
@@ -438,6 +463,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter10.html" class="internal"><span class="codenumber">10</span> <span class="title">Graph Theory</span></a></div>
 <ul id="ptx-toc-group-chapter10" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter10-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="graphs10-1.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphs</span></a></div>
 <ul id="ptx-toc-group-graphs10-1" class="structural toc-item-list">
@@ -465,7 +491,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="DiscreteMath-14.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul id="ptx-toc-group-DiscreteMath-14" class="structural toc-item-list">
 <li class="toc-item toc-references"><div class="toc-title-box"><a href="DiscreteMath-14-1.html" class="internal"><span class="title">References</span></a></div></li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A.</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="DiscreteMath-14-3.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="DiscreteMath-14-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
@@ -473,16 +499,16 @@ eBookConfig.enable_chatcodes =  false;
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="contradiction4-5">
-<h2 class="heading hide-type">
+<h1 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Proof by Contradiction and Contrapositive</span>
-</h2>
+</h1>
 <div class="para" id="contradiction4-5-6">In this section we will learn two new proof techniques, contradiction and contrapositive. Both proof techniques rely on being able to negate mathematical statements.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contradiction4-5-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="contradiction4-5-7">As we add more proof techniques, it is important to realize that you are not expected to know which technique to use when you start a proof. Proof-writing often takes some trial and error. First try a direct proof, if you get stuck, you may think about whether breaking your set into cases will  help, or whether negating a statement will make it easier to use. It is also quite possible that different methods can be used to prove the same statement.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contradiction4-5-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="assemblage assemblage-like" id="B_pfcontradiction"><h3 class="heading"><span class="title">Method of Proof by Contradiction.</span></h3>
+<article class="assemblage assemblage-like" id="B_pfcontradiction"><h2 class="heading"><span class="title">Method of Proof by Contradiction.</span></h2>
 <div class="para logical" id="B_pfcontradiction-4">
-<ol class="decimal ol-marker-3" id="B_pfcontradiction-4-1">
+<ol class="decimal" style="list-style: ptx-marker-3;" id="B_pfcontradiction-4-1">
 <li id="B_pfcontradiction-4-1-1">
 <div class="para" id="B_pfcontradiction-4-1-1-1">Assume the statement to be proved is false. Or, assume the negation is true.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#B_pfcontradiction-4-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -503,13 +529,13 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Assemblage: Method of Proof by Contradiction"><a tabindex="-1" href="#B_pfcontradiction" title="Copy heading and permalink for Assemblage: Method of Proof by Contradiction" aria-label="Copy heading and permalink for Assemblage: Method of Proof by Contradiction">🔗</a></div>
 </article>
-<details id="E_nogreatinteger" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">There Is No Greatest Integer.</span>
-</h3></summary>
+<details id="E_nogreatinteger" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">There Is No Greatest Integer.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_nogreatinteger-2">Prove there is no greatest integer.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_nogreatinteger-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_nogreatinteger-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<details id="E_nogreatinteger-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
 <article class="hiddenproof knowl__content">
 <div class="para" id="E_nogreatinteger-3-1">By contradiction. Assume there is a greatest integer. Call this greatest integer <span class="process-math">\(N\text{.}\)</span> Now consider <span class="process-math">\(N+1\text{.}\)</span> Since <span class="process-math">\(N\)</span> is an integer, <span class="process-math">\(N+1\)</span> is an integer. We can see that <span class="process-math">\(N+1&gt;N\text{,}\)</span> which contradicts that <span class="process-math">\(N\)</span> was the greatest. Therefore, there is no greatest integer.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_nogreatinteger-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -540,44 +566,44 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contradiction4-5-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="activity project-like" id="contrad-sumratirr"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="contrad-sumratirr"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="introduction" id="contrad-sumratirr-1">
 <div class="para" id="contrad-sumratirr-1-1">Consider the statement: The sum of a rational number and an irrational number is irrational.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contrad-sumratirr-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="contrad-sumratirr-TF"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="contrad-sumratirr-TF"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="contrad-sumratirr-TF-1-1">Try to determine if the statement is true or false by trying examples and looking for a counterexample.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contrad-sumratirr-TF-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 4.5.1.a"><a tabindex="-1" href="#contrad-sumratirr-TF" title="Copy heading and permalink for Task 4.5.1.a" aria-label="Copy heading and permalink for Task 4.5.1.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.5.2.a"><a tabindex="-1" href="#contrad-sumratirr-TF" title="Copy heading and permalink for Task 4.5.2.a" aria-label="Copy heading and permalink for Task 4.5.2.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="contrad-sumratirr-state"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="contrad-sumratirr-state"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="contrad-sumratirr-state-1-1">Write the statement using variables and quantifiers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contrad-sumratirr-state-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 4.5.1.b"><a tabindex="-1" href="#contrad-sumratirr-state" title="Copy heading and permalink for Task 4.5.1.b" aria-label="Copy heading and permalink for Task 4.5.1.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.5.2.b"><a tabindex="-1" href="#contrad-sumratirr-state" title="Copy heading and permalink for Task 4.5.2.b" aria-label="Copy heading and permalink for Task 4.5.2.b">🔗</a></div>
 </article>
-<article class="task exercise-like" id="contrad-sumratirr-neg"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<article class="task exercise-like" id="contrad-sumratirr-neg"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="contrad-sumratirr-neg-1-1">Write the negation of the statement.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contrad-sumratirr-neg-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 4.5.1.c"><a tabindex="-1" href="#contrad-sumratirr-neg" title="Copy heading and permalink for Task 4.5.1.c" aria-label="Copy heading and permalink for Task 4.5.1.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.5.2.c"><a tabindex="-1" href="#contrad-sumratirr-neg" title="Copy heading and permalink for Task 4.5.2.c" aria-label="Copy heading and permalink for Task 4.5.2.c">🔗</a></div>
 </article>
-<article class="task exercise-like" id="contrad-sumratirr-contrad"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<article class="task exercise-like" id="contrad-sumratirr-contrad"><h3 class="heading"><span class="codenumber">(d)</span></h3>
 <div class="para" id="contrad-sumratirr-contrad-1-1">Now assume the negation is true and find a contradiction.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contrad-sumratirr-contrad-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 4.5.1.d"><a tabindex="-1" href="#contrad-sumratirr-contrad" title="Copy heading and permalink for Task 4.5.1.d" aria-label="Copy heading and permalink for Task 4.5.1.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.5.2.d"><a tabindex="-1" href="#contrad-sumratirr-contrad" title="Copy heading and permalink for Task 4.5.2.d" aria-label="Copy heading and permalink for Task 4.5.2.d">🔗</a></div>
 </article>
-<article class="task exercise-like" id="contrad-sumratirr-pf"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<article class="task exercise-like" id="contrad-sumratirr-pf"><h3 class="heading"><span class="codenumber">(e)</span></h3>
 <div class="para" id="contrad-sumratirr-pf-1-1">The work in (d) is your scratch work. Write a careful proof by contradiction to show the original statement is true.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contrad-sumratirr-pf-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 4.5.1.e"><a tabindex="-1" href="#contrad-sumratirr-pf" title="Copy heading and permalink for Task 4.5.1.e" aria-label="Copy heading and permalink for Task 4.5.1.e">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 4.5.1"><a tabindex="-1" href="#contrad-sumratirr" title="Copy heading and permalink for Activity 4.5.1" aria-label="Copy heading and permalink for Activity 4.5.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.5.2.e"><a tabindex="-1" href="#contrad-sumratirr-pf" title="Copy heading and permalink for Task 4.5.2.e" aria-label="Copy heading and permalink for Task 4.5.2.e">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 4.5.2"><a tabindex="-1" href="#contrad-sumratirr" title="Copy heading and permalink for Activity 4.5.2" aria-label="Copy heading and permalink for Activity 4.5.2">🔗</a></div>
 </article>
 <div class="para" id="contradiction4-5-12">Recall from <a href="conditional2-2.html" class="internal" title="Section 2.2: Conditional Statements">Section 2.2</a> that a conditional, <span class="process-math">\(p\rightarrow q\text{,}\)</span> and its contrapositive, <span class="process-math">\(\sim q\rightarrow \sim p\text{,}\)</span> are logically equivalent. This means we can prove the contrapositive rather than the original statement.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contradiction4-5-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="assemblage assemblage-like" id="B_pfcontrapositive"><h3 class="heading"><span class="title">Method of Proof by Contrapositive.</span></h3>
+<article class="assemblage assemblage-like" id="B_pfcontrapositive"><h2 class="heading"><span class="title">Method of Proof by Contrapositive.</span></h2>
 <div class="para logical" id="B_pfcontrapositive-4">
-<ol class="decimal ol-marker-3" id="B_pfcontrapositive-4-1">
+<ol class="decimal" style="list-style: ptx-marker-3;" id="B_pfcontrapositive-4-1">
 <li id="B_pfcontrapositive-4-1-1">
 <div class="para" id="B_pfcontrapositive-4-1-1-1">Write the statement to be proved in the form <span class="process-math">\(\forall x\in D\text{,}\)</span> if <span class="process-math">\(P(x)\)</span> then <span class="process-math">\(Q(x)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#B_pfcontrapositive-4-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -598,52 +624,52 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Assemblage: Method of Proof by Contrapositive"><a tabindex="-1" href="#B_pfcontrapositive" title="Copy heading and permalink for Assemblage: Method of Proof by Contrapositive" aria-label="Copy heading and permalink for Assemblage: Method of Proof by Contrapositive">🔗</a></div>
 </article>
-<details id="E_contrapositiveproof" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Divisibility Proof by Contrapositive.</span>
-</h3></summary>
+<details id="E_contrapositiveproof" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Divisibility Proof by Contrapositive.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_contrapositiveproof-2">Prove for all <span class="process-math">\(a, b, c\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(a \nmid bc\)</span> then <span class="process-math">\(a \nmid b\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_contrapositiveproof-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="E_contrapositiveproof-3">This statement has contrapositive: For all <span class="process-math">\(a, b, c\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(a \mid b\)</span> then <span class="process-math">\(a \mid bc\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_contrapositiveproof-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_contrapositiveproof-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<details id="E_contrapositiveproof-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
 <article class="hiddenproof knowl__content">
 <div class="para" id="E_contrapositiveproof-4-1">By contrapositive. Let <span class="process-math">\(a, b, c\in \mathbb{Z}\text{.}\)</span> Assume <span class="process-math">\(a \mid b\text{.}\)</span> This means <span class="process-math">\(b=ak\)</span> for some <span class="process-math">\(k\in\mathbb{Z}\text{.}\)</span> Then <span class="process-math">\(bc=(ak)c=a(kc)\text{,}\)</span> where <span class="process-math">\(kc \in \mathbb{Z}\text{.}\)</span> Thus, <span class="process-math">\(a \mid bc\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_contrapositiveproof-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Proof 4.5.2.1"><a tabindex="-1" href="#E_contrapositiveproof-4" title="Copy heading and permalink for Proof 4.5.2.1" aria-label="Copy heading and permalink for Proof 4.5.2.1">🔗</a></div>
-</article></details><div class="autopermalink" aria-hidden="true" data-description="Example 4.5.2: A Divisibility Proof by Contrapositive"><a tabindex="-1" href="#E_contrapositiveproof" title="Copy heading and permalink for Example 4.5.2: A Divisibility Proof by Contrapositive" aria-label="Copy heading and permalink for Example 4.5.2: A Divisibility Proof by Contrapositive">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 4.5.3.1"><a tabindex="-1" href="#E_contrapositiveproof-4" title="Copy heading and permalink for Proof 4.5.3.1" aria-label="Copy heading and permalink for Proof 4.5.3.1">🔗</a></div>
+</article></details><div class="autopermalink" aria-hidden="true" data-description="Example 4.5.3: A Divisibility Proof by Contrapositive"><a tabindex="-1" href="#E_contrapositiveproof" title="Copy heading and permalink for Example 4.5.3: A Divisibility Proof by Contrapositive" aria-label="Copy heading and permalink for Example 4.5.3: A Divisibility Proof by Contrapositive">🔗</a></div>
 </article></details>
-<article class="activity project-like" id="contrad-pfn2even"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="contrad-pfn2even"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="introduction" id="contrad-pfn2even-1">
 <div class="para" id="contrad-pfn2even-1-1">Consider the statement: For all integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n^2\)</span> is even then <span class="process-math">\(n\)</span> is even.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contrad-pfn2even-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="contrad-pfn2even-contrap"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="contrad-pfn2even-contrap"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="contrad-pfn2even-contrap-1-1">Write the contrapositive of the statement.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contrad-pfn2even-contrap-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 4.5.2.a"><a tabindex="-1" href="#contrad-pfn2even-contrap" title="Copy heading and permalink for Task 4.5.2.a" aria-label="Copy heading and permalink for Task 4.5.2.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.5.4.a"><a tabindex="-1" href="#contrad-pfn2even-contrap" title="Copy heading and permalink for Task 4.5.4.a" aria-label="Copy heading and permalink for Task 4.5.4.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="contrad-pfn2even-assump"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="contrad-pfn2even-assump"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="contrad-pfn2even-assump-1-1">To prove the statement by contrapositive, what should you assume?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contrad-pfn2even-assump-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 4.5.2.b"><a tabindex="-1" href="#contrad-pfn2even-assump" title="Copy heading and permalink for Task 4.5.2.b" aria-label="Copy heading and permalink for Task 4.5.2.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.5.4.b"><a tabindex="-1" href="#contrad-pfn2even-assump" title="Copy heading and permalink for Task 4.5.4.b" aria-label="Copy heading and permalink for Task 4.5.4.b">🔗</a></div>
 </article>
-<article class="task exercise-like" id="contrad-pfn2even-show"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<article class="task exercise-like" id="contrad-pfn2even-show"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="contrad-pfn2even-show-1-1">To prove the statement by contrapositive, what should you show?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contrad-pfn2even-show-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 4.5.2.c"><a tabindex="-1" href="#contrad-pfn2even-show" title="Copy heading and permalink for Task 4.5.2.c" aria-label="Copy heading and permalink for Task 4.5.2.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.5.4.c"><a tabindex="-1" href="#contrad-pfn2even-show" title="Copy heading and permalink for Task 4.5.4.c" aria-label="Copy heading and permalink for Task 4.5.4.c">🔗</a></div>
 </article>
-<article class="task exercise-like" id="contrad-pfn2even-proof"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<article class="task exercise-like" id="contrad-pfn2even-proof"><h3 class="heading"><span class="codenumber">(d)</span></h3>
 <div class="para" id="contrad-pfn2even-proof-1-1">Give a direct proof of the contrapositive. You have now proven the original statement by contrapositive.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contrad-pfn2even-proof-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 4.5.2.d"><a tabindex="-1" href="#contrad-pfn2even-proof" title="Copy heading and permalink for Task 4.5.2.d" aria-label="Copy heading and permalink for Task 4.5.2.d">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 4.5.2"><a tabindex="-1" href="#contrad-pfn2even" title="Copy heading and permalink for Activity 4.5.2" aria-label="Copy heading and permalink for Activity 4.5.2">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.5.4.d"><a tabindex="-1" href="#contrad-pfn2even-proof" title="Copy heading and permalink for Task 4.5.4.d" aria-label="Copy heading and permalink for Task 4.5.4.d">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 4.5.4"><a tabindex="-1" href="#contrad-pfn2even" title="Copy heading and permalink for Activity 4.5.4" aria-label="Copy heading and permalink for Activity 4.5.4">🔗</a></div>
 </article>
 <div class="para" id="contradiction4-5-16">Since we can use either contradiction or contrapositive on statements of the form <span class="process-math">\(p\rightarrow q\text{,}\)</span> the following comparison may be helpful.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contradiction4-5-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="assemblage assemblage-like" id="B_compcontradiction"><h3 class="heading"><span class="title">Comparing Contradiction and Contrapositive.</span></h3>
+<article class="assemblage assemblage-like" id="B_compcontradiction"><h2 class="heading"><span class="title">Comparing Contradiction and Contrapositive.</span></h2>
 <div class="para logical" id="B_compcontradiction-2">
 <div class="para">Contradiction with <span class="process-math">\(p\rightarrow q\text{:}\)</span>
 </div>
@@ -692,124 +718,133 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" aria-hidden="true" data-description="Assemblage: Comparing Contradiction and Contrapositive"><a tabindex="-1" href="#B_compcontradiction" title="Copy heading and permalink for Assemblage: Comparing Contradiction and Contrapositive" aria-label="Copy heading and permalink for Assemblage: Comparing Contradiction and Contrapositive">🔗</a></div>
 </article>
 <section class="reading-questions" id="contradiction4-5-18">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Check Your Understanding</span>
-</h3>
-<article class="exercise exercise-like" id="DMT_contrad_CYU_negnoexistodd"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</h2>
+<article class="exercise exercise-like" id="DMT_contrad_CYU_negnoexistodd"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_contrad_CYU_negnoexistodd-1-1">Give the negation for the statement: There does not exist a greatest odd integer.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_contrad_CYU_negnoexistodd-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.5.1"><a tabindex="-1" href="#DMT_contrad_CYU_negnoexistodd" title="Copy heading and permalink for Reading Question 4.5.1" aria-label="Copy heading and permalink for Reading Question 4.5.1">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_contrad_CYU_negunivcondrat"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_contrad_CYU_negunivcondrat"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_contrad_CYU_negunivcondrat-1-1">Give the negation for the statement: For all real numbers <span class="process-math">\(r\text{,}\)</span> if <span class="process-math">\(r\)</span> is not rational then <span class="process-math">\(3r\)</span> is not rational.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_contrad_CYU_negunivcondrat-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.5.2"><a tabindex="-1" href="#DMT_contrad_CYU_negunivcondrat" title="Copy heading and permalink for Reading Question 4.5.2" aria-label="Copy heading and permalink for Reading Question 4.5.2">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_contrad_CYU_ascontraunivcondrat"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_contrad_CYU_ascontraunivcondrat"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_contrad_CYU_ascontraunivcondrat-1-1">Suppose you want to prove the following statement by contradiction: For all real numbers <span class="process-math">\(r\text{,}\)</span> if <span class="process-math">\(r\)</span> is not rational then <span class="process-math">\(3r\)</span> is not rational. What should you assume? What should you show?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_contrad_CYU_ascontraunivcondrat-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.5.3"><a tabindex="-1" href="#DMT_contrad_CYU_ascontraunivcondrat" title="Copy heading and permalink for Reading Question 4.5.3" aria-label="Copy heading and permalink for Reading Question 4.5.3">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_contrad_CYU_conposunivcondrat"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_contrad_CYU_conposunivcondrat"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_contrad_CYU_conposunivcondrat-1-1">Give the contrapositive for the statement: For all real numbers <span class="process-math">\(r\text{,}\)</span> if <span class="process-math">\(r\)</span> is not rational then <span class="process-math">\(3r\)</span> is not rational.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_contrad_CYU_conposunivcondrat-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.5.4"><a tabindex="-1" href="#DMT_contrad_CYU_conposunivcondrat" title="Copy heading and permalink for Reading Question 4.5.4" aria-label="Copy heading and permalink for Reading Question 4.5.4">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_contrad_CYU_asconposunivcondrat"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_contrad_CYU_asconposunivcondrat"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_contrad_CYU_asconposunivcondrat-1-1">Suppose you want to prove the following statement by contrapositive: For all real numbers <span class="process-math">\(r\text{,}\)</span> if <span class="process-math">\(r\)</span> is not rational then <span class="process-math">\(3r\)</span> is not rational. What should you assume? What should you show?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_contrad_CYU_asconposunivcondrat-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.5.5"><a tabindex="-1" href="#DMT_contrad_CYU_asconposunivcondrat" title="Copy heading and permalink for Reading Question 4.5.5" aria-label="Copy heading and permalink for Reading Question 4.5.5">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_contrad_CYU_negprmdiv"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_contrad_CYU_negprmdiv"><h3 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_contrad_CYU_negprmdiv-1-1">Give the negation for the statement: For all integers <span class="process-math">\(n\)</span> and primes <span class="process-math">\(p\text{,}\)</span> if  <span class="process-math">\(p\mid n^2\)</span>  then <span class="process-math">\(p \mid n\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_contrad_CYU_negprmdiv-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.5.6"><a tabindex="-1" href="#DMT_contrad_CYU_negprmdiv" title="Copy heading and permalink for Reading Question 4.5.6" aria-label="Copy heading and permalink for Reading Question 4.5.6">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_contrad_CYU_ascontraprmdiv"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_contrad_CYU_ascontraprmdiv"><h3 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_contrad_CYU_ascontraprmdiv-1-1">Suppose you want to prove the following statement by contradiction: For all integers <span class="process-math">\(n\)</span> and primes <span class="process-math">\(p\text{,}\)</span> if  <span class="process-math">\(p\mid n^2\)</span>  then <span class="process-math">\(p \mid n\text{.}\)</span> What should you assume? What should you show?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_contrad_CYU_ascontraprmdiv-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.5.7"><a tabindex="-1" href="#DMT_contrad_CYU_ascontraprmdiv" title="Copy heading and permalink for Reading Question 4.5.7" aria-label="Copy heading and permalink for Reading Question 4.5.7">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_contrad_CYU_conposprmdiv"><h4 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_contrad_CYU_conposprmdiv"><h3 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_contrad_CYU_conposprmdiv-1-1">Give the contrapositive for the statement: For all integers <span class="process-math">\(n\)</span> and primes <span class="process-math">\(p\text{,}\)</span> if  <span class="process-math">\(p\mid n^2\)</span>  then <span class="process-math">\(p \mid n\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_contrad_CYU_conposprmdiv-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.5.8"><a tabindex="-1" href="#DMT_contrad_CYU_conposprmdiv" title="Copy heading and permalink for Reading Question 4.5.8" aria-label="Copy heading and permalink for Reading Question 4.5.8">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_contrad_CYU_asconposprmdiv"><h4 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_contrad_CYU_asconposprmdiv"><h3 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_contrad_CYU_asconposprmdiv-1-1">Suppose you want to prove the following statement by contrapositive: For all integers <span class="process-math">\(n\)</span> and primes <span class="process-math">\(p\text{,}\)</span> if  <span class="process-math">\(p\mid n^2\)</span>  then <span class="process-math">\(p \mid n\text{.}\)</span> What should you assume? What should you show?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_contrad_CYU_asconposprmdiv-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.5.9"><a tabindex="-1" href="#DMT_contrad_CYU_asconposprmdiv" title="Copy heading and permalink for Reading Question 4.5.9" aria-label="Copy heading and permalink for Reading Question 4.5.9">🔗</a></div>
 </article><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 4.5: Check Your Understanding"><a tabindex="-1" href="#contradiction4-5-18" title="Copy heading and permalink for Reading Questions 4.5: Check Your Understanding" aria-label="Copy heading and permalink for Reading Questions 4.5: Check Your Understanding">🔗</a></div>
 </section>
 <section class="exercises" id="contradiction4-5-19">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
-</h3>
-<article class="exercise exercise-like" id="contradiction4-5-19-1"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</h2>
+<article class="exercise exercise-like" id="contradiction4-5-19-1"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="contradiction4-5-19-1-1-1">Is <span class="process-math">\(\frac{1}{0}\)</span> an irrational number? Explain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contradiction4-5-19-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 4.5.1"><a tabindex="-1" href="#contradiction4-5-19-1" title="Copy heading and permalink for Exercise 4.5.1" aria-label="Copy heading and permalink for Exercise 4.5.1">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="contradiction4-5-19-2"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="contradiction4-5-19-2"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="contradiction4-5-19-2-1-1">Consider the statement: For all integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n^2\)</span> is odd then <span class="process-math">\(n\)</span> is odd.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contradiction4-5-19-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="contradiction4-5-19-2-1-2">
-<li id="contradiction4-5-19-2-1-2-1">
-<div class="para" id="contradiction4-5-19-2-1-2-1-1">Write what you would assume and what you would need to show to prove this statement by contradiction.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contradiction4-5-19-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="contradiction4-5-19-2-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="contradiction4-5-19-2-1-2-1">
+<li id="contradiction4-5-19-2-1-2-1-1">
+<div class="para" id="contradiction4-5-19-2-1-2-1-1-1">Write what you would assume and what you would need to show to prove this statement by contradiction.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contradiction4-5-19-2-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 4.5.2.a"><a tabindex="-1" href="#contradiction4-5-19-2-1-2-1" title="Copy heading and permalink for Item 4.5.2.a" aria-label="Copy heading and permalink for Item 4.5.2.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4.5.2.a"><a tabindex="-1" href="#contradiction4-5-19-2-1-2-1-1" title="Copy heading and permalink for Item 4.5.2.a" aria-label="Copy heading and permalink for Item 4.5.2.a">🔗</a></div>
 </li>
-<li id="contradiction4-5-19-2-1-2-2">
-<div class="para" id="contradiction4-5-19-2-1-2-2-1">Write what you would assume and what you would need to show to prove this statement by contrapositive.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contradiction4-5-19-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="contradiction4-5-19-2-1-2-1-2">
+<div class="para" id="contradiction4-5-19-2-1-2-1-2-1">Write what you would assume and what you would need to show to prove this statement by contrapositive.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contradiction4-5-19-2-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 4.5.2.b"><a tabindex="-1" href="#contradiction4-5-19-2-1-2-2" title="Copy heading and permalink for Item 4.5.2.b" aria-label="Copy heading and permalink for Item 4.5.2.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4.5.2.b"><a tabindex="-1" href="#contradiction4-5-19-2-1-2-1-2" title="Copy heading and permalink for Item 4.5.2.b" aria-label="Copy heading and permalink for Item 4.5.2.b">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contradiction4-5-19-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 4.5.2"><a tabindex="-1" href="#contradiction4-5-19-2" title="Copy heading and permalink for Exercise 4.5.2" aria-label="Copy heading and permalink for Exercise 4.5.2">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="contradiction4-5-19-3"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="contradiction4-5-19-3"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="contradiction4-5-19-3-1-1">
 <dfn class="terminology">A Test to Determine if a Number is Prime:</dfn> Given any integer <span class="process-math">\(n&gt;1\text{,}\)</span> to test whether <span class="process-math">\(n\)</span> is prime check to see if it is divisible by a prime number less than or equal to <span class="process-math">\(\sqrt{n}\text{.}\)</span> If it is not divisible by any prime less than or equal to <span class="process-math">\(\sqrt{n}\text{,}\)</span> then <span class="process-math">\(n\)</span> is prime.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contradiction4-5-19-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para" id="contradiction4-5-19-3-1-2">Use this test to determine if the following numbers are prime or not.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contradiction4-5-19-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="contradiction4-5-19-3-1-3">
-<li id="contradiction4-5-19-3-1-3-1">
-<div class="para" id="contradiction4-5-19-3-1-3-1-1">527<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contradiction4-5-19-3-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="contradiction4-5-19-3-1-3">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="contradiction4-5-19-3-1-3-1">
+<li id="contradiction4-5-19-3-1-3-1-1">
+<div class="para" id="contradiction4-5-19-3-1-3-1-1-1">527<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contradiction4-5-19-3-1-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 4.5.3.a"><a tabindex="-1" href="#contradiction4-5-19-3-1-3-1" title="Copy heading and permalink for Item 4.5.3.a" aria-label="Copy heading and permalink for Item 4.5.3.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4.5.3.a"><a tabindex="-1" href="#contradiction4-5-19-3-1-3-1-1" title="Copy heading and permalink for Item 4.5.3.a" aria-label="Copy heading and permalink for Item 4.5.3.a">🔗</a></div>
 </li>
-<li id="contradiction4-5-19-3-1-3-2">
-<div class="para" id="contradiction4-5-19-3-1-3-2-1">613<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contradiction4-5-19-3-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="contradiction4-5-19-3-1-3-1-2">
+<div class="para" id="contradiction4-5-19-3-1-3-1-2-1">613<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contradiction4-5-19-3-1-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 4.5.3.b"><a tabindex="-1" href="#contradiction4-5-19-3-1-3-2" title="Copy heading and permalink for Item 4.5.3.b" aria-label="Copy heading and permalink for Item 4.5.3.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4.5.3.b"><a tabindex="-1" href="#contradiction4-5-19-3-1-3-1-2" title="Copy heading and permalink for Item 4.5.3.b" aria-label="Copy heading and permalink for Item 4.5.3.b">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contradiction4-5-19-3-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 4.5.3"><a tabindex="-1" href="#contradiction4-5-19-3" title="Copy heading and permalink for Exercise 4.5.3" aria-label="Copy heading and permalink for Exercise 4.5.3">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="contradiction4-5-19-4"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="contradiction4-5-19-4"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="contradiction4-5-19-4-1-1">Carefully write the negation of each statement then prove the statement by contradiction.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contradiction4-5-19-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="contradiction4-5-19-4-1-2">
-<li id="contradiction4-5-19-4-1-2-1">
-<div class="para" id="contradiction4-5-19-4-1-2-1-1">There is no greatest even integer.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contradiction4-5-19-4-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="contradiction4-5-19-4-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="contradiction4-5-19-4-1-2-1">
+<li id="contradiction4-5-19-4-1-2-1-1">
+<div class="para" id="contradiction4-5-19-4-1-2-1-1-1">There is no greatest even integer.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contradiction4-5-19-4-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 4.5.4.a"><a tabindex="-1" href="#contradiction4-5-19-4-1-2-1" title="Copy heading and permalink for Item 4.5.4.a" aria-label="Copy heading and permalink for Item 4.5.4.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4.5.4.a"><a tabindex="-1" href="#contradiction4-5-19-4-1-2-1-1" title="Copy heading and permalink for Item 4.5.4.a" aria-label="Copy heading and permalink for Item 4.5.4.a">🔗</a></div>
 </li>
-<li id="contradiction4-5-19-4-1-2-2">
-<div class="para" id="contradiction4-5-19-4-1-2-2-1">There is no least positive rational number.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contradiction4-5-19-4-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="contradiction4-5-19-4-1-2-1-2">
+<div class="para" id="contradiction4-5-19-4-1-2-1-2-1">There is no least positive rational number.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contradiction4-5-19-4-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 4.5.4.b"><a tabindex="-1" href="#contradiction4-5-19-4-1-2-2" title="Copy heading and permalink for Item 4.5.4.b" aria-label="Copy heading and permalink for Item 4.5.4.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4.5.4.b"><a tabindex="-1" href="#contradiction4-5-19-4-1-2-1-2" title="Copy heading and permalink for Item 4.5.4.b" aria-label="Copy heading and permalink for Item 4.5.4.b">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contradiction4-5-19-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 4.5.4"><a tabindex="-1" href="#contradiction4-5-19-4" title="Copy heading and permalink for Exercise 4.5.4" aria-label="Copy heading and permalink for Exercise 4.5.4">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="contradiction4-5-19-5"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="contradiction4-5-19-5"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="contradiction4-5-19-5-1-1">Prove by contradiction: If <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are rational numbers, <span class="process-math">\(b\neq 0\text{,}\)</span> and <span class="process-math">\(r\)</span> is an irrational number, then <span class="process-math">\(a+br\)</span> is irrational.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contradiction4-5-19-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 4.5.5"><a tabindex="-1" href="#contradiction4-5-19-5" title="Copy heading and permalink for Exercise 4.5.5" aria-label="Copy heading and permalink for Exercise 4.5.5">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="contradiction4-5-19-6"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="contradiction4-5-19-6"><h3 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="contradiction4-5-19-6-1-1">Prove the following statement in two ways: (a) by contrapositive and (b) by contradiction.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contradiction4-5-19-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para" id="contradiction4-5-19-6-1-2">For all integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n^2\)</span> is odd then <span class="process-math">\(n\)</span> is odd.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#contradiction4-5-19-6-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>

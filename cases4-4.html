@@ -19,15 +19,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-2 { system: extends decimal; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-3 { system: extends decimal; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-4 { system: extends lower-roman; prefix: ''; suffix: '. '; }
+</style>
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
 hasWebworkReps: false,
 hasSage: false,
 isReact: false,
 htmlPresentation: false,
+lang: "en-US",
 });
-</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta name="twitter:title" content="Discrete Mathematics: An Active Approach to Mathematical Reasoning">
@@ -36,7 +42,7 @@ htmlPresentation: false,
 <meta name="twitter:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta property="og:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.43"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.54"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.54"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -58,21 +64,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.9';
+eBookConfig.runestone_version = '8.3.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.846a0d6fafaa99e0.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.bbcfc02849ebc023.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/prefix-runtime.4beca1fdeed766a2.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.ebd33f6a21eed414.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.9963089870a016c8.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="DiscreteMathText" class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></div>
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="DiscreteMath-14-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
@@ -85,7 +91,17 @@ eBookConfig.enable_chatcodes =  false;
 <div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
 <ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
-<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
 <h2 class="heading">Readability settings</h2>
 <button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
@@ -134,6 +150,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter1.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to Mathematical Language</span></a></div>
 <ul id="ptx-toc-group-chapter1" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter1-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="variables1-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Variables and Statements</span></a></div>
 <ul id="ptx-toc-group-variables1-1" class="structural toc-item-list">
@@ -160,6 +177,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter2.html" class="internal"><span class="codenumber">2</span> <span class="title">Logic</span></a></div>
 <ul id="ptx-toc-group-chapter2" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter2-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="logical_form2-1.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Truth-Tables and Logical Equivalence</span></a></div>
 <ul id="ptx-toc-group-logical_form2-1" class="structural toc-item-list">
@@ -186,6 +204,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter3.html" class="internal"><span class="codenumber">3</span> <span class="title">Logic with Quantifiers</span></a></div>
 <ul id="ptx-toc-group-chapter3" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter3-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="quantifiersI3-1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Quantifiers</span></a></div>
 <ul id="ptx-toc-group-quantifiersI3-1" class="structural toc-item-list">
@@ -219,6 +238,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="chapter4.html" class="internal"><span class="codenumber">4</span> <span class="title">Proof Techniques</span></a></div>
 <ul class="structural toc-item-list contains-active" id="ptx-toc-group-chapter4">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter4-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="directproof4-1.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Direct Proof and Counterexample</span></a></div>
 <ul id="ptx-toc-group-directproof4-1" class="structural toc-item-list">
@@ -266,6 +286,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter5.html" class="internal"><span class="codenumber">5</span> <span class="title">Sequences and Mathematical Induction</span></a></div>
 <ul id="ptx-toc-group-chapter5" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter5-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sequences5-1.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Sequences</span></a></div>
 <ul id="ptx-toc-group-sequences5-1" class="structural toc-item-list">
@@ -313,6 +334,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter6.html" class="internal"><span class="codenumber">6</span> <span class="title">Set Theory</span></a></div>
 <ul id="ptx-toc-group-chapter6" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter6-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sets6-1.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Set Theory</span></a></div>
 <ul id="ptx-toc-group-sets6-1" class="structural toc-item-list">
@@ -339,6 +361,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter7.html" class="internal"><span class="codenumber">7</span> <span class="title">Functions</span></a></div>
 <ul id="ptx-toc-group-chapter7" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter7-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="functions7-1.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Functions</span></a></div>
 <ul id="ptx-toc-group-functions7-1" class="structural toc-item-list">
@@ -358,6 +381,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter8.html" class="internal"><span class="codenumber">8</span> <span class="title">Relations</span></a></div>
 <ul id="ptx-toc-group-chapter8" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter8-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="relations8-1.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Relations on Sets</span></a></div>
 <ul id="ptx-toc-group-relations8-1" class="structural toc-item-list">
@@ -391,6 +415,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter9.html" class="internal"><span class="codenumber">9</span> <span class="title">Probability and Counting</span></a></div>
 <ul id="ptx-toc-group-chapter9" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter9-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="probability9-1.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Probability</span></a></div>
 <ul id="ptx-toc-group-probability9-1" class="structural toc-item-list">
@@ -438,6 +463,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter10.html" class="internal"><span class="codenumber">10</span> <span class="title">Graph Theory</span></a></div>
 <ul id="ptx-toc-group-chapter10" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter10-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="graphs10-1.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphs</span></a></div>
 <ul id="ptx-toc-group-graphs10-1" class="structural toc-item-list">
@@ -465,7 +491,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="DiscreteMath-14.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul id="ptx-toc-group-DiscreteMath-14" class="structural toc-item-list">
 <li class="toc-item toc-references"><div class="toc-title-box"><a href="DiscreteMath-14-1.html" class="internal"><span class="title">References</span></a></div></li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A.</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="DiscreteMath-14-3.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="DiscreteMath-14-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
@@ -473,9 +499,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="cases4-4">
-<h2 class="heading hide-type">
+<h1 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Proof by Cases</span>
-</h2>
+</h1>
 <div class="para" id="cases4-4-3">In this section we will learn another proof technique, proof by cases. We will also see another big discrete math theorem, the Quotient-Remainder Theorem.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cases4-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="cases4-4-4">In the last section, we looked at the idea of divisibility. Remember, this is a relationship between two integers, not actual division. We will continue to focus on integers. One of the issues with division of integers is that if you divide two integers, you no longer necessarily have an integer. What if the only numbers we are allowed to use are integers? Can we still somehow think of division? Well, yes, this is in fact how you were probably introduced to division long ago. When you were first learning arithmetic, you only worked with integers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cases4-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -486,9 +512,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="cases4-4-7">In general, given any integers <span class="process-math">\(n, d\)</span> with <span class="process-math">\(d\neq 0\text{,}\)</span> we can find integers <span class="process-math">\(q, r\)</span> with <span class="process-math">\(n=dq+r\text{.}\)</span> In general, <span class="process-math">\(q, r\)</span> are not unique. For example,  <span class="process-math">\(10=4(1)+6\text{,}\)</span> and <span class="process-math">\(10=4(-2)+18\text{,}\)</span> and <span class="process-math">\(10=4(4)-6\text{.}\)</span> But as we noted, we want to think of <span class="process-math">\(r\)</span> as the remainder. If we are more specific about conditions on the remainder, then <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> are unique.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cases4-4-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="theorem theorem-like" id="T_divisionalgorthm"><h3 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Quotient-Remainder Theorem.</span>
-</h3>
+<article class="theorem theorem-like" id="T_divisionalgorthm"><h2 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Quotient-Remainder Theorem.</span>
+</h2>
 <div class="para" id="T_divisionalgorthm-4-1">Given any integer <span class="process-math">\(n\)</span> and any positive integer <span class="process-math">\(d\text{,}\)</span> there exist unique integers <span class="process-math">\(q, r\)</span> such that <span class="process-math">\(n=dq+r\)</span> and <span class="process-math">\(0\leq r &lt; d\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#T_divisionalgorthm-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Theorem 4.4.1: The Quotient-Remainder Theorem"><a tabindex="-1" href="#T_divisionalgorthm" title="Copy heading and permalink for Theorem 4.4.1: The Quotient-Remainder Theorem" aria-label="Copy heading and permalink for Theorem 4.4.1: The Quotient-Remainder Theorem">🔗</a></div>
@@ -501,9 +527,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="cases4-4-12">Some important observations: the remainder <em class="emphasis">must</em> be nonnegative. It can be 0. This is what happens when <span class="process-math">\(d\mid n\text{.}\)</span> Although <span class="process-math">\(n\)</span> can be <em class="emphasis">any</em> integer, we will limit <span class="process-math">\(d\)</span> to being positive. The Quotient-Remainder Theorem can be extended to any <span class="process-math">\(d\neq 0\text{,}\)</span> but we will just need <span class="process-math">\(d&gt;0\)</span> in this class.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cases4-4-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_divalgform" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding Quotients and Remainders.</span>
-</h3></summary>
+<details id="E_divalgform" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding Quotients and Remainders.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_divalgform-2">Let <span class="process-math">\(n=15, d=7\text{,}\)</span> Find the quotient and remainder <span class="process-math">\(q, r\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_divalgform-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -551,37 +577,37 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" aria-hidden="true" data-description="Answer 4.4.2.5"><a tabindex="-1" href="#E_divalgform-11" title="Copy heading and permalink for Answer 4.4.2.5" aria-label="Copy heading and permalink for Answer 4.4.2.5">🔗</a></div>
 </div></details><div class="autopermalink" aria-hidden="true" data-description="Example 4.4.2: Finding Quotients and Remainders"><a tabindex="-1" href="#E_divalgform" title="Copy heading and permalink for Example 4.4.2: Finding Quotients and Remainders" aria-label="Copy heading and permalink for Example 4.4.2: Finding Quotients and Remainders">🔗</a></div>
 </article></details>
-<article class="activity project-like" id="case-QRT"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="case-QRT"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="introduction" id="case-QRT-1">
 <div class="para" id="case-QRT-1-1">For the given <span class="process-math">\(n\)</span> and <span class="process-math">\(d\text{,}\)</span> find <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> as in the Quotient-Remainder Theorem.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#case-QRT-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="case-QRT-a"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="case-QRT-a"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="case-QRT-a-1-1">
 <span class="process-math">\(n=20\)</span> and <span class="process-math">\(d=8\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#case-QRT-a-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 4.4.1.a"><a tabindex="-1" href="#case-QRT-a" title="Copy heading and permalink for Task 4.4.1.a" aria-label="Copy heading and permalink for Task 4.4.1.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.4.3.a"><a tabindex="-1" href="#case-QRT-a" title="Copy heading and permalink for Task 4.4.3.a" aria-label="Copy heading and permalink for Task 4.4.3.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="case-QRT-b"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="case-QRT-b"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="case-QRT-b-1-1">
 <span class="process-math">\(n=45\)</span> and <span class="process-math">\(d=9\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#case-QRT-b-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 4.4.1.b"><a tabindex="-1" href="#case-QRT-b" title="Copy heading and permalink for Task 4.4.1.b" aria-label="Copy heading and permalink for Task 4.4.1.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.4.3.b"><a tabindex="-1" href="#case-QRT-b" title="Copy heading and permalink for Task 4.4.3.b" aria-label="Copy heading and permalink for Task 4.4.3.b">🔗</a></div>
 </article>
-<article class="task exercise-like" id="case-QRT-c"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<article class="task exercise-like" id="case-QRT-c"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="case-QRT-c-1-1">
 <span class="process-math">\(n=8\)</span> and <span class="process-math">\(d=12\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#case-QRT-c-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 4.4.1.c"><a tabindex="-1" href="#case-QRT-c" title="Copy heading and permalink for Task 4.4.1.c" aria-label="Copy heading and permalink for Task 4.4.1.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.4.3.c"><a tabindex="-1" href="#case-QRT-c" title="Copy heading and permalink for Task 4.4.3.c" aria-label="Copy heading and permalink for Task 4.4.3.c">🔗</a></div>
 </article>
-<article class="task exercise-like" id="case-QRT-d"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<article class="task exercise-like" id="case-QRT-d"><h3 class="heading"><span class="codenumber">(d)</span></h3>
 <div class="para" id="case-QRT-d-1-1">
 <span class="process-math">\(n=-15\)</span> and <span class="process-math">\(d=7\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#case-QRT-d-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 4.4.1.d"><a tabindex="-1" href="#case-QRT-d" title="Copy heading and permalink for Task 4.4.1.d" aria-label="Copy heading and permalink for Task 4.4.1.d">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 4.4.1"><a tabindex="-1" href="#case-QRT" title="Copy heading and permalink for Activity 4.4.1" aria-label="Copy heading and permalink for Activity 4.4.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.4.3.d"><a tabindex="-1" href="#case-QRT-d" title="Copy heading and permalink for Task 4.4.3.d" aria-label="Copy heading and permalink for Task 4.4.3.d">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 4.4.3"><a tabindex="-1" href="#case-QRT" title="Copy heading and permalink for Activity 4.4.3" aria-label="Copy heading and permalink for Activity 4.4.3">🔗</a></div>
 </article>
 <div class="para logical" id="cases4-4-15">
 <div class="para">In computer science it is useful to have functions that give the quotient (div) and remainder (mod). The common notation is</div>
@@ -605,10 +631,10 @@ n \text{ mod } d=r.
 </div>
 <div class="para" id="cases4-4-18">We can use the Quotient-Remainder Theorem to get other forms, as well. For example, if <span class="process-math">\(d=4\text{,}\)</span> the possible forms are <span class="process-math">\(n=4q+0, n=4q+1, n=4q+2\)</span> or <span class="process-math">\(n=4q+3\text{.}\)</span> We can use these forms to get different <dfn class="terminology">cases</dfn> for the integers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cases4-4-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="assemblage assemblage-like" id="B_pfcases"><h3 class="heading"><span class="title">Proof by Cases.</span></h3>
+<article class="assemblage assemblage-like" id="B_pfcases"><h2 class="heading"><span class="title">Proof by Cases.</span></h2>
 <div class="para logical" id="B_pfcases-4">
 <div class="para">To prove <span class="process-math">\(\forall x\in D, P(x)\)</span> by cases,</div>
-<ol class="decimal ol-marker-3" id="B_pfcases-4-2">
+<ol class="decimal" style="list-style: ptx-marker-3;" id="B_pfcases-4-2">
 <li id="B_pfcases-4-2-1">
 <div class="para" id="B_pfcases-4-2-1-1">Break <span class="process-math">\(D\)</span> into smaller subsets, <span class="process-math">\(D_1, D_2, \ldots D_k\text{.}\)</span> Make sure every element in <span class="process-math">\(D\)</span> is in one of the subsets.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#B_pfcases-4-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -641,15 +667,15 @@ n \text{ mod } d=r.
 </article>
 <div class="para" id="cases4-4-20">In choosing your subsets, make sure you cover all the elements of <span class="process-math">\(D\text{.}\)</span> Your subsets do not need to be similar. For example, one set could be all the nonzero integers and the other just the set with 0.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cases4-4-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="cases4-4-21">We saw an example in <a href="divisibility4-3.html#T_divbyprime" class="xref" data-knowl="./knowl/xref/T_divbyprime.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.3.5">Theorem 4.3.5</a>, where we broke <span class="process-math">\(D\)</span> into the set of primes and the set of composites.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cases4-4-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="cases4-4-21">We saw an example in <a href="divisibility4-3.html#T_divbyprime" class="xref" data-knowl="./knowl/xref/T_divbyprime.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.3.10">Theorem 4.3.10</a>, where we broke <span class="process-math">\(D\)</span> into the set of primes and the set of composites.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cases4-4-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_casesconsec" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Proof by Cases.</span>
-</h3></summary>
+<details id="E_casesconsec" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Proof by Cases.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_casesconsec-2">Prove given any two consecutive integers, one is even and one is odd.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_casesconsec-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_casesconsec-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<details id="E_casesconsec-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
 <article class="hiddenproof knowl__content">
 <div class="para" id="E_casesconsec-3-1">Let <span class="process-math">\(n\)</span> and <span class="process-math">\(n+1\)</span> be consecutive integers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_casesconsec-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -659,12 +685,12 @@ n \text{ mod } d=r.
 </div>
 <div class="para" id="E_casesconsec-3-4">Thus, for any two consecutive integers, one is even and one is odd.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_casesconsec-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Proof 4.4.3.1"><a tabindex="-1" href="#E_casesconsec-3" title="Copy heading and permalink for Proof 4.4.3.1" aria-label="Copy heading and permalink for Proof 4.4.3.1">🔗</a></div>
-</article></details><div class="autopermalink" aria-hidden="true" data-description="Example 4.4.3: Proof by Cases"><a tabindex="-1" href="#E_casesconsec" title="Copy heading and permalink for Example 4.4.3: Proof by Cases" aria-label="Copy heading and permalink for Example 4.4.3: Proof by Cases">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 4.4.4.1"><a tabindex="-1" href="#E_casesconsec-3" title="Copy heading and permalink for Proof 4.4.4.1" aria-label="Copy heading and permalink for Proof 4.4.4.1">🔗</a></div>
+</article></details><div class="autopermalink" aria-hidden="true" data-description="Example 4.4.4: Proof by Cases"><a tabindex="-1" href="#E_casesconsec" title="Copy heading and permalink for Example 4.4.4: Proof by Cases" aria-label="Copy heading and permalink for Example 4.4.4: Proof by Cases">🔗</a></div>
 </article></details>
-<article class="activity project-like" id="case-pfabsval"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="case-pfabsval"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para logical" id="case-pfabsval-1-1">
 <div class="para">Recall the absolute value function is defined as</div>
 <div class="displaymath process-math" id="case-pfabsval-1-1-1">
@@ -679,16 +705,16 @@ x, \amp\text{if $x\geq 0$;}\\
 <div class="para">Prove for all <span class="process-math">\(x\in \mathbb{R}\text{,}\)</span> <span class="process-math">\(|x|=|-x|\text{.}\)</span> What would appropriate cases be?</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#case-pfabsval-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 4.4.2"><a tabindex="-1" href="#case-pfabsval" title="Copy heading and permalink for Activity 4.4.2" aria-label="Copy heading and permalink for Activity 4.4.2">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 4.4.5"><a tabindex="-1" href="#case-pfabsval" title="Copy heading and permalink for Activity 4.4.5" aria-label="Copy heading and permalink for Activity 4.4.5">🔗</a></div>
 </article>
-<article class="activity project-like" id="case-pfsumdiff"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="case-pfsumdiff"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="introduction" id="case-pfsumdiff-1">
 <div class="para" id="case-pfsumdiff-1-1">Prove for all integers <span class="process-math">\(m\)</span> and  <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(m+n\)</span> and <span class="process-math">\(m-n\)</span> are either both even or both odd.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#case-pfsumdiff-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="case-pfsumdiff-EE"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="case-pfsumdiff-EE"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="ptx-runestone-container"><div class="runestone parsons_section" style="max-width: none;"><div data-component="parsons" class="parsons" id="rs-case-pfsumdiff-EE">
 <div class="parsons_question parsons-text">
 <div class="para" id="case-pfsumdiff-EE-1-1">For Case 1, assume <span class="process-math">\(n\)</span> and <span class="process-math">\(m\)</span> are both even.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#case-pfsumdiff-EE-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -723,27 +749,27 @@ x, \amp\text{if $x\geq 0$;}\\
 <div class="para" id="case-pfsumdiff-EE-2-7-1">Let <span class="process-math">\(m+n=2k\)</span> and <span class="process-math">\(m-n=2j\)</span> for some <span class="process-math">\(k, j\in \mathbb{Z}\text{.}\)</span>
 </div> #distractor</pre>
 </div></div></div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 4.4.3.a"><a tabindex="-1" href="#case-pfsumdiff-EE" title="Copy heading and permalink for Task 4.4.3.a" aria-label="Copy heading and permalink for Task 4.4.3.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.4.6.a"><a tabindex="-1" href="#case-pfsumdiff-EE" title="Copy heading and permalink for Task 4.4.6.a" aria-label="Copy heading and permalink for Task 4.4.6.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="case-pfsumdiff-OO"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="case-pfsumdiff-OO"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="case-pfsumdiff-OO-1-1">Now, write the proof for Case 2, assuming <span class="process-math">\(n\)</span> and <span class="process-math">\(m\)</span> are both odd.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#case-pfsumdiff-OO-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 4.4.3.b"><a tabindex="-1" href="#case-pfsumdiff-OO" title="Copy heading and permalink for Task 4.4.3.b" aria-label="Copy heading and permalink for Task 4.4.3.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.4.6.b"><a tabindex="-1" href="#case-pfsumdiff-OO" title="Copy heading and permalink for Task 4.4.6.b" aria-label="Copy heading and permalink for Task 4.4.6.b">🔗</a></div>
 </article>
-<article class="task exercise-like" id="case-pfsumdiff-2cases"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<article class="task exercise-like" id="case-pfsumdiff-2cases"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="case-pfsumdiff-2cases-1-1">There are two more cases. What are they?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#case-pfsumdiff-2cases-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 4.4.3.c"><a tabindex="-1" href="#case-pfsumdiff-2cases" title="Copy heading and permalink for Task 4.4.3.c" aria-label="Copy heading and permalink for Task 4.4.3.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.4.6.c"><a tabindex="-1" href="#case-pfsumdiff-2cases" title="Copy heading and permalink for Task 4.4.6.c" aria-label="Copy heading and permalink for Task 4.4.6.c">🔗</a></div>
 </article>
-<article class="task exercise-like" id="case-pfsumdiff-pf2cases"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<article class="task exercise-like" id="case-pfsumdiff-pf2cases"><h3 class="heading"><span class="codenumber">(d)</span></h3>
 <div class="para" id="case-pfsumdiff-pf2cases-1-1">Write the proofs of the last two cases.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#case-pfsumdiff-pf2cases-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 4.4.3.d"><a tabindex="-1" href="#case-pfsumdiff-pf2cases" title="Copy heading and permalink for Task 4.4.3.d" aria-label="Copy heading and permalink for Task 4.4.3.d">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 4.4.3"><a tabindex="-1" href="#case-pfsumdiff" title="Copy heading and permalink for Activity 4.4.3" aria-label="Copy heading and permalink for Activity 4.4.3">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.4.6.d"><a tabindex="-1" href="#case-pfsumdiff-pf2cases" title="Copy heading and permalink for Task 4.4.6.d" aria-label="Copy heading and permalink for Task 4.4.6.d">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 4.4.6"><a tabindex="-1" href="#case-pfsumdiff" title="Copy heading and permalink for Activity 4.4.6" aria-label="Copy heading and permalink for Activity 4.4.6">🔗</a></div>
 </article>
-<details id="E_morecases" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">More Cases.</span>
-</h3></summary>
+<details id="E_morecases" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">More Cases.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_morecases-2">Prove that the square of any odd integer has the form <span class="process-math">\(8m+1\)</span> for some <span class="process-math">\(m\in \mathbb{Z}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_morecases-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -755,7 +781,7 @@ x, \amp\text{if $x\geq 0$;}\\
 </div>
 <div class="para" id="E_morecases-6">If we try using some cases, we may get a bit more to work with. We know any integer has the form <span class="process-math">\(4k, 4k+1, 4k+2,\)</span> or <span class="process-math">\(4k+3\text{.}\)</span> But only <span class="process-math">\(4k+1\)</span> and <span class="process-math">\(4k+3\)</span> are odd. Thus, we can try cases with <span class="process-math">\(n=4k+1\)</span> and <span class="process-math">\(n=4k+3\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_morecases-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_morecases-7" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<details id="E_morecases-7" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
 <article class="hiddenproof knowl__content">
 <div class="para" id="E_morecases-7-1">Let <span class="process-math">\(n\)</span> be odd.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_morecases-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -789,15 +815,15 @@ n^2&amp;=(4k+3)^2\\
 </div>
 <div class="para" id="E_morecases-7-4">Thus, any odd integer has the form <span class="process-math">\(8m+1\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_morecases-7-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Proof 4.4.4.1"><a tabindex="-1" href="#E_morecases-7" title="Copy heading and permalink for Proof 4.4.4.1" aria-label="Copy heading and permalink for Proof 4.4.4.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 4.4.7.1"><a tabindex="-1" href="#E_morecases-7" title="Copy heading and permalink for Proof 4.4.7.1" aria-label="Copy heading and permalink for Proof 4.4.7.1">🔗</a></div>
 </article></details>
 <div class="para" id="E_morecases-8">Note, what this theorem really says is that the square of an odd integer must have remainder 1 when divided by 8. That might be a little surprising.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_morecases-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Example 4.4.4: More Cases"><a tabindex="-1" href="#E_morecases" title="Copy heading and permalink for Example 4.4.4: More Cases" aria-label="Copy heading and permalink for Example 4.4.4: More Cases">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 4.4.7: More Cases"><a tabindex="-1" href="#E_morecases" title="Copy heading and permalink for Example 4.4.7: More Cases" aria-label="Copy heading and permalink for Example 4.4.7: More Cases">🔗</a></div>
 </article></details>
-<article class="activity project-like" id="case-QRT3"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="case-QRT3"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="case-QRT3-1-1">Use the Quotient-Remainder Theorem to find the possible forms of an integer when <span class="process-math">\(d=3\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#case-QRT3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
@@ -805,31 +831,31 @@ n^2&amp;=(4k+3)^2\\
 <div class="hint solution-like knowl__content">
 <div class="para" id="case-QRT3-3-1">What are the possible values for <span class="process-math">\(r\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#case-QRT3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Hint 4.4.4.1"><a tabindex="-1" href="#case-QRT3-3" title="Copy heading and permalink for Hint 4.4.4.1" aria-label="Copy heading and permalink for Hint 4.4.4.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Hint 4.4.8.1"><a tabindex="-1" href="#case-QRT3-3" title="Copy heading and permalink for Hint 4.4.8.1" aria-label="Copy heading and permalink for Hint 4.4.8.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 4.4.4"><a tabindex="-1" href="#case-QRT3" title="Copy heading and permalink for Activity 4.4.4" aria-label="Copy heading and permalink for Activity 4.4.4">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 4.4.8"><a tabindex="-1" href="#case-QRT3" title="Copy heading and permalink for Activity 4.4.8" aria-label="Copy heading and permalink for Activity 4.4.8">🔗</a></div>
 </article>
-<article class="activity project-like" id="case-pfprodconsec"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="case-pfprodconsec"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="case-pfprodconsec-1-1">Prove the product of any two consecutive integers has the form <span class="process-math">\(3k\)</span> or <span class="process-math">\(3k+2\)</span> for some integer <span class="process-math">\(k\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#case-pfprodconsec-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
 <details id="case-pfprodconsec-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="hint solution-like knowl__content">
-<div class="para" id="case-pfprodconsec-3-1">Use the cases in <a href="cases4-4.html#case-QRT3" class="xref" data-knowl="./knowl/xref/A_casesfor3.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.4.4">Activity 4.4.4</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#case-pfprodconsec-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="case-pfprodconsec-3-1">Use the cases in <a href="cases4-4.html#case-QRT3" class="xref" data-knowl="./knowl/xref/A_casesfor3.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.4.8">Activity 4.4.8</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#case-pfprodconsec-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Hint 4.4.5.1"><a tabindex="-1" href="#case-pfprodconsec-3" title="Copy heading and permalink for Hint 4.4.5.1" aria-label="Copy heading and permalink for Hint 4.4.5.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Hint 4.4.9.1"><a tabindex="-1" href="#case-pfprodconsec-3" title="Copy heading and permalink for Hint 4.4.9.1" aria-label="Copy heading and permalink for Hint 4.4.9.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 4.4.5"><a tabindex="-1" href="#case-pfprodconsec" title="Copy heading and permalink for Activity 4.4.5" aria-label="Copy heading and permalink for Activity 4.4.5">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 4.4.9"><a tabindex="-1" href="#case-pfprodconsec" title="Copy heading and permalink for Activity 4.4.9" aria-label="Copy heading and permalink for Activity 4.4.9">🔗</a></div>
 </article>
 <section class="reading-questions" id="cases4-4-28">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Check Your Understanding</span>
-</h3>
-<article class="exercise exercise-like" id="DMT_cases_CYU_n34d6qr"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</h2>
+<article class="exercise exercise-like" id="DMT_cases_CYU_n34d6qr"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-DMT_cases_CYU_n34d6qr">
 <div class="para" id="DMT_cases_CYU_n34d6qr-1-1">Find the quotient and remainder if <span class="process-math">\(n=34, d=6\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_cases_CYU_n34d6qr-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -839,7 +865,7 @@ n^2&amp;=(4k+3)^2\\
 </div></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.4.1"><a tabindex="-1" href="#DMT_cases_CYU_n34d6qr" title="Copy heading and permalink for Reading Question 4.4.1" aria-label="Copy heading and permalink for Reading Question 4.4.1">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_cases_CYU_n34d2qr"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_cases_CYU_n34d2qr"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-DMT_cases_CYU_n34d2qr">
 <div class="para" id="DMT_cases_CYU_n34d2qr-1-1">Find the quotient and remainder if <span class="process-math">\(n=34, d=2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_cases_CYU_n34d2qr-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -849,7 +875,7 @@ n^2&amp;=(4k+3)^2\\
 </div></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.4.2"><a tabindex="-1" href="#DMT_cases_CYU_n34d2qr" title="Copy heading and permalink for Reading Question 4.4.2" aria-label="Copy heading and permalink for Reading Question 4.4.2">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_cases_CYU_nneg34d6qr"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_cases_CYU_nneg34d6qr"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-DMT_cases_CYU_nneg34d6qr">
 <div class="para" id="DMT_cases_CYU_nneg34d6qr-1-1">Find the quotient and remainder if <span class="process-math">\(n=-34, d=6\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_cases_CYU_nneg34d6qr-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -859,7 +885,7 @@ n^2&amp;=(4k+3)^2\\
 </div></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.4.3"><a tabindex="-1" href="#DMT_cases_CYU_nneg34d6qr" title="Copy heading and permalink for Reading Question 4.4.3" aria-label="Copy heading and permalink for Reading Question 4.4.3">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_cases_CYU_n4d10qr"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_cases_CYU_n4d10qr"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-DMT_cases_CYU_n4d10qr">
 <div class="para" id="DMT_cases_CYU_n4d10qr-1-1">Find the quotient and remainder if <span class="process-math">\(n=4, d=10\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_cases_CYU_n4d10qr-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -869,7 +895,7 @@ n^2&amp;=(4k+3)^2\\
 </div></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.4.4"><a tabindex="-1" href="#DMT_cases_CYU_n4d10qr" title="Copy heading and permalink for Reading Question 4.4.4" aria-label="Copy heading and permalink for Reading Question 4.4.4">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_cases_CYU_n40d12qr"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_cases_CYU_n40d12qr"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-DMT_cases_CYU_n40d12qr">
 <div class="para" id="DMT_cases_CYU_n40d12qr-1-1">Find the quotient and remainder if <span class="process-math">\(n=-40, d=12\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_cases_CYU_n40d12qr-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -879,7 +905,7 @@ n^2&amp;=(4k+3)^2\\
 </div></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.4.5"><a tabindex="-1" href="#DMT_cases_CYU_n40d12qr" title="Copy heading and permalink for Reading Question 4.4.5" aria-label="Copy heading and permalink for Reading Question 4.4.5">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_cases_CYU_revcondforms"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_cases_CYU_revcondforms"><h3 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone cardsort_section"><ul data-component="dragndrop" data-question_label="" style="visibility: hidden;" id="rs-DMT_cases_CYU_revcondforms">
 <span data-subcomponent="question">
 <div class="para" id="DMT_cases_CYU_revcondforms-1-1">Review: Match the form of <span class="process-math">\(p\rightarrow q\)</span> with its name.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_cases_CYU_revcondforms-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -904,56 +930,59 @@ n^2&amp;=(4k+3)^2\\
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.4.6"><a tabindex="-1" href="#DMT_cases_CYU_revcondforms" title="Copy heading and permalink for Reading Question 4.4.6" aria-label="Copy heading and permalink for Reading Question 4.4.6">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_cases_CYU_revnegunivcond"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_cases_CYU_revnegunivcond"><h3 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_cases_CYU_revnegunivcond-1-1">Review: Give the negation of <span class="process-math">\(\forall x\in D, P(x)\rightarrow Q(x)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_cases_CYU_revnegunivcond-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.4.7"><a tabindex="-1" href="#DMT_cases_CYU_revnegunivcond" title="Copy heading and permalink for Reading Question 4.4.7" aria-label="Copy heading and permalink for Reading Question 4.4.7">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_cases_CYU_revcontrunivcond"><h4 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_cases_CYU_revcontrunivcond"><h3 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_cases_CYU_revcontrunivcond-1-1">Review: Give the contrapositive of <span class="process-math">\(\forall x\in D, P(x)\rightarrow Q(x)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_cases_CYU_revcontrunivcond-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 4.4.8"><a tabindex="-1" href="#DMT_cases_CYU_revcontrunivcond" title="Copy heading and permalink for Reading Question 4.4.8" aria-label="Copy heading and permalink for Reading Question 4.4.8">🔗</a></div>
 </article><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 4.4: Check Your Understanding"><a tabindex="-1" href="#cases4-4-28" title="Copy heading and permalink for Reading Questions 4.4: Check Your Understanding" aria-label="Copy heading and permalink for Reading Questions 4.4: Check Your Understanding">🔗</a></div>
 </section>
 <section class="exercises" id="cases4-4-29">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
-</h3>
-<article class="exercise exercise-like" id="cases4-4-29-1"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</h2>
+<article class="exercise exercise-like" id="cases4-4-29-1"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="cases4-4-29-1-1-1">For the given <span class="process-math">\(n\)</span> and <span class="process-math">\(d\text{,}\)</span> find <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> such that <span class="process-math">\(n=dq+r\)</span> with <span class="process-math">\(0\leq r&lt;d\)</span> (as in the Quotient-Remainder Theorem).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cases4-4-29-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="cases4-4-29-1-1-2">
-<li id="cases4-4-29-1-1-2-1">
-<div class="para" id="cases4-4-29-1-1-2-1-1">
-<span class="process-math">\(n=36\)</span> and <span class="process-math">\(d=40\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cases4-4-29-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="cases4-4-29-1-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="cases4-4-29-1-1-2-1">
+<li id="cases4-4-29-1-1-2-1-1">
+<div class="para" id="cases4-4-29-1-1-2-1-1-1">
+<span class="process-math">\(n=36\)</span> and <span class="process-math">\(d=40\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cases4-4-29-1-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 4.4.1.a"><a tabindex="-1" href="#cases4-4-29-1-1-2-1" title="Copy heading and permalink for Item 4.4.1.a" aria-label="Copy heading and permalink for Item 4.4.1.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4.4.1.a"><a tabindex="-1" href="#cases4-4-29-1-1-2-1-1" title="Copy heading and permalink for Item 4.4.1.a" aria-label="Copy heading and permalink for Item 4.4.1.a">🔗</a></div>
 </li>
-<li id="cases4-4-29-1-1-2-2">
-<div class="para" id="cases4-4-29-1-1-2-2-1">
-<span class="process-math">\(n=-45\)</span> and <span class="process-math">\(d=11\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cases4-4-29-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="cases4-4-29-1-1-2-1-2">
+<div class="para" id="cases4-4-29-1-1-2-1-2-1">
+<span class="process-math">\(n=-45\)</span> and <span class="process-math">\(d=11\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cases4-4-29-1-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 4.4.1.b"><a tabindex="-1" href="#cases4-4-29-1-1-2-2" title="Copy heading and permalink for Item 4.4.1.b" aria-label="Copy heading and permalink for Item 4.4.1.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4.4.1.b"><a tabindex="-1" href="#cases4-4-29-1-1-2-1-2" title="Copy heading and permalink for Item 4.4.1.b" aria-label="Copy heading and permalink for Item 4.4.1.b">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cases4-4-29-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 4.4.1"><a tabindex="-1" href="#cases4-4-29-1" title="Copy heading and permalink for Exercise 4.4.1" aria-label="Copy heading and permalink for Exercise 4.4.1">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="cases4-4-29-2"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="cases4-4-29-2"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="cases4-4-29-2-1-1">Evaluate <span class="process-math">\(28\)</span> div <span class="process-math">\(5\)</span> and <span class="process-math">\(28\)</span> mod <span class="process-math">\(5\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cases4-4-29-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 4.4.2"><a tabindex="-1" href="#cases4-4-29-2" title="Copy heading and permalink for Exercise 4.4.2" aria-label="Copy heading and permalink for Exercise 4.4.2">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="cases4-4-29-3"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="cases4-4-29-3"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="cases4-4-29-3-1-1">Suppose <span class="process-math">\(d\)</span> is a positive integer and <span class="process-math">\(n\)</span> is any integer. If <span class="process-math">\(d\mid n\text{,}\)</span> what is the remainder when the Quotient-Remainder Theorem is applied to <span class="process-math">\(n\)</span> with divisor <span class="process-math">\(d\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cases4-4-29-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 4.4.3"><a tabindex="-1" href="#cases4-4-29-3" title="Copy heading and permalink for Exercise 4.4.3" aria-label="Copy heading and permalink for Exercise 4.4.3">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="cases4-4-29-4"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="cases4-4-29-4"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="cases4-4-29-4-1-1">Prove for all integers <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(n^2-n+3\)</span> is odd.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cases4-4-29-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 4.4.4"><a tabindex="-1" href="#cases4-4-29-4" title="Copy heading and permalink for Exercise 4.4.4" aria-label="Copy heading and permalink for Exercise 4.4.4">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="cases4-4-29-5"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="cases4-4-29-5"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="cases4-4-29-5-1-1">Let <span class="process-math">\(n\in \mathbb{Z}\text{.}\)</span> Prove if <span class="process-math">\(n\)</span> has remainder 3 when divided by 5, then <span class="process-math">\(n^2\)</span> has remainder 4 when divided by 5.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cases4-4-29-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
@@ -966,7 +995,7 @@ n^2&amp;=(4k+3)^2\\
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 4.4.5"><a tabindex="-1" href="#cases4-4-29-5" title="Copy heading and permalink for Exercise 4.4.5" aria-label="Copy heading and permalink for Exercise 4.4.5">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="cases4-4-29-6"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="cases4-4-29-6"><h3 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="cases4-4-29-6-1-1">Let <span class="process-math">\(a, b\in \mathbb{Z}\text{.}\)</span> Prove if <span class="process-math">\(a\)</span> has remainder 5 when divided by 7 and <span class="process-math">\(b\)</span> has remainder 6 when divided by 7, then <span class="process-math">\(ab\)</span> has remainder 2 when divided by 7.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cases4-4-29-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
@@ -979,7 +1008,7 @@ n^2&amp;=(4k+3)^2\\
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 4.4.6"><a tabindex="-1" href="#cases4-4-29-6" title="Copy heading and permalink for Exercise 4.4.6" aria-label="Copy heading and permalink for Exercise 4.4.6">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="cases4-4-29-7"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="cases4-4-29-7"><h3 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="cases4-4-29-7-1-1">Prove the square of any integer has the form <span class="process-math">\(4k\)</span> or <span class="process-math">\(4k+1\)</span> for some integer <span class="process-math">\(k\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cases4-4-29-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 4.4.7"><a tabindex="-1" href="#cases4-4-29-7" title="Copy heading and permalink for Exercise 4.4.7" aria-label="Copy heading and permalink for Exercise 4.4.7">🔗</a></div>

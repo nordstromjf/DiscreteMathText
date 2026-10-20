@@ -19,15 +19,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-2 { system: extends decimal; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-3 { system: extends decimal; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-4 { system: extends lower-roman; prefix: ''; suffix: '. '; }
+</style>
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
 hasWebworkReps: false,
 hasSage: false,
 isReact: false,
 htmlPresentation: false,
+lang: "en-US",
 });
-</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta name="twitter:title" content="Discrete Mathematics: An Active Approach to Mathematical Reasoning">
@@ -36,7 +42,7 @@ htmlPresentation: false,
 <meta name="twitter:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta property="og:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.43"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.54"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.54"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -58,21 +64,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.9';
+eBookConfig.runestone_version = '8.3.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.846a0d6fafaa99e0.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.bbcfc02849ebc023.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/prefix-runtime.4beca1fdeed766a2.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.ebd33f6a21eed414.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.9963089870a016c8.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="DiscreteMathText" class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></div>
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="indexnav">
@@ -88,7 +94,17 @@ eBookConfig.enable_chatcodes =  false;
 <div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
 <ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
-<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
 <h2 class="heading">Readability settings</h2>
 <button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
@@ -137,6 +153,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter1.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to Mathematical Language</span></a></div>
 <ul id="ptx-toc-group-chapter1" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter1-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="variables1-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Variables and Statements</span></a></div>
 <ul id="ptx-toc-group-variables1-1" class="structural toc-item-list">
@@ -163,6 +180,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter2.html" class="internal"><span class="codenumber">2</span> <span class="title">Logic</span></a></div>
 <ul id="ptx-toc-group-chapter2" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter2-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="logical_form2-1.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Truth-Tables and Logical Equivalence</span></a></div>
 <ul id="ptx-toc-group-logical_form2-1" class="structural toc-item-list">
@@ -189,6 +207,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter3.html" class="internal"><span class="codenumber">3</span> <span class="title">Logic with Quantifiers</span></a></div>
 <ul id="ptx-toc-group-chapter3" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter3-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="quantifiersI3-1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Quantifiers</span></a></div>
 <ul id="ptx-toc-group-quantifiersI3-1" class="structural toc-item-list">
@@ -222,6 +241,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter4.html" class="internal"><span class="codenumber">4</span> <span class="title">Proof Techniques</span></a></div>
 <ul id="ptx-toc-group-chapter4" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter4-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="directproof4-1.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Direct Proof and Counterexample</span></a></div>
 <ul id="ptx-toc-group-directproof4-1" class="structural toc-item-list">
@@ -269,6 +289,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter5.html" class="internal"><span class="codenumber">5</span> <span class="title">Sequences and Mathematical Induction</span></a></div>
 <ul id="ptx-toc-group-chapter5" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter5-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sequences5-1.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Sequences</span></a></div>
 <ul id="ptx-toc-group-sequences5-1" class="structural toc-item-list">
@@ -316,6 +337,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter6.html" class="internal"><span class="codenumber">6</span> <span class="title">Set Theory</span></a></div>
 <ul id="ptx-toc-group-chapter6" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter6-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sets6-1.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Set Theory</span></a></div>
 <ul id="ptx-toc-group-sets6-1" class="structural toc-item-list">
@@ -342,6 +364,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter7.html" class="internal"><span class="codenumber">7</span> <span class="title">Functions</span></a></div>
 <ul id="ptx-toc-group-chapter7" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter7-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="functions7-1.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Functions</span></a></div>
 <ul id="ptx-toc-group-functions7-1" class="structural toc-item-list">
@@ -361,6 +384,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter8.html" class="internal"><span class="codenumber">8</span> <span class="title">Relations</span></a></div>
 <ul id="ptx-toc-group-chapter8" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter8-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="relations8-1.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Relations on Sets</span></a></div>
 <ul id="ptx-toc-group-relations8-1" class="structural toc-item-list">
@@ -394,6 +418,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter9.html" class="internal"><span class="codenumber">9</span> <span class="title">Probability and Counting</span></a></div>
 <ul id="ptx-toc-group-chapter9" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter9-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="probability9-1.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Probability</span></a></div>
 <ul id="ptx-toc-group-probability9-1" class="structural toc-item-list">
@@ -441,6 +466,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter10.html" class="internal"><span class="codenumber">10</span> <span class="title">Graph Theory</span></a></div>
 <ul id="ptx-toc-group-chapter10" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter10-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="graphs10-1.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphs</span></a></div>
 <ul id="ptx-toc-group-graphs10-1" class="structural toc-item-list">
@@ -468,7 +494,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="DiscreteMath-14.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul class="structural toc-item-list contains-active" id="ptx-toc-group-DiscreteMath-14">
 <li class="toc-item toc-references"><div class="toc-title-box"><a href="DiscreteMath-14-1.html" class="internal"><span class="title">References</span></a></div></li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A.</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-index active"><div class="toc-title-box"><a href="DiscreteMath-14-3.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="DiscreteMath-14-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
@@ -476,11 +502,11 @@ eBookConfig.enable_chatcodes =  false;
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="index" id="DiscreteMath-14-3">
-<h2 class="heading hide-type">
+<h1 class="heading hide-type">
 <span class="type">Index</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Index</span>
-</h2>
+</h1>
 <div class="indexletter" id="indexletter-\"><div class="indexitem">
-<span class="process-math">\(r\)</span>-permutation<span class="indexknowl"> <a href="multrule9-2.html#D_rpermutation" class="xref" data-knowl="./knowl/index/D_rpermutation.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 9.2.8">Definition</a></span>
+<span class="process-math">\(r\)</span>-permutation<span class="indexknowl"> <a href="multrule9-2.html#D_rpermutation" class="xref" data-knowl="./knowl/index/D_rpermutation.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 9.2.13">Definition</a></span>
 </div></div>
 <div class="indexletter" id="indexletter-a">
 <div class="indexitem">addition rule<span class="indexknowl"> <a href="additionrule9-3.html" class="internal" title="Section 9.3: Addition Rule">Section</a> <a href="additionrule9-3.html#B_addrule" class="xref" data-knowl="./knowl/index/B_addrule.html" data-reveal-label="Reveal" data-close-label="Close" title="Assemblage: Addition Rule">Assemblage</a></span>
@@ -503,7 +529,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <div class="indexletter" id="indexletter-b">
-<div class="indexitem">bijection<span class="indexknowl"> <a href="onetooneonto7-2.html#D_ontotoonecorrespondence" class="xref" data-knowl="./knowl/index/D_ontotoonecorrespondence.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.2.12">Definition</a>. <span class="seealso"><em>See also</em> one-to-one correspondence</span></span>
+<div class="indexitem">bijection<span class="indexknowl"> <a href="onetooneonto7-2.html#D_ontotoonecorrespondence" class="xref" data-knowl="./knowl/index/D_ontotoonecorrespondence.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.2.17">Definition</a>. <span class="seealso"><em>See also</em> one-to-one correspondence</span></span>
 </div>
 <div class="indexitem">binary tree<span class="indexknowl"> <a href="trees10-3.html#trees10-3-14" class="xref" data-knowl="./knowl/index/trees10-3-14.html" data-reveal-label="Reveal" data-close-label="Close" title="Paragraph">Paragraph</a></span>
 </div>
@@ -513,7 +539,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="indexitem">binomial coefficient<span class="indexknowl"> <a href="binomial9-6.html#binomial9-6-11" class="xref" data-knowl="./knowl/index/binomial9-6-11.html" data-reveal-label="Reveal" data-close-label="Close" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">Binomial Theorem<span class="indexknowl"> <a href="binomial9-6.html" class="internal" title="Section 9.6: Binomial Theorem">Section</a> <a href="binomial9-6.html#T_binomial" class="xref" data-knowl="./knowl/index/T_binomial.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.6.4: Binomial Theorem">Theorem</a></span>
+<div class="indexitem">Binomial Theorem<span class="indexknowl"> <a href="binomial9-6.html" class="internal" title="Section 9.6: Binomial Theorem">Section</a> <a href="binomial9-6.html#T_binomial" class="xref" data-knowl="./knowl/index/T_binomial.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.6.5: Binomial Theorem">Theorem</a></span>
 </div>
 <div class="indexitem">bit string<span class="indexknowl"> <a href="multrule9-2.html#multrule9-2-10" class="xref" data-knowl="./knowl/index/multrule9-2-10.html" data-reveal-label="Reveal" data-close-label="Close" title="Paragraph">Paragraph</a></span>
 </div>
@@ -521,7 +547,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <div class="indexletter" id="indexletter-c">
-<div class="indexitem">Cartesian product<span class="indexknowl"> <a href="lang_sets1-2.html#D_prodofsets" class="xref" data-knowl="./knowl/index/D_prodofsets.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.2.6">Definition</a></span>
+<div class="indexitem">Cartesian product<span class="indexknowl"> <a href="lang_sets1-2.html#D_prodofsets" class="xref" data-knowl="./knowl/index/D_prodofsets.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.2.11">Definition</a></span>
 </div>
 <div class="indexitem">cases</div>
 <div class="subindexitem">proof by<span class="indexknowl"> <a href="cases4-4.html#B_pfcases" class="xref" data-knowl="./knowl/index/B_pfcases.html" data-reveal-label="Reveal" data-close-label="Close" title="Assemblage: Proof by Cases">Assemblage</a></span>
@@ -529,13 +555,13 @@ eBookConfig.enable_chatcodes =  false;
 <div class="indexitem">child</div>
 <div class="subindexitem">of a vertex<span class="indexknowl"> <a href="trees10-3.html#trees10-3-12-6-3" class="xref" data-knowl="./knowl/index/trees10-3-12-6-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Item">Item</a></span>
 </div>
-<div class="indexitem">choose<span class="indexknowl"> <a href="sequences5-1.html#D_choose" class="xref" data-knowl="./knowl/index/D_choose.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.1.6">Definition</a></span>
+<div class="indexitem">choose<span class="indexknowl"> <a href="sequences5-1.html#D_choose" class="xref" data-knowl="./knowl/index/D_choose.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.1.14">Definition</a></span>
 </div>
 <div class="indexitem">circuit<span class="indexknowl"> <a href="pathscircuits10-2.html" class="internal" title="Section 10.2: Paths and Circuits">Section</a> <a href="pathscircuits10-2.html#D_pathscircuits-1-1-7-5" class="xref" data-knowl="./knowl/index/D_pathscircuits-1-1-7-5.html" data-reveal-label="Reveal" data-close-label="Close" title="Item">Item</a></span>
 </div>
-<div class="subindexitem">Euler<span class="indexknowl"> <a href="pathscircuits10-2.html#D_eulercircuit" class="xref" data-knowl="./knowl/index/D_eulercircuit.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.2.10">Definition</a></span>
+<div class="subindexitem">Euler<span class="indexknowl"> <a href="pathscircuits10-2.html#D_eulercircuit" class="xref" data-knowl="./knowl/index/D_eulercircuit.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.2.13">Definition</a></span>
 </div>
-<div class="subindexitem">Hamiltonian<span class="indexknowl"> <a href="pathscircuits10-2.html#hamiltoniancircuit" class="xref" data-knowl="./knowl/index/hamiltoniancircuit.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.2.18">Definition</a></span>
+<div class="subindexitem">Hamiltonian<span class="indexknowl"> <a href="pathscircuits10-2.html#hamiltoniancircuit" class="xref" data-knowl="./knowl/index/hamiltoniancircuit.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.2.24">Definition</a></span>
 </div>
 <div class="subindexitem">simple<span class="indexknowl"> <a href="pathscircuits10-2.html#D_pathscircuits-1-1-7-6" class="xref" data-knowl="./knowl/index/D_pathscircuits-1-1-7-6.html" data-reveal-label="Reveal" data-close-label="Close" title="Item">Item</a></span>
 </div>
@@ -557,13 +583,13 @@ eBookConfig.enable_chatcodes =  false;
 <div class="indexitem">complement</div>
 <div class="subindexitem">of a set<span class="indexknowl"> <a href="sets6-1.html#D_setcomplement" class="xref" data-knowl="./knowl/index/D_setcomplement.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.1.10">Definition</a></span>
 </div>
-<div class="indexitem">complete bipartite graph<span class="indexknowl"> <a href="graphs10-1.html#D_compbipartite" class="xref" data-knowl="./knowl/index/D_compbipartite.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.1.10">Definition</a></span>
+<div class="indexitem">complete bipartite graph<span class="indexknowl"> <a href="graphs10-1.html#D_compbipartite" class="xref" data-knowl="./knowl/index/D_compbipartite.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.1.11">Definition</a></span>
 </div>
 <div class="indexitem">complete graph<span class="indexknowl"> <a href="graphs10-1.html#D_completegraph" class="xref" data-knowl="./knowl/index/D_completegraph.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.1.8">Definition</a></span>
 </div>
 <div class="indexitem">complete set of residues<span class="indexknowl"> <a href="modarith8-4.html" class="internal" title="Section 8.4: Modular Arithmetic">Section</a></span>
 </div>
-<div class="indexitem">composite<span class="indexknowl"> <a href="directproof4-1.html#directproof4-1-12" class="xref" data-knowl="./knowl/index/directproof4-1-12.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.1.5">Definition</a></span>
+<div class="indexitem">composite<span class="indexknowl"> <a href="directproof4-1.html#directproof4-1-12" class="xref" data-knowl="./knowl/index/directproof4-1-12.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.1.6">Definition</a></span>
 </div>
 <div class="indexitem">conclusion<span class="indexknowl"> <a href="arguments2-3.html#B_formargument" class="xref" data-knowl="./knowl/index/B_formargument.html" data-reveal-label="Reveal" data-close-label="Close" title="Assemblage: General Form of an Argument">Assemblage</a></span>
 </div>
@@ -593,7 +619,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="indexitem">constructive proof</div>
 <div class="subindexitem">existential statement<span class="indexknowl"> <a href="directproof4-1.html#B_pfbyexample" class="xref" data-knowl="./knowl/index/B_pfbyexample.html" data-reveal-label="Reveal" data-close-label="Close" title="Assemblage: Proving Existential Statements">Assemblage</a></span>
 </div>
-<div class="indexitem">contradiction<span class="indexknowl"> <a href="logical_form2-1.html#logical_form2-1-22" class="xref" data-knowl="./knowl/index/logical_form2-1-22.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.1.7">Definition</a></span>
+<div class="indexitem">contradiction<span class="indexknowl"> <a href="logical_form2-1.html#logical_form2-1-22" class="xref" data-knowl="./knowl/index/logical_form2-1-22.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.1.10">Definition</a></span>
 </div>
 <div class="subindexitem">proof<span class="indexknowl"> <a href="contradiction4-5.html" class="internal" title="Section 4.5: Proof by Contradiction and Contrapositive">Section</a> <a href="contradiction4-5.html#B_pfcontradiction" class="xref" data-knowl="./knowl/index/B_pfcontradiction.html" data-reveal-label="Reveal" data-close-label="Close" title="Assemblage: Method of Proof by Contradiction">Assemblage</a></span>
 </div>
@@ -601,11 +627,11 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="subindexitem">proof<span class="indexknowl"> <a href="contradiction4-5.html" class="internal" title="Section 4.5: Proof by Contradiction and Contrapositive">Section</a> <a href="contradiction4-5.html#B_pfcontrapositive" class="xref" data-knowl="./knowl/index/B_pfcontrapositive.html" data-reveal-label="Reveal" data-close-label="Close" title="Assemblage: Method of Proof by Contrapositive">Assemblage</a></span>
 </div>
-<div class="subindexitem">universal conditional<span class="indexknowl"> <a href="negquant3-2.html#D_contrapositiveuc" class="xref" data-knowl="./knowl/index/D_contrapositiveuc.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.2.2">Definition</a></span>
+<div class="subindexitem">universal conditional<span class="indexknowl"> <a href="negquant3-2.html#D_contrapositiveuc" class="xref" data-knowl="./knowl/index/D_contrapositiveuc.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.2.4">Definition</a></span>
 </div>
 <div class="indexitem">converse<span class="indexknowl"> <a href="conditional2-2.html#conditional2-2-20-1-1-2-2" class="xref" data-knowl="./knowl/index/conditional2-2-20-1-1-2-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Item">Item</a></span>
 </div>
-<div class="subindexitem">universal conditional<span class="indexknowl"> <a href="negquant3-2.html#D_converseuc" class="xref" data-knowl="./knowl/index/D_converseuc.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.2.3">Definition</a></span>
+<div class="subindexitem">universal conditional<span class="indexknowl"> <a href="negquant3-2.html#D_converseuc" class="xref" data-knowl="./knowl/index/D_converseuc.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.2.5">Definition</a></span>
 </div>
 <div class="indexitem">converse error<span class="indexknowl"> <a href="arguments2-3.html#B_commoninvalid" class="xref" data-knowl="./knowl/index/B_commoninvalid.html" data-reveal-label="Reveal" data-close-label="Close" title="Assemblage: Some Common Invalid Arguments">Assemblage</a></span>
 </div>
@@ -616,7 +642,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="indexletter" id="indexletter-d">
 <div class="indexitem">degree</div>
-<div class="subindexitem">of a vertex<span class="indexknowl"> <a href="graphs10-1.html#D_degree" class="xref" data-knowl="./knowl/index/D_degree.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.1.14">Definition</a></span>
+<div class="subindexitem">of a vertex<span class="indexknowl"> <a href="graphs10-1.html#D_degree" class="xref" data-knowl="./knowl/index/D_degree.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.1.16">Definition</a></span>
 </div>
 <div class="indexitem">DeMorgan’s Laws<span class="indexknowl"> <a href="logical_form2-1.html#logical_form2-1-32" class="xref" data-knowl="./knowl/index/logical_form2-1-32.html" data-reveal-label="Reveal" data-close-label="Close" title="Paragraph">Paragraph</a></span>
 </div>
@@ -632,7 +658,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="indexitem">directed graph<span class="indexknowl"> <a href="graphs10-1.html#digraph" class="xref" data-knowl="./knowl/index/digraph.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.1.7">Definition</a></span>
 </div>
-<div class="indexitem">disjoint sets<span class="indexknowl"> <a href="sets6-1.html#D_disjointsets" class="xref" data-knowl="./knowl/index/D_disjointsets.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.1.16">Definition</a></span>
+<div class="indexitem">disjoint sets<span class="indexknowl"> <a href="sets6-1.html#D_disjointsets" class="xref" data-knowl="./knowl/index/D_disjointsets.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.1.19">Definition</a></span>
 </div>
 <div class="indexitem">divides<span class="indexknowl"> <a href="divisibility4-3.html#divisibility4-3-4-3-4" class="xref" data-knowl="./knowl/index/divisibility4-3-4-3-4.html" data-reveal-label="Reveal" data-close-label="Close" title="Item">Item</a></span>
 </div>
@@ -668,9 +694,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="indexitem">equivalence relation<span class="indexknowl"> <a href="equivalencerelations8-3.html" class="internal" title="Section 8.3: Equivalence Relations">Section</a> <a href="equivalencerelations8-3.html#D_equivrel" class="xref" data-knowl="./knowl/index/D_equivrel.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 8.3.1">Definition</a></span>
 </div>
-<div class="indexitem">Euler circuit<span class="indexknowl"> <a href="pathscircuits10-2.html#D_eulercircuit" class="xref" data-knowl="./knowl/index/D_eulercircuit.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.2.10">Definition</a></span>
+<div class="indexitem">Euler circuit<span class="indexknowl"> <a href="pathscircuits10-2.html#D_eulercircuit" class="xref" data-knowl="./knowl/index/D_eulercircuit.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.2.13">Definition</a></span>
 </div>
-<div class="indexitem">Euler path<span class="indexknowl"> <a href="pathscircuits10-2.html#D_eulerpath" class="xref" data-knowl="./knowl/index/D_eulerpath.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.2.16">Definition</a></span>
+<div class="indexitem">Euler path<span class="indexknowl"> <a href="pathscircuits10-2.html#D_eulerpath" class="xref" data-knowl="./knowl/index/D_eulerpath.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.2.21">Definition</a></span>
 </div>
 <div class="indexitem">even integer<span class="indexknowl"> <a href="directproof4-1.html#directproof4-1-5" class="xref" data-knowl="./knowl/index/directproof4-1-5.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.1.1">Definition</a></span>
 </div>
@@ -694,17 +720,17 @@ eBookConfig.enable_chatcodes =  false;
 <div class="indexletter" id="indexletter-f">
 <div class="indexitem">factor<span class="indexknowl"> <a href="divisibility4-3.html#divisibility4-3-4-3-2" class="xref" data-knowl="./knowl/index/divisibility4-3-4-3-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Item">Item</a></span>
 </div>
-<div class="indexitem">factorial<span class="indexknowl"> <a href="divisibility4-3.html#D_factorial" class="xref" data-knowl="./knowl/index/D_factorial.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.3.7">Definition</a> <a href="sequences5-1.html#sequences5-1-24" class="xref" data-knowl="./knowl/index/sequences5-1-24.html" data-reveal-label="Reveal" data-close-label="Close" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">factorial<span class="indexknowl"> <a href="divisibility4-3.html#D_factorial" class="xref" data-knowl="./knowl/index/D_factorial.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.3.12">Definition</a> <a href="sequences5-1.html#sequences5-1-24" class="xref" data-knowl="./knowl/index/sequences5-1-24.html" data-reveal-label="Reveal" data-close-label="Close" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">Fibonacci sequence<span class="indexknowl"> <a href="recursion5-5.html#E_fibonaccidef" class="xref" data-knowl="./knowl/index/E_fibonaccidef.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.5.3: The Fibonacci Sequence">Example</a></span>
+<div class="indexitem">Fibonacci sequence<span class="indexknowl"> <a href="recursion5-5.html#E_fibonaccidef" class="xref" data-knowl="./knowl/index/E_fibonaccidef.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.5.5: The Fibonacci Sequence">Example</a></span>
 </div>
-<div class="subindexitem">explicit formula<span class="indexknowl"> <a href="iteration5-6.html#E_explicitfib" class="xref" data-knowl="./knowl/index/E_explicitfib.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.6.4: Proving Explicit Formula for the Fibonacci Sequence">Example</a></span>
+<div class="subindexitem">explicit formula<span class="indexknowl"> <a href="iteration5-6.html#E_explicitfib" class="xref" data-knowl="./knowl/index/E_explicitfib.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.6.9: Proving Explicit Formula for the Fibonacci Sequence">Example</a></span>
 </div>
 <div class="indexitem">forest<span class="indexknowl"> <a href="trees10-3.html#D_forest" class="xref" data-knowl="./knowl/index/D_forest.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.3.3">Definition</a></span>
 </div>
 <div class="indexitem">function<span class="indexknowl"> <a href="lang_relations1-3.html#lang_relations1-3-12" class="xref" data-knowl="./knowl/index/lang_relations1-3-12.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.3.5">Definition</a> <a href="functions7-1.html" class="internal" title="Section 7.1: Functions">Section</a> <a href="functions7-1.html#D_function" class="xref" data-knowl="./knowl/index/D_function.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.1.1">Definition</a></span>
 </div>
-<div class="subindexitem">inverse<span class="indexknowl"> <a href="onetooneonto7-2.html#T_inverse" class="xref" data-knowl="./knowl/index/T_inverse.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 7.2.13">Theorem</a></span>
+<div class="subindexitem">inverse<span class="indexknowl"> <a href="onetooneonto7-2.html#T_inverse" class="xref" data-knowl="./knowl/index/T_inverse.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 7.2.18">Theorem</a></span>
 </div>
 <div class="subindexitem">one-to-one<span class="indexknowl"> <a href="onetooneonto7-2.html" class="internal" title="Section 7.2: One-to-One, Onto, Inverse Functions">Section</a></span>
 </div>
@@ -714,7 +740,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <div class="indexletter" id="indexletter-g">
-<div class="indexitem">geometric sequence<span class="indexknowl"> <a href="iteration5-6.html#D_geomseq" class="xref" data-knowl="./knowl/index/D_geomseq.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.6.3">Definition</a></span>
+<div class="indexitem">geometric sequence<span class="indexknowl"> <a href="iteration5-6.html#D_geomseq" class="xref" data-knowl="./knowl/index/D_geomseq.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.6.4">Definition</a></span>
 </div>
 <div class="indexitem">geometric sum<span class="indexknowl"> <a href="induction5-2.html#induction5-2-19" class="xref" data-knowl="./knowl/index/induction5-2-19.html" data-reveal-label="Reveal" data-close-label="Close" title="Paragraph">Paragraph</a></span>
 </div>
@@ -726,19 +752,19 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="subindexitem">complete<span class="indexknowl"> <a href="graphs10-1.html#D_completegraph" class="xref" data-knowl="./knowl/index/D_completegraph.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.1.8">Definition</a></span>
 </div>
-<div class="subindexitem">complete bipartite<span class="indexknowl"> <a href="graphs10-1.html#D_compbipartite" class="xref" data-knowl="./knowl/index/D_compbipartite.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.1.10">Definition</a></span>
+<div class="subindexitem">complete bipartite<span class="indexknowl"> <a href="graphs10-1.html#D_compbipartite" class="xref" data-knowl="./knowl/index/D_compbipartite.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.1.11">Definition</a></span>
 </div>
 <div class="subindexitem">directed<span class="indexknowl"> <a href="graphs10-1.html#digraph" class="xref" data-knowl="./knowl/index/digraph.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.1.7">Definition</a></span>
 </div>
 <div class="subindexitem">path<span class="indexknowl"> <a href="pathscircuits10-2.html" class="internal" title="Section 10.2: Paths and Circuits">Section</a></span>
 </div>
-<div class="subindexitem">total degree<span class="indexknowl"> <a href="graphs10-1.html#D_degree" class="xref" data-knowl="./knowl/index/D_degree.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.1.14">Definition</a></span>
+<div class="subindexitem">total degree<span class="indexknowl"> <a href="graphs10-1.html#D_degree" class="xref" data-knowl="./knowl/index/D_degree.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.1.16">Definition</a></span>
 </div>
 <div class="subindexitem">tree<span class="indexknowl"> <a href="trees10-3.html" class="internal" title="Section 10.3: Trees">Section</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-h">
-<div class="indexitem">Hamiltonian circuit<span class="indexknowl"> <a href="pathscircuits10-2.html#hamiltoniancircuit" class="xref" data-knowl="./knowl/index/hamiltoniancircuit.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.2.18">Definition</a></span>
+<div class="indexitem">Hamiltonian circuit<span class="indexknowl"> <a href="pathscircuits10-2.html#hamiltoniancircuit" class="xref" data-knowl="./knowl/index/hamiltoniancircuit.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.2.24">Definition</a></span>
 </div>
 <div class="indexitem">height</div>
 <div class="subindexitem">of a tree<span class="indexknowl"> <a href="trees10-3.html#trees10-3-12-6-2" class="xref" data-knowl="./knowl/index/trees10-3-12-6-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Item">Item</a></span>
@@ -750,7 +776,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="indexitem">incident</div>
 <div class="subindexitem">edge<span class="indexknowl"> <a href="graphs10-1.html#graphs10-1-13" class="xref" data-knowl="./knowl/index/graphs10-1-13.html" data-reveal-label="Reveal" data-close-label="Close" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">inclusion-exclusion rule<span class="indexknowl"> <a href="additionrule9-3.html#T_inclusionexclusion" class="xref" data-knowl="./knowl/index/T_inclusionexclusion.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.3.2: Inclusion-Exclusion Rule">Theorem</a></span>
+<div class="indexitem">inclusion-exclusion rule<span class="indexknowl"> <a href="additionrule9-3.html#T_inclusionexclusion" class="xref" data-knowl="./knowl/index/T_inclusionexclusion.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.3.4: Inclusion-Exclusion Rule">Theorem</a></span>
 </div>
 <div class="indexitem">induction<span class="indexknowl"> <a href="induction5-2.html" class="internal" title="Section 5.2: Mathematical Induction">Section</a></span>
 </div>
@@ -801,7 +827,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="indexitem">logical argument<span class="indexknowl"> <a href="logical_form2-1.html#logical_form2-1-3" class="xref" data-knowl="./knowl/index/logical_form2-1-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">logical equivalence<span class="indexknowl"> <a href="logical_form2-1.html#D_logequiv" class="xref" data-knowl="./knowl/index/D_logequiv.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.1.10">Definition</a> <a href="logical_form2-1.html#B_logicalequivalences" class="xref" data-knowl="./knowl/index/B_logicalequivalences.html" data-reveal-label="Reveal" data-close-label="Close" title="Assemblage: Summary of Logical Equivalences">Assemblage</a></span>
+<div class="indexitem">logical equivalence<span class="indexknowl"> <a href="logical_form2-1.html#D_logequiv" class="xref" data-knowl="./knowl/index/D_logequiv.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.1.13">Definition</a> <a href="logical_form2-1.html#B_logicalequivalences" class="xref" data-knowl="./knowl/index/B_logicalequivalences.html" data-reveal-label="Reveal" data-close-label="Close" title="Assemblage: Summary of Logical Equivalences">Assemblage</a></span>
 </div>
 <div class="indexitem">logical statement<span class="indexknowl"> <a href="logical_form2-1.html#logical_form2-1-3" class="xref" data-knowl="./knowl/index/logical_form2-1-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Paragraph">Paragraph</a></span>
 </div>
@@ -840,7 +866,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="indexletter" id="indexletter-o">
 <div class="indexitem">odd integer<span class="indexknowl"> <a href="directproof4-1.html#directproof4-1-6" class="xref" data-knowl="./knowl/index/directproof4-1-6.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.1.2">Definition</a></span>
 </div>
-<div class="indexitem">one-to-one correspondence<span class="indexknowl"> <a href="onetooneonto7-2.html#D_ontotoonecorrespondence" class="xref" data-knowl="./knowl/index/D_ontotoonecorrespondence.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.2.12">Definition</a></span>
+<div class="indexitem">one-to-one correspondence<span class="indexknowl"> <a href="onetooneonto7-2.html#D_ontotoonecorrespondence" class="xref" data-knowl="./knowl/index/D_ontotoonecorrespondence.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.2.17">Definition</a></span>
 </div>
 <div class="indexitem">one-to-one function<span class="indexknowl"> <a href="onetooneonto7-2.html" class="internal" title="Section 7.2: One-to-One, Onto, Inverse Functions">Section</a> <a href="onetooneonto7-2.html#D_onetoone" class="xref" data-knowl="./knowl/index/D_onetoone.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.2.1">Definition</a></span>
 </div>
@@ -859,19 +885,19 @@ eBookConfig.enable_chatcodes =  false;
 <div class="indexitem">parent</div>
 <div class="subindexitem">of a vertex<span class="indexknowl"> <a href="trees10-3.html#trees10-3-12-6-4" class="xref" data-knowl="./knowl/index/trees10-3-12-6-4.html" data-reveal-label="Reveal" data-close-label="Close" title="Item">Item</a></span>
 </div>
-<div class="indexitem">partition<span class="indexknowl"> <a href="sets6-1.html#D_partition" class="xref" data-knowl="./knowl/index/D_partition.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.1.17">Definition</a></span>
+<div class="indexitem">partition<span class="indexknowl"> <a href="sets6-1.html#D_partition" class="xref" data-knowl="./knowl/index/D_partition.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.1.20">Definition</a></span>
 </div>
 <div class="indexitem">Pascal’s Formula<span class="indexknowl"> <a href="binomial9-6.html#T_pascalsformula" class="xref" data-knowl="./knowl/index/T_pascalsformula.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.6.2: Pascal’s Formula">Theorem</a></span>
 </div>
 <div class="indexitem">path<span class="indexknowl"> <a href="pathscircuits10-2.html" class="internal" title="Section 10.2: Paths and Circuits">Section</a> <a href="pathscircuits10-2.html#D_pathscircuits-1-1-7-3" class="xref" data-knowl="./knowl/index/D_pathscircuits-1-1-7-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Item">Item</a></span>
 </div>
-<div class="indexitem">permutation<span class="indexknowl"> <a href="multrule9-2.html#D_permutation" class="xref" data-knowl="./knowl/index/D_permutation.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 9.2.5">Definition</a></span>
+<div class="indexitem">permutation<span class="indexknowl"> <a href="multrule9-2.html#D_permutation" class="xref" data-knowl="./knowl/index/D_permutation.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 9.2.7">Definition</a></span>
 </div>
 <div class="indexitem">pigeonhole principle<span class="indexknowl"> <a href="pigeonhole9-4.html" class="internal" title="Section 9.4: Pigeonhole Principle">Section</a> <a href="pigeonhole9-4.html#T_pigeonhole" class="xref" data-knowl="./knowl/index/T_pigeonhole.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.4.1: Pigeonhole Principle">Theorem</a></span>
 </div>
-<div class="subindexitem">generalized<span class="indexknowl"> <a href="pigeonhole9-4.html#T_genpigeonhole" class="xref" data-knowl="./knowl/index/T_genpigeonhole.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.4.4: Generalized Pigeonhole Principle">Theorem</a></span>
+<div class="subindexitem">generalized<span class="indexknowl"> <a href="pigeonhole9-4.html#T_genpigeonhole" class="xref" data-knowl="./knowl/index/T_genpigeonhole.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.4.8: Generalized Pigeonhole Principle">Theorem</a></span>
 </div>
-<div class="indexitem">power set<span class="indexknowl"> <a href="sets6-1.html#D_powerset" class="xref" data-knowl="./knowl/index/D_powerset.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.1.13">Definition</a> <a href="algebraicsets6-3.html#algebraicsets6-3-12" class="xref" data-knowl="./knowl/index/algebraicsets6-3-12.html" data-reveal-label="Reveal" data-close-label="Close" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">power set<span class="indexknowl"> <a href="sets6-1.html#D_powerset" class="xref" data-knowl="./knowl/index/D_powerset.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.1.15">Definition</a> <a href="algebraicsets6-3.html#algebraicsets6-3-12" class="xref" data-knowl="./knowl/index/algebraicsets6-3-12.html" data-reveal-label="Reveal" data-close-label="Close" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">predicate<span class="indexknowl"> <a href="quantifiersI3-1.html#quantifiersI3-1-8" class="xref" data-knowl="./knowl/index/quantifiersI3-1-8.html" data-reveal-label="Reveal" data-close-label="Close" title="Paragraph">Paragraph</a></span>
 </div>
@@ -879,7 +905,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="indexitem">premise<span class="indexknowl"> <a href="arguments2-3.html#B_formargument" class="xref" data-knowl="./knowl/index/B_formargument.html" data-reveal-label="Reveal" data-close-label="Close" title="Assemblage: General Form of an Argument">Assemblage</a></span>
 </div>
-<div class="indexitem">prime<span class="indexknowl"> <a href="directproof4-1.html#directproof4-1-11" class="xref" data-knowl="./knowl/index/directproof4-1-11.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.1.4">Definition</a></span>
+<div class="indexitem">prime<span class="indexknowl"> <a href="directproof4-1.html#directproof4-1-11" class="xref" data-knowl="./knowl/index/directproof4-1-11.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.1.5">Definition</a></span>
 </div>
 <div class="indexitem">prime factorization</div>
 <div class="subindexitem">standard form<span class="indexknowl"> <a href="divisibility4-3.html#divisibility4-3-25" class="xref" data-knowl="./knowl/index/divisibility4-3-25.html" data-reveal-label="Reveal" data-close-label="Close" title="Paragraph">Paragraph</a></span>
@@ -890,7 +916,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="indexitem">product notation<span class="indexknowl"> <a href="sequences5-1.html#sequences5-1-21" class="xref" data-knowl="./knowl/index/sequences5-1-21.html" data-reveal-label="Reveal" data-close-label="Close" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">product of sets<span class="indexknowl"> <a href="lang_sets1-2.html#D_prodofsets" class="xref" data-knowl="./knowl/index/D_prodofsets.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.2.6">Definition</a></span>
+<div class="indexitem">product of sets<span class="indexknowl"> <a href="lang_sets1-2.html#D_prodofsets" class="xref" data-knowl="./knowl/index/D_prodofsets.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.2.11">Definition</a></span>
 </div>
 <div class="indexitem">proof</div>
 <div class="subindexitem">by cases<span class="indexknowl"> <a href="cases4-4.html" class="internal" title="Section 4.4: Proof by Cases">Section</a> <a href="cases4-4.html#B_pfcases" class="xref" data-knowl="./knowl/index/B_pfcases.html" data-reveal-label="Reveal" data-close-label="Close" title="Assemblage: Proof by Cases">Assemblage</a></span>
@@ -905,7 +931,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="subindexitem">method of exaustion<span class="indexknowl"> <a href="directproof4-1.html#B_mothofexhaust" class="xref" data-knowl="./knowl/index/B_mothofexhaust.html" data-reveal-label="Reveal" data-close-label="Close" title="Assemblage: Method of Exhaustion">Assemblage</a></span>
 </div>
-<div class="indexitem">proper subset<span class="indexknowl"> <a href="lang_sets1-2.html#D_propersset" class="xref" data-knowl="./knowl/index/D_propersset.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.2.5">Definition</a> <a href="sets6-1.html#D_propersubset" class="xref" data-knowl="./knowl/index/D_propersubset.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.1.3">Definition</a></span>
+<div class="indexitem">proper subset<span class="indexknowl"> <a href="lang_sets1-2.html#D_propersset" class="xref" data-knowl="./knowl/index/D_propersset.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.2.8">Definition</a> <a href="sets6-1.html#D_propersubset" class="xref" data-knowl="./knowl/index/D_propersubset.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.1.3">Definition</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-q">
@@ -977,9 +1003,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="subindexitem">explicit formula proof<span class="indexknowl"> <a href="iteration5-6.html#B_summaryrecursiveexplicit" class="xref" data-knowl="./knowl/index/B_summaryrecursiveexplicit.html" data-reveal-label="Reveal" data-close-label="Close" title="Assemblage: Summary of Techniques for Sequences">Assemblage</a></span>
 </div>
-<div class="subindexitem">Fibonacci<span class="indexknowl"> <a href="recursion5-5.html#E_fibonaccidef" class="xref" data-knowl="./knowl/index/E_fibonaccidef.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.5.3: The Fibonacci Sequence">Example</a></span>
+<div class="subindexitem">Fibonacci<span class="indexknowl"> <a href="recursion5-5.html#E_fibonaccidef" class="xref" data-knowl="./knowl/index/E_fibonaccidef.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.5.5: The Fibonacci Sequence">Example</a></span>
 </div>
-<div class="subindexitem">geometric<span class="indexknowl"> <a href="iteration5-6.html#D_geomseq" class="xref" data-knowl="./knowl/index/D_geomseq.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.6.3">Definition</a></span>
+<div class="subindexitem">geometric<span class="indexknowl"> <a href="iteration5-6.html#D_geomseq" class="xref" data-knowl="./knowl/index/D_geomseq.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.6.4">Definition</a></span>
 </div>
 <div class="subindexitem">index<span class="indexknowl"> <a href="sequences5-1.html#sequences5-1-8" class="xref" data-knowl="./knowl/index/sequences5-1-8.html" data-reveal-label="Reveal" data-close-label="Close" title="Paragraph">Paragraph</a></span>
 </div>
@@ -997,7 +1023,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="subindexitem">difference<span class="indexknowl"> <a href="sets6-1.html#D_setdifference" class="xref" data-knowl="./knowl/index/D_setdifference.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.1.8">Definition</a></span>
 </div>
-<div class="subindexitem">disjoint<span class="indexknowl"> <a href="sets6-1.html#D_disjointsets" class="xref" data-knowl="./knowl/index/D_disjointsets.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.1.16">Definition</a></span>
+<div class="subindexitem">disjoint<span class="indexknowl"> <a href="sets6-1.html#D_disjointsets" class="xref" data-knowl="./knowl/index/D_disjointsets.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.1.19">Definition</a></span>
 </div>
 <div class="subindexitem">identities<span class="indexknowl"> <a href="propertiesofsets6-2.html#L_SetIdent" class="xref" data-knowl="./knowl/index/L_SetIdent.html" data-reveal-label="Reveal" data-close-label="Close" title="Assemblage: Summary of Set Identities">Assemblage</a></span>
 </div>
@@ -1017,7 +1043,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="indexitem">set theory<span class="indexknowl"> <a href="sets6-1.html" class="internal" title="Section 6.1: Set Theory">Section</a></span>
 </div>
-<div class="indexitem">sets of sets<span class="indexknowl"> <a href="lang_sets1-2.html#lang_sets1-2-13" class="xref" data-knowl="./knowl/index/lang_sets1-2-13.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.2.4: Example of a set with elements that are sets">Example</a></span>
+<div class="indexitem">sets of sets<span class="indexknowl"> <a href="lang_sets1-2.html#lang_sets1-2-13" class="xref" data-knowl="./knowl/index/lang_sets1-2-13.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.2.5: Example of a set with elements that are sets">Example</a></span>
 </div>
 <div class="indexitem">sibling</div>
 <div class="subindexitem">of a vertex<span class="indexknowl"> <a href="trees10-3.html#trees10-3-12-6-5" class="xref" data-knowl="./knowl/index/trees10-3-12-6-5.html" data-reveal-label="Reveal" data-close-label="Close" title="Item">Item</a></span>
@@ -1027,11 +1053,11 @@ eBookConfig.enable_chatcodes =  false;
 <div class="indexitem">simple graph<span class="indexknowl"> <a href="graphs10-1.html#graphs10-1-26" class="xref" data-knowl="./knowl/index/graphs10-1-26.html" data-reveal-label="Reveal" data-close-label="Close" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">statement</div>
-<div class="subindexitem">existential<span class="indexknowl"> <a href="quantifiersI3-1.html#D_existstatement" class="xref" data-knowl="./knowl/index/D_existstatement.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.1.7">Definition</a></span>
+<div class="subindexitem">existential<span class="indexknowl"> <a href="quantifiersI3-1.html#D_existstatement" class="xref" data-knowl="./knowl/index/D_existstatement.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.1.9">Definition</a></span>
 </div>
 <div class="subindexitem">universal<span class="indexknowl"> <a href="quantifiersI3-1.html#D_univstatement" class="xref" data-knowl="./knowl/index/D_univstatement.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.1.6">Definition</a></span>
 </div>
-<div class="subindexitem">universal conditional<span class="indexknowl"> <a href="quantifiersI3-1.html#D_univcondstate" class="xref" data-knowl="./knowl/index/D_univcondstate.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.1.9">Definition</a></span>
+<div class="subindexitem">universal conditional<span class="indexknowl"> <a href="quantifiersI3-1.html#D_univcondstate" class="xref" data-knowl="./knowl/index/D_univcondstate.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.1.14">Definition</a></span>
 </div>
 <div class="subindexitem">vacuously true<span class="indexknowl"> <a href="negquant3-2.html#negquant3-2-18" class="xref" data-knowl="./knowl/index/negquant3-2-18.html" data-reveal-label="Reveal" data-close-label="Close" title="Paragraph">Paragraph</a></span>
 </div>
@@ -1043,17 +1069,17 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="subindexitem">proof structure<span class="indexknowl"> <a href="stronginduction5-4.html#B_structurestronind" class="xref" data-knowl="./knowl/index/B_structurestronind.html" data-reveal-label="Reveal" data-close-label="Close" title="Assemblage: Structure of a Strong Induction Proof">Assemblage</a></span>
 </div>
-<div class="indexitem">subgraph<span class="indexknowl"> <a href="graphs10-1.html#D_subgraph" class="xref" data-knowl="./knowl/index/D_subgraph.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.1.12">Definition</a></span>
+<div class="indexitem">subgraph<span class="indexknowl"> <a href="graphs10-1.html#D_subgraph" class="xref" data-knowl="./knowl/index/D_subgraph.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.1.14">Definition</a></span>
 </div>
-<div class="indexitem">subset<span class="indexknowl"> <a href="lang_sets1-2.html#D_sset" class="xref" data-knowl="./knowl/index/D_sset.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.2.2">Definition</a> <a href="sets6-1.html#D_subset" class="xref" data-knowl="./knowl/index/D_subset.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.1.1">Definition</a></span>
+<div class="indexitem">subset<span class="indexknowl"> <a href="lang_sets1-2.html#D_sset" class="xref" data-knowl="./knowl/index/D_sset.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.2.3">Definition</a> <a href="sets6-1.html#D_subset" class="xref" data-knowl="./knowl/index/D_subset.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.1.1">Definition</a></span>
 </div>
 <div class="subindexitem">proof technique<span class="indexknowl"> <a href="propertiesofsets6-2.html#B_pfsubset" class="xref" data-knowl="./knowl/index/B_pfsubset.html" data-reveal-label="Reveal" data-close-label="Close" title="Assemblage: Proving Subset">Assemblage</a></span>
 </div>
-<div class="subindexitem">proper<span class="indexknowl"> <a href="lang_sets1-2.html#D_propersset" class="xref" data-knowl="./knowl/index/D_propersset.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.2.5">Definition</a></span>
+<div class="subindexitem">proper<span class="indexknowl"> <a href="lang_sets1-2.html#D_propersset" class="xref" data-knowl="./knowl/index/D_propersset.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.2.8">Definition</a></span>
 </div>
 <div class="subindexitem">properties<span class="indexknowl"> <a href="propertiesofsets6-2.html#B_ssrelations" class="xref" data-knowl="./knowl/index/B_ssrelations.html" data-reveal-label="Reveal" data-close-label="Close" title="Assemblage: Subset Relations">Assemblage</a></span>
 </div>
-<div class="indexitem">successor function<span class="indexknowl"> <a href="lang_relations1-3.html#introrel-succ" class="xref" data-knowl="./knowl/index/introrel-succ.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 1.3.3">Activity</a></span>
+<div class="indexitem">successor function<span class="indexknowl"> <a href="lang_relations1-3.html#introrel-succ" class="xref" data-knowl="./knowl/index/introrel-succ.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 1.3.11">Activity</a></span>
 </div>
 <div class="indexitem">sum<span class="indexknowl"> <a href="sequences5-1.html" class="internal" title="Section 5.1: Sequences">Section</a></span>
 </div>
@@ -1070,11 +1096,11 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <div class="indexletter" id="indexletter-t">
-<div class="indexitem">tautology<span class="indexknowl"> <a href="logical_form2-1.html#logical_form2-1-20" class="xref" data-knowl="./knowl/index/logical_form2-1-20.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.1.6">Definition</a></span>
+<div class="indexitem">tautology<span class="indexknowl"> <a href="logical_form2-1.html#logical_form2-1-20" class="xref" data-knowl="./knowl/index/logical_form2-1-20.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.1.9">Definition</a></span>
 </div>
 <div class="indexitem">terminal vertex<span class="indexknowl"> <a href="trees10-3.html#D_leaf" class="xref" data-knowl="./knowl/index/D_leaf.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.3.7">Definition</a></span>
 </div>
-<div class="indexitem">total degree<span class="indexknowl"> <a href="graphs10-1.html#D_degree" class="xref" data-knowl="./knowl/index/D_degree.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.1.14">Definition</a></span>
+<div class="indexitem">total degree<span class="indexknowl"> <a href="graphs10-1.html#D_degree" class="xref" data-knowl="./knowl/index/D_degree.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.1.16">Definition</a></span>
 </div>
 <div class="indexitem">trail<span class="indexknowl"> <a href="pathscircuits10-2.html#D_pathscircuits-1-1-7-2" class="xref" data-knowl="./knowl/index/D_pathscircuits-1-1-7-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Item">Item</a></span>
 </div>
@@ -1102,7 +1128,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="indexitem">union</div>
 <div class="subindexitem">of sets<span class="indexknowl"> <a href="sets6-1.html#D_setunion" class="xref" data-knowl="./knowl/index/D_setunion.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.1.4">Definition</a></span>
 </div>
-<div class="indexitem">Unique Factorization Theorem<span class="indexknowl"> <a href="divisibility4-3.html#T_FTofArith" class="xref" data-knowl="./knowl/index/T_FTofArith.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.3.6: Unique Factorization Theorem">Theorem</a></span>
+<div class="indexitem">Unique Factorization Theorem<span class="indexknowl"> <a href="divisibility4-3.html#T_FTofArith" class="xref" data-knowl="./knowl/index/T_FTofArith.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.3.11: Unique Factorization Theorem">Theorem</a></span>
 </div>
 <div class="indexitem">universal</div>
 <div class="subindexitem">conditional<span class="indexknowl"> <a href="variables1-1.html#variables1-1-8-1-1" class="xref" data-knowl="./knowl/index/variables1-1-8-1-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Item: Universal Conditional">Item</a></span>
@@ -1113,11 +1139,11 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="subindexitem">statement<span class="indexknowl"> <a href="variables1-1.html#variables1-1-4-1-1" class="xref" data-knowl="./knowl/index/variables1-1-4-1-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Item: Universal Statements">Item</a></span>
 </div>
-<div class="indexitem">universal conditional<span class="indexknowl"> <a href="quantifiersI3-1.html#D_univcondstate" class="xref" data-knowl="./knowl/index/D_univcondstate.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.1.9">Definition</a></span>
+<div class="indexitem">universal conditional<span class="indexknowl"> <a href="quantifiersI3-1.html#D_univcondstate" class="xref" data-knowl="./knowl/index/D_univcondstate.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.1.14">Definition</a></span>
 </div>
-<div class="subindexitem">contrapositive<span class="indexknowl"> <a href="negquant3-2.html#D_contrapositiveuc" class="xref" data-knowl="./knowl/index/D_contrapositiveuc.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.2.2">Definition</a></span>
+<div class="subindexitem">contrapositive<span class="indexknowl"> <a href="negquant3-2.html#D_contrapositiveuc" class="xref" data-knowl="./knowl/index/D_contrapositiveuc.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.2.4">Definition</a></span>
 </div>
-<div class="subindexitem">converse<span class="indexknowl"> <a href="negquant3-2.html#D_converseuc" class="xref" data-knowl="./knowl/index/D_converseuc.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.2.3">Definition</a></span>
+<div class="subindexitem">converse<span class="indexknowl"> <a href="negquant3-2.html#D_converseuc" class="xref" data-knowl="./knowl/index/D_converseuc.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.2.5">Definition</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-v">
@@ -1141,7 +1167,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="subindexitem">child<span class="indexknowl"> <a href="trees10-3.html#trees10-3-12-6-3" class="xref" data-knowl="./knowl/index/trees10-3-12-6-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Item">Item</a></span>
 </div>
-<div class="subindexitem">degree<span class="indexknowl"> <a href="graphs10-1.html#D_degree" class="xref" data-knowl="./knowl/index/D_degree.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.1.14">Definition</a></span>
+<div class="subindexitem">degree<span class="indexknowl"> <a href="graphs10-1.html#D_degree" class="xref" data-knowl="./knowl/index/D_degree.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.1.16">Definition</a></span>
 </div>
 <div class="subindexitem">descendant<span class="indexknowl"> <a href="trees10-3.html#trees10-3-12-6-7" class="xref" data-knowl="./knowl/index/trees10-3-12-6-7.html" data-reveal-label="Reveal" data-close-label="Close" title="Item">Item</a></span>
 </div>
@@ -1161,7 +1187,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="indexitem">well-defined function<span class="indexknowl"> <a href="functions7-1.html#functions7-1-20" class="xref" data-knowl="./knowl/index/functions7-1-20.html" data-reveal-label="Reveal" data-close-label="Close" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">Well-Ordering Principle<span class="indexknowl"> <a href="stronginduction5-4.html#T_wellordering" class="xref" data-knowl="./knowl/index/T_wellordering.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.4.3: Well-Ordering Principle">Theorem</a></span>
+<div class="indexitem">Well-Ordering Principle<span class="indexknowl"> <a href="stronginduction5-4.html#T_wellordering" class="xref" data-knowl="./knowl/index/T_wellordering.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.4.4: Well-Ordering Principle">Theorem</a></span>
 </div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Index: Index"><a tabindex="-1" href="#DiscreteMath-14-3" title="Copy heading and permalink for Index: Index" aria-label="Copy heading and permalink for Index: Index">🔗</a></div>

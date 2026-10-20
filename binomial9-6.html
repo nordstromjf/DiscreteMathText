@@ -19,15 +19,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-2 { system: extends decimal; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-3 { system: extends decimal; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-4 { system: extends lower-roman; prefix: ''; suffix: '. '; }
+</style>
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
 hasWebworkReps: false,
 hasSage: false,
 isReact: false,
 htmlPresentation: false,
+lang: "en-US",
 });
-</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta name="twitter:title" content="Discrete Mathematics: An Active Approach to Mathematical Reasoning">
@@ -36,7 +42,7 @@ htmlPresentation: false,
 <meta name="twitter:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta property="og:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.43"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.54"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.54"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -58,21 +64,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.9';
+eBookConfig.runestone_version = '8.3.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.846a0d6fafaa99e0.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.bbcfc02849ebc023.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/prefix-runtime.4beca1fdeed766a2.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.ebd33f6a21eed414.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.9963089870a016c8.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="DiscreteMathText" class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></div>
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="DiscreteMath-14-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
@@ -85,7 +91,17 @@ eBookConfig.enable_chatcodes =  false;
 <div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
 <ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
-<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
 <h2 class="heading">Readability settings</h2>
 <button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
@@ -134,6 +150,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter1.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to Mathematical Language</span></a></div>
 <ul id="ptx-toc-group-chapter1" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter1-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="variables1-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Variables and Statements</span></a></div>
 <ul id="ptx-toc-group-variables1-1" class="structural toc-item-list">
@@ -160,6 +177,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter2.html" class="internal"><span class="codenumber">2</span> <span class="title">Logic</span></a></div>
 <ul id="ptx-toc-group-chapter2" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter2-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="logical_form2-1.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Truth-Tables and Logical Equivalence</span></a></div>
 <ul id="ptx-toc-group-logical_form2-1" class="structural toc-item-list">
@@ -186,6 +204,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter3.html" class="internal"><span class="codenumber">3</span> <span class="title">Logic with Quantifiers</span></a></div>
 <ul id="ptx-toc-group-chapter3" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter3-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="quantifiersI3-1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Quantifiers</span></a></div>
 <ul id="ptx-toc-group-quantifiersI3-1" class="structural toc-item-list">
@@ -219,6 +238,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter4.html" class="internal"><span class="codenumber">4</span> <span class="title">Proof Techniques</span></a></div>
 <ul id="ptx-toc-group-chapter4" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter4-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="directproof4-1.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Direct Proof and Counterexample</span></a></div>
 <ul id="ptx-toc-group-directproof4-1" class="structural toc-item-list">
@@ -266,6 +286,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter5.html" class="internal"><span class="codenumber">5</span> <span class="title">Sequences and Mathematical Induction</span></a></div>
 <ul id="ptx-toc-group-chapter5" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter5-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sequences5-1.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Sequences</span></a></div>
 <ul id="ptx-toc-group-sequences5-1" class="structural toc-item-list">
@@ -313,6 +334,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter6.html" class="internal"><span class="codenumber">6</span> <span class="title">Set Theory</span></a></div>
 <ul id="ptx-toc-group-chapter6" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter6-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sets6-1.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Set Theory</span></a></div>
 <ul id="ptx-toc-group-sets6-1" class="structural toc-item-list">
@@ -339,6 +361,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter7.html" class="internal"><span class="codenumber">7</span> <span class="title">Functions</span></a></div>
 <ul id="ptx-toc-group-chapter7" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter7-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="functions7-1.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Functions</span></a></div>
 <ul id="ptx-toc-group-functions7-1" class="structural toc-item-list">
@@ -358,6 +381,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter8.html" class="internal"><span class="codenumber">8</span> <span class="title">Relations</span></a></div>
 <ul id="ptx-toc-group-chapter8" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter8-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="relations8-1.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Relations on Sets</span></a></div>
 <ul id="ptx-toc-group-relations8-1" class="structural toc-item-list">
@@ -391,6 +415,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="chapter9.html" class="internal"><span class="codenumber">9</span> <span class="title">Probability and Counting</span></a></div>
 <ul class="structural toc-item-list contains-active" id="ptx-toc-group-chapter9">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter9-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="probability9-1.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Probability</span></a></div>
 <ul id="ptx-toc-group-probability9-1" class="structural toc-item-list">
@@ -438,6 +463,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter10.html" class="internal"><span class="codenumber">10</span> <span class="title">Graph Theory</span></a></div>
 <ul id="ptx-toc-group-chapter10" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter10-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="graphs10-1.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphs</span></a></div>
 <ul id="ptx-toc-group-graphs10-1" class="structural toc-item-list">
@@ -465,7 +491,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="DiscreteMath-14.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul id="ptx-toc-group-DiscreteMath-14" class="structural toc-item-list">
 <li class="toc-item toc-references"><div class="toc-title-box"><a href="DiscreteMath-14-1.html" class="internal"><span class="title">References</span></a></div></li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A.</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="DiscreteMath-14-3.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="DiscreteMath-14-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
@@ -473,14 +499,14 @@ eBookConfig.enable_chatcodes =  false;
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="binomial9-6">
-<h2 class="heading hide-type">
+<h1 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Binomial Theorem</span>
-</h2>
+</h1>
 <div class="para" id="binomial9-6-3">The Binomial Theorem has applications in many areas of mathematics, from calculus, to number theory, to probability. In this section we look at some examples of combinatorial proofs using binomial coefficients and ultimately prove the Binomial Theorem using induction.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial9-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="theorem theorem-like" id="T_requalsnminusr"><h3 class="heading">
+<article class="theorem theorem-like" id="T_requalsnminusr"><h2 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+</h2>
 <div class="para logical" id="T_requalsnminusr-1-1">
 <div class="para">Let <span class="process-math">\(n, r\)</span> be nonnegative integers with <span class="process-math">\(r\leq n\text{.}\)</span> Then</div>
 <div class="displaymath process-math" id="T_requalsnminusr-1-1-3">
@@ -494,7 +520,7 @@ eBookConfig.enable_chatcodes =  false;
 </article>
 <div class="para" id="binomial9-6-5">An algebraic proof is straightforward and left as an exercise (see <a href="binomial9-6.html#X_pfofthm1" class="xref" data-knowl="./knowl/xref/X_pfofthm1.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 9.6.1">Exercise 9.6.1</a>). We will give a combinatorial proof. This means we will prove the two sides of the equation are equal by showing that they are two different ways to count the same set. In general, a combinatorial proof is done by giving a counting argument.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial9-6-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="binomial9-6-6" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<details id="binomial9-6-6" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
 <article class="hiddenproof knowl__content">
 <div class="para" id="binomial9-6-6-1">By definition, <span class="process-math">\(\binom{n}{r}\)</span> is the number of subsets where we choose <span class="process-math">\(r\)</span> objects from <span class="process-math">\(n\)</span> objects.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial9-6-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -502,9 +528,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Proof 9.6.1"><a tabindex="-1" href="#binomial9-6-6" title="Copy heading and permalink for Proof 9.6.1" aria-label="Copy heading and permalink for Proof 9.6.1">🔗</a></div>
 </article></details>
-<article class="theorem theorem-like" id="T_pascalsformula"><h3 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Pascal’s Formula.</span>
-</h3>
+<article class="theorem theorem-like" id="T_pascalsformula"><h2 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Pascal’s Formula.</span>
+</h2>
 <div class="para logical" id="T_pascalsformula-3-1">
 <div class="para">Let <span class="process-math">\(n, r\)</span> be nonnegative integers with <span class="process-math">\(r\leq n\text{.}\)</span> Then</div>
 <div class="displaymath process-math" id="T_pascalsformula-3-1-3">
@@ -516,9 +542,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Theorem 9.6.2: Pascal’s Formula"><a tabindex="-1" href="#T_pascalsformula" title="Copy heading and permalink for Theorem 9.6.2: Pascal’s Formula" aria-label="Copy heading and permalink for Theorem 9.6.2: Pascal’s Formula">🔗</a></div>
 </article>
-<div class="para" id="binomial9-6-8">We leave the algebraic proof as an exercise (see <a href="binomial9-6.html#A_pascalalg" class="xref" data-knowl="./knowl/xref/A_pascalalg.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.6.1">Activity 9.6.1</a>), and instead provide a combinatorial proof.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial9-6-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="binomial9-6-8">We leave the algebraic proof as an exercise (see <a href="binomial9-6.html#A_pascalalg" class="xref" data-knowl="./knowl/xref/A_pascalalg.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.6.3">Activity 9.6.3</a>), and instead provide a combinatorial proof.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial9-6-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="binomial9-6-9" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<details id="binomial9-6-9" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
 <article class="hiddenproof knowl__content">
 <div class="para" id="binomial9-6-9-1">By definition, <span class="process-math">\(\binom{n+1}{r}\)</span> counts the subsets of <span class="process-math">\(r\)</span> objects chosen from <span class="process-math">\(n+1\)</span> objects.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial9-6-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -526,9 +552,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Proof 9.6.2"><a tabindex="-1" href="#binomial9-6-9" title="Copy heading and permalink for Proof 9.6.2" aria-label="Copy heading and permalink for Proof 9.6.2">🔗</a></div>
 </article></details>
-<article class="activity project-like" id="A_pascalalg"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="A_pascalalg"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para logical" id="A_pascalalg-1-1">
 <div class="para">Give an algebraic proof for Pascal’s Formula:</div>
 <div class="displaymath process-math" id="A_pascalalg-1-1-1">
@@ -543,10 +569,10 @@ eBookConfig.enable_chatcodes =  false;
 <div class="hint solution-like knowl__content">
 <div class="para" id="A_pascalalg-2-1">Start with the right-hand side. Use the definition of “choose,” then find a common denominator. Note, you will save yourself a lot of work if you find the <em class="emphasis">least</em> common denominator.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#A_pascalalg-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Hint 9.6.1.1"><a tabindex="-1" href="#A_pascalalg-2" title="Copy heading and permalink for Hint 9.6.1.1" aria-label="Copy heading and permalink for Hint 9.6.1.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Hint 9.6.3.1"><a tabindex="-1" href="#A_pascalalg-2" title="Copy heading and permalink for Hint 9.6.3.1" aria-label="Copy heading and permalink for Hint 9.6.3.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 9.6.1"><a tabindex="-1" href="#A_pascalalg" title="Copy heading and permalink for Activity 9.6.1" aria-label="Copy heading and permalink for Activity 9.6.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 9.6.3"><a tabindex="-1" href="#A_pascalalg" title="Copy heading and permalink for Activity 9.6.3" aria-label="Copy heading and permalink for Activity 9.6.3">🔗</a></div>
 </article>
 <div class="para" id="binomial9-6-11">We often call terms of the form <span class="process-math">\(\binom{n}{r}\)</span> <dfn class="terminology">binomial coefficients</dfn>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial9-6-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -640,9 +666,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="binomial9-6-18">The Binomial Theorem gives a formula for calculating <span class="process-math">\((a+b)^n\text{.}\)</span> We can prove the Binomial Theorem combinatorially or algebraically. We will provide the algebraic proof, which is a proof by induction. Although we do not provide the details of the combinatorial proof, the next example should give some insight into the combinatorial argument.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial9-6-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_combbinomialthm" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Combinatorial Calculation for <span class="process-math">\((a+b)^3\)</span>.</span>
-</h3></summary>
+<details id="E_combbinomialthm" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Combinatorial Calculation for <span class="process-math">\((a+b)^3\)</span>.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para logical" id="E_combbinomialthm-2">
 <div class="para">Suppose we want to expand (or multiply)</div>
@@ -678,22 +704,22 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_combbinomialthm-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Example 9.6.3: A Combinatorial Calculation for (a+b)^3"><a tabindex="-1" href="#E_combbinomialthm" title="Copy heading and permalink for Example 9.6.3: A Combinatorial Calculation for (a+b)^3" aria-label="Copy heading and permalink for Example 9.6.3: A Combinatorial Calculation for (a+b)^3">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 9.6.4: A Combinatorial Calculation for (a+b)^3"><a tabindex="-1" href="#E_combbinomialthm" title="Copy heading and permalink for Example 9.6.4: A Combinatorial Calculation for (a+b)^3" aria-label="Copy heading and permalink for Example 9.6.4: A Combinatorial Calculation for (a+b)^3">🔗</a></div>
 </article></details>
 <div class="para" id="binomial9-6-20">
-<a href="binomial9-6.html#E_combbinomialthm" class="xref" data-knowl="./knowl/xref/E_combbinomialthm.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 9.6.3: A Combinatorial Calculation for (a+b)^3">Example 9.6.3</a> can be generalized to <span class="process-math">\((a+b)^n\)</span> in the Binomial Theorem.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial9-6-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<a href="binomial9-6.html#E_combbinomialthm" class="xref" data-knowl="./knowl/xref/E_combbinomialthm.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 9.6.4: A Combinatorial Calculation for (a+b)^3">Example 9.6.4</a> can be generalized to <span class="process-math">\((a+b)^n\)</span> in the Binomial Theorem.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial9-6-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="theorem theorem-like" id="T_binomial"><h3 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Binomial Theorem.</span>
-</h3>Let <span class="process-math">\(n\)</span> be a nonnegative integer, then<div class="displaymath process-math" id="T_binomial-3-2">
+<article class="theorem theorem-like" id="T_binomial"><h2 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Binomial Theorem.</span>
+</h2>Let <span class="process-math">\(n\)</span> be a nonnegative integer, then<div class="displaymath process-math" id="T_binomial-3-2">
 \begin{align*}
 (a+b)^n&amp;= \binom{n}{0}a^n+\binom{n}{1}a^{n-1}b+\binom{n}{2}a^{n-2}b^{2}+\cdots +\binom{n}{n-1}ab^{n-1}+\binom{n}{n}b^n\\
 &amp;=\sum_{k=0}^{n}\binom{n}{k}a^{n-k}b^k.
 \end{align*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Theorem 9.6.4: Binomial Theorem"><a tabindex="-1" href="#T_binomial" title="Copy heading and permalink for Theorem 9.6.4: Binomial Theorem" aria-label="Copy heading and permalink for Theorem 9.6.4: Binomial Theorem">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 9.6.5: Binomial Theorem"><a tabindex="-1" href="#T_binomial" title="Copy heading and permalink for Theorem 9.6.5: Binomial Theorem" aria-label="Copy heading and permalink for Theorem 9.6.5: Binomial Theorem">🔗</a></div>
 </article>
-<details id="binomial9-6-22" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<details id="binomial9-6-22" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
 <article class="hiddenproof knowl__content">
 <div class="para logical" id="binomial9-6-22-1">
 <div class="para">Prove</div>
@@ -758,18 +784,18 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Proof 9.6.3"><a tabindex="-1" href="#binomial9-6-22" title="Copy heading and permalink for Proof 9.6.3" aria-label="Copy heading and permalink for Proof 9.6.3">🔗</a></div>
 </article></details>
-<article class="activity project-like" id="binomthm-n2n3"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="binomthm-n2n3"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="binomthm-n2n3-1-1">Show the Binomial Theorem holds for <span class="process-math">\(n=2\)</span> and <span class="process-math">\(n=3\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomthm-n2n3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 9.6.2"><a tabindex="-1" href="#binomthm-n2n3" title="Copy heading and permalink for Activity 9.6.2" aria-label="Copy heading and permalink for Activity 9.6.2">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 9.6.6"><a tabindex="-1" href="#binomthm-n2n3" title="Copy heading and permalink for Activity 9.6.6" aria-label="Copy heading and permalink for Activity 9.6.6">🔗</a></div>
 </article>
 <div class="para" id="binomial9-6-24">The Binomial Theorem relates a sum to a power of a binomial. Although we often think of using the Binomial Theorem as a way to calculate the coefficients for expanding <span class="process-math">\((a+b)^n\text{,}\)</span> it can also be used to simplify certain sums. In this case, the power of the binomial is the <dfn class="terminology">closed form</dfn>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial9-6-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_closedform" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Expressing a Sum in Closed Form.</span>
-</h3></summary>
+<details id="E_closedform" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Expressing a Sum in Closed Form.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_closedform-2">Express the sum, <span class="process-math">\(\sum_{i=0}^{n}\binom{n}{i}x^i\text{,}\)</span> in closed form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_closedform-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -777,11 +803,11 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="E_closedform-4">We can see that <span class="process-math">\(x=b\text{,}\)</span> since the power of <span class="process-math">\(x\)</span> matches the power of <span class="process-math">\(b\text{.}\)</span> Since there does not appear to be any term for <span class="process-math">\(a\text{,}\)</span> we can let <span class="process-math">\(a=1\text{.}\)</span> Thus, the closed form is <span class="process-math">\((1+x)^n\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_closedform-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Example 9.6.5: Expressing a Sum in Closed Form"><a tabindex="-1" href="#E_closedform" title="Copy heading and permalink for Example 9.6.5: Expressing a Sum in Closed Form" aria-label="Copy heading and permalink for Example 9.6.5: Expressing a Sum in Closed Form">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 9.6.7: Expressing a Sum in Closed Form"><a tabindex="-1" href="#E_closedform" title="Copy heading and permalink for Example 9.6.7: Expressing a Sum in Closed Form" aria-label="Copy heading and permalink for Example 9.6.7: Expressing a Sum in Closed Form">🔗</a></div>
 </article></details>
-<article class="activity project-like" id="binonthm-poly"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="binonthm-poly"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="binonthm-poly-1-1">Use the Binomial Theorem to find <span class="process-math">\((3-2x)^3\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binonthm-poly-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
@@ -789,14 +815,14 @@ eBookConfig.enable_chatcodes =  false;
 <div class="hint solution-like knowl__content">
 <div class="para" id="binonthm-poly-3-1">In this expression, what are <span class="process-math">\(a, b, n\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binonthm-poly-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Hint 9.6.3.1"><a tabindex="-1" href="#binonthm-poly-3" title="Copy heading and permalink for Hint 9.6.3.1" aria-label="Copy heading and permalink for Hint 9.6.3.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Hint 9.6.8.1"><a tabindex="-1" href="#binonthm-poly-3" title="Copy heading and permalink for Hint 9.6.8.1" aria-label="Copy heading and permalink for Hint 9.6.8.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 9.6.3"><a tabindex="-1" href="#binonthm-poly" title="Copy heading and permalink for Activity 9.6.3" aria-label="Copy heading and permalink for Activity 9.6.3">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 9.6.8"><a tabindex="-1" href="#binonthm-poly" title="Copy heading and permalink for Activity 9.6.8" aria-label="Copy heading and permalink for Activity 9.6.8">🔗</a></div>
 </article>
-<article class="activity project-like" id="binomthm-pfsumbincoef"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="binomthm-pfsumbincoef"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="binomthm-pfsumbincoef-1-1">Prove <span class="process-math">\(2^n=\sum_{k=0}^n{n \choose k}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomthm-pfsumbincoef-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
@@ -804,16 +830,16 @@ eBookConfig.enable_chatcodes =  false;
 <div class="hint solution-like knowl__content">
 <div class="para" id="binomthm-pfsumbincoef-3-1">Use that <span class="process-math">\(2=(1+1)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomthm-pfsumbincoef-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Hint 9.6.4.1"><a tabindex="-1" href="#binomthm-pfsumbincoef-3" title="Copy heading and permalink for Hint 9.6.4.1" aria-label="Copy heading and permalink for Hint 9.6.4.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Hint 9.6.9.1"><a tabindex="-1" href="#binomthm-pfsumbincoef-3" title="Copy heading and permalink for Hint 9.6.9.1" aria-label="Copy heading and permalink for Hint 9.6.9.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 9.6.4"><a tabindex="-1" href="#binomthm-pfsumbincoef" title="Copy heading and permalink for Activity 9.6.4" aria-label="Copy heading and permalink for Activity 9.6.4">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 9.6.9"><a tabindex="-1" href="#binomthm-pfsumbincoef" title="Copy heading and permalink for Activity 9.6.9" aria-label="Copy heading and permalink for Activity 9.6.9">🔗</a></div>
 </article>
 <section class="reading-questions" id="binomial9-6-28">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Check Your Understanding</span>
-</h3>
-<article class="exercise exercise-like" id="DMT_binomthm_CYU_apbtt4"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</h2>
+<article class="exercise exercise-like" id="DMT_binomthm_CYU_apbtt4"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_binomthm_CYU_apbtt4-1-1">Use the Binomial Theorem to find <span class="process-math">\((a+b)^4\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_binomthm_CYU_apbtt4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
@@ -826,7 +852,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 9.6.1"><a tabindex="-1" href="#DMT_binomthm_CYU_apbtt4" title="Copy heading and permalink for Reading Question 9.6.1" aria-label="Copy heading and permalink for Reading Question 9.6.1">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_binomthm_CYU_ap2tt4"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_binomthm_CYU_ap2tt4"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_binomthm_CYU_ap2tt4-1-1">Use the Binomial Theorem to find <span class="process-math">\((a+2)^4\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_binomthm_CYU_ap2tt4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
@@ -839,7 +865,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 9.6.2"><a tabindex="-1" href="#DMT_binomthm_CYU_ap2tt4" title="Copy heading and permalink for Reading Question 9.6.2" aria-label="Copy heading and permalink for Reading Question 9.6.2">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_binomthm_CYU_ambtt4"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_binomthm_CYU_ambtt4"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_binomthm_CYU_ambtt4-1-1">Use the Binomial Theorem to find <span class="process-math">\((a-2)^4\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_binomthm_CYU_ambtt4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
@@ -852,7 +878,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 9.6.3"><a tabindex="-1" href="#DMT_binomthm_CYU_ambtt4" title="Copy heading and permalink for Reading Question 9.6.3" aria-label="Copy heading and permalink for Reading Question 9.6.3">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_binomthm_CYU_coefx2y2"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_binomthm_CYU_coefx2y2"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-DMT_binomthm_CYU_coefx2y2">
 <div class="para" id="DMT_binomthm_CYU_coefx2y2-1-1">Use the Binomial Theorem to find the coefficient of <span class="process-math">\(x^2y^2\)</span> in <span class="process-math">\((3x-2y)^4\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_binomthm_CYU_coefx2y2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -863,7 +889,7 @@ eBookConfig.enable_chatcodes =  false;
 </div></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 9.6.4"><a tabindex="-1" href="#DMT_binomthm_CYU_coefx2y2" title="Copy heading and permalink for Reading Question 9.6.4" aria-label="Copy heading and permalink for Reading Question 9.6.4">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_binomthm_CYU_coefx5y2"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_binomthm_CYU_coefx5y2"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-DMT_binomthm_CYU_coefx5y2">
 <div class="para" id="DMT_binomthm_CYU_coefx5y2-1-1">Use the Binomial Theorem to find the coefficient of <span class="process-math">\(x^5y^2\)</span> in <span class="process-math">\((3x-2y)^7\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_binomthm_CYU_coefx5y2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -874,7 +900,7 @@ eBookConfig.enable_chatcodes =  false;
 </div></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 9.6.5"><a tabindex="-1" href="#DMT_binomthm_CYU_coefx5y2" title="Copy heading and permalink for Reading Question 9.6.5" aria-label="Copy heading and permalink for Reading Question 9.6.5">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_binomthm_CYU_coefx4y3"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_binomthm_CYU_coefx4y3"><h3 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-DMT_binomthm_CYU_coefx4y3">
 <div class="para" id="DMT_binomthm_CYU_coefx4y3-1-1">Use the Binomial Theorem to find the coefficient of <span class="process-math">\(x^4y^3\)</span> in <span class="process-math">\((3x-2y)^7\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_binomthm_CYU_coefx4y3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -887,10 +913,10 @@ eBookConfig.enable_chatcodes =  false;
 </article><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 9.6: Check Your Understanding"><a tabindex="-1" href="#binomial9-6-28" title="Copy heading and permalink for Reading Questions 9.6: Check Your Understanding" aria-label="Copy heading and permalink for Reading Questions 9.6: Check Your Understanding">🔗</a></div>
 </section>
 <section class="exercises" id="binomial9-6-29">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
-</h3>
-<article class="exercise exercise-like" id="X_pfofthm1"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</h2>
+<article class="exercise exercise-like" id="X_pfofthm1"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para logical" id="X_pfofthm1-1-1">
 <div class="para">Give an algebraic proof for the formula in <a href="binomial9-6.html#T_requalsnminusr" class="xref" data-knowl="./knowl/xref/T_requalsnminusr.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.6.1">Theorem 9.6.1</a>:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/T_requalsnminusr.html" id="X_pfofthm1-1-1-2">
@@ -904,10 +930,10 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.6.1"><a tabindex="-1" href="#X_pfofthm1" title="Copy heading and permalink for Exercise 9.6.1" aria-label="Copy heading and permalink for Exercise 9.6.1">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="binomial9-6-29-2"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="binomial9-6-29-2"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para logical" id="binomial9-6-29-2-1-1">
 <div class="para">Use Pascal’s triangle to find the following binomial coefficients.</div>
-<ol class="lower-alpha ol-marker-1" id="binomial9-6-29-2-1-1-1">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="binomial9-6-29-2-1-1-1">
 <li id="binomial9-6-29-2-1-1-1-1">
 <div class="para" id="binomial9-6-29-2-1-1-1-1-1">Find the values of <span class="process-math">\({6\choose 2}, {6\choose 3}, {6\choose 4}\)</span> and <span class="process-math">\({6\choose 5}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial9-6-29-2-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -928,7 +954,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.6.2"><a tabindex="-1" href="#binomial9-6-29-2" title="Copy heading and permalink for Exercise 9.6.2" aria-label="Copy heading and permalink for Exercise 9.6.2">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="binomial9-6-29-3"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="binomial9-6-29-3"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para logical" id="binomial9-6-29-3-1-1">
 <div class="para">The row of Pascal’s triangle that corresponds to <span class="process-math">\(n=8\)</span> is</div>
 <div class="displaymath process-math" id="binomial9-6-29-3-1-1-2">
@@ -942,37 +968,37 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.6.3"><a tabindex="-1" href="#binomial9-6-29-3" title="Copy heading and permalink for Exercise 9.6.3" aria-label="Copy heading and permalink for Exercise 9.6.3">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="binomial9-6-29-4"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="binomial9-6-29-4"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="binomial9-6-29-4-1-1">Use the Binomial Theorem to expand <span class="process-math">\((u-v)^5\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial9-6-29-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.6.4"><a tabindex="-1" href="#binomial9-6-29-4" title="Copy heading and permalink for Exercise 9.6.4" aria-label="Copy heading and permalink for Exercise 9.6.4">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="binomial9-6-29-5"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="binomial9-6-29-5"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="binomial9-6-29-5-1-1">Use the Binomial Theorem to expand <span class="process-math">\((p-2q)^4\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial9-6-29-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.6.5"><a tabindex="-1" href="#binomial9-6-29-5" title="Copy heading and permalink for Exercise 9.6.5" aria-label="Copy heading and permalink for Exercise 9.6.5">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="binomial9-6-29-6"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="binomial9-6-29-6"><h3 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="binomial9-6-29-6-1-1">Find the coefficient of <span class="process-math">\(x^6y^3\)</span> in <span class="process-math">\((x+y)^9\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial9-6-29-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.6.6"><a tabindex="-1" href="#binomial9-6-29-6" title="Copy heading and permalink for Exercise 9.6.6" aria-label="Copy heading and permalink for Exercise 9.6.6">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="binomial9-6-29-7"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="binomial9-6-29-7"><h3 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="binomial9-6-29-7-1-1">Find the coefficient of <span class="process-math">\(x^7\)</span> in <span class="process-math">\((2x+3)^{10}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial9-6-29-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.6.7"><a tabindex="-1" href="#binomial9-6-29-7" title="Copy heading and permalink for Exercise 9.6.7" aria-label="Copy heading and permalink for Exercise 9.6.7">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="binomial9-6-29-8"><h4 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="binomial9-6-29-8"><h3 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="binomial9-6-29-8-1-1">Express <span class="process-math">\(\sum_{k=0}^n{n\choose k}5^k\)</span> in closed form (without the summation symbol and without ellipses,…).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial9-6-29-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.6.8"><a tabindex="-1" href="#binomial9-6-29-8" title="Copy heading and permalink for Exercise 9.6.8" aria-label="Copy heading and permalink for Exercise 9.6.8">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="binomial9-6-29-9"><h4 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="binomial9-6-29-9"><h3 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="binomial9-6-29-9-1-1">Express <span class="process-math">\(\sum_{k=0}^m{m\choose k}2^{m-k}x^k\)</span> in closed form (without the summation symbol and without ellipses,…).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial9-6-29-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.6.9"><a tabindex="-1" href="#binomial9-6-29-9" title="Copy heading and permalink for Exercise 9.6.9" aria-label="Copy heading and permalink for Exercise 9.6.9">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="binomial9-6-29-10"><h4 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="binomial9-6-29-10"><h3 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para logical" id="binomial9-6-29-10-1-1">
 <div class="para">Use Pascal’s Formula to prove by mathematical induction that if <span class="process-math">\(n\)</span> is an integer and <span class="process-math">\(n\geq 1\text{,}\)</span> then</div>
 <div class="displaymath process-math" id="binomial9-6-29-10-1-1-3">
@@ -984,7 +1010,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.6.10"><a tabindex="-1" href="#binomial9-6-29-10" title="Copy heading and permalink for Exercise 9.6.10" aria-label="Copy heading and permalink for Exercise 9.6.10">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="binomial9-6-29-11"><h4 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="binomial9-6-29-11"><h3 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para logical" id="binomial9-6-29-11-1-1">
 <div class="para">Think of a set with <span class="process-math">\(m+n\)</span> elements as composed of two parts, one with <span class="process-math">\(m\)</span> elements and one with <span class="process-math">\(n\)</span> elements. Give a combinatorial argument to show that</div>
 <div class="displaymath process-math" id="binomial9-6-29-11-1-1-4">
@@ -1004,7 +1030,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.6.11"><a tabindex="-1" href="#binomial9-6-29-11" title="Copy heading and permalink for Exercise 9.6.11" aria-label="Copy heading and permalink for Exercise 9.6.11">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="binomial9-6-29-12"><h4 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="binomial9-6-29-12"><h3 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para logical" id="binomial9-6-29-12-1-1">
 <div class="para">Use the Binomial Theorem to prove for all integers <span class="process-math">\(n\geq 1\text{,}\)</span>
 </div>
@@ -1025,7 +1051,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.6.12"><a tabindex="-1" href="#binomial9-6-29-12" title="Copy heading and permalink for Exercise 9.6.12" aria-label="Copy heading and permalink for Exercise 9.6.12">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="binomial9-6-29-13"><h4 class="heading"><span class="codenumber">13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="binomial9-6-29-13"><h3 class="heading"><span class="codenumber">13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para logical" id="binomial9-6-29-13-1-1">
 <div class="para">Use the Binomial Theorem to prove for all integers <span class="process-math">\(n\geq 0\text{,}\)</span>
 </div>
