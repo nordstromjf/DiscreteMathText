@@ -659,23 +659,27 @@
       <title>Exercises</title>
       <exercise><statement>
         <p>Write the following statements in symbolic form using the logical connectives <m>\sim, \vee, \wedge</m> and the indicated letters to represent component statements. Let <m>h=</m> <q>Jane is healthy,</q> <m>w=</m> <q>Jane is wealthy,</q> and <m>s=</m> <q>Jane is wise.</q> </p>
+     <p>
       <ol marker="a.">
       <li><p>Jane is healthy and wealthy but not wise.</p></li>
       <li><p>Jane is not wealthy but she is healthy and wise.</p></li>
       <li><p>Jane is neither healthy, wealthy, nor wise.</p></li>
       <li><p>Jane is neither wealthy nor wise, but she is healthy.</p></li>
       <li><p>Jane is wealthy, but she is not both healthy and wise.</p></li></ol>
+    </p>
       </statement></exercise>
 
       <exercise><statement><p>Give the truth-table for <m>\sim(p\ \wedge q)\vee (p \vee q)</m>.</p></statement></exercise>
 
       <exercise><statement><p>Use truth-tables to determine whether the two statements in each part are logically equivalent. Clearly state your conclusion about whether they are logically equivalent or not, and how your truth-table justifies your conclusion.</p>
+    <p>
     <ol marker="a.">
     <li><p><m>p\ \vee (p\ \wedge q)</m> and <m>p</m> </p></li>
     <li><p><m>\sim(p\ \wedge q)</m> and <m>\sim p\ \wedge \sim q</m></p></li>
     <li><p><m>p\ \wedge {\rm\bf{c}}</m> and <m>p\ \vee {\rm\bf{c}}</m></p></li> 
     <li><p><m>(p\ \wedge q) \vee r</m> and <m>p\ \wedge (q\ \vee r)</m></p></li>
-    </ol></statement></exercise>
+    </ol>
+  </p></statement></exercise>
 
       <exercise><statement><p>Use DeMorgan's Laws to write the negation of the statement: Zoro is a math major and Zoro's sister is a computer science major.</p></statement></exercise>
 
@@ -684,11 +688,11 @@
       <exercise><statement><p>Assume <m>x</m> is a real number. Use DeMorgan's Laws to write the negation of the statement: <m>-8\leq x &lt;3</m>.</p></statement></exercise>
 
       <exercise><statement><p>Use truth-tables to establish whether the following statements are tautologies, contradictions, or neither.</p>
-        <ol marker="a.">
+       <p> <ol marker="a.">
           <li><p><m>\sim(p\ \wedge q)</m></p></li>
         <li><p><m>(p\ \wedge \sim q) \wedge (\sim p\ \vee q)</m></p></li>
 
-        <li><p><m>(\sim p\ \vee q) \vee (p\ \wedge \sim q)</m></p></li></ol></statement></exercise>
+        <li><p><m>(\sim p\ \vee q) \vee (p\ \wedge \sim q)</m></p></li></ol></p></statement></exercise>
     </exercises>
 
 </section>

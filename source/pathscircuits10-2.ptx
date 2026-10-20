@@ -314,7 +314,7 @@
 
 
 </latex-image></image>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -352,7 +352,7 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
@@ -384,7 +384,7 @@
 
 
 </latex-image></image>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -404,13 +404,13 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
     Each of (a)-(c) describes a graph. In each case answer <em>yes, no</em> or <em>not necessarily</em> to whether the graph has an Euler circuit. Justify your answer.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -430,7 +430,7 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>

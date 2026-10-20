@@ -301,7 +301,7 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.</
         <p>
     Determine if the following are true or false.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -327,7 +327,7 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.</
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
@@ -358,7 +358,7 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.</
         <p>
     Define <m>A</m> to be the <q>absolute value</q> relation on <m>\mathbb{R}</m> by <md>x\ A\ y \iff |x|=|y|.</md>
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -372,7 +372,7 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.</
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>

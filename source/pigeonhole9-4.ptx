@@ -224,6 +224,7 @@
     <exercises>
       <exercise><statement>
         <p>Consider a standard deck of 52 cards.</p>
+        <p>
         <ol marker="a.">
     <li>
       <p>
@@ -242,7 +243,7 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>

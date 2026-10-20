@@ -19,15 +19,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-2 { system: extends decimal; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-3 { system: extends decimal; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-4 { system: extends lower-roman; prefix: ''; suffix: '. '; }
+</style>
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
 hasWebworkReps: false,
 hasSage: false,
 isReact: false,
 htmlPresentation: false,
+lang: "en-US",
 });
-</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta name="twitter:title" content="Discrete Mathematics: An Active Approach to Mathematical Reasoning">
@@ -36,7 +42,7 @@ htmlPresentation: false,
 <meta name="twitter:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta property="og:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.43"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.54"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.54"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -58,21 +64,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.9';
+eBookConfig.runestone_version = '8.3.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.846a0d6fafaa99e0.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.bbcfc02849ebc023.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/prefix-runtime.4beca1fdeed766a2.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.ebd33f6a21eed414.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.9963089870a016c8.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="DiscreteMathText" class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></div>
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="DiscreteMath-14-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
@@ -85,7 +91,17 @@ eBookConfig.enable_chatcodes =  false;
 <div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
 <ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
-<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
 <h2 class="heading">Readability settings</h2>
 <button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
@@ -134,6 +150,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter1.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to Mathematical Language</span></a></div>
 <ul id="ptx-toc-group-chapter1" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter1-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="variables1-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Variables and Statements</span></a></div>
 <ul id="ptx-toc-group-variables1-1" class="structural toc-item-list">
@@ -160,6 +177,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter2.html" class="internal"><span class="codenumber">2</span> <span class="title">Logic</span></a></div>
 <ul id="ptx-toc-group-chapter2" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter2-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="logical_form2-1.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Truth-Tables and Logical Equivalence</span></a></div>
 <ul id="ptx-toc-group-logical_form2-1" class="structural toc-item-list">
@@ -186,6 +204,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter3.html" class="internal"><span class="codenumber">3</span> <span class="title">Logic with Quantifiers</span></a></div>
 <ul id="ptx-toc-group-chapter3" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter3-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="quantifiersI3-1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Quantifiers</span></a></div>
 <ul id="ptx-toc-group-quantifiersI3-1" class="structural toc-item-list">
@@ -219,6 +238,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter4.html" class="internal"><span class="codenumber">4</span> <span class="title">Proof Techniques</span></a></div>
 <ul id="ptx-toc-group-chapter4" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter4-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="directproof4-1.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Direct Proof and Counterexample</span></a></div>
 <ul id="ptx-toc-group-directproof4-1" class="structural toc-item-list">
@@ -266,6 +286,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter5.html" class="internal"><span class="codenumber">5</span> <span class="title">Sequences and Mathematical Induction</span></a></div>
 <ul id="ptx-toc-group-chapter5" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter5-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sequences5-1.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Sequences</span></a></div>
 <ul id="ptx-toc-group-sequences5-1" class="structural toc-item-list">
@@ -313,6 +334,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter6.html" class="internal"><span class="codenumber">6</span> <span class="title">Set Theory</span></a></div>
 <ul id="ptx-toc-group-chapter6" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter6-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sets6-1.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Set Theory</span></a></div>
 <ul id="ptx-toc-group-sets6-1" class="structural toc-item-list">
@@ -339,6 +361,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter7.html" class="internal"><span class="codenumber">7</span> <span class="title">Functions</span></a></div>
 <ul id="ptx-toc-group-chapter7" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter7-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="functions7-1.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Functions</span></a></div>
 <ul id="ptx-toc-group-functions7-1" class="structural toc-item-list">
@@ -358,6 +381,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter8.html" class="internal"><span class="codenumber">8</span> <span class="title">Relations</span></a></div>
 <ul id="ptx-toc-group-chapter8" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter8-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="relations8-1.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Relations on Sets</span></a></div>
 <ul id="ptx-toc-group-relations8-1" class="structural toc-item-list">
@@ -391,6 +415,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter9.html" class="internal"><span class="codenumber">9</span> <span class="title">Probability and Counting</span></a></div>
 <ul id="ptx-toc-group-chapter9" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter9-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="probability9-1.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Probability</span></a></div>
 <ul id="ptx-toc-group-probability9-1" class="structural toc-item-list">
@@ -438,6 +463,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="chapter10.html" class="internal"><span class="codenumber">10</span> <span class="title">Graph Theory</span></a></div>
 <ul class="structural toc-item-list contains-active" id="ptx-toc-group-chapter10">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter10-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="graphs10-1.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphs</span></a></div>
 <ul id="ptx-toc-group-graphs10-1" class="structural toc-item-list">
@@ -465,7 +491,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="DiscreteMath-14.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul id="ptx-toc-group-DiscreteMath-14" class="structural toc-item-list">
 <li class="toc-item toc-references"><div class="toc-title-box"><a href="DiscreteMath-14-1.html" class="internal"><span class="title">References</span></a></div></li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A.</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="DiscreteMath-14-3.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="DiscreteMath-14-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
@@ -473,37 +499,37 @@ eBookConfig.enable_chatcodes =  false;
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="trees10-3">
-<h2 class="heading hide-type">
+<h1 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Trees</span>
-</h2>
+</h1>
 <div class="para" id="trees10-3-4">In this section we look at a special type of graph called a tree. Trees are useful in many applications, such as probability trees or decision trees.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees10-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="definition definition-like" id="D_circuitfree"><h3 class="heading">
+<article class="definition definition-like" id="D_circuitfree"><h2 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+</h2>
 <div class="para" id="D_circuitfree-1-1">A graph is <dfn class="terminology">circuit-free</dfn> if it has no nontrivial circuits.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_circuitfree-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Definition 10.3.1"><a tabindex="-1" href="#D_circuitfree" title="Copy heading and permalink for Definition 10.3.1" aria-label="Copy heading and permalink for Definition 10.3.1">🔗</a></div>
 </article>
-<article class="definition definition-like" id="D_tree"><h3 class="heading">
+<article class="definition definition-like" id="D_tree"><h2 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+</h2>
 <div class="para" id="D_tree-1-1">A graph is a <dfn class="terminology">tree</dfn> if it is connected and circuit-free.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_tree-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Definition 10.3.2"><a tabindex="-1" href="#D_tree" title="Copy heading and permalink for Definition 10.3.2" aria-label="Copy heading and permalink for Definition 10.3.2">🔗</a></div>
 </article>
 <div class="para" id="trees10-3-7">The <dfn class="terminology">trivial tree</dfn> is just a single vertex. While the <dfn class="terminology">empty tree</dfn> has no vertices (and, hence, no edges).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees10-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="definition definition-like" id="D_forest"><h3 class="heading">
+<article class="definition definition-like" id="D_forest"><h2 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+</h2>
 <div class="para" id="D_forest-1-1">A graph is a <dfn class="terminology">forest</dfn> if it is circuit-free. We can think of a forest as a collection of trees.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_forest-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Definition 10.3.3"><a tabindex="-1" href="#D_forest" title="Copy heading and permalink for Definition 10.3.3" aria-label="Copy heading and permalink for Definition 10.3.3">🔗</a></div>
 </article>
-<details id="E_trees" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Trees and Not Trees.</span>
-</h3></summary>
+<details id="E_trees" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Trees and Not Trees.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <figure class="figure figure-like" id="F_trees"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;">
 <img src="generated/latex-image/treegraphs.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="treegraphs-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="treegraphs-description">
@@ -522,9 +548,9 @@ eBookConfig.enable_chatcodes =  false;
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Examples of graphs that are not trees<div class="autopermalink" aria-hidden="true" data-description="Figure 10.3.6"><a tabindex="-1" href="#F_nottrees" title="Copy heading and permalink for Figure 10.3.6" aria-label="Copy heading and permalink for Figure 10.3.6">🔗</a></div></figcaption>
 </figure><div class="autopermalink" aria-hidden="true" data-description="Example 10.3.4: Trees and Not Trees"><a tabindex="-1" href="#E_trees" title="Copy heading and permalink for Example 10.3.4: Trees and Not Trees" aria-label="Copy heading and permalink for Example 10.3.4: Trees and Not Trees">🔗</a></div>
 </article></details>
-<article class="definition definition-like" id="D_leaf"><h3 class="heading">
+<article class="definition definition-like" id="D_leaf"><h2 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+</h2>
 <div class="para" id="D_leaf-1-1">A <dfn class="terminology">terminal vertex</dfn> or <dfn class="terminology">leaf</dfn> is a vertex of degree 1. Vertices of degree greater than 1 are <dfn class="terminology">internal</dfn> or <dfn class="terminology">branch</dfn> vertices.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_leaf-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Definition 10.3.7"><a tabindex="-1" href="#D_leaf" title="Copy heading and permalink for Definition 10.3.7" aria-label="Copy heading and permalink for Definition 10.3.7">🔗</a></div>
@@ -570,9 +596,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees10-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_rootedtree" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Rooted Tree.</span>
-</h3></summary>
+<details id="E_rootedtree" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3.8</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Rooted Tree.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <figure class="figure figure-like" id="F_rootedtree"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;">
 <img src="generated/latex-image/rootedtreegraph.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="rootedtreegraph-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="rootedtreegraph-description">
@@ -600,9 +626,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="trees10-3-15">A <dfn class="terminology">full binary tree</dfn> is a rooted tree in which each branch vertex has exactly two children and all leaves are at the same height.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees10-3-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_fullbinarytree" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Full Binary Tree.</span>
-</h3></summary>
+<details id="E_fullbinarytree" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3.10</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Full Binary Tree.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <figure class="figure figure-like" id="F_fullbintree"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;">
 <img src="generated/latex-image/fullbintreegraph.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="fullbintreegraph-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fullbintreegraph-description">
@@ -613,102 +639,102 @@ eBookConfig.enable_chatcodes =  false;
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3.11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A full binary tree of height 3<div class="autopermalink" aria-hidden="true" data-description="Figure 10.3.11"><a tabindex="-1" href="#F_fullbintree" title="Copy heading and permalink for Figure 10.3.11" aria-label="Copy heading and permalink for Figure 10.3.11">🔗</a></div></figcaption>
 </figure><div class="autopermalink" aria-hidden="true" data-description="Example 10.3.10: Full Binary Tree"><a tabindex="-1" href="#E_fullbinarytree" title="Copy heading and permalink for Example 10.3.10: Full Binary Tree" aria-label="Copy heading and permalink for Example 10.3.10: Full Binary Tree">🔗</a></div>
 </article></details>
-<article class="activity project-like" id="trees-binary4"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="trees-binary4"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="trees-binary4-1-1">Draw the full binary tree of height 4. How many leaves does it have?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees-binary4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 10.3.1"><a tabindex="-1" href="#trees-binary4" title="Copy heading and permalink for Activity 10.3.1" aria-label="Copy heading and permalink for Activity 10.3.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 10.3.12"><a tabindex="-1" href="#trees-binary4" title="Copy heading and permalink for Activity 10.3.12" aria-label="Copy heading and permalink for Activity 10.3.12">🔗</a></div>
 </article>
-<article class="activity project-like" id="trees-treeedges"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="trees-treeedges"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="introduction" id="trees-treeedges-1">
 <div class="para" id="trees-treeedges-1-1">In this activity we will explore the relationship between the number of edges and the number of vertices in a tree.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees-treeedges-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="trees-treeedges-10forest"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="trees-treeedges-10forest"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="trees-treeedges-10forest-1-1">Draw a forest with 10 vertices that is <em class="emphasis">not</em> a tree.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees-treeedges-10forest-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 10.3.2.a"><a tabindex="-1" href="#trees-treeedges-10forest" title="Copy heading and permalink for Task 10.3.2.a" aria-label="Copy heading and permalink for Task 10.3.2.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 10.3.13.a"><a tabindex="-1" href="#trees-treeedges-10forest" title="Copy heading and permalink for Task 10.3.13.a" aria-label="Copy heading and permalink for Task 10.3.13.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="trees-treeedges-10trees"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="trees-treeedges-10trees"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="trees-treeedges-10trees-1-1">Draw three different trees, each with 10 vertices.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees-treeedges-10trees-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 10.3.2.b"><a tabindex="-1" href="#trees-treeedges-10trees" title="Copy heading and permalink for Task 10.3.2.b" aria-label="Copy heading and permalink for Task 10.3.2.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 10.3.13.b"><a tabindex="-1" href="#trees-treeedges-10trees" title="Copy heading and permalink for Task 10.3.13.b" aria-label="Copy heading and permalink for Task 10.3.13.b">🔗</a></div>
 </article>
-<article class="task exercise-like" id="trees-treeedges-numedges"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<article class="task exercise-like" id="trees-treeedges-numedges"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="trees-treeedges-numedges-1-1">How many edges does each graph in (b) have? Check with other students in the class. How many edges do their graphs have?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees-treeedges-numedges-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 10.3.2.c"><a tabindex="-1" href="#trees-treeedges-numedges" title="Copy heading and permalink for Task 10.3.2.c" aria-label="Copy heading and permalink for Task 10.3.2.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 10.3.13.c"><a tabindex="-1" href="#trees-treeedges-numedges" title="Copy heading and permalink for Task 10.3.13.c" aria-label="Copy heading and permalink for Task 10.3.13.c">🔗</a></div>
 </article>
-<article class="task exercise-like" id="trees-treeedges-5and12trees"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<article class="task exercise-like" id="trees-treeedges-5and12trees"><h3 class="heading"><span class="codenumber">(d)</span></h3>
 <div class="para" id="trees-treeedges-5and12trees-1-1">Draw a tree with 5 vertices and one with 12 vertices. How many edges do they have?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees-treeedges-5and12trees-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 10.3.2.d"><a tabindex="-1" href="#trees-treeedges-5and12trees" title="Copy heading and permalink for Task 10.3.2.d" aria-label="Copy heading and permalink for Task 10.3.2.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 10.3.13.d"><a tabindex="-1" href="#trees-treeedges-5and12trees" title="Copy heading and permalink for Task 10.3.13.d" aria-label="Copy heading and permalink for Task 10.3.13.d">🔗</a></div>
 </article>
-<article class="task exercise-like" id="trees-treeedges-5vert7edge"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<article class="task exercise-like" id="trees-treeedges-5vert7edge"><h3 class="heading"><span class="codenumber">(e)</span></h3>
 <div class="para" id="trees-treeedges-5vert7edge-1-1">Can you draw a tree with 5 vertices with 7 edges? What about 5 edges? What is the most number of edges you can have? What is the fewest?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees-treeedges-5vert7edge-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 10.3.2.e"><a tabindex="-1" href="#trees-treeedges-5vert7edge" title="Copy heading and permalink for Task 10.3.2.e" aria-label="Copy heading and permalink for Task 10.3.2.e">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 10.3.13.e"><a tabindex="-1" href="#trees-treeedges-5vert7edge" title="Copy heading and permalink for Task 10.3.13.e" aria-label="Copy heading and permalink for Task 10.3.13.e">🔗</a></div>
 </article>
-<article class="task exercise-like" id="trees-treeedges-edgeconject"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<article class="task exercise-like" id="trees-treeedges-edgeconject"><h3 class="heading"><span class="codenumber">(f)</span></h3>
 <div class="para" id="trees-treeedges-edgeconject-1-1">Form a conjecture about how many edges a tree with 10 vertices has. What about a tree with 5 vertices?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees-treeedges-edgeconject-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 10.3.2.f"><a tabindex="-1" href="#trees-treeedges-edgeconject" title="Copy heading and permalink for Task 10.3.2.f" aria-label="Copy heading and permalink for Task 10.3.2.f">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 10.3.2"><a tabindex="-1" href="#trees-treeedges" title="Copy heading and permalink for Activity 10.3.2" aria-label="Copy heading and permalink for Activity 10.3.2">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 10.3.13.f"><a tabindex="-1" href="#trees-treeedges-edgeconject" title="Copy heading and permalink for Task 10.3.13.f" aria-label="Copy heading and permalink for Task 10.3.13.f">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 10.3.13"><a tabindex="-1" href="#trees-treeedges" title="Copy heading and permalink for Activity 10.3.13" aria-label="Copy heading and permalink for Activity 10.3.13">🔗</a></div>
 </article>
 <div class="para" id="trees10-3-19">After experimenting you should be able to conjecture that a tree with 10 vertices has 9 edges, and a tree with 5 vertices must have 4 edges. This relationship is true in general.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees10-3-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="theorem theorem-like" id="T_numberofedgesinatree"><h3 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="theorem theorem-like" id="T_numberofedgesinatree"><h2 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="T_numberofedgesinatree-1-1">For any positive integer, <span class="process-math">\(n\text{,}\)</span> any tree with <span class="process-math">\(n\)</span> vertices has <span class="process-math">\(n-1\)</span> edges.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#T_numberofedgesinatree-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Theorem 10.3.12"><a tabindex="-1" href="#T_numberofedgesinatree" title="Copy heading and permalink for Theorem 10.3.12" aria-label="Copy heading and permalink for Theorem 10.3.12">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 10.3.14"><a tabindex="-1" href="#T_numberofedgesinatree" title="Copy heading and permalink for Theorem 10.3.14" aria-label="Copy heading and permalink for Theorem 10.3.14">🔗</a></div>
 </article>
-<article class="activity project-like" id="trees-vertandedges"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="trees-vertandedges"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="introduction" id="trees-vertandedges-1">
 <div class="para" id="trees-vertandedges-1-1">In this activity we explore graphs with <span class="process-math">\(n\)</span> vertices and <span class="process-math">\(n-1\)</span> edges more generally.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees-vertandedges-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="trees-vertandedges-7v6e"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="trees-vertandedges-7v6e"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="trees-vertandedges-7v6e-1-1">Draw a graph with 7 vertices and 6 edges that is <em class="emphasis">not</em> a tree.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees-vertandedges-7v6e-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 10.3.3.a"><a tabindex="-1" href="#trees-vertandedges-7v6e" title="Copy heading and permalink for Task 10.3.3.a" aria-label="Copy heading and permalink for Task 10.3.3.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 10.3.15.a"><a tabindex="-1" href="#trees-vertandedges-7v6e" title="Copy heading and permalink for Task 10.3.15.a" aria-label="Copy heading and permalink for Task 10.3.15.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="trees-vertandedges-con7v6e"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="trees-vertandedges-con7v6e"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="trees-vertandedges-con7v6e-1-1">Draw a connected graph with 7 vertices and 6 edges that is <em class="emphasis">not</em> a tree.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees-vertandedges-con7v6e-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 10.3.3.b"><a tabindex="-1" href="#trees-vertandedges-con7v6e" title="Copy heading and permalink for Task 10.3.3.b" aria-label="Copy heading and permalink for Task 10.3.3.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 10.3.15.b"><a tabindex="-1" href="#trees-vertandedges-con7v6e" title="Copy heading and permalink for Task 10.3.15.b" aria-label="Copy heading and permalink for Task 10.3.15.b">🔗</a></div>
 </article>
-<article class="task exercise-like" id="trees-vertandedges-possible"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<article class="task exercise-like" id="trees-vertandedges-possible"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="trees-vertandedges-possible-1-1">Do you think either of the tasks in (a) or (b) is impossible?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees-vertandedges-possible-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 10.3.3.c"><a tabindex="-1" href="#trees-vertandedges-possible" title="Copy heading and permalink for Task 10.3.3.c" aria-label="Copy heading and permalink for Task 10.3.3.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 10.3.15.c"><a tabindex="-1" href="#trees-vertandedges-possible" title="Copy heading and permalink for Task 10.3.15.c" aria-label="Copy heading and permalink for Task 10.3.15.c">🔗</a></div>
 </article>
-<article class="task exercise-like" id="trees-vertandedges-conject"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<article class="task exercise-like" id="trees-vertandedges-conject"><h3 class="heading"><span class="codenumber">(d)</span></h3>
 <div class="para" id="trees-vertandedges-conject-1-1">Form a conjecture about graphs with <span class="process-math">\(n\)</span> vertices and <span class="process-math">\(n-1\)</span> edges.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees-vertandedges-conject-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 10.3.3.d"><a tabindex="-1" href="#trees-vertandedges-conject" title="Copy heading and permalink for Task 10.3.3.d" aria-label="Copy heading and permalink for Task 10.3.3.d">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 10.3.3"><a tabindex="-1" href="#trees-vertandedges" title="Copy heading and permalink for Activity 10.3.3" aria-label="Copy heading and permalink for Activity 10.3.3">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 10.3.15.d"><a tabindex="-1" href="#trees-vertandedges-conject" title="Copy heading and permalink for Task 10.3.15.d" aria-label="Copy heading and permalink for Task 10.3.15.d">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 10.3.15"><a tabindex="-1" href="#trees-vertandedges" title="Copy heading and permalink for Activity 10.3.15" aria-label="Copy heading and permalink for Activity 10.3.15">🔗</a></div>
 </article>
 <div class="para" id="trees10-3-22">We should be able to see that it is not possible to draw a connected graph with 7 vertices and 6 edges that is not a tree. This leads to the next theorem.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees10-3-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="theorem theorem-like" id="T_connectedtree"><h3 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="theorem theorem-like" id="T_connectedtree"><h2 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="T_connectedtree-1-1">For any positive integer <span class="process-math">\(n\text{,}\)</span> if a graph, <span class="process-math">\(G\text{,}\)</span> is connected with <span class="process-math">\(n\)</span> vertices and <span class="process-math">\(n-1\)</span> edges, then <span class="process-math">\(G\)</span> is a tree.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#T_connectedtree-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Theorem 10.3.13"><a tabindex="-1" href="#T_connectedtree" title="Copy heading and permalink for Theorem 10.3.13" aria-label="Copy heading and permalink for Theorem 10.3.13">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 10.3.16"><a tabindex="-1" href="#T_connectedtree" title="Copy heading and permalink for Theorem 10.3.16" aria-label="Copy heading and permalink for Theorem 10.3.16">🔗</a></div>
 </article>
 <section class="reading-questions" id="trees10-3-24">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Check Your Understanding</span>
-</h3>
-<article class="exercise exercise-like" id="DMT_trees_CYU_Kntree"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</h2>
+<article class="exercise exercise-like" id="DMT_trees_CYU_Kntree"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
 <div class="exercise-statement">
 <div class="para" id="DMT_trees_CYU_Kntree-1-1">For which values of <span class="process-math">\(n\)</span> is the complete graph <span class="process-math">\(K_n\)</span> a tree?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_trees_CYU_Kntree-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -745,7 +771,7 @@ eBookConfig.enable_chatcodes =  false;
 </div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 10.3.1"><a tabindex="-1" href="#DMT_trees_CYU_Kntree" title="Copy heading and permalink for Reading Question 10.3.1" aria-label="Copy heading and permalink for Reading Question 10.3.1">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_trees_CYU_multipleparent"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_trees_CYU_multipleparent"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_trees_CYU_multipleparent">
 <div class="para" id="DMT_trees_CYU_multipleparent-1-1">True or false: In a rooted tree, a vertex can have more than one parent.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_trees_CYU_multipleparent-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -756,7 +782,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 10.3.2"><a tabindex="-1" href="#DMT_trees_CYU_multipleparent" title="Copy heading and permalink for Reading Question 10.3.2" aria-label="Copy heading and permalink for Reading Question 10.3.2">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_trees_CYU_0parent"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_trees_CYU_0parent"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_trees_CYU_0parent">
 <div class="para" id="DMT_trees_CYU_0parent-1-1">True or false: In a rooted tree, a vertex can have 0 parents.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_trees_CYU_0parent-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -771,7 +797,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 10.3.3"><a tabindex="-1" href="#DMT_trees_CYU_0parent" title="Copy heading and permalink for Reading Question 10.3.3" aria-label="Copy heading and permalink for Reading Question 10.3.3">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_trees_CYU_childrenr"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_trees_CYU_childrenr"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-DMT_trees_CYU_childrenr">
 <div class="para" id="DMT_trees_CYU_childrenr-1-1">In the rooted tree in <a href="trees10-3.html#F_rootedtree" class="xref" data-knowl="./knowl/xref/F_rootedtree.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 10.3.9">Figure 10.3.9</a>, how many children does <span class="process-math">\(r\)</span> have? <input type="text" placeholder="Number"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_trees_CYU_childrenr-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -779,7 +805,7 @@ eBookConfig.enable_chatcodes =  false;
 </div></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 10.3.4"><a tabindex="-1" href="#DMT_trees_CYU_childrenr" title="Copy heading and permalink for Reading Question 10.3.4" aria-label="Copy heading and permalink for Reading Question 10.3.4">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_trees_CYU_descendp"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_trees_CYU_descendp"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-DMT_trees_CYU_descendp">
 <div class="para" id="DMT_trees_CYU_descendp-1-1">In the rooted tree in <a href="trees10-3.html#F_rootedtree" class="xref" data-knowl="./knowl/xref/F_rootedtree.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 10.3.9">Figure 10.3.9</a>, how many descendants does <span class="process-math">\(p\)</span> have? <input type="text" placeholder="Number"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_trees_CYU_descendp-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -787,7 +813,7 @@ eBookConfig.enable_chatcodes =  false;
 </div></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 10.3.5"><a tabindex="-1" href="#DMT_trees_CYU_descendp" title="Copy heading and permalink for Reading Question 10.3.5" aria-label="Copy heading and permalink for Reading Question 10.3.5">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_trees_CYU_levelp"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_trees_CYU_levelp"><h3 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-DMT_trees_CYU_levelp">
 <div class="para" id="DMT_trees_CYU_levelp-1-1">In the rooted tree in <a href="trees10-3.html#F_rootedtree" class="xref" data-knowl="./knowl/xref/F_rootedtree.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 10.3.9">Figure 10.3.9</a>, what is the level of <span class="process-math">\(p\text{?}\)</span> <input type="text" placeholder="Number"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_trees_CYU_levelp-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -795,7 +821,7 @@ eBookConfig.enable_chatcodes =  false;
 </div></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 10.3.6"><a tabindex="-1" href="#DMT_trees_CYU_levelp" title="Copy heading and permalink for Reading Question 10.3.6" aria-label="Copy heading and permalink for Reading Question 10.3.6">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_trees_CYU_leavesfbt4"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_trees_CYU_leavesfbt4"><h3 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-DMT_trees_CYU_leavesfbt4">
 <div class="para" id="DMT_trees_CYU_leavesfbt4-1-1">How many leaves does the full binary tree of height 4 have? <input type="text" placeholder="Number"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_trees_CYU_leavesfbt4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -803,7 +829,7 @@ eBookConfig.enable_chatcodes =  false;
 </div></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 10.3.7"><a tabindex="-1" href="#DMT_trees_CYU_leavesfbt4" title="Copy heading and permalink for Reading Question 10.3.7" aria-label="Copy heading and permalink for Reading Question 10.3.7">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_trees_CYU_tree7v9e"><h4 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_trees_CYU_tree7v9e"><h3 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_trees_CYU_tree7v9e">
 <div class="para" id="DMT_trees_CYU_tree7v9e-1-1">True or false: There exists a tree with 7 vertices and 9 edges.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_trees_CYU_tree7v9e-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -814,7 +840,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 10.3.8"><a tabindex="-1" href="#DMT_trees_CYU_tree7v9e" title="Copy heading and permalink for Reading Question 10.3.8" aria-label="Copy heading and permalink for Reading Question 10.3.8">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_trees_CYU_tree7v5e"><h4 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_trees_CYU_tree7v5e"><h3 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_trees_CYU_tree7v5e">
 <div class="para" id="DMT_trees_CYU_tree7v5e-1-1">True or false: There exists a tree with 7 vertices and 5 edges.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_trees_CYU_tree7v5e-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -825,7 +851,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 10.3.9"><a tabindex="-1" href="#DMT_trees_CYU_tree7v5e" title="Copy heading and permalink for Reading Question 10.3.9" aria-label="Copy heading and permalink for Reading Question 10.3.9">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_trees_CYU_forest7v5e"><h4 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_trees_CYU_forest7v5e"><h3 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_trees_CYU_forest7v5e">
 <div class="para" id="DMT_trees_CYU_forest7v5e-1-1">True or false: There exists a forest with 7 vertices and 5 edges.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_trees_CYU_forest7v5e-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -836,7 +862,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 10.3.10"><a tabindex="-1" href="#DMT_trees_CYU_forest7v5e" title="Copy heading and permalink for Reading Question 10.3.10" aria-label="Copy heading and permalink for Reading Question 10.3.10">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_trees_CYU_8v7etree"><h4 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_trees_CYU_8v7etree"><h3 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_trees_CYU_8v7etree">
 <div class="para" id="DMT_trees_CYU_8v7etree-1-1">True or false: If a graph has 8 vertices and 7 edges it must be a tree.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_trees_CYU_8v7etree-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -847,7 +873,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 10.3.11"><a tabindex="-1" href="#DMT_trees_CYU_8v7etree" title="Copy heading and permalink for Reading Question 10.3.11" aria-label="Copy heading and permalink for Reading Question 10.3.11">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_trees_CYU_conn8v7etree"><h4 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_trees_CYU_conn8v7etree"><h3 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_trees_CYU_conn8v7etree">
 <div class="para" id="DMT_trees_CYU_conn8v7etree-1-1">True or false: If a connected graph has 8 vertices and 7 edges it must be a tree.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_trees_CYU_conn8v7etree-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -858,7 +884,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 10.3.12"><a tabindex="-1" href="#DMT_trees_CYU_conn8v7etree" title="Copy heading and permalink for Reading Question 10.3.12" aria-label="Copy heading and permalink for Reading Question 10.3.12">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_trees_CYU_tree8v2l"><h4 class="heading"><span class="codenumber">13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_trees_CYU_tree8v2l"><h3 class="heading"><span class="codenumber">13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_trees_CYU_tree8v2l">
 <div class="para" id="DMT_trees_CYU_tree8v2l-1-1">True or false: There exists a tree with 8 vertices and 2 leaves.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_trees_CYU_tree8v2l-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -869,7 +895,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 10.3.13"><a tabindex="-1" href="#DMT_trees_CYU_tree8v2l" title="Copy heading and permalink for Reading Question 10.3.13" aria-label="Copy heading and permalink for Reading Question 10.3.13">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_trees_CYU_tree8v7l"><h4 class="heading"><span class="codenumber">14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_trees_CYU_tree8v7l"><h3 class="heading"><span class="codenumber">14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_trees_CYU_tree8v7l">
 <div class="para" id="DMT_trees_CYU_tree8v7l-1-1">True or false: There exists a tree with 8 vertices and 7 leaves.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_trees_CYU_tree8v7l-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -882,61 +908,64 @@ eBookConfig.enable_chatcodes =  false;
 </article><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 10.3: Check Your Understanding"><a tabindex="-1" href="#trees10-3-24" title="Copy heading and permalink for Reading Questions 10.3: Check Your Understanding" aria-label="Copy heading and permalink for Reading Questions 10.3: Check Your Understanding">🔗</a></div>
 </section>
 <section class="exercises" id="trees10-3-25">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
-</h3>
-<article class="exercise exercise-like" id="trees10-3-25-1"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</h2>
+<article class="exercise exercise-like" id="trees10-3-25-1"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="trees10-3-25-1-1-1">What is the total degree of a tree with <span class="process-math">\(n\)</span> vertices? Why?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees10-3-25-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 10.3.1"><a tabindex="-1" href="#trees10-3-25-1" title="Copy heading and permalink for Exercise 10.3.1" aria-label="Copy heading and permalink for Exercise 10.3.1">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="trees10-3-25-2"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="trees10-3-25-2"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="trees10-3-25-2-1-1">Consider the following lemma.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees10-3-25-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<article class="lemma theorem-like" id="trees10-3-25-2-1-2"><h5 class="heading">
-<span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h5>
+<article class="lemma theorem-like" id="trees10-3-25-2-1-2"><h4 class="heading">
+<span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
 <div class="para" id="trees10-3-25-2-1-2-1-1">Any tree with more than one vertex has at least one vertex of degree 1.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees10-3-25-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Lemma 10.3.14"><a tabindex="-1" href="#trees10-3-25-2-1-2" title="Copy heading and permalink for Lemma 10.3.14" aria-label="Copy heading and permalink for Lemma 10.3.14">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Lemma 10.3.17"><a tabindex="-1" href="#trees10-3-25-2-1-2" title="Copy heading and permalink for Lemma 10.3.17" aria-label="Copy heading and permalink for Lemma 10.3.17">🔗</a></div>
 </article> 
 <div class="para" id="trees10-3-25-2-1-3">This is a useful lemma for proving statements about trees. However, if the tree has infinitely many vertices and edges, then the lemma is false. Give an example of an infinite tree that has no vertex of degree 1.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees10-3-25-2-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 10.3.2"><a tabindex="-1" href="#trees10-3-25-2" title="Copy heading and permalink for Exercise 10.3.2" aria-label="Copy heading and permalink for Exercise 10.3.2">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="trees10-3-25-3"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="trees10-3-25-3"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="trees10-3-25-3-1-1">For each of the following, either draw a graph with the given properties or explain why no such graph exists.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees10-3-25-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="trees10-3-25-3-1-2">
-<li id="trees10-3-25-3-1-2-1">
-<div class="para" id="trees10-3-25-3-1-2-1-1">Tree, nine vertices, nine edges.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees10-3-25-3-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="trees10-3-25-3-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="trees10-3-25-3-1-2-1">
+<li id="trees10-3-25-3-1-2-1-1">
+<div class="para" id="trees10-3-25-3-1-2-1-1-1">Tree, nine vertices, nine edges.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees10-3-25-3-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 10.3.3.a"><a tabindex="-1" href="#trees10-3-25-3-1-2-1" title="Copy heading and permalink for Item 10.3.3.a" aria-label="Copy heading and permalink for Item 10.3.3.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 10.3.3.a"><a tabindex="-1" href="#trees10-3-25-3-1-2-1-1" title="Copy heading and permalink for Item 10.3.3.a" aria-label="Copy heading and permalink for Item 10.3.3.a">🔗</a></div>
 </li>
-<li id="trees10-3-25-3-1-2-2">
-<div class="para" id="trees10-3-25-3-1-2-2-1">Graph, connected, nine vertices, nine edges.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees10-3-25-3-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="trees10-3-25-3-1-2-1-2">
+<div class="para" id="trees10-3-25-3-1-2-1-2-1">Graph, connected, nine vertices, nine edges.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees10-3-25-3-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 10.3.3.b"><a tabindex="-1" href="#trees10-3-25-3-1-2-2" title="Copy heading and permalink for Item 10.3.3.b" aria-label="Copy heading and permalink for Item 10.3.3.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 10.3.3.b"><a tabindex="-1" href="#trees10-3-25-3-1-2-1-2" title="Copy heading and permalink for Item 10.3.3.b" aria-label="Copy heading and permalink for Item 10.3.3.b">🔗</a></div>
 </li>
-<li id="trees10-3-25-3-1-2-3">
-<div class="para" id="trees10-3-25-3-1-2-3-1">Tree, five vertices, total degree 8<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees10-3-25-3-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="trees10-3-25-3-1-2-1-3">
+<div class="para" id="trees10-3-25-3-1-2-1-3-1">Tree, five vertices, total degree 8<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees10-3-25-3-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 10.3.3.c"><a tabindex="-1" href="#trees10-3-25-3-1-2-3" title="Copy heading and permalink for Item 10.3.3.c" aria-label="Copy heading and permalink for Item 10.3.3.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 10.3.3.c"><a tabindex="-1" href="#trees10-3-25-3-1-2-1-3" title="Copy heading and permalink for Item 10.3.3.c" aria-label="Copy heading and permalink for Item 10.3.3.c">🔗</a></div>
 </li>
-<li id="trees10-3-25-3-1-2-4">
-<div class="para" id="trees10-3-25-3-1-2-4-1">Graph, six vertices, five edges, not a tree.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees10-3-25-3-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="trees10-3-25-3-1-2-1-4">
+<div class="para" id="trees10-3-25-3-1-2-1-4-1">Graph, six vertices, five edges, not a tree.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees10-3-25-3-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 10.3.3.d"><a tabindex="-1" href="#trees10-3-25-3-1-2-4" title="Copy heading and permalink for Item 10.3.3.d" aria-label="Copy heading and permalink for Item 10.3.3.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 10.3.3.d"><a tabindex="-1" href="#trees10-3-25-3-1-2-1-4" title="Copy heading and permalink for Item 10.3.3.d" aria-label="Copy heading and permalink for Item 10.3.3.d">🔗</a></div>
 </li>
-<li id="trees10-3-25-3-1-2-5">
-<div class="para" id="trees10-3-25-3-1-2-5-1">Graph, connected, ten vertices, nine edges, has a circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees10-3-25-3-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="trees10-3-25-3-1-2-1-5">
+<div class="para" id="trees10-3-25-3-1-2-1-5-1">Graph, connected, ten vertices, nine edges, has a circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees10-3-25-3-1-2-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 10.3.3.e"><a tabindex="-1" href="#trees10-3-25-3-1-2-5" title="Copy heading and permalink for Item 10.3.3.e" aria-label="Copy heading and permalink for Item 10.3.3.e">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 10.3.3.e"><a tabindex="-1" href="#trees10-3-25-3-1-2-1-5" title="Copy heading and permalink for Item 10.3.3.e" aria-label="Copy heading and permalink for Item 10.3.3.e">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees10-3-25-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 10.3.3"><a tabindex="-1" href="#trees10-3-25-3" title="Copy heading and permalink for Exercise 10.3.3" aria-label="Copy heading and permalink for Exercise 10.3.3">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="trees10-3-25-4"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="trees10-3-25-4"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="trees10-3-25-4-1-1">Suppose a connected graph has twelve vertices and 11 edges. Must this graph have a vertex of degree 1? Explain your answer.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#trees10-3-25-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 10.3.4"><a tabindex="-1" href="#trees10-3-25-4" title="Copy heading and permalink for Exercise 10.3.4" aria-label="Copy heading and permalink for Exercise 10.3.4">🔗</a></div>

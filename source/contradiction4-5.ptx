@@ -140,7 +140,7 @@
         <p>
     Consider the statement: For all integers <m>n</m>, if <m>n^2</m> is odd then <m>n</m> is odd.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -154,7 +154,7 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
@@ -163,7 +163,7 @@
   <p>
     Use this test to determine if the following numbers are prime or not.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -177,12 +177,13 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
     Carefully write the negation of each statement then prove the statement by contradiction.
   </p>
+  <p>
   <ol marker="a.">
     <li><p>
     There is no greatest even integer.
@@ -191,7 +192,7 @@
     There is no least positive rational number.
   </p>
     </li>
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>

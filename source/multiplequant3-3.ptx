@@ -140,7 +140,7 @@
         <p>
     Let <m>D=E=\{-2, -1, 0, 1, 2\}</m>. Explain why each of the following statements are true.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -154,13 +154,13 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
     Let <m>D=E=\{-2, -1, 0, 1, 2\}</m>. Write the negations for each of the following statements and determine which is true, the given statement or the negation.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -186,14 +186,14 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
 
            <exercise><statement>
         <p>
     For each of the following, (1) rewrite the statement in English without the symbols <m>\forall</m> or <m>\exists</m> or variables. Then (2) indicate whether the statement is true or false.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -207,14 +207,14 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
 
       <exercise><statement>
         <p>
     For each of the following, (1) rewrite the statement in English without the symbols <m>\forall</m> or <m>\exists</m> or variables, trying to express your answer as simply as possible. Then (2) write the negation for each statement.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -234,14 +234,14 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
  
       <exercise><statement>
         <p>
     For each of the following, (1) write a new statement by interchanging the symbols <m>\forall</m> and <m>\exists</m>. Then (2) state which is true: the given statement, the interchanged statement, neither, or both.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -255,13 +255,13 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
     For each of the following statements, (1) rewrite the statement formally using quantifiers and variables, and (2) write the negation for the statement.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -275,13 +275,13 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
     Determine whether the following statements are true or false. Give a sentence or two explaining your answer.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -313,7 +313,7 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
     </exercises>
 

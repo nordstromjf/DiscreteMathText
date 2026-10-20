@@ -500,7 +500,7 @@ So a statement such as <q><m>p</m> is necessary and sufficient for <m>q</m></q> 
      <exercise><statement><p>
     Write the negation (in English) of each of the following statements.
   </p>
-
+<p>
   <ol marker="a.">
     <li>
       <p>
@@ -526,7 +526,8 @@ So a statement such as <q><m>p</m> is necessary and sufficient for <m>q</m></q> 
   </p>
     </li>
 
-  </ol></statement></exercise>
+  </ol>
+</p></statement></exercise>
       <exercise><statement><p>
     Use a truth-table to show that the conditional statement <m>p\rightarrow q</m> is not equivalent to its inverse.
   </p></statement></exercise>

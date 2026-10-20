@@ -197,6 +197,7 @@
 
     <exercises>
       <exercise><statement><p>Fill in the blanks.</p>
+      <p>
         <ol marker="a.">
     <li>
       <p>
@@ -214,24 +215,26 @@
       <p>
     To say that an element is in <m>A-(B\cap C)</m> means that it is in ___ and not in ___.
      </p>
-    </li></ol>
+    </li></ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
     Illustrate the distributive laws by drawing the Venn diagrams for the given sets.</p>
+    <p>
     <ol marker="a.">
      <li><p><m>A\cup (B\cap C)</m> and <m>(A\cup B)\cap (A\cup C)</m></p></li>
      <li><p><m>A\cap (B\cup C)</m> and  <m>(A\cap B)\cup (A\cap C)</m></p></li>
-   </ol>
+   </ol></p>
 
       </statement></exercise>
       <exercise><statement>
          <p>
     Illustrate DeMorgan's laws by drawing the Venn diagrams for the given sets.</p>
+    <p>
     <ol marker="a.">
      <li><p><m>(A\cup B)^C</m> and <m>(A^C\cap B^C)</m></p></li>
      <li><p><m>(A\cap B)^C</m> and  <m>(A^C\cup B^C)</m></p></li>
-   </ol>
+   </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>

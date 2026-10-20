@@ -121,7 +121,7 @@ Resulting in <m>123=999x</m>. Now we just solve for <m>x</m>: <m>x=123/999</m>.<
         <p>
     Prove the following numbers are rational by writing them as a ratio of two integers.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -135,13 +135,13 @@ Resulting in <m>123=999x</m>. Now we just solve for <m>x</m>: <m>x=123/999</m>.<
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
     The <term>zero product property</term> says that if a product of two real numbers is 0 then one of the numbers must be zero.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -161,7 +161,7 @@ Resulting in <m>123=999x</m>. Now we just solve for <m>x</m>: <m>x=123/999</m>.<
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
@@ -184,7 +184,7 @@ Resulting in <m>123=999x</m>. Now we just solve for <m>x</m>: <m>x=123/999</m>.<
       <exercise><statement><p>
     Consider the statement: The square of any rational number is a rational number.
   </p>
-
+  <p>
   <ol amrker="a">
     <li>
       <p>
@@ -198,12 +198,12 @@ Resulting in <m>123=999x</m>. Now we just solve for <m>x</m>: <m>x=123/999</m>.<
   </p>
     </li>
 
-  </ol></statement></exercise>
+  </ol></p></statement></exercise>
       <exercise><statement>
         <p>
     Determine if the following statements are true or false. For <em>true</em> statements provide a proof. For <em>false</em> statements provide a counterexample <em>and</em> determine if a small change would make the statement true. If so, correct the statement and provide a proof of the new statement.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -217,7 +217,7 @@ Resulting in <m>123=999x</m>. Now we just solve for <m>x</m>: <m>x=123/999</m>.<
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>

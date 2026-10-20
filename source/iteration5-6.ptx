@@ -51,9 +51,9 @@ where <m>d</m> is constant.</p></definition>
 
 
 <activity label="iterat-arith"><introduction><p>Generalize <xref ref="E_arithmetic"/> to find an explicit formula for an arithmetic sequence.</p></introduction>
-<task label="iterat-arith-first6"><statement><p>Let <m>d=5, a_0=2</m>. Write out the first 6 terms of the arithmetic sequence. Can you find an explicit formula for the sequence (one that just depends on <m>n</m>)?</p></statement><reponse/></task>
-<task label="iterat-arith-nosimp"><statement><p>Write out the first 6 terms of the sequence <em>without simplifying at all</em>. Now can you find an explicit formula?</p></statement><reponse/></task>
-<task label="iterat-arith-expform"><statement><p>Using the same technique of writing out the terms without simplifying, find an explicit formula for the general form, <m>a_k=a_{k-1}+d</m>, of an arithmetic sequence.</p></statement><reponse/></task>
+<task label="iterat-arith-first6"><statement><p>Let <m>d=5, a_0=2</m>. Write out the first 6 terms of the arithmetic sequence. Can you find an explicit formula for the sequence (one that just depends on <m>n</m>)?</p></statement><response/></task>
+<task label="iterat-arith-nosimp"><statement><p>Write out the first 6 terms of the sequence <em>without simplifying at all</em>. Now can you find an explicit formula?</p></statement><response/></task>
+<task label="iterat-arith-expform"><statement><p>Using the same technique of writing out the terms without simplifying, find an explicit formula for the general form, <m>a_k=a_{k-1}+d</m>, of an arithmetic sequence.</p></statement><response/></task>
 
 </activity>
 
@@ -67,8 +67,8 @@ where <m>r</m> is constant.</p></definition>
 
 <activity label="iterat-geom"><introduction><p>Use the method of iteration to find an explicit formula for a geometric sequence.</p></introduction>
 <task label="iterat-geom-first6"><statement><p>Let <m>r=2, a_0=3</m>. Write out the first 6 terms of the geometric sequence. Can you find an explicit formula for the sequence (one that just depends on <m>n</m>)?</p></statement><response/></task>
-<task label="iterat-geom-nosimp"><statement><p>Write out the first 6 terms of the sequence <em>without simplifying at all</em>. Now can you find an explicit formula?</p></statement><reponse/></task>
-<task label="iterat-geom-expform"><statement><p>Using the same technique of writing out the terms without simplifying, find an explicit formula for the general form, <m>a_k=ra_{k-1}</m>, of a geometric sequence.</p></statement><reponse/></task>
+<task label="iterat-geom-nosimp"><statement><p>Write out the first 6 terms of the sequence <em>without simplifying at all</em>. Now can you find an explicit formula?</p></statement><response/></task>
+<task label="iterat-geom-expform"><statement><p>Using the same technique of writing out the terms without simplifying, find an explicit formula for the general form, <m>a_k=ra_{k-1}</m>, of a geometric sequence.</p></statement><response/></task>
 
 </activity>
 
@@ -82,7 +82,7 @@ where <m>r</m> is constant.</p></definition>
 </p>
 </assemblage>
 
-<activity label="iterat-pfarithind"><statement><p>Prove if <m>a_0=2</m> and <m>a_k=a_{k-1}+5</m>, then <m>a_n=2+5n</m> for <m>n\geq 0</m> by induction.</p></statement><reponse/><hint><p>You are assuming the recursive relationship holds. The statement you are proving by induction is that <m>a_n=2+5n</m> for <m>n\geq 0</m>.</p></hint></activity>
+<activity label="iterat-pfarithind"><statement><p>Prove if <m>a_0=2</m> and <m>a_k=a_{k-1}+5</m>, then <m>a_n=2+5n</m> for <m>n\geq 0</m> by induction.</p></statement><response/><hint><p>You are assuming the recursive relationship holds. The statement you are proving by induction is that <m>a_n=2+5n</m> for <m>n\geq 0</m>.</p></hint></activity>
 
 <activity label="iterat-pfgeoind"><statement><p>Prove if <m>a_k=ra_{k-1}</m>, then <m>a_n=a_0r^n</m> for <m>n\geq 0</m> by induction.</p></statement><response/><hint><p>You are assuming the recursive relationship holds. The statement you are proving by induction is that <m>a_n=a_0r^n</m> for <m>n\geq 0</m>.</p></hint></activity>
 

@@ -19,15 +19,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-2 { system: extends decimal; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-3 { system: extends decimal; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-4 { system: extends lower-roman; prefix: ''; suffix: '. '; }
+</style>
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
 hasWebworkReps: false,
 hasSage: false,
 isReact: false,
 htmlPresentation: false,
+lang: "en-US",
 });
-</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta name="twitter:title" content="Discrete Mathematics: An Active Approach to Mathematical Reasoning">
@@ -36,7 +42,7 @@ htmlPresentation: false,
 <meta name="twitter:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta property="og:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.43"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.54"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.54"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -58,21 +64,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.9';
+eBookConfig.runestone_version = '8.3.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.846a0d6fafaa99e0.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.bbcfc02849ebc023.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/prefix-runtime.4beca1fdeed766a2.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.ebd33f6a21eed414.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.9963089870a016c8.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="DiscreteMathText" class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></div>
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="DiscreteMath-14-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
@@ -85,7 +91,17 @@ eBookConfig.enable_chatcodes =  false;
 <div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
 <ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
-<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
 <h2 class="heading">Readability settings</h2>
 <button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
@@ -134,6 +150,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter1.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to Mathematical Language</span></a></div>
 <ul id="ptx-toc-group-chapter1" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter1-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="variables1-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Variables and Statements</span></a></div>
 <ul id="ptx-toc-group-variables1-1" class="structural toc-item-list">
@@ -160,6 +177,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter2.html" class="internal"><span class="codenumber">2</span> <span class="title">Logic</span></a></div>
 <ul id="ptx-toc-group-chapter2" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter2-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="logical_form2-1.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Truth-Tables and Logical Equivalence</span></a></div>
 <ul id="ptx-toc-group-logical_form2-1" class="structural toc-item-list">
@@ -186,6 +204,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="chapter3.html" class="internal"><span class="codenumber">3</span> <span class="title">Logic with Quantifiers</span></a></div>
 <ul class="structural toc-item-list contains-active" id="ptx-toc-group-chapter3">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter3-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="quantifiersI3-1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Quantifiers</span></a></div>
 <ul id="ptx-toc-group-quantifiersI3-1" class="structural toc-item-list">
@@ -219,6 +238,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter4.html" class="internal"><span class="codenumber">4</span> <span class="title">Proof Techniques</span></a></div>
 <ul id="ptx-toc-group-chapter4" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter4-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="directproof4-1.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Direct Proof and Counterexample</span></a></div>
 <ul id="ptx-toc-group-directproof4-1" class="structural toc-item-list">
@@ -266,6 +286,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter5.html" class="internal"><span class="codenumber">5</span> <span class="title">Sequences and Mathematical Induction</span></a></div>
 <ul id="ptx-toc-group-chapter5" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter5-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sequences5-1.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Sequences</span></a></div>
 <ul id="ptx-toc-group-sequences5-1" class="structural toc-item-list">
@@ -313,6 +334,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter6.html" class="internal"><span class="codenumber">6</span> <span class="title">Set Theory</span></a></div>
 <ul id="ptx-toc-group-chapter6" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter6-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sets6-1.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Set Theory</span></a></div>
 <ul id="ptx-toc-group-sets6-1" class="structural toc-item-list">
@@ -339,6 +361,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter7.html" class="internal"><span class="codenumber">7</span> <span class="title">Functions</span></a></div>
 <ul id="ptx-toc-group-chapter7" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter7-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="functions7-1.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Functions</span></a></div>
 <ul id="ptx-toc-group-functions7-1" class="structural toc-item-list">
@@ -358,6 +381,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter8.html" class="internal"><span class="codenumber">8</span> <span class="title">Relations</span></a></div>
 <ul id="ptx-toc-group-chapter8" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter8-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="relations8-1.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Relations on Sets</span></a></div>
 <ul id="ptx-toc-group-relations8-1" class="structural toc-item-list">
@@ -391,6 +415,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter9.html" class="internal"><span class="codenumber">9</span> <span class="title">Probability and Counting</span></a></div>
 <ul id="ptx-toc-group-chapter9" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter9-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="probability9-1.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Probability</span></a></div>
 <ul id="ptx-toc-group-probability9-1" class="structural toc-item-list">
@@ -438,6 +463,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter10.html" class="internal"><span class="codenumber">10</span> <span class="title">Graph Theory</span></a></div>
 <ul id="ptx-toc-group-chapter10" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter10-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="graphs10-1.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphs</span></a></div>
 <ul id="ptx-toc-group-graphs10-1" class="structural toc-item-list">
@@ -465,7 +491,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="DiscreteMath-14.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul id="ptx-toc-group-DiscreteMath-14" class="structural toc-item-list">
 <li class="toc-item toc-references"><div class="toc-title-box"><a href="DiscreteMath-14-1.html" class="internal"><span class="title">References</span></a></div></li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A.</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="DiscreteMath-14-3.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="DiscreteMath-14-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
@@ -473,16 +499,16 @@ eBookConfig.enable_chatcodes =  false;
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="argumentsquant3-4">
-<h2 class="heading hide-type">
+<h1 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Arguments with Quantifiers</span>
-</h2>
+</h1>
 <div class="para" id="argumentsquant3-4-3">In <a href="arguments2-3.html" class="internal" title="Section 2.3: Valid and Invalid Arguments">Section 2.3</a> we studied arguments with logical statements. In this chapter we’ve looked at statements with quantifiers. Now we want to combine the two ideas.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#argumentsquant3-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="argumentsquant3-4-4">Recall, an argument is <dfn class="terminology">valid</dfn> if whenever the premises are true, the conclusion <em class="emphasis">must</em> be true. An argument is <dfn class="terminology">invalid</dfn> if it is possible for the premises to be true and the conclusion false.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#argumentsquant3-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="argwquant1" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">An Argument with Quantified Statements.</span>
-</h3></summary>
+<details id="argwquant1" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">An Argument with Quantified Statements.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="argwquant1-2">Is the following argument valid or invalid? <div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -505,9 +531,9 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" aria-hidden="true" data-description="Answer 3.4.1.1"><a tabindex="-1" href="#argwquant1-3" title="Copy heading and permalink for Answer 3.4.1.1" aria-label="Copy heading and permalink for Answer 3.4.1.1">🔗</a></div>
 </div></details><div class="autopermalink" aria-hidden="true" data-description="Example 3.4.1: An Argument with Quantified Statements"><a tabindex="-1" href="#argwquant1" title="Copy heading and permalink for Example 3.4.1: An Argument with Quantified Statements" aria-label="Copy heading and permalink for Example 3.4.1: An Argument with Quantified Statements">🔗</a></div>
 </article></details>
-<details id="argwquant2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Another Argument with Quantified Statements.</span>
-</h3></summary>
+<details id="argwquant2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Another Argument with Quantified Statements.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="argwquant2-2">Is the following argument valid or invalid? <div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -532,7 +558,7 @@ eBookConfig.enable_chatcodes =  false;
 </article></details>
 <div class="para" id="argumentsquant3-4-7">Although <a href="argumentsquant3-4.html#argwquant1" class="xref" data-knowl="./knowl/xref/argwquant1.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.4.1: An Argument with Quantified Statements">Example 3.4.1</a> and <a href="argumentsquant3-4.html#argwquant2" class="xref" data-knowl="./knowl/xref/argwquant2.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.4.2: Another Argument with Quantified Statements">Example 3.4.2</a> are valid arguments, we will have trouble using a truth-table to determine validity. In this section we will develop other tools for analyzing quantified arguments. These examples are extensions of modus ponens and modus tollens from <a href="arguments2-3.html#B_commonvalid" class="xref" data-knowl="./knowl/xref/B_commonvalid.html" data-reveal-label="Reveal" data-close-label="Close" title="Assemblage: Some Common Forms for Valid Arguments">Some Common Forms for Valid Arguments</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#argumentsquant3-4-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="assemblage assemblage-like" id="B_universalmodpon"><h3 class="heading"><span class="title">Common Forms of Arguments with Quantifiers.</span></h3>
+<article class="assemblage assemblage-like" id="B_universalmodpon"><h2 class="heading"><span class="title">Common Forms of Arguments with Quantifiers.</span></h2>
 <div class="para" id="B_universalmodpon-2">Universal modus ponens: <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines">
@@ -579,9 +605,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="argumentsquant3-4-13">Now, if we look at the diagram determined by the two premises, we see that Anna must also be an element of the set of students taking Discrete Math. Thus, it is not possible to have true premises and a false conclusion.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#argumentsquant3-4-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="assemblage assemblage-like" id="B_vennforvalid"><h3 class="heading"><span class="title">Process for Using a Venn diagram to Determine Validity.</span></h3>
+<article class="assemblage assemblage-like" id="B_vennforvalid"><h2 class="heading"><span class="title">Process for Using a Venn diagram to Determine Validity.</span></h2>
 <div class="para logical" id="B_vennforvalid-2">
-<ol class="decimal ol-marker-3" id="B_vennforvalid-2-1">
+<ol class="decimal" style="list-style: ptx-marker-3;" id="B_vennforvalid-2-1">
 <li id="B_vennforvalid-2-1-1">
 <div class="para" id="B_vennforvalid-2-1-1-1">Draw the Venn diagram for each premise.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#B_vennforvalid-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -608,9 +634,9 @@ eBookConfig.enable_chatcodes =  false;
 </article>
 <div class="para" id="argumentsquant3-4-15">Let’s use this process on some more examples.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#argumentsquant3-4-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="quantmodtoll" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Determining Validity.</span>
-</h3></summary>
+<details id="quantmodtoll" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Determining Validity.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="quantmodtoll-2">
 <div class="tabular-box natural-width"><table class="tabular">
@@ -637,55 +663,55 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Example 3.4.4: Determining Validity"><a tabindex="-1" href="#quantmodtoll" title="Copy heading and permalink for Example 3.4.4: Determining Validity" aria-label="Copy heading and permalink for Example 3.4.4: Determining Validity">🔗</a></div>
 </article></details>
-<article class="activity project-like" id="argquant-modpon"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="argquant-modpon"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="introduction" id="argquant-modpon-1">
 <div class="para" id="argquant-modpon-1-1">Consider the general form of universal modus ponens.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#argquant-modpon-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="argquant-modpon-venn"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="argquant-modpon-venn"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="argquant-modpon-venn-1-1">Draw the Venn diagram for universal modus ponens. You should have a circle labeled “P” and one labeled “Q.”<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#argquant-modpon-venn-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 3.4.1.a"><a tabindex="-1" href="#argquant-modpon-venn" title="Copy heading and permalink for Task 3.4.1.a" aria-label="Copy heading and permalink for Task 3.4.1.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.4.5.a"><a tabindex="-1" href="#argquant-modpon-venn" title="Copy heading and permalink for Task 3.4.5.a" aria-label="Copy heading and permalink for Task 3.4.5.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="argquant-modpon-ex"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="argquant-modpon-ex"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="argquant-modpon-ex-1-1">Write your own argument that has the form of universal modus ponens.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#argquant-modpon-ex-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 3.4.1.b"><a tabindex="-1" href="#argquant-modpon-ex" title="Copy heading and permalink for Task 3.4.1.b" aria-label="Copy heading and permalink for Task 3.4.1.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.4.5.b"><a tabindex="-1" href="#argquant-modpon-ex" title="Copy heading and permalink for Task 3.4.5.b" aria-label="Copy heading and permalink for Task 3.4.5.b">🔗</a></div>
 </article>
-<article class="task exercise-like" id="argquant-modpon-vennex"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<article class="task exercise-like" id="argquant-modpon-vennex"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="argquant-modpon-vennex-1-1">Use a Venn diagram with appropriate labels to show that your argument is valid.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#argquant-modpon-vennex-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 3.4.1.c"><a tabindex="-1" href="#argquant-modpon-vennex" title="Copy heading and permalink for Task 3.4.1.c" aria-label="Copy heading and permalink for Task 3.4.1.c">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 3.4.1"><a tabindex="-1" href="#argquant-modpon" title="Copy heading and permalink for Activity 3.4.1" aria-label="Copy heading and permalink for Activity 3.4.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.4.5.c"><a tabindex="-1" href="#argquant-modpon-vennex" title="Copy heading and permalink for Task 3.4.5.c" aria-label="Copy heading and permalink for Task 3.4.5.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 3.4.5"><a tabindex="-1" href="#argquant-modpon" title="Copy heading and permalink for Activity 3.4.5" aria-label="Copy heading and permalink for Activity 3.4.5">🔗</a></div>
 </article>
-<article class="activity project-like" id="argquant-modtol"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="argquant-modtol"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="introduction" id="argquant-modtol-1">
 <div class="para" id="argquant-modtol-1-1">Consider the general form of universal modus tollens.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#argquant-modtol-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="argquant-modtol-venn"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="argquant-modtol-venn"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="argquant-modtol-venn-1-1">Draw the Venn diagram for universal modus tollens. You should have a circle labeled “P” and one labeled “Q.”<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#argquant-modtol-venn-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 3.4.2.a"><a tabindex="-1" href="#argquant-modtol-venn" title="Copy heading and permalink for Task 3.4.2.a" aria-label="Copy heading and permalink for Task 3.4.2.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.4.6.a"><a tabindex="-1" href="#argquant-modtol-venn" title="Copy heading and permalink for Task 3.4.6.a" aria-label="Copy heading and permalink for Task 3.4.6.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="argquant-modtol-ex"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="argquant-modtol-ex"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="argquant-modtol-ex-1-1">Write your own argument that has the form of universal modus tollens.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#argquant-modtol-ex-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 3.4.2.b"><a tabindex="-1" href="#argquant-modtol-ex" title="Copy heading and permalink for Task 3.4.2.b" aria-label="Copy heading and permalink for Task 3.4.2.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.4.6.b"><a tabindex="-1" href="#argquant-modtol-ex" title="Copy heading and permalink for Task 3.4.6.b" aria-label="Copy heading and permalink for Task 3.4.6.b">🔗</a></div>
 </article>
-<article class="task exercise-like" id="argquant-modtol-vennex"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<article class="task exercise-like" id="argquant-modtol-vennex"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="argquant-modtol-vennex-1-1">Use a Venn diagram with appropriate labels to show that your argument is valid.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#argquant-modtol-vennex-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 3.4.2.c"><a tabindex="-1" href="#argquant-modtol-vennex" title="Copy heading and permalink for Task 3.4.2.c" aria-label="Copy heading and permalink for Task 3.4.2.c">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 3.4.2"><a tabindex="-1" href="#argquant-modtol" title="Copy heading and permalink for Activity 3.4.2" aria-label="Copy heading and permalink for Activity 3.4.2">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.4.6.c"><a tabindex="-1" href="#argquant-modtol-vennex" title="Copy heading and permalink for Task 3.4.6.c" aria-label="Copy heading and permalink for Task 3.4.6.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 3.4.6"><a tabindex="-1" href="#argquant-modtol" title="Copy heading and permalink for Activity 3.4.6" aria-label="Copy heading and permalink for Activity 3.4.6">🔗</a></div>
 </article>
-<details id="invalidargquant" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">An Invalid Argument.</span>
-</h3></summary>
+<details id="invalidargquant" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">An Invalid Argument.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="invalidargquant-2">
 <div class="tabular-box natural-width"><table class="tabular">
@@ -718,9 +744,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="invalidargquant-6">Therefore, the argument is invalid.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#invalidargquant-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Example 3.4.5: An Invalid Argument"><a tabindex="-1" href="#invalidargquant" title="Copy heading and permalink for Example 3.4.5: An Invalid Argument" aria-label="Copy heading and permalink for Example 3.4.5: An Invalid Argument">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 3.4.7: An Invalid Argument"><a tabindex="-1" href="#invalidargquant" title="Copy heading and permalink for Example 3.4.7: An Invalid Argument" aria-label="Copy heading and permalink for Example 3.4.7: An Invalid Argument">🔗</a></div>
 </article></details>
-<article class="assemblage assemblage-like" id="B_universalerror"><h3 class="heading"><span class="title">Invalid Arguments with Quantifiers.</span></h3>
+<article class="assemblage assemblage-like" id="B_universalerror"><h2 class="heading"><span class="title">Invalid Arguments with Quantifiers.</span></h2>
 <div class="para" id="B_universalerror-2">Converse error <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines">
@@ -735,7 +761,7 @@ eBookConfig.enable_chatcodes =  false;
 <span class="process-math">\(\therefore\ \)</span><span class="process-math">\(P(a)\)</span>
 </td>
 </tr>
-</table></div> <a href="argumentsquant3-4.html#invalidargquant" class="xref" data-knowl="./knowl/xref/invalidargquant.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.4.5: An Invalid Argument">Example 3.4.5</a> is an example of converse error.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#B_universalerror-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</table></div> <a href="argumentsquant3-4.html#invalidargquant" class="xref" data-knowl="./knowl/xref/invalidargquant.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.4.7: An Invalid Argument">Example 3.4.7</a> is an example of converse error.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#B_universalerror-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="B_universalerror-3">Inverse error <div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -756,16 +782,16 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Assemblage: Invalid Arguments with Quantifiers"><a tabindex="-1" href="#B_universalerror" title="Copy heading and permalink for Assemblage: Invalid Arguments with Quantifiers" aria-label="Copy heading and permalink for Assemblage: Invalid Arguments with Quantifiers">🔗</a></div>
 </article>
-<article class="activity project-like" id="argquant-inverr"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="argquant-inverr"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="argquant-inverr-1-1">Write your own example of inverse error. Use a Venn diagram to show your argument is invalid.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#argquant-inverr-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 3.4.3"><a tabindex="-1" href="#argquant-inverr" title="Copy heading and permalink for Activity 3.4.3" aria-label="Copy heading and permalink for Activity 3.4.3">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 3.4.8"><a tabindex="-1" href="#argquant-inverr" title="Copy heading and permalink for Activity 3.4.8" aria-label="Copy heading and permalink for Activity 3.4.8">🔗</a></div>
 </article>
 <div class="para" id="argumentsquant3-4-22">It will be useful to have some standard Venn diagrams for common forms of statements.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#argumentsquant3-4-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="assemblage assemblage-like" id="B_commnVenn"><h3 class="heading"><span class="title">Venn Diagrams for Common Statements.</span></h3>
+<article class="assemblage assemblage-like" id="B_commnVenn"><h2 class="heading"><span class="title">Venn Diagrams for Common Statements.</span></h2>
 <div class="para logical" id="B_commnVenn-3">
 <ul class="disc" id="B_commnVenn-3-1">
 <li id="B_commnVenn-3-1-1">
@@ -806,14 +832,14 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Assemblage: Venn Diagrams for Common Statements"><a tabindex="-1" href="#B_commnVenn" title="Copy heading and permalink for Assemblage: Venn Diagrams for Common Statements" aria-label="Copy heading and permalink for Assemblage: Venn Diagrams for Common Statements">🔗</a></div>
 </article>
-<article class="activity project-like" id="argquant-validity1"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="argquant-validity1"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="introduction" id="argquant-validity1-1">
 <div class="para" id="argquant-validity1-1-1">For each argument use a Venn diagram to determine if the argument is valid or invalid.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#argquant-validity1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="argquant-validity1-campus"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="argquant-validity1-campus"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="argquant-validity1-campus-1-1">
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -829,9 +855,9 @@ eBookConfig.enable_chatcodes =  false;
 </table></div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#argquant-validity1-campus-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 3.4.4.a"><a tabindex="-1" href="#argquant-validity1-campus" title="Copy heading and permalink for Task 3.4.4.a" aria-label="Copy heading and permalink for Task 3.4.4.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.4.9.a"><a tabindex="-1" href="#argquant-validity1-campus" title="Copy heading and permalink for Task 3.4.9.a" aria-label="Copy heading and permalink for Task 3.4.9.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="argquant-validity1-poly"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="argquant-validity1-poly"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="argquant-validity1-poly-1-1">
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -848,17 +874,17 @@ eBookConfig.enable_chatcodes =  false;
 </table></div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#argquant-validity1-poly-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 3.4.4.b"><a tabindex="-1" href="#argquant-validity1-poly" title="Copy heading and permalink for Task 3.4.4.b" aria-label="Copy heading and permalink for Task 3.4.4.b">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 3.4.4"><a tabindex="-1" href="#argquant-validity1" title="Copy heading and permalink for Activity 3.4.4" aria-label="Copy heading and permalink for Activity 3.4.4">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.4.9.b"><a tabindex="-1" href="#argquant-validity1-poly" title="Copy heading and permalink for Task 3.4.9.b" aria-label="Copy heading and permalink for Task 3.4.9.b">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 3.4.9"><a tabindex="-1" href="#argquant-validity1" title="Copy heading and permalink for Activity 3.4.9" aria-label="Copy heading and permalink for Activity 3.4.9">🔗</a></div>
 </article>
-<article class="activity project-like" id="argquant-validity2"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="argquant-validity2"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="introduction" id="argquant-validity2-1">
 <div class="para" id="argquant-validity2-1-1">For each argument use a Venn diagram to determine if the argument is valid or invalid.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#argquant-validity2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="argquant-validity2-Gauss"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="argquant-validity2-Gauss"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="argquant-validity2-Gauss-1-1">
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -876,9 +902,9 @@ eBookConfig.enable_chatcodes =  false;
 </table></div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#argquant-validity2-Gauss-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 3.4.5.a"><a tabindex="-1" href="#argquant-validity2-Gauss" title="Copy heading and permalink for Task 3.4.5.a" aria-label="Copy heading and permalink for Task 3.4.5.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.4.10.a"><a tabindex="-1" href="#argquant-validity2-Gauss" title="Copy heading and permalink for Task 3.4.10.a" aria-label="Copy heading and permalink for Task 3.4.10.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="argquant-validity2-Newton"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="argquant-validity2-Newton"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="argquant-validity2-Newton-1-1">
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -896,19 +922,19 @@ eBookConfig.enable_chatcodes =  false;
 </table></div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#argquant-validity2-Newton-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 3.4.5.b"><a tabindex="-1" href="#argquant-validity2-Newton" title="Copy heading and permalink for Task 3.4.5.b" aria-label="Copy heading and permalink for Task 3.4.5.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.4.10.b"><a tabindex="-1" href="#argquant-validity2-Newton" title="Copy heading and permalink for Task 3.4.10.b" aria-label="Copy heading and permalink for Task 3.4.10.b">🔗</a></div>
 </article>
-<article class="task exercise-like" id="argquant-validity2-comp"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<article class="task exercise-like" id="argquant-validity2-comp"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="argquant-validity2-comp-1-1">Compare your answers to the two arguments. What is different? How does the difference affect the argument?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#argquant-validity2-comp-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 3.4.5.c"><a tabindex="-1" href="#argquant-validity2-comp" title="Copy heading and permalink for Task 3.4.5.c" aria-label="Copy heading and permalink for Task 3.4.5.c">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 3.4.5"><a tabindex="-1" href="#argquant-validity2" title="Copy heading and permalink for Activity 3.4.5" aria-label="Copy heading and permalink for Activity 3.4.5">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.4.10.c"><a tabindex="-1" href="#argquant-validity2-comp" title="Copy heading and permalink for Task 3.4.10.c" aria-label="Copy heading and permalink for Task 3.4.10.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 3.4.10"><a tabindex="-1" href="#argquant-validity2" title="Copy heading and permalink for Activity 3.4.10" aria-label="Copy heading and permalink for Activity 3.4.10">🔗</a></div>
 </article>
 <section class="reading-questions" id="argumentsquant3-4-26">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Check Your Understanding</span>
-</h3>
-<article class="exercise exercise-like" id="DMT_argquant_CYU_zsRsRz"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</h2>
+<article class="exercise exercise-like" id="DMT_argquant_CYU_zsRsRz"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
 <div class="exercise-statement">
 <div class="para" id="DMT_argquant_CYU_zsRsRz-1-1">Determine whether the following argument is valid or invalid. <div class="tabular-box natural-width"><table class="tabular">
@@ -939,7 +965,7 @@ eBookConfig.enable_chatcodes =  false;
 </div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 3.4.1"><a tabindex="-1" href="#DMT_argquant_CYU_zsRsRz" title="Copy heading and permalink for Reading Question 3.4.1" aria-label="Copy heading and permalink for Reading Question 3.4.1">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_argquant_CYU_zsLnsLnz"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_argquant_CYU_zsLnsLnz"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
 <div class="exercise-statement">
 <div class="para" id="DMT_argquant_CYU_zsLnsLnz-1-1">Determine whether the following argument is valid or invalid. <div class="tabular-box natural-width"><table class="tabular">
@@ -970,7 +996,7 @@ eBookConfig.enable_chatcodes =  false;
 </div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 3.4.2"><a tabindex="-1" href="#DMT_argquant_CYU_zsLnsLnz" title="Copy heading and permalink for Reading Question 3.4.2" aria-label="Copy heading and permalink for Reading Question 3.4.2">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_argquant_CYU_zszaRsRa"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_argquant_CYU_zszaRsRa"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
 <div class="exercise-statement">
 <div class="para" id="DMT_argquant_CYU_zszaRsRa-1-1">Determine whether the following argument is valid or invalid. <div class="tabular-box natural-width"><table class="tabular">
@@ -1004,7 +1030,7 @@ eBookConfig.enable_chatcodes =  false;
 </div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 3.4.3"><a tabindex="-1" href="#DMT_argquant_CYU_zszaRsRa" title="Copy heading and permalink for Reading Question 3.4.3" aria-label="Copy heading and permalink for Reading Question 3.4.3">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_argquant_CYU_zsasza"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_argquant_CYU_zsasza"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
 <div class="exercise-statement">
 <div class="para" id="DMT_argquant_CYU_zsasza-1-1">Determine whether the following argument is valid or invalid. <div class="tabular-box natural-width"><table class="tabular">
@@ -1035,7 +1061,7 @@ eBookConfig.enable_chatcodes =  false;
 </div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 3.4.4"><a tabindex="-1" href="#DMT_argquant_CYU_zsasza" title="Copy heading and permalink for Reading Question 3.4.4" aria-label="Copy heading and permalink for Reading Question 3.4.4">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_argquant_CYU_zssaza"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_argquant_CYU_zssaza"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
 <div class="exercise-statement">
 <div class="para" id="DMT_argquant_CYU_zssaza-1-1">Determine whether the following argument is valid or invalid. <div class="tabular-box natural-width"><table class="tabular">
@@ -1066,7 +1092,7 @@ eBookConfig.enable_chatcodes =  false;
 </div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 3.4.5"><a tabindex="-1" href="#DMT_argquant_CYU_zssaza" title="Copy heading and permalink for Reading Question 3.4.5" aria-label="Copy heading and permalink for Reading Question 3.4.5">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_argquant_CYU_zaaszs"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_argquant_CYU_zaaszs"><h3 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
 <div class="exercise-statement">
 <div class="para" id="DMT_argquant_CYU_zaaszs-1-1">Determine whether the following argument is valid or invalid. <div class="tabular-box natural-width"><table class="tabular">
@@ -1099,14 +1125,15 @@ eBookConfig.enable_chatcodes =  false;
 </article><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 3.4: Check Your Understanding"><a tabindex="-1" href="#argumentsquant3-4-26" title="Copy heading and permalink for Reading Questions 3.4: Check Your Understanding" aria-label="Copy heading and permalink for Reading Questions 3.4: Check Your Understanding">🔗</a></div>
 </section>
 <section class="exercises" id="argumentsquant3-4-27">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
-</h3>
-<article class="exercise exercise-like" id="argumentsquant3-4-27-1"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</h2>
+<article class="exercise exercise-like" id="argumentsquant3-4-27-1"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="argumentsquant3-4-27-1-1-1">Determine if the argument is valid or invalid. If it is valid, state whether it is an example of modus ponens or modus tollens. If it is invalid, state whether it exhibits converse error or inverse error.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#argumentsquant3-4-27-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="argumentsquant3-4-27-1-1-2">
-<li id="argumentsquant3-4-27-1-1-2-1">
+<div class="para logical" id="argumentsquant3-4-27-1-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="argumentsquant3-4-27-1-1-2-1">
+<li id="argumentsquant3-4-27-1-1-2-1-1">
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines">All healthy people eat an apple a day.</td>
@@ -1119,9 +1146,9 @@ eBookConfig.enable_chatcodes =  false;
 <span class="process-math">\(\therefore\)</span> Keisha is a healthy person.</td>
 </tr>
 </table></div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.4.1.a"><a tabindex="-1" href="#argumentsquant3-4-27-1-1-2-1" title="Copy heading and permalink for Item 3.4.1.a" aria-label="Copy heading and permalink for Item 3.4.1.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.4.1.a"><a tabindex="-1" href="#argumentsquant3-4-27-1-1-2-1-1" title="Copy heading and permalink for Item 3.4.1.a" aria-label="Copy heading and permalink for Item 3.4.1.a">🔗</a></div>
 </li>
-<li id="argumentsquant3-4-27-1-1-2-2">
+<li id="argumentsquant3-4-27-1-1-2-1-2">
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines">If the product of two numbers is 0, then at least one of the numbers is 0.</td>
@@ -1134,9 +1161,9 @@ eBookConfig.enable_chatcodes =  false;
 <span class="process-math">\(\therefore\)</span> The product <span class="process-math">\((2x+1)(x-7)\)</span> is not 0.</td>
 </tr>
 </table></div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.4.1.b"><a tabindex="-1" href="#argumentsquant3-4-27-1-1-2-2" title="Copy heading and permalink for Item 3.4.1.b" aria-label="Copy heading and permalink for Item 3.4.1.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.4.1.b"><a tabindex="-1" href="#argumentsquant3-4-27-1-1-2-1-2" title="Copy heading and permalink for Item 3.4.1.b" aria-label="Copy heading and permalink for Item 3.4.1.b">🔗</a></div>
 </li>
-<li id="argumentsquant3-4-27-1-1-2-3">
+<li id="argumentsquant3-4-27-1-1-2-1-3">
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines">All honest people pay their taxes.</td>
@@ -1149,9 +1176,9 @@ eBookConfig.enable_chatcodes =  false;
 <span class="process-math">\(\therefore\)</span> Darth does not pay his taxes.</td>
 </tr>
 </table></div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.4.1.c"><a tabindex="-1" href="#argumentsquant3-4-27-1-1-2-3" title="Copy heading and permalink for Item 3.4.1.c" aria-label="Copy heading and permalink for Item 3.4.1.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.4.1.c"><a tabindex="-1" href="#argumentsquant3-4-27-1-1-2-1-3" title="Copy heading and permalink for Item 3.4.1.c" aria-label="Copy heading and permalink for Item 3.4.1.c">🔗</a></div>
 </li>
-<li id="argumentsquant3-4-27-1-1-2-4">
+<li id="argumentsquant3-4-27-1-1-2-1-4">
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines">Any sum of two rational numbers is rational.</td>
@@ -1164,9 +1191,9 @@ eBookConfig.enable_chatcodes =  false;
 <span class="process-math">\(\therefore\)</span> The numbers <span class="process-math">\(r\)</span> and <span class="process-math">\(s\)</span> are both rational.</td>
 </tr>
 </table></div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.4.1.d"><a tabindex="-1" href="#argumentsquant3-4-27-1-1-2-4" title="Copy heading and permalink for Item 3.4.1.d" aria-label="Copy heading and permalink for Item 3.4.1.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.4.1.d"><a tabindex="-1" href="#argumentsquant3-4-27-1-1-2-1-4" title="Copy heading and permalink for Item 3.4.1.d" aria-label="Copy heading and permalink for Item 3.4.1.d">🔗</a></div>
 </li>
-<li id="argumentsquant3-4-27-1-1-2-5">
+<li id="argumentsquant3-4-27-1-1-2-1-5">
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines">If an infinite series converges, then its terms go to 0.</td>
@@ -1179,9 +1206,9 @@ eBookConfig.enable_chatcodes =  false;
 <span class="process-math">\(\therefore\)</span> The infinite series <span class="process-math">\(\sum_{n=1}^{\infty}\frac{1}{n}\)</span> converges.</td>
 </tr>
 </table></div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.4.1.e"><a tabindex="-1" href="#argumentsquant3-4-27-1-1-2-5" title="Copy heading and permalink for Item 3.4.1.e" aria-label="Copy heading and permalink for Item 3.4.1.e">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.4.1.e"><a tabindex="-1" href="#argumentsquant3-4-27-1-1-2-1-5" title="Copy heading and permalink for Item 3.4.1.e" aria-label="Copy heading and permalink for Item 3.4.1.e">🔗</a></div>
 </li>
-<li id="argumentsquant3-4-27-1-1-2-6">
+<li id="argumentsquant3-4-27-1-1-2-1-6">
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines">If an infinite series converges, then its terms go to 0.</td>
@@ -1194,16 +1221,19 @@ eBookConfig.enable_chatcodes =  false;
 <span class="process-math">\(\therefore\)</span> The infinite series <span class="process-math">\(\sum_{n=1}^{\infty}\frac{n}{n+1}\)</span> does not converge.</td>
 </tr>
 </table></div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.4.1.f"><a tabindex="-1" href="#argumentsquant3-4-27-1-1-2-6" title="Copy heading and permalink for Item 3.4.1.f" aria-label="Copy heading and permalink for Item 3.4.1.f">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.4.1.f"><a tabindex="-1" href="#argumentsquant3-4-27-1-1-2-1-6" title="Copy heading and permalink for Item 3.4.1.f" aria-label="Copy heading and permalink for Item 3.4.1.f">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#argumentsquant3-4-27-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 3.4.1"><a tabindex="-1" href="#argumentsquant3-4-27-1" title="Copy heading and permalink for Exercise 3.4.1" aria-label="Copy heading and permalink for Exercise 3.4.1">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="argumentsquant3-4-27-2"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="argumentsquant3-4-27-2"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="argumentsquant3-4-27-2-1-1">Determine if the argument is valid or invalid. Support your answer by drawing a Venn diagram.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#argumentsquant3-4-27-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="argumentsquant3-4-27-2-1-2">
-<li id="argumentsquant3-4-27-2-1-2-1">
+<div class="para logical" id="argumentsquant3-4-27-2-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="argumentsquant3-4-27-2-1-2-1">
+<li id="argumentsquant3-4-27-2-1-2-1-1">
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines">All people are mice.</td>
@@ -1216,9 +1246,9 @@ eBookConfig.enable_chatcodes =  false;
 <span class="process-math">\(\therefore\)</span> All people are mortal.</td>
 </tr>
 </table></div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.4.2.a"><a tabindex="-1" href="#argumentsquant3-4-27-2-1-2-1" title="Copy heading and permalink for Item 3.4.2.a" aria-label="Copy heading and permalink for Item 3.4.2.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.4.2.a"><a tabindex="-1" href="#argumentsquant3-4-27-2-1-2-1-1" title="Copy heading and permalink for Item 3.4.2.a" aria-label="Copy heading and permalink for Item 3.4.2.a">🔗</a></div>
 </li>
-<li id="argumentsquant3-4-27-2-1-2-2">
+<li id="argumentsquant3-4-27-2-1-2-1-2">
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines">All polynomial functions are differentiable.</td>
@@ -1231,12 +1261,14 @@ eBookConfig.enable_chatcodes =  false;
 <span class="process-math">\(\therefore\)</span> All polynomial functions are continuous.</td>
 </tr>
 </table></div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.4.2.b"><a tabindex="-1" href="#argumentsquant3-4-27-2-1-2-2" title="Copy heading and permalink for Item 3.4.2.b" aria-label="Copy heading and permalink for Item 3.4.2.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.4.2.b"><a tabindex="-1" href="#argumentsquant3-4-27-2-1-2-1-2" title="Copy heading and permalink for Item 3.4.2.b" aria-label="Copy heading and permalink for Item 3.4.2.b">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#argumentsquant3-4-27-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 3.4.2"><a tabindex="-1" href="#argumentsquant3-4-27-2" title="Copy heading and permalink for Exercise 3.4.2" aria-label="Copy heading and permalink for Exercise 3.4.2">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="argumentsquant3-4-27-3"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="argumentsquant3-4-27-3"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="argumentsquant3-4-27-3-1-1">Use a diagram to show the following argument can have true premises and a false conclusion.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#argumentsquant3-4-27-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -1252,7 +1284,7 @@ eBookConfig.enable_chatcodes =  false;
 </table></div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 3.4.3"><a tabindex="-1" href="#argumentsquant3-4-27-3" title="Copy heading and permalink for Exercise 3.4.3" aria-label="Copy heading and permalink for Exercise 3.4.3">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="argumentsquant3-4-27-4"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="argumentsquant3-4-27-4"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="argumentsquant3-4-27-4-1-1">What can you conclude about the validity or invalidity of the following argument form? Explain your answer.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#argumentsquant3-4-27-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -1273,7 +1305,7 @@ eBookConfig.enable_chatcodes =  false;
 </table></div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 3.4.4"><a tabindex="-1" href="#argumentsquant3-4-27-4" title="Copy heading and permalink for Exercise 3.4.4" aria-label="Copy heading and permalink for Exercise 3.4.4">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="argumentsquant3-4-27-5"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="argumentsquant3-4-27-5"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="argumentsquant3-4-27-5-1-1">What can you conclude about the validity or invalidity of the following argument form? Explain your answer.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#argumentsquant3-4-27-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="tabular-box natural-width"><table class="tabular">
 <tr>

@@ -19,15 +19,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-2 { system: extends decimal; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-3 { system: extends decimal; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-4 { system: extends lower-roman; prefix: ''; suffix: '. '; }
+</style>
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
 hasWebworkReps: false,
 hasSage: false,
 isReact: false,
 htmlPresentation: false,
+lang: "en-US",
 });
-</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta name="twitter:title" content="Discrete Mathematics: An Active Approach to Mathematical Reasoning">
@@ -36,7 +42,7 @@ htmlPresentation: false,
 <meta name="twitter:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta property="og:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.43"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.54"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.54"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -58,21 +64,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.9';
+eBookConfig.runestone_version = '8.3.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.846a0d6fafaa99e0.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.bbcfc02849ebc023.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/prefix-runtime.4beca1fdeed766a2.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.ebd33f6a21eed414.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.9963089870a016c8.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="DiscreteMathText" class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></div>
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="DiscreteMath-14-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
@@ -85,7 +91,17 @@ eBookConfig.enable_chatcodes =  false;
 <div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
 <ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
-<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
 <h2 class="heading">Readability settings</h2>
 <button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
@@ -103,7 +119,7 @@ eBookConfig.enable_chatcodes =  false;
 <legend>Assistive technologies</legend>
 <label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
 </fieldset>
-<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="chapter5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter5.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="induction5-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="chapter5-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter5.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="induction5-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \newcommand{\MyTikzmark}[2]{
      \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
 \newcommand{\DrawVLine}[3][]{
@@ -134,6 +150,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter1.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to Mathematical Language</span></a></div>
 <ul id="ptx-toc-group-chapter1" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter1-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="variables1-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Variables and Statements</span></a></div>
 <ul id="ptx-toc-group-variables1-1" class="structural toc-item-list">
@@ -160,6 +177,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter2.html" class="internal"><span class="codenumber">2</span> <span class="title">Logic</span></a></div>
 <ul id="ptx-toc-group-chapter2" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter2-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="logical_form2-1.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Truth-Tables and Logical Equivalence</span></a></div>
 <ul id="ptx-toc-group-logical_form2-1" class="structural toc-item-list">
@@ -186,6 +204,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter3.html" class="internal"><span class="codenumber">3</span> <span class="title">Logic with Quantifiers</span></a></div>
 <ul id="ptx-toc-group-chapter3" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter3-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="quantifiersI3-1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Quantifiers</span></a></div>
 <ul id="ptx-toc-group-quantifiersI3-1" class="structural toc-item-list">
@@ -219,6 +238,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter4.html" class="internal"><span class="codenumber">4</span> <span class="title">Proof Techniques</span></a></div>
 <ul id="ptx-toc-group-chapter4" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter4-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="directproof4-1.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Direct Proof and Counterexample</span></a></div>
 <ul id="ptx-toc-group-directproof4-1" class="structural toc-item-list">
@@ -266,6 +286,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="chapter5.html" class="internal"><span class="codenumber">5</span> <span class="title">Sequences and Mathematical Induction</span></a></div>
 <ul class="structural toc-item-list contains-active" id="ptx-toc-group-chapter5">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter5-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="sequences5-1.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Sequences</span></a></div>
 <ul class="structural toc-item-list active" id="ptx-toc-group-sequences5-1">
@@ -313,6 +334,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter6.html" class="internal"><span class="codenumber">6</span> <span class="title">Set Theory</span></a></div>
 <ul id="ptx-toc-group-chapter6" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter6-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sets6-1.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Set Theory</span></a></div>
 <ul id="ptx-toc-group-sets6-1" class="structural toc-item-list">
@@ -339,6 +361,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter7.html" class="internal"><span class="codenumber">7</span> <span class="title">Functions</span></a></div>
 <ul id="ptx-toc-group-chapter7" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter7-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="functions7-1.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Functions</span></a></div>
 <ul id="ptx-toc-group-functions7-1" class="structural toc-item-list">
@@ -358,6 +381,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter8.html" class="internal"><span class="codenumber">8</span> <span class="title">Relations</span></a></div>
 <ul id="ptx-toc-group-chapter8" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter8-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="relations8-1.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Relations on Sets</span></a></div>
 <ul id="ptx-toc-group-relations8-1" class="structural toc-item-list">
@@ -391,6 +415,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter9.html" class="internal"><span class="codenumber">9</span> <span class="title">Probability and Counting</span></a></div>
 <ul id="ptx-toc-group-chapter9" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter9-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="probability9-1.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Probability</span></a></div>
 <ul id="ptx-toc-group-probability9-1" class="structural toc-item-list">
@@ -438,6 +463,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter10.html" class="internal"><span class="codenumber">10</span> <span class="title">Graph Theory</span></a></div>
 <ul id="ptx-toc-group-chapter10" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter10-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="graphs10-1.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphs</span></a></div>
 <ul id="ptx-toc-group-graphs10-1" class="structural toc-item-list">
@@ -465,7 +491,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="DiscreteMath-14.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul id="ptx-toc-group-DiscreteMath-14" class="structural toc-item-list">
 <li class="toc-item toc-references"><div class="toc-title-box"><a href="DiscreteMath-14-1.html" class="internal"><span class="title">References</span></a></div></li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A.</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="DiscreteMath-14-3.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="DiscreteMath-14-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
@@ -473,14 +499,14 @@ eBookConfig.enable_chatcodes =  false;
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="sequences5-1">
-<h2 class="heading hide-type">
+<h1 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sequences</span>
-</h2>
+</h1>
 <div class="para" id="sequences5-1-5">In this section we look at the mathematical concept of sequences. Although many sequences themselves are straightforward, such as <span class="process-math">\(2, 4, 6, 8, \ldots\text{,}\)</span> we need to introduce notation and terminology for working with general sequences.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="definition definition-like" id="D_sequence"><h3 class="heading">
+<article class="definition definition-like" id="D_sequence"><h2 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+</h2>
 <div class="para" id="D_sequence-1-1">A <dfn class="terminology">sequence</dfn> is an ordered list.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_sequence-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Definition 5.1.1"><a tabindex="-1" href="#D_sequence" title="Copy heading and permalink for Definition 5.1.1" aria-label="Copy heading and permalink for Definition 5.1.1">🔗</a></div>
@@ -489,9 +515,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="sequences5-1-8">Each <span class="process-math">\(a_k\)</span> is called a <dfn class="terminology">term</dfn> in the sequence. The subscript <span class="process-math">\(k\)</span> is called the <dfn class="terminology">index</dfn>. The index will be an integer, and almost always a nonnegative integer. The first term <span class="process-math">\(a_1\)</span> (or sometimes <span class="process-math">\(a_0\)</span>) is called the <dfn class="terminology">initial term</dfn>. The term <span class="process-math">\(a_k\)</span> is called the <span class="process-math">\(k^{th}\)</span> term. It is also often called the <dfn class="terminology">general</dfn> term of the sequence.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_sequences" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sequences.</span>
-</h3></summary>
+<details id="E_sequences" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sequences.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_sequences-2">Consider the sequence <span class="process-math">\(2, 4, 6, 8, 10, \ldots\text{.}\)</span> The initial term is <span class="process-math">\(a_1=2\text{.}\)</span> The <span class="process-math">\(k^{th}\)</span> term is <span class="process-math">\(a_k=2k\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_sequences-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -499,9 +525,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Example 5.1.2: Sequences"><a tabindex="-1" href="#E_sequences" title="Copy heading and permalink for Example 5.1.2: Sequences" aria-label="Copy heading and permalink for Example 5.1.2: Sequences">🔗</a></div>
 </article></details>
-<details id="E_generalsequences" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Explicitly Defined Sequences.</span>
-</h3></summary>
+<details id="E_generalsequences" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Explicitly Defined Sequences.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_generalsequences-2">We can define a sequence by giving the general term.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_generalsequences-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -540,52 +566,52 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" aria-hidden="true" data-description="Answer 5.1.3.4"><a tabindex="-1" href="#E_generalsequences-10" title="Copy heading and permalink for Answer 5.1.3.4" aria-label="Copy heading and permalink for Answer 5.1.3.4">🔗</a></div>
 </div></details><div class="autopermalink" aria-hidden="true" data-description="Example 5.1.3: Explicitly Defined Sequences"><a tabindex="-1" href="#E_generalsequences" title="Copy heading and permalink for Example 5.1.3: Explicitly Defined Sequences" aria-label="Copy heading and permalink for Example 5.1.3: Explicitly Defined Sequences">🔗</a></div>
 </article></details>
-<article class="activity project-like" id="sequence-alt"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="sequence-alt"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="introduction" id="sequence-alt-1">
 <div class="para" id="sequence-alt-1-1">Consider the sequence <span class="process-math">\(a_k=(-1)^k\)</span> for <span class="process-math">\(k\geq 0\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequence-alt-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="sequence-alt-five"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="sequence-alt-five"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="sequence-alt-five-1-1">Write the first 5 terms of the sequence.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequence-alt-five-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.1.a"><a tabindex="-1" href="#sequence-alt-five" title="Copy heading and permalink for Task 5.1.1.a" aria-label="Copy heading and permalink for Task 5.1.1.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.4.a"><a tabindex="-1" href="#sequence-alt-five" title="Copy heading and permalink for Task 5.1.4.a" aria-label="Copy heading and permalink for Task 5.1.4.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="sequence-alt-initial"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="sequence-alt-initial"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="sequence-alt-initial-1-1">What is the initial term?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequence-alt-initial-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.1.b"><a tabindex="-1" href="#sequence-alt-initial" title="Copy heading and permalink for Task 5.1.1.b" aria-label="Copy heading and permalink for Task 5.1.1.b">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 5.1.1"><a tabindex="-1" href="#sequence-alt" title="Copy heading and permalink for Activity 5.1.1" aria-label="Copy heading and permalink for Activity 5.1.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.4.b"><a tabindex="-1" href="#sequence-alt-initial" title="Copy heading and permalink for Task 5.1.4.b" aria-label="Copy heading and permalink for Task 5.1.4.b">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 5.1.4"><a tabindex="-1" href="#sequence-alt" title="Copy heading and permalink for Activity 5.1.4" aria-label="Copy heading and permalink for Activity 5.1.4">🔗</a></div>
 </article>
-<article class="activity project-like" id="sequence-frac"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="sequence-frac"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="introduction" id="sequence-frac-1">
 <div class="para" id="sequence-frac-1-1">Consider the sequence <span class="process-math">\(a_k=\frac{1}{k-1}\)</span> for <span class="process-math">\(k\geq 3\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequence-frac-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="sequence-frac-five"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="sequence-frac-five"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="sequence-frac-five-1-1">Write the first 5 terms of the sequence.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequence-frac-five-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.2.a"><a tabindex="-1" href="#sequence-frac-five" title="Copy heading and permalink for Task 5.1.2.a" aria-label="Copy heading and permalink for Task 5.1.2.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.5.a"><a tabindex="-1" href="#sequence-frac-five" title="Copy heading and permalink for Task 5.1.5.a" aria-label="Copy heading and permalink for Task 5.1.5.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="sequence-frac-initial"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="sequence-frac-initial"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="sequence-frac-initial-1-1">What is the initial term?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequence-frac-initial-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.2.b"><a tabindex="-1" href="#sequence-frac-initial" title="Copy heading and permalink for Task 5.1.2.b" aria-label="Copy heading and permalink for Task 5.1.2.b">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 5.1.2"><a tabindex="-1" href="#sequence-frac" title="Copy heading and permalink for Activity 5.1.2" aria-label="Copy heading and permalink for Activity 5.1.2">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.5.b"><a tabindex="-1" href="#sequence-frac-initial" title="Copy heading and permalink for Task 5.1.5.b" aria-label="Copy heading and permalink for Task 5.1.5.b">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 5.1.5"><a tabindex="-1" href="#sequence-frac" title="Copy heading and permalink for Activity 5.1.5" aria-label="Copy heading and permalink for Activity 5.1.5">🔗</a></div>
 </article>
-<article class="activity project-like" id="sequence-general"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="sequence-general"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="sequence-general-1-1">Consider the sequence <span class="process-math">\(0, 1, -2, 3, -4, 5,  \ldots\text{.}\)</span> Find a general formula for the <span class="process-math">\(k\)</span>th term, <span class="process-math">\(a_k\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequence-general-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 5.1.3"><a tabindex="-1" href="#sequence-general" title="Copy heading and permalink for Activity 5.1.3" aria-label="Copy heading and permalink for Activity 5.1.3">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 5.1.6"><a tabindex="-1" href="#sequence-general" title="Copy heading and permalink for Activity 5.1.6" aria-label="Copy heading and permalink for Activity 5.1.6">🔗</a></div>
 </article>
 <div class="para" id="sequences5-1-14">We are going to look at many examples where we want to add terms in a sequence. The following notation will be helpful when working with sums.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="assemblage assemblage-like" id="B_sumnotation"><h3 class="heading"><span class="title">Summation Notation.</span></h3>
+<article class="assemblage assemblage-like" id="B_sumnotation"><h2 class="heading"><span class="title">Summation Notation.</span></h2>
 <div class="para logical" id="B_sumnotation-3">
 <div class="para">We can write a sum using sigma or summation notation:</div>
 <div class="displaymath process-math" id="B_sumnotation-3-1">
@@ -598,9 +624,9 @@ a_1+a_2+\cdots +a_n=\sum_{k=1}^{n}a_k.
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Assemblage: Summation Notation"><a tabindex="-1" href="#B_sumnotation" title="Copy heading and permalink for Assemblage: Summation Notation" aria-label="Copy heading and permalink for Assemblage: Summation Notation">🔗</a></div>
 </article>
-<details id="E_sumnotation" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Summation Notation.</span>
-</h3></summary>
+<details id="E_sumnotation" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Summation Notation.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_sumnotation-2">Find <span class="process-math">\(\sum_{k=1}^4 k\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_sumnotation-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -609,7 +635,7 @@ a_1+a_2+\cdots +a_n=\sum_{k=1}^{n}a_k.
 <div class="para" id="E_sumnotation-3-1">
 <span class="process-math">\(1+2+3+4=10\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_sumnotation-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Answer 5.1.4.1"><a tabindex="-1" href="#E_sumnotation-3" title="Copy heading and permalink for Answer 5.1.4.1" aria-label="Copy heading and permalink for Answer 5.1.4.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 5.1.7.1"><a tabindex="-1" href="#E_sumnotation-3" title="Copy heading and permalink for Answer 5.1.7.1" aria-label="Copy heading and permalink for Answer 5.1.7.1">🔗</a></div>
 </div></details>
 <div class="para" id="E_sumnotation-4">Find <span class="process-math">\(\sum_{k=1}^5 k^2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_sumnotation-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -618,7 +644,7 @@ a_1+a_2+\cdots +a_n=\sum_{k=1}^{n}a_k.
 <div class="para" id="E_sumnotation-5-1">
 <span class="process-math">\(1^2+2^2+3^2+4^2+5^2=55\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_sumnotation-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Answer 5.1.4.2"><a tabindex="-1" href="#E_sumnotation-5" title="Copy heading and permalink for Answer 5.1.4.2" aria-label="Copy heading and permalink for Answer 5.1.4.2">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 5.1.7.2"><a tabindex="-1" href="#E_sumnotation-5" title="Copy heading and permalink for Answer 5.1.7.2" aria-label="Copy heading and permalink for Answer 5.1.7.2">🔗</a></div>
 </div></details>
 <div class="para" id="E_sumnotation-6">Find <span class="process-math">\(\sum_{k=1}^n k^2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_sumnotation-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -627,7 +653,7 @@ a_1+a_2+\cdots +a_n=\sum_{k=1}^{n}a_k.
 <div class="para" id="E_sumnotation-7-1">
 <span class="process-math">\(1^2+2^2+3^2+\cdots+n^2\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_sumnotation-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Answer 5.1.4.3"><a tabindex="-1" href="#E_sumnotation-7" title="Copy heading and permalink for Answer 5.1.4.3" aria-label="Copy heading and permalink for Answer 5.1.4.3">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 5.1.7.3"><a tabindex="-1" href="#E_sumnotation-7" title="Copy heading and permalink for Answer 5.1.7.3" aria-label="Copy heading and permalink for Answer 5.1.7.3">🔗</a></div>
 </div></details>
 <div class="para" id="E_sumnotation-8">Find <span class="process-math">\(\sum_{k=2}^2 k^2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_sumnotation-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -636,55 +662,55 @@ a_1+a_2+\cdots +a_n=\sum_{k=1}^{n}a_k.
 <div class="para" id="E_sumnotation-9-1">
 <span class="process-math">\(2^2=4\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_sumnotation-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Answer 5.1.4.4"><a tabindex="-1" href="#E_sumnotation-9" title="Copy heading and permalink for Answer 5.1.4.4" aria-label="Copy heading and permalink for Answer 5.1.4.4">🔗</a></div>
-</div></details><div class="autopermalink" aria-hidden="true" data-description="Example 5.1.4: Summation Notation"><a tabindex="-1" href="#E_sumnotation" title="Copy heading and permalink for Example 5.1.4: Summation Notation" aria-label="Copy heading and permalink for Example 5.1.4: Summation Notation">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 5.1.7.4"><a tabindex="-1" href="#E_sumnotation-9" title="Copy heading and permalink for Answer 5.1.7.4" aria-label="Copy heading and permalink for Answer 5.1.7.4">🔗</a></div>
+</div></details><div class="autopermalink" aria-hidden="true" data-description="Example 5.1.7: Summation Notation"><a tabindex="-1" href="#E_sumnotation" title="Copy heading and permalink for Example 5.1.7: Summation Notation" aria-label="Copy heading and permalink for Example 5.1.7: Summation Notation">🔗</a></div>
 </article></details>
 <div class="para" id="sequences5-1-17">Note, we can write the sum of only the <span class="process-math">\(m^{th}\)</span> term, <span class="process-math">\(\sum_{k=m}^{m}a_k=a_m\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="activity project-like" id="sequence-sumodd"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>Consider the sum <span class="process-math">\(\sum_{k=1}^{5}(2k-1)\text{.}\)</span> Write out the summation and find the sum.<div class="autopermalink" aria-hidden="true" data-description="Activity 5.1.4"><a tabindex="-1" href="#sequence-sumodd" title="Copy heading and permalink for Activity 5.1.4" aria-label="Copy heading and permalink for Activity 5.1.4">🔗</a></div>
+<article class="activity project-like" id="sequence-sumodd"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>Consider the sum <span class="process-math">\(\sum_{k=1}^{5}(2k-1)\text{.}\)</span> Write out the summation and find the sum.<div class="autopermalink" aria-hidden="true" data-description="Activity 5.1.8"><a tabindex="-1" href="#sequence-sumodd" title="Copy heading and permalink for Activity 5.1.8" aria-label="Copy heading and permalink for Activity 5.1.8">🔗</a></div>
 </article>
-<article class="activity project-like" id="sequence-sumfrac"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="sequence-sumfrac"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="introduction" id="sequence-sumfrac-1">
 <div class="para" id="sequence-sumfrac-1-1">Consider the sum <span class="process-math">\(\sum_{k=1}^{n}\frac{1}{k}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequence-sumfrac-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="sequence-sumfrac-sum1n"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="sequence-sumfrac-sum1n"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="sequence-sumfrac-sum1n-1-1">Write out the summation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequence-sumfrac-sum1n-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.5.a"><a tabindex="-1" href="#sequence-sumfrac-sum1n" title="Copy heading and permalink for Task 5.1.5.a" aria-label="Copy heading and permalink for Task 5.1.5.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.9.a"><a tabindex="-1" href="#sequence-sumfrac-sum1n" title="Copy heading and permalink for Task 5.1.9.a" aria-label="Copy heading and permalink for Task 5.1.9.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="sequence-sumfrac-sumnplus1"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="sequence-sumfrac-sumnplus1"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="sequence-sumfrac-sumnplus1-1-1">Write out the summation for <span class="process-math">\(\sum_{k=1}^{n+1}\frac{1}{k}\text{.}\)</span> How do (a) and (b) differ?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequence-sumfrac-sumnplus1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.5.b"><a tabindex="-1" href="#sequence-sumfrac-sumnplus1" title="Copy heading and permalink for Task 5.1.5.b" aria-label="Copy heading and permalink for Task 5.1.5.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.9.b"><a tabindex="-1" href="#sequence-sumfrac-sumnplus1" title="Copy heading and permalink for Task 5.1.9.b" aria-label="Copy heading and permalink for Task 5.1.9.b">🔗</a></div>
 </article>
-<article class="task exercise-like" id="sequence-sumfrac-sum0n"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<article class="task exercise-like" id="sequence-sumfrac-sum0n"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="sequence-sumfrac-sum0n-1-1">Write out the summation for <span class="process-math">\(\sum_{k=0}^{n}\frac{1}{k+1}\text{.}\)</span> Is this the same as either of the previous sums?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequence-sumfrac-sum0n-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.5.c"><a tabindex="-1" href="#sequence-sumfrac-sum0n" title="Copy heading and permalink for Task 5.1.5.c" aria-label="Copy heading and permalink for Task 5.1.5.c">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 5.1.5"><a tabindex="-1" href="#sequence-sumfrac" title="Copy heading and permalink for Activity 5.1.5" aria-label="Copy heading and permalink for Activity 5.1.5">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.9.c"><a tabindex="-1" href="#sequence-sumfrac-sum0n" title="Copy heading and permalink for Task 5.1.9.c" aria-label="Copy heading and permalink for Task 5.1.9.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 5.1.9"><a tabindex="-1" href="#sequence-sumfrac" title="Copy heading and permalink for Activity 5.1.9" aria-label="Copy heading and permalink for Activity 5.1.9">🔗</a></div>
 </article>
-<article class="activity project-like" id="sequence-sumfracprod"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="sequence-sumfracprod"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="introduction" id="sequence-sumfracprod-1">
 <div class="para" id="sequence-sumfracprod-1-1">Consider the sum <span class="process-math">\(\sum_{k=1}^{n}\frac{1}{k(k+1)}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequence-sumfracprod-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="sequence-sumfracprod-sum1n"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="sequence-sumfracprod-sum1n"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="sequence-sumfracprod-sum1n-1-1">Write out the summation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequence-sumfracprod-sum1n-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.6.a"><a tabindex="-1" href="#sequence-sumfracprod-sum1n" title="Copy heading and permalink for Task 5.1.6.a" aria-label="Copy heading and permalink for Task 5.1.6.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.10.a"><a tabindex="-1" href="#sequence-sumfracprod-sum1n" title="Copy heading and permalink for Task 5.1.10.a" aria-label="Copy heading and permalink for Task 5.1.10.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="sequence-sumfracprod-sumnplus1"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="sequence-sumfracprod-sumnplus1"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="sequence-sumfracprod-sumnplus1-1-1">Write out the summation for <span class="process-math">\(\sum_{k=1}^{n+1}\frac{1}{k(k+1)}\text{.}\)</span> How do (a) and (b) differ?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequence-sumfracprod-sumnplus1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.6.b"><a tabindex="-1" href="#sequence-sumfracprod-sumnplus1" title="Copy heading and permalink for Task 5.1.6.b" aria-label="Copy heading and permalink for Task 5.1.6.b">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 5.1.6"><a tabindex="-1" href="#sequence-sumfracprod" title="Copy heading and permalink for Activity 5.1.6" aria-label="Copy heading and permalink for Activity 5.1.6">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.10.b"><a tabindex="-1" href="#sequence-sumfracprod-sumnplus1" title="Copy heading and permalink for Task 5.1.10.b" aria-label="Copy heading and permalink for Task 5.1.10.b">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 5.1.10"><a tabindex="-1" href="#sequence-sumfracprod" title="Copy heading and permalink for Activity 5.1.10" aria-label="Copy heading and permalink for Activity 5.1.10">🔗</a></div>
 </article>
 <div class="para logical" id="sequences5-1-21">
 <div class="para">Just as we can add several terms of a sequence, the following notation allows us to multiply several terms of a sequence using <dfn class="terminology">product notation</dfn>:</div>
@@ -695,9 +721,9 @@ a_1\cdot a_2\cdot a_3\cdots a_n=\prod_{k=1}^{n}a_k.
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_prodnotation" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Product Notation.</span>
-</h3></summary>
+<details id="E_prodnotation" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.11</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Product Notation.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_prodnotation-2">Find <span class="process-math">\(\prod_{k=1}^4 k\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_prodnotation-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -706,7 +732,7 @@ a_1\cdot a_2\cdot a_3\cdots a_n=\prod_{k=1}^{n}a_k.
 <div class="para" id="E_prodnotation-3-1">
 <span class="process-math">\(1\cdot2\cdot3\cdot 4=24\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_prodnotation-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Answer 5.1.5.1"><a tabindex="-1" href="#E_prodnotation-3" title="Copy heading and permalink for Answer 5.1.5.1" aria-label="Copy heading and permalink for Answer 5.1.5.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 5.1.11.1"><a tabindex="-1" href="#E_prodnotation-3" title="Copy heading and permalink for Answer 5.1.11.1" aria-label="Copy heading and permalink for Answer 5.1.11.1">🔗</a></div>
 </div></details>
 <div class="para" id="E_prodnotation-4">Find <span class="process-math">\(\prod_{k=1}^3 k^2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_prodnotation-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -715,36 +741,36 @@ a_1\cdot a_2\cdot a_3\cdots a_n=\prod_{k=1}^{n}a_k.
 <div class="para" id="E_prodnotation-5-1">
 <span class="process-math">\(1^2\cdot2^2\cdot3^2=36\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_prodnotation-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Answer 5.1.5.2"><a tabindex="-1" href="#E_prodnotation-5" title="Copy heading and permalink for Answer 5.1.5.2" aria-label="Copy heading and permalink for Answer 5.1.5.2">🔗</a></div>
-</div></details><div class="autopermalink" aria-hidden="true" data-description="Example 5.1.5: Product Notation"><a tabindex="-1" href="#E_prodnotation" title="Copy heading and permalink for Example 5.1.5: Product Notation" aria-label="Copy heading and permalink for Example 5.1.5: Product Notation">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 5.1.11.2"><a tabindex="-1" href="#E_prodnotation-5" title="Copy heading and permalink for Answer 5.1.11.2" aria-label="Copy heading and permalink for Answer 5.1.11.2">🔗</a></div>
+</div></details><div class="autopermalink" aria-hidden="true" data-description="Example 5.1.11: Product Notation"><a tabindex="-1" href="#E_prodnotation" title="Copy heading and permalink for Example 5.1.11: Product Notation" aria-label="Copy heading and permalink for Example 5.1.11: Product Notation">🔗</a></div>
 </article></details>
-<article class="activity project-like" id="sequence-prod"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="sequence-prod"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="introduction" id="sequence-prod-1">
 <div class="para" id="sequence-prod-1-1">Write out the following products.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequence-prod-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="sequence-prod-a"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="sequence-prod-a"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="sequence-prod-a-1-1">
 <span class="process-math">\(\prod_{k=1}^{5}(2k-1)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequence-prod-a-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.7.a"><a tabindex="-1" href="#sequence-prod-a" title="Copy heading and permalink for Task 5.1.7.a" aria-label="Copy heading and permalink for Task 5.1.7.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.12.a"><a tabindex="-1" href="#sequence-prod-a" title="Copy heading and permalink for Task 5.1.12.a" aria-label="Copy heading and permalink for Task 5.1.12.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="sequence-prod-b"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="sequence-prod-b"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="sequence-prod-b-1-1">
 <span class="process-math">\(\prod_{k=1}^{n+1}(2k)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequence-prod-b-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.7.b"><a tabindex="-1" href="#sequence-prod-b" title="Copy heading and permalink for Task 5.1.7.b" aria-label="Copy heading and permalink for Task 5.1.7.b">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 5.1.7"><a tabindex="-1" href="#sequence-prod" title="Copy heading and permalink for Activity 5.1.7" aria-label="Copy heading and permalink for Activity 5.1.7">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.12.b"><a tabindex="-1" href="#sequence-prod-b" title="Copy heading and permalink for Task 5.1.12.b" aria-label="Copy heading and permalink for Task 5.1.12.b">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 5.1.12"><a tabindex="-1" href="#sequence-prod" title="Copy heading and permalink for Activity 5.1.12" aria-label="Copy heading and permalink for Activity 5.1.12">🔗</a></div>
 </article>
-<div class="para" id="sequences5-1-24">Recall, we defined <span class="process-math">\(n\)</span> factorial in <a href="divisibility4-3.html#D_factorial" class="xref" data-knowl="./knowl/xref/D_factorial.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.3.7">Definition 4.3.7</a>: <span class="process-math">\(n!=(n)(n-1)\cdots(2)(1)\text{.}\)</span> We also need to define <span class="process-math">\(0!=1\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sequences5-1-24">Recall, we defined <span class="process-math">\(n\)</span> factorial in <a href="divisibility4-3.html#D_factorial" class="xref" data-knowl="./knowl/xref/D_factorial.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.3.12">Definition 4.3.12</a>: <span class="process-math">\(n!=(n)(n-1)\cdots(2)(1)\text{.}\)</span> We also need to define <span class="process-math">\(0!=1\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sequences5-1-25">The following properties are helpful when working with sums and products.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="assemblage assemblage-like" id="B_propsumprod"><h3 class="heading"><span class="title">Properties of Sums and Products.</span></h3>
+<article class="assemblage assemblage-like" id="B_propsumprod"><h2 class="heading"><span class="title">Properties of Sums and Products.</span></h2>
 <div class="para logical" id="B_propsumprod-2">
-<ol class="decimal ol-marker-3" id="B_propsumprod-2-1">
+<ol class="decimal" style="list-style: ptx-marker-3;" id="B_propsumprod-2-1">
 <li id="B_propsumprod-2-1-1">
 <div class="para" id="p-derived-B_propsumprod-2-1-1"><span class="process-math">\(\displaystyle \sum_{k=m}^{n}a_k+\sum_{k=m}^{n}b_k=\sum_{k=m}^{n}(a_k+b_k)\)</span></div>
 <div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#B_propsumprod-2-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
@@ -762,9 +788,9 @@ a_1\cdot a_2\cdot a_3\cdots a_n=\prod_{k=1}^{n}a_k.
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Assemblage: Properties of Sums and Products"><a tabindex="-1" href="#B_propsumprod" title="Copy heading and permalink for Assemblage: Properties of Sums and Products" aria-label="Copy heading and permalink for Assemblage: Properties of Sums and Products">🔗</a></div>
 </article>
-<article class="activity project-like" id="sequence-pfsum"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="sequence-pfsum"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="sequence-pfsum-1-1">Prove <span class="process-math">\(\sum_{k=1}^{n}a_k + \sum_{k=1}^{n}b_k=\sum_{k=1}^{n}(a_k+b_k)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequence-pfsum-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
@@ -772,17 +798,17 @@ a_1\cdot a_2\cdot a_3\cdots a_n=\prod_{k=1}^{n}a_k.
 <div class="hint solution-like knowl__content">
 <div class="para" id="sequence-pfsum-3-1">Try writing out the sum rather than using summation notation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequence-pfsum-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Hint 5.1.8.1"><a tabindex="-1" href="#sequence-pfsum-3" title="Copy heading and permalink for Hint 5.1.8.1" aria-label="Copy heading and permalink for Hint 5.1.8.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Hint 5.1.13.1"><a tabindex="-1" href="#sequence-pfsum-3" title="Copy heading and permalink for Hint 5.1.13.1" aria-label="Copy heading and permalink for Hint 5.1.13.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 5.1.8"><a tabindex="-1" href="#sequence-pfsum" title="Copy heading and permalink for Activity 5.1.8" aria-label="Copy heading and permalink for Activity 5.1.8">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 5.1.13"><a tabindex="-1" href="#sequence-pfsum" title="Copy heading and permalink for Activity 5.1.13" aria-label="Copy heading and permalink for Activity 5.1.13">🔗</a></div>
 </article>
-<article class="definition definition-like" id="D_choose"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="definition definition-like" id="D_choose"><h2 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="D_choose-1-1">The number of subsets of size <span class="process-math">\(r\)</span> that can be chosen from a set of <span class="process-math">\(n\)</span> elements is <span class="process-math">\(n\)</span> <dfn class="terminology">choose</dfn> <span class="process-math">\(r\text{.}\)</span> Notation <span class="process-math">\(\binom{n}{r}\)</span>, read “<span class="process-math">\(n\)</span> choose <span class="process-math">\(r\text{.}\)</span>”<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_choose-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definition 5.1.6"><a tabindex="-1" href="#D_choose" title="Copy heading and permalink for Definition 5.1.6" aria-label="Copy heading and permalink for Definition 5.1.6">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 5.1.14"><a tabindex="-1" href="#D_choose" title="Copy heading and permalink for Definition 5.1.14" aria-label="Copy heading and permalink for Definition 5.1.14">🔗</a></div>
 </article>
 <div class="para logical" id="sequences5-1-29">
 <div class="para">We can calculate the number of sets of <span class="process-math">\(r\)</span> objects chosen from <span class="process-math">\(n\)</span> objects with the following formula:</div>
@@ -793,9 +819,9 @@ a_1\cdot a_2\cdot a_3\cdots a_n=\prod_{k=1}^{n}a_k.
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_nchooser" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding <span class="process-math">\(n\)</span> choose <span class="process-math">\(r\)</span>.</span>
-</h3></summary>
+<details id="E_nchooser" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.15</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding <span class="process-math">\(n\)</span> choose <span class="process-math">\(r\)</span>.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_nchooser-2">Calculate <span class="process-math">\(\binom{5}{3}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_nchooser-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -804,7 +830,7 @@ a_1\cdot a_2\cdot a_3\cdots a_n=\prod_{k=1}^{n}a_k.
 <div class="para" id="E_nchooser-3-1">
 <span class="process-math">\(\frac{5!}{3!2!}=10\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_nchooser-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Answer 5.1.7.1"><a tabindex="-1" href="#E_nchooser-3" title="Copy heading and permalink for Answer 5.1.7.1" aria-label="Copy heading and permalink for Answer 5.1.7.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 5.1.15.1"><a tabindex="-1" href="#E_nchooser-3" title="Copy heading and permalink for Answer 5.1.15.1" aria-label="Copy heading and permalink for Answer 5.1.15.1">🔗</a></div>
 </div></details>
 <div class="para" id="E_nchooser-4">Calculate <span class="process-math">\(\binom{5}{1}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_nchooser-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -813,7 +839,7 @@ a_1\cdot a_2\cdot a_3\cdots a_n=\prod_{k=1}^{n}a_k.
 <div class="para" id="E_nchooser-5-1">
 <span class="process-math">\(\frac{5!}{1!4!}=5\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_nchooser-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Answer 5.1.7.2"><a tabindex="-1" href="#E_nchooser-5" title="Copy heading and permalink for Answer 5.1.7.2" aria-label="Copy heading and permalink for Answer 5.1.7.2">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 5.1.15.2"><a tabindex="-1" href="#E_nchooser-5" title="Copy heading and permalink for Answer 5.1.15.2" aria-label="Copy heading and permalink for Answer 5.1.15.2">🔗</a></div>
 </div></details>
 <div class="para" id="E_nchooser-6">Calculate <span class="process-math">\(\binom{5}{4}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_nchooser-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -822,7 +848,7 @@ a_1\cdot a_2\cdot a_3\cdots a_n=\prod_{k=1}^{n}a_k.
 <div class="para" id="E_nchooser-7-1">
 <span class="process-math">\(\frac{5!}{4!1!}=5\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_nchooser-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Answer 5.1.7.3"><a tabindex="-1" href="#E_nchooser-7" title="Copy heading and permalink for Answer 5.1.7.3" aria-label="Copy heading and permalink for Answer 5.1.7.3">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 5.1.15.3"><a tabindex="-1" href="#E_nchooser-7" title="Copy heading and permalink for Answer 5.1.15.3" aria-label="Copy heading and permalink for Answer 5.1.15.3">🔗</a></div>
 </div></details>
 <div class="para" id="E_nchooser-8">Calculate <span class="process-math">\(\binom{5}{0}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_nchooser-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -831,15 +857,15 @@ a_1\cdot a_2\cdot a_3\cdots a_n=\prod_{k=1}^{n}a_k.
 <div class="para" id="E_nchooser-9-1">
 <span class="process-math">\(\frac{5!}{0!5!}=1\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_nchooser-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Answer 5.1.7.4"><a tabindex="-1" href="#E_nchooser-9" title="Copy heading and permalink for Answer 5.1.7.4" aria-label="Copy heading and permalink for Answer 5.1.7.4">🔗</a></div>
-</div></details><div class="autopermalink" aria-hidden="true" data-description="Example 5.1.7: Finding n choose r"><a tabindex="-1" href="#E_nchooser" title="Copy heading and permalink for Example 5.1.7: Finding n choose r" aria-label="Copy heading and permalink for Example 5.1.7: Finding n choose r">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 5.1.15.4"><a tabindex="-1" href="#E_nchooser-9" title="Copy heading and permalink for Answer 5.1.15.4" aria-label="Copy heading and permalink for Answer 5.1.15.4">🔗</a></div>
+</div></details><div class="autopermalink" aria-hidden="true" data-description="Example 5.1.15: Finding n choose r"><a tabindex="-1" href="#E_nchooser" title="Copy heading and permalink for Example 5.1.15: Finding n choose r" aria-label="Copy heading and permalink for Example 5.1.15: Finding n choose r">🔗</a></div>
 </article></details>
-<article class="activity project-like" id="sequence-6binom"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="sequence-6binom"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="sequence-6binom-1-1">Find <span class="process-math">\({6 \choose 3}\)</span> and <span class="process-math">\({6 \choose 0}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequence-6binom-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 5.1.9"><a tabindex="-1" href="#sequence-6binom" title="Copy heading and permalink for Activity 5.1.9" aria-label="Copy heading and permalink for Activity 5.1.9">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 5.1.16"><a tabindex="-1" href="#sequence-6binom" title="Copy heading and permalink for Activity 5.1.16" aria-label="Copy heading and permalink for Activity 5.1.16">🔗</a></div>
 </article>
 <div class="para logical" id="sequences5-1-32">
 <div class="para">When we get to mathematical induction in the next section, it will be important that we can work with summations when we want to add “the <span class="process-math">\(n+1\)</span> term” to a summation. In particular, the following observation is useful:</div>
@@ -852,9 +878,9 @@ a_1\cdot a_2\cdot a_3\cdots a_n=\prod_{k=1}^{n}a_k.
 </div>
 <div class="para" id="sequences5-1-33">We should also note that there are often multiple ways to write the same sum.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-33" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_changevariables" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Writing a Sum in Two Different Ways.</span>
-</h3></summary>
+<details id="E_changevariables" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.17</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Writing a Sum in Two Different Ways.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_changevariables-2">Consider the sum <span class="process-math">\(1^2+2^2+3^2\text{.}\)</span> Depending on how we index the sum, we can write it in different ways.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_changevariables-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -862,131 +888,140 @@ a_1\cdot a_2\cdot a_3\cdots a_n=\prod_{k=1}^{n}a_k.
 </div>
 <div class="para" id="E_changevariables-4">If we index from <span class="process-math">\(k=2\)</span> to 4, we have <span class="process-math">\(\sum_{k=2}^4(k-1)^2=1^2+2^2+3^2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_changevariables-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Example 5.1.8: Writing a Sum in Two Different Ways"><a tabindex="-1" href="#E_changevariables" title="Copy heading and permalink for Example 5.1.8: Writing a Sum in Two Different Ways" aria-label="Copy heading and permalink for Example 5.1.8: Writing a Sum in Two Different Ways">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 5.1.17: Writing a Sum in Two Different Ways"><a tabindex="-1" href="#E_changevariables" title="Copy heading and permalink for Example 5.1.17: Writing a Sum in Two Different Ways" aria-label="Copy heading and permalink for Example 5.1.17: Writing a Sum in Two Different Ways">🔗</a></div>
 </article></details>
 <section class="reading-questions" id="sequences5-1-35">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Check Your Understanding</span>
-</h3>
-<article class="exercise exercise-like" id="DMT_sequence_CYU_termskp1dkp3"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</h2>
+<article class="exercise exercise-like" id="DMT_sequence_CYU_termskp1dkp3"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_sequence_CYU_termskp1dkp3-1-1">Write the terms of <span class="process-math">\(\frac{k+1}{k+3}, 0\leq k\leq 4\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_sequence_CYU_termskp1dkp3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 5.1.1"><a tabindex="-1" href="#DMT_sequence_CYU_termskp1dkp3" title="Copy heading and permalink for Reading Question 5.1.1" aria-label="Copy heading and permalink for Reading Question 5.1.1">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_sequence_CYU_termsaltd2k"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_sequence_CYU_termsaltd2k"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_sequence_CYU_termsaltd2k-1-1">Write the terms of <span class="process-math">\(\frac{(-1)^k}{2k}, 1\leq k\leq 6\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_sequence_CYU_termsaltd2k-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 5.1.2"><a tabindex="-1" href="#DMT_sequence_CYU_termsaltd2k" title="Copy heading and permalink for Reading Question 5.1.2" aria-label="Copy heading and permalink for Reading Question 5.1.2">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_sequence_CYU_termsaltkd2"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_sequence_CYU_termsaltkd2"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_sequence_CYU_termsaltkd2-1-1">Write the terms of <span class="process-math">\(\frac{(-1)^kk}{2}, 1\leq k\leq 4\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_sequence_CYU_termsaltkd2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 5.1.3"><a tabindex="-1" href="#DMT_sequence_CYU_termsaltkd2" title="Copy heading and permalink for Reading Question 5.1.3" aria-label="Copy heading and permalink for Reading Question 5.1.3">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_sequence_CYU_sum42km1"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_sequence_CYU_sum42km1"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_sequence_CYU_sum42km1-1-1">Write out the summation notation as a sum of terms: <span class="process-math">\(\sum_{k=1}^4 2k-1\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_sequence_CYU_sum42km1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 5.1.4"><a tabindex="-1" href="#DMT_sequence_CYU_sum42km1" title="Copy heading and permalink for Reading Question 5.1.4" aria-label="Copy heading and permalink for Reading Question 5.1.4">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_sequence_CYU_sumnk3"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_sequence_CYU_sumnk3"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_sequence_CYU_sumnk3-1-1">Write out the summation notation as a sum of terms: <span class="process-math">\(\sum_{k=1}^n k^3\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_sequence_CYU_sumnk3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 5.1.5"><a tabindex="-1" href="#DMT_sequence_CYU_sumnk3" title="Copy heading and permalink for Reading Question 5.1.5" aria-label="Copy heading and permalink for Reading Question 5.1.5">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_sequence_CYU_sumnp1k3"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_sequence_CYU_sumnp1k3"><h3 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_sequence_CYU_sumnp1k3-1-1">Write out the summation notation as a sum of terms: <span class="process-math">\(\sum_{k=1}^{n+1} k^3\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_sequence_CYU_sumnp1k3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 5.1.6"><a tabindex="-1" href="#DMT_sequence_CYU_sumnp1k3" title="Copy heading and permalink for Reading Question 5.1.6" aria-label="Copy heading and permalink for Reading Question 5.1.6">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_sequence_CYU_sum4altdk"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_sequence_CYU_sum4altdk"><h3 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_sequence_CYU_sum4altdk-1-1">Write out the summation notation as a sum of terms: <span class="process-math">\(\sum_{k=1}^4 \frac{(-1)^k}{k}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_sequence_CYU_sum4altdk-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 5.1.7"><a tabindex="-1" href="#DMT_sequence_CYU_sum4altdk" title="Copy heading and permalink for Reading Question 5.1.7" aria-label="Copy heading and permalink for Reading Question 5.1.7">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_sequence_CYU_sumnaltdk"><h4 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_sequence_CYU_sumnaltdk"><h3 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_sequence_CYU_sumnaltdk-1-1">Write out the summation notation as a sum of terms: <span class="process-math">\(\sum_{k=1}^n \frac{(-1)^k}{k}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_sequence_CYU_sumnaltdk-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 5.1.8"><a tabindex="-1" href="#DMT_sequence_CYU_sumnaltdk" title="Copy heading and permalink for Reading Question 5.1.8" aria-label="Copy heading and permalink for Reading Question 5.1.8">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_sequence_CYU_sumnp1altdk"><h4 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_sequence_CYU_sumnp1altdk"><h3 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_sequence_CYU_sumnp1altdk-1-1">Write out the summation notation as a sum of terms: <span class="process-math">\(\sum_{k=1}^{n+1} \frac{(-1)^k}{k}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_sequence_CYU_sumnp1altdk-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 5.1.9"><a tabindex="-1" href="#DMT_sequence_CYU_sumnp1altdk" title="Copy heading and permalink for Reading Question 5.1.9" aria-label="Copy heading and permalink for Reading Question 5.1.9">🔗</a></div>
 </article><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 5.1: Check Your Understanding"><a tabindex="-1" href="#sequences5-1-35" title="Copy heading and permalink for Reading Questions 5.1: Check Your Understanding" aria-label="Copy heading and permalink for Reading Questions 5.1: Check Your Understanding">🔗</a></div>
 </section>
 <section class="exercises" id="sequences5-1-36">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
-</h3>
-<article class="exercise exercise-like" id="sequences5-1-36-1"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</h2>
+<article class="exercise exercise-like" id="sequences5-1-36-1"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="sequences5-1-36-1-1-1">Find an explicit formula for the following sequences with the given initial terms.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-36-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="sequences5-1-36-1-1-2">
-<li id="sequences5-1-36-1-1-2-1">
-<div class="para" id="sequences5-1-36-1-1-2-1-1">
-<span class="process-math">\(\displaystyle \frac{1}{3}, \frac{4}{9},\frac{9}{27}, \frac{16}{81},\frac{25}{243}, \frac{36}{729}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-36-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="sequences5-1-36-1-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="sequences5-1-36-1-1-2-1">
+<li id="sequences5-1-36-1-1-2-1-1">
+<div class="para" id="sequences5-1-36-1-1-2-1-1-1">
+<span class="process-math">\(\displaystyle \frac{1}{3}, \frac{4}{9},\frac{9}{27}, \frac{16}{81},\frac{25}{243}, \frac{36}{729}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-36-1-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 5.1.1.a"><a tabindex="-1" href="#sequences5-1-36-1-1-2-1" title="Copy heading and permalink for Item 5.1.1.a" aria-label="Copy heading and permalink for Item 5.1.1.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 5.1.1.a"><a tabindex="-1" href="#sequences5-1-36-1-1-2-1-1" title="Copy heading and permalink for Item 5.1.1.a" aria-label="Copy heading and permalink for Item 5.1.1.a">🔗</a></div>
 </li>
-<li id="sequences5-1-36-1-1-2-2">
-<div class="para" id="sequences5-1-36-1-1-2-2-1">
-<span class="process-math">\(\displaystyle 3, 6, 12, 24, 48, 96\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-36-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sequences5-1-36-1-1-2-1-2">
+<div class="para" id="sequences5-1-36-1-1-2-1-2-1">
+<span class="process-math">\(\displaystyle 3, 6, 12, 24, 48, 96\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-36-1-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 5.1.1.b"><a tabindex="-1" href="#sequences5-1-36-1-1-2-2" title="Copy heading and permalink for Item 5.1.1.b" aria-label="Copy heading and permalink for Item 5.1.1.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 5.1.1.b"><a tabindex="-1" href="#sequences5-1-36-1-1-2-1-2" title="Copy heading and permalink for Item 5.1.1.b" aria-label="Copy heading and permalink for Item 5.1.1.b">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-36-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 5.1.1"><a tabindex="-1" href="#sequences5-1-36-1" title="Copy heading and permalink for Exercise 5.1.1" aria-label="Copy heading and permalink for Exercise 5.1.1">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="sequences5-1-36-2"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="sequences5-1-36-2"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="sequences5-1-36-2-1-1">Compute the given product or sum.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-36-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="sequences5-1-36-2-1-2">
-<li id="sequences5-1-36-2-1-2-1">
-<div class="para" id="sequences5-1-36-2-1-2-1-1">
-<span class="process-math">\(\displaystyle \prod_{k=2}^{4}{k^2}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-36-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="sequences5-1-36-2-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="sequences5-1-36-2-1-2-1">
+<li id="sequences5-1-36-2-1-2-1-1">
+<div class="para" id="sequences5-1-36-2-1-2-1-1-1">
+<span class="process-math">\(\displaystyle \prod_{k=2}^{4}{k^2}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-36-2-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 5.1.2.a"><a tabindex="-1" href="#sequences5-1-36-2-1-2-1" title="Copy heading and permalink for Item 5.1.2.a" aria-label="Copy heading and permalink for Item 5.1.2.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 5.1.2.a"><a tabindex="-1" href="#sequences5-1-36-2-1-2-1-1" title="Copy heading and permalink for Item 5.1.2.a" aria-label="Copy heading and permalink for Item 5.1.2.a">🔗</a></div>
 </li>
-<li id="sequences5-1-36-2-1-2-2">
-<div class="para" id="sequences5-1-36-2-1-2-2-1">
-<span class="process-math">\(\displaystyle \prod_{k=2}^{2}{\Bigl(1-\frac{1}{k}\Bigr)}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-36-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sequences5-1-36-2-1-2-1-2">
+<div class="para" id="sequences5-1-36-2-1-2-1-2-1">
+<span class="process-math">\(\displaystyle \prod_{k=2}^{2}{\Bigl(1-\frac{1}{k}\Bigr)}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-36-2-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 5.1.2.b"><a tabindex="-1" href="#sequences5-1-36-2-1-2-2" title="Copy heading and permalink for Item 5.1.2.b" aria-label="Copy heading and permalink for Item 5.1.2.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 5.1.2.b"><a tabindex="-1" href="#sequences5-1-36-2-1-2-1-2" title="Copy heading and permalink for Item 5.1.2.b" aria-label="Copy heading and permalink for Item 5.1.2.b">🔗</a></div>
 </li>
-<li id="sequences5-1-36-2-1-2-3">
-<div class="para" id="sequences5-1-36-2-1-2-3-1">
-<span class="process-math">\(\displaystyle \sum_{k=-1}^{1}{(k^2+3)}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-36-2-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sequences5-1-36-2-1-2-1-3">
+<div class="para" id="sequences5-1-36-2-1-2-1-3-1">
+<span class="process-math">\(\displaystyle \sum_{k=-1}^{1}{(k^2+3)}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-36-2-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 5.1.2.c"><a tabindex="-1" href="#sequences5-1-36-2-1-2-3" title="Copy heading and permalink for Item 5.1.2.c" aria-label="Copy heading and permalink for Item 5.1.2.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 5.1.2.c"><a tabindex="-1" href="#sequences5-1-36-2-1-2-1-3" title="Copy heading and permalink for Item 5.1.2.c" aria-label="Copy heading and permalink for Item 5.1.2.c">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-36-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 5.1.2"><a tabindex="-1" href="#sequences5-1-36-2" title="Copy heading and permalink for Exercise 5.1.2" aria-label="Copy heading and permalink for Exercise 5.1.2">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="sequences5-1-36-3"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="sequences5-1-36-3"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="sequences5-1-36-3-1-1">Write out the sum in expanded form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-36-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="sequences5-1-36-3-1-2">
-<li id="sequences5-1-36-3-1-2-1">
-<div class="para" id="sequences5-1-36-3-1-2-1-1">
-<span class="process-math">\(\displaystyle \sum_{j=1}^{n}{j(j+1)}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-36-3-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="sequences5-1-36-3-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="sequences5-1-36-3-1-2-1">
+<li id="sequences5-1-36-3-1-2-1-1">
+<div class="para" id="sequences5-1-36-3-1-2-1-1-1">
+<span class="process-math">\(\displaystyle \sum_{j=1}^{n}{j(j+1)}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-36-3-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 5.1.3.a"><a tabindex="-1" href="#sequences5-1-36-3-1-2-1" title="Copy heading and permalink for Item 5.1.3.a" aria-label="Copy heading and permalink for Item 5.1.3.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 5.1.3.a"><a tabindex="-1" href="#sequences5-1-36-3-1-2-1-1" title="Copy heading and permalink for Item 5.1.3.a" aria-label="Copy heading and permalink for Item 5.1.3.a">🔗</a></div>
 </li>
-<li id="sequences5-1-36-3-1-2-2">
-<div class="para" id="sequences5-1-36-3-1-2-2-1">
-<span class="process-math">\(\displaystyle \sum_{i=1}^{k+1}{i(i!)}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-36-3-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sequences5-1-36-3-1-2-1-2">
+<div class="para" id="sequences5-1-36-3-1-2-1-2-1">
+<span class="process-math">\(\displaystyle \sum_{i=1}^{k+1}{i(i!)}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-36-3-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 5.1.3.b"><a tabindex="-1" href="#sequences5-1-36-3-1-2-2" title="Copy heading and permalink for Item 5.1.3.b" aria-label="Copy heading and permalink for Item 5.1.3.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 5.1.3.b"><a tabindex="-1" href="#sequences5-1-36-3-1-2-1-2" title="Copy heading and permalink for Item 5.1.3.b" aria-label="Copy heading and permalink for Item 5.1.3.b">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-36-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 5.1.3"><a tabindex="-1" href="#sequences5-1-36-3" title="Copy heading and permalink for Exercise 5.1.3" aria-label="Copy heading and permalink for Exercise 5.1.3">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="sequences5-1-36-4"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="sequences5-1-36-4"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="sequences5-1-36-4-1-1">Rewrite by separating off the final term: <span class="process-math">\(\sum_{i=1}^{k+1}{i(i!)}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-36-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 5.1.4"><a tabindex="-1" href="#sequences5-1-36-4" title="Copy heading and permalink for Exercise 5.1.4" aria-label="Copy heading and permalink for Exercise 5.1.4">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="sequences5-1-36-5"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="sequences5-1-36-5"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para logical" id="sequences5-1-36-5-1-1">
 <div class="para">Write using product notation:</div>
 <div class="displaymath process-math" id="sequences5-1-36-5-1-1-1">
@@ -998,7 +1033,7 @@ a_1\cdot a_2\cdot a_3\cdots a_n=\prod_{k=1}^{n}a_k.
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 5.1.5"><a tabindex="-1" href="#sequences5-1-36-5" title="Copy heading and permalink for Exercise 5.1.5" aria-label="Copy heading and permalink for Exercise 5.1.5">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="sequences5-1-36-6"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="sequences5-1-36-6"><h3 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para logical" id="sequences5-1-36-6-1-1">
 <div class="para">Write using summation notation:</div>
 <div class="displaymath process-math" id="sequences5-1-36-6-1-1-1">
@@ -1010,7 +1045,7 @@ a_1\cdot a_2\cdot a_3\cdots a_n=\prod_{k=1}^{n}a_k.
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 5.1.6"><a tabindex="-1" href="#sequences5-1-36-6" title="Copy heading and permalink for Exercise 5.1.6" aria-label="Copy heading and permalink for Exercise 5.1.6">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="sequences5-1-36-7"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="sequences5-1-36-7"><h3 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para logical" id="sequences5-1-36-7-1-1">
 <div class="para">Transform the sum by making the change of variable <span class="process-math">\(j=i-1\text{:}\)</span>
 </div>
@@ -1023,45 +1058,51 @@ a_1\cdot a_2\cdot a_3\cdots a_n=\prod_{k=1}^{n}a_k.
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 5.1.7"><a tabindex="-1" href="#sequences5-1-36-7" title="Copy heading and permalink for Exercise 5.1.7" aria-label="Copy heading and permalink for Exercise 5.1.7">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="sequences5-1-36-8"><h4 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="sequences5-1-36-8"><h3 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="sequences5-1-36-8-1-1">Simplify.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-36-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="sequences5-1-36-8-1-2">
-<li id="sequences5-1-36-8-1-2-1">
-<div class="para" id="p-derived-sequences5-1-36-8-1-2-1"><span class="process-math">\(\displaystyle \frac{((n+1)!)^2}{(n!)^2}\)</span></div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 5.1.8.a"><a tabindex="-1" href="#sequences5-1-36-8-1-2-1" title="Copy heading and permalink for Item 5.1.8.a" aria-label="Copy heading and permalink for Item 5.1.8.a">🔗</a></div>
+<div class="para logical" id="sequences5-1-36-8-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="sequences5-1-36-8-1-2-1">
+<li id="sequences5-1-36-8-1-2-1-1">
+<div class="para" id="p-derived-sequences5-1-36-8-1-2-1-1"><span class="process-math">\(\displaystyle \frac{((n+1)!)^2}{(n!)^2}\)</span></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 5.1.8.a"><a tabindex="-1" href="#sequences5-1-36-8-1-2-1-1" title="Copy heading and permalink for Item 5.1.8.a" aria-label="Copy heading and permalink for Item 5.1.8.a">🔗</a></div>
 </li>
-<li id="sequences5-1-36-8-1-2-2">
-<div class="para" id="p-derived-sequences5-1-36-8-1-2-2"><span class="process-math">\(\displaystyle \frac{n!}{(n-k+1)!}\)</span></div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 5.1.8.b"><a tabindex="-1" href="#sequences5-1-36-8-1-2-2" title="Copy heading and permalink for Item 5.1.8.b" aria-label="Copy heading and permalink for Item 5.1.8.b">🔗</a></div>
+<li id="sequences5-1-36-8-1-2-1-2">
+<div class="para" id="p-derived-sequences5-1-36-8-1-2-1-2"><span class="process-math">\(\displaystyle \frac{n!}{(n-k+1)!}\)</span></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 5.1.8.b"><a tabindex="-1" href="#sequences5-1-36-8-1-2-1-2" title="Copy heading and permalink for Item 5.1.8.b" aria-label="Copy heading and permalink for Item 5.1.8.b">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-36-8-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 5.1.8"><a tabindex="-1" href="#sequences5-1-36-8" title="Copy heading and permalink for Exercise 5.1.8" aria-label="Copy heading and permalink for Exercise 5.1.8">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="sequences5-1-36-9"><h4 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="sequences5-1-36-9"><h3 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="sequences5-1-36-9-1-1">Compute.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-36-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="sequences5-1-36-9-1-2">
-<li id="sequences5-1-36-9-1-2-1">
-<div class="para" id="p-derived-sequences5-1-36-9-1-2-1"><span class="process-math">\(\displaystyle {3 \choose 0}\)</span></div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 5.1.9.a"><a tabindex="-1" href="#sequences5-1-36-9-1-2-1" title="Copy heading and permalink for Item 5.1.9.a" aria-label="Copy heading and permalink for Item 5.1.9.a">🔗</a></div>
+<div class="para logical" id="sequences5-1-36-9-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="sequences5-1-36-9-1-2-1">
+<li id="sequences5-1-36-9-1-2-1-1">
+<div class="para" id="p-derived-sequences5-1-36-9-1-2-1-1"><span class="process-math">\(\displaystyle {3 \choose 0}\)</span></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 5.1.9.a"><a tabindex="-1" href="#sequences5-1-36-9-1-2-1-1" title="Copy heading and permalink for Item 5.1.9.a" aria-label="Copy heading and permalink for Item 5.1.9.a">🔗</a></div>
 </li>
-<li id="sequences5-1-36-9-1-2-2">
-<div class="para" id="p-derived-sequences5-1-36-9-1-2-2"><span class="process-math">\(\displaystyle {n \choose n-1}\)</span></div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 5.1.9.b"><a tabindex="-1" href="#sequences5-1-36-9-1-2-2" title="Copy heading and permalink for Item 5.1.9.b" aria-label="Copy heading and permalink for Item 5.1.9.b">🔗</a></div>
+<li id="sequences5-1-36-9-1-2-1-2">
+<div class="para" id="p-derived-sequences5-1-36-9-1-2-1-2"><span class="process-math">\(\displaystyle {n \choose n-1}\)</span></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 5.1.9.b"><a tabindex="-1" href="#sequences5-1-36-9-1-2-1-2" title="Copy heading and permalink for Item 5.1.9.b" aria-label="Copy heading and permalink for Item 5.1.9.b">🔗</a></div>
 </li>
-<li id="sequences5-1-36-9-1-2-3">
-<div class="para" id="p-derived-sequences5-1-36-9-1-2-3"><span class="process-math">\(\displaystyle {n+1 \choose n-1}\)</span></div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 5.1.9.c"><a tabindex="-1" href="#sequences5-1-36-9-1-2-3" title="Copy heading and permalink for Item 5.1.9.c" aria-label="Copy heading and permalink for Item 5.1.9.c">🔗</a></div>
+<li id="sequences5-1-36-9-1-2-1-3">
+<div class="para" id="p-derived-sequences5-1-36-9-1-2-1-3"><span class="process-math">\(\displaystyle {n+1 \choose n-1}\)</span></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 5.1.9.c"><a tabindex="-1" href="#sequences5-1-36-9-1-2-1-3" title="Copy heading and permalink for Item 5.1.9.c" aria-label="Copy heading and permalink for Item 5.1.9.c">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sequences5-1-36-9-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 5.1.9"><a tabindex="-1" href="#sequences5-1-36-9" title="Copy heading and permalink for Exercise 5.1.9" aria-label="Copy heading and permalink for Exercise 5.1.9">🔗</a></div>
 </article><div class="autopermalink" aria-hidden="true" data-description="Exercises 5.1"><a tabindex="-1" href="#sequences5-1-36" title="Copy heading and permalink for Exercises 5.1" aria-label="Copy heading and permalink for Exercises 5.1">🔗</a></div>
 </section><div class="autopermalink" aria-hidden="true" data-description="Section 5.1: Sequences"><a tabindex="-1" href="#sequences5-1" title="Copy heading and permalink for Section 5.1: Sequences" aria-label="Copy heading and permalink for Section 5.1: Sequences">🔗</a></div>
 </section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="chapter5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="induction5-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="chapter5-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="induction5-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

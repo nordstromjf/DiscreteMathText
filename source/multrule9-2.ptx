@@ -361,7 +361,7 @@
       <exercise><statement><p>
     A bag contains two green balls (labeled <m>G_1</m> and <m>G_2</m>) and one purple ball. A second bag contains one green ball and two purple balls (labeled <m>P_1</m> and <m>P_2</m>). Suppose the following experiment is performed: One of the two bags is chosen at random. Next a ball is randomly chosen from the bag. Then a second ball is chosen from the same bag without replacing the first ball.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -387,7 +387,7 @@
   </p>
     </li>
 
-  </ol></statement></exercise>
+  </ol></p></statement></exercise>
       <exercise><statement>
         <p>
     A person buying a computer system is offered a choice of three models of the basic unit, two models of the keyboard, and two models of printer. How many distinct systems can be purchased?
@@ -397,7 +397,7 @@
         <p>
     Recall that a bit string is a finite sequence of 0’s and 1’s.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -417,13 +417,13 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
     A coin is tossed four times. Each time the result <m>H</m> for heads or <m>T</m> for tails is recorded. Assume heads and tails are equally likely on each toss.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -443,13 +443,13 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
     Suppose a license plate consists of four letters followed by three digits.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -481,10 +481,11 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>Consider all two digit integers 10-99.</p>
+        <p>
         <ol marker="a.">
     <li>
       <p>
@@ -516,10 +517,11 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>We want to count the number of possible functions from a finite set to a finite set. You may need to recall the definition of a function, <xref ref="D_function" />.</p>
+        <p>
         <ol marker="a.">
     <li>
       <p>
@@ -539,10 +541,11 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>We consider various arrangements of the letters in the word <m>ALGORITHM</m>.</p>
+        <p>
         <ol marker="a.">
     <li>
       <p>
@@ -562,7 +565,7 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
     </exercises>
 

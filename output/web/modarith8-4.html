@@ -19,15 +19,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-2 { system: extends decimal; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-3 { system: extends decimal; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-4 { system: extends lower-roman; prefix: ''; suffix: '. '; }
+</style>
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
 hasWebworkReps: false,
 hasSage: false,
 isReact: false,
 htmlPresentation: false,
+lang: "en-US",
 });
-</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta name="twitter:title" content="Discrete Mathematics: An Active Approach to Mathematical Reasoning">
@@ -36,7 +42,7 @@ htmlPresentation: false,
 <meta name="twitter:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta property="og:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.43"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.54"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.54"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -58,21 +64,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.9';
+eBookConfig.runestone_version = '8.3.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.846a0d6fafaa99e0.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.bbcfc02849ebc023.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/prefix-runtime.4beca1fdeed766a2.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.ebd33f6a21eed414.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.9963089870a016c8.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="DiscreteMathText" class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></div>
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="DiscreteMath-14-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
@@ -85,7 +91,17 @@ eBookConfig.enable_chatcodes =  false;
 <div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
 <ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
-<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
 <h2 class="heading">Readability settings</h2>
 <button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
@@ -134,6 +150,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter1.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to Mathematical Language</span></a></div>
 <ul id="ptx-toc-group-chapter1" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter1-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="variables1-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Variables and Statements</span></a></div>
 <ul id="ptx-toc-group-variables1-1" class="structural toc-item-list">
@@ -160,6 +177,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter2.html" class="internal"><span class="codenumber">2</span> <span class="title">Logic</span></a></div>
 <ul id="ptx-toc-group-chapter2" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter2-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="logical_form2-1.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Truth-Tables and Logical Equivalence</span></a></div>
 <ul id="ptx-toc-group-logical_form2-1" class="structural toc-item-list">
@@ -186,6 +204,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter3.html" class="internal"><span class="codenumber">3</span> <span class="title">Logic with Quantifiers</span></a></div>
 <ul id="ptx-toc-group-chapter3" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter3-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="quantifiersI3-1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Quantifiers</span></a></div>
 <ul id="ptx-toc-group-quantifiersI3-1" class="structural toc-item-list">
@@ -219,6 +238,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter4.html" class="internal"><span class="codenumber">4</span> <span class="title">Proof Techniques</span></a></div>
 <ul id="ptx-toc-group-chapter4" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter4-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="directproof4-1.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Direct Proof and Counterexample</span></a></div>
 <ul id="ptx-toc-group-directproof4-1" class="structural toc-item-list">
@@ -266,6 +286,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter5.html" class="internal"><span class="codenumber">5</span> <span class="title">Sequences and Mathematical Induction</span></a></div>
 <ul id="ptx-toc-group-chapter5" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter5-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sequences5-1.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Sequences</span></a></div>
 <ul id="ptx-toc-group-sequences5-1" class="structural toc-item-list">
@@ -313,6 +334,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter6.html" class="internal"><span class="codenumber">6</span> <span class="title">Set Theory</span></a></div>
 <ul id="ptx-toc-group-chapter6" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter6-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sets6-1.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Set Theory</span></a></div>
 <ul id="ptx-toc-group-sets6-1" class="structural toc-item-list">
@@ -339,6 +361,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter7.html" class="internal"><span class="codenumber">7</span> <span class="title">Functions</span></a></div>
 <ul id="ptx-toc-group-chapter7" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter7-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="functions7-1.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Functions</span></a></div>
 <ul id="ptx-toc-group-functions7-1" class="structural toc-item-list">
@@ -358,6 +381,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="chapter8.html" class="internal"><span class="codenumber">8</span> <span class="title">Relations</span></a></div>
 <ul class="structural toc-item-list contains-active" id="ptx-toc-group-chapter8">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter8-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="relations8-1.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Relations on Sets</span></a></div>
 <ul id="ptx-toc-group-relations8-1" class="structural toc-item-list">
@@ -391,6 +415,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter9.html" class="internal"><span class="codenumber">9</span> <span class="title">Probability and Counting</span></a></div>
 <ul id="ptx-toc-group-chapter9" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter9-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="probability9-1.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Probability</span></a></div>
 <ul id="ptx-toc-group-probability9-1" class="structural toc-item-list">
@@ -438,6 +463,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter10.html" class="internal"><span class="codenumber">10</span> <span class="title">Graph Theory</span></a></div>
 <ul id="ptx-toc-group-chapter10" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter10-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="graphs10-1.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphs</span></a></div>
 <ul id="ptx-toc-group-graphs10-1" class="structural toc-item-list">
@@ -465,7 +491,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="DiscreteMath-14.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul id="ptx-toc-group-DiscreteMath-14" class="structural toc-item-list">
 <li class="toc-item toc-references"><div class="toc-title-box"><a href="DiscreteMath-14-1.html" class="internal"><span class="title">References</span></a></div></li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A.</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="DiscreteMath-14-3.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="DiscreteMath-14-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
@@ -473,9 +499,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="modarith8-4">
-<h2 class="heading hide-type">
+<h1 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Modular Arithmetic</span>
-</h2>
+</h1>
 <div class="para" id="modarith8-4-3">In the last section we saw that congruence mod <span class="process-math">\(n\)</span> is an equivalence relation. In this section we will explore this relation in more detail. We will also introduce the concept of modular arithmetic.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="modarith8-4-4">Recall the definition for congruence mod <span class="process-math">\(n\text{,}\)</span> <a href="equivalencerelations8-3.html#D_mod" class="xref" data-knowl="./knowl/xref/D_mod.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 8.3.2">Definition 8.3.2</a>:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -486,9 +512,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="modarith8-4-7">In some applications, and often in computer science, the remainder, <span class="process-math">\(r\text{,}\)</span> when <span class="process-math">\(a\)</span> is divided by <span class="process-math">\(n\)</span> is denoted <span class="process-math">\(r=a \mod n\text{.}\)</span> When using equals (=), we will mean the specific remainder. When using congruence (<span class="process-math">\(\equiv\)</span>), we will mean the relation. For example, <span class="process-math">\(2=12 \mod 5\text{,}\)</span> but many numbers can satisfy the congruence: <span class="process-math">\(17 \equiv 12 \mod 5\text{,}\)</span> etc.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_modagain" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Congruence mod <span class="process-math">\(n\)</span>.</span>
-</h3></summary>
+<details id="E_modagain" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Congruence mod <span class="process-math">\(n\)</span>.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_modagain-2">True or false: <span class="process-math">\(19\equiv 5 \mod 2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_modagain-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -515,9 +541,9 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" aria-hidden="true" data-description="Answer 8.4.1.3"><a tabindex="-1" href="#E_modagain-7" title="Copy heading and permalink for Answer 8.4.1.3" aria-label="Copy heading and permalink for Answer 8.4.1.3">🔗</a></div>
 </div></details><div class="autopermalink" aria-hidden="true" data-description="Example 8.4.1: Congruence mod n"><a tabindex="-1" href="#E_modagain" title="Copy heading and permalink for Example 8.4.1: Congruence mod n" aria-label="Copy heading and permalink for Example 8.4.1: Congruence mod n">🔗</a></div>
 </article></details>
-<article class="activity project-like" id="mod-TF"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="mod-TF"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="ptx-runestone-container"><div class="runestone cardsort_section"><ul data-component="dragndrop" data-question_label="" style="visibility: hidden;" id="rs-mod-TF">
 <span data-subcomponent="question">
 <div class="para" id="mod-TF-1-1">Determine if the following congruences are true or false.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#mod-TF-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -543,15 +569,15 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="mod-TF-2-2-2-1">False</div>
 </li>
 </ul></div></div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 8.4.1"><a tabindex="-1" href="#mod-TF" title="Copy heading and permalink for Activity 8.4.1" aria-label="Copy heading and permalink for Activity 8.4.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 8.4.2"><a tabindex="-1" href="#mod-TF" title="Copy heading and permalink for Activity 8.4.2" aria-label="Copy heading and permalink for Activity 8.4.2">🔗</a></div>
 </article>
 <div class="para" id="modarith8-4-10">We use modular arithmetic and equivalence mod <span class="process-math">\(n\)</span> when we want to think about remainders when dividing by <span class="process-math">\(n\text{.}\)</span> A familiar example is clock time. Suppose it is 11 am and you have an appointment in 3 hours. In general, you would not think of your appointment for 14 o’clock. You would think of noon as 0, and get that your appointment is at 2 o’clock. There are many more applications in algebra, cryptography, and computer science where we want to classify integers by their remainders mod <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="modarith8-4-11">The following theorem will be useful in proving statements involving congruence, but also in helping do calculations.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="theorem theorem-like" id="T_modequvalences"><h3 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="theorem theorem-like" id="T_modequvalences"><h2 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="T_modequvalences-1-1">Let <span class="process-math">\(a, b, n\in \mathbb{Z}, n&gt;1\text{.}\)</span> The following statements are equivalent.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#T_modequvalences-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="T_modequvalences-1-2">
@@ -585,9 +611,9 @@ eBookConfig.enable_chatcodes =  false;
 </ol>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#T_modequvalences-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Theorem 8.4.2"><a tabindex="-1" href="#T_modequvalences" title="Copy heading and permalink for Theorem 8.4.2" aria-label="Copy heading and permalink for Theorem 8.4.2">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 8.4.3"><a tabindex="-1" href="#T_modequvalences" title="Copy heading and permalink for Theorem 8.4.3" aria-label="Copy heading and permalink for Theorem 8.4.3">🔗</a></div>
 </article>
-<details id="modarith8-4-13" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<details id="modarith8-4-13" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
 <article class="hiddenproof knowl__content">
 <div class="para" id="modarith8-4-13-1">When proving several statements are equivalent, we need to be able to get from any one statement to any other.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-13-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -598,7 +624,7 @@ eBookConfig.enable_chatcodes =  false;
 <span class="process-math">\((4)\Leftrightarrow (5)\)</span> by definition of mod as the remainder.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-13-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="modarith8-4-13-4">
-<span class="process-math">\((1)\Leftrightarrow (3)\)</span> is left as an exercise. (See <a href="modarith8-4.html#mod-pf1imp3" class="xref" data-knowl="./knowl/xref/A_Thm1imp3.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 8.4.2">Activity 8.4.2</a> and <a href="modarith8-4.html#mod-pf3imp1" class="xref" data-knowl="./knowl/xref/A_Thm3imp1.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 8.4.3">Activity 8.4.3</a>.)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-13-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\((1)\Leftrightarrow (3)\)</span> is left as an exercise. (See <a href="modarith8-4.html#mod-pf1imp3" class="xref" data-knowl="./knowl/xref/A_Thm1imp3.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 8.4.4">Activity 8.4.4</a> and <a href="modarith8-4.html#mod-pf3imp1" class="xref" data-knowl="./knowl/xref/A_Thm3imp1.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 8.4.5">Activity 8.4.5</a>.)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-13-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="modarith8-4-13-5">We will prove <span class="process-math">\((3)\Leftrightarrow (4)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-13-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -608,12 +634,12 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Proof 8.4.1"><a tabindex="-1" href="#modarith8-4-13" title="Copy heading and permalink for Proof 8.4.1" aria-label="Copy heading and permalink for Proof 8.4.1">🔗</a></div>
 </article></details>
-<article class="activity project-like" id="mod-pf1imp3"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="mod-pf1imp3"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="ptx-runestone-container"><div class="runestone parsons_section" style="max-width: none;"><div data-component="parsons" class="parsons" id="rs-mod-pf1imp3">
 <div class="parsons_question parsons-text">
-<div class="para" id="mod-pf1imp3-1-1">Prove part (1) of <a href="modarith8-4.html#T_modequvalences" class="xref" data-knowl="./knowl/xref/T_modequvalences.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 8.4.2">Theorem 8.4.2</a> implies part (3). In particular, prove if <span class="process-math">\(n\mid a-b\text{,}\)</span> then <span class="process-math">\(a=b+kn\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#mod-pf1imp3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="mod-pf1imp3-1-1">Prove part (1) of <a href="modarith8-4.html#T_modequvalences" class="xref" data-knowl="./knowl/xref/T_modequvalences.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 8.4.3">Theorem 8.4.3</a> implies part (3). In particular, prove if <span class="process-math">\(n\mid a-b\text{,}\)</span> then <span class="process-math">\(a=b+kn\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#mod-pf1imp3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
 <pre class="parsonsblocks" data-question_label="" style="visibility: hidden;" data-language="natural" data-noindent="true">
@@ -644,31 +670,31 @@ eBookConfig.enable_chatcodes =  false;
 <span class="process-math">\(n=(a-b)k\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span>
 </div> #distractor</pre>
 </div></div></div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 8.4.2"><a tabindex="-1" href="#mod-pf1imp3" title="Copy heading and permalink for Activity 8.4.2" aria-label="Copy heading and permalink for Activity 8.4.2">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 8.4.4"><a tabindex="-1" href="#mod-pf1imp3" title="Copy heading and permalink for Activity 8.4.4" aria-label="Copy heading and permalink for Activity 8.4.4">🔗</a></div>
 </article>
-<article class="activity project-like" id="mod-pf3imp1"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
-<div class="para" id="mod-pf3imp1-1-1">Prove part (3) of <a href="modarith8-4.html#T_modequvalences" class="xref" data-knowl="./knowl/xref/T_modequvalences.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 8.4.2">Theorem 8.4.2</a> implies part (1). In particular, prove if <span class="process-math">\(a=b+kn\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{,}\)</span> then <span class="process-math">\(n\mid a-b\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#mod-pf3imp1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="activity project-like" id="mod-pf3imp1"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="mod-pf3imp1-1-1">Prove part (3) of <a href="modarith8-4.html#T_modequvalences" class="xref" data-knowl="./knowl/xref/T_modequvalences.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 8.4.3">Theorem 8.4.3</a> implies part (1). In particular, prove if <span class="process-math">\(a=b+kn\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{,}\)</span> then <span class="process-math">\(n\mid a-b\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#mod-pf3imp1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 8.4.3"><a tabindex="-1" href="#mod-pf3imp1" title="Copy heading and permalink for Activity 8.4.3" aria-label="Copy heading and permalink for Activity 8.4.3">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 8.4.5"><a tabindex="-1" href="#mod-pf3imp1" title="Copy heading and permalink for Activity 8.4.5" aria-label="Copy heading and permalink for Activity 8.4.5">🔗</a></div>
 </article>
 <div class="para" id="D_residue-1-1">The <dfn class="terminology">residue of <span class="process-math">\(a\)</span> modulo <span class="process-math">\(n\)</span></dfn> is the remainder when <span class="process-math">\(a\)</span> is divided by <span class="process-math">\(n\text{.}\)</span> The set <span class="process-math">\(\{0, 1, \ldots, n-1\}\)</span> forms a <dfn class="terminology">complete set of residues mod <span class="process-math">\(n\)</span></dfn>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_residue-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="modarith8-4-17">Although we have seen congruence mod <span class="process-math">\(n\)</span> is an equivalence relation, we formally state it in the following theorem.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="theorem theorem-like" id="T_congequivrelation"><h3 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="theorem theorem-like" id="T_congequivrelation"><h2 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="T_congequivrelation-1-1">Congruence mod <span class="process-math">\(n\)</span> is an equivalence relation on <span class="process-math">\(\mathbb{Z}\)</span> with equivalence classes <span class="process-math">\([0], [1], \ldots [n-1]\text{.}\)</span> Furthermore, <span class="process-math">\([a]=\{m\in \mathbb{Z} : m=a+kn, k\in \mathbb{Z}\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#T_congequivrelation-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Theorem 8.4.3"><a tabindex="-1" href="#T_congequivrelation" title="Copy heading and permalink for Theorem 8.4.3" aria-label="Copy heading and permalink for Theorem 8.4.3">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 8.4.6"><a tabindex="-1" href="#T_congequivrelation" title="Copy heading and permalink for Theorem 8.4.6" aria-label="Copy heading and permalink for Theorem 8.4.6">🔗</a></div>
 </article>
 <div class="para" id="modarith8-4-19">For the proof, see <a href="equivalencerelations8-3.html#X_modn" class="xref" data-knowl="./knowl/xref/X_modn.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 8.3.9">Exercise 8.3.9</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="activity project-like" id="mod-classmod5"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="mod-classmod5"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="mod-classmod5-1-1">Find the equivalence classes for congruence mod 5. List several elements of each equivalence class. What do the elements of each congruence class look like?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#mod-classmod5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
@@ -676,15 +702,15 @@ eBookConfig.enable_chatcodes =  false;
 <div class="hint solution-like knowl__content">
 <div class="para" id="mod-classmod5-3-1">Think about remainders.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#mod-classmod5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Hint 8.4.4.1"><a tabindex="-1" href="#mod-classmod5-3" title="Copy heading and permalink for Hint 8.4.4.1" aria-label="Copy heading and permalink for Hint 8.4.4.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Hint 8.4.7.1"><a tabindex="-1" href="#mod-classmod5-3" title="Copy heading and permalink for Hint 8.4.7.1" aria-label="Copy heading and permalink for Hint 8.4.7.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 8.4.4"><a tabindex="-1" href="#mod-classmod5" title="Copy heading and permalink for Activity 8.4.4" aria-label="Copy heading and permalink for Activity 8.4.4">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 8.4.7"><a tabindex="-1" href="#mod-classmod5" title="Copy heading and permalink for Activity 8.4.7" aria-label="Copy heading and permalink for Activity 8.4.7">🔗</a></div>
 </article>
 <div class="para" id="modarith8-4-21">
 <dfn class="terminology">Modular arithmetic</dfn> is just the process of adding, subtracting, and multiplying, where we treat integers with the same remainder mod <span class="process-math">\(n\text{,}\)</span> as equivalent. Thus, we can replace any integer with it’s remainder.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="assemblage assemblage-like" id="B_propmodarith"><h3 class="heading"><span class="title">Properties of Modular Arithmetic.</span></h3>
+<article class="assemblage assemblage-like" id="B_propmodarith"><h2 class="heading"><span class="title">Properties of Modular Arithmetic.</span></h2>
 <div class="para logical" id="B_propmodarith-2">
 <div class="para">If <span class="process-math">\(a\equiv c \mod n\)</span> and <span class="process-math">\(b\equiv d \mod n\text{,}\)</span> then</div>
 <ul class="disc" id="B_propmodarith-2-3">
@@ -713,9 +739,9 @@ eBookConfig.enable_chatcodes =  false;
 </article>
 <div class="para" id="modarith8-4-23">Basically, we can do regular arithmetic, where we can reduce to remainders, or equivalence classes mod <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_modarith" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Modular Arithmetic.</span>
-</h3></summary>
+<details id="E_modarith" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.8</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Modular Arithmetic.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_modarith-2">Use modular arithmetic to find<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_modarith-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -727,7 +753,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="E_modarith-4-1">
 <span class="process-math">\(10\equiv 4 \mod 6, 25\equiv 1\mod 6\text{,}\)</span> so <span class="process-math">\(10+25\equiv 4+1\equiv 5 \mod 6\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_modarith-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Answer 8.4.4.1"><a tabindex="-1" href="#E_modarith-4" title="Copy heading and permalink for Answer 8.4.4.1" aria-label="Copy heading and permalink for Answer 8.4.4.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 8.4.8.1"><a tabindex="-1" href="#E_modarith-4" title="Copy heading and permalink for Answer 8.4.8.1" aria-label="Copy heading and permalink for Answer 8.4.8.1">🔗</a></div>
 </div></details>
 <div class="para" id="E_modarith-5">
 <span class="process-math">\(10\cdot 25 \mod 6\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_modarith-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -737,7 +763,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="E_modarith-6-1">
 <span class="process-math">\(10\cdot 25\equiv 4\cdot 1\equiv 4 \mod 6\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_modarith-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Answer 8.4.4.2"><a tabindex="-1" href="#E_modarith-6" title="Copy heading and permalink for Answer 8.4.4.2" aria-label="Copy heading and permalink for Answer 8.4.4.2">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 8.4.8.2"><a tabindex="-1" href="#E_modarith-6" title="Copy heading and permalink for Answer 8.4.8.2" aria-label="Copy heading and permalink for Answer 8.4.8.2">🔗</a></div>
 </div></details>
 <div class="para" id="E_modarith-7">
 <span class="process-math">\(25^{15} \mod 6\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_modarith-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -747,55 +773,55 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="E_modarith-8-1">
 <span class="process-math">\(25\equiv 1\mod 6\text{,}\)</span> so <span class="process-math">\(25^{15}\equiv 1^{15}\equiv 1 \mod 6\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_modarith-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Answer 8.4.4.3"><a tabindex="-1" href="#E_modarith-8" title="Copy heading and permalink for Answer 8.4.4.3" aria-label="Copy heading and permalink for Answer 8.4.4.3">🔗</a></div>
-</div></details><div class="autopermalink" aria-hidden="true" data-description="Example 8.4.4: Modular Arithmetic"><a tabindex="-1" href="#E_modarith" title="Copy heading and permalink for Example 8.4.4: Modular Arithmetic" aria-label="Copy heading and permalink for Example 8.4.4: Modular Arithmetic">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 8.4.8.3"><a tabindex="-1" href="#E_modarith-8" title="Copy heading and permalink for Answer 8.4.8.3" aria-label="Copy heading and permalink for Answer 8.4.8.3">🔗</a></div>
+</div></details><div class="autopermalink" aria-hidden="true" data-description="Example 8.4.8: Modular Arithmetic"><a tabindex="-1" href="#E_modarith" title="Copy heading and permalink for Example 8.4.8: Modular Arithmetic" aria-label="Copy heading and permalink for Example 8.4.8: Modular Arithmetic">🔗</a></div>
 </article></details>
-<article class="activity project-like" id="mod-sum"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="mod-sum"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="mod-sum-1-1">Find <span class="process-math">\((31+92) \mod 5\)</span> by first reducing 31 and 92 mod 5, then adding.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#mod-sum-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 8.4.5"><a tabindex="-1" href="#mod-sum" title="Copy heading and permalink for Activity 8.4.5" aria-label="Copy heading and permalink for Activity 8.4.5">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 8.4.9"><a tabindex="-1" href="#mod-sum" title="Copy heading and permalink for Activity 8.4.9" aria-label="Copy heading and permalink for Activity 8.4.9">🔗</a></div>
 </article>
-<article class="activity project-like" id="mod-power"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="mod-power"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="mod-power-1-1">Find <span class="process-math">\((56)^{21} \mod 5\)</span> by first reducing 56 mod 5, then raising to 21.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#mod-power-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 8.4.6"><a tabindex="-1" href="#mod-power" title="Copy heading and permalink for Activity 8.4.6" aria-label="Copy heading and permalink for Activity 8.4.6">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 8.4.10"><a tabindex="-1" href="#mod-power" title="Copy heading and permalink for Activity 8.4.10" aria-label="Copy heading and permalink for Activity 8.4.10">🔗</a></div>
 </article>
-<article class="activity project-like" id="mod-decimal"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="mod-decimal"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="introduction" id="mod-decimal-1">
 <div class="para" id="mod-decimal-1-1">We can write integers using their decimal expansion. For example, we can write 592 as a decimal expansion: <span class="process-math">\((5\times 100)+(9\times 10)+2=5\times 10^2+9\times 10^1+2\times 10^0\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#mod-decimal-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="mod-decimal-decex"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="mod-decimal-decex"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="mod-decimal-decex-1-1">Write 1526 as a similar expansion using powers of 10.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#mod-decimal-decex-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 8.4.7.a"><a tabindex="-1" href="#mod-decimal-decex" title="Copy heading and permalink for Task 8.4.7.a" aria-label="Copy heading and permalink for Task 8.4.7.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 8.4.11.a"><a tabindex="-1" href="#mod-decimal-decex" title="Copy heading and permalink for Task 8.4.11.a" aria-label="Copy heading and permalink for Task 8.4.11.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="mod-decimal-power"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="mod-decimal-power"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="mod-decimal-power-1-1">Find 10 mod 9 and <span class="process-math">\(10^n\)</span> mod 9 for any <span class="process-math">\(n\in \mathbb{Z}, n\geq 0\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#mod-decimal-power-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 8.4.7.b"><a tabindex="-1" href="#mod-decimal-power" title="Copy heading and permalink for Task 8.4.7.b" aria-label="Copy heading and permalink for Task 8.4.7.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 8.4.11.b"><a tabindex="-1" href="#mod-decimal-power" title="Copy heading and permalink for Task 8.4.11.b" aria-label="Copy heading and permalink for Task 8.4.11.b">🔗</a></div>
 </article>
-<article class="task exercise-like" id="mod-decimal-mod9"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<article class="task exercise-like" id="mod-decimal-mod9"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="mod-decimal-mod9-1-1">Use the decimal expansion and (b) find (592 mod 9) and (1526 mod 9).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#mod-decimal-mod9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 8.4.7.c"><a tabindex="-1" href="#mod-decimal-mod9" title="Copy heading and permalink for Task 8.4.7.c" aria-label="Copy heading and permalink for Task 8.4.7.c">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 8.4.7"><a tabindex="-1" href="#mod-decimal" title="Copy heading and permalink for Activity 8.4.7" aria-label="Copy heading and permalink for Activity 8.4.7">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 8.4.11.c"><a tabindex="-1" href="#mod-decimal-mod9" title="Copy heading and permalink for Task 8.4.11.c" aria-label="Copy heading and permalink for Task 8.4.11.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 8.4.11"><a tabindex="-1" href="#mod-decimal" title="Copy heading and permalink for Activity 8.4.11" aria-label="Copy heading and permalink for Activity 8.4.11">🔗</a></div>
 </article>
 <div class="para" id="modarith8-4-28">If we are doing modular arithmetic we often work directly with the equivalence classes, rather than all of the integers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="modarith8-4-29">We define <span class="process-math">\(\mathbb{Z}_n=\{0, 1, \ldots, n-1\}\text{,}\)</span> where <span class="process-math">\(k\in\mathbb{Z}_n\)</span> represents the equivalence class <span class="process-math">\([k]\text{.}\)</span> Although this sounds complicated, we just do regular arithmetic with <span class="process-math">\(1, \ldots, n-1\)</span> and reduce to the remainder mod <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <section class="reading-questions" id="modarith8-4-30">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Check Your Understanding</span>
-</h3>
-<article class="exercise exercise-like" id="DMT_mod_CYU_47equiv2mod5"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</h2>
+<article class="exercise exercise-like" id="DMT_mod_CYU_47equiv2mod5"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_mod_CYU_47equiv2mod5">
 <div class="para" id="DMT_mod_CYU_47equiv2mod5-1-1">True or false: <span class="process-math">\(47\equiv 2\mod 5\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_mod_CYU_47equiv2mod5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -806,7 +832,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 8.4.1"><a tabindex="-1" href="#DMT_mod_CYU_47equiv2mod5" title="Copy heading and permalink for Reading Question 8.4.1" aria-label="Copy heading and permalink for Reading Question 8.4.1">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_mod_CYU_45equiv0mod5"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_mod_CYU_45equiv0mod5"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_mod_CYU_45equiv0mod5">
 <div class="para" id="DMT_mod_CYU_45equiv0mod5-1-1">True or false: <span class="process-math">\(45\equiv 0\mod 5\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_mod_CYU_45equiv0mod5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -817,7 +843,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 8.4.2"><a tabindex="-1" href="#DMT_mod_CYU_45equiv0mod5" title="Copy heading and permalink for Reading Question 8.4.2" aria-label="Copy heading and permalink for Reading Question 8.4.2">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_mod_CYU_4equivn1mod5"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_mod_CYU_4equivn1mod5"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_mod_CYU_4equivn1mod5">
 <div class="para" id="DMT_mod_CYU_4equivn1mod5-1-1">True or false: <span class="process-math">\(4\equiv -1\mod 5\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_mod_CYU_4equivn1mod5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -828,7 +854,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 8.4.3"><a tabindex="-1" href="#DMT_mod_CYU_4equivn1mod5" title="Copy heading and permalink for Reading Question 8.4.3" aria-label="Copy heading and permalink for Reading Question 8.4.3">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_mod_CYU_14equiv1mod5"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_mod_CYU_14equiv1mod5"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_mod_CYU_14equiv1mod5">
 <div class="para" id="DMT_mod_CYU_14equiv1mod5-1-1">True or false: <span class="process-math">\(14\equiv 1\mod 5\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_mod_CYU_14equiv1mod5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -839,7 +865,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 8.4.4"><a tabindex="-1" href="#DMT_mod_CYU_14equiv1mod5" title="Copy heading and permalink for Reading Question 8.4.4" aria-label="Copy heading and permalink for Reading Question 8.4.4">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_mod_CYU_47p45equiv2mod5"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_mod_CYU_47p45equiv2mod5"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_mod_CYU_47p45equiv2mod5">
 <div class="para" id="DMT_mod_CYU_47p45equiv2mod5-1-1">True or false: <span class="process-math">\(47+45\equiv 2\mod 5\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_mod_CYU_47p45equiv2mod5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -850,7 +876,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 8.4.5"><a tabindex="-1" href="#DMT_mod_CYU_47p45equiv2mod5" title="Copy heading and permalink for Reading Question 8.4.5" aria-label="Copy heading and permalink for Reading Question 8.4.5">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_mod_CYU_47tt2equiv4mod5"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_mod_CYU_47tt2equiv4mod5"><h3 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_mod_CYU_47tt2equiv4mod5">
 <div class="para" id="DMT_mod_CYU_47tt2equiv4mod5-1-1">True or false: <span class="process-math">\((47)^2\equiv 4\mod 5\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_mod_CYU_47tt2equiv4mod5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -861,7 +887,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 8.4.6"><a tabindex="-1" href="#DMT_mod_CYU_47tt2equiv4mod5" title="Copy heading and permalink for Reading Question 8.4.6" aria-label="Copy heading and permalink for Reading Question 8.4.6">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_mod_CYU_4tt500equiv1mod5"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_mod_CYU_4tt500equiv1mod5"><h3 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_mod_CYU_4tt500equiv1mod5">
 <div class="para" id="DMT_mod_CYU_4tt500equiv1mod5-1-1">True or false: <span class="process-math">\(4^{500}\equiv 1\mod 5\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_mod_CYU_4tt500equiv1mod5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -872,7 +898,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 8.4.7"><a tabindex="-1" href="#DMT_mod_CYU_4tt500equiv1mod5" title="Copy heading and permalink for Reading Question 8.4.7" aria-label="Copy heading and permalink for Reading Question 8.4.7">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_mod_CYU_10equiv1mod9"><h4 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_mod_CYU_10equiv1mod9"><h3 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_mod_CYU_10equiv1mod9">
 <div class="para" id="DMT_mod_CYU_10equiv1mod9-1-1">True or false: <span class="process-math">\(10\equiv 1\mod 9\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_mod_CYU_10equiv1mod9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -883,7 +909,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 8.4.8"><a tabindex="-1" href="#DMT_mod_CYU_10equiv1mod9" title="Copy heading and permalink for Reading Question 8.4.8" aria-label="Copy heading and permalink for Reading Question 8.4.8">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_mod_CYU_10tt2equiv1mod9"><h4 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_mod_CYU_10tt2equiv1mod9"><h3 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_mod_CYU_10tt2equiv1mod9">
 <div class="para" id="DMT_mod_CYU_10tt2equiv1mod9-1-1">True or false: <span class="process-math">\(10^2\equiv 1\mod 9\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_mod_CYU_10tt2equiv1mod9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -894,7 +920,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 8.4.9"><a tabindex="-1" href="#DMT_mod_CYU_10tt2equiv1mod9" title="Copy heading and permalink for Reading Question 8.4.9" aria-label="Copy heading and permalink for Reading Question 8.4.9">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_mod_CYU_10tt5equiv1mod9"><h4 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_mod_CYU_10tt5equiv1mod9"><h3 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_mod_CYU_10tt5equiv1mod9">
 <div class="para" id="DMT_mod_CYU_10tt5equiv1mod9-1-1">True or false: <span class="process-math">\(10^5\equiv 1\mod 9\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_mod_CYU_10tt5equiv1mod9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -905,7 +931,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 8.4.10"><a tabindex="-1" href="#DMT_mod_CYU_10tt5equiv1mod9" title="Copy heading and permalink for Reading Question 8.4.10" aria-label="Copy heading and permalink for Reading Question 8.4.10">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_mod_CYU_10ttnequiv1mod9"><h4 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_mod_CYU_10ttnequiv1mod9"><h3 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_mod_CYU_10ttnequiv1mod9">
 <div class="para" id="DMT_mod_CYU_10ttnequiv1mod9-1-1">True or false: <span class="process-math">\(10^n\equiv 1\mod 9\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_mod_CYU_10ttnequiv1mod9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -916,7 +942,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 8.4.11"><a tabindex="-1" href="#DMT_mod_CYU_10ttnequiv1mod9" title="Copy heading and permalink for Reading Question 8.4.11" aria-label="Copy heading and permalink for Reading Question 8.4.11">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_mod_CYU_equivclassmod5"><h4 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_mod_CYU_equivclassmod5"><h3 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="DMT_mod_CYU_equivclassmod5-1-1">Give the equivalence classes for  <span class="process-math">\(a\equiv b \mod 5\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_mod_CYU_equivclassmod5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
@@ -931,110 +957,119 @@ eBookConfig.enable_chatcodes =  false;
 </article><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 8.4: Check Your Understanding"><a tabindex="-1" href="#modarith8-4-30" title="Copy heading and permalink for Reading Questions 8.4: Check Your Understanding" aria-label="Copy heading and permalink for Reading Questions 8.4: Check Your Understanding">🔗</a></div>
 </section>
 <section class="exercises" id="modarith8-4-31">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
-</h3>
-<article class="exercise exercise-like" id="modarith8-4-31-1"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</h2>
+<article class="exercise exercise-like" id="modarith8-4-31-1"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="modarith8-4-31-1-1-1">Let <span class="process-math">\(a=25\)</span> and <span class="process-math">\(b=19\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="modarith8-4-31-1-1-2">
-<li id="modarith8-4-31-1-1-2-1">
-<div class="para" id="modarith8-4-31-1-1-2-1-1">Use the definition of congruence modulo 3 to explain why <span class="process-math">\(25\equiv 19 \mod 3\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="modarith8-4-31-1-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="modarith8-4-31-1-1-2-1">
+<li id="modarith8-4-31-1-1-2-1-1">
+<div class="para" id="modarith8-4-31-1-1-2-1-1-1">Use the definition of congruence modulo 3 to explain why <span class="process-math">\(25\equiv 19 \mod 3\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-1-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.4.1.a"><a tabindex="-1" href="#modarith8-4-31-1-1-2-1" title="Copy heading and permalink for Item 8.4.1.a" aria-label="Copy heading and permalink for Item 8.4.1.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.4.1.a"><a tabindex="-1" href="#modarith8-4-31-1-1-2-1-1" title="Copy heading and permalink for Item 8.4.1.a" aria-label="Copy heading and permalink for Item 8.4.1.a">🔗</a></div>
 </li>
-<li id="modarith8-4-31-1-1-2-2">
-<div class="para" id="modarith8-4-31-1-1-2-2-1">What value of <span class="process-math">\(k\)</span> has the property that <span class="process-math">\(25=19+3k\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="modarith8-4-31-1-1-2-1-2">
+<div class="para" id="modarith8-4-31-1-1-2-1-2-1">What value of <span class="process-math">\(k\)</span> has the property that <span class="process-math">\(25=19+3k\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-1-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.4.1.b"><a tabindex="-1" href="#modarith8-4-31-1-1-2-2" title="Copy heading and permalink for Item 8.4.1.b" aria-label="Copy heading and permalink for Item 8.4.1.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.4.1.b"><a tabindex="-1" href="#modarith8-4-31-1-1-2-1-2" title="Copy heading and permalink for Item 8.4.1.b" aria-label="Copy heading and permalink for Item 8.4.1.b">🔗</a></div>
 </li>
-<li id="modarith8-4-31-1-1-2-3">
-<div class="para" id="modarith8-4-31-1-1-2-3-1">What is the (nonnegative) remainder obtained when 25 is divided by 3? When 19 is divided by 3?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-1-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="modarith8-4-31-1-1-2-1-3">
+<div class="para" id="modarith8-4-31-1-1-2-1-3-1">What is the (nonnegative) remainder obtained when 25 is divided by 3? When 19 is divided by 3?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-1-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.4.1.c"><a tabindex="-1" href="#modarith8-4-31-1-1-2-3" title="Copy heading and permalink for Item 8.4.1.c" aria-label="Copy heading and permalink for Item 8.4.1.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.4.1.c"><a tabindex="-1" href="#modarith8-4-31-1-1-2-1-3" title="Copy heading and permalink for Item 8.4.1.c" aria-label="Copy heading and permalink for Item 8.4.1.c">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 8.4.1"><a tabindex="-1" href="#modarith8-4-31-1" title="Copy heading and permalink for Exercise 8.4.1" aria-label="Copy heading and permalink for Exercise 8.4.1">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="modarith8-4-31-2"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="modarith8-4-31-2"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="modarith8-4-31-2-1-1">Determine if the following are true or false.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="modarith8-4-31-2-1-2">
-<li id="modarith8-4-31-2-1-2-1">
-<div class="para" id="modarith8-4-31-2-1-2-1-1">
-<span class="process-math">\(58\equiv 14\)</span> mod <span class="process-math">\(11\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="modarith8-4-31-2-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="modarith8-4-31-2-1-2-1">
+<li id="modarith8-4-31-2-1-2-1-1">
+<div class="para" id="modarith8-4-31-2-1-2-1-1-1">
+<span class="process-math">\(58\equiv 14\)</span> mod <span class="process-math">\(11\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-2-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.4.2.a"><a tabindex="-1" href="#modarith8-4-31-2-1-2-1" title="Copy heading and permalink for Item 8.4.2.a" aria-label="Copy heading and permalink for Item 8.4.2.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.4.2.a"><a tabindex="-1" href="#modarith8-4-31-2-1-2-1-1" title="Copy heading and permalink for Item 8.4.2.a" aria-label="Copy heading and permalink for Item 8.4.2.a">🔗</a></div>
 </li>
-<li id="modarith8-4-31-2-1-2-2">
-<div class="para" id="modarith8-4-31-2-1-2-2-1">
-<span class="process-math">\(46\equiv 89\)</span> mod <span class="process-math">\(13\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="modarith8-4-31-2-1-2-1-2">
+<div class="para" id="modarith8-4-31-2-1-2-1-2-1">
+<span class="process-math">\(46\equiv 89\)</span> mod <span class="process-math">\(13\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-2-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.4.2.b"><a tabindex="-1" href="#modarith8-4-31-2-1-2-2" title="Copy heading and permalink for Item 8.4.2.b" aria-label="Copy heading and permalink for Item 8.4.2.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.4.2.b"><a tabindex="-1" href="#modarith8-4-31-2-1-2-1-2" title="Copy heading and permalink for Item 8.4.2.b" aria-label="Copy heading and permalink for Item 8.4.2.b">🔗</a></div>
 </li>
-<li id="modarith8-4-31-2-1-2-3">
-<div class="para" id="modarith8-4-31-2-1-2-3-1">
-<span class="process-math">\(674\equiv 558\)</span> mod <span class="process-math">\(56\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-2-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="modarith8-4-31-2-1-2-1-3">
+<div class="para" id="modarith8-4-31-2-1-2-1-3-1">
+<span class="process-math">\(674\equiv 558\)</span> mod <span class="process-math">\(56\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-2-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.4.2.c"><a tabindex="-1" href="#modarith8-4-31-2-1-2-3" title="Copy heading and permalink for Item 8.4.2.c" aria-label="Copy heading and permalink for Item 8.4.2.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.4.2.c"><a tabindex="-1" href="#modarith8-4-31-2-1-2-1-3" title="Copy heading and permalink for Item 8.4.2.c" aria-label="Copy heading and permalink for Item 8.4.2.c">🔗</a></div>
 </li>
-<li id="modarith8-4-31-2-1-2-4">
-<div class="para" id="modarith8-4-31-2-1-2-4-1">
-<span class="process-math">\(432\equiv 981\)</span> mod <span class="process-math">\(9\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-2-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="modarith8-4-31-2-1-2-1-4">
+<div class="para" id="modarith8-4-31-2-1-2-1-4-1">
+<span class="process-math">\(432\equiv 981\)</span> mod <span class="process-math">\(9\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-2-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.4.2.d"><a tabindex="-1" href="#modarith8-4-31-2-1-2-4" title="Copy heading and permalink for Item 8.4.2.d" aria-label="Copy heading and permalink for Item 8.4.2.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.4.2.d"><a tabindex="-1" href="#modarith8-4-31-2-1-2-1-4" title="Copy heading and permalink for Item 8.4.2.d" aria-label="Copy heading and permalink for Item 8.4.2.d">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 8.4.2"><a tabindex="-1" href="#modarith8-4-31-2" title="Copy heading and permalink for Exercise 8.4.2" aria-label="Copy heading and permalink for Exercise 8.4.2">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="modarith8-4-31-3"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="modarith8-4-31-3"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="modarith8-4-31-3-1-1">Verify the following statements by simplifying each expression and using the definition of congruence mod 7.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="modarith8-4-31-3-1-2">
-<li id="modarith8-4-31-3-1-2-1">
-<div class="para" id="modarith8-4-31-3-1-2-1-1">
-<span class="process-math">\(128\equiv 2 \mod 7\)</span> and <span class="process-math">\(61\equiv 5 \mod 7\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-3-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="modarith8-4-31-3-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="modarith8-4-31-3-1-2-1">
+<li id="modarith8-4-31-3-1-2-1-1">
+<div class="para" id="modarith8-4-31-3-1-2-1-1-1">
+<span class="process-math">\(128\equiv 2 \mod 7\)</span> and <span class="process-math">\(61\equiv 5 \mod 7\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-3-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.4.3.a"><a tabindex="-1" href="#modarith8-4-31-3-1-2-1" title="Copy heading and permalink for Item 8.4.3.a" aria-label="Copy heading and permalink for Item 8.4.3.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.4.3.a"><a tabindex="-1" href="#modarith8-4-31-3-1-2-1-1" title="Copy heading and permalink for Item 8.4.3.a" aria-label="Copy heading and permalink for Item 8.4.3.a">🔗</a></div>
 </li>
-<li id="modarith8-4-31-3-1-2-2">
-<div class="para" id="modarith8-4-31-3-1-2-2-1">
-<span class="process-math">\(\displaystyle (128+61)\equiv (2+5) \mod 7\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-3-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="modarith8-4-31-3-1-2-1-2">
+<div class="para" id="modarith8-4-31-3-1-2-1-2-1">
+<span class="process-math">\(\displaystyle (128+61)\equiv (2+5) \mod 7\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-3-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.4.3.b"><a tabindex="-1" href="#modarith8-4-31-3-1-2-2" title="Copy heading and permalink for Item 8.4.3.b" aria-label="Copy heading and permalink for Item 8.4.3.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.4.3.b"><a tabindex="-1" href="#modarith8-4-31-3-1-2-1-2" title="Copy heading and permalink for Item 8.4.3.b" aria-label="Copy heading and permalink for Item 8.4.3.b">🔗</a></div>
 </li>
-<li id="modarith8-4-31-3-1-2-3">
-<div class="para" id="modarith8-4-31-3-1-2-3-1">
-<span class="process-math">\(\displaystyle (128-61)\equiv (2-5) \mod 7\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-3-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="modarith8-4-31-3-1-2-1-3">
+<div class="para" id="modarith8-4-31-3-1-2-1-3-1">
+<span class="process-math">\(\displaystyle (128-61)\equiv (2-5) \mod 7\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-3-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.4.3.c"><a tabindex="-1" href="#modarith8-4-31-3-1-2-3" title="Copy heading and permalink for Item 8.4.3.c" aria-label="Copy heading and permalink for Item 8.4.3.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.4.3.c"><a tabindex="-1" href="#modarith8-4-31-3-1-2-1-3" title="Copy heading and permalink for Item 8.4.3.c" aria-label="Copy heading and permalink for Item 8.4.3.c">🔗</a></div>
 </li>
-<li id="modarith8-4-31-3-1-2-4">
-<div class="para" id="modarith8-4-31-3-1-2-4-1">
-<span class="process-math">\(\displaystyle (128\cdot 61)\equiv (2\cdot 5) \mod 7\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-3-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="modarith8-4-31-3-1-2-1-4">
+<div class="para" id="modarith8-4-31-3-1-2-1-4-1">
+<span class="process-math">\(\displaystyle (128\cdot 61)\equiv (2\cdot 5) \mod 7\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-3-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.4.3.d"><a tabindex="-1" href="#modarith8-4-31-3-1-2-4" title="Copy heading and permalink for Item 8.4.3.d" aria-label="Copy heading and permalink for Item 8.4.3.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.4.3.d"><a tabindex="-1" href="#modarith8-4-31-3-1-2-1-4" title="Copy heading and permalink for Item 8.4.3.d" aria-label="Copy heading and permalink for Item 8.4.3.d">🔗</a></div>
 </li>
-<li id="modarith8-4-31-3-1-2-5">
-<div class="para" id="modarith8-4-31-3-1-2-5-1">
-<span class="process-math">\(\displaystyle 128^2\equiv 2^2 \mod 7\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-3-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="modarith8-4-31-3-1-2-1-5">
+<div class="para" id="modarith8-4-31-3-1-2-1-5-1">
+<span class="process-math">\(\displaystyle 128^2\equiv 2^2 \mod 7\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-3-1-2-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.4.3.e"><a tabindex="-1" href="#modarith8-4-31-3-1-2-5" title="Copy heading and permalink for Item 8.4.3.e" aria-label="Copy heading and permalink for Item 8.4.3.e">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.4.3.e"><a tabindex="-1" href="#modarith8-4-31-3-1-2-1-5" title="Copy heading and permalink for Item 8.4.3.e" aria-label="Copy heading and permalink for Item 8.4.3.e">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 8.4.3"><a tabindex="-1" href="#modarith8-4-31-3" title="Copy heading and permalink for Exercise 8.4.3" aria-label="Copy heading and permalink for Exercise 8.4.3">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="modarith8-4-31-4"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="modarith8-4-31-4"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="modarith8-4-31-4-1-1">Prove the transitivity of modular congruence. That is, prove for all <span class="process-math">\(a, b, c, n\in \mathbb{Z}\)</span> with <span class="process-math">\(n&gt;1\text{,}\)</span> if <span class="process-math">\(a\equiv b \mod n\)</span> and <span class="process-math">\(b\equiv c \mod n\text{,}\)</span> then <span class="process-math">\(a\equiv c \mod n\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 8.4.4"><a tabindex="-1" href="#modarith8-4-31-4" title="Copy heading and permalink for Exercise 8.4.4" aria-label="Copy heading and permalink for Exercise 8.4.4">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="modarith8-4-31-5"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="modarith8-4-31-5"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="modarith8-4-31-5-1-1">Prove for all <span class="process-math">\(a,  c, n\in \mathbb{Z}\)</span> with <span class="process-math">\(n&gt;1\text{,}\)</span> if <span class="process-math">\(a\equiv c \mod n\text{,}\)</span> then <span class="process-math">\(a^2\equiv c^2 \mod n\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 8.4.5"><a tabindex="-1" href="#modarith8-4-31-5" title="Copy heading and permalink for Exercise 8.4.5" aria-label="Copy heading and permalink for Exercise 8.4.5">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="modarith8-4-31-6"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="modarith8-4-31-6"><h3 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="modarith8-4-31-6-1-1">Prove for all <span class="process-math">\(a,  c, n, m\in \mathbb{Z}\)</span> with <span class="process-math">\(n&gt;1\text{,}\)</span> and <span class="process-math">\(m\geq 1\text{,}\)</span> if <span class="process-math">\(a\equiv c \mod n\text{,}\)</span> then <span class="process-math">\(a^m\equiv c^m \mod n\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
@@ -1047,18 +1082,18 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 8.4.6"><a tabindex="-1" href="#modarith8-4-31-6" title="Copy heading and permalink for Exercise 8.4.6" aria-label="Copy heading and permalink for Exercise 8.4.6">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="modarith8-4-31-7"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="modarith8-4-31-7"><h3 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="modarith8-4-31-7-1-1">Prove for all integers <span class="process-math">\(n\geq 0\text{,}\)</span> <span class="process-math">\(10^n\equiv 1 \mod 9\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 8.4.7"><a tabindex="-1" href="#modarith8-4-31-7" title="Copy heading and permalink for Exercise 8.4.7" aria-label="Copy heading and permalink for Exercise 8.4.7">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="modarith8-4-31-8"><h4 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="modarith8-4-31-8"><h3 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="modarith8-4-31-8-1-1">Prove that a positive integer, <span class="process-math">\(N\)</span> is divisible by 9 if and only if the sum of the digits of <span class="process-math">\(N\)</span> is divisible by 9.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
 <details id="modarith8-4-31-8-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="hint solution-like knowl__content">
-<div class="para" id="modarith8-4-31-8-2-1">The previous problem will be helpful, as will writing <span class="process-math">\(N\)</span> as a decimal expansion (see <a href="modarith8-4.html#mod-decimal" class="xref" data-knowl="./knowl/xref/A_decimalexpan.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 8.4.7">Activity 8.4.7</a>). It can be useful in proving that a number is divisible by 9 to instead show that it is congruent to 0 mod 9. Also note, this is an “if and only if” statement so your proof requires two parts.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="modarith8-4-31-8-2-1">The previous problem will be helpful, as will writing <span class="process-math">\(N\)</span> as a decimal expansion (see <a href="modarith8-4.html#mod-decimal" class="xref" data-knowl="./knowl/xref/A_decimalexpan.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 8.4.11">Activity 8.4.11</a>). It can be useful in proving that a number is divisible by 9 to instead show that it is congruent to 0 mod 9. Also note, this is an “if and only if” statement so your proof requires two parts.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#modarith8-4-31-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Hint 8.4.8.1"><a tabindex="-1" href="#modarith8-4-31-8-2" title="Copy heading and permalink for Hint 8.4.8.1" aria-label="Copy heading and permalink for Hint 8.4.8.1">🔗</a></div>
 </div></details>

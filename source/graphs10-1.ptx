@@ -743,7 +743,7 @@
 
 </latex-image></image>
 <!--</figure>-->
-
+<p>
   <ol marker="a.">
     <li>
       <p>
@@ -793,7 +793,7 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
 </statement></exercise>
 <exercise><statement><p>
     A graph has vertices of degrees 0, 2, 2, 3, and 9. How many edges does the graph have?
@@ -803,7 +803,7 @@
     <p>
     For each of the following, draw the graph if it exists or explain why no such graph exists.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -823,7 +823,7 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
   </statement></exercise>
   <exercise><statement><p>
     In a group of 25 people, is it possible for each person to shake hands with exactly 3 other people? Explain your answer.
@@ -832,7 +832,7 @@
     <p>
     Recall that <m>K_{m,n}</m> denotes the complete bipartite graph on <m>(m, n)</m> vertices.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -870,13 +870,13 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
   </statement></exercise>
   <exercise><statement>
     <p>
     Recall <m>K_n</m> is the complete graph on <m>n</m> vertices.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -890,7 +890,7 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
   </statement><hint><p>There are two possible approaches for the proof. One is to try a counting argument, the other is to do induction on <m>n</m>.</p></hint></exercise>
   </exercises>
 

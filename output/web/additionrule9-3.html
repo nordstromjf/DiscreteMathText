@@ -19,15 +19,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-2 { system: extends decimal; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-3 { system: extends decimal; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-4 { system: extends lower-roman; prefix: ''; suffix: '. '; }
+</style>
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
 hasWebworkReps: false,
 hasSage: false,
 isReact: false,
 htmlPresentation: false,
+lang: "en-US",
 });
-</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta name="twitter:title" content="Discrete Mathematics: An Active Approach to Mathematical Reasoning">
@@ -36,7 +42,7 @@ htmlPresentation: false,
 <meta name="twitter:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta property="og:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.43"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.54"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.54"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -58,21 +64,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.9';
+eBookConfig.runestone_version = '8.3.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.846a0d6fafaa99e0.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.bbcfc02849ebc023.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/prefix-runtime.4beca1fdeed766a2.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.ebd33f6a21eed414.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.9963089870a016c8.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="DiscreteMathText" class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></div>
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="DiscreteMath-14-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
@@ -85,7 +91,17 @@ eBookConfig.enable_chatcodes =  false;
 <div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
 <ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
-<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
 <h2 class="heading">Readability settings</h2>
 <button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
@@ -134,6 +150,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter1.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to Mathematical Language</span></a></div>
 <ul id="ptx-toc-group-chapter1" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter1-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="variables1-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Variables and Statements</span></a></div>
 <ul id="ptx-toc-group-variables1-1" class="structural toc-item-list">
@@ -160,6 +177,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter2.html" class="internal"><span class="codenumber">2</span> <span class="title">Logic</span></a></div>
 <ul id="ptx-toc-group-chapter2" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter2-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="logical_form2-1.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Truth-Tables and Logical Equivalence</span></a></div>
 <ul id="ptx-toc-group-logical_form2-1" class="structural toc-item-list">
@@ -186,6 +204,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter3.html" class="internal"><span class="codenumber">3</span> <span class="title">Logic with Quantifiers</span></a></div>
 <ul id="ptx-toc-group-chapter3" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter3-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="quantifiersI3-1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Quantifiers</span></a></div>
 <ul id="ptx-toc-group-quantifiersI3-1" class="structural toc-item-list">
@@ -219,6 +238,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter4.html" class="internal"><span class="codenumber">4</span> <span class="title">Proof Techniques</span></a></div>
 <ul id="ptx-toc-group-chapter4" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter4-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="directproof4-1.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Direct Proof and Counterexample</span></a></div>
 <ul id="ptx-toc-group-directproof4-1" class="structural toc-item-list">
@@ -266,6 +286,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter5.html" class="internal"><span class="codenumber">5</span> <span class="title">Sequences and Mathematical Induction</span></a></div>
 <ul id="ptx-toc-group-chapter5" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter5-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sequences5-1.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Sequences</span></a></div>
 <ul id="ptx-toc-group-sequences5-1" class="structural toc-item-list">
@@ -313,6 +334,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter6.html" class="internal"><span class="codenumber">6</span> <span class="title">Set Theory</span></a></div>
 <ul id="ptx-toc-group-chapter6" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter6-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sets6-1.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Set Theory</span></a></div>
 <ul id="ptx-toc-group-sets6-1" class="structural toc-item-list">
@@ -339,6 +361,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter7.html" class="internal"><span class="codenumber">7</span> <span class="title">Functions</span></a></div>
 <ul id="ptx-toc-group-chapter7" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter7-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="functions7-1.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Functions</span></a></div>
 <ul id="ptx-toc-group-functions7-1" class="structural toc-item-list">
@@ -358,6 +381,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter8.html" class="internal"><span class="codenumber">8</span> <span class="title">Relations</span></a></div>
 <ul id="ptx-toc-group-chapter8" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter8-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="relations8-1.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Relations on Sets</span></a></div>
 <ul id="ptx-toc-group-relations8-1" class="structural toc-item-list">
@@ -391,6 +415,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="chapter9.html" class="internal"><span class="codenumber">9</span> <span class="title">Probability and Counting</span></a></div>
 <ul class="structural toc-item-list contains-active" id="ptx-toc-group-chapter9">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter9-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="probability9-1.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Probability</span></a></div>
 <ul id="ptx-toc-group-probability9-1" class="structural toc-item-list">
@@ -438,6 +463,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter10.html" class="internal"><span class="codenumber">10</span> <span class="title">Graph Theory</span></a></div>
 <ul id="ptx-toc-group-chapter10" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter10-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="graphs10-1.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphs</span></a></div>
 <ul id="ptx-toc-group-graphs10-1" class="structural toc-item-list">
@@ -465,7 +491,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="DiscreteMath-14.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul id="ptx-toc-group-DiscreteMath-14" class="structural toc-item-list">
 <li class="toc-item toc-references"><div class="toc-title-box"><a href="DiscreteMath-14-1.html" class="internal"><span class="title">References</span></a></div></li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A.</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="DiscreteMath-14-3.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="DiscreteMath-14-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
@@ -473,12 +499,12 @@ eBookConfig.enable_chatcodes =  false;
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="additionrule9-3">
-<h2 class="heading hide-type">
+<h1 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Addition Rule</span>
-</h2>
+</h1>
 <div class="para" id="additionrule9-3-3">In this section we look at how to count unions of disjoint sets, then look at counting sets with nontrivial intersections.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="assemblage assemblage-like" id="B_addrule"><h3 class="heading"><span class="title">Addition Rule.</span></h3>
+<article class="assemblage assemblage-like" id="B_addrule"><h2 class="heading"><span class="title">Addition Rule.</span></h2>
 <div class="para logical" id="B_addrule-3">
 <div class="para">If <span class="process-math">\(A\)</span> is the union of <span class="process-math">\(k\)</span> distinct, mutually disjoint sets, <span class="process-math">\(A_1, A_2, \ldots, A_k\text{,}\)</span> then the number of elements in <span class="process-math">\(A\)</span> is given by</div>
 <div class="displaymath process-math" id="B_addrule-3-5">
@@ -490,9 +516,9 @@ N(A)=N(A_1)+N(A_2)+\cdots +N(A_k).
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Assemblage: Addition Rule"><a tabindex="-1" href="#B_addrule" title="Copy heading and permalink for Assemblage: Addition Rule" aria-label="Copy heading and permalink for Assemblage: Addition Rule">🔗</a></div>
 </article>
-<details id="E_divby5" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Addition Rule: Counting Numbers Divisible by 5.</span>
-</h3></summary>
+<details id="E_divby5" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Addition Rule: Counting Numbers Divisible by 5.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_divby5-2">How many 3 digit numbers are divisible by 5?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_divby5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -519,19 +545,19 @@ N(A)=90+90=180.
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Example 9.3.1: Addition Rule: Counting Numbers Divisible by 5"><a tabindex="-1" href="#E_divby5" title="Copy heading and permalink for Example 9.3.1: Addition Rule: Counting Numbers Divisible by 5" aria-label="Copy heading and permalink for Example 9.3.1: Addition Rule: Counting Numbers Divisible by 5">🔗</a></div>
 </article></details>
-<article class="activity project-like" id="addrule-divby10"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="addrule-divby10"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="addrule-divby10-1-1">How many 3 digit numbers are divisible by 10? Explain your answer.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#addrule-divby10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 9.3.1"><a tabindex="-1" href="#addrule-divby10" title="Copy heading and permalink for Activity 9.3.1" aria-label="Copy heading and permalink for Activity 9.3.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 9.3.2"><a tabindex="-1" href="#addrule-divby10" title="Copy heading and permalink for Activity 9.3.2" aria-label="Copy heading and permalink for Activity 9.3.2">🔗</a></div>
 </article>
-<article class="activity project-like" id="addrule-divby2"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="addrule-divby2"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="addrule-divby2-1-1">How many 3 digit numbers are divisible by 2? Explain your answer.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#addrule-divby2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 9.3.2"><a tabindex="-1" href="#addrule-divby2" title="Copy heading and permalink for Activity 9.3.2" aria-label="Copy heading and permalink for Activity 9.3.2">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 9.3.3"><a tabindex="-1" href="#addrule-divby2" title="Copy heading and permalink for Activity 9.3.3" aria-label="Copy heading and permalink for Activity 9.3.3">🔗</a></div>
 </article>
 <div class="para" id="additionrule9-3-8">It is going to take practice to be able to see when to use the multiplication rule and when to use the addition rule. If you are counting elements of different sets, use addition. If you are counting elements that are constructed in a process (can you determine step 1, step 2, etc?), then use the multiplication rule. Many problems require both rules, as we saw in <a href="additionrule9-3.html#E_divby5" class="xref" data-knowl="./knowl/xref/E_divby5.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 9.3.1: Addition Rule: Counting Numbers Divisible by 5">Example 9.3.1</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -541,9 +567,9 @@ N(A)=90+90=180.
 </div>
 <div class="para" id="additionrule9-3-11">If we want to count the number of elements in <span class="process-math">\(A\cup B\text{,}\)</span> we can count those in <span class="process-math">\(A\)</span> and those in <span class="process-math">\(B\text{.}\)</span> But every element in the intersection has now been counted twice. So we need to subtract <span class="process-math">\(N(A\cap B)\text{.}\)</span> This is the idea behind the Inclusion-Exclusion Rule.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="theorem theorem-like" id="T_inclusionexclusion"><h3 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Inclusion-Exclusion Rule.</span>
-</h3>
+<article class="theorem theorem-like" id="T_inclusionexclusion"><h2 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Inclusion-Exclusion Rule.</span>
+</h2>
 <div class="para logical" id="T_inclusionexclusion-3-1">
 <div class="para">Let <span class="process-math">\(A, B, C\)</span> be finite sets.</div>
 <div class="displaymath process-math" id="T_inclusionexclusion-3-1-2">
@@ -560,13 +586,13 @@ N(A\cup B\cup C)=&amp;N(A)+N(B)+N(C)\\
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#T_inclusionexclusion-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Theorem 9.3.2: Inclusion-Exclusion Rule"><a tabindex="-1" href="#T_inclusionexclusion" title="Copy heading and permalink for Theorem 9.3.2: Inclusion-Exclusion Rule" aria-label="Copy heading and permalink for Theorem 9.3.2: Inclusion-Exclusion Rule">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 9.3.4: Inclusion-Exclusion Rule"><a tabindex="-1" href="#T_inclusionexclusion" title="Copy heading and permalink for Theorem 9.3.4: Inclusion-Exclusion Rule" aria-label="Copy heading and permalink for Theorem 9.3.4: Inclusion-Exclusion Rule">🔗</a></div>
 </article>
 <div class="para" id="additionrule9-3-13">For the case with three sets, we can see that each element in the intersection of at least two sets got counted twice, but when we subtract off all three intersections, we end up subtracting each element in more than one intersection twice, so we need to add back the elements in the intersection of all three sets. For this class, we won’t need to use Inclusion-Exclusion on more than three sets, but the rule does generalize to <span class="process-math">\(n\)</span> sets by adding the sets, subtracting intersections of two sets, adding the intersections of three sets, subtracting the intersections of four sets, etc.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_countingmultiples" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Inclusion-Exclusion: Counting Multiples.</span>
-</h3></summary>
+<details id="E_countingmultiples" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Inclusion-Exclusion: Counting Multiples.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_countingmultiples-2">How many integers from 1 to 1000 are multiples of 3 or multiples of 5?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_countingmultiples-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -609,54 +635,54 @@ N(A\cup B)=N(A)+N(B)-N(A\cap B)=333+200-66=467.
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_countingmultiples-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Example 9.3.3: Inclusion-Exclusion: Counting Multiples"><a tabindex="-1" href="#E_countingmultiples" title="Copy heading and permalink for Example 9.3.3: Inclusion-Exclusion: Counting Multiples" aria-label="Copy heading and permalink for Example 9.3.3: Inclusion-Exclusion: Counting Multiples">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 9.3.5: Inclusion-Exclusion: Counting Multiples"><a tabindex="-1" href="#E_countingmultiples" title="Copy heading and permalink for Example 9.3.5: Inclusion-Exclusion: Counting Multiples" aria-label="Copy heading and permalink for Example 9.3.5: Inclusion-Exclusion: Counting Multiples">🔗</a></div>
 </article></details>
-<article class="activity project-like" id="addrule-div3or7"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="addrule-div3or7"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="introduction" id="addrule-div3or7-1">
 <div class="para" id="addrule-div3or7-1-1">We want to count the number of integers from 1-50 that are divisible by 3 or 7.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#addrule-div3or7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="addrule-div3or7-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="addrule-div3or7-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="addrule-div3or7-3-1-1">How many integers from 1-50 are divisible by 3?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#addrule-div3or7-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 9.3.3.a"><a tabindex="-1" href="#addrule-div3or7-3" title="Copy heading and permalink for Task 9.3.3.a" aria-label="Copy heading and permalink for Task 9.3.3.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 9.3.6.a"><a tabindex="-1" href="#addrule-div3or7-3" title="Copy heading and permalink for Task 9.3.6.a" aria-label="Copy heading and permalink for Task 9.3.6.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="addrule-div3or7-7"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="addrule-div3or7-7"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="addrule-div3or7-7-1-1">How many integers from 1-50 are divisible by 7?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#addrule-div3or7-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 9.3.3.b"><a tabindex="-1" href="#addrule-div3or7-7" title="Copy heading and permalink for Task 9.3.3.b" aria-label="Copy heading and permalink for Task 9.3.3.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 9.3.6.b"><a tabindex="-1" href="#addrule-div3or7-7" title="Copy heading and permalink for Task 9.3.6.b" aria-label="Copy heading and permalink for Task 9.3.6.b">🔗</a></div>
 </article>
-<article class="task exercise-like" id="addrule-div3or7-total"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<article class="task exercise-like" id="addrule-div3or7-total"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="addrule-div3or7-total-1-1">What is the number of integers from 1-50 divisible by 3 or 7? You can pretty easily check you answer by writing them all down. Can you use inclusion-exclusion to calculate this?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#addrule-div3or7-total-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 9.3.3.c"><a tabindex="-1" href="#addrule-div3or7-total" title="Copy heading and permalink for Task 9.3.3.c" aria-label="Copy heading and permalink for Task 9.3.3.c">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 9.3.3"><a tabindex="-1" href="#addrule-div3or7" title="Copy heading and permalink for Activity 9.3.3" aria-label="Copy heading and permalink for Activity 9.3.3">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 9.3.6.c"><a tabindex="-1" href="#addrule-div3or7-total" title="Copy heading and permalink for Task 9.3.6.c" aria-label="Copy heading and permalink for Task 9.3.6.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 9.3.6"><a tabindex="-1" href="#addrule-div3or7" title="Copy heading and permalink for Activity 9.3.6" aria-label="Copy heading and permalink for Activity 9.3.6">🔗</a></div>
 </article>
-<article class="activity project-like" id="addrule-div4or7or9"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="addrule-div4or7or9"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="introduction" id="addrule-div4or7or9-1">
 <div class="para" id="addrule-div4or7or9-1-1">We want to count the number of integers from 1-1000 that are divisible by 4, 7 or 9.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#addrule-div4or7or9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="addrule-div4or7or9-4"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="addrule-div4or7or9-4"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="addrule-div4or7or9-4-1-1">How many integers from 1-1000 are divisible by 4?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#addrule-div4or7or9-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 9.3.4.a"><a tabindex="-1" href="#addrule-div4or7or9-4" title="Copy heading and permalink for Task 9.3.4.a" aria-label="Copy heading and permalink for Task 9.3.4.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 9.3.7.a"><a tabindex="-1" href="#addrule-div4or7or9-4" title="Copy heading and permalink for Task 9.3.7.a" aria-label="Copy heading and permalink for Task 9.3.7.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="addrule-div4or7or9-7"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="addrule-div4or7or9-7"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="addrule-div4or7or9-7-1-1">How many integers from 1-1000 are divisible by 7?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#addrule-div4or7or9-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 9.3.4.b"><a tabindex="-1" href="#addrule-div4or7or9-7" title="Copy heading and permalink for Task 9.3.4.b" aria-label="Copy heading and permalink for Task 9.3.4.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 9.3.7.b"><a tabindex="-1" href="#addrule-div4or7or9-7" title="Copy heading and permalink for Task 9.3.7.b" aria-label="Copy heading and permalink for Task 9.3.7.b">🔗</a></div>
 </article>
-<article class="task exercise-like" id="addrule-div4or7or9-9"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<article class="task exercise-like" id="addrule-div4or7or9-9"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="addrule-div4or7or9-9-1-1">How many integers from 1-1000 are divisible by 9?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#addrule-div4or7or9-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 9.3.4.c"><a tabindex="-1" href="#addrule-div4or7or9-9" title="Copy heading and permalink for Task 9.3.4.c" aria-label="Copy heading and permalink for Task 9.3.4.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 9.3.7.c"><a tabindex="-1" href="#addrule-div4or7or9-9" title="Copy heading and permalink for Task 9.3.7.c" aria-label="Copy heading and permalink for Task 9.3.7.c">🔗</a></div>
 </article>
-<article class="task exercise-like" id="addrule-div4or7or9-total"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<article class="task exercise-like" id="addrule-div4or7or9-total"><h3 class="heading"><span class="codenumber">(d)</span></h3>
 <div class="para" id="addrule-div4or7or9-total-1-1">Now calculate the number of integers 1-1000 divisible by 4, 7, or 9 using inclusion-exclusion. What other sets do you need to calculate?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#addrule-div4or7or9-total-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
@@ -664,15 +690,15 @@ N(A\cup B)=N(A)+N(B)-N(A\cap B)=333+200-66=467.
 <div class="hint solution-like knowl__content">
 <div class="para" id="addrule-div4or7or9-total-3-1">You’ll need the 3 set version of Inclusion-Exclusion<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#addrule-div4or7or9-total-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Hint 9.3.4.d.1"><a tabindex="-1" href="#addrule-div4or7or9-total-3" title="Copy heading and permalink for Hint 9.3.4.d.1" aria-label="Copy heading and permalink for Hint 9.3.4.d.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Hint 9.3.7.d.1"><a tabindex="-1" href="#addrule-div4or7or9-total-3" title="Copy heading and permalink for Hint 9.3.7.d.1" aria-label="Copy heading and permalink for Hint 9.3.7.d.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 9.3.4.d"><a tabindex="-1" href="#addrule-div4or7or9-total" title="Copy heading and permalink for Task 9.3.4.d" aria-label="Copy heading and permalink for Task 9.3.4.d">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 9.3.4"><a tabindex="-1" href="#addrule-div4or7or9" title="Copy heading and permalink for Activity 9.3.4" aria-label="Copy heading and permalink for Activity 9.3.4">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 9.3.7.d"><a tabindex="-1" href="#addrule-div4or7or9-total" title="Copy heading and permalink for Task 9.3.7.d" aria-label="Copy heading and permalink for Task 9.3.7.d">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 9.3.7"><a tabindex="-1" href="#addrule-div4or7or9" title="Copy heading and permalink for Activity 9.3.7" aria-label="Copy heading and permalink for Activity 9.3.7">🔗</a></div>
 </article>
-<article class="activity project-like" id="addrule-THEORY"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="addrule-THEORY"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="addrule-THEORY-1-1">How many ways can the word THEORY be arranged if the TH must be next to each other as TH or HT?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#addrule-THEORY-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
@@ -680,14 +706,14 @@ N(A\cup B)=N(A)+N(B)-N(A\cap B)=333+200-66=467.
 <div class="hint solution-like knowl__content">
 <div class="para" id="addrule-THEORY-3-1">Count the TH words, then the HT words, then figure out which rule you need to find the total.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#addrule-THEORY-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Hint 9.3.5.1"><a tabindex="-1" href="#addrule-THEORY-3" title="Copy heading and permalink for Hint 9.3.5.1" aria-label="Copy heading and permalink for Hint 9.3.5.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Hint 9.3.8.1"><a tabindex="-1" href="#addrule-THEORY-3" title="Copy heading and permalink for Hint 9.3.8.1" aria-label="Copy heading and permalink for Hint 9.3.8.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 9.3.5"><a tabindex="-1" href="#addrule-THEORY" title="Copy heading and permalink for Activity 9.3.5" aria-label="Copy heading and permalink for Activity 9.3.5">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 9.3.8"><a tabindex="-1" href="#addrule-THEORY" title="Copy heading and permalink for Activity 9.3.8" aria-label="Copy heading and permalink for Activity 9.3.8">🔗</a></div>
 </article>
-<details id="E_inclexcldrugs" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Inclusion-Exclusion: Drug Study.</span>
-</h3></summary>
+<details id="E_inclexcldrugs" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3.9</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Inclusion-Exclusion: Drug Study.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para logical" id="E_inclexcldrugs-2">
 <div class="para">Suppose a study was done with three drugs, A, B and C. A total of 50 subjects used all three drugs. They reported which drugs made them feel better, with the following results:</div>
@@ -731,7 +757,7 @@ N(A\cup B)=N(A)+N(B)-N(A\cap B)=333+200-66=467.
 <div class="para" id="E_inclexcldrugs-4-1">
 <span class="process-math">\(50-41=9\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_inclexcldrugs-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Answer 9.3.4.1"><a tabindex="-1" href="#E_inclexcldrugs-4" title="Copy heading and permalink for Answer 9.3.4.1" aria-label="Copy heading and permalink for Answer 9.3.4.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 9.3.9.1"><a tabindex="-1" href="#E_inclexcldrugs-4" title="Copy heading and permalink for Answer 9.3.9.1" aria-label="Copy heading and permalink for Answer 9.3.9.1">🔗</a></div>
 </div></details>
 <div class="para" id="E_inclexcldrugs-5">How many had relief from all three of the drugs?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_inclexcldrugs-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -750,14 +776,14 @@ N(A\cap B\cap C)=&amp;N(A\cup B\cup C)-N(A)-N(B)-N(C)\\
 <div class="para" id="E_inclexcldrugs-7-1">
 <span class="process-math">\(41-21-21-31+9+14+15=6\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_inclexcldrugs-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Answer 9.3.4.2"><a tabindex="-1" href="#E_inclexcldrugs-7" title="Copy heading and permalink for Answer 9.3.4.2" aria-label="Copy heading and permalink for Answer 9.3.4.2">🔗</a></div>
-</div></details><div class="autopermalink" aria-hidden="true" data-description="Example 9.3.4: Inclusion-Exclusion: Drug Study"><a tabindex="-1" href="#E_inclexcldrugs" title="Copy heading and permalink for Example 9.3.4: Inclusion-Exclusion: Drug Study" aria-label="Copy heading and permalink for Example 9.3.4: Inclusion-Exclusion: Drug Study">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 9.3.9.2"><a tabindex="-1" href="#E_inclexcldrugs-7" title="Copy heading and permalink for Answer 9.3.9.2" aria-label="Copy heading and permalink for Answer 9.3.9.2">🔗</a></div>
+</div></details><div class="autopermalink" aria-hidden="true" data-description="Example 9.3.9: Inclusion-Exclusion: Drug Study"><a tabindex="-1" href="#E_inclexcldrugs" title="Copy heading and permalink for Example 9.3.9: Inclusion-Exclusion: Drug Study" aria-label="Copy heading and permalink for Example 9.3.9: Inclusion-Exclusion: Drug Study">🔗</a></div>
 </article></details>
 <section class="reading-questions" id="additionrule9-3-19">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Check Your Understanding</span>
-</h3>
-<article class="exercise exercise-like" id="DMT_addrule_CYU_3db12"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</h2>
+<article class="exercise exercise-like" id="DMT_addrule_CYU_3db12"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-DMT_addrule_CYU_3db12">
 <div class="para" id="DMT_addrule_CYU_3db12-1-1">How many 3 digit numbers begin with 1 or begin with a 2? <input type="text" placeholder="Number"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_addrule_CYU_3db12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -765,7 +791,7 @@ N(A\cap B\cap C)=&amp;N(A\cup B\cup C)-N(A)-N(B)-N(C)\\
 </div></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 9.3.1"><a tabindex="-1" href="#DMT_addrule_CYU_3db12" title="Copy heading and permalink for Reading Question 9.3.1" aria-label="Copy heading and permalink for Reading Question 9.3.1">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_addrule_CYU_3de12"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_addrule_CYU_3de12"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-DMT_addrule_CYU_3de12">
 <div class="para" id="DMT_addrule_CYU_3de12-1-1">How many 3 digit numbers end with 1 or end with 2? <input type="text" placeholder="Number"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_addrule_CYU_3de12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -773,210 +799,231 @@ N(A\cap B\cap C)=&amp;N(A\cup B\cup C)-N(A)-N(B)-N(C)\\
 </div></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 9.3.2"><a tabindex="-1" href="#DMT_addrule_CYU_3de12" title="Copy heading and permalink for Reading Question 9.3.2" aria-label="Copy heading and permalink for Reading Question 9.3.2">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_addrule_CYU_3db1ore2"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_addrule_CYU_3db1ore2"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-DMT_addrule_CYU_3db1ore2">
 <div class="para" id="DMT_addrule_CYU_3db1ore2-1-1">How many 3 digit numbers begin with 1 or end with a 2? <input type="text" placeholder="Number"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_addrule_CYU_3db1ore2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<script type="application/json">[[{"number": [180, 180], "feedback": "\n<div class=\"para\" id=\"DMT_addrule_CYU_3db1ore2-2-1-1-1-1\">Correct, <span class=\"process-math\">\\((1)(10)(10)+9(10)(1)-1(10)(1)=180\\text{.}\\)<\/span><\/div>"}, {"number": [190, 190], "feedback": "\n<div class=\"para\" id=\"DMT_addrule_CYU_3db1ore2-2-1-2-1-1\">Incorrect. The set of 3 digit numbers beginning with 1 and the set of 3 digit numbers ending with 2 are not disjoint. Make sure to subtract the number of 3 digit numbers in the intersection.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "\n<div class=\"para\" id=\"DMT_addrule_CYU_3db1ore2-2-1-3-1-1\">Incorrect. How many 3 digit numbers begin with 1? How many end with 2? These two sets are not disjoint, so you need to use Inclusion-Exclusion (see <a href=\"additionrule9-3.html#T_inclusionexclusion\" class=\"xref\" data-knowl=\".\/knowl\/xref\/T_inclusionexclusion.html\" data-reveal-label=\"Reveal\" data-close-label=\"Close\" title=\"Theorem 9.3.2: Inclusion-Exclusion Rule\">Theorem 9.3.2<\/a>) and subtract the number of elements in the intersection.<\/div>"}]]</script>
+<script type="application/json">[[{"number": [180, 180], "feedback": "\n<div class=\"para\" id=\"DMT_addrule_CYU_3db1ore2-2-1-1-1-1\">Correct, <span class=\"process-math\">\\((1)(10)(10)+9(10)(1)-1(10)(1)=180\\text{.}\\)<\/span><\/div>"}, {"number": [190, 190], "feedback": "\n<div class=\"para\" id=\"DMT_addrule_CYU_3db1ore2-2-1-2-1-1\">Incorrect. The set of 3 digit numbers beginning with 1 and the set of 3 digit numbers ending with 2 are not disjoint. Make sure to subtract the number of 3 digit numbers in the intersection.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "\n<div class=\"para\" id=\"DMT_addrule_CYU_3db1ore2-2-1-3-1-1\">Incorrect. How many 3 digit numbers begin with 1? How many end with 2? These two sets are not disjoint, so you need to use Inclusion-Exclusion (see <a href=\"additionrule9-3.html#T_inclusionexclusion\" class=\"xref\" data-knowl=\".\/knowl\/xref\/T_inclusionexclusion.html\" data-reveal-label=\"Reveal\" data-close-label=\"Close\" title=\"Theorem 9.3.4: Inclusion-Exclusion Rule\">Theorem 9.3.4<\/a>) and subtract the number of elements in the intersection.<\/div>"}]]</script>
 </div></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 9.3.3"><a tabindex="-1" href="#DMT_addrule_CYU_3db1ore2" title="Copy heading and permalink for Reading Question 9.3.3" aria-label="Copy heading and permalink for Reading Question 9.3.3">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_addrule_CYU_3db12ore234"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_addrule_CYU_3db12ore234"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-DMT_addrule_CYU_3db12ore234">
 <div class="para" id="DMT_addrule_CYU_3db12ore234-1-1">How many 3 digit numbers begin with 1 or 2 or end with 2, 3, or 4? <input type="text" placeholder="Number"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_addrule_CYU_3db12ore234-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<script type="application/json">[[{"number": [410, 410], "feedback": "\n<div class=\"para\" id=\"DMT_addrule_CYU_3db12ore234-2-1-1-1-1\">Correct, <span class=\"process-math\">\\((2)(10)(10)+9(10)(3)-2(10)(3)=410\\text{.}\\)<\/span><\/div>"}, {"number": [470, 470], "feedback": "\n<div class=\"para\" id=\"DMT_addrule_CYU_3db12ore234-2-1-2-1-1\">Incorrect. The set of 3 digit numbers beginning with 1 or 2 and the set of 3 digit numbers ending with 2, 3 or 4 are not disjoint. Make sure to subtract the number of 3 digit numbers in the intersection (those that both begin with 1 or 2 and end with 2, 3 or 4).<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "\n<div class=\"para\" id=\"DMT_addrule_CYU_3db12ore234-2-1-3-1-1\">Incorrect. How many 3 digit numbers begin with 1 or 2? How many end with 2, 3, or 4? Note, you can just use the multiplication rule to count each of these sets. These two sets are not disjoint, so you need to use Inclusion-Exclusion (see <a href=\"additionrule9-3.html#T_inclusionexclusion\" class=\"xref\" data-knowl=\".\/knowl\/xref\/T_inclusionexclusion.html\" data-reveal-label=\"Reveal\" data-close-label=\"Close\" title=\"Theorem 9.3.2: Inclusion-Exclusion Rule\">Theorem 9.3.2<\/a>) and subtract the number of elements in the intersection (those that both begin with 1 or 2 and end with 2, 3 or 4).<\/div>"}]]</script>
+<script type="application/json">[[{"number": [410, 410], "feedback": "\n<div class=\"para\" id=\"DMT_addrule_CYU_3db12ore234-2-1-1-1-1\">Correct, <span class=\"process-math\">\\((2)(10)(10)+9(10)(3)-2(10)(3)=410\\text{.}\\)<\/span><\/div>"}, {"number": [470, 470], "feedback": "\n<div class=\"para\" id=\"DMT_addrule_CYU_3db12ore234-2-1-2-1-1\">Incorrect. The set of 3 digit numbers beginning with 1 or 2 and the set of 3 digit numbers ending with 2, 3 or 4 are not disjoint. Make sure to subtract the number of 3 digit numbers in the intersection (those that both begin with 1 or 2 and end with 2, 3 or 4).<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "\n<div class=\"para\" id=\"DMT_addrule_CYU_3db12ore234-2-1-3-1-1\">Incorrect. How many 3 digit numbers begin with 1 or 2? How many end with 2, 3, or 4? Note, you can just use the multiplication rule to count each of these sets. These two sets are not disjoint, so you need to use Inclusion-Exclusion (see <a href=\"additionrule9-3.html#T_inclusionexclusion\" class=\"xref\" data-knowl=\".\/knowl\/xref\/T_inclusionexclusion.html\" data-reveal-label=\"Reveal\" data-close-label=\"Close\" title=\"Theorem 9.3.4: Inclusion-Exclusion Rule\">Theorem 9.3.4<\/a>) and subtract the number of elements in the intersection (those that both begin with 1 or 2 and end with 2, 3 or 4).<\/div>"}]]</script>
 </div></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 9.3.4"><a tabindex="-1" href="#DMT_addrule_CYU_3db12ore234" title="Copy heading and permalink for Reading Question 9.3.4" aria-label="Copy heading and permalink for Reading Question 9.3.4">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_addrule_CYU_mult3or5"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_addrule_CYU_mult3or5"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-DMT_addrule_CYU_mult3or5">
 <div class="para" id="DMT_addrule_CYU_mult3or5-1-1">How many integers from 1 to 2500 are multiples of 3 or multiples of 5? <input type="text" placeholder="Number"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_addrule_CYU_mult3or5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<script type="application/json">[[{"number": [1167, 1167], "feedback": "\n<div class=\"para\" id=\"DMT_addrule_CYU_mult3or5-2-1-1-1-1\">Correct, <span class=\"process-math\">\\(833+500-166=1167\\text{.}\\)<\/span><\/div>"}, {"number": [1333, 1333], "feedback": "\n<div class=\"para\" id=\"DMT_addrule_CYU_mult3or5-2-1-2-1-1\">Incorrect. The set of multipples of 3 and the set of multiples of 5 are not disjoint. Make sure to subtract the number of integers in the intersection (those that multiples of 15).<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "\n<div class=\"para\" id=\"DMT_addrule_CYU_mult3or5-2-1-3-1-1\">Incorrect. See <a href=\"additionrule9-3.html#E_countingmultiples\" class=\"xref\" data-knowl=\".\/knowl\/xref\/E_countingmultiples.html\" data-reveal-label=\"Reveal\" data-close-label=\"Close\" title=\"Example 9.3.3: Inclusion-Exclusion: Counting Multiples\">Example 9.3.3<\/a> for an example of how to do this problem.<\/div>"}]]</script>
+<script type="application/json">[[{"number": [1167, 1167], "feedback": "\n<div class=\"para\" id=\"DMT_addrule_CYU_mult3or5-2-1-1-1-1\">Correct, <span class=\"process-math\">\\(833+500-166=1167\\text{.}\\)<\/span><\/div>"}, {"number": [1333, 1333], "feedback": "\n<div class=\"para\" id=\"DMT_addrule_CYU_mult3or5-2-1-2-1-1\">Incorrect. The set of multipples of 3 and the set of multiples of 5 are not disjoint. Make sure to subtract the number of integers in the intersection (those that multiples of 15).<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "\n<div class=\"para\" id=\"DMT_addrule_CYU_mult3or5-2-1-3-1-1\">Incorrect. See <a href=\"additionrule9-3.html#E_countingmultiples\" class=\"xref\" data-knowl=\".\/knowl\/xref\/E_countingmultiples.html\" data-reveal-label=\"Reveal\" data-close-label=\"Close\" title=\"Example 9.3.5: Inclusion-Exclusion: Counting Multiples\">Example 9.3.5<\/a> for an example of how to do this problem.<\/div>"}]]</script>
 </div></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 9.3.5"><a tabindex="-1" href="#DMT_addrule_CYU_mult3or5" title="Copy heading and permalink for Reading Question 9.3.5" aria-label="Copy heading and permalink for Reading Question 9.3.5">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_addrule_CYU_mult2or7"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_addrule_CYU_mult2or7"><h3 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-DMT_addrule_CYU_mult2or7">
 <div class="para" id="DMT_addrule_CYU_mult2or7-1-1">How many integers from 1 to 2500 are multiples of 2 or multiples of 7? <input type="text" placeholder="Number"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_addrule_CYU_mult2or7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<script type="application/json">[[{"number": [1429, 1429], "feedback": "\n<div class=\"para\" id=\"DMT_addrule_CYU_mult2or7-2-1-1-1-1\">Correct, <span class=\"process-math\">\\(1250+357-178=1429\\text{.}\\)<\/span><\/div>"}, {"number": [1607, 1607], "feedback": "\n<div class=\"para\" id=\"DMT_addrule_CYU_mult2or7-2-1-2-1-1\">Incorrect. The set of multipples of 2 and the set of multiples of 7 are not disjoint. Make sure to subtract the number of integers in the intersection (those that multiples of 14).<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "\n<div class=\"para\" id=\"DMT_addrule_CYU_mult2or7-2-1-3-1-1\">Incorrect. See <a href=\"additionrule9-3.html#E_countingmultiples\" class=\"xref\" data-knowl=\".\/knowl\/xref\/E_countingmultiples.html\" data-reveal-label=\"Reveal\" data-close-label=\"Close\" title=\"Example 9.3.3: Inclusion-Exclusion: Counting Multiples\">Example 9.3.3<\/a> for an example of how to do this problem.<\/div>"}]]</script>
+<script type="application/json">[[{"number": [1429, 1429], "feedback": "\n<div class=\"para\" id=\"DMT_addrule_CYU_mult2or7-2-1-1-1-1\">Correct, <span class=\"process-math\">\\(1250+357-178=1429\\text{.}\\)<\/span><\/div>"}, {"number": [1607, 1607], "feedback": "\n<div class=\"para\" id=\"DMT_addrule_CYU_mult2or7-2-1-2-1-1\">Incorrect. The set of multipples of 2 and the set of multiples of 7 are not disjoint. Make sure to subtract the number of integers in the intersection (those that multiples of 14).<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "\n<div class=\"para\" id=\"DMT_addrule_CYU_mult2or7-2-1-3-1-1\">Incorrect. See <a href=\"additionrule9-3.html#E_countingmultiples\" class=\"xref\" data-knowl=\".\/knowl\/xref\/E_countingmultiples.html\" data-reveal-label=\"Reveal\" data-close-label=\"Close\" title=\"Example 9.3.5: Inclusion-Exclusion: Counting Multiples\">Example 9.3.5<\/a> for an example of how to do this problem.<\/div>"}]]</script>
 </div></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 9.3.6"><a tabindex="-1" href="#DMT_addrule_CYU_mult2or7" title="Copy heading and permalink for Reading Question 9.3.6" aria-label="Copy heading and permalink for Reading Question 9.3.6">🔗</a></div>
 </article><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 9.3: Check Your Understanding"><a tabindex="-1" href="#additionrule9-3-19" title="Copy heading and permalink for Reading Questions 9.3: Check Your Understanding" aria-label="Copy heading and permalink for Reading Questions 9.3: Check Your Understanding">🔗</a></div>
 </section>
 <section class="exercises" id="additionrule9-3-20">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
-</h3>
-<article class="exercise exercise-like" id="additionrule9-3-20-1"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</h2>
+<article class="exercise exercise-like" id="additionrule9-3-20-1"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="additionrule9-3-20-1-1-1">How many bit strings consist of from one through four digits? (Note, strings of different lengths are considered distinct. For example 10 and 0010 are distinct strings.)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.3.1"><a tabindex="-1" href="#additionrule9-3-20-1" title="Copy heading and permalink for Exercise 9.3.1" aria-label="Copy heading and permalink for Exercise 9.3.1">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="additionrule9-3-20-2"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="additionrule9-3-20-2"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="additionrule9-3-20-2-1-1">How many bit strings consist of from five through eight digits?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.3.2"><a tabindex="-1" href="#additionrule9-3-20-2" title="Copy heading and permalink for Exercise 9.3.2" aria-label="Copy heading and permalink for Exercise 9.3.2">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="additionrule9-3-20-3"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="additionrule9-3-20-3"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="additionrule9-3-20-3-1-1">The hexadecimal numbers are constructed using 16 digits: 0-9, A, B, C, D, E, F.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="additionrule9-3-20-3-1-2">
-<li id="additionrule9-3-20-3-1-2-1">
-<div class="para" id="additionrule9-3-20-3-1-2-1-1">How many strings of hexadecimal digits consist of from one through three digits?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-3-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="additionrule9-3-20-3-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="additionrule9-3-20-3-1-2-1">
+<li id="additionrule9-3-20-3-1-2-1-1">
+<div class="para" id="additionrule9-3-20-3-1-2-1-1-1">How many strings of hexadecimal digits consist of from one through three digits?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-3-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.3.a"><a tabindex="-1" href="#additionrule9-3-20-3-1-2-1" title="Copy heading and permalink for Item 9.3.3.a" aria-label="Copy heading and permalink for Item 9.3.3.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.3.a"><a tabindex="-1" href="#additionrule9-3-20-3-1-2-1-1" title="Copy heading and permalink for Item 9.3.3.a" aria-label="Copy heading and permalink for Item 9.3.3.a">🔗</a></div>
 </li>
-<li id="additionrule9-3-20-3-1-2-2">
-<div class="para" id="additionrule9-3-20-3-1-2-2-1">How many strings of hexadecimal digits consist of from two through five digits?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-3-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="additionrule9-3-20-3-1-2-1-2">
+<div class="para" id="additionrule9-3-20-3-1-2-1-2-1">How many strings of hexadecimal digits consist of from two through five digits?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-3-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.3.b"><a tabindex="-1" href="#additionrule9-3-20-3-1-2-2" title="Copy heading and permalink for Item 9.3.3.b" aria-label="Copy heading and permalink for Item 9.3.3.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.3.b"><a tabindex="-1" href="#additionrule9-3-20-3-1-2-1-2" title="Copy heading and permalink for Item 9.3.3.b" aria-label="Copy heading and permalink for Item 9.3.3.b">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.3.3"><a tabindex="-1" href="#additionrule9-3-20-3" title="Copy heading and permalink for Exercise 9.3.3" aria-label="Copy heading and permalink for Exercise 9.3.3">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="additionrule9-3-20-4"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="additionrule9-3-20-4"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="additionrule9-3-20-4-1-1">Consider the integers 1-999.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="additionrule9-3-20-4-1-2">
-<li id="additionrule9-3-20-4-1-2-1">
-<div class="para" id="additionrule9-3-20-4-1-2-1-1">How many integers from 1 through 999 do not have any repeated digits?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-4-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="additionrule9-3-20-4-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="additionrule9-3-20-4-1-2-1">
+<li id="additionrule9-3-20-4-1-2-1-1">
+<div class="para" id="additionrule9-3-20-4-1-2-1-1-1">How many integers from 1 through 999 do not have any repeated digits?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-4-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.4.a"><a tabindex="-1" href="#additionrule9-3-20-4-1-2-1" title="Copy heading and permalink for Item 9.3.4.a" aria-label="Copy heading and permalink for Item 9.3.4.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.4.a"><a tabindex="-1" href="#additionrule9-3-20-4-1-2-1-1" title="Copy heading and permalink for Item 9.3.4.a" aria-label="Copy heading and permalink for Item 9.3.4.a">🔗</a></div>
 </li>
-<li id="additionrule9-3-20-4-1-2-2">
-<div class="para" id="additionrule9-3-20-4-1-2-2-1">How many integers from 1 through 999 have at least one repeated digit?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-4-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="additionrule9-3-20-4-1-2-1-2">
+<div class="para" id="additionrule9-3-20-4-1-2-1-2-1">How many integers from 1 through 999 have at least one repeated digit?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-4-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.4.b"><a tabindex="-1" href="#additionrule9-3-20-4-1-2-2" title="Copy heading and permalink for Item 9.3.4.b" aria-label="Copy heading and permalink for Item 9.3.4.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.4.b"><a tabindex="-1" href="#additionrule9-3-20-4-1-2-1-2" title="Copy heading and permalink for Item 9.3.4.b" aria-label="Copy heading and permalink for Item 9.3.4.b">🔗</a></div>
 </li>
-<li id="additionrule9-3-20-4-1-2-3">
-<div class="para" id="additionrule9-3-20-4-1-2-3-1">What is the probability that an integer chosen at random from 1 through 999 has at least one repeated digit?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-4-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="additionrule9-3-20-4-1-2-1-3">
+<div class="para" id="additionrule9-3-20-4-1-2-1-3-1">What is the probability that an integer chosen at random from 1 through 999 has at least one repeated digit?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-4-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.4.c"><a tabindex="-1" href="#additionrule9-3-20-4-1-2-3" title="Copy heading and permalink for Item 9.3.4.c" aria-label="Copy heading and permalink for Item 9.3.4.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.4.c"><a tabindex="-1" href="#additionrule9-3-20-4-1-2-1-3" title="Copy heading and permalink for Item 9.3.4.c" aria-label="Copy heading and permalink for Item 9.3.4.c">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.3.4"><a tabindex="-1" href="#additionrule9-3-20-4" title="Copy heading and permalink for Exercise 9.3.4" aria-label="Copy heading and permalink for Exercise 9.3.4">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="additionrule9-3-20-5"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="additionrule9-3-20-5"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="additionrule9-3-20-5-1-1">Consider all five digit integers, 10,000-99,999.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="additionrule9-3-20-5-1-2">
-<li id="additionrule9-3-20-5-1-2-1">
-<div class="para" id="additionrule9-3-20-5-1-2-1-1">How many five-digit integers are divisible by 5?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-5-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="additionrule9-3-20-5-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="additionrule9-3-20-5-1-2-1">
+<li id="additionrule9-3-20-5-1-2-1-1">
+<div class="para" id="additionrule9-3-20-5-1-2-1-1-1">How many five-digit integers are divisible by 5?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-5-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.5.a"><a tabindex="-1" href="#additionrule9-3-20-5-1-2-1" title="Copy heading and permalink for Item 9.3.5.a" aria-label="Copy heading and permalink for Item 9.3.5.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.5.a"><a tabindex="-1" href="#additionrule9-3-20-5-1-2-1-1" title="Copy heading and permalink for Item 9.3.5.a" aria-label="Copy heading and permalink for Item 9.3.5.a">🔗</a></div>
 </li>
-<li id="additionrule9-3-20-5-1-2-2">
-<div class="para" id="additionrule9-3-20-5-1-2-2-1">What is the probability that a five digit integer chosen at random is divisible by 5?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-5-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="additionrule9-3-20-5-1-2-1-2">
+<div class="para" id="additionrule9-3-20-5-1-2-1-2-1">What is the probability that a five digit integer chosen at random is divisible by 5?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-5-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.5.b"><a tabindex="-1" href="#additionrule9-3-20-5-1-2-2" title="Copy heading and permalink for Item 9.3.5.b" aria-label="Copy heading and permalink for Item 9.3.5.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.5.b"><a tabindex="-1" href="#additionrule9-3-20-5-1-2-1-2" title="Copy heading and permalink for Item 9.3.5.b" aria-label="Copy heading and permalink for Item 9.3.5.b">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-5-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.3.5"><a tabindex="-1" href="#additionrule9-3-20-5" title="Copy heading and permalink for Exercise 9.3.5" aria-label="Copy heading and permalink for Exercise 9.3.5">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="additionrule9-3-20-6"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="additionrule9-3-20-6"><h3 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="additionrule9-3-20-6-1-1">At a certain company, passwords must be 3-5 symbols long and composed of the 26 letters, the ten digits, and the 14 symbols !, @, #, $, %, ^, &amp;, *, (, ), <span class="process-math">\(-\text{,}\)</span> <span class="process-math">\(+\text{,}\)</span> {, }.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha lower-alpha-level-1" id="additionrule9-3-20-6-1-2">
-<li id="additionrule9-3-20-6-1-2-1">
-<div class="para" id="additionrule9-3-20-6-1-2-1-1">How many passwords are possible if repetition of symbols is allowed?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-6-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="additionrule9-3-20-6-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="additionrule9-3-20-6-1-2-1">
+<li id="additionrule9-3-20-6-1-2-1-1">
+<div class="para" id="additionrule9-3-20-6-1-2-1-1-1">How many passwords are possible if repetition of symbols is allowed?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-6-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.6.a"><a tabindex="-1" href="#additionrule9-3-20-6-1-2-1" title="Copy heading and permalink for Item 9.3.6.a" aria-label="Copy heading and permalink for Item 9.3.6.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.6.a"><a tabindex="-1" href="#additionrule9-3-20-6-1-2-1-1" title="Copy heading and permalink for Item 9.3.6.a" aria-label="Copy heading and permalink for Item 9.3.6.a">🔗</a></div>
 </li>
-<li id="additionrule9-3-20-6-1-2-2">
-<div class="para" id="additionrule9-3-20-6-1-2-2-1">How many passwords contain no repeated symbols?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-6-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="additionrule9-3-20-6-1-2-1-2">
+<div class="para" id="additionrule9-3-20-6-1-2-1-2-1">How many passwords contain no repeated symbols?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-6-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.6.b"><a tabindex="-1" href="#additionrule9-3-20-6-1-2-2" title="Copy heading and permalink for Item 9.3.6.b" aria-label="Copy heading and permalink for Item 9.3.6.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.6.b"><a tabindex="-1" href="#additionrule9-3-20-6-1-2-1-2" title="Copy heading and permalink for Item 9.3.6.b" aria-label="Copy heading and permalink for Item 9.3.6.b">🔗</a></div>
 </li>
-<li id="additionrule9-3-20-6-1-2-3">
-<div class="para" id="additionrule9-3-20-6-1-2-3-1">How many passwords have at least one repeated symbol?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-6-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="additionrule9-3-20-6-1-2-1-3">
+<div class="para" id="additionrule9-3-20-6-1-2-1-3-1">How many passwords have at least one repeated symbol?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-6-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.6.c"><a tabindex="-1" href="#additionrule9-3-20-6-1-2-3" title="Copy heading and permalink for Item 9.3.6.c" aria-label="Copy heading and permalink for Item 9.3.6.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.6.c"><a tabindex="-1" href="#additionrule9-3-20-6-1-2-1-3" title="Copy heading and permalink for Item 9.3.6.c" aria-label="Copy heading and permalink for Item 9.3.6.c">🔗</a></div>
 </li>
-<li id="additionrule9-3-20-6-1-2-4">
-<div class="para" id="additionrule9-3-20-6-1-2-4-1">What is the probability that a password chosen randomly has at least one repeated symbol?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-6-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="additionrule9-3-20-6-1-2-1-4">
+<div class="para" id="additionrule9-3-20-6-1-2-1-4-1">What is the probability that a password chosen randomly has at least one repeated symbol?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-6-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.6.d"><a tabindex="-1" href="#additionrule9-3-20-6-1-2-4" title="Copy heading and permalink for Item 9.3.6.d" aria-label="Copy heading and permalink for Item 9.3.6.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.6.d"><a tabindex="-1" href="#additionrule9-3-20-6-1-2-1-4" title="Copy heading and permalink for Item 9.3.6.d" aria-label="Copy heading and permalink for Item 9.3.6.d">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-6-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.3.6"><a tabindex="-1" href="#additionrule9-3-20-6" title="Copy heading and permalink for Exercise 9.3.6" aria-label="Copy heading and permalink for Exercise 9.3.6">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="additionrule9-3-20-7"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="additionrule9-3-20-7"><h3 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="additionrule9-3-20-7-1-1">Consider the letters in the word <span class="process-math">\(QUICK\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="additionrule9-3-20-7-1-2">
-<li id="additionrule9-3-20-7-1-2-1">
-<div class="para" id="additionrule9-3-20-7-1-2-1-1">How many ways can the letters of the word <span class="process-math">\(QUICK\)</span> be arranged in a row?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-7-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="additionrule9-3-20-7-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="additionrule9-3-20-7-1-2-1">
+<li id="additionrule9-3-20-7-1-2-1-1">
+<div class="para" id="additionrule9-3-20-7-1-2-1-1-1">How many ways can the letters of the word <span class="process-math">\(QUICK\)</span> be arranged in a row?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-7-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.7.a"><a tabindex="-1" href="#additionrule9-3-20-7-1-2-1" title="Copy heading and permalink for Item 9.3.7.a" aria-label="Copy heading and permalink for Item 9.3.7.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.7.a"><a tabindex="-1" href="#additionrule9-3-20-7-1-2-1-1" title="Copy heading and permalink for Item 9.3.7.a" aria-label="Copy heading and permalink for Item 9.3.7.a">🔗</a></div>
 </li>
-<li id="additionrule9-3-20-7-1-2-2">
-<div class="para" id="additionrule9-3-20-7-1-2-2-1">How many ways can the letters of the word <span class="process-math">\(QUICK\)</span> be arranged in a row if the <span class="process-math">\(QU\)</span> must remain together in that order?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-7-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="additionrule9-3-20-7-1-2-1-2">
+<div class="para" id="additionrule9-3-20-7-1-2-1-2-1">How many ways can the letters of the word <span class="process-math">\(QUICK\)</span> be arranged in a row if the <span class="process-math">\(QU\)</span> must remain together in that order?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-7-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.7.b"><a tabindex="-1" href="#additionrule9-3-20-7-1-2-2" title="Copy heading and permalink for Item 9.3.7.b" aria-label="Copy heading and permalink for Item 9.3.7.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.7.b"><a tabindex="-1" href="#additionrule9-3-20-7-1-2-1-2" title="Copy heading and permalink for Item 9.3.7.b" aria-label="Copy heading and permalink for Item 9.3.7.b">🔗</a></div>
 </li>
-<li id="additionrule9-3-20-7-1-2-3">
-<div class="para" id="additionrule9-3-20-7-1-2-3-1">How many ways can the letters of the word <span class="process-math">\(QUICK\)</span> be arranged in a row if the <span class="process-math">\(QU\)</span> must remain together in either order (<span class="process-math">\(QU\)</span> or <span class="process-math">\(UQ\)</span>)?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-7-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="additionrule9-3-20-7-1-2-1-3">
+<div class="para" id="additionrule9-3-20-7-1-2-1-3-1">How many ways can the letters of the word <span class="process-math">\(QUICK\)</span> be arranged in a row if the <span class="process-math">\(QU\)</span> must remain together in either order (<span class="process-math">\(QU\)</span> or <span class="process-math">\(UQ\)</span>)?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-7-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.7.c"><a tabindex="-1" href="#additionrule9-3-20-7-1-2-3" title="Copy heading and permalink for Item 9.3.7.c" aria-label="Copy heading and permalink for Item 9.3.7.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.7.c"><a tabindex="-1" href="#additionrule9-3-20-7-1-2-1-3" title="Copy heading and permalink for Item 9.3.7.c" aria-label="Copy heading and permalink for Item 9.3.7.c">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-7-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.3.7"><a tabindex="-1" href="#additionrule9-3-20-7" title="Copy heading and permalink for Exercise 9.3.7" aria-label="Copy heading and permalink for Exercise 9.3.7">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="additionrule9-3-20-8"><h4 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="additionrule9-3-20-8"><h3 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="additionrule9-3-20-8-1-1">Assume any seven digits can be used to form a telephone number.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="additionrule9-3-20-8-1-2">
-<li id="additionrule9-3-20-8-1-2-1">
-<div class="para" id="additionrule9-3-20-8-1-2-1-1">How many seven-digit telephone numbers would not have any repeated digits?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-8-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="additionrule9-3-20-8-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="additionrule9-3-20-8-1-2-1">
+<li id="additionrule9-3-20-8-1-2-1-1">
+<div class="para" id="additionrule9-3-20-8-1-2-1-1-1">How many seven-digit telephone numbers would not have any repeated digits?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-8-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.8.a"><a tabindex="-1" href="#additionrule9-3-20-8-1-2-1" title="Copy heading and permalink for Item 9.3.8.a" aria-label="Copy heading and permalink for Item 9.3.8.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.8.a"><a tabindex="-1" href="#additionrule9-3-20-8-1-2-1-1" title="Copy heading and permalink for Item 9.3.8.a" aria-label="Copy heading and permalink for Item 9.3.8.a">🔗</a></div>
 </li>
-<li id="additionrule9-3-20-8-1-2-2">
-<div class="para" id="additionrule9-3-20-8-1-2-2-1">How many seven-digit telephone numbers would have at least one repeated digit?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-8-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="additionrule9-3-20-8-1-2-1-2">
+<div class="para" id="additionrule9-3-20-8-1-2-1-2-1">How many seven-digit telephone numbers would have at least one repeated digit?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-8-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.8.b"><a tabindex="-1" href="#additionrule9-3-20-8-1-2-2" title="Copy heading and permalink for Item 9.3.8.b" aria-label="Copy heading and permalink for Item 9.3.8.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.8.b"><a tabindex="-1" href="#additionrule9-3-20-8-1-2-1-2" title="Copy heading and permalink for Item 9.3.8.b" aria-label="Copy heading and permalink for Item 9.3.8.b">🔗</a></div>
 </li>
-<li id="additionrule9-3-20-8-1-2-3">
-<div class="para" id="additionrule9-3-20-8-1-2-3-1">What is the probability that a randomly chosen seven-digit telephone number would have at least one repeated digit?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-8-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="additionrule9-3-20-8-1-2-1-3">
+<div class="para" id="additionrule9-3-20-8-1-2-1-3-1">What is the probability that a randomly chosen seven-digit telephone number would have at least one repeated digit?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-8-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.8.c"><a tabindex="-1" href="#additionrule9-3-20-8-1-2-3" title="Copy heading and permalink for Item 9.3.8.c" aria-label="Copy heading and permalink for Item 9.3.8.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.8.c"><a tabindex="-1" href="#additionrule9-3-20-8-1-2-1-3" title="Copy heading and permalink for Item 9.3.8.c" aria-label="Copy heading and permalink for Item 9.3.8.c">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-8-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.3.8"><a tabindex="-1" href="#additionrule9-3-20-8" title="Copy heading and permalink for Exercise 9.3.8" aria-label="Copy heading and permalink for Exercise 9.3.8">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="additionrule9-3-20-9"><h4 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="additionrule9-3-20-9"><h3 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="additionrule9-3-20-9-1-1">A college conducted a survey to explore the academic interests and achievements of its students. It asked students to place checks beside the numbers of all statements that were true of them. Statement #1 was “I was on the honor roll last term.” Statement #2 was “I belong to an academic club.” Statement #3 was “I am majoring in at least two subjects.” Out of a sample of 100 students, 28 checked #1, 26 checked #2, and 14 checked #3, 18 checked both #1 and #2, 4 checked both #1 and #3, 3 checked both #2 and #3, and 2 checked all three. Note that some of the students who checked #1 (or #2 or #3) may have also checked other numbers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="additionrule9-3-20-9-1-2">
-<li id="additionrule9-3-20-9-1-2-1">
-<div class="para" id="additionrule9-3-20-9-1-2-1-1">How many of the students checked at least one of the statements?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-9-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="additionrule9-3-20-9-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="additionrule9-3-20-9-1-2-1">
+<li id="additionrule9-3-20-9-1-2-1-1">
+<div class="para" id="additionrule9-3-20-9-1-2-1-1-1">How many of the students checked at least one of the statements?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-9-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.9.a"><a tabindex="-1" href="#additionrule9-3-20-9-1-2-1" title="Copy heading and permalink for Item 9.3.9.a" aria-label="Copy heading and permalink for Item 9.3.9.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.9.a"><a tabindex="-1" href="#additionrule9-3-20-9-1-2-1-1" title="Copy heading and permalink for Item 9.3.9.a" aria-label="Copy heading and permalink for Item 9.3.9.a">🔗</a></div>
 </li>
-<li id="additionrule9-3-20-9-1-2-2">
-<div class="para" id="additionrule9-3-20-9-1-2-2-1">How many students checked none of the statements?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-9-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="additionrule9-3-20-9-1-2-1-2">
+<div class="para" id="additionrule9-3-20-9-1-2-1-2-1">How many students checked none of the statements?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-9-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.9.b"><a tabindex="-1" href="#additionrule9-3-20-9-1-2-2" title="Copy heading and permalink for Item 9.3.9.b" aria-label="Copy heading and permalink for Item 9.3.9.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.9.b"><a tabindex="-1" href="#additionrule9-3-20-9-1-2-1-2" title="Copy heading and permalink for Item 9.3.9.b" aria-label="Copy heading and permalink for Item 9.3.9.b">🔗</a></div>
 </li>
-<li id="additionrule9-3-20-9-1-2-3">
-<div class="para" id="additionrule9-3-20-9-1-2-3-1">How many students checked #1 and #2, but not #3?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-9-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="additionrule9-3-20-9-1-2-1-3">
+<div class="para" id="additionrule9-3-20-9-1-2-1-3-1">How many students checked #1 and #2, but not #3?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-9-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.9.c"><a tabindex="-1" href="#additionrule9-3-20-9-1-2-3" title="Copy heading and permalink for Item 9.3.9.c" aria-label="Copy heading and permalink for Item 9.3.9.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.9.c"><a tabindex="-1" href="#additionrule9-3-20-9-1-2-1-3" title="Copy heading and permalink for Item 9.3.9.c" aria-label="Copy heading and permalink for Item 9.3.9.c">🔗</a></div>
 </li>
-<li id="additionrule9-3-20-9-1-2-4">
-<div class="para" id="additionrule9-3-20-9-1-2-4-1">How many students checked #2 and #3, but not #1?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-9-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="additionrule9-3-20-9-1-2-1-4">
+<div class="para" id="additionrule9-3-20-9-1-2-1-4-1">How many students checked #2 and #3, but not #1?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-9-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.9.d"><a tabindex="-1" href="#additionrule9-3-20-9-1-2-4" title="Copy heading and permalink for Item 9.3.9.d" aria-label="Copy heading and permalink for Item 9.3.9.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.9.d"><a tabindex="-1" href="#additionrule9-3-20-9-1-2-1-4" title="Copy heading and permalink for Item 9.3.9.d" aria-label="Copy heading and permalink for Item 9.3.9.d">🔗</a></div>
 </li>
-<li id="additionrule9-3-20-9-1-2-5">
-<div class="para" id="additionrule9-3-20-9-1-2-5-1">How many students checked #2, but not the other two?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-9-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="additionrule9-3-20-9-1-2-1-5">
+<div class="para" id="additionrule9-3-20-9-1-2-1-5-1">How many students checked #2, but not the other two?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-9-1-2-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.9.e"><a tabindex="-1" href="#additionrule9-3-20-9-1-2-5" title="Copy heading and permalink for Item 9.3.9.e" aria-label="Copy heading and permalink for Item 9.3.9.e">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 9.3.9.e"><a tabindex="-1" href="#additionrule9-3-20-9-1-2-1-5" title="Copy heading and permalink for Item 9.3.9.e" aria-label="Copy heading and permalink for Item 9.3.9.e">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#additionrule9-3-20-9-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="solutions">
 <details id="additionrule9-3-20-9-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="hint solution-like knowl__content">

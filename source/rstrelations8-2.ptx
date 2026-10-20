@@ -282,7 +282,7 @@
         <p>
     Let <m>A=\{0, 1, 2, 3\}</m>. Let <m>R_1=\{(0, 0), (0, 1), (0, 3), (1, 1), (1, 0), (2, 3), (3, 3)\}</m>.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -308,13 +308,13 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
     Let <m>A=\{0, 1, 2, 3\}</m>. Let <m>R_2=\{(1, 2), (2, 1), (1, 3), (3, 1)\}</m>.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -340,13 +340,13 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
     Let <m>A=\{0, 1, 2, 3\}</m>. Let <m>R_3=\{(0, 0), (0, 1), (0, 2), (1, 2)\}</m>.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -372,13 +372,13 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
     Let <m>G</m> be the relation on <m>\mathbb{R}</m> defined by <md>x\ G\ y\iff xy\geq 0.</md>
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -398,13 +398,13 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
     Let <m>D</m> be the relation on <m>\mathbb{Z}^+</m> defined by <md>m\ D\ n\iff m\mid n.</md>
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -424,13 +424,13 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
     Let <m>F</m> be the relation on <m>\mathbb{R}\times \mathbb{R}</m> defined by <md>(x_1, y_1)\ F\ (x_2, y_2)\iff x_1=x_2.</md>
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -450,13 +450,13 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
     Define the relation <m>R</m> on <m>\mathbb{Z}</m> by <md>m\ R\ n \iff 5\mid(m-n).</md>
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -476,13 +476,13 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
     Let <m>X=\{a, b, c\}</m> and <m>{\cal P}(X)</m> be the power set of <m>X</m>. Define the relation <m>L</m> on <m>{\cal P}(X)</m> by <md>A\ L\ B \iff \text{ the number of elements in $A$ is less than the number of elements in $B$.}</md>
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -502,13 +502,13 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
     Let <m>X</m> be a nonempty set and <m>{\cal P}(X)</m> be the power set of <m>X</m>. Define the <q>subset</q> relation <m>S</m> on <m>{\cal P}(X)</m> by <md>A\ S\ B \iff A\subseteq B.</md>
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -528,7 +528,7 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       
       <exercise><statement>

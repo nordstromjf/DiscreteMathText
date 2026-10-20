@@ -19,15 +19,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-2 { system: extends decimal; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-3 { system: extends decimal; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-4 { system: extends lower-roman; prefix: ''; suffix: '. '; }
+</style>
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
 hasWebworkReps: false,
 hasSage: false,
 isReact: false,
 htmlPresentation: false,
+lang: "en-US",
 });
-</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta name="twitter:title" content="Discrete Mathematics: An Active Approach to Mathematical Reasoning">
@@ -36,7 +42,7 @@ htmlPresentation: false,
 <meta name="twitter:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta property="og:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.43"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.54"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.54"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -58,21 +64,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.9';
+eBookConfig.runestone_version = '8.3.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.846a0d6fafaa99e0.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.bbcfc02849ebc023.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/prefix-runtime.4beca1fdeed766a2.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.ebd33f6a21eed414.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.9963089870a016c8.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="DiscreteMathText" class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></div>
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="DiscreteMath-14-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
@@ -85,7 +91,17 @@ eBookConfig.enable_chatcodes =  false;
 <div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
 <ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
-<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
 <h2 class="heading">Readability settings</h2>
 <button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
@@ -103,7 +119,7 @@ eBookConfig.enable_chatcodes =  false;
 <legend>Assistive technologies</legend>
 <label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
 </fieldset>
-<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="chapter7.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter7.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="onetooneonto7-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="chapter7-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter7.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="onetooneonto7-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \newcommand{\MyTikzmark}[2]{
      \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
 \newcommand{\DrawVLine}[3][]{
@@ -134,6 +150,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter1.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to Mathematical Language</span></a></div>
 <ul id="ptx-toc-group-chapter1" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter1-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="variables1-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Variables and Statements</span></a></div>
 <ul id="ptx-toc-group-variables1-1" class="structural toc-item-list">
@@ -160,6 +177,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter2.html" class="internal"><span class="codenumber">2</span> <span class="title">Logic</span></a></div>
 <ul id="ptx-toc-group-chapter2" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter2-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="logical_form2-1.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Truth-Tables and Logical Equivalence</span></a></div>
 <ul id="ptx-toc-group-logical_form2-1" class="structural toc-item-list">
@@ -186,6 +204,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter3.html" class="internal"><span class="codenumber">3</span> <span class="title">Logic with Quantifiers</span></a></div>
 <ul id="ptx-toc-group-chapter3" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter3-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="quantifiersI3-1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Quantifiers</span></a></div>
 <ul id="ptx-toc-group-quantifiersI3-1" class="structural toc-item-list">
@@ -219,6 +238,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter4.html" class="internal"><span class="codenumber">4</span> <span class="title">Proof Techniques</span></a></div>
 <ul id="ptx-toc-group-chapter4" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter4-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="directproof4-1.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Direct Proof and Counterexample</span></a></div>
 <ul id="ptx-toc-group-directproof4-1" class="structural toc-item-list">
@@ -266,6 +286,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter5.html" class="internal"><span class="codenumber">5</span> <span class="title">Sequences and Mathematical Induction</span></a></div>
 <ul id="ptx-toc-group-chapter5" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter5-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sequences5-1.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Sequences</span></a></div>
 <ul id="ptx-toc-group-sequences5-1" class="structural toc-item-list">
@@ -313,6 +334,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter6.html" class="internal"><span class="codenumber">6</span> <span class="title">Set Theory</span></a></div>
 <ul id="ptx-toc-group-chapter6" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter6-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sets6-1.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Set Theory</span></a></div>
 <ul id="ptx-toc-group-sets6-1" class="structural toc-item-list">
@@ -339,6 +361,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="chapter7.html" class="internal"><span class="codenumber">7</span> <span class="title">Functions</span></a></div>
 <ul class="structural toc-item-list contains-active" id="ptx-toc-group-chapter7">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter7-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="functions7-1.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Functions</span></a></div>
 <ul class="structural toc-item-list active" id="ptx-toc-group-functions7-1">
@@ -358,6 +381,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter8.html" class="internal"><span class="codenumber">8</span> <span class="title">Relations</span></a></div>
 <ul id="ptx-toc-group-chapter8" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter8-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="relations8-1.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Relations on Sets</span></a></div>
 <ul id="ptx-toc-group-relations8-1" class="structural toc-item-list">
@@ -391,6 +415,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter9.html" class="internal"><span class="codenumber">9</span> <span class="title">Probability and Counting</span></a></div>
 <ul id="ptx-toc-group-chapter9" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter9-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="probability9-1.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Probability</span></a></div>
 <ul id="ptx-toc-group-probability9-1" class="structural toc-item-list">
@@ -438,6 +463,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter10.html" class="internal"><span class="codenumber">10</span> <span class="title">Graph Theory</span></a></div>
 <ul id="ptx-toc-group-chapter10" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter10-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="graphs10-1.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphs</span></a></div>
 <ul id="ptx-toc-group-graphs10-1" class="structural toc-item-list">
@@ -465,7 +491,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="DiscreteMath-14.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul id="ptx-toc-group-DiscreteMath-14" class="structural toc-item-list">
 <li class="toc-item toc-references"><div class="toc-title-box"><a href="DiscreteMath-14-1.html" class="internal"><span class="title">References</span></a></div></li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A.</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="DiscreteMath-14-3.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="DiscreteMath-14-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
@@ -473,23 +499,23 @@ eBookConfig.enable_chatcodes =  false;
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="functions7-1">
-<h2 class="heading hide-type">
+<h1 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Functions</span>
-</h2>
+</h1>
 <div class="para" id="functions7-1-3">Functions are familiar mathematical objects from algebra and calculus. We also saw them in <a href="lang_relations1-3.html" class="internal" title="Section 1.3: Introduction to Relations and Functions">Section 1.3</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="definition definition-like" id="D_function"><h3 class="heading">
+<article class="definition definition-like" id="D_function"><h2 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+</h2>
 <div class="para" id="D_function-1-1">A <dfn class="terminology">function</dfn>, <span class="process-math">\(f:X\rightarrow Y\text{,}\)</span> is a map in which each input is related to one and only one output.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_function-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para" id="D_function-1-2">We say <span class="process-math">\(X\)</span> is the <dfn class="terminology">domain</dfn> and <span class="process-math">\(Y\)</span> is the <dfn class="terminology">codomain</dfn> of <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_function-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Definition 7.1.1"><a tabindex="-1" href="#D_function" title="Copy heading and permalink for Definition 7.1.1" aria-label="Copy heading and permalink for Definition 7.1.1">🔗</a></div>
 </article>
-<details id="E_notfunctionimages" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exploring the Definition of a Function.</span>
-</h3></summary>
+<details id="E_notfunctionimages" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exploring the Definition of a Function.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_notfunctionimages-2">Let <span class="process-math">\(f: X\rightarrow Y\)</span> be a map as shown in the figure.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_notfunctionimages-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -553,9 +579,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="definition definition-like" id="D_image"><h3 class="heading">
+<article class="definition definition-like" id="D_image"><h2 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+</h2>
 <div class="para logical" id="D_image-1-1">
 <div class="para">The <dfn class="terminology">image</dfn> or <dfn class="terminology">range</dfn> of a set <span class="process-math">\(X\)</span> under <span class="process-math">\(f\)</span> is the set of outputs of <span class="process-math">\(f\)</span> corresponding to inputs from <span class="process-math">\(X\text{.}\)</span> In notation</div>
 <div class="displaymath process-math" id="D_image-1-1-9">
@@ -571,41 +597,41 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="functions7-1-9">Since <span class="process-math">\(y\)</span> can have several preimages, we usually care about the set of all of them.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="definition definition-like" id="D_preimage"><h3 class="heading">
+<article class="definition definition-like" id="D_preimage"><h2 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+</h2>
 <div class="para" id="D_preimage-1-1">Let <span class="process-math">\(f:X\rightarrow Y\)</span> be a function. The set <span class="process-math">\(\{x\in X : f(x)=y\}\)</span> is the <dfn class="terminology">preimage</dfn> of <span class="process-math">\(y\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_preimage-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Definition 7.1.7"><a tabindex="-1" href="#D_preimage" title="Copy heading and permalink for Definition 7.1.7" aria-label="Copy heading and permalink for Definition 7.1.7">🔗</a></div>
 </article>
-<article class="activity project-like" id="functions7-1-11"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="functions7-1-11"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="introduction" id="functions7-1-11-1">
 <div class="para" id="functions7-1-11-1-1">Define <span class="process-math">\(f:\mathbb{Z}\rightarrow\mathbb{Z}\)</span> by <span class="process-math">\(f(n)=r\)</span> where <span class="process-math">\(r\)</span> is the remainder when <span class="process-math">\(n\)</span> is divided by 3.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="functions7-1-11-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="functions7-1-11-2"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="functions7-1-11-2-1">Find <span class="process-math">\(f(0), f(9), f(5), f(-7), f(10)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 7.1.1.a"><a tabindex="-1" href="#functions7-1-11-2" title="Copy heading and permalink for Task 7.1.1.a" aria-label="Copy heading and permalink for Task 7.1.1.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 7.1.8.a"><a tabindex="-1" href="#functions7-1-11-2" title="Copy heading and permalink for Task 7.1.8.a" aria-label="Copy heading and permalink for Task 7.1.8.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="functions7-1-11-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="functions7-1-11-3"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="functions7-1-11-3-1">What is the image of <span class="process-math">\(\mathbb{Z}\)</span> under <span class="process-math">\(f\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-11-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 7.1.1.b"><a tabindex="-1" href="#functions7-1-11-3" title="Copy heading and permalink for Task 7.1.1.b" aria-label="Copy heading and permalink for Task 7.1.1.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 7.1.8.b"><a tabindex="-1" href="#functions7-1-11-3" title="Copy heading and permalink for Task 7.1.8.b" aria-label="Copy heading and permalink for Task 7.1.8.b">🔗</a></div>
 </article>
-<article class="task exercise-like" id="functions7-1-11-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<article class="task exercise-like" id="functions7-1-11-4"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="functions7-1-11-4-1">What is the set of preimages of 0? In other words, find the preimage of 0.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-11-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 7.1.1.c"><a tabindex="-1" href="#functions7-1-11-4" title="Copy heading and permalink for Task 7.1.1.c" aria-label="Copy heading and permalink for Task 7.1.1.c">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 7.1.1"><a tabindex="-1" href="#functions7-1-11" title="Copy heading and permalink for Activity 7.1.1" aria-label="Copy heading and permalink for Activity 7.1.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 7.1.8.c"><a tabindex="-1" href="#functions7-1-11-4" title="Copy heading and permalink for Task 7.1.8.c" aria-label="Copy heading and permalink for Task 7.1.8.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 7.1.8"><a tabindex="-1" href="#functions7-1-11" title="Copy heading and permalink for Activity 7.1.8" aria-label="Copy heading and permalink for Activity 7.1.8">🔗</a></div>
 </article>
 <div class="para" id="functions7-1-12">If we have a map from a finite set to a finite set, we can draw an <dfn class="terminology">arrow diagram</dfn> in which we use arrows to represent the map from <span class="process-math">\(X\)</span> to <span class="process-math">\(Y\text{,}\)</span> as in <a href="functions7-1.html#E_notfunctionimages" class="xref" data-knowl="./knowl/xref/E_notfunctionimages.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.1.2: Exploring the Definition of a Function">Example 7.1.2</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_arrowdiagram" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Arrow Diagram.</span>
-</h3></summary>
+<details id="E_arrowdiagram" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.9</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Arrow Diagram.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_arrowdiagram-2">Let <span class="process-math">\(X=\{a, b, c, d\}\)</span> and <span class="process-math">\(Y=\{0, 1, 2\}\text{.}\)</span> Let <span class="process-math">\(f: X\rightarrow Y\)</span> be the function given by the following arrow diagram.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_arrowdiagram-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -615,7 +641,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div></details>
 </div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.1.9"><a tabindex="-1" href="#F_arrowdiag" title="Copy heading and permalink for Figure 7.1.9" aria-label="Copy heading and permalink for Figure 7.1.9">🔗</a></div></figcaption>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.1.10"><a tabindex="-1" href="#F_arrowdiag" title="Copy heading and permalink for Figure 7.1.10" aria-label="Copy heading and permalink for Figure 7.1.10">🔗</a></div></figcaption>
 </figure>
 <div class="para" id="E_arrowdiagram-4">Find the domain of <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_arrowdiagram-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -624,7 +650,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="E_arrowdiagram-5-1">
 <span class="process-math">\(\{a, b, c, d\}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_arrowdiagram-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Answer 7.1.8.1"><a tabindex="-1" href="#E_arrowdiagram-5" title="Copy heading and permalink for Answer 7.1.8.1" aria-label="Copy heading and permalink for Answer 7.1.8.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 7.1.9.1"><a tabindex="-1" href="#E_arrowdiagram-5" title="Copy heading and permalink for Answer 7.1.9.1" aria-label="Copy heading and permalink for Answer 7.1.9.1">🔗</a></div>
 </div></details>
 <div class="para" id="E_arrowdiagram-6">Find the codomain of <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_arrowdiagram-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -633,7 +659,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="E_arrowdiagram-7-1">
 <span class="process-math">\(\{0, 1, 2\}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_arrowdiagram-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Answer 7.1.8.2"><a tabindex="-1" href="#E_arrowdiagram-7" title="Copy heading and permalink for Answer 7.1.8.2" aria-label="Copy heading and permalink for Answer 7.1.8.2">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 7.1.9.2"><a tabindex="-1" href="#E_arrowdiagram-7" title="Copy heading and permalink for Answer 7.1.9.2" aria-label="Copy heading and permalink for Answer 7.1.9.2">🔗</a></div>
 </div></details>
 <div class="para" id="E_arrowdiagram-8">Find the range or image of <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_arrowdiagram-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -642,7 +668,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="E_arrowdiagram-9-1">
 <span class="process-math">\(\{0, 2\}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_arrowdiagram-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Answer 7.1.8.3"><a tabindex="-1" href="#E_arrowdiagram-9" title="Copy heading and permalink for Answer 7.1.8.3" aria-label="Copy heading and permalink for Answer 7.1.8.3">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 7.1.9.3"><a tabindex="-1" href="#E_arrowdiagram-9" title="Copy heading and permalink for Answer 7.1.9.3" aria-label="Copy heading and permalink for Answer 7.1.9.3">🔗</a></div>
 </div></details>
 <div class="para" id="E_arrowdiagram-10">Find <span class="process-math">\(f(a)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_arrowdiagram-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -651,7 +677,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="E_arrowdiagram-11-1">
 <span class="process-math">\(0\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_arrowdiagram-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Answer 7.1.8.4"><a tabindex="-1" href="#E_arrowdiagram-11" title="Copy heading and permalink for Answer 7.1.8.4" aria-label="Copy heading and permalink for Answer 7.1.8.4">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 7.1.9.4"><a tabindex="-1" href="#E_arrowdiagram-11" title="Copy heading and permalink for Answer 7.1.9.4" aria-label="Copy heading and permalink for Answer 7.1.9.4">🔗</a></div>
 </div></details>
 <div class="para" id="E_arrowdiagram-12">Find the preimage or inverse image of <span class="process-math">\(0\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_arrowdiagram-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -660,12 +686,12 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="E_arrowdiagram-13-1">
 <span class="process-math">\(\{a, b\}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_arrowdiagram-13-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Answer 7.1.8.5"><a tabindex="-1" href="#E_arrowdiagram-13" title="Copy heading and permalink for Answer 7.1.8.5" aria-label="Copy heading and permalink for Answer 7.1.8.5">🔗</a></div>
-</div></details><div class="autopermalink" aria-hidden="true" data-description="Example 7.1.8: Arrow Diagram"><a tabindex="-1" href="#E_arrowdiagram" title="Copy heading and permalink for Example 7.1.8: Arrow Diagram" aria-label="Copy heading and permalink for Example 7.1.8: Arrow Diagram">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 7.1.9.5"><a tabindex="-1" href="#E_arrowdiagram-13" title="Copy heading and permalink for Answer 7.1.9.5" aria-label="Copy heading and permalink for Answer 7.1.9.5">🔗</a></div>
+</div></details><div class="autopermalink" aria-hidden="true" data-description="Example 7.1.9: Arrow Diagram"><a tabindex="-1" href="#E_arrowdiagram" title="Copy heading and permalink for Example 7.1.9: Arrow Diagram" aria-label="Copy heading and permalink for Example 7.1.9: Arrow Diagram">🔗</a></div>
 </article></details>
-<details id="E_functionxsquared" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding Sets for a Function.</span>
-</h3></summary>
+<details id="E_functionxsquared" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.11</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding Sets for a Function.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_functionxsquared-2">Let  <span class="process-math">\(f:\mathbb{R}\rightarrow \mathbb{R}\)</span> be given by <span class="process-math">\(f(x)=x^2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_functionxsquared-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -676,7 +702,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="E_functionxsquared-4-1">
 <span class="process-math">\(\mathbb{R}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_functionxsquared-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Answer 7.1.10.1"><a tabindex="-1" href="#E_functionxsquared-4" title="Copy heading and permalink for Answer 7.1.10.1" aria-label="Copy heading and permalink for Answer 7.1.10.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 7.1.11.1"><a tabindex="-1" href="#E_functionxsquared-4" title="Copy heading and permalink for Answer 7.1.11.1" aria-label="Copy heading and permalink for Answer 7.1.11.1">🔗</a></div>
 </div></details>
 <div class="para" id="E_functionxsquared-5">Find the codomain of <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_functionxsquared-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -685,7 +711,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="E_functionxsquared-6-1">
 <span class="process-math">\(\mathbb{R}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_functionxsquared-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Answer 7.1.10.2"><a tabindex="-1" href="#E_functionxsquared-6" title="Copy heading and permalink for Answer 7.1.10.2" aria-label="Copy heading and permalink for Answer 7.1.10.2">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 7.1.11.2"><a tabindex="-1" href="#E_functionxsquared-6" title="Copy heading and permalink for Answer 7.1.11.2" aria-label="Copy heading and permalink for Answer 7.1.11.2">🔗</a></div>
 </div></details>
 <div class="para" id="E_functionxsquared-7">Find the range of <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_functionxsquared-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -694,7 +720,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="E_functionxsquared-8-1">
 <span class="process-math">\([0, \infty)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_functionxsquared-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Answer 7.1.10.3"><a tabindex="-1" href="#E_functionxsquared-8" title="Copy heading and permalink for Answer 7.1.10.3" aria-label="Copy heading and permalink for Answer 7.1.10.3">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 7.1.11.3"><a tabindex="-1" href="#E_functionxsquared-8" title="Copy heading and permalink for Answer 7.1.11.3" aria-label="Copy heading and permalink for Answer 7.1.11.3">🔗</a></div>
 </div></details>
 <div class="para" id="E_functionxsquared-9">Find the preimage (or inverse image) of <span class="process-math">\(1\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_functionxsquared-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -703,74 +729,74 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="E_functionxsquared-10-1">
 <span class="process-math">\(\{1, -1\}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_functionxsquared-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Answer 7.1.10.4"><a tabindex="-1" href="#E_functionxsquared-10" title="Copy heading and permalink for Answer 7.1.10.4" aria-label="Copy heading and permalink for Answer 7.1.10.4">🔗</a></div>
-</div></details><div class="autopermalink" aria-hidden="true" data-description="Example 7.1.10: Finding Sets for a Function"><a tabindex="-1" href="#E_functionxsquared" title="Copy heading and permalink for Example 7.1.10: Finding Sets for a Function" aria-label="Copy heading and permalink for Example 7.1.10: Finding Sets for a Function">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 7.1.11.4"><a tabindex="-1" href="#E_functionxsquared-10" title="Copy heading and permalink for Answer 7.1.11.4" aria-label="Copy heading and permalink for Answer 7.1.11.4">🔗</a></div>
+</div></details><div class="autopermalink" aria-hidden="true" data-description="Example 7.1.11: Finding Sets for a Function"><a tabindex="-1" href="#E_functionxsquared" title="Copy heading and permalink for Example 7.1.11: Finding Sets for a Function" aria-label="Copy heading and permalink for Example 7.1.11: Finding Sets for a Function">🔗</a></div>
 </article></details>
 <div class="para" id="functions7-1-15">Let <span class="process-math">\(f, g\)</span> be functions from <span class="process-math">\(X\)</span> to <span class="process-math">\(Y\text{.}\)</span> Then <span class="process-math">\(f=g\)</span> if <span class="process-math">\(f(x)=g(x)\)</span> for all <span class="process-math">\(x\in X\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="functions7-1-16">In this course we want to look at functions to and from sets other than just the real numbers. For example, we may have functions from finite sets to finite sets.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_morefunctions" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">More Functions.</span>
-</h3></summary>
+<details id="E_morefunctions" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.12</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">More Functions.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_morefunctions-2">A sequence is a function from <span class="process-math">\(\mathbb{Z}^+\)</span> to <span class="process-math">\(\mathbb{R}\text{.}\)</span> For example, <span class="process-math">\(f(n)=\frac{1}{n}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_morefunctions-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="E_morefunctions-3">We may also have functions involving Cartesian products of sets. For example, <span class="process-math">\(f:\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}\)</span> given by <span class="process-math">\(f(a, b)=a+b\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_morefunctions-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Example 7.1.11: More Functions"><a tabindex="-1" href="#E_morefunctions" title="Copy heading and permalink for Example 7.1.11: More Functions" aria-label="Copy heading and permalink for Example 7.1.11: More Functions">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 7.1.12: More Functions"><a tabindex="-1" href="#E_morefunctions" title="Copy heading and permalink for Example 7.1.12: More Functions" aria-label="Copy heading and permalink for Example 7.1.12: More Functions">🔗</a></div>
 </article></details>
-<article class="activity project-like" id="functions-subtr"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="functions-subtr"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="introduction" id="functions-subtr-1">
 <div class="para" id="functions-subtr-1-1">Define <span class="process-math">\(f:\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}\)</span> by <span class="process-math">\(f(a, b)=a-b\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions-subtr-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="functions-subtr-elem"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="functions-subtr-elem"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="functions-subtr-elem-1-1">Find <span class="process-math">\(f(0, 2), f(1, 1), f(2, 0), f(3, 2), f(n, 0)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions-subtr-elem-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 7.1.2.a"><a tabindex="-1" href="#functions-subtr-elem" title="Copy heading and permalink for Task 7.1.2.a" aria-label="Copy heading and permalink for Task 7.1.2.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 7.1.13.a"><a tabindex="-1" href="#functions-subtr-elem" title="Copy heading and permalink for Task 7.1.13.a" aria-label="Copy heading and permalink for Task 7.1.13.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="functions-subtr-image"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="functions-subtr-image"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="functions-subtr-image-1-1">What is the image of <span class="process-math">\(\mathbb{Z}\times\mathbb{Z}\)</span> under <span class="process-math">\(f\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions-subtr-image-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 7.1.2.b"><a tabindex="-1" href="#functions-subtr-image" title="Copy heading and permalink for Task 7.1.2.b" aria-label="Copy heading and permalink for Task 7.1.2.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 7.1.13.b"><a tabindex="-1" href="#functions-subtr-image" title="Copy heading and permalink for Task 7.1.13.b" aria-label="Copy heading and permalink for Task 7.1.13.b">🔗</a></div>
 </article>
-<article class="task exercise-like" id="functions-subtr-pre0"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<article class="task exercise-like" id="functions-subtr-pre0"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="functions-subtr-pre0-1-1">What is the preimage of 0?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions-subtr-pre0-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 7.1.2.c"><a tabindex="-1" href="#functions-subtr-pre0" title="Copy heading and permalink for Task 7.1.2.c" aria-label="Copy heading and permalink for Task 7.1.2.c">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 7.1.2"><a tabindex="-1" href="#functions-subtr" title="Copy heading and permalink for Activity 7.1.2" aria-label="Copy heading and permalink for Activity 7.1.2">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 7.1.13.c"><a tabindex="-1" href="#functions-subtr-pre0" title="Copy heading and permalink for Task 7.1.13.c" aria-label="Copy heading and permalink for Task 7.1.13.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 7.1.13"><a tabindex="-1" href="#functions-subtr" title="Copy heading and permalink for Activity 7.1.13" aria-label="Copy heading and permalink for Activity 7.1.13">🔗</a></div>
 </article>
-<article class="activity project-like" id="functions-diag"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="functions-diag"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="introduction" id="functions-diag-1">
 <div class="para" id="functions-diag-1-1">Define <span class="process-math">\(f:\mathbb{Z}\rightarrow\mathbb{Z}\times\mathbb{Z}\)</span> by <span class="process-math">\(f(a)=(a, a)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions-diag-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="functions-diag-elem"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="functions-diag-elem"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="functions-diag-elem-1-1">Find <span class="process-math">\(f(0), f(2), f(-3)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions-diag-elem-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 7.1.3.a"><a tabindex="-1" href="#functions-diag-elem" title="Copy heading and permalink for Task 7.1.3.a" aria-label="Copy heading and permalink for Task 7.1.3.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 7.1.14.a"><a tabindex="-1" href="#functions-diag-elem" title="Copy heading and permalink for Task 7.1.14.a" aria-label="Copy heading and permalink for Task 7.1.14.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="functions-diag-image"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="functions-diag-image"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="functions-diag-image-1-1">What is the image of <span class="process-math">\(\mathbb{Z}\)</span> under <span class="process-math">\(f\text{?}\)</span> Is <span class="process-math">\((1, 1)\)</span> in the image? Is <span class="process-math">\((-1, 1)\)</span> in the image?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions-diag-image-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 7.1.3.b"><a tabindex="-1" href="#functions-diag-image" title="Copy heading and permalink for Task 7.1.3.b" aria-label="Copy heading and permalink for Task 7.1.3.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 7.1.14.b"><a tabindex="-1" href="#functions-diag-image" title="Copy heading and permalink for Task 7.1.14.b" aria-label="Copy heading and permalink for Task 7.1.14.b">🔗</a></div>
 </article>
-<article class="task exercise-like" id="functions-diag-pre00"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<article class="task exercise-like" id="functions-diag-pre00"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="functions-diag-pre00-1-1">What is the preimage of <span class="process-math">\((0, 0)\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions-diag-pre00-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 7.1.3.c"><a tabindex="-1" href="#functions-diag-pre00" title="Copy heading and permalink for Task 7.1.3.c" aria-label="Copy heading and permalink for Task 7.1.3.c">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 7.1.3"><a tabindex="-1" href="#functions-diag" title="Copy heading and permalink for Activity 7.1.3" aria-label="Copy heading and permalink for Activity 7.1.3">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 7.1.14.c"><a tabindex="-1" href="#functions-diag-pre00" title="Copy heading and permalink for Task 7.1.14.c" aria-label="Copy heading and permalink for Task 7.1.14.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 7.1.14"><a tabindex="-1" href="#functions-diag" title="Copy heading and permalink for Activity 7.1.14" aria-label="Copy heading and permalink for Activity 7.1.14">🔗</a></div>
 </article>
 <div class="para" id="functions7-1-20">Since a function needs to satisfy the property that each <span class="process-math">\(x\in X\)</span> can only map to one <span class="process-math">\(y \in Y\text{,}\)</span> we say a function is <dfn class="terminology">well-defined</dfn> if whenever <span class="process-math">\(a=b\text{,}\)</span> <span class="process-math">\(f(a)=f(b)\text{.}\)</span> Most of the functions you’ve seen in algebra and calculus are clearly well-defined since when <span class="process-math">\(a=b\text{,}\)</span> <span class="process-math">\(f(a)=f(b)\text{.}\)</span> This property is really only interesting when elements of <span class="process-math">\(X\)</span> have multiple representations. In other words, when two equal elements in <span class="process-math">\(X\)</span> have two different forms. The most familiar set where this happens is <span class="process-math">\(\mathbb{Q}\text{.}\)</span> For example, <span class="process-math">\(\frac{1}{2}=\frac{2}{4}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_welldefined" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Map That is Not Well-Defined.</span>
-</h3></summary>
+<details id="E_welldefined" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.15</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Map That is Not Well-Defined.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_welldefined-2">Let <span class="process-math">\(f:\mathbb{Q}\rightarrow \mathbb{Z}\)</span> be given by <span class="process-math">\(f(p/q)=p+q\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_welldefined-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -778,20 +804,20 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="E_welldefined-4">Thus <span class="process-math">\(f\)</span> is not well-defined, and hence, <span class="process-math">\(f\)</span> is not a function.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_welldefined-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Example 7.1.12: A Map That is Not Well-Defined"><a tabindex="-1" href="#E_welldefined" title="Copy heading and permalink for Example 7.1.12: A Map That is Not Well-Defined" aria-label="Copy heading and permalink for Example 7.1.12: A Map That is Not Well-Defined">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 7.1.15: A Map That is Not Well-Defined"><a tabindex="-1" href="#E_welldefined" title="Copy heading and permalink for Example 7.1.15: A Map That is Not Well-Defined" aria-label="Copy heading and permalink for Example 7.1.15: A Map That is Not Well-Defined">🔗</a></div>
 </article></details>
-<article class="activity project-like" id="functions-notwd"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="functions-notwd"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="functions-notwd-1-1">Let <span class="process-math">\(f:\mathbb{Q}\rightarrow\mathbb{Z}\)</span> be given by <span class="process-math">\(f(m/n)=m\text{.}\)</span> Show <span class="process-math">\(f\)</span> is <em class="emphasis">not</em> well-defined by finding two equivalent fractions in <span class="process-math">\(\mathbb{Q}\)</span> that map to two different integers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions-notwd-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 7.1.4"><a tabindex="-1" href="#functions-notwd" title="Copy heading and permalink for Activity 7.1.4" aria-label="Copy heading and permalink for Activity 7.1.4">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 7.1.16"><a tabindex="-1" href="#functions-notwd" title="Copy heading and permalink for Activity 7.1.16" aria-label="Copy heading and permalink for Activity 7.1.16">🔗</a></div>
 </article>
 <section class="reading-questions" id="functions7-1-23">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Check Your Understanding</span>
-</h3>
-<article class="exercise exercise-like" id="DMT_functions_CYU_f1e4"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</h2>
+<article class="exercise exercise-like" id="DMT_functions_CYU_f1e4"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_functions_CYU_f1e4">
 <div class="para" id="DMT_functions_CYU_f1e4-1-1">Let <span class="process-math">\(A=\{1, 2, 3\}, B=\{2, 4, 6, 8\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_functions_CYU_f1e4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -806,7 +832,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 7.1.1"><a tabindex="-1" href="#DMT_functions_CYU_f1e4" title="Copy heading and permalink for Reading Question 7.1.1" aria-label="Copy heading and permalink for Reading Question 7.1.1">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_functions_CYU_f1e2"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_functions_CYU_f1e2"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_functions_CYU_f1e2">
 <div class="para" id="DMT_functions_CYU_f1e2-1-1">Let <span class="process-math">\(A=\{1, 2, 3\}, B=\{2, 4, 6, 8\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_functions_CYU_f1e2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -821,7 +847,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 7.1.2"><a tabindex="-1" href="#DMT_functions_CYU_f1e2" title="Copy heading and permalink for Reading Question 7.1.2" aria-label="Copy heading and permalink for Reading Question 7.1.2">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_functions_CYU_f2e0"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_functions_CYU_f2e0"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_functions_CYU_f2e0">
 <div class="para" id="DMT_functions_CYU_f2e0-1-1">Let <span class="process-math">\(B=\{2, 4, 6, 8\}, C=\{0, 1\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_functions_CYU_f2e0-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -842,7 +868,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 7.1.3"><a tabindex="-1" href="#DMT_functions_CYU_f2e0" title="Copy heading and permalink for Reading Question 7.1.3" aria-label="Copy heading and permalink for Reading Question 7.1.3">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_functions_CYU_f2ef8e1"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_functions_CYU_f2ef8e1"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_functions_CYU_f2ef8e1">
 <div class="para" id="DMT_functions_CYU_f2ef8e1-1-1">Let <span class="process-math">\(B=\{2, 4, 6, 8\}, C=\{0, 1\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_functions_CYU_f2ef8e1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -857,7 +883,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 7.1.4"><a tabindex="-1" href="#DMT_functions_CYU_f2ef8e1" title="Copy heading and permalink for Reading Question 7.1.4" aria-label="Copy heading and permalink for Reading Question 7.1.4">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_functions_CYU_f0e0"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_functions_CYU_f0e0"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_functions_CYU_f0e0">
 <div class="para" id="DMT_functions_CYU_f0e0-1-1">Let <span class="process-math">\(C=\{0, 1\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_functions_CYU_f0e0-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -876,7 +902,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 7.1.5"><a tabindex="-1" href="#DMT_functions_CYU_f0e0" title="Copy heading and permalink for Reading Question 7.1.5" aria-label="Copy heading and permalink for Reading Question 7.1.5">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_functions_CYU_facecpreim"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_functions_CYU_facecpreim"><h3 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
 <div class="exercise-statement">
 <div class="para" id="DMT_functions_CYU_facecpreim-1-1">Let <span class="process-math">\(A=\{1, 2, 3\}, C=\{0, 1\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_functions_CYU_facecpreim-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -931,10 +957,10 @@ eBookConfig.enable_chatcodes =  false;
 </article><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 7.1: Check Your Understanding"><a tabindex="-1" href="#functions7-1-23" title="Copy heading and permalink for Reading Questions 7.1: Check Your Understanding" aria-label="Copy heading and permalink for Reading Questions 7.1: Check Your Understanding">🔗</a></div>
 </section>
 <section class="exercises" id="functions7-1-24">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
-</h3>
-<article class="exercise exercise-like" id="functions7-1-24-1"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</h2>
+<article class="exercise exercise-like" id="functions7-1-24-1"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para logical" id="functions7-1-24-1-1-1">
 <div class="para">Let <span class="process-math">\(X=\{1, 3, 5\}\)</span> and <span class="process-math">\(Y=\{a, b, c, d\}\text{.}\)</span> Define the function <span class="process-math">\(g:X\rightarrow Y\)</span> as the set of ordered pairs</div>
 <div class="displaymath process-math" id="functions7-1-24-1-1-1-4">
@@ -944,63 +970,69 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="functions7-1-24-1-1-2">
-<li id="functions7-1-24-1-1-2-1">
-<div class="para" id="functions7-1-24-1-1-2-1-1">Write the domain and codomain of <span class="process-math">\(g\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="functions7-1-24-1-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="functions7-1-24-1-1-2-1">
+<li id="functions7-1-24-1-1-2-1-1">
+<div class="para" id="functions7-1-24-1-1-2-1-1-1">Write the domain and codomain of <span class="process-math">\(g\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-1-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.1.a"><a tabindex="-1" href="#functions7-1-24-1-1-2-1" title="Copy heading and permalink for Item 7.1.1.a" aria-label="Copy heading and permalink for Item 7.1.1.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.1.a"><a tabindex="-1" href="#functions7-1-24-1-1-2-1-1" title="Copy heading and permalink for Item 7.1.1.a" aria-label="Copy heading and permalink for Item 7.1.1.a">🔗</a></div>
 </li>
-<li id="functions7-1-24-1-1-2-2">
-<div class="para" id="functions7-1-24-1-1-2-2-1">What is the range of <span class="process-math">\(g\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="functions7-1-24-1-1-2-1-2">
+<div class="para" id="functions7-1-24-1-1-2-1-2-1">What is the range of <span class="process-math">\(g\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-1-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.1.b"><a tabindex="-1" href="#functions7-1-24-1-1-2-2" title="Copy heading and permalink for Item 7.1.1.b" aria-label="Copy heading and permalink for Item 7.1.1.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.1.b"><a tabindex="-1" href="#functions7-1-24-1-1-2-1-2" title="Copy heading and permalink for Item 7.1.1.b" aria-label="Copy heading and permalink for Item 7.1.1.b">🔗</a></div>
 </li>
-<li id="functions7-1-24-1-1-2-3">
-<div class="para" id="functions7-1-24-1-1-2-3-1">Is 3 an inverse image of <span class="process-math">\(a\text{?}\)</span> Is 1 an inverse image of <span class="process-math">\(b\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-1-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="functions7-1-24-1-1-2-1-3">
+<div class="para" id="functions7-1-24-1-1-2-1-3-1">Is 3 an inverse image of <span class="process-math">\(a\text{?}\)</span> Is 1 an inverse image of <span class="process-math">\(b\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-1-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.1.c"><a tabindex="-1" href="#functions7-1-24-1-1-2-3" title="Copy heading and permalink for Item 7.1.1.c" aria-label="Copy heading and permalink for Item 7.1.1.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.1.c"><a tabindex="-1" href="#functions7-1-24-1-1-2-1-3" title="Copy heading and permalink for Item 7.1.1.c" aria-label="Copy heading and permalink for Item 7.1.1.c">🔗</a></div>
 </li>
-<li id="functions7-1-24-1-1-2-4">
-<div class="para" id="functions7-1-24-1-1-2-4-1">What is the inverse image of <span class="process-math">\(b\text{?}\)</span> What is the inverse image of <span class="process-math">\(c\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-1-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="functions7-1-24-1-1-2-1-4">
+<div class="para" id="functions7-1-24-1-1-2-1-4-1">What is the inverse image of <span class="process-math">\(b\text{?}\)</span> What is the inverse image of <span class="process-math">\(c\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-1-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.1.d"><a tabindex="-1" href="#functions7-1-24-1-1-2-4" title="Copy heading and permalink for Item 7.1.1.d" aria-label="Copy heading and permalink for Item 7.1.1.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.1.d"><a tabindex="-1" href="#functions7-1-24-1-1-2-1-4" title="Copy heading and permalink for Item 7.1.1.d" aria-label="Copy heading and permalink for Item 7.1.1.d">🔗</a></div>
 </li>
-<li id="functions7-1-24-1-1-2-5">
-<div class="para" id="functions7-1-24-1-1-2-5-1">Represent <span class="process-math">\(g\)</span> as an arrow diagram.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-1-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="functions7-1-24-1-1-2-1-5">
+<div class="para" id="functions7-1-24-1-1-2-1-5-1">Represent <span class="process-math">\(g\)</span> as an arrow diagram.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-1-1-2-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.1.e"><a tabindex="-1" href="#functions7-1-24-1-1-2-5" title="Copy heading and permalink for Item 7.1.1.e" aria-label="Copy heading and permalink for Item 7.1.1.e">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.1.e"><a tabindex="-1" href="#functions7-1-24-1-1-2-1-5" title="Copy heading and permalink for Item 7.1.1.e" aria-label="Copy heading and permalink for Item 7.1.1.e">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 7.1.1"><a tabindex="-1" href="#functions7-1-24-1" title="Copy heading and permalink for Exercise 7.1.1" aria-label="Copy heading and permalink for Exercise 7.1.1">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="functions7-1-24-2"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="functions7-1-24-2"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="functions7-1-24-2-1-1">Determine if the following are true or false. Justify your answer.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="functions7-1-24-2-1-2">
-<li id="functions7-1-24-2-1-2-1">
-<div class="para" id="functions7-1-24-2-1-2-1-1">If two elements in the domain of a function are equal, then their images in the codomain are equal.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="functions7-1-24-2-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="functions7-1-24-2-1-2-1">
+<li id="functions7-1-24-2-1-2-1-1">
+<div class="para" id="functions7-1-24-2-1-2-1-1-1">If two elements in the domain of a function are equal, then their images in the codomain are equal.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-2-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.2.a"><a tabindex="-1" href="#functions7-1-24-2-1-2-1" title="Copy heading and permalink for Item 7.1.2.a" aria-label="Copy heading and permalink for Item 7.1.2.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.2.a"><a tabindex="-1" href="#functions7-1-24-2-1-2-1-1" title="Copy heading and permalink for Item 7.1.2.a" aria-label="Copy heading and permalink for Item 7.1.2.a">🔗</a></div>
 </li>
-<li id="functions7-1-24-2-1-2-2">
-<div class="para" id="functions7-1-24-2-1-2-2-1">If two elements in the codomain of a function are equal, then their preimages in the domain are equal.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="functions7-1-24-2-1-2-1-2">
+<div class="para" id="functions7-1-24-2-1-2-1-2-1">If two elements in the codomain of a function are equal, then their preimages in the domain are equal.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-2-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.2.b"><a tabindex="-1" href="#functions7-1-24-2-1-2-2" title="Copy heading and permalink for Item 7.1.2.b" aria-label="Copy heading and permalink for Item 7.1.2.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.2.b"><a tabindex="-1" href="#functions7-1-24-2-1-2-1-2" title="Copy heading and permalink for Item 7.1.2.b" aria-label="Copy heading and permalink for Item 7.1.2.b">🔗</a></div>
 </li>
-<li id="functions7-1-24-2-1-2-3">
-<div class="para" id="functions7-1-24-2-1-2-3-1">A function can have the same output for more than one input.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-2-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="functions7-1-24-2-1-2-1-3">
+<div class="para" id="functions7-1-24-2-1-2-1-3-1">A function can have the same output for more than one input.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-2-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.2.c"><a tabindex="-1" href="#functions7-1-24-2-1-2-3" title="Copy heading and permalink for Item 7.1.2.c" aria-label="Copy heading and permalink for Item 7.1.2.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.2.c"><a tabindex="-1" href="#functions7-1-24-2-1-2-1-3" title="Copy heading and permalink for Item 7.1.2.c" aria-label="Copy heading and permalink for Item 7.1.2.c">🔗</a></div>
 </li>
-<li id="functions7-1-24-2-1-2-4">
-<div class="para" id="functions7-1-24-2-1-2-4-1">A function can have the same input for more than one output.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-2-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="functions7-1-24-2-1-2-1-4">
+<div class="para" id="functions7-1-24-2-1-2-1-4-1">A function can have the same input for more than one output.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-2-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.2.d"><a tabindex="-1" href="#functions7-1-24-2-1-2-4" title="Copy heading and permalink for Item 7.1.2.d" aria-label="Copy heading and permalink for Item 7.1.2.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.2.d"><a tabindex="-1" href="#functions7-1-24-2-1-2-1-4" title="Copy heading and permalink for Item 7.1.2.d" aria-label="Copy heading and permalink for Item 7.1.2.d">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 7.1.2"><a tabindex="-1" href="#functions7-1-24-2" title="Copy heading and permalink for Exercise 7.1.2" aria-label="Copy heading and permalink for Exercise 7.1.2">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="functions7-1-24-3"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="functions7-1-24-3"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para logical" id="functions7-1-24-3-1-1">
 <div class="para">Let <span class="process-math">\(A=\{1, 2, 3, 4, 5\}\)</span> and define a function <span class="process-math">\(F:{\cal P}(A)\rightarrow \mathbb{Z}\)</span> where for all sets <span class="process-math">\(X\)</span> in <span class="process-math">\({\cal P}(A)\text{,}\)</span>
 </div>
@@ -1015,96 +1047,105 @@ F(X)=
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="functions7-1-24-3-1-2">
-<li id="functions7-1-24-3-1-2-1">
-<div class="para" id="functions7-1-24-3-1-2-1-1">Find <span class="process-math">\(F(\{1, 3, 4\})\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-3-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="functions7-1-24-3-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="functions7-1-24-3-1-2-1">
+<li id="functions7-1-24-3-1-2-1-1">
+<div class="para" id="functions7-1-24-3-1-2-1-1-1">Find <span class="process-math">\(F(\{1, 3, 4\})\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-3-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.3.a"><a tabindex="-1" href="#functions7-1-24-3-1-2-1" title="Copy heading and permalink for Item 7.1.3.a" aria-label="Copy heading and permalink for Item 7.1.3.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.3.a"><a tabindex="-1" href="#functions7-1-24-3-1-2-1-1" title="Copy heading and permalink for Item 7.1.3.a" aria-label="Copy heading and permalink for Item 7.1.3.a">🔗</a></div>
 </li>
-<li id="functions7-1-24-3-1-2-2">
-<div class="para" id="functions7-1-24-3-1-2-2-1">Find <span class="process-math">\(F(\emptyset)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-3-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="functions7-1-24-3-1-2-1-2">
+<div class="para" id="functions7-1-24-3-1-2-1-2-1">Find <span class="process-math">\(F(\emptyset)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-3-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.3.b"><a tabindex="-1" href="#functions7-1-24-3-1-2-2" title="Copy heading and permalink for Item 7.1.3.b" aria-label="Copy heading and permalink for Item 7.1.3.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.3.b"><a tabindex="-1" href="#functions7-1-24-3-1-2-1-2" title="Copy heading and permalink for Item 7.1.3.b" aria-label="Copy heading and permalink for Item 7.1.3.b">🔗</a></div>
 </li>
-<li id="functions7-1-24-3-1-2-3">
-<div class="para" id="functions7-1-24-3-1-2-3-1">Find <span class="process-math">\(F(\{2, 3\})\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-3-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="functions7-1-24-3-1-2-1-3">
+<div class="para" id="functions7-1-24-3-1-2-1-3-1">Find <span class="process-math">\(F(\{2, 3\})\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-3-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.3.c"><a tabindex="-1" href="#functions7-1-24-3-1-2-3" title="Copy heading and permalink for Item 7.1.3.c" aria-label="Copy heading and permalink for Item 7.1.3.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.3.c"><a tabindex="-1" href="#functions7-1-24-3-1-2-1-3" title="Copy heading and permalink for Item 7.1.3.c" aria-label="Copy heading and permalink for Item 7.1.3.c">🔗</a></div>
 </li>
-<li id="functions7-1-24-3-1-2-4">
-<div class="para" id="functions7-1-24-3-1-2-4-1">
-<span class="process-math">\(F(\{2, 3, 4, 5\})\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-3-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="functions7-1-24-3-1-2-1-4">
+<div class="para" id="functions7-1-24-3-1-2-1-4-1">
+<span class="process-math">\(F(\{2, 3, 4, 5\})\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-3-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.3.d"><a tabindex="-1" href="#functions7-1-24-3-1-2-4" title="Copy heading and permalink for Item 7.1.3.d" aria-label="Copy heading and permalink for Item 7.1.3.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.3.d"><a tabindex="-1" href="#functions7-1-24-3-1-2-1-4" title="Copy heading and permalink for Item 7.1.3.d" aria-label="Copy heading and permalink for Item 7.1.3.d">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 7.1.3"><a tabindex="-1" href="#functions7-1-24-3" title="Copy heading and permalink for Exercise 7.1.3" aria-label="Copy heading and permalink for Exercise 7.1.3">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="functions7-1-24-4"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="functions7-1-24-4"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="functions7-1-24-4-1-1">Let <span class="process-math">\(D\)</span> be the set of all finite subsets of positive integers. Let <span class="process-math">\(T:\mathbb{Z}^+\rightarrow D\)</span> be the function where for each positive integer <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(T(n)\)</span> is the set of positive divisors of <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="functions7-1-24-4-1-2">
-<li id="functions7-1-24-4-1-2-1">
-<div class="para" id="functions7-1-24-4-1-2-1-1">Find <span class="process-math">\(T(1)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-4-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="functions7-1-24-4-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="functions7-1-24-4-1-2-1">
+<li id="functions7-1-24-4-1-2-1-1">
+<div class="para" id="functions7-1-24-4-1-2-1-1-1">Find <span class="process-math">\(T(1)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-4-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.4.a"><a tabindex="-1" href="#functions7-1-24-4-1-2-1" title="Copy heading and permalink for Item 7.1.4.a" aria-label="Copy heading and permalink for Item 7.1.4.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.4.a"><a tabindex="-1" href="#functions7-1-24-4-1-2-1-1" title="Copy heading and permalink for Item 7.1.4.a" aria-label="Copy heading and permalink for Item 7.1.4.a">🔗</a></div>
 </li>
-<li id="functions7-1-24-4-1-2-2">
-<div class="para" id="functions7-1-24-4-1-2-2-1">Find <span class="process-math">\(T(15)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-4-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="functions7-1-24-4-1-2-1-2">
+<div class="para" id="functions7-1-24-4-1-2-1-2-1">Find <span class="process-math">\(T(15)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-4-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.4.b"><a tabindex="-1" href="#functions7-1-24-4-1-2-2" title="Copy heading and permalink for Item 7.1.4.b" aria-label="Copy heading and permalink for Item 7.1.4.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.4.b"><a tabindex="-1" href="#functions7-1-24-4-1-2-1-2" title="Copy heading and permalink for Item 7.1.4.b" aria-label="Copy heading and permalink for Item 7.1.4.b">🔗</a></div>
 </li>
-<li id="functions7-1-24-4-1-2-3">
-<div class="para" id="functions7-1-24-4-1-2-3-1">Find <span class="process-math">\(T(17)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-4-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="functions7-1-24-4-1-2-1-3">
+<div class="para" id="functions7-1-24-4-1-2-1-3-1">Find <span class="process-math">\(T(17)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-4-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.4.c"><a tabindex="-1" href="#functions7-1-24-4-1-2-3" title="Copy heading and permalink for Item 7.1.4.c" aria-label="Copy heading and permalink for Item 7.1.4.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.4.c"><a tabindex="-1" href="#functions7-1-24-4-1-2-1-3" title="Copy heading and permalink for Item 7.1.4.c" aria-label="Copy heading and permalink for Item 7.1.4.c">🔗</a></div>
 </li>
-<li id="functions7-1-24-4-1-2-4">
-<div class="para" id="functions7-1-24-4-1-2-4-1">Find <span class="process-math">\(T(5)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-4-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="functions7-1-24-4-1-2-1-4">
+<div class="para" id="functions7-1-24-4-1-2-1-4-1">Find <span class="process-math">\(T(5)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-4-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.4.d"><a tabindex="-1" href="#functions7-1-24-4-1-2-4" title="Copy heading and permalink for Item 7.1.4.d" aria-label="Copy heading and permalink for Item 7.1.4.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.4.d"><a tabindex="-1" href="#functions7-1-24-4-1-2-1-4" title="Copy heading and permalink for Item 7.1.4.d" aria-label="Copy heading and permalink for Item 7.1.4.d">🔗</a></div>
 </li>
-<li id="functions7-1-24-4-1-2-5">
-<div class="para" id="functions7-1-24-4-1-2-5-1">Find <span class="process-math">\(T(18)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-4-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="functions7-1-24-4-1-2-1-5">
+<div class="para" id="functions7-1-24-4-1-2-1-5-1">Find <span class="process-math">\(T(18)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-4-1-2-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.4.e"><a tabindex="-1" href="#functions7-1-24-4-1-2-5" title="Copy heading and permalink for Item 7.1.4.e" aria-label="Copy heading and permalink for Item 7.1.4.e">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.4.e"><a tabindex="-1" href="#functions7-1-24-4-1-2-1-5" title="Copy heading and permalink for Item 7.1.4.e" aria-label="Copy heading and permalink for Item 7.1.4.e">🔗</a></div>
 </li>
-<li id="functions7-1-24-4-1-2-6">
-<div class="para" id="functions7-1-24-4-1-2-6-1">Find <span class="process-math">\(T(21)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-4-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="functions7-1-24-4-1-2-1-6">
+<div class="para" id="functions7-1-24-4-1-2-1-6-1">Find <span class="process-math">\(T(21)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-4-1-2-1-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.4.f"><a tabindex="-1" href="#functions7-1-24-4-1-2-6" title="Copy heading and permalink for Item 7.1.4.f" aria-label="Copy heading and permalink for Item 7.1.4.f">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.4.f"><a tabindex="-1" href="#functions7-1-24-4-1-2-1-6" title="Copy heading and permalink for Item 7.1.4.f" aria-label="Copy heading and permalink for Item 7.1.4.f">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 7.1.4"><a tabindex="-1" href="#functions7-1-24-4" title="Copy heading and permalink for Exercise 7.1.4" aria-label="Copy heading and permalink for Exercise 7.1.4">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="functions7-1-24-5"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="functions7-1-24-5"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="functions7-1-24-5-1-1">Define the function <span class="process-math">\(F:\mathbb{Z}\times\mathbb{Z}\rightarrow \mathbb{Z}\times\mathbb{Z}\)</span> where for all ordered pairs <span class="process-math">\((a, b)\)</span> of integers, <span class="process-math">\(F(a, b)=(2a+1, 3b-2)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="functions7-1-24-5-1-2">
-<li id="functions7-1-24-5-1-2-1">
-<div class="para" id="functions7-1-24-5-1-2-1-1">Find <span class="process-math">\(F(4, 4)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-5-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="functions7-1-24-5-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="functions7-1-24-5-1-2-1">
+<li id="functions7-1-24-5-1-2-1-1">
+<div class="para" id="functions7-1-24-5-1-2-1-1-1">Find <span class="process-math">\(F(4, 4)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-5-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.5.a"><a tabindex="-1" href="#functions7-1-24-5-1-2-1" title="Copy heading and permalink for Item 7.1.5.a" aria-label="Copy heading and permalink for Item 7.1.5.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.5.a"><a tabindex="-1" href="#functions7-1-24-5-1-2-1-1" title="Copy heading and permalink for Item 7.1.5.a" aria-label="Copy heading and permalink for Item 7.1.5.a">🔗</a></div>
 </li>
-<li id="functions7-1-24-5-1-2-2">
-<div class="para" id="functions7-1-24-5-1-2-2-1">Find <span class="process-math">\(F(2, 1)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-5-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="functions7-1-24-5-1-2-1-2">
+<div class="para" id="functions7-1-24-5-1-2-1-2-1">Find <span class="process-math">\(F(2, 1)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-5-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.5.b"><a tabindex="-1" href="#functions7-1-24-5-1-2-2" title="Copy heading and permalink for Item 7.1.5.b" aria-label="Copy heading and permalink for Item 7.1.5.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.5.b"><a tabindex="-1" href="#functions7-1-24-5-1-2-1-2" title="Copy heading and permalink for Item 7.1.5.b" aria-label="Copy heading and permalink for Item 7.1.5.b">🔗</a></div>
 </li>
-<li id="functions7-1-24-5-1-2-3">
-<div class="para" id="functions7-1-24-5-1-2-3-1">Find <span class="process-math">\(F(3, 2)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-5-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="functions7-1-24-5-1-2-1-3">
+<div class="para" id="functions7-1-24-5-1-2-1-3-1">Find <span class="process-math">\(F(3, 2)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-5-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.5.c"><a tabindex="-1" href="#functions7-1-24-5-1-2-3" title="Copy heading and permalink for Item 7.1.5.c" aria-label="Copy heading and permalink for Item 7.1.5.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.5.c"><a tabindex="-1" href="#functions7-1-24-5-1-2-1-3" title="Copy heading and permalink for Item 7.1.5.c" aria-label="Copy heading and permalink for Item 7.1.5.c">🔗</a></div>
 </li>
-<li id="functions7-1-24-5-1-2-4">
-<div class="para" id="functions7-1-24-5-1-2-4-1">Find <span class="process-math">\(F(1, 5)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-5-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="functions7-1-24-5-1-2-1-4">
+<div class="para" id="functions7-1-24-5-1-2-1-4-1">Find <span class="process-math">\(F(1, 5)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-5-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.5.d"><a tabindex="-1" href="#functions7-1-24-5-1-2-4" title="Copy heading and permalink for Item 7.1.5.d" aria-label="Copy heading and permalink for Item 7.1.5.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.5.d"><a tabindex="-1" href="#functions7-1-24-5-1-2-1-4" title="Copy heading and permalink for Item 7.1.5.d" aria-label="Copy heading and permalink for Item 7.1.5.d">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-5-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 7.1.5"><a tabindex="-1" href="#functions7-1-24-5" title="Copy heading and permalink for Exercise 7.1.5" aria-label="Copy heading and permalink for Exercise 7.1.5">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="functions7-1-24-6"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="functions7-1-24-6"><h3 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para logical" id="functions7-1-24-6-1-1">
 <div class="para">Let <span class="process-math">\(X=\{1, 2, 3, 4\}\)</span> and <span class="process-math">\(Y=\{a, b, c, d, e\}\text{.}\)</span> Define <span class="process-math">\(g:X\rightarrow Y\)</span> by</div>
 <div class="displaymath process-math" id="functions7-1-24-6-1-1-4">
@@ -1114,60 +1155,66 @@ g(1)=a, g(2)=a, g(3)=a, g(4)=d\text{.}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="functions7-1-24-6-1-2">
-<li id="functions7-1-24-6-1-2-1">
-<div class="para" id="functions7-1-24-6-1-2-1-1">Draw an arrow diagram for <span class="process-math">\(g\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-6-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="functions7-1-24-6-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="functions7-1-24-6-1-2-1">
+<li id="functions7-1-24-6-1-2-1-1">
+<div class="para" id="functions7-1-24-6-1-2-1-1-1">Draw an arrow diagram for <span class="process-math">\(g\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-6-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.6.a"><a tabindex="-1" href="#functions7-1-24-6-1-2-1" title="Copy heading and permalink for Item 7.1.6.a" aria-label="Copy heading and permalink for Item 7.1.6.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.6.a"><a tabindex="-1" href="#functions7-1-24-6-1-2-1-1" title="Copy heading and permalink for Item 7.1.6.a" aria-label="Copy heading and permalink for Item 7.1.6.a">🔗</a></div>
 </li>
-<li id="functions7-1-24-6-1-2-2">
-<div class="para" id="functions7-1-24-6-1-2-2-1">Let <span class="process-math">\(A=\{2, 3\}, C=\{a\}\text{,}\)</span> and <span class="process-math">\(D=\{b, c\}\text{.}\)</span> Find <span class="process-math">\(g(A), g(X), g^{-1}(C), g^{-1}(D)\text{,}\)</span> and <span class="process-math">\(g^{-1}(Y)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-6-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="functions7-1-24-6-1-2-1-2">
+<div class="para" id="functions7-1-24-6-1-2-1-2-1">Let <span class="process-math">\(A=\{2, 3\}, C=\{a\}\text{,}\)</span> and <span class="process-math">\(D=\{b, c\}\text{.}\)</span> Find <span class="process-math">\(g(A), g(X), g^{-1}(C), g^{-1}(D)\text{,}\)</span> and <span class="process-math">\(g^{-1}(Y)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-6-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.6.b"><a tabindex="-1" href="#functions7-1-24-6-1-2-2" title="Copy heading and permalink for Item 7.1.6.b" aria-label="Copy heading and permalink for Item 7.1.6.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.6.b"><a tabindex="-1" href="#functions7-1-24-6-1-2-1-2" title="Copy heading and permalink for Item 7.1.6.b" aria-label="Copy heading and permalink for Item 7.1.6.b">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-6-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 7.1.6"><a tabindex="-1" href="#functions7-1-24-6" title="Copy heading and permalink for Exercise 7.1.6" aria-label="Copy heading and permalink for Exercise 7.1.6">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="functions7-1-24-7"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="functions7-1-24-7"><h3 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="functions7-1-24-7-1-1">Show that each of the following maps is not a function by showing it is not well-defined.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="functions7-1-24-7-1-2">
-<li id="functions7-1-24-7-1-2-1">
-<div class="para logical" id="functions7-1-24-7-1-2-1-1">
+<div class="para logical" id="functions7-1-24-7-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="functions7-1-24-7-1-2-1">
+<li id="functions7-1-24-7-1-2-1-1">
+<div class="para logical" id="functions7-1-24-7-1-2-1-1-1">
 <div class="para">Define <span class="process-math">\(g:\mathbb{Q}\rightarrow\mathbb{Z}\)</span> by the rule</div>
-<div class="displaymath process-math" id="functions7-1-24-7-1-2-1-1-2">
+<div class="displaymath process-math" id="functions7-1-24-7-1-2-1-1-1-2">
 \begin{equation*}
 g\Big(\frac{m}{n}\Big)=m-n
 \end{equation*}
 </div>
 <div class="para">for all integers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> with <span class="process-math">\(n\neq 0\text{.}\)</span>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-7-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-7-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.7.a"><a tabindex="-1" href="#functions7-1-24-7-1-2-1" title="Copy heading and permalink for Item 7.1.7.a" aria-label="Copy heading and permalink for Item 7.1.7.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.7.a"><a tabindex="-1" href="#functions7-1-24-7-1-2-1-1" title="Copy heading and permalink for Item 7.1.7.a" aria-label="Copy heading and permalink for Item 7.1.7.a">🔗</a></div>
 </li>
-<li id="functions7-1-24-7-1-2-2">
-<div class="para logical" id="functions7-1-24-7-1-2-2-1">
+<li id="functions7-1-24-7-1-2-1-2">
+<div class="para logical" id="functions7-1-24-7-1-2-1-2-1">
 <div class="para">Define <span class="process-math">\(h:\mathbb{Q}\rightarrow\mathbb{Q}\)</span> by the rule</div>
-<div class="displaymath process-math" id="functions7-1-24-7-1-2-2-1-2">
+<div class="displaymath process-math" id="functions7-1-24-7-1-2-1-2-1-2">
 \begin{equation*}
 h\Big(\frac{m}{n}\Big)=\frac{m^2}{n}
 \end{equation*}
 </div>
 <div class="para">for all integers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> with <span class="process-math">\(n\neq 0\text{.}\)</span>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-7-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-7-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.7.b"><a tabindex="-1" href="#functions7-1-24-7-1-2-2" title="Copy heading and permalink for Item 7.1.7.b" aria-label="Copy heading and permalink for Item 7.1.7.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.1.7.b"><a tabindex="-1" href="#functions7-1-24-7-1-2-1-2" title="Copy heading and permalink for Item 7.1.7.b" aria-label="Copy heading and permalink for Item 7.1.7.b">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#functions7-1-24-7-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 7.1.7"><a tabindex="-1" href="#functions7-1-24-7" title="Copy heading and permalink for Exercise 7.1.7" aria-label="Copy heading and permalink for Exercise 7.1.7">🔗</a></div>
 </article><div class="autopermalink" aria-hidden="true" data-description="Exercises 7.1"><a tabindex="-1" href="#functions7-1-24" title="Copy heading and permalink for Exercises 7.1" aria-label="Copy heading and permalink for Exercises 7.1">🔗</a></div>
 </section><div class="autopermalink" aria-hidden="true" data-description="Section 7.1: Functions"><a tabindex="-1" href="#functions7-1" title="Copy heading and permalink for Section 7.1: Functions" aria-label="Copy heading and permalink for Section 7.1: Functions">🔗</a></div>
 </section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="chapter7.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="onetooneonto7-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="chapter7-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="onetooneonto7-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

@@ -79,7 +79,7 @@
 <p>To prove <m>\exists x\in D, Q(x)</m>
 
 <ol marker="1.">
-  <li><p>Find <m>x\in D</m> making, <m>Q(x)</m> true. Note, this step may happen as scratchwork, not part of your proof.</p></li>
+  <li><p>Find <m>x\in D</m> making <m>Q(x)</m> true. Note, this step may happen as scratchwork, not part of your proof.</p></li>
   <li><p>For your proof, state <m>x</m>.</p></li>
   <li><p>Show <m>x\in D</m> and <m>Q(x)</m> is true.</p>
   </li>
@@ -288,6 +288,7 @@
         <p>
     Use the definitions of even, odd, prime, and composite to justify your answer to each of the following questions. Let <m>m</m> and <m>n</m> be integers.
   </p>
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -307,7 +308,7 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
@@ -377,6 +378,7 @@
         <p>
     For the following problems determine if they are true or false. Prove the true statements and provide counterexamples for the false statements.
   </p>
+  <p>
     <ol marker="a.">
 
     <li>
@@ -397,7 +399,7 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       
     </exercises>

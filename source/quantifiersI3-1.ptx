@@ -142,7 +142,7 @@
 
     <exercises>
       <exercise><statement><p>Let <m>P(x)</m> be the predicate <q><m>x&gt;1/x</m>.</q></p>
-      <ol marker="a.">
+      <p><ol marker="a.">
         <li><p>Write <m>P(2), P(1/2), P(-1), P(-1/2)</m>, and <m>P(-8)</m>. Indicate which of these is true and which is false.</p></li>
         <li>
       <p>
@@ -154,7 +154,7 @@
     Let the domain be the set <m>\mathbb{R}^+</m> of all positive real numbers. Find the truth set of <m>P(x)</m>.
   </p>
     </li>
-      </ol>
+      </ol></p>
 
     </statement></exercise>
 
@@ -162,7 +162,7 @@
     Let <m>Q(x, y)</m> be the predicate <q>If <m>x&lt;y</m> then <m>x^2&lt;y^2</m></q> with domain for both <m>x</m> and <m>y</m> being <m>\mathbb{R}</m>.
   </p>
 
-  <ol marker="a.">
+  <p><ol marker="a.">
     <li>
       <p>
     Explain why <m>Q(x, y)</m> is false if <m>x=-4</m> and <m>y=2</m>.
@@ -187,7 +187,7 @@
   </p>
     </li>
 
-  </ol></statement></exercise>
+  </ol></p></statement></exercise>
 
   <exercise><statement><p>
     Give a counter example to show the following statement is false.
@@ -207,7 +207,7 @@
     <p>
      Which of the following are equivalent ways of expressing the statement <md>\exists x\in \mathbb{R} \text{ such that } x^2=2?</md>
   </p>
-
+<p>
   <ol marker="a.">
      <li>
       <p>
@@ -243,14 +243,14 @@
     Some real number has square 2.
   </p>
     </li>
-</ol>
+</ol></p>
   </statement></exercise>
   <exercise><statement>
     <p>
     Which of the following are equivalent ways of expressing the statement
     <md>\forall n\in \mathbb{Z} \text{ if } n^2 \text{ is even then } n \text{ is even}?</md>
   </p>
-
+<p>
   <ol marker="a.">
      <li>
       <p>
@@ -289,12 +289,13 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
   </statement></exercise>
   <exercise><statement>
     <p>
     Rewrite the following statements using the form <q><m>\forall</m>____<m>x</m>,____.</q>
   </p>
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -308,11 +309,12 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
   </statement></exercise>
   <exercise><statement><p>
     Let <m>D</m> be the set of all students at Linfield University, and let <m>M(s)</m> be <q><m>s</m> is a math major,</q> let <m>C(s)</m> be <q><m>s</m> is a computer science major,</q> and let <m>P(s)</m> be <q><m>s</m> is a physics major.</q> Express each of the following statements using quantifiers, variables, and the predicates <m>M(s), C(s), P(s)</m>.
   </p>
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -344,11 +346,11 @@
   </p>
     </li>
 
-  </ol></statement></exercise>
+  </ol></p></statement></exercise>
   <exercise><statement><p>
     Let <m>\mathbb{R}</m> be the domain of the predicate variable <m>x</m>. Which of the following are true and which are false? Give counter examples for the statements that are false.
   </p>
-
+<p>
   <ol marker="a.">
     <li>
       <p>
@@ -374,11 +376,11 @@
   </p>
     </li>
 
-  </ol></statement></exercise>
+  </ol></p></statement></exercise>
   <exercise><statement><p>
     Let the domain of <m>x</m> be the set <m>D</m> of objects discussed in mathematics courses, and let Real(<m>x</m>) be <q><m>x</m> is a real number,</q> Pos(<m>x</m>) be <q><m>x</m> is a positive real number,</q> Neg(<m>x</m>) be <q><m>x</m> is a negative real number,</q> and Int(<m>x</m>) be <q><m>x</m> is an integer.</q> Rewrite each statement without using quantifiers or variables. Indicate which statements are true and which are false. 
   </p>
-
+<p>
   <ol marker="a.">
     <li>
       <p>
@@ -404,7 +406,7 @@
   </p>
     </li>
 
-  </ol></statement></exercise>
+  </ol></p></statement></exercise>
     </exercises>
 
 </section>

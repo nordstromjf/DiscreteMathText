@@ -159,23 +159,23 @@
       </p>
  </example>
 
- <activity xml:id="A_real5x"><introduction>Define <m>f:\mathbb{R}\rightarrow\mathbb{R}</m> by <m>f(x)=5x</m>.</introduction>
+ <activity xml:id="A_real5x"><introduction><p>Define <m>f:\mathbb{R}\rightarrow\mathbb{R}</m> by <m>f(x)=5x</m>.</p></introduction>
 <task><p>Prove or disprove <m>f</m> is one-to-one.</p></task>
 <task><p>Prove or disprove <m>f</m> is onto <m>\mathbb{R}</m>.</p></task></activity>
 
-<activity xml:id="A_int5n"><introduction>Define <m>f:\mathbb{Z}\rightarrow\mathbb{Z}</m> by <m>f(n)=5n</m>.</introduction>
+<activity xml:id="A_int5n"><introduction><p>Define <m>f:\mathbb{Z}\rightarrow\mathbb{Z}</m> by <m>f(n)=5n</m>.</p></introduction>
 <task><p>Prove or disprove <m>f</m> is one-to-one.</p></task>
 <task><p>Prove or disprove <m>f</m> is onto <m>\mathbb{Z}</m>.</p></task></activity>
 
-<activity xml:id="A_rmod3"><introduction>Define <m>g:\mathbb{Z}\rightarrow\{0, 1, 2\}</m>  by <m>g(n)=r</m> where <m>r</m> is the remainder when <m>n</m> is divided by 3.</introduction>
+<activity xml:id="A_rmod3"><introduction><p>Define <m>g:\mathbb{Z}\rightarrow\{0, 1, 2\}</m>  by <m>g(n)=r</m> where <m>r</m> is the remainder when <m>n</m> is divided by 3.</p></introduction>
 <task><p>Prove or disprove <m>g</m> is one-to-one.</p></task>
 <task><p>Prove or disprove <m>g</m> is onto <m>\{0, 1, 2\}</m>.</p></task></activity>
 
-<activity xml:id="A_aminusb"><introduction>Define <m>h:\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}</m> by <m>h(a, b)=a-b</m>.</introduction>
+<activity xml:id="A_aminusb"><introduction><p>Define <m>h:\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}</m> by <m>h(a, b)=a-b</m>.</p></introduction>
 <task><p>Prove or disprove <m>h</m> is one-to-one.</p></task>
 <task><p>Prove or disprove <m>h</m> is onto <m>\mathbb{Z}</m>.</p></task></activity>
 
-<activity xml:id="A_diag"><introduction>Define <m>d:\mathbb{Z}\rightarrow\mathbb{Z}\times\mathbb{Z}</m> by <m>d(a)=(a, a)</m>.</introduction>
+<activity xml:id="A_diag"><introduction><p>Define <m>d:\mathbb{Z}\rightarrow\mathbb{Z}\times\mathbb{Z}</m> by <m>d(a)=(a, a)</m>.</p></introduction>
 <task><p>Prove or disprove <m>d</m> is one-to-one.</p></task>
 <task><p>Prove or disprove <m>d</m> is onto <m>\mathbb{Z}\times\mathbb{Z}</m>.</p></task></activity>
 
@@ -261,7 +261,7 @@
         <p>
     All but two of the following are correct ways to express the fact that a function <m>f</m> is onto. Find the two that are incorrect.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -293,13 +293,13 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
     Let <m>X=\{1, 5, 9\}</m> and <m>Y=\{3, 4, 7\}</m>.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -321,13 +321,13 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
     Let <m>X=\{1, 2, 3\}</m>, <m>Y=\{1, 2, 3, 4\}</m> and <m>Z=\{1, 2\}</m>.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -353,13 +353,13 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
     Define <m>f:\mathbb{Z}\rightarrow\mathbb{Z}</m> by <m>f(n)=4n-5</m>.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -373,13 +373,13 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
     Define <m>g:\mathbb{R}\rightarrow\mathbb{R}</m> by <m>g(x)=4x-5</m>.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -393,7 +393,7 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
@@ -403,7 +403,7 @@
   <p>
     <m>F(A)=</m> the number of elements in <m>A</m>.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -417,7 +417,7 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
@@ -427,7 +427,7 @@
   <p>
     <m>G(x, y)=(2y, -x)</m>.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -441,7 +441,7 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
@@ -451,7 +451,7 @@
   <p>
     <m>H(x, y)=(x+1, 2-y)</m>.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -465,7 +465,7 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
 
     </exercises>

@@ -146,11 +146,12 @@
           <p>Let <m>A=\{2, 3, 4\}</m> and <m>B=\{4, 6, 8\}</m> and let <m>R</m> be the relation from <m>A</m> to <m>B</m> where 
 <md>(x, y)\in R \textrm{ if } \frac{y}{x} \textrm{ is an integer.}</md> </p>
 
+<p>
 <ol marker="a.">
 <li><p>Is <m>4\ R\ 6</m> ? Is <m>4\ R\ 8</m> ? Is <m>(3, 8) \in R</m> ? Is <m>(3, 6)\in R</m> ?</p></li>
 <li><p>Write <m>R</m> as a set of ordered pairs.</p></li>
 <li><p>Write the domain and codomain of <m>R</m>.</p></li>
-<li><p>Draw an arrow diagram for <m>R</m>.</p></li></ol>
+<li><p>Draw an arrow diagram for <m>R</m>.</p></li></ol></p>
         </statement>
       </exercise>
 
@@ -159,11 +160,12 @@
           <p>Let <m>C=\{-2, 0, 2\}</m> and <m>D=\{4, 6, 8\}</m> and let <m>S</m> be the relation from <m>C</m> to <m>D</m> where 
 <md>(x, y)\in S \textrm{ if } \frac{x-y}{4} \textrm{ is an integer.}</md> </p>
 
+<p>
 <ol marker="a.">
 <li><p>Is <m>2\ S\ 6</m> ? Is <m>2\ S\ 8</m> ? Is <m>(0, 6) \in S</m> ? Is <m>(2, 4)\in S</m> ?</p></li>
 <li><p>Write <m>S</m> as a set of ordered pairs.</p></li>
 <li><p>Write the domain and codomain of <m>S</m>.</p></li>
-<li><p>Draw an arrow diagram for <m>S</m>.</p></li></ol>
+<li><p>Draw an arrow diagram for <m>S</m>.</p></li></ol></p>
         </statement>
       </exercise>
 
@@ -172,10 +174,11 @@
           <p>Let <m>T</m> be the relation from <m>\mathbb{R}</m> to <m>\mathbb{R}</m> where  
 <md>(x, y)\in T \textrm{ if } y=x^2.</md> </p>
 
+<p>
 <ol marker="a.">
 <li><p>Is <m>-3\ T\ 9</m> ? Is <m>9\ T\ -3</m> ? Is <m>(2, 4) \in T</m> ? Is <m>(4, 2)\in T</m> ?</p></li>
 <li><p>Draw the graph of <m>T</m> in the Cartesian plane.</p></li>
-</ol>
+</ol></p>
         </statement>
       </exercise>
 
@@ -184,11 +187,11 @@
       <p>Is <m>H</m> a function? Explain your answer.</p></statement></exercise>
 
       <exercise><statement><p>Let <m>A=\{-1, 0, 1\}</m> and <m>B=\{w, x, y, z\}</m> and let <m>F</m> be the function <m>F: A\rightarrow B</m> given by the set <m>F=\{(-1, y), (0, w), (1, y)\}</m>. </p>
-        <ol marker="a.">
+        <p><ol marker="a.">
           <li><p>Write the domain and codomain of <m>F</m>.</p></li>
           <li><p>Explain why <m>F</m> is a function.</p></li>
           <li><p> Find <m>F(-1), F(0),</m> and <m>F(1)</m>.</p></li>
-        </ol>
+        </ol></p>
     </statement></exercise>
 
     </exercises>

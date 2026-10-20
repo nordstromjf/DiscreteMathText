@@ -226,6 +226,7 @@
 
     <exercises>
       <exercise><statement><p>Determine if the following statements are true or false. Justify your answer.</p>
+      <p>
         <ol marker="a.">
         <li>
         <p><m>5\mid 0</m></p>
@@ -237,10 +238,11 @@
 
         <li>
         <p><m>13\mid 73</m></p>
-        </li></ol>
+        </li></ol></p>
     </statement></exercise>
       <exercise><statement>
         <p>Let <m>n\in \mathbb{Z}</m>. Determine if the following statements are true or false. Justify your answer.</p>
+        <p>
         <ol marker="a.">
         <li>
         <p>3 divides <m>(3n+1)(3n+2)(3n+3)</m>.</p>
@@ -252,7 +254,7 @@
 
         <li>
         <p>100 divides <m>(5n)^2(8n+24).</m></p>
-        </li></ol>
+        </li></ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
@@ -261,7 +263,8 @@
       </statement></exercise>
       <exercise><statement>
         
-<p>Recall that the standard factored form of an integer is a product of powers of a prime, as in <xref ref="T_FTofArith"/>.
+<p>Recall that the standard factored form of an integer is a product of powers of a prime, as in <xref ref="T_FTofArith"/>.</p>
+<p>
   <ol marker="a.">
     <li>
       <p>

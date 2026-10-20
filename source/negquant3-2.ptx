@@ -194,6 +194,7 @@
         <p>
     Which of the following is a negation for <q>All discrete math students are athletic</q>? More than one answer may be correct.
   </p>
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -229,14 +230,14 @@
       <p>
     No athletic people are discrete math students.
   </p>
-    </li></ol>
+    </li></ol></p>
 
       </statement></exercise>
       <exercise><statement>
         <p>
     Write an informal negation for each of the following statements. Be careful to avoid negations that are ambiguous.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -262,13 +263,13 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
     Write a negation for each of the following statements.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -282,11 +283,12 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
     Write the negation of each of the statements.</p>
+    <p>
     <ol marker="a.">
     <li><p><m>\forall</m> real numbers <m>x</m>, if <m>x&gt;3</m> then <m>x^2&gt;9</m>.
   </p></li>
@@ -295,7 +297,7 @@
   </p></li>
   <li><p>
     <m>\forall</m> integers <m>n</m>, if <m>n</m> is divisible by 6, then <m>n</m> is divisible by 2 and <m>n</m> is divisible by 3.
-  </p></li></ol>
+  </p></li></ol></p>
 
       </statement></exercise>
       <exercise><statement>

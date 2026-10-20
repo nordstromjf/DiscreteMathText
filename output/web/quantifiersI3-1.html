@@ -19,15 +19,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-2 { system: extends decimal; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-3 { system: extends decimal; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-4 { system: extends lower-roman; prefix: ''; suffix: '. '; }
+</style>
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
 hasWebworkReps: false,
 hasSage: false,
 isReact: false,
 htmlPresentation: false,
+lang: "en-US",
 });
-</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta name="twitter:title" content="Discrete Mathematics: An Active Approach to Mathematical Reasoning">
@@ -36,7 +42,7 @@ htmlPresentation: false,
 <meta name="twitter:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta property="og:description" content="This text provides the basics for a one semester Discrete Math course which emphasizes mathematical reasoning and an introduction to proof writing. Each section includes activities to help the students master the definitions and techniques.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.43"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.54"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.54"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -58,21 +64,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.9';
+eBookConfig.runestone_version = '8.3.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.846a0d6fafaa99e0.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.bbcfc02849ebc023.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/prefix-runtime.4beca1fdeed766a2.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.ebd33f6a21eed414.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.9963089870a016c8.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="DiscreteMathText" class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="DiscreteMath.html"><span class="title">Discrete Mathematics</span> <span class="subtitle">An Active Approach to Mathematical Reasoning</span></a></div>
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="DiscreteMath-14-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
@@ -85,7 +91,17 @@ eBookConfig.enable_chatcodes =  false;
 <div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
 <ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
-<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
 <h2 class="heading">Readability settings</h2>
 <button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
@@ -103,7 +119,7 @@ eBookConfig.enable_chatcodes =  false;
 <legend>Assistive technologies</legend>
 <label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
 </fieldset>
-<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="chapter3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter3.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="negquant3-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="chapter3-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter3.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="negquant3-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \newcommand{\MyTikzmark}[2]{
      \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
 \newcommand{\DrawVLine}[3][]{
@@ -134,6 +150,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter1.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to Mathematical Language</span></a></div>
 <ul id="ptx-toc-group-chapter1" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter1-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="variables1-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Variables and Statements</span></a></div>
 <ul id="ptx-toc-group-variables1-1" class="structural toc-item-list">
@@ -160,6 +177,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter2.html" class="internal"><span class="codenumber">2</span> <span class="title">Logic</span></a></div>
 <ul id="ptx-toc-group-chapter2" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter2-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="logical_form2-1.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Truth-Tables and Logical Equivalence</span></a></div>
 <ul id="ptx-toc-group-logical_form2-1" class="structural toc-item-list">
@@ -186,6 +204,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="chapter3.html" class="internal"><span class="codenumber">3</span> <span class="title">Logic with Quantifiers</span></a></div>
 <ul class="structural toc-item-list contains-active" id="ptx-toc-group-chapter3">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter3-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="quantifiersI3-1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Quantifiers</span></a></div>
 <ul class="structural toc-item-list active" id="ptx-toc-group-quantifiersI3-1">
@@ -219,6 +238,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter4.html" class="internal"><span class="codenumber">4</span> <span class="title">Proof Techniques</span></a></div>
 <ul id="ptx-toc-group-chapter4" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter4-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="directproof4-1.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Direct Proof and Counterexample</span></a></div>
 <ul id="ptx-toc-group-directproof4-1" class="structural toc-item-list">
@@ -266,6 +286,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter5.html" class="internal"><span class="codenumber">5</span> <span class="title">Sequences and Mathematical Induction</span></a></div>
 <ul id="ptx-toc-group-chapter5" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter5-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sequences5-1.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Sequences</span></a></div>
 <ul id="ptx-toc-group-sequences5-1" class="structural toc-item-list">
@@ -313,6 +334,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter6.html" class="internal"><span class="codenumber">6</span> <span class="title">Set Theory</span></a></div>
 <ul id="ptx-toc-group-chapter6" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter6-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sets6-1.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Set Theory</span></a></div>
 <ul id="ptx-toc-group-sets6-1" class="structural toc-item-list">
@@ -339,6 +361,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter7.html" class="internal"><span class="codenumber">7</span> <span class="title">Functions</span></a></div>
 <ul id="ptx-toc-group-chapter7" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter7-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="functions7-1.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Functions</span></a></div>
 <ul id="ptx-toc-group-functions7-1" class="structural toc-item-list">
@@ -358,6 +381,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter8.html" class="internal"><span class="codenumber">8</span> <span class="title">Relations</span></a></div>
 <ul id="ptx-toc-group-chapter8" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter8-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="relations8-1.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Relations on Sets</span></a></div>
 <ul id="ptx-toc-group-relations8-1" class="structural toc-item-list">
@@ -391,6 +415,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter9.html" class="internal"><span class="codenumber">9</span> <span class="title">Probability and Counting</span></a></div>
 <ul id="ptx-toc-group-chapter9" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter9-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="probability9-1.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Probability</span></a></div>
 <ul id="ptx-toc-group-probability9-1" class="structural toc-item-list">
@@ -438,6 +463,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter10.html" class="internal"><span class="codenumber">10</span> <span class="title">Graph Theory</span></a></div>
 <ul id="ptx-toc-group-chapter10" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter10-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="graphs10-1.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphs</span></a></div>
 <ul id="ptx-toc-group-graphs10-1" class="structural toc-item-list">
@@ -465,7 +491,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="DiscreteMath-14.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul id="ptx-toc-group-DiscreteMath-14" class="structural toc-item-list">
 <li class="toc-item toc-references"><div class="toc-title-box"><a href="DiscreteMath-14-1.html" class="internal"><span class="title">References</span></a></div></li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="DiscreteMath-14-2.html" class="internal"><span class="codenumber">A.</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="DiscreteMath-14-3.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="DiscreteMath-14-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
@@ -473,23 +499,23 @@ eBookConfig.enable_chatcodes =  false;
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="quantifiersI3-1">
-<h2 class="heading hide-type">
+<h1 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Quantifiers</span>
-</h2>
+</h1>
 <div class="para" id="quantifiersI3-1-3">We want to be able to use variables in statements. For example, <span class="process-math">\(x+3/2=4\)</span> is not a statement since it has no truth value. However, if we say, “there exists <span class="process-math">\(x\)</span> such that <span class="process-math">\(x+3/2=4\)</span>” or “for all <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(x+3/2=4\text{,}\)</span>” and we know what set <span class="process-math">\(x\)</span> belongs to, then we can decide whether these statements are true or false.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="definition definition-like" id="quantifiersI3-1-4"><h3 class="heading">
+<article class="definition definition-like" id="quantifiersI3-1-4"><h2 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+</h2>
 <div class="para" id="quantifiersI3-1-4-1-1">The <dfn class="terminology">domain</dfn> for a quantified statement is the set of possible values for a variable in a quantified statement.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Definition 3.1.1"><a tabindex="-1" href="#quantifiersI3-1-4" title="Copy heading and permalink for Definition 3.1.1" aria-label="Copy heading and permalink for Definition 3.1.1">🔗</a></div>
 </article>
 <div class="para" id="quantifiersI3-1-5">In order to determine whether a statement is true or false, we first need to know the domain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_domainqexist1" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Domain and Existential Statements.</span>
-</h3></summary>
+<details id="E_domainqexist1" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Domain and Existential Statements.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_domainqexist1-2">Let <span class="process-math">\(D=\mathbb{Z}\text{.}\)</span> Determine whether the statement “there exists <span class="process-math">\(x\in D\)</span> such that <span class="process-math">\(x+3/2=4\)</span>” is true or false.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_domainqexist1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -516,9 +542,9 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" aria-hidden="true" data-description="Answer 3.1.2.3"><a tabindex="-1" href="#E_domainqexist1-7" title="Copy heading and permalink for Answer 3.1.2.3" aria-label="Copy heading and permalink for Answer 3.1.2.3">🔗</a></div>
 </div></details><div class="autopermalink" aria-hidden="true" data-description="Example 3.1.2: Domain and Existential Statements"><a tabindex="-1" href="#E_domainqexist1" title="Copy heading and permalink for Example 3.1.2: Domain and Existential Statements" aria-label="Copy heading and permalink for Example 3.1.2: Domain and Existential Statements">🔗</a></div>
 </article></details>
-<details id="E_domainquniversal1" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Domain and Universal Statements.</span>
-</h3></summary>
+<details id="E_domainquniversal1" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Domain and Universal Statements.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_domainquniversal1-2">Let <span class="process-math">\(D=\mathbb{Z}\text{.}\)</span> Determine whether the statement “for all <span class="process-math">\(x\in D\text{,}\)</span> <span class="process-math">\(x+3/2=4\)</span>” is true or false.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_domainquniversal1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -553,16 +579,16 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="quantifiersI3-1-11">One goal with quantified statements is to be able to determine for which values in the domain they are true.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="definition definition-like" id="quantifiersI3-1-12"><h3 class="heading">
+<article class="definition definition-like" id="quantifiersI3-1-12"><h2 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+</h2>
 <div class="para" id="quantifiersI3-1-12-1-1">The <dfn class="terminology">truth set</dfn> for a predicate, <span class="process-math">\(P(x)\text{,}\)</span> is the set of values for <span class="process-math">\(x\)</span> that make <span class="process-math">\(P(x)\)</span> true.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Definition 3.1.4"><a tabindex="-1" href="#quantifiersI3-1-12" title="Copy heading and permalink for Definition 3.1.4" aria-label="Copy heading and permalink for Definition 3.1.4">🔗</a></div>
 </article>
-<details id="E_truthsets" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding Truth Sets.</span>
-</h3></summary>
+<details id="E_truthsets" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding Truth Sets.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_truthsets-2">Find the  truth set for <span class="process-math">\(P(x)\)</span> given by <span class="process-math">\(x+3/2=4\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_truthsets-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -581,7 +607,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" aria-hidden="true" data-description="Answer 3.1.5.2"><a tabindex="-1" href="#E_truthsets-5" title="Copy heading and permalink for Answer 3.1.5.2" aria-label="Copy heading and permalink for Answer 3.1.5.2">🔗</a></div>
 </div></details><div class="autopermalink" aria-hidden="true" data-description="Example 3.1.5: Finding Truth Sets"><a tabindex="-1" href="#E_truthsets" title="Copy heading and permalink for Example 3.1.5: Finding Truth Sets" aria-label="Copy heading and permalink for Example 3.1.5: Finding Truth Sets">🔗</a></div>
 </article></details>
-<article class="assemblage assemblage-like" id="B_quantifiers"><h3 class="heading"><span class="title">Quantifiers.</span></h3>
+<article class="assemblage assemblage-like" id="B_quantifiers"><h2 class="heading"><span class="title">Quantifiers.</span></h2>
 <div class="para logical" id="B_quantifiers-2">
 <ul class="disc" id="B_quantifiers-2-1">
 <li id="B_quantifiers-2-1-1">
@@ -597,9 +623,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Assemblage: Quantifiers"><a tabindex="-1" href="#B_quantifiers" title="Copy heading and permalink for Assemblage: Quantifiers" aria-label="Copy heading and permalink for Assemblage: Quantifiers">🔗</a></div>
 </article>
-<article class="definition definition-like" id="D_univstatement"><h3 class="heading">
+<article class="definition definition-like" id="D_univstatement"><h2 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+</h2>
 <div class="para" id="D_univstatement-1-1">A <dfn class="terminology">universal statement</dfn> has the form <span class="process-math">\(\forall x\in D, P(x)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_univstatement-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Definition 3.1.6"><a tabindex="-1" href="#D_univstatement" title="Copy heading and permalink for Definition 3.1.6" aria-label="Copy heading and permalink for Definition 3.1.6">🔗</a></div>
@@ -608,48 +634,48 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="quantifiersI3-1-17">To show a universal statement is <em class="alert">false</em>, you just need to find one value in <span class="process-math">\(D\)</span> which makes <span class="process-math">\(P(x)\)</span> false (counterexample).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="activity project-like" id="quant-Tforall"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="quant-Tforall"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="quant-Tforall-1-1">Let <span class="process-math">\(D=\{2, 3, 4, 5\}\text{.}\)</span> Show the following statement is true: <span class="process-math">\(\forall x\in {D}, x^2&gt;2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quant-Tforall-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 3.1.1"><a tabindex="-1" href="#quant-Tforall" title="Copy heading and permalink for Activity 3.1.1" aria-label="Copy heading and permalink for Activity 3.1.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 3.1.7"><a tabindex="-1" href="#quant-Tforall" title="Copy heading and permalink for Activity 3.1.7" aria-label="Copy heading and permalink for Activity 3.1.7">🔗</a></div>
 </article>
-<article class="activity project-like" id="quant-Fforall"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="quant-Fforall"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="quant-Fforall-1-1">Let <span class="process-math">\(D=\{2, 3, 4, 5\}\text{.}\)</span> Show the following statement is false: <span class="process-math">\(\forall x\in D, x^2 &lt; 20\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quant-Fforall-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 3.1.2"><a tabindex="-1" href="#quant-Fforall" title="Copy heading and permalink for Activity 3.1.2" aria-label="Copy heading and permalink for Activity 3.1.2">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 3.1.8"><a tabindex="-1" href="#quant-Fforall" title="Copy heading and permalink for Activity 3.1.8" aria-label="Copy heading and permalink for Activity 3.1.8">🔗</a></div>
 </article>
-<article class="definition definition-like" id="D_existstatement"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="definition definition-like" id="D_existstatement"><h2 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="D_existstatement-1-1">An <dfn class="terminology">existential statement</dfn> has the form <span class="process-math">\(\exists x\in D, P(x)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_existstatement-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definition 3.1.7"><a tabindex="-1" href="#D_existstatement" title="Copy heading and permalink for Definition 3.1.7" aria-label="Copy heading and permalink for Definition 3.1.7">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.1.9"><a tabindex="-1" href="#D_existstatement" title="Copy heading and permalink for Definition 3.1.9" aria-label="Copy heading and permalink for Definition 3.1.9">🔗</a></div>
 </article>
 <div class="para" id="quantifiersI3-1-21">To show an existential statement is <em class="alert">true</em>, you just need to find one value in <span class="process-math">\(D\)</span> which makes <span class="process-math">\(P(x)\)</span> true.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="quantifiersI3-1-22">To show an existential statement is <em class="alert">false</em>, you need to show all values in <span class="process-math">\(D\)</span> make <span class="process-math">\(P(x)\)</span> false, or no values make it true. If your set is small, you can do this just by showing <span class="process-math">\(P(x)\)</span> is false for each <span class="process-math">\(x\text{.}\)</span> If <span class="process-math">\(D\)</span> is infinite, however, we will need more general techniques.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="activity project-like" id="quant-Texists"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="quant-Texists"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="quant-Texists-1-1">Show the following statement is true: <span class="process-math">\(\exists x\in \mathbb{R}, 2x^2+1=5\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quant-Texists-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 3.1.3"><a tabindex="-1" href="#quant-Texists" title="Copy heading and permalink for Activity 3.1.3" aria-label="Copy heading and permalink for Activity 3.1.3">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 3.1.10"><a tabindex="-1" href="#quant-Texists" title="Copy heading and permalink for Activity 3.1.10" aria-label="Copy heading and permalink for Activity 3.1.10">🔗</a></div>
 </article>
-<article class="activity project-like" id="quant-Fexists"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="quant-Fexists"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="quant-Fexists-1-1">Show the following statement is false: <span class="process-math">\(\exists x\in \mathbb{Z}, 3x+5=6\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quant-Fexists-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 3.1.4"><a tabindex="-1" href="#quant-Fexists" title="Copy heading and permalink for Activity 3.1.4" aria-label="Copy heading and permalink for Activity 3.1.4">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 3.1.11"><a tabindex="-1" href="#quant-Fexists" title="Copy heading and permalink for Activity 3.1.11" aria-label="Copy heading and permalink for Activity 3.1.11">🔗</a></div>
 </article>
-<details id="E_translating" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Translating Statements.</span>
-</h3></summary>
+<details id="E_translating" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.12</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Translating Statements.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_translating-2">Translate the statement using quantifiers and variables, “All positive real numbers have square roots greater than zero.”<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_translating-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -658,7 +684,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="E_translating-3-1">
 <span class="process-math">\(\forall x\in \mathbb{R}^+, \sqrt{x}&gt;0.\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_translating-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Answer 3.1.8.1"><a tabindex="-1" href="#E_translating-3" title="Copy heading and permalink for Answer 3.1.8.1" aria-label="Copy heading and permalink for Answer 3.1.8.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.1.12.1"><a tabindex="-1" href="#E_translating-3" title="Copy heading and permalink for Answer 3.1.12.1" aria-label="Copy heading and permalink for Answer 3.1.12.1">🔗</a></div>
 </div></details>
 <div class="para" id="E_translating-4">Translate the statement using quantifiers and variables, “Nobody’s perfect.”<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_translating-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -667,12 +693,12 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="E_translating-5-1">
 <span class="process-math">\(\forall x\in \{\textrm{people}\}, x\)</span> is not perfect.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_translating-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Answer 3.1.8.2"><a tabindex="-1" href="#E_translating-5" title="Copy heading and permalink for Answer 3.1.8.2" aria-label="Copy heading and permalink for Answer 3.1.8.2">🔗</a></div>
-</div></details><div class="autopermalink" aria-hidden="true" data-description="Example 3.1.8: Translating Statements"><a tabindex="-1" href="#E_translating" title="Copy heading and permalink for Example 3.1.8: Translating Statements" aria-label="Copy heading and permalink for Example 3.1.8: Translating Statements">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.1.12.2"><a tabindex="-1" href="#E_translating-5" title="Copy heading and permalink for Answer 3.1.12.2" aria-label="Copy heading and permalink for Answer 3.1.12.2">🔗</a></div>
+</div></details><div class="autopermalink" aria-hidden="true" data-description="Example 3.1.12: Translating Statements"><a tabindex="-1" href="#E_translating" title="Copy heading and permalink for Example 3.1.12: Translating Statements" aria-label="Copy heading and permalink for Example 3.1.12: Translating Statements">🔗</a></div>
 </article></details>
-<article class="activity project-like" id="quant-formal"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="quant-formal"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
 <div class="exercise-statement">
 <div class="para" id="quant-formal-1-1">Write the following statement formally using quantifiers and variables: Every differentiable function is continuous. Let <span class="process-math">\(D\)</span> be the set of differentiable functions, and let <span class="process-math">\(C\)</span> be the set of continuous functions.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quant-formal-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -705,20 +731,20 @@ eBookConfig.enable_chatcodes =  false;
 <li data-component="feedback" id="rs-quant-formal_opt_d">
 </ul>
 </div></div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 3.1.5"><a tabindex="-1" href="#quant-formal" title="Copy heading and permalink for Activity 3.1.5" aria-label="Copy heading and permalink for Activity 3.1.5">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 3.1.13"><a tabindex="-1" href="#quant-formal" title="Copy heading and permalink for Activity 3.1.13" aria-label="Copy heading and permalink for Activity 3.1.13">🔗</a></div>
 </article>
 <div class="para" id="quantifiersI3-1-27">Recall universal conditional statements from <a href="variables1-1.html" class="internal" title="Section 1.1: Variables and Statements">Section 1.1</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="definition definition-like" id="D_univcondstate"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="definition definition-like" id="D_univcondstate"><h2 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="D_univcondstate-1-1">A <dfn class="terminology">universal conditional statement</dfn> has the form  <span class="process-math">\(\forall x\in D\text{,}\)</span> if <span class="process-math">\(P(x)\)</span> then <span class="process-math">\(Q(x)\text{.}\)</span> In symbols, we can write a universal conditional as <span class="process-math">\(\forall x\in D, P(x)\rightarrow Q(x).\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D_univcondstate-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definition 3.1.9"><a tabindex="-1" href="#D_univcondstate" title="Copy heading and permalink for Definition 3.1.9" aria-label="Copy heading and permalink for Definition 3.1.9">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.1.14"><a tabindex="-1" href="#D_univcondstate" title="Copy heading and permalink for Definition 3.1.14" aria-label="Copy heading and permalink for Definition 3.1.14">🔗</a></div>
 </article>
-<details id="E_univcond" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Universal Conditional Statement.</span>
-</h3></summary>
+<details id="E_univcond" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.15</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Universal Conditional Statement.</span>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="E_univcond-2">Translate the statement using quantifiers and variables, “If an integer is even then it is divisible by 2.”<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_univcond-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -726,44 +752,44 @@ eBookConfig.enable_chatcodes =  false;
 <div class="answer solution-like knowl__content">
 <div class="para" id="E_univcond-3-1">Let <span class="process-math">\(P(x)\)</span> be “<span class="process-math">\(x\)</span> is even” and <span class="process-math">\(Q(x)\)</span> be “<span class="process-math">\(x\)</span> is divisible by 2.” <span class="process-math">\(\forall x\in \mathbb{Z}, P(x)\rightarrow Q(x)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#E_univcond-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Answer 3.1.10.1"><a tabindex="-1" href="#E_univcond-3" title="Copy heading and permalink for Answer 3.1.10.1" aria-label="Copy heading and permalink for Answer 3.1.10.1">🔗</a></div>
-</div></details><div class="autopermalink" aria-hidden="true" data-description="Example 3.1.10: Universal Conditional Statement"><a tabindex="-1" href="#E_univcond" title="Copy heading and permalink for Example 3.1.10: Universal Conditional Statement" aria-label="Copy heading and permalink for Example 3.1.10: Universal Conditional Statement">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.1.15.1"><a tabindex="-1" href="#E_univcond-3" title="Copy heading and permalink for Answer 3.1.15.1" aria-label="Copy heading and permalink for Answer 3.1.15.1">🔗</a></div>
+</div></details><div class="autopermalink" aria-hidden="true" data-description="Example 3.1.15: Universal Conditional Statement"><a tabindex="-1" href="#E_univcond" title="Copy heading and permalink for Example 3.1.15: Universal Conditional Statement" aria-label="Copy heading and permalink for Example 3.1.15: Universal Conditional Statement">🔗</a></div>
 </article></details>
-<article class="activity project-like" id="quant-univcond"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="quant-univcond"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="quant-univcond-1-1">Write the following statement formally as a universal conditional: Every differentiable function is continuous.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quant-univcond-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Activity 3.1.6"><a tabindex="-1" href="#quant-univcond" title="Copy heading and permalink for Activity 3.1.6" aria-label="Copy heading and permalink for Activity 3.1.6">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 3.1.16"><a tabindex="-1" href="#quant-univcond" title="Copy heading and permalink for Activity 3.1.16" aria-label="Copy heading and permalink for Activity 3.1.16">🔗</a></div>
 </article>
-<article class="activity project-like" id="quant-varandquant"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="quant-varandquant"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="introduction" id="quant-varandquant-1">
 <div class="para" id="quant-varandquant-1-1">Write the following statements formally using quantifiers and variables.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quant-varandquant-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="quant-varandquant-a"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="quant-varandquant-a"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="quant-varandquant-a-1-1">Some even integers are negative.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quant-varandquant-a-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 3.1.7.a"><a tabindex="-1" href="#quant-varandquant-a" title="Copy heading and permalink for Task 3.1.7.a" aria-label="Copy heading and permalink for Task 3.1.7.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.1.17.a"><a tabindex="-1" href="#quant-varandquant-a" title="Copy heading and permalink for Task 3.1.17.a" aria-label="Copy heading and permalink for Task 3.1.17.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="quant-varandquant-b"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="quant-varandquant-b"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="quant-varandquant-b-1-1">Everyone makes mistakes.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quant-varandquant-b-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 3.1.7.b"><a tabindex="-1" href="#quant-varandquant-b" title="Copy heading and permalink for Task 3.1.7.b" aria-label="Copy heading and permalink for Task 3.1.7.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.1.17.b"><a tabindex="-1" href="#quant-varandquant-b" title="Copy heading and permalink for Task 3.1.17.b" aria-label="Copy heading and permalink for Task 3.1.17.b">🔗</a></div>
 </article>
-<article class="task exercise-like" id="quant-varandquant-c"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<article class="task exercise-like" id="quant-varandquant-c"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="quant-varandquant-c-1-1">Someone will get an A.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quant-varandquant-c-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 3.1.7.c"><a tabindex="-1" href="#quant-varandquant-c" title="Copy heading and permalink for Task 3.1.7.c" aria-label="Copy heading and permalink for Task 3.1.7.c">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 3.1.7"><a tabindex="-1" href="#quant-varandquant" title="Copy heading and permalink for Activity 3.1.7" aria-label="Copy heading and permalink for Activity 3.1.7">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.1.17.c"><a tabindex="-1" href="#quant-varandquant-c" title="Copy heading and permalink for Task 3.1.17.c" aria-label="Copy heading and permalink for Task 3.1.17.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 3.1.17"><a tabindex="-1" href="#quant-varandquant" title="Copy heading and permalink for Activity 3.1.17" aria-label="Copy heading and permalink for Activity 3.1.17">🔗</a></div>
 </article>
 <section class="reading-questions" id="quantifiersI3-1-32">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Check Your Understanding</span>
-</h3>
-<article class="exercise exercise-like" id="DMT_quant_CYU_forall"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</h2>
+<article class="exercise exercise-like" id="DMT_quant_CYU_forall"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_quant_CYU_forall">
 <div class="para" id="DMT_quant_CYU_forall-1-1">Let <span class="process-math">\(D=\mathbb{Z}\text{.}\)</span> Let <span class="process-math">\(P(x)\)</span> be “<span class="process-math">\(x^2\)</span> is even.”<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_quant_CYU_forall-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -780,7 +806,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 3.1.1"><a tabindex="-1" href="#DMT_quant_CYU_forall" title="Copy heading and permalink for Reading Question 3.1.1" aria-label="Copy heading and permalink for Reading Question 3.1.1">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_quant_CYU_exists"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_quant_CYU_exists"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_quant_CYU_exists">
 <div class="para" id="DMT_quant_CYU_exists-1-1">Let <span class="process-math">\(D=\mathbb{Z}\text{.}\)</span> Let <span class="process-math">\(P(x)\)</span> be “<span class="process-math">\(x^2\)</span> is even.”<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_quant_CYU_exists-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -797,7 +823,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 3.1.2"><a tabindex="-1" href="#DMT_quant_CYU_exists" title="Copy heading and permalink for Reading Question 3.1.2" aria-label="Copy heading and permalink for Reading Question 3.1.2">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_quant_CYU_forallnot"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_quant_CYU_forallnot"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_quant_CYU_forallnot">
 <div class="para" id="DMT_quant_CYU_forallnot-1-1">Let <span class="process-math">\(D=\mathbb{Z}\text{.}\)</span> Let <span class="process-math">\(P(x)\)</span> be “<span class="process-math">\(x^2\)</span> is even.”<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_quant_CYU_forallnot-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -814,7 +840,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 3.1.3"><a tabindex="-1" href="#DMT_quant_CYU_forallnot" title="Copy heading and permalink for Reading Question 3.1.3" aria-label="Copy heading and permalink for Reading Question 3.1.3">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_quant_CYU_existsnot"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_quant_CYU_existsnot"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_quant_CYU_existsnot">
 <div class="para" id="DMT_quant_CYU_existsnot-1-1">Let <span class="process-math">\(D=\mathbb{Z}\text{.}\)</span> Let <span class="process-math">\(P(x)\)</span> be “<span class="process-math">\(x^2\)</span> is even.”<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_quant_CYU_existsnot-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -831,7 +857,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Reading Question 3.1.4"><a tabindex="-1" href="#DMT_quant_CYU_existsnot" title="Copy heading and permalink for Reading Question 3.1.4" aria-label="Copy heading and permalink for Reading Question 3.1.4">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="DMT_quant_CYU_notforall"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="DMT_quant_CYU_notforall"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false" id="rs-DMT_quant_CYU_notforall">
 <div class="para" id="DMT_quant_CYU_notforall-1-1">Let <span class="process-math">\(D=\mathbb{Z}\text{.}\)</span> Let <span class="process-math">\(P(x)\)</span> be “<span class="process-math">\(x^2\)</span> is even.”<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#DMT_quant_CYU_notforall-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -850,59 +876,65 @@ eBookConfig.enable_chatcodes =  false;
 </article><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 3.1: Check Your Understanding"><a tabindex="-1" href="#quantifiersI3-1-32" title="Copy heading and permalink for Reading Questions 3.1: Check Your Understanding" aria-label="Copy heading and permalink for Reading Questions 3.1: Check Your Understanding">🔗</a></div>
 </section>
 <section class="exercises" id="quantifiersI3-1-33">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
-</h3>
-<article class="exercise exercise-like" id="quantifiersI3-1-33-1"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</h2>
+<article class="exercise exercise-like" id="quantifiersI3-1-33-1"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="quantifiersI3-1-33-1-1-1">Let <span class="process-math">\(P(x)\)</span> be the predicate “<span class="process-math">\(x&gt;1/x\text{.}\)</span>”<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="quantifiersI3-1-33-1-1-2">
-<li id="quantifiersI3-1-33-1-1-2-1">
-<div class="para" id="quantifiersI3-1-33-1-1-2-1-1">Write <span class="process-math">\(P(2), P(1/2), P(-1), P(-1/2)\text{,}\)</span> and <span class="process-math">\(P(-8)\text{.}\)</span> Indicate which of these is true and which is false.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="quantifiersI3-1-33-1-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="quantifiersI3-1-33-1-1-2-1">
+<li id="quantifiersI3-1-33-1-1-2-1-1">
+<div class="para" id="quantifiersI3-1-33-1-1-2-1-1-1">Write <span class="process-math">\(P(2), P(1/2), P(-1), P(-1/2)\text{,}\)</span> and <span class="process-math">\(P(-8)\text{.}\)</span> Indicate which of these is true and which is false.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-1-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.1.a"><a tabindex="-1" href="#quantifiersI3-1-33-1-1-2-1" title="Copy heading and permalink for Item 3.1.1.a" aria-label="Copy heading and permalink for Item 3.1.1.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.1.a"><a tabindex="-1" href="#quantifiersI3-1-33-1-1-2-1-1" title="Copy heading and permalink for Item 3.1.1.a" aria-label="Copy heading and permalink for Item 3.1.1.a">🔗</a></div>
 </li>
-<li id="quantifiersI3-1-33-1-1-2-2">
-<div class="para" id="quantifiersI3-1-33-1-1-2-2-1">Let the domain be the set <span class="process-math">\(\mathbb{R}\text{.}\)</span> Find the truth set of <span class="process-math">\(P(x)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="quantifiersI3-1-33-1-1-2-1-2">
+<div class="para" id="quantifiersI3-1-33-1-1-2-1-2-1">Let the domain be the set <span class="process-math">\(\mathbb{R}\text{.}\)</span> Find the truth set of <span class="process-math">\(P(x)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-1-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.1.b"><a tabindex="-1" href="#quantifiersI3-1-33-1-1-2-2" title="Copy heading and permalink for Item 3.1.1.b" aria-label="Copy heading and permalink for Item 3.1.1.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.1.b"><a tabindex="-1" href="#quantifiersI3-1-33-1-1-2-1-2" title="Copy heading and permalink for Item 3.1.1.b" aria-label="Copy heading and permalink for Item 3.1.1.b">🔗</a></div>
 </li>
-<li id="quantifiersI3-1-33-1-1-2-3">
-<div class="para" id="quantifiersI3-1-33-1-1-2-3-1">Let the domain be the set <span class="process-math">\(\mathbb{R}^+\)</span> of all positive real numbers. Find the truth set of <span class="process-math">\(P(x)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-1-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="quantifiersI3-1-33-1-1-2-1-3">
+<div class="para" id="quantifiersI3-1-33-1-1-2-1-3-1">Let the domain be the set <span class="process-math">\(\mathbb{R}^+\)</span> of all positive real numbers. Find the truth set of <span class="process-math">\(P(x)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-1-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.1.c"><a tabindex="-1" href="#quantifiersI3-1-33-1-1-2-3" title="Copy heading and permalink for Item 3.1.1.c" aria-label="Copy heading and permalink for Item 3.1.1.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.1.c"><a tabindex="-1" href="#quantifiersI3-1-33-1-1-2-1-3" title="Copy heading and permalink for Item 3.1.1.c" aria-label="Copy heading and permalink for Item 3.1.1.c">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 3.1.1"><a tabindex="-1" href="#quantifiersI3-1-33-1" title="Copy heading and permalink for Exercise 3.1.1" aria-label="Copy heading and permalink for Exercise 3.1.1">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="quantifiersI3-1-33-2"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="quantifiersI3-1-33-2"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="quantifiersI3-1-33-2-1-1">Let <span class="process-math">\(Q(x, y)\)</span> be the predicate “If <span class="process-math">\(x&lt;y\)</span> then <span class="process-math">\(x^2&lt;y^2\)</span>” with domain for both <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> being <span class="process-math">\(\mathbb{R}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="quantifiersI3-1-33-2-1-2">
-<li id="quantifiersI3-1-33-2-1-2-1">
-<div class="para" id="quantifiersI3-1-33-2-1-2-1-1">Explain why <span class="process-math">\(Q(x, y)\)</span> is false if <span class="process-math">\(x=-4\)</span> and <span class="process-math">\(y=2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="quantifiersI3-1-33-2-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="quantifiersI3-1-33-2-1-2-1">
+<li id="quantifiersI3-1-33-2-1-2-1-1">
+<div class="para" id="quantifiersI3-1-33-2-1-2-1-1-1">Explain why <span class="process-math">\(Q(x, y)\)</span> is false if <span class="process-math">\(x=-4\)</span> and <span class="process-math">\(y=2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-2-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.2.a"><a tabindex="-1" href="#quantifiersI3-1-33-2-1-2-1" title="Copy heading and permalink for Item 3.1.2.a" aria-label="Copy heading and permalink for Item 3.1.2.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.2.a"><a tabindex="-1" href="#quantifiersI3-1-33-2-1-2-1-1" title="Copy heading and permalink for Item 3.1.2.a" aria-label="Copy heading and permalink for Item 3.1.2.a">🔗</a></div>
 </li>
-<li id="quantifiersI3-1-33-2-1-2-2">
-<div class="para" id="quantifiersI3-1-33-2-1-2-2-1">Give values different from those in part (a) for which <span class="process-math">\(Q(x, y)\)</span> is false.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="quantifiersI3-1-33-2-1-2-1-2">
+<div class="para" id="quantifiersI3-1-33-2-1-2-1-2-1">Give values different from those in part (a) for which <span class="process-math">\(Q(x, y)\)</span> is false.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-2-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.2.b"><a tabindex="-1" href="#quantifiersI3-1-33-2-1-2-2" title="Copy heading and permalink for Item 3.1.2.b" aria-label="Copy heading and permalink for Item 3.1.2.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.2.b"><a tabindex="-1" href="#quantifiersI3-1-33-2-1-2-1-2" title="Copy heading and permalink for Item 3.1.2.b" aria-label="Copy heading and permalink for Item 3.1.2.b">🔗</a></div>
 </li>
-<li id="quantifiersI3-1-33-2-1-2-3">
-<div class="para" id="quantifiersI3-1-33-2-1-2-3-1">Explain why <span class="process-math">\(Q(x, y)\)</span> is true if <span class="process-math">\(x=2\)</span> and <span class="process-math">\(y=4\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-2-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="quantifiersI3-1-33-2-1-2-1-3">
+<div class="para" id="quantifiersI3-1-33-2-1-2-1-3-1">Explain why <span class="process-math">\(Q(x, y)\)</span> is true if <span class="process-math">\(x=2\)</span> and <span class="process-math">\(y=4\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-2-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.2.c"><a tabindex="-1" href="#quantifiersI3-1-33-2-1-2-3" title="Copy heading and permalink for Item 3.1.2.c" aria-label="Copy heading and permalink for Item 3.1.2.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.2.c"><a tabindex="-1" href="#quantifiersI3-1-33-2-1-2-1-3" title="Copy heading and permalink for Item 3.1.2.c" aria-label="Copy heading and permalink for Item 3.1.2.c">🔗</a></div>
 </li>
-<li id="quantifiersI3-1-33-2-1-2-4">
-<div class="para" id="quantifiersI3-1-33-2-1-2-4-1">Give values different from those in part (c) for which <span class="process-math">\(Q(x, y)\)</span> is true.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-2-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="quantifiersI3-1-33-2-1-2-1-4">
+<div class="para" id="quantifiersI3-1-33-2-1-2-1-4-1">Give values different from those in part (c) for which <span class="process-math">\(Q(x, y)\)</span> is true.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-2-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.2.d"><a tabindex="-1" href="#quantifiersI3-1-33-2-1-2-4" title="Copy heading and permalink for Item 3.1.2.d" aria-label="Copy heading and permalink for Item 3.1.2.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.2.d"><a tabindex="-1" href="#quantifiersI3-1-33-2-1-2-1-4" title="Copy heading and permalink for Item 3.1.2.d" aria-label="Copy heading and permalink for Item 3.1.2.d">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 3.1.2"><a tabindex="-1" href="#quantifiersI3-1-33-2" title="Copy heading and permalink for Exercise 3.1.2" aria-label="Copy heading and permalink for Exercise 3.1.2">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="quantifiersI3-1-33-3"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="quantifiersI3-1-33-3"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="quantifiersI3-1-33-3-1-1">Give a counter example to show the following statement is false.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="quantifiersI3-1-33-3-1-2">
@@ -915,7 +947,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 3.1.3"><a tabindex="-1" href="#quantifiersI3-1-33-3" title="Copy heading and permalink for Exercise 3.1.3" aria-label="Copy heading and permalink for Exercise 3.1.3">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="quantifiersI3-1-33-4"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="quantifiersI3-1-33-4"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="quantifiersI3-1-33-4-1-1">Give a counter example to show the following statement is false.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="quantifiersI3-1-33-4-1-2">
@@ -928,7 +960,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 3.1.4"><a tabindex="-1" href="#quantifiersI3-1-33-4" title="Copy heading and permalink for Exercise 3.1.4" aria-label="Copy heading and permalink for Exercise 3.1.4">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="quantifiersI3-1-33-5"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="quantifiersI3-1-33-5"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para logical" id="quantifiersI3-1-33-5-1-1">
 <div class="para">Which of the following are equivalent ways of expressing the statement</div>
 <div class="displaymath process-math" id="quantifiersI3-1-33-5-1-1-1">
@@ -938,41 +970,44 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="quantifiersI3-1-33-5-1-2">
-<li id="quantifiersI3-1-33-5-1-2-1">
-<div class="para" id="quantifiersI3-1-33-5-1-2-1-1">There is at least one real number whose square is 2.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-5-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="quantifiersI3-1-33-5-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="quantifiersI3-1-33-5-1-2-1">
+<li id="quantifiersI3-1-33-5-1-2-1-1">
+<div class="para" id="quantifiersI3-1-33-5-1-2-1-1-1">There is at least one real number whose square is 2.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-5-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.5.a"><a tabindex="-1" href="#quantifiersI3-1-33-5-1-2-1" title="Copy heading and permalink for Item 3.1.5.a" aria-label="Copy heading and permalink for Item 3.1.5.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.5.a"><a tabindex="-1" href="#quantifiersI3-1-33-5-1-2-1-1" title="Copy heading and permalink for Item 3.1.5.a" aria-label="Copy heading and permalink for Item 3.1.5.a">🔗</a></div>
 </li>
-<li id="quantifiersI3-1-33-5-1-2-2">
-<div class="para" id="quantifiersI3-1-33-5-1-2-2-1">The square of each real number is 2.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-5-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="quantifiersI3-1-33-5-1-2-1-2">
+<div class="para" id="quantifiersI3-1-33-5-1-2-1-2-1">The square of each real number is 2.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-5-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.5.b"><a tabindex="-1" href="#quantifiersI3-1-33-5-1-2-2" title="Copy heading and permalink for Item 3.1.5.b" aria-label="Copy heading and permalink for Item 3.1.5.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.5.b"><a tabindex="-1" href="#quantifiersI3-1-33-5-1-2-1-2" title="Copy heading and permalink for Item 3.1.5.b" aria-label="Copy heading and permalink for Item 3.1.5.b">🔗</a></div>
 </li>
-<li id="quantifiersI3-1-33-5-1-2-3">
-<div class="para" id="quantifiersI3-1-33-5-1-2-3-1">Some real numbers have square 2.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-5-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="quantifiersI3-1-33-5-1-2-1-3">
+<div class="para" id="quantifiersI3-1-33-5-1-2-1-3-1">Some real numbers have square 2.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-5-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.5.c"><a tabindex="-1" href="#quantifiersI3-1-33-5-1-2-3" title="Copy heading and permalink for Item 3.1.5.c" aria-label="Copy heading and permalink for Item 3.1.5.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.5.c"><a tabindex="-1" href="#quantifiersI3-1-33-5-1-2-1-3" title="Copy heading and permalink for Item 3.1.5.c" aria-label="Copy heading and permalink for Item 3.1.5.c">🔗</a></div>
 </li>
-<li id="quantifiersI3-1-33-5-1-2-4">
-<div class="para" id="quantifiersI3-1-33-5-1-2-4-1">The number <span class="process-math">\(x\)</span> has square 2, for some real number <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-5-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="quantifiersI3-1-33-5-1-2-1-4">
+<div class="para" id="quantifiersI3-1-33-5-1-2-1-4-1">The number <span class="process-math">\(x\)</span> has square 2, for some real number <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-5-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.5.d"><a tabindex="-1" href="#quantifiersI3-1-33-5-1-2-4" title="Copy heading and permalink for Item 3.1.5.d" aria-label="Copy heading and permalink for Item 3.1.5.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.5.d"><a tabindex="-1" href="#quantifiersI3-1-33-5-1-2-1-4" title="Copy heading and permalink for Item 3.1.5.d" aria-label="Copy heading and permalink for Item 3.1.5.d">🔗</a></div>
 </li>
-<li id="quantifiersI3-1-33-5-1-2-5">
-<div class="para" id="quantifiersI3-1-33-5-1-2-5-1">If <span class="process-math">\(x\)</span> is a real number, then <span class="process-math">\(x^2=2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-5-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="quantifiersI3-1-33-5-1-2-1-5">
+<div class="para" id="quantifiersI3-1-33-5-1-2-1-5-1">If <span class="process-math">\(x\)</span> is a real number, then <span class="process-math">\(x^2=2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-5-1-2-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.5.e"><a tabindex="-1" href="#quantifiersI3-1-33-5-1-2-5" title="Copy heading and permalink for Item 3.1.5.e" aria-label="Copy heading and permalink for Item 3.1.5.e">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.5.e"><a tabindex="-1" href="#quantifiersI3-1-33-5-1-2-1-5" title="Copy heading and permalink for Item 3.1.5.e" aria-label="Copy heading and permalink for Item 3.1.5.e">🔗</a></div>
 </li>
-<li id="quantifiersI3-1-33-5-1-2-6">
-<div class="para" id="quantifiersI3-1-33-5-1-2-6-1">Some real number has square 2.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-5-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="quantifiersI3-1-33-5-1-2-1-6">
+<div class="para" id="quantifiersI3-1-33-5-1-2-1-6-1">Some real number has square 2.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-5-1-2-1-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.5.f"><a tabindex="-1" href="#quantifiersI3-1-33-5-1-2-6" title="Copy heading and permalink for Item 3.1.5.f" aria-label="Copy heading and permalink for Item 3.1.5.f">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.5.f"><a tabindex="-1" href="#quantifiersI3-1-33-5-1-2-1-6" title="Copy heading and permalink for Item 3.1.5.f" aria-label="Copy heading and permalink for Item 3.1.5.f">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-5-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 3.1.5"><a tabindex="-1" href="#quantifiersI3-1-33-5" title="Copy heading and permalink for Exercise 3.1.5" aria-label="Copy heading and permalink for Exercise 3.1.5">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="quantifiersI3-1-33-6"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="quantifiersI3-1-33-6"><h3 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para logical" id="quantifiersI3-1-33-6-1-1">
 <div class="para">Which of the following are equivalent ways of expressing the statement</div>
 <div class="displaymath process-math" id="quantifiersI3-1-33-6-1-1-1">
@@ -982,151 +1017,166 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="quantifiersI3-1-33-6-1-2">
-<li id="quantifiersI3-1-33-6-1-2-1">
-<div class="para" id="quantifiersI3-1-33-6-1-2-1-1">If the square of an integer is even, then that integer is even<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-6-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="quantifiersI3-1-33-6-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="quantifiersI3-1-33-6-1-2-1">
+<li id="quantifiersI3-1-33-6-1-2-1-1">
+<div class="para" id="quantifiersI3-1-33-6-1-2-1-1-1">If the square of an integer is even, then that integer is even<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-6-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.6.a"><a tabindex="-1" href="#quantifiersI3-1-33-6-1-2-1" title="Copy heading and permalink for Item 3.1.6.a" aria-label="Copy heading and permalink for Item 3.1.6.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.6.a"><a tabindex="-1" href="#quantifiersI3-1-33-6-1-2-1-1" title="Copy heading and permalink for Item 3.1.6.a" aria-label="Copy heading and permalink for Item 3.1.6.a">🔗</a></div>
 </li>
-<li id="quantifiersI3-1-33-6-1-2-2">
-<div class="para" id="quantifiersI3-1-33-6-1-2-2-1">All integers have even squares and are even.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-6-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="quantifiersI3-1-33-6-1-2-1-2">
+<div class="para" id="quantifiersI3-1-33-6-1-2-1-2-1">All integers have even squares and are even.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-6-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.6.b"><a tabindex="-1" href="#quantifiersI3-1-33-6-1-2-2" title="Copy heading and permalink for Item 3.1.6.b" aria-label="Copy heading and permalink for Item 3.1.6.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.6.b"><a tabindex="-1" href="#quantifiersI3-1-33-6-1-2-1-2" title="Copy heading and permalink for Item 3.1.6.b" aria-label="Copy heading and permalink for Item 3.1.6.b">🔗</a></div>
 </li>
-<li id="quantifiersI3-1-33-6-1-2-3">
-<div class="para" id="quantifiersI3-1-33-6-1-2-3-1">Given any integer whose square is even, that integer is itself even.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-6-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="quantifiersI3-1-33-6-1-2-1-3">
+<div class="para" id="quantifiersI3-1-33-6-1-2-1-3-1">Given any integer whose square is even, that integer is itself even.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-6-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.6.c"><a tabindex="-1" href="#quantifiersI3-1-33-6-1-2-3" title="Copy heading and permalink for Item 3.1.6.c" aria-label="Copy heading and permalink for Item 3.1.6.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.6.c"><a tabindex="-1" href="#quantifiersI3-1-33-6-1-2-1-3" title="Copy heading and permalink for Item 3.1.6.c" aria-label="Copy heading and permalink for Item 3.1.6.c">🔗</a></div>
 </li>
-<li id="quantifiersI3-1-33-6-1-2-4">
-<div class="para" id="quantifiersI3-1-33-6-1-2-4-1">For all integers, there are some whose square is even.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-6-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="quantifiersI3-1-33-6-1-2-1-4">
+<div class="para" id="quantifiersI3-1-33-6-1-2-1-4-1">For all integers, there are some whose square is even.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-6-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.6.d"><a tabindex="-1" href="#quantifiersI3-1-33-6-1-2-4" title="Copy heading and permalink for Item 3.1.6.d" aria-label="Copy heading and permalink for Item 3.1.6.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.6.d"><a tabindex="-1" href="#quantifiersI3-1-33-6-1-2-1-4" title="Copy heading and permalink for Item 3.1.6.d" aria-label="Copy heading and permalink for Item 3.1.6.d">🔗</a></div>
 </li>
-<li id="quantifiersI3-1-33-6-1-2-5">
-<div class="para" id="quantifiersI3-1-33-6-1-2-5-1">Any integer with an even square is even.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-6-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="quantifiersI3-1-33-6-1-2-1-5">
+<div class="para" id="quantifiersI3-1-33-6-1-2-1-5-1">Any integer with an even square is even.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-6-1-2-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.6.e"><a tabindex="-1" href="#quantifiersI3-1-33-6-1-2-5" title="Copy heading and permalink for Item 3.1.6.e" aria-label="Copy heading and permalink for Item 3.1.6.e">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.6.e"><a tabindex="-1" href="#quantifiersI3-1-33-6-1-2-1-5" title="Copy heading and permalink for Item 3.1.6.e" aria-label="Copy heading and permalink for Item 3.1.6.e">🔗</a></div>
 </li>
-<li id="quantifiersI3-1-33-6-1-2-6">
-<div class="para" id="quantifiersI3-1-33-6-1-2-6-1">All even integers have even squares.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-6-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="quantifiersI3-1-33-6-1-2-1-6">
+<div class="para" id="quantifiersI3-1-33-6-1-2-1-6-1">All even integers have even squares.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-6-1-2-1-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.6.f"><a tabindex="-1" href="#quantifiersI3-1-33-6-1-2-6" title="Copy heading and permalink for Item 3.1.6.f" aria-label="Copy heading and permalink for Item 3.1.6.f">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.6.f"><a tabindex="-1" href="#quantifiersI3-1-33-6-1-2-1-6" title="Copy heading and permalink for Item 3.1.6.f" aria-label="Copy heading and permalink for Item 3.1.6.f">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-6-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 3.1.6"><a tabindex="-1" href="#quantifiersI3-1-33-6" title="Copy heading and permalink for Exercise 3.1.6" aria-label="Copy heading and permalink for Exercise 3.1.6">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="quantifiersI3-1-33-7"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="quantifiersI3-1-33-7"><h3 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="quantifiersI3-1-33-7-1-1">Rewrite the following statements using the form “<span class="process-math">\(\forall\)</span>____<span class="process-math">\(x\text{,}\)</span>____.”<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="quantifiersI3-1-33-7-1-2">
-<li id="quantifiersI3-1-33-7-1-2-1">
-<div class="para" id="quantifiersI3-1-33-7-1-2-1-1">Every real number is positive, negative, or zero.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-7-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="quantifiersI3-1-33-7-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="quantifiersI3-1-33-7-1-2-1">
+<li id="quantifiersI3-1-33-7-1-2-1-1">
+<div class="para" id="quantifiersI3-1-33-7-1-2-1-1-1">Every real number is positive, negative, or zero.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-7-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.7.a"><a tabindex="-1" href="#quantifiersI3-1-33-7-1-2-1" title="Copy heading and permalink for Item 3.1.7.a" aria-label="Copy heading and permalink for Item 3.1.7.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.7.a"><a tabindex="-1" href="#quantifiersI3-1-33-7-1-2-1-1" title="Copy heading and permalink for Item 3.1.7.a" aria-label="Copy heading and permalink for Item 3.1.7.a">🔗</a></div>
 </li>
-<li id="quantifiersI3-1-33-7-1-2-2">
-<div class="para" id="quantifiersI3-1-33-7-1-2-2-1">No irrational numbers are integers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-7-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="quantifiersI3-1-33-7-1-2-1-2">
+<div class="para" id="quantifiersI3-1-33-7-1-2-1-2-1">No irrational numbers are integers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-7-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.7.b"><a tabindex="-1" href="#quantifiersI3-1-33-7-1-2-2" title="Copy heading and permalink for Item 3.1.7.b" aria-label="Copy heading and permalink for Item 3.1.7.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.7.b"><a tabindex="-1" href="#quantifiersI3-1-33-7-1-2-1-2" title="Copy heading and permalink for Item 3.1.7.b" aria-label="Copy heading and permalink for Item 3.1.7.b">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-7-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 3.1.7"><a tabindex="-1" href="#quantifiersI3-1-33-7" title="Copy heading and permalink for Exercise 3.1.7" aria-label="Copy heading and permalink for Exercise 3.1.7">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="quantifiersI3-1-33-8"><h4 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="quantifiersI3-1-33-8"><h3 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="quantifiersI3-1-33-8-1-1">Let <span class="process-math">\(D\)</span> be the set of all students at Linfield University, and let <span class="process-math">\(M(s)\)</span> be “<span class="process-math">\(s\)</span> is a math major,” let <span class="process-math">\(C(s)\)</span> be “<span class="process-math">\(s\)</span> is a computer science major,” and let <span class="process-math">\(P(s)\)</span> be “<span class="process-math">\(s\)</span> is a physics major.” Express each of the following statements using quantifiers, variables, and the predicates <span class="process-math">\(M(s), C(s), P(s)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="quantifiersI3-1-33-8-1-2">
-<li id="quantifiersI3-1-33-8-1-2-1">
-<div class="para" id="quantifiersI3-1-33-8-1-2-1-1">There is a physics major who is a math major.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-8-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="quantifiersI3-1-33-8-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="quantifiersI3-1-33-8-1-2-1">
+<li id="quantifiersI3-1-33-8-1-2-1-1">
+<div class="para" id="quantifiersI3-1-33-8-1-2-1-1-1">There is a physics major who is a math major.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-8-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.8.a"><a tabindex="-1" href="#quantifiersI3-1-33-8-1-2-1" title="Copy heading and permalink for Item 3.1.8.a" aria-label="Copy heading and permalink for Item 3.1.8.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.8.a"><a tabindex="-1" href="#quantifiersI3-1-33-8-1-2-1-1" title="Copy heading and permalink for Item 3.1.8.a" aria-label="Copy heading and permalink for Item 3.1.8.a">🔗</a></div>
 </li>
-<li id="quantifiersI3-1-33-8-1-2-2">
-<div class="para" id="quantifiersI3-1-33-8-1-2-2-1">Every computer science major is a math major.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-8-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="quantifiersI3-1-33-8-1-2-1-2">
+<div class="para" id="quantifiersI3-1-33-8-1-2-1-2-1">Every computer science major is a math major.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-8-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.8.b"><a tabindex="-1" href="#quantifiersI3-1-33-8-1-2-2" title="Copy heading and permalink for Item 3.1.8.b" aria-label="Copy heading and permalink for Item 3.1.8.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.8.b"><a tabindex="-1" href="#quantifiersI3-1-33-8-1-2-1-2" title="Copy heading and permalink for Item 3.1.8.b" aria-label="Copy heading and permalink for Item 3.1.8.b">🔗</a></div>
 </li>
-<li id="quantifiersI3-1-33-8-1-2-3">
-<div class="para" id="quantifiersI3-1-33-8-1-2-3-1">No computer science majors are physics majors.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-8-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="quantifiersI3-1-33-8-1-2-1-3">
+<div class="para" id="quantifiersI3-1-33-8-1-2-1-3-1">No computer science majors are physics majors.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-8-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.8.c"><a tabindex="-1" href="#quantifiersI3-1-33-8-1-2-3" title="Copy heading and permalink for Item 3.1.8.c" aria-label="Copy heading and permalink for Item 3.1.8.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.8.c"><a tabindex="-1" href="#quantifiersI3-1-33-8-1-2-1-3" title="Copy heading and permalink for Item 3.1.8.c" aria-label="Copy heading and permalink for Item 3.1.8.c">🔗</a></div>
 </li>
-<li id="quantifiersI3-1-33-8-1-2-4">
-<div class="para" id="quantifiersI3-1-33-8-1-2-4-1">Some computer science majors are also math majors.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-8-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="quantifiersI3-1-33-8-1-2-1-4">
+<div class="para" id="quantifiersI3-1-33-8-1-2-1-4-1">Some computer science majors are also math majors.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-8-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.8.d"><a tabindex="-1" href="#quantifiersI3-1-33-8-1-2-4" title="Copy heading and permalink for Item 3.1.8.d" aria-label="Copy heading and permalink for Item 3.1.8.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.8.d"><a tabindex="-1" href="#quantifiersI3-1-33-8-1-2-1-4" title="Copy heading and permalink for Item 3.1.8.d" aria-label="Copy heading and permalink for Item 3.1.8.d">🔗</a></div>
 </li>
-<li id="quantifiersI3-1-33-8-1-2-5">
-<div class="para" id="quantifiersI3-1-33-8-1-2-5-1">Some computer science majors are physics majors and some are not.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-8-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="quantifiersI3-1-33-8-1-2-1-5">
+<div class="para" id="quantifiersI3-1-33-8-1-2-1-5-1">Some computer science majors are physics majors and some are not.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-8-1-2-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.8.e"><a tabindex="-1" href="#quantifiersI3-1-33-8-1-2-5" title="Copy heading and permalink for Item 3.1.8.e" aria-label="Copy heading and permalink for Item 3.1.8.e">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.8.e"><a tabindex="-1" href="#quantifiersI3-1-33-8-1-2-1-5" title="Copy heading and permalink for Item 3.1.8.e" aria-label="Copy heading and permalink for Item 3.1.8.e">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-8-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 3.1.8"><a tabindex="-1" href="#quantifiersI3-1-33-8" title="Copy heading and permalink for Exercise 3.1.8" aria-label="Copy heading and permalink for Exercise 3.1.8">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="quantifiersI3-1-33-9"><h4 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="quantifiersI3-1-33-9"><h3 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="quantifiersI3-1-33-9-1-1">Let <span class="process-math">\(\mathbb{R}\)</span> be the domain of the predicate variable <span class="process-math">\(x\text{.}\)</span> Which of the following are true and which are false? Give counter examples for the statements that are false.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="quantifiersI3-1-33-9-1-2">
-<li id="quantifiersI3-1-33-9-1-2-1">
-<div class="para" id="quantifiersI3-1-33-9-1-2-1-1">If <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x&gt;1\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-9-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="quantifiersI3-1-33-9-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="quantifiersI3-1-33-9-1-2-1">
+<li id="quantifiersI3-1-33-9-1-2-1-1">
+<div class="para" id="quantifiersI3-1-33-9-1-2-1-1-1">If <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x&gt;1\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-9-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.9.a"><a tabindex="-1" href="#quantifiersI3-1-33-9-1-2-1" title="Copy heading and permalink for Item 3.1.9.a" aria-label="Copy heading and permalink for Item 3.1.9.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.9.a"><a tabindex="-1" href="#quantifiersI3-1-33-9-1-2-1-1" title="Copy heading and permalink for Item 3.1.9.a" aria-label="Copy heading and permalink for Item 3.1.9.a">🔗</a></div>
 </li>
-<li id="quantifiersI3-1-33-9-1-2-2">
-<div class="para" id="quantifiersI3-1-33-9-1-2-2-1">If <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x^2&gt;4\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-9-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="quantifiersI3-1-33-9-1-2-1-2">
+<div class="para" id="quantifiersI3-1-33-9-1-2-1-2-1">If <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x^2&gt;4\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-9-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.9.b"><a tabindex="-1" href="#quantifiersI3-1-33-9-1-2-2" title="Copy heading and permalink for Item 3.1.9.b" aria-label="Copy heading and permalink for Item 3.1.9.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.9.b"><a tabindex="-1" href="#quantifiersI3-1-33-9-1-2-1-2" title="Copy heading and permalink for Item 3.1.9.b" aria-label="Copy heading and permalink for Item 3.1.9.b">🔗</a></div>
 </li>
-<li id="quantifiersI3-1-33-9-1-2-3">
-<div class="para" id="quantifiersI3-1-33-9-1-2-3-1">If <span class="process-math">\(x^2&gt;4\)</span> then <span class="process-math">\(x&gt;2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-9-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="quantifiersI3-1-33-9-1-2-1-3">
+<div class="para" id="quantifiersI3-1-33-9-1-2-1-3-1">If <span class="process-math">\(x^2&gt;4\)</span> then <span class="process-math">\(x&gt;2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-9-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.9.c"><a tabindex="-1" href="#quantifiersI3-1-33-9-1-2-3" title="Copy heading and permalink for Item 3.1.9.c" aria-label="Copy heading and permalink for Item 3.1.9.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.9.c"><a tabindex="-1" href="#quantifiersI3-1-33-9-1-2-1-3" title="Copy heading and permalink for Item 3.1.9.c" aria-label="Copy heading and permalink for Item 3.1.9.c">🔗</a></div>
 </li>
-<li id="quantifiersI3-1-33-9-1-2-4">
-<div class="para" id="quantifiersI3-1-33-9-1-2-4-1">If <span class="process-math">\(x^2&gt;4\)</span> then <span class="process-math">\(|x|&gt;2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-9-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="quantifiersI3-1-33-9-1-2-1-4">
+<div class="para" id="quantifiersI3-1-33-9-1-2-1-4-1">If <span class="process-math">\(x^2&gt;4\)</span> then <span class="process-math">\(|x|&gt;2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-9-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.9.d"><a tabindex="-1" href="#quantifiersI3-1-33-9-1-2-4" title="Copy heading and permalink for Item 3.1.9.d" aria-label="Copy heading and permalink for Item 3.1.9.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.9.d"><a tabindex="-1" href="#quantifiersI3-1-33-9-1-2-1-4" title="Copy heading and permalink for Item 3.1.9.d" aria-label="Copy heading and permalink for Item 3.1.9.d">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-9-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 3.1.9"><a tabindex="-1" href="#quantifiersI3-1-33-9" title="Copy heading and permalink for Exercise 3.1.9" aria-label="Copy heading and permalink for Exercise 3.1.9">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="quantifiersI3-1-33-10"><h4 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="exercise exercise-like" id="quantifiersI3-1-33-10"><h3 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="quantifiersI3-1-33-10-1-1">Let the domain of <span class="process-math">\(x\)</span> be the set <span class="process-math">\(D\)</span> of objects discussed in mathematics courses, and let Real(<span class="process-math">\(x\)</span>) be “<span class="process-math">\(x\)</span> is a real number,” Pos(<span class="process-math">\(x\)</span>) be “<span class="process-math">\(x\)</span> is a positive real number,” Neg(<span class="process-math">\(x\)</span>) be “<span class="process-math">\(x\)</span> is a negative real number,” and Int(<span class="process-math">\(x\)</span>) be “<span class="process-math">\(x\)</span> is an integer.” Rewrite each statement without using quantifiers or variables. Indicate which statements are true and which are false.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ol class="lower-alpha ol-marker-1" id="quantifiersI3-1-33-10-1-2">
-<li id="quantifiersI3-1-33-10-1-2-1">
-<div class="para" id="quantifiersI3-1-33-10-1-2-1-1">Pos(0)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-10-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="quantifiersI3-1-33-10-1-2">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="quantifiersI3-1-33-10-1-2-1">
+<li id="quantifiersI3-1-33-10-1-2-1-1">
+<div class="para" id="quantifiersI3-1-33-10-1-2-1-1-1">Pos(0)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-10-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.10.a"><a tabindex="-1" href="#quantifiersI3-1-33-10-1-2-1" title="Copy heading and permalink for Item 3.1.10.a" aria-label="Copy heading and permalink for Item 3.1.10.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.10.a"><a tabindex="-1" href="#quantifiersI3-1-33-10-1-2-1-1" title="Copy heading and permalink for Item 3.1.10.a" aria-label="Copy heading and permalink for Item 3.1.10.a">🔗</a></div>
 </li>
-<li id="quantifiersI3-1-33-10-1-2-2">
-<div class="para" id="quantifiersI3-1-33-10-1-2-2-1">
-<span class="process-math">\(\forall x\text{,}\)</span> Real(<span class="process-math">\(x\)</span>) <span class="process-math">\(\wedge\)</span> Neg(<span class="process-math">\(x\)</span>) <span class="process-math">\(\rightarrow\)</span> Pos(<span class="process-math">\(-x\)</span>).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-10-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="quantifiersI3-1-33-10-1-2-1-2">
+<div class="para" id="quantifiersI3-1-33-10-1-2-1-2-1">
+<span class="process-math">\(\forall x\text{,}\)</span> Real(<span class="process-math">\(x\)</span>) <span class="process-math">\(\wedge\)</span> Neg(<span class="process-math">\(x\)</span>) <span class="process-math">\(\rightarrow\)</span> Pos(<span class="process-math">\(-x\)</span>).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-10-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.10.b"><a tabindex="-1" href="#quantifiersI3-1-33-10-1-2-2" title="Copy heading and permalink for Item 3.1.10.b" aria-label="Copy heading and permalink for Item 3.1.10.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.10.b"><a tabindex="-1" href="#quantifiersI3-1-33-10-1-2-1-2" title="Copy heading and permalink for Item 3.1.10.b" aria-label="Copy heading and permalink for Item 3.1.10.b">🔗</a></div>
 </li>
-<li id="quantifiersI3-1-33-10-1-2-3">
-<div class="para" id="quantifiersI3-1-33-10-1-2-3-1">
-<span class="process-math">\(\forall x\text{,}\)</span> Int(<span class="process-math">\(x\)</span>) <span class="process-math">\(\rightarrow\)</span> Real(<span class="process-math">\(x\)</span>).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-10-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="quantifiersI3-1-33-10-1-2-1-3">
+<div class="para" id="quantifiersI3-1-33-10-1-2-1-3-1">
+<span class="process-math">\(\forall x\text{,}\)</span> Int(<span class="process-math">\(x\)</span>) <span class="process-math">\(\rightarrow\)</span> Real(<span class="process-math">\(x\)</span>).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-10-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.10.c"><a tabindex="-1" href="#quantifiersI3-1-33-10-1-2-3" title="Copy heading and permalink for Item 3.1.10.c" aria-label="Copy heading and permalink for Item 3.1.10.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.10.c"><a tabindex="-1" href="#quantifiersI3-1-33-10-1-2-1-3" title="Copy heading and permalink for Item 3.1.10.c" aria-label="Copy heading and permalink for Item 3.1.10.c">🔗</a></div>
 </li>
-<li id="quantifiersI3-1-33-10-1-2-4">
-<div class="para" id="quantifiersI3-1-33-10-1-2-4-1">
-<span class="process-math">\(\exists x\)</span> such that Real(<span class="process-math">\(x\)</span>) <span class="process-math">\(\wedge\)</span> <span class="process-math">\(\sim\)</span>Int(<span class="process-math">\(x\)</span>).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-10-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="quantifiersI3-1-33-10-1-2-1-4">
+<div class="para" id="quantifiersI3-1-33-10-1-2-1-4-1">
+<span class="process-math">\(\exists x\)</span> such that Real(<span class="process-math">\(x\)</span>) <span class="process-math">\(\wedge\)</span> <span class="process-math">\(\sim\)</span>Int(<span class="process-math">\(x\)</span>).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-10-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.10.d"><a tabindex="-1" href="#quantifiersI3-1-33-10-1-2-4" title="Copy heading and permalink for Item 3.1.10.d" aria-label="Copy heading and permalink for Item 3.1.10.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.1.10.d"><a tabindex="-1" href="#quantifiersI3-1-33-10-1-2-1-4" title="Copy heading and permalink for Item 3.1.10.d" aria-label="Copy heading and permalink for Item 3.1.10.d">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#quantifiersI3-1-33-10-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 3.1.10"><a tabindex="-1" href="#quantifiersI3-1-33-10" title="Copy heading and permalink for Exercise 3.1.10" aria-label="Copy heading and permalink for Exercise 3.1.10">🔗</a></div>
 </article><div class="autopermalink" aria-hidden="true" data-description="Exercises 3.1"><a tabindex="-1" href="#quantifiersI3-1-33" title="Copy heading and permalink for Exercises 3.1" aria-label="Copy heading and permalink for Exercises 3.1">🔗</a></div>
 </section><div class="autopermalink" aria-hidden="true" data-description="Section 3.1: Quantifiers"><a tabindex="-1" href="#quantifiersI3-1" title="Copy heading and permalink for Section 3.1: Quantifiers" aria-label="Copy heading and permalink for Section 3.1: Quantifiers">🔗</a></div>
 </section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="chapter3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="negquant3-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="chapter3-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="negquant3-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

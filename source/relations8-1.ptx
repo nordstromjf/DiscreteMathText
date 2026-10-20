@@ -309,7 +309,7 @@
   <p>
     <md>m\ T\ n \iff 3\mid (m-n).</md>
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -335,13 +335,13 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
     Let <m>X=\{a, b, c\}</m> and <m>{\cal P}(X)</m> be the power set of <m>X</m>. Define the relation <m>R</m> on <m>{\cal P}(X)</m> by <md>A \ R\ B \iff A \text{ has the same number of elements as } B.</md>
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -361,7 +361,7 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
@@ -371,7 +371,7 @@
   <p>
     <md>m\ S\ n \iff 5\mid (m^2-n^2).</md>
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -397,13 +397,13 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
     Let <m>A=\{3, 4, 5\}</m> and <m>B=\{4, 5, 6\}</m> and let <m>R</m> be the <q>less than</q> relation. That is, for all <m>(x, y)\in A\times B</m>, <md>x\ R\ y \iff x&lt;y.</md>
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -417,13 +417,13 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
     Let <m>A=\{3, 4, 5\}</m> and <m>B=\{4, 5, 6\}</m> and let <m>S</m> be the <q>divides</q> relation. That is, for all <m>(x, y)\in A\times B</m>, <md>x\ S\ y \iff x\mid y.</md>
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
       <p>
@@ -437,7 +437,7 @@
   </p>
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>

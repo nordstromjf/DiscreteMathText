@@ -383,7 +383,7 @@
         <p>
     Determine if the argument is valid or invalid. If it is valid, state whether it is an example of modus ponens or modus tollens. If it is invalid, state whether it exhibits converse error or inverse error.
   </p>
-
+  <p>
   <ol marker="a.">
     <li>
     <tabular>
@@ -478,12 +478,13 @@
   
     </li>
 
-  </ol>
+  </ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
     Determine if the argument is valid or invalid. Support your answer by drawing a Venn diagram.
   </p>
+  <p>
   <ol marker="a.">
     <li><tabular>
     <row >
@@ -506,7 +507,7 @@
     <row >
       <cell halign="left"><m>\therefore</m> All polynomial functions are continuous.</cell>
     </row>
-    </tabular></li></ol>
+    </tabular></li></ol></p>
       </statement></exercise>
       <exercise><statement>
         <p>
