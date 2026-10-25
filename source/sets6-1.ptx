@@ -194,7 +194,7 @@
   <md>\bigcap_{i=1}^{\infty}A_i=A_1\cap A_2\cap\cdots \cap A_n\cdots</md></p>
 
   <activity label="sets-inf"><introduction><p>Let <m>A_i=\{1, 2, 3, \ldots i\}</m>. </p></introduction>
-<task label="sets-inf-An"><p>Find <m>A_1, A_2, A_5,</m> and <m>A_n</m>.</p></task>
+<task label="sets-inf-An"><statement><p>Find <m>A_1, A_2, A_5,</m> and <m>A_n</m>.</p></statement><response/></task>
 <task label="sets-inf-uA1to5"><statement><p>Find <m>\bigcup_{i=1}^{5}A_i</m>.</p></statement><response/></task>
 <task label="sets-inf-iA1to5"><statement><p>Find <m>\bigcap_{i=1}^{5}A_i</m>.</p></statement><response/></task>
 <task label="sets-inf-uninf"><statement><p>Find <m>\bigcup_{i=1}^{\infty}A_i</m>.</p></statement><response/></task>
