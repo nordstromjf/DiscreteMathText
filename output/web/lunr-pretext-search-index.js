@@ -6589,9 +6589,9 @@ var ptx_lunr_docs = [
   "body": "Let be a function. The set is the preimage preimage of . "
 },
 {
-  "id": "functions7-1-11",
+  "id": "functions-remainder3",
   "level": "2",
-  "url": "functions7-1.html#functions7-1-11",
+  "url": "functions7-1.html#functions-remainder3",
   "type": "Activity",
   "number": "7.1.8",
   "title": "",
@@ -6886,45 +6886,45 @@ var ptx_lunr_docs = [
   "body": "Prove or Disprove Onto Let be given by . Prove or disprove is onto .  Let . Then if is onto , we could find with .  But if , then , or . We know there are no real solutions to this equation. Hence no element in will map to . Therefore, is not onto .  "
 },
 {
-  "id": "A_real5x",
+  "id": "onetooneonto-real5x",
   "level": "2",
-  "url": "onetooneonto7-2.html#A_real5x",
+  "url": "onetooneonto7-2.html#onetooneonto-real5x",
   "type": "Activity",
   "number": "7.2.12",
   "title": "",
   "body": "Define by .  Prove or disprove is one-to-one.  Prove or disprove is onto . "
 },
 {
-  "id": "A_int5n",
+  "id": "onetooneonto-int5n",
   "level": "2",
-  "url": "onetooneonto7-2.html#A_int5n",
+  "url": "onetooneonto7-2.html#onetooneonto-int5n",
   "type": "Activity",
   "number": "7.2.13",
   "title": "",
   "body": "Define by .  Prove or disprove is one-to-one.  Prove or disprove is onto . "
 },
 {
-  "id": "A_rmod3",
+  "id": "onetooneonto-rmod3",
   "level": "2",
-  "url": "onetooneonto7-2.html#A_rmod3",
+  "url": "onetooneonto7-2.html#onetooneonto-rmod3",
   "type": "Activity",
   "number": "7.2.14",
   "title": "",
   "body": "Define by where is the remainder when is divided by 3.  Prove or disprove is one-to-one.  Prove or disprove is onto . "
 },
 {
-  "id": "A_aminusb",
+  "id": "onetooneonto-aminusb",
   "level": "2",
-  "url": "onetooneonto7-2.html#A_aminusb",
+  "url": "onetooneonto7-2.html#onetooneonto-aminusb",
   "type": "Activity",
   "number": "7.2.15",
   "title": "",
   "body": "Define by .  Prove or disprove is one-to-one.  Prove or disprove is onto . "
 },
 {
-  "id": "A_diag",
+  "id": "onetooneonto-diag",
   "level": "2",
-  "url": "onetooneonto7-2.html#A_diag",
+  "url": "onetooneonto7-2.html#onetooneonto-diag",
   "type": "Activity",
   "number": "7.2.16",
   "title": "",
@@ -6985,9 +6985,9 @@ var ptx_lunr_docs = [
   "body": "Show is one-to-one: assume . Then for some . Thus, and . Since is a function, .  Show is onto . Let . Then there exists such that since is a function from . Now, . Therefore, there exists such that .  "
 },
 {
-  "id": "onetooneonto7-2-34",
+  "id": "onetooneonto-biject",
   "level": "2",
-  "url": "onetooneonto7-2.html#onetooneonto7-2-34",
+  "url": "onetooneonto7-2.html#onetooneonto-biject",
   "type": "Activity",
   "number": "7.2.21",
   "title": "",

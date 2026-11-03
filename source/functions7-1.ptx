@@ -104,11 +104,11 @@
     <p>Since <m>y</m> can have several preimages, we usually care about the set of all of them.</p>
     <definition xml:id="D_preimage"><statement><p>Let <m>f:X\rightarrow Y</m> be a function. The set <m>\{x\in X : f(x)=y\}</m> is the <term>preimage</term><idx>preimage</idx> of <m>y</m>.</p></statement></definition>
 
-    <activity><introduction><p>Define <m>f:\mathbb{Z}\rightarrow\mathbb{Z}</m> by <m>f(n)=r</m> where <m>r</m> is the remainder when <m>n</m> is divided by 3.</p>
+    <activity label="functions-remainder3"><introduction><p>Define <m>f:\mathbb{Z}\rightarrow\mathbb{Z}</m> by <m>f(n)=r</m> where <m>r</m> is the remainder when <m>n</m> is divided by 3.</p>
   </introduction>
-    <task><statement><p>Find <m>f(0), f(9), f(5), f(-7), f(10)</m>.</p></statement><response/></task>
-    <task><statement><p>What is the image of <m>\mathbb{Z}</m> under <m>f</m>?</p></statement><response /></task>
-  <task><statement><p>What is the set of preimages of 0? In other words, find the preimage of 0. </p></statement><response/><hint><p>To find the set of preimages of 0, find all integers that map to 0</p></hint></task>
+    <task label="functions-remainder3-elem"><statement><p>Find <m>f(0), f(9), f(5), f(-7), f(10)</m>.</p></statement><response/></task>
+    <task label="functions-remainder3-image"><statement><p>What is the image of <m>\mathbb{Z}</m> under <m>f</m>?</p></statement><response /></task>
+  <task label="functions-remainder3-pre0"><statement><p>What is the set of preimages of 0? In other words, find the preimage of 0. </p></statement><response/><hint><p>To find the set of preimages of 0, find all integers that map to 0</p></hint></task>
 </activity>
 
     
