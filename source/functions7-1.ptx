@@ -106,9 +106,9 @@
 
     <activity><introduction><p>Define <m>f:\mathbb{Z}\rightarrow\mathbb{Z}</m> by <m>f(n)=r</m> where <m>r</m> is the remainder when <m>n</m> is divided by 3.</p>
   </introduction>
-    <task><p>Find <m>f(0), f(9), f(5), f(-7), f(10)</m>.</p></task>
-    <task><p>What is the image of <m>\mathbb{Z}</m> under <m>f</m>?</p></task>
-  <task><p>What is the set of preimages of 0? In other words, find the preimage of 0. </p></task><himt><p>To find the set of preimages of 0, find all integers that map to 0</p></himt>
+    <task><statement><p>Find <m>f(0), f(9), f(5), f(-7), f(10)</m>.</p></statement><response/></task>
+    <task><statement><p>What is the image of <m>\mathbb{Z}</m> under <m>f</m>?</p></statement><response /></task>
+  <task><statement><p>What is the set of preimages of 0? In other words, find the preimage of 0. </p></statement><response/><hint><p>To find the set of preimages of 0, find all integers that map to 0</p></hint></task>
 </activity>
 
     
@@ -190,14 +190,14 @@
   </introduction>
     <task label="functions-subtr-elem"><statement><p>Find <m>f(0, 2), f(1, 1), f(2, 0), f(3, 2), f(n, 0)</m>.</p></statement><response/></task>
     <task label="functions-subtr-image"><statement><p>What is the image of <m>\mathbb{Z}\times\mathbb{Z}</m> under <m>f</m>?</p></statement><response/></task>
-  <task label="functions-subtr-pre0"><statement><p>What is the preimage of 0?</p></statement><response/><himt><p>The preimage is a set, so find all ordered pairs that map to 0.</p></himt></task>
+  <task label="functions-subtr-pre0"><statement><p>What is the preimage of 0?</p></statement><response/><hint><p>The preimage is a set, so find all ordered pairs that map to 0.</p></hint></task>
 </activity>
 
 <activity label="functions-diag"><introduction><p>Define <m>f:\mathbb{Z}\rightarrow\mathbb{Z}\times\mathbb{Z}</m> by <m>f(a)=(a, a)</m>.</p>
   </introduction>
     <task label="functions-diag-elem"><statement><p>Find <m>f(0), f(2), f(-3)</m>.</p></statement><response/></task>
     <task label="functions-diag-image"><statement><p>What is the image of <m>\mathbb{Z}</m> under <m>f</m>? Is <m>(1, 1)</m> in the image? Is <m>(-1, 1)</m> in the image?</p></statement><response/></task>
-  <task label="functions-diag-pre00"><statement><p>What is the preimage of <m>(0, 0)</m>? </p></statement><response/><himt><p>The preimage is a set, so find all integers that map to <m>(0, 0)</m>.</p></himt></task>
+  <task label="functions-diag-pre00"><statement><p>What is the preimage of <m>(0, 0)</m>? </p></statement><response/><hint><p>The preimage is a set, so find all integers that map to <m>(0, 0)</m>.</p></hint></task>
 </activity>
 
 
