@@ -197,7 +197,7 @@
 <p>A Hamiltonian circuit starts and ends at the same vertex, passes through all other vertices without repeating, does not repeat edges, but does not need to use all the edges. For example, in the Konigsberg bridge graph <xref ref="F_KbergEC"/>, we have Hamiltonian circuit <m>v_1e_5v_4e_7v_3e_3v_2e_1v_1</m>.</p>
 
 
-<activity label="paths-Hamil" attachment="yes"><statement><p>Draw the complete bipartite graphs <m>K_{2, 3}</m>, <m>K_{2, 4}</m>, <m>K_{3, 3}</m> and <m>K_{4, 4}</m>. Determine if these graphs have a Hamiltonian circuit.</p></statement></activity>
+<activity label="paths-Hamil" attachment="yes"><statement><p>Draw the complete bipartite graphs <m>K_{2, 3}</m>, <m>K_{2, 4}</m>, <m>K_{3, 3}</m> and <m>K_{4, 4}</m>. Determine if these graphs have a Hamiltonian circuit.</p></statement><response/></activity>
   
 
     <reading-questions>

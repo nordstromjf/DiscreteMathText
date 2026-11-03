@@ -74,7 +74,7 @@
 
   <activity label="pigeonhole-8books"><statement><p>If you have 8 books and want to place them in 3 boxes, must at least one box have 4 books? Must at least one box have 3 books? </p></statement><response/></activity>
 
-  <activity label="pigeonhole-2000bd"><statement><p>In a group of 2000 people, must 5 have the same birthday?</p></statement></activity>
+  <activity label="pigeonhole-2000bd"><statement><p>In a group of 2000 people, must 5 have the same birthday?</p></statement><response/></activity>
 
 
   <theorem xml:id="T_ontooneiffonto"><statement><p>Let <m>X, Y</m> be finite sets with the same number of elements. Suppose <m>f</m> is a function from <m>X</m> to <m>Y</m>. Then <m>f</m> is one-to-one if and only if <m>f</m> is onto.</p></statement></theorem>

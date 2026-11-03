@@ -9595,9 +9595,9 @@ var ptx_lunr_docs = [
   "body": "By definition, counts the subsets of objects chosen from objects.  Let , a set of objects. We can create all the subsets of objects by choosing all objects from or by choosing out of and including . Thus, we can count the subsets of objects from objects with .  "
 },
 {
-  "id": "A_pascalalg",
+  "id": "binonthm-pascalalg",
   "level": "2",
-  "url": "binomial9-6.html#A_pascalalg",
+  "url": "binomial9-6.html#binonthm-pascalalg",
   "type": "Activity",
   "number": "9.6.3",
   "title": "",

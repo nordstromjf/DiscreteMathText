@@ -19,8 +19,8 @@
 <p>Let <m>S=\{x_1, x_2, \ldots x_{n+1}\}</m>, a set of <m>n+1</m> objects. We can create all the subsets of <m>r</m> objects by choosing all <m>r</m> objects from <m>\{x_1, \ldots, x_n\}</m> or by choosing <m>r-1</m> out of <m>\{x_1, \ldots, x_n\}</m> and including <m>x_{n+1}</m>. Thus, we can count the subsets of <m>r</m> objects from <m>n</m> objects with <m>\binom{n}{r}+\binom{n}{r-1}</m>.</p>
 </proof>
 
-<activity xml:id="A_pascalalg"><statement><p>Give an algebraic proof for Pascal's Formula:
-<md>{{n+1}\choose {r}}={n\choose {r-1}}+{n \choose r}.</md></p></statement><hint><p>Start with the right-hand side. Use the definition of <q>choose,</q> then find a common denominator. Note, you will save yourself a lot of work if you find the <em>least</em> common denominator.</p></hint></activity>
+<activity xml:id="A_pascalalg" label="binonthm-pascalalg"><statement><p>Give an algebraic proof for Pascal's Formula:
+<md>{{n+1}\choose {r}}={n\choose {r-1}}+{n \choose r}.</md></p></statement><response/><hint><p>Start with the right-hand side. Use the definition of <q>choose,</q> then find a common denominator. Note, you will save yourself a lot of work if you find the <em>least</em> common denominator.</p></hint></activity>
 
 <p>We often call terms of the form <m>\binom{n}{r}</m> <term>binomial coefficients</term><idx>binomial coefficient</idx>.</p>
 
