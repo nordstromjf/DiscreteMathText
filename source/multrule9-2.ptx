@@ -83,8 +83,8 @@
   </example>
 
   <activity label="multrule-license"><introduction><p>Suppose a license plate consists of 3 letters followed by 2 digits.</p></introduction>
-<task label="multrule-license-total"><statement><p>How many license plates can you make?</p></statement><reponse/></task>
-<task label="multrule-license-norep"><statement><p>How many license plates can you make if you cannot repeat a letter or number?</p></statement><reponse/></task></activity>
+<task label="multrule-license-total"><statement><p>How many license plates can you make?</p></statement><response/></task>
+<task label="multrule-license-norep"><statement><p>How many license plates can you make if you cannot repeat a letter or number?</p></statement><response/></task></activity>
 
   <p>A <term>string of length <m>n</m> over <m>s</m></term><idx>string</idx> is a list of <m>n</m> characters where the characters come from set <m>S</m>. A <term>binary string</term><idx><h>string</h><h>binary</h></idx> or <term>bit string</term><idx>bit string</idx> is a string with <m>S=\{0, 1\}</m>. The <term>null string</term><idx>null string</idx> is the string of length 0, denoted <m>\varepsilon</m>.</p>
 
@@ -144,7 +144,7 @@
 
     <theorem xml:id="T_numrperm"><statement><p>The number of <m>r</m>-permutations of a set with <m>n</m> elements is <md>P(n, r)=n\cdot (n-1)\cdots (n-r+1),</md> which is often easier to calculate using <md>P(n, r)=\frac{n!}{(n-r)!}.</md></p></statement></theorem>
 
-    <activity label="multrule-8P10"><statement><p>Find <m>P(10, 8)</m>.</p></statement><reponse/></activity>
+    <activity label="multrule-8P10"><statement><p>Find <m>P(10, 8)</m>.</p></statement><response/></activity>
 
     <example xml:id="E_numberofintegers"><title>Finding Four-Digit Integers</title>
     <p>How many odd integers are there from 1000 to 9999?</p>
