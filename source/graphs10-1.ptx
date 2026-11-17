@@ -30,7 +30,7 @@
 
 
 
-</latex-image><description><p>Four points (vertices) labeled <m>v_1, v_2, v_3, v_4</m>. Five line segments (edges) labeled <m>e_1, e_2, e_3, e_4, e_5</m>, where <m>e_1</m> connects <m>v_1</m> and <m>v_2</m>, <m>e_2</m> connects <m>v_1</m> and <m>v_3</m>, <m>e_3</m> connects <m>v_2</m> and <m>v_3</m>, <m>e_4</m> connects <m>v_1</m> and <m>v_4</m>, <m>e_5</m> connects <m>v_2</m> and <m>v_4</m>.</p></description></image>
+</latex-image><shortdescription>A graph with four vertices and five edges.</shortdescription><description><p>Four points (vertices) labeled <m>v_1, v_2, v_3, v_4</m>. Five line segments (edges) labeled <m>e_1, e_2, e_3, e_4, e_5</m>, where <m>e_1</m> connects <m>v_1</m> and <m>v_2</m>, <m>e_2</m> connects <m>v_1</m> and <m>v_3</m>, <m>e_3</m> connects <m>v_2</m> and <m>v_3</m>, <m>e_4</m> connects <m>v_1</m> and <m>v_4</m>, <m>e_5</m> connects <m>v_2</m> and <m>v_4</m>.</p></description></image>
 </figure>
 
 <p><xref ref="F_basicgraph"/> is an example of a graph. We have labeled the vertices with<m>v_1, v_2, v_3, v_4</m> and the edges with <m>e_1, e_2, e_3, e_4, e_5</m>.</p>
@@ -83,7 +83,7 @@
 
 
 
-</latex-image><description><p>Three vertices labeled <m>v_1, v_2, v_3</m>. Two line segments (edges) labeled <m>e_1, e_2</m>, where <m>e_1, e_2</m> connect <m>v_1</m> and <m>v_2</m>. A loop <m>e_3</m> connects <m>v_2</m> to itself, and <m>v_3</m> is an isolated point.</p></description></image>
+</latex-image><shortdescription>A graph with two parallel edges, a loop, and an isolated vertex.</shortdescription><description><p>Three vertices labeled <m>v_1, v_2, v_3</m>. Two line segments (edges) labeled <m>e_1, e_2</m>, where <m>e_1, e_2</m> connect <m>v_1</m> and <m>v_2</m>. A loop <m>e_3</m> connects <m>v_2</m> to itself, and <m>v_3</m> is an isolated point.</p></description></image>
 </figure>
 
 
@@ -116,7 +116,7 @@
 
 
 
-</latex-image><description><p>Four vertices labeled <m>v_1, v_2, v_3, v_4</m>. Six edges labeled <m>e_1, e_2, e_3, e_4, e_5, e_6</m>, where <m>e_1</m> connects <m>v_1</m> and <m>v_2</m>, <m>e_2</m> connects <m>v_1</m> and <m>v_3</m>, <m>e_3</m> connects <m>v_1</m> and <m>v_3</m>, <m>e_4</m> connects <m>v_1</m> and <m>v_4</m>, <m>e_5</m> connects <m>v_2</m> and <m>v_3</m>, <m>e_6</m> connects <m>v_3</m> and <m>v_4</m>.</p></description></image>
+</latex-image><shortdescription>A graph with four vertices and six edges.</shortdescription><description><p>Four vertices labeled <m>v_1, v_2, v_3, v_4</m>. Six edges labeled <m>e_1, e_2, e_3, e_4, e_5, e_6</m>, where <m>e_1</m> connects <m>v_1</m> and <m>v_2</m>, <m>e_2</m> connects <m>v_1</m> and <m>v_3</m>, <m>e_3</m> connects <m>v_1</m> and <m>v_3</m>, <m>e_4</m> connects <m>v_1</m> and <m>v_4</m>, <m>e_5</m> connects <m>v_2</m> and <m>v_3</m>, <m>e_6</m> connects <m>v_3</m> and <m>v_4</m>.</p></description></image>
 </figure>
 
     <p>Find <m>V(G)</m>.</p>
@@ -179,7 +179,7 @@
 
 
 
-</latex-image><description><p>The graph on the left is the same as the graph above with four vertices and four edges. The graph on the right has the same vertices and edges, but the orientaion of the vertices and edges is different.</p></description></image>
+</latex-image><shortdescription>The same graph drawn in two ways by switching the position of two vertices.</shortdescription><description><p>The graph on the left is the same as the graph above with four vertices and four edges. The graph on the right has the same vertices and edges, but the orientaion of the vertices and edges is different.</p></description></image>
 </figure>
 <p>The two graphs in <xref ref="F_isographs" /> are the same graph since they have the same vertex and edge sets, and a given edge still has the same endpoints.</p>
 
@@ -237,7 +237,7 @@
 
 
 
-</latex-image><description><p>Four graphs labeled <m>K_1, K_2, K_3, K_4</m>. <m>K_1</m> has one vertex; <m>K_2</m> has two vertices and one edge connecting them; <m>K_3</m> has three vertices and edges connecting each pair of vertices; <m>K_4</m> has four vertices and edges connecting every pair of vertices.</p></description></image>
+</latex-image><shortdescription>The complete graphs on one, two, three, and four vertices.</shortdescription><description><p>Four graphs labeled <m>K_1, K_2, K_3, K_4</m>. <m>K_1</m> has one vertex; <m>K_2</m> has two vertices and one edge connecting them; <m>K_3</m> has three vertices and edges connecting each pair of vertices; <m>K_4</m> has four vertices and edges connecting every pair of vertices.</p></description></image>
 </figure>
 
 <activity label="graphs-K5K6" attachment="yes"><statement><p>Draw the complete graphs on 5 vertices and 6 vertices, <m>K_5</m> and <m>K_6</m>.</p></statement><response/></activity>
@@ -278,7 +278,7 @@
 
 
 
-</latex-image><description><p>Two vertices on the top, three vertices on the bottom. Each top vertex has three edges connecting to the bottom three vertices.</p></description></image>
+</latex-image><shortdescription>A complete bipartite graph from two vertices to three vertices.</shortdescription><description><p>Two vertices on the top, three vertices on the bottom. Each top vertex has three edges connecting to the bottom three vertices.</p></description></image>
 </figure>
 
 <activity label="graphs-K33K45" attachment="yes"><statement><p>Draw the complete bipartite graphs <m>K_{3, 3}</m> and <m>K_{4, 5}</m>.</p></statement><response/></activity>
@@ -340,7 +340,7 @@
 
 
 
-</latex-image><description><p>The left graph, <m>G</m> is the same graph as in the first example. The middle graph, labeled <m>H_1</m> has the same four vertices, <m>v_1, v_2, v_3, v_4</m>, but only the edges <m>e_1, e_2, e_3</m> from <m>G</m>. The right graph labeled <m>H_2</m> has the three vertices, <m>v_1, v_2, v_3</m>, and only the edges <m>e_1, e_2, e_5</m> from <m>G</m>.</p></description></image>
+</latex-image><shortdescription>A graph G and two possible subgraphs of G.</shortdescription><description><p>The left graph, <m>G</m> is the same graph as in the first example. The middle graph, labeled <m>H_1</m> has the same four vertices, <m>v_1, v_2, v_3, v_4</m>, but only the edges <m>e_1, e_2, e_3</m> from <m>G</m>. The right graph labeled <m>H_2</m> has the three vertices, <m>v_1, v_2, v_3</m>, and only the edges <m>e_1, e_2, e_5</m> from <m>G</m>.</p></description></image>
 </figure>
 
 <definition xml:id="D_degree"><statement><p>The <term>degree</term><idx><h>degree</h><h>of a vertex</h></idx><idx><h>vertex</h><h>degree</h></idx> of a vertex <m>v</m>, <m>\text{deg}(v)</m>, is the number of edges incident on <m>v</m>. Loops are counted twice. The <term>total degree</term><idx>total degree</idx><idx><h>graph</h><h>total degree</h></idx> of a graph <m>G</m> is the sum of the degrees of all vertices in <m>G</m>.</p></statement></definition>
@@ -378,7 +378,7 @@
 
 <corollary xml:id="C_totaldegreeeven"><statement><p>The total degree of any graph is even.</p></statement></corollary>
   
-<activity label="graphs-evenofodd"><statement><p>Explain why in any graph there is an even number of vertices of odd degree.</p></statement></activity>
+<activity label="graphs-evenofodd"><statement><p>Explain why in any graph there is an even number of vertices of odd degree.</p></statement><response/></activity>
 
 <activity label="graphs-draw"><introduction><p>For each of the following either draw an example of the graph or explain why it is impossible.</p></introduction>
 <task label="graphs-draw-1123" attachment="yes"><statement><p>A graph with 4 vertices of degrees 1, 1, 2, 3.</p></statement><response/></task>
@@ -423,7 +423,7 @@
 
 
 
-</latex-image><description><p>Four vertices labeled <m>v_1, v_2, v_3, v_4</m>. Seven edges labeled <m>e_1, e_2, e_3, e_4, e_5, e_6, e_7</m>, where <m>e_1</m> connects <m>v_1</m> and <m>v_2</m>, <m>e_2</m> connects <m>v_1</m> and <m>v_3</m>, <m>e_3</m> connects <m>v_2</m> and <m>v_4</m>, <m>e_4</m> connects <m>v_1</m> and <m>v_4</m>, <m>e_5</m> connects <m>v_2</m> and <m>v_3</m>, <m>e_6</m> connects <m>v_2</m> and <m>v_4</m>, <m>e_7</m> connects <m>v_2</m> to itself.</p></description></image>
+</latex-image><shortdescription>A graph with four vertices and seven edges.</shortdescription><description><p>Four vertices labeled <m>v_1, v_2, v_3, v_4</m>. Seven edges labeled <m>e_1, e_2, e_3, e_4, e_5, e_6, e_7</m>, where <m>e_1</m> connects <m>v_1</m> and <m>v_2</m>, <m>e_2</m> connects <m>v_1</m> and <m>v_3</m>, <m>e_3</m> connects <m>v_2</m> and <m>v_4</m>, <m>e_4</m> connects <m>v_1</m> and <m>v_4</m>, <m>e_5</m> connects <m>v_2</m> and <m>v_3</m>, <m>e_6</m> connects <m>v_2</m> and <m>v_4</m>, <m>e_7</m> connects <m>v_2</m> to itself.</p></description></image>
 </figure>
       
 
